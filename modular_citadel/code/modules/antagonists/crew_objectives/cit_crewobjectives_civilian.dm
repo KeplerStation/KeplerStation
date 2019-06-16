@@ -155,8 +155,6 @@
 		for(var/nullrodtypes in typesof(/obj/item/nullrod))
 			if(owner.current.check_contents_for(nullrodtypes))
 				return TRUE
-		if(owner.current.getorgan(/obj/item/organ/genital/penis))
-			return TRUE
 	return FALSE
 
 /datum/objective/crew/reporter //ported from old hippie
