@@ -308,3 +308,12 @@
 	path = /obj/item/clothing/under/rank/trek/engsec/ent
 	restricted_desc = "Engineering and Security"
 	restricted_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer","Warden","Detective","Security Officer","Head of Security","Cargo Technician", "Shaft Miner", "Quartermaster")
+<<<<<<< HEAD
+=======
+
+//Memes
+/datum/gear/gear_harnesses
+	name = "Gear Harness"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/gear_harness
+>>>>>>> 69d48c5e5... Merge pull request #8736 from Trilbyspaceclone/Poojawa_How_Do_I_Update_My_Shit
