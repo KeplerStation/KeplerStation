@@ -17,7 +17,28 @@
 	if(!pref_species)
 		var/rando_race = pick(GLOB.roundstart_races)
 		pref_species = new rando_race()
-	features = random_features()
+	features = random_features()		
+	// Snowflake code is easier than removing half the stuff						
+	if(pref_species.id == "lizard")
+		features["tail_lizard"] = "Axolotl"
+		features["body_markings"] = "None"
+						
+	if(pref_species.id == "felinid")
+		features["mam_tail"] = "Cat"
+		features["mam_ears"] = "Cat"
+						
+	if(pref_species.id in list("slimeperson", "human", "ipc", "plasmaman")) // Nuke snowflake shit
+		features["mam_tail"] = "None"
+		features["mam_ears"] = "None"
+		features["tail_lizard"] = "None"
+		features["mam_body_markings"] = "None"
+		features["body_markings"] = "None"
+		features["mam_snouts"] = "None"
+		features["snout"] = "None"
+		features["ears"] = "None"
+		features["horns"] = "None"
+
+	features["legs"] = "Normal Legs" // Digitrade sucks to sprite for, fight me
 	age = rand(AGE_MIN,AGE_MAX)
 
 /datum/preferences/proc/update_preview_icon()

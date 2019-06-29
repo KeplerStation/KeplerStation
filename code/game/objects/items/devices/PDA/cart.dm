@@ -88,7 +88,7 @@
 /obj/item/cartridge/detective
 	name = "\improper D.E.T.E.C.T. cartridge"
 	icon_state = "cart-s"
-	access = CART_SECURITY | CART_MEDICAL | CART_MANIFEST
+	access = CART_SECURITY | CART_MEDICAL
 	bot_access_flags = SEC_BOT
 
 /obj/item/cartridge/janitor
@@ -104,11 +104,12 @@
 	access = CART_SECURITY
 	spam_enabled = 1
 
+/* Doesnt work, no idea why
 /obj/item/cartridge/curator
 	name = "\improper Lib-Tweet cartridge"
 	icon_state = "cart-s"
 	access = CART_NEWSCASTER
-
+*/
 /obj/item/cartridge/roboticist
 	name = "\improper B.O.O.P. Remote Control cartridge"
 	desc = "Packed with heavy duty triple-bot interlink!"
@@ -141,37 +142,37 @@
 /obj/item/cartridge/head
 	name = "\improper Easy-Record DELUXE cartridge"
 	icon_state = "cart-h"
-	access = CART_MANIFEST | CART_STATUS_DISPLAY
+	access = CART_STATUS_DISPLAY
 
 /obj/item/cartridge/hop
 	name = "\improper HumanResources9001 cartridge"
 	icon_state = "cart-h"
-	access = CART_MANIFEST | CART_STATUS_DISPLAY | CART_JANITOR | CART_SECURITY | CART_NEWSCASTER | CART_QUARTERMASTER | CART_DRONEPHONE
+	access = CART_STATUS_DISPLAY | CART_JANITOR | CART_SECURITY | CART_QUARTERMASTER | CART_DRONEPHONE
 	bot_access_flags = MULE_BOT | CLEAN_BOT
 
 /obj/item/cartridge/hos
 	name = "\improper R.O.B.U.S.T. DELUXE cartridge"
 	icon_state = "cart-hos"
-	access = CART_MANIFEST | CART_STATUS_DISPLAY | CART_SECURITY
+	access = CART_STATUS_DISPLAY | CART_SECURITY
 	bot_access_flags = SEC_BOT
 
 
 /obj/item/cartridge/ce
 	name = "\improper Power-On DELUXE cartridge"
 	icon_state = "cart-ce"
-	access = CART_MANIFEST | CART_STATUS_DISPLAY | CART_ENGINE | CART_ATMOS | CART_DRONEPHONE
+	access = CART_STATUS_DISPLAY | CART_ENGINE | CART_ATMOS | CART_DRONEPHONE
 	bot_access_flags = FLOOR_BOT | FIRE_BOT
 
 /obj/item/cartridge/cmo
 	name = "\improper Med-U DELUXE cartridge"
 	icon_state = "cart-cmo"
-	access = CART_MANIFEST | CART_STATUS_DISPLAY | CART_REAGENT_SCANNER | CART_MEDICAL
+	access = CART_STATUS_DISPLAY | CART_REAGENT_SCANNER | CART_MEDICAL
 	bot_access_flags = MED_BOT
 
 /obj/item/cartridge/rd
 	name = "\improper Signal Ace DELUXE cartridge"
 	icon_state = "cart-rd"
-	access = CART_MANIFEST | CART_STATUS_DISPLAY | CART_REAGENT_SCANNER | CART_ATMOS | CART_DRONEPHONE
+	access = CART_STATUS_DISPLAY | CART_REAGENT_SCANNER | CART_ATMOS | CART_DRONEPHONE
 	bot_access_flags = FLOOR_BOT | CLEAN_BOT | MED_BOT | FIRE_BOT
 
 /obj/item/cartridge/rd/Initialize()
@@ -229,16 +230,6 @@ Code:
 [radio.code]
 <a href='byond://?src=[REF(src)];choice=Signal Code;scode=1'>+</a>
 <a href='byond://?src=[REF(src)];choice=Signal Code;scode=5'>+</a><br>"}
-		if (41) //crew manifest
-
-			menu = "<h4>[PDAIMG(notes)] Crew Manifest</h4>"
-			menu += "Entries cannot be modified from this terminal.<br><br>"
-			if(GLOB.data_core.general)
-				for (var/datum/data/record/t in sortRecord(GLOB.data_core.general))
-					menu += "[t.fields["name"]] - [t.fields["rank"]]<br>"
-			menu += "<br>"
-
-
 		if (42) //status displays
 			menu = "<h4>[PDAIMG(status)] Station Status Display Interlink</h4>"
 
@@ -316,7 +307,7 @@ Code:
 			menu = "<h4>[PDAIMG(medical)] Medical Record List</h4>"
 			if(GLOB.data_core.general)
 				for(var/datum/data/record/R in sortRecord(GLOB.data_core.general))
-					menu += "<a href='byond://?src=[REF(src)];choice=Medical Records;target=[R.fields["id"]]'>[R.fields["id"]]: [R.fields["name"]]<br>"
+					menu += "<a href='byond://?src=[REF(src)];choice=Medical Records;target=[R.fields["id"]]'>[R.fields["id"]]: [R.fields["name"]]</a><br>"
 			menu += "<br>"
 		if(441)
 			menu = "<h4>[PDAIMG(medical)] Medical Record</h4>"
@@ -359,7 +350,7 @@ Code:
 			menu = "<h4>[PDAIMG(cuffs)] Security Record List</h4>"
 			if(GLOB.data_core.general)
 				for (var/datum/data/record/R in sortRecord(GLOB.data_core.general))
-					menu += "<a href='byond://?src=[REF(src)];choice=Security Records;target=[R.fields["id"]]'>[R.fields["id"]]: [R.fields["name"]]<br>"
+					menu += "<a href='byond://?src=[REF(src)];choice=Security Records;target=[R.fields["id"]]'>[R.fields["id"]]: [R.fields["name"]]</a><br>"
 
 			menu += "<br>"
 		if(451)
@@ -452,7 +443,6 @@ Code:
 			for(var/S in SSshuttle.requestlist)
 				var/datum/supply_order/SO = S
 				menu += "<li>#[SO.id] - [SO.pack.name] requested by [SO.orderer]</li>"
-			menu += "</ol><font size=\"-3\">Upgrade NOW to Space Parts & Space Vendors PLUS for full remote order control and inventory management."
 
 		if (48) // quartermaster ore logs
 			menu = list("<h4>[PDAIMG(crate)] Ore Silo Logs</h4>")
@@ -691,7 +681,7 @@ Code:
 	var/mob/living/simple_animal/bot/Bot
 
 	if(active_bot)
-		menu += "<B>[active_bot]</B><BR> Status: (<A href='byond://?src=[REF(src)];op=control;bot=[REF(active_bot)]'>[PDAIMG(refresh)]<i>refresh</i></A>)<BR>"
+		menu += "<B>[active_bot]</B><BR> Status: ([PDAIMG(refresh)]<A href='byond://?src=[REF(src)];op=control;bot=[REF(active_bot)]'><i>Refresh</i></A>)<BR>"
 		menu += "Model: [active_bot.model]<BR>"
 		menu += "Location: [get_area(active_bot)]<BR>"
 		menu += "Mode: [active_bot.get_mode()]"
@@ -727,16 +717,16 @@ Code:
 			menu += "\[<A href='byond://?src=[REF(src)];op=summon'>Summon Bot</A>\]<BR>"		//summon
 			menu += "Keep an ID inserted to upload access codes upon summoning."
 
-		menu += "<HR><A href='byond://?src=[REF(src)];op=botlist'>[PDAIMG(back)]Return to bot list</A>"
+		menu += "<HR>[PDAIMG(back)]<A href='byond://?src=[REF(src)];op=botlist'>Return to bot list</A>"
 	else
-		menu += "<BR><A href='byond://?src=[REF(src)];op=botlist'>[PDAIMG(refresh)]Scan for active bots</A><BR><BR>"
+		menu += "<BR>[PDAIMG(refresh)]<A href='byond://?src=[REF(src)];op=botlist'>Scan for active bots</A><BR><BR>"
 		var/turf/current_turf = get_turf(src)
 		var/zlevel = current_turf.z
 		var/botcount = 0
 		for(Bot in GLOB.alive_mob_list) //Git da botz
 			if(!Bot.on || Bot.z != zlevel || Bot.remote_disabled || !(bot_access_flags & Bot.bot_type)) //Only non-emagged bots on the same Z-level are detected!
 				continue //Also, the PDA must have access to the bot type.
-			menu += "<A href='byond://?src=[REF(src)];op=control;bot=[REF(Bot)]'><b>[Bot.name]</b> ([Bot.get_mode()])<BR>"
+			menu += "<A href='byond://?src=[REF(src)];op=control;bot=[REF(Bot)]'><b>[Bot.name]</b> ([Bot.get_mode()])</A><BR>"
 			botcount++
 		if(!botcount) //No bots at all? Lame.
 			menu += "No bots found.<BR>"

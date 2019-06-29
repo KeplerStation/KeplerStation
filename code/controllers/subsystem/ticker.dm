@@ -164,9 +164,10 @@ SUBSYSTEM_DEF(ticker)
 
 			if(start_immediately)
 				timeLeft = 0
-
-			if(!modevoted)
-				send_gamemode_vote()
+			
+			if(CONFIG_GET(flag/roundstart_vote))
+				if(!modevoted) //Enables roundstart voting.
+					send_gamemode_vote()
 			//countdown
 			if(timeLeft < 0)
 				return

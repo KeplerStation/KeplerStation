@@ -57,8 +57,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/inquisitive_ghost = 1
 	var/allow_midround_antag = 1
 	var/preferred_map = null
-	var/pda_style = MONO
-	var/pda_color = "#808000"
 
 	var/uses_glasses_colour = 0
 
@@ -110,7 +108,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/list/custom_names = list()
 	var/preferred_ai_core_display = "Blue"
 	var/prefered_security_department = SEC_DEPT_RANDOM
-	var/custom_species = null
 
 		//Quirk list
 	var/list/positive_quirks = list()
@@ -299,7 +296,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<h2>Body</h2>"
 			dat += "<b>Gender:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : (gender == FEMALE ? "Female" : (gender == PLURAL ? "Non-binary" : "Object"))]</a><BR>"
 			dat += "<b>Species:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=species;task=input'>[pref_species.id]</a><BR>"
-			dat += "<b>Custom Species Name:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=custom_species;task=input'>[custom_species ? custom_species : "None"]</a><BR>"
 			dat += "<a style='display:block;width:100px' href='?_src_=prefs;preference=all;task=random'>Random Body</A><BR>"
 			dat += "<b>Always Random Body:</b><a href='?_src_=prefs;preference=all'>[be_random_body ? "Yes" : "No"]</A><BR>"
 			dat += "<br><b>Cycle background:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=cycle_bg;task=input'>[bgstate]</a><BR>"
@@ -413,9 +409,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<br>"
 			dat += "<b>Action Buttons:</b> <a href='?_src_=prefs;preference=action_buttons'>[(buttons_locked) ? "Locked In Place" : "Unlocked"]</a><br>"
 			dat += "<b>Keybindings:</b> <a href='?_src_=prefs;preference=hotkeys'>[(hotkeys) ? "Hotkeys" : "Default"]</a><br>"
-			dat += "<br>"
-			dat += "<b>PDA Color:</b> <span style='border:1px solid #161616; background-color: [pda_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=pda_color;task=input'>Change</a><BR>"
-			dat += "<b>PDA Style:</b> <a href='?_src_=prefs;task=input;preference=pda_style'>[pda_style]</a><br>"
 			dat += "<br>"
 			dat += "<b>Ghost Ears:</b> <a href='?_src_=prefs;preference=ghost_ears'>[(chat_toggles & CHAT_GHOSTEARS) ? "All Speech" : "Nearest Creatures"]</a><br>"
 			dat += "<b>Ghost Radio:</b> <a href='?_src_=prefs;preference=ghost_radio'>[(chat_toggles & CHAT_GHOSTRADIO) ? "All Messages":"No Messages"]</a><br>"
@@ -1204,7 +1197,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						var/newtype = GLOB.species_list[result]
 						pref_species = new newtype()
 						//let's ensure that no weird shit happens on species swapping.
-						custom_species = null
 						if(!("body_markings" in pref_species.default_features))
 							features["body_markings"] = "None"
 						if(!("mam_body_markings" in pref_species.default_features))
@@ -1216,6 +1208,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							
 						if(pref_species.id == "lizard")
 							features["tail_lizard"] = "Axolotl"
+							features["body_markings"] = "None"
 						
 						if(pref_species.id == "felinid")
 							features["mam_tail"] = "Cat"
@@ -1227,7 +1220,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							features["tail_lizard"] = "None"
 							features["mam_body_markings"] = "None"
 							features["body_markings"] = "None"
+							features["mam_snouts"] = "None"
+							features["snout"] = "None"
+							features["ears"] = "None"
+							features["horns"] = "None"
+							features["snout"] = "None"
 
+						features["legs"] = "Normal Legs" // Digitrade sucks to sprite for, fight me
 
 						//Now that we changed our species, we must verify that the mutant colour is still allowed.
 						var/temp_hsv = RGBtoHSV(features["mcolor"])
@@ -1237,13 +1236,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							features["mcolor2"] = pref_species.default_color
 						if(features["mcolor3"] == "#000" || (!(MUTCOLORS_PARTSONLY in pref_species.species_traits) && ReadHSV(temp_hsv)[3] < ReadHSV("#202020")[3]))
 							features["mcolor3"] = pref_species.default_color
-
-				if("custom_species")
-					var/new_species = reject_bad_name(input(user, "Choose your species subtype, if unique. This will show up on examinations and health scans. Do not abuse this:", "Character Preference", custom_species) as null|text)
-					if(new_species)
-						custom_species = new_species
-					else
-						custom_species = null
 
 				if("mutant_color")
 					var/new_mutantcolor = input(user, "Choose your character's alien/mutant color:", "Character Preference","#"+features["mcolor"]) as color|null
@@ -1353,14 +1345,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						UI_style = pickedui
 						if (parent && parent.mob && parent.mob.hud_used)
 							parent.mob.hud_used.update_ui_style(ui_style2icon(UI_style))
-				if("pda_style")
-					var/pickedPDAStyle = input(user, "Choose your PDA style.", "Character Preference", pda_style)  as null|anything in GLOB.pda_styles
-					if(pickedPDAStyle)
-						pda_style = pickedPDAStyle
-				if("pda_color")
-					var/pickedPDAColor = input(user, "Choose your PDA Interface color.", "Character Preference",pda_color) as color|null
-					if(pickedPDAColor)
-						pda_color = pickedPDAColor
 
 		else
 			switch(href_list["preference"])
@@ -1554,7 +1538,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.real_name = nameless ? "[real_name] #[rand(10000, 99999)]" : real_name
 	character.name = character.real_name
 	character.nameless = nameless
-	character.custom_species = custom_species
 
 	character.gender = gender
 	character.age = age
@@ -1589,7 +1572,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.dna.features = features.Copy()
 	character.dna.real_name = character.real_name
 	character.dna.nameless = character.nameless
-	character.dna.custom_species = character.custom_species
 
 	if("tail_lizard" in pref_species.default_features)
 		character.dna.species.mutant_bodyparts |= "tail_lizard"

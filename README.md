@@ -1,5 +1,5 @@
 
-##KeplerStation<BR>
+## KeplerStation<BR>
 Based and maintained from Citadel-Station-13.<BR>
 
 [![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/pretty-risque.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com)
@@ -10,12 +10,12 @@ Based and maintained from Citadel-Station-13.<BR>
 
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/Citadel-Station-13/Citadel-Station-13.svg)](http://isitmaintained.com/project/KeplerStation/KeplerStation "Percentage of issues still open") [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/Citadel-Station-13/Citadel-Station-13.svg)](http://isitmaintained.com/project/KeplerStation/KeplerStation "Average time to resolve an issue")
 
-**Upstream Information** <BR>
-**Website:** http://www.tgstation13.org <BR>
-**Code:** https://github.com/tgstation/tgstation <BR>
+**Upstream (Citadel) Information** <BR>
+**Website:** http://citadel-station.net/ <BR>
+**Code:** https://github.com/Citadel-Station-13/Citadel-Station-13  <BR>
 **Wiki** http://tgstation13.org/wiki/Main_Page <BR>
 
-**Citadel Station Information** <BR>
+**KeplerStation Information** <BR>
 **Forums:** http://keplerstation.cf/forum/ <BR>
 **Code:** https://github.com/KeplerStation/KeplerStation <BR>
 **Discord:**  [Here](https://discord.gg/R3xFtE5). <BR>

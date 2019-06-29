@@ -26,7 +26,7 @@
 		else if(skipface)
 			msg += "You can't make out what species they are.\n"
 		else
-			msg += "[t_He] [t_is] a [H.dna.custom_species ? H.dna.custom_species : pref_species.name]!\n"
+			msg += "[t_He] [t_is] a [pref_species.name]!\n"
 
 	//uniform
 	if(w_uniform && !(SLOT_W_UNIFORM in obscured))
@@ -285,7 +285,7 @@
 			if(mood.sanity <= SANITY_DISTURBED)
 				msg += "[t_He] seem[p_s()] distressed.\n"
 				SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "empath", /datum/mood_event/sad_empath, src)
-			if(mood.mood >= 5) //So roundstart people aren't all "happy"
+			if(mood.shown_mood >= 6) //So roundstart people aren't all "happy" and that antags don't show their true happiness.
 				msg += "[t_He] seem[p_s()] to have had something nice happen to them recently.\n"
 				SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "empathH", /datum/mood_event/happy_empath, src)
 			if (HAS_TRAIT(src, TRAIT_BLIND))

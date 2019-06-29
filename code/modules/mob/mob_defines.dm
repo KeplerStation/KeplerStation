@@ -112,3 +112,6 @@
 	var/registered_z
 
 	var/mob/audiovisual_redirect //Mob to redirect messages, speech, and sounds to
+
+	var/adminfrozen = 0 //handle for someone's sleeping time from before they got frozen
+	var/obj/effect/overlay/adminfrozen/adminfreezeoverlay = null

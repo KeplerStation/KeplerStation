@@ -11,7 +11,9 @@ GLOBAL_LIST_INIT(admin_verbs_default, world.AVerbsDefault())
 	/client/proc/investigate_show,		/*various admintools for investigation. Such as a singulo grief-log*/
 	/client/proc/debug_variables,		/*allows us to -see- the variables of any instance in the game. +VAREDIT needed to modify*/
 	/client/proc/toggleprayers,
-	/client/proc/toggleadminhelpsound
+	/client/proc/toggleadminhelpsound,
+	/client/proc/cmd_admin_rejuvenate,
+	/client/proc/cmd_admin_freeze
 	)
 GLOBAL_PROTECT(admin_verbs_admin)
 GLOBAL_LIST_INIT(admin_verbs_admin, world.AVerbsAdmin())

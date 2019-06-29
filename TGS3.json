@@ -15,10 +15,5 @@
     "static_directories": [
       "config",
       "data"
-    ],
-    "dlls": [
-	  "BSQL.dll",
-	  "libmariadb.dll",
-	  "rust_g.dll"
     ]
   }

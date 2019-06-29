@@ -62,6 +62,7 @@
 			to_chat(M, "<span class='notice'>[icon2html(src, M)] Squeak!</span>")
 	..()
 
+/* Auto wire eating disabled because its horrible on lowpop
 /mob/living/simple_animal/mouse/handle_automated_action()
 	if(prob(chew_probability))
 		var/turf/open/floor/F = get_turf(src)
@@ -76,6 +77,7 @@
 				else
 					C.deconstruct()
 					visible_message("<span class='warning'>[src] chews through the [C].</span>")
+*/
 
 /*
  * Mouse types

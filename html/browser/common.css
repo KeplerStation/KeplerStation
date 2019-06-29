@@ -396,3 +396,7 @@ ul.sparse {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.pda_icon {
+	vertical-align: -3px;
+}

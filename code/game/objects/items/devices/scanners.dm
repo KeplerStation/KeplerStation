@@ -284,7 +284,7 @@ SLIME SCANNER
 		else if (S.mutantstomach != initial(S.mutantstomach))
 			mutant = TRUE
 
-		msg += "<span class='info'>Species: [H.dna.custom_species ? H.dna.custom_species : S.name] Base: [S.name]</span>\n"
+		msg += "<span class='info'>Species: [S.name]</span>\n"
 		if(mutant)
 			msg += "<span class='info'>Subject has mutations present.</span>"
 	msg += "<span class='info'>Body temperature: [round(M.bodytemperature-T0C,0.1)] &deg;C ([round(M.bodytemperature*1.8-459.67,0.1)] &deg;F)</span>\n"

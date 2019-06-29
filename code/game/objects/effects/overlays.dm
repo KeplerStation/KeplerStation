@@ -46,6 +46,11 @@
 	icon_state = "shieldsparkles"
 	anchored = TRUE
 
+/obj/effect/overlay/adminfrozen
+	name = "FROZEN"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "admin"
+
 /obj/effect/overlay/vis
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	anchored = TRUE
