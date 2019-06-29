@@ -164,11 +164,6 @@ GLOBAL_LIST_EMPTY(PDAs)
 
 /obj/item/pda/equipped(mob/user, slot)
 	. = ..()
-<<<<<<< HEAD
-	if(!equipped)
-		if(user.client)
-			equipped = TRUE
-=======
 	if(equipped)
 		return
 	if(user.client)
@@ -195,7 +190,6 @@ GLOBAL_LIST_EMPTY(PDAs)
 			set_new_overlays()
 			update_icon()
 		equipped = TRUE
->>>>>>> 7e1522b76... Merge pull request #8581 from Ghommie/Ghommie-cit42
 
 /obj/item/pda/proc/update_label()
 	name = "PDA-[owner] ([ownjob])" //Name generalisation
