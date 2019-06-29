@@ -103,12 +103,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["menuoptions"]		>> menuoptions
 	S["enable_tips"]		>> enable_tips
 	S["tip_delay"]			>> tip_delay
-<<<<<<< HEAD
-=======
-	S["pda_style"]			>> pda_style
-	S["pda_color"]			>> pda_color
 	S["pda_skin"]			>> pda_skin
->>>>>>> 7e1522b76... Merge pull request #8581 from Ghommie/Ghommie-cit42
 
 	//citadel code
 	S["arousable"]			>> arousable
@@ -142,12 +137,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	ghost_others	= sanitize_inlist(ghost_others, GLOB.ghost_others_options, GHOST_OTHERS_DEFAULT_OPTION)
 	menuoptions		= SANITIZE_LIST(menuoptions)
 	be_special		= SANITIZE_LIST(be_special)
-<<<<<<< HEAD
-=======
-	pda_style		= sanitize_inlist(pda_style, GLOB.pda_styles, initial(pda_style))
-	pda_color		= sanitize_hexcolor(pda_color, 6, 1, initial(pda_color))
 	pda_skin		= sanitize_inlist(pda_skin, GLOB.pda_reskins, PDA_SKIN_ALT)
->>>>>>> 7e1522b76... Merge pull request #8581 from Ghommie/Ghommie-cit42
 
 	screenshake			= sanitize_integer(screenshake, 0, 800, initial(screenshake))
 	damagescreenshake	= sanitize_integer(damagescreenshake, 0, 2, initial(damagescreenshake))
