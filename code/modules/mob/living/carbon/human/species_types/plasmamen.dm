@@ -4,8 +4,13 @@
 	say_mod = "rattles"
 	sexes = 0
 	meat = /obj/item/stack/sheet/mineral/plasma
+<<<<<<< HEAD
 	species_traits = list(NOBLOOD,NOTRANSSTING)
 	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_RADIMMUNE,TRAIT_NOHUNGER)
+=======
+	species_traits = list(NOBLOOD,NOTRANSSTING,NOGENITALS)
+	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_RADIMMUNE,TRAIT_NOHUNGER,TRAIT_CALCIUM_HEALER)
+>>>>>>> c495a2aa4... Merge pull request #8739 from Sishen1542/makinggolemsgreatagain
 	inherent_biotypes = list(MOB_INORGANIC, MOB_HUMANOID)
 	mutantlungs = /obj/item/organ/lungs/plasmaman
 	mutanttongue = /obj/item/organ/tongue/bone/plasmaman
