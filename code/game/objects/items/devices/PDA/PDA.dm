@@ -167,23 +167,6 @@ GLOBAL_LIST_EMPTY(PDAs)
 	if(equipped)
 		return
 	if(user.client)
-		background_color = user.client.prefs.pda_color
-		switch(user.client.prefs.pda_style)
-			if(MONO)
-				font_index = MODE_MONO
-				font_mode = FONT_MONO
-			if(SHARE)
-				font_index = MODE_SHARE
-				font_mode = FONT_SHARE
-			if(ORBITRON)
-				font_index = MODE_ORBITRON
-				font_mode = FONT_ORBITRON
-			if(VT)
-				font_index = MODE_VT
-				font_mode = FONT_VT
-			else
-				font_index = MODE_MONO
-				font_mode = FONT_MONO
 		var/pref_skin = GLOB.pda_reskins[user.client.prefs.pda_skin]
 		if(icon != pref_skin)
 			icon = pref_skin

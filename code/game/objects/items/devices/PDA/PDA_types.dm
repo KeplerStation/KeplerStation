@@ -181,16 +181,11 @@
 /obj/item/pda/curator
 	name = "curator PDA"
 	icon_state = "pda-library"
-<<<<<<< HEAD
-	icon_alert = "pda-r-library"
-	// Commented out because this doesnt work
-	//default_cartridge = /obj/item/cartridge/curator 
-=======
 	overlays_icons = list('icons/obj/pda.dmi' = list("pda-r-library","blank","id_overlay","insert_overlay", "light_overlay", "pai_overlay"),
 						'icons/obj/pda_alt.dmi' = list("pda-r","screen_default","id_overlay","insert_overlay", "light_overlay", "pai_overlay"))
 	current_overlays = list("pda-r-library","blank","id_overlay","insert_overlay", "light_overlay", "pai_overlay")
-	default_cartridge = /obj/item/cartridge/curator
->>>>>>> 7e1522b76... Merge pull request #8581 from Ghommie/Ghommie-cit42
+	// Commented out because this doesnt work
+	//default_cartridge = /obj/item/cartridge/curator 
 	inserted_item = /obj/item/pen/fountain
 	desc = "A portable microcomputer by Thinktronic Systems, LTD. This model is a WGW-11 series e-reader."
 	note = "Congratulations, your station has chosen the Thinktronic 5290 WGW-11 Series E-reader and Personal Data Assistant! To help with navigation, we have provided the following definitions. North: Fore. South: Aft. West: Port. East: Starboard. Quarter is either side of aft."
