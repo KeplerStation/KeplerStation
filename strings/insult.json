@@ -6,7 +6,6 @@
 		"yells, ''<B>You @pick(curse_words)!!</B>''",
 		"yells, ''Time to get my @pick(adjective_generic) @pick(adjective_insult) @pick(nouns_body) elsewhere.''",
 		"yells, ''Well @pick(verbs_use) my @pick(nouns_body), this @pick(nouns_insult) is pretty @pick(adjective_insult).''",
-		"yells, ''Hippity hoppity, get off of my property, you @pick(nouns_insult)!''",
 		"yells, ''@pick(curse_words), what am I meant to do with this @pick(adjective_insult) @pick(nouns_objects).''"
 	],
 	
@@ -55,23 +54,16 @@
     ],
 
     "nouns_insult": [
-        "gaylord",
         "shitcurity",
-        "noob",
         "comdom",
-        "cuck",
         "greytider",
         "tator",
-        "lingbin",
 		"bitch",
-		"whorelord",
 		"cluwn",
 		"monkey",
 		"cheesmonger",
 		"milkdrinker",
 		"cally-breek tattie",
-		"clype deep bachle",
-		"blethering gomeril Jessie",
 		"oaf-lookin' schooner",
 		"worm-eyed hotten blaugh",
 		"vile stoochie"
@@ -79,7 +71,6 @@
 
     "nouns_generic": [
         "you",
-        "that faggot traitor",
 		"you there",
 		"guy",
 		"person",
@@ -87,8 +78,7 @@
 		"jerk",
 		"officer",
 		"schooner",
-		"shilpit",
-		"smooth brain"
+		"shithead",
     ],
 
     "nouns_objects": [
@@ -101,7 +91,6 @@
 		"device",
 		"whatever",
         "squid",
-		"dildo",
 		"plush"
     ],
 
@@ -126,15 +115,12 @@
         "repulsive",
         "dumb",
         "asinine",
-        "mongoloid",
         "childish",
         "captain-like",
         "whoreish",
 		"dimwit",
 		"jerk-face",
 		"vomit-inducer",
-		"virgin",
-		"wannabe chad"
     ],
 
     "adjective_objects": [
@@ -150,7 +136,6 @@
 		"sparkling",
 		"blinking",
 		"awful",
-		"fuck-face"
     ],
 
     "adjective_generic": [
@@ -170,7 +155,5 @@
 		"wank",
 		"jerk",
 		"bitch",
-		"cuck",
-		"ligger"
     ]
 }
