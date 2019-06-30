@@ -6,7 +6,7 @@
 	give_item(usr)
 
 /mob/living/proc/give_item(mob/living/carbon/user)
-
+	return
 
 /mob/living/carbon/give_item(mob/living/carbon/user)
 	if(!istype(user))
