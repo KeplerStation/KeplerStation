@@ -160,6 +160,14 @@
 	distribute_pressure = 0
 	gas_type = /datum/gas/carbon_dioxide
 
+<<<<<<< HEAD
+=======
+/obj/item/tank/jetpack/carbondioxide/eva
+	name = "surplus jetpack (carbon dioxide)"
+	desc = "A tank of compressed carbon dioxide for use as propulsion in zero-gravity areas. Painted black to indicate that it should not be used as a source for internals. Rated for less than stellar EVA speeds!"
+	full_speed = FALSE
+
+>>>>>>> cef22b3c5... Merge pull request #8786 from Sishen1542/jetpacc
 /obj/item/tank/jetpack/suit
 	name = "hardsuit jetpack upgrade"
 	desc = "A modular, compact set of thrusters designed to integrate with a hardsuit. It is fueled by a tank inserted into the suit's storage compartment."
