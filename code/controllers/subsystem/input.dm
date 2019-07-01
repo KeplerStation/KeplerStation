@@ -32,11 +32,11 @@ SUBSYSTEM_DEF(input)
 		"default" = list(
 			"Tab" = "\".winset \\\"input.focus=true?map.focus=true input.background-color=[COLOR_INPUT_DISABLED]:input.focus=true input.background-color=[COLOR_INPUT_ENABLED]\\\"\"",
 			"O" = "ooc",
-			"Ctrl+O" = "looc",
+			"L" = "looc",
 			"T" = "say",
-			"Ctrl+T" = "whisper",
+			"U" = "whisper",
 			"M" = "me",
-			"Ctrl+M" = "subtle",
+			"N" = "subtle",
 			"Back" = "\".winset \\\"input.text=\\\"\\\"\\\"\"", // This makes it so backspace can remove default inputs
 			"Any" = "\"KeyDown \[\[*\]\]\"",
 			"Any+UP" = "\"KeyUp \[\[*\]\]\"",
