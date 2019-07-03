@@ -110,5 +110,10 @@ GLOBAL_LIST_INIT(maintenance_loot, list(
 	/obj/item/reagent_containers/pill/floorpill = 1,
 	/obj/item/clothing/shoes/wheelys = 1,
 	/obj/item/clothing/shoes/kindleKicks = 1,
+<<<<<<< HEAD
+=======
+	/obj/item/autosurgeon/penis = 1,
+	/obj/item/autosurgeon/testicles = 1,
+>>>>>>> 948bba127... Merge pull request #8799 from Trilbyspaceclone/Cargo_lewds
 	"" = 3
 	))

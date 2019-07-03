@@ -1157,7 +1157,7 @@
 /datum/supply_pack/materials/bz
 	name = "BZ Canister Crate"
 	desc = "Contains a canister of BZ. Requires Toxins access to open."
-	cost = 7500 // Costs 3 credits more than what you can get for selling it. 
+	cost = 7500 // Costs 3 credits more than what you can get for selling it.
 	access = ACCESS_TOX_STORAGE
 	contains = list(/obj/machinery/portable_atmospherics/canister/bz)
 	crate_name = "BZ canister crate"
@@ -2699,6 +2699,40 @@
 					)
 	crate_name = "religious supplies crate"
 
+<<<<<<< HEAD
+=======
+/datum/supply_pack/misc/lewd
+	name = "Lewd Crate" // OwO
+	desc = "Psss want to have a good time with your sluts? Well I got what you want maid clothing, dildos, collars and more!"
+	cost = 5000
+	contraband = TRUE
+	contains = list(/obj/item/dildo/custom,
+					/obj/item/dildo/custom,
+					/obj/item/vending_refill/kink,
+					/obj/item/vending_refill/kink,
+					/obj/item/clothing/under/maid,
+					/obj/item/clothing/under/maid,
+					/obj/item/electropack/shockcollar,
+					/obj/item/electropack/shockcollar,
+					/obj/item/restraints/handcuffs/fake/kinky,
+					/obj/item/restraints/handcuffs/fake/kinky,
+					/obj/item/clothing/head/kitty/genuine, // Why its illegal
+					/obj/item/clothing/head/kitty/genuine,
+					/obj/item/storage/pill_bottle/penis_enlargement,
+					/obj/structure/reagent_dispensers/keg/aphro)
+	crate_name = "lewd kit"
+	crate_type = /obj/structure/closet/crate
+
+/datum/supply_pack/misc/lewdkeg
+	name = "Lewd Deluxe Keg"
+	desc = "That other stuff not getting you ready? Well I have a Chemslut making tons of the good stuff."
+	cost = 7000 //It can be a weapon
+	contraband = TRUE
+	contains = list(/obj/structure/reagent_dispensers/keg/aphro/strong)
+	crate_name = "deluxe keg"
+	crate_type = /obj/structure/closet/crate
+
+>>>>>>> 948bba127... Merge pull request #8799 from Trilbyspaceclone/Cargo_lewds
 /datum/supply_pack/misc/paper_work
 	name = "Freelance Paper work"
 	desc = "The Nanotrasen Primary Bureaucratic Database Intelligence (PDBI) reports that the station has not completed its funding and grant paperwork this solar cycle. In order to gain further funding, your station is required to fill out (10) ten of these forms or no additional capital will be disbursed. We have sent you ten copies of the following form and we expect every one to be up to Nanotrasen Standards." // Disbursement. It's not a typo, look it up.
@@ -2719,6 +2753,19 @@
 					/obj/item/pen/fountain,
 					/obj/item/pen/fountain)
 	crate_name = "Paperwork"
+
+/datum/supply_pack/misc/randomised/promiscuous
+	name = "Promiscuous Organs"
+	desc = "Do YOU want to have more genital? Well we have just the thing for you~. This crate has two autosurgeon, that will let you have a new sex, organ to impress that hot stud and or chick."
+	cost = 4000 //Only get 2!
+	contraband = TRUE
+	var/num_contained = 2
+	contains = list(/obj/item/autosurgeon/penis,
+					/obj/item/autosurgeon/testicles,
+					/obj/item/autosurgeon/vagina,
+					/obj/item/autosurgeon/breasts,
+					/obj/item/autosurgeon/womb)
+	crate_name = "promiscuous organs"
 
 /datum/supply_pack/misc/toner
 	name = "Toner Crate"
