@@ -710,10 +710,7 @@
 	name = "Strawberry Tea"
 	id = "pinktea"
 	results = list("pinktea" = 5)
-<<<<<<< HEAD
 	required_reagents = list("cherryjelly" = 3, "arnold_palmer" = 1, "sugar" = 1)
-=======
-	required_reagents = list("aphro" = 1, "arnold_palmer" = 1, "sugar" = 1)
 
 /datum/chemical_reaction/blank_paper
 	name = "Blank Paper"
