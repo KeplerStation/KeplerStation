@@ -87,13 +87,8 @@
 
 /obj/item/cartridge/detective
 	name = "\improper D.E.T.E.C.T. cartridge"
-<<<<<<< HEAD
-	icon_state = "cart-s"
-	access = CART_SECURITY | CART_MEDICAL
-=======
 	icon_state = "cart-eye"
-	access = CART_SECURITY | CART_MEDICAL | CART_MANIFEST
->>>>>>> ba7418919... Merge pull request #8768 from Ghommie/Ghommie-cit94
+	access = CART_SECURITY | CART_MEDICAL
 	bot_access_flags = SEC_BOT
 
 /obj/item/cartridge/janitor
