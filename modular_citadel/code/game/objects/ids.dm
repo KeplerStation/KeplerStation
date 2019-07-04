@@ -62,9 +62,6 @@
 	else
 		to_chat(user, "<span class='warning'>It has a small, red, blinking light coming from inside of it. It's spent.</span>")
 
-/obj/item/card/emag
-	var/uses = 10
-
 /obj/item/card/emag/examine(mob/user)
 	. = ..()
 	to_chat(user, "<span class='notice'>It has <b>[uses ? uses : "no"]</b> charges left.</span>")
