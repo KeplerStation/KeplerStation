@@ -795,4 +795,3 @@
 	id = "red_queen"
 	results = list("red_queen" = 10)
 	required_reagents = list("tea" = 6, "mercury" = 2, "blackpepper" = 1, "growthserum" = 1)
->>>>>>> bce4ce31a... Merge pull request #8778 from Ghommie/Ghommie-cit97
