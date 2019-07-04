@@ -479,9 +479,6 @@ GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi', PDA_S
 #define AREASELECT_CORNERB "corner B"
 
 #define PREF_SAVELOAD_COOLDOWN 5
-<<<<<<< HEAD
-=======
 
 #define VOMIT_TOXIC 1
 #define VOMIT_PURPLE 2
->>>>>>> bce4ce31a... Merge pull request #8778 from Ghommie/Ghommie-cit97
