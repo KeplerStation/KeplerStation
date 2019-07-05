@@ -225,6 +225,14 @@
 	key = "moodangry"
 	mood = "angry"
 
+/datum/emote/sound/slime/squish
+	key = "squish"
+	key_third_person = "squishes"
+	message = "squishes."
+	message_param = "squishes at %t."
+	sound = 'sound/effects/slime_squish.ogg'
+	mob_type_allowed_typecache = list(/mob/living/carbon/human/species/jelly/slime, /mob/living/simple_animal/slime)
+
 /*
 	LIVING
 */
@@ -1060,21 +1068,7 @@ datum/emote/living/carbon
 	key_third_person = "chimes"
 	message = "chimes."
 	sound = 'sound/machines/chime.ogg'
-
-/*
-	SLIME
-*/
-
-/datum/emote/sound/slime
-	mob_type_allowed_typecache = list(/mob/living/carbon/human/species/jelly/slime, /mob/living/simple_animal/slime)
-
-/datum/emote/sound/slime/squish
-	key = "squish"
-	key_third_person = "squishes"
-	message = "squishes."
-	message_param = "squishes at %t."
-	sound = 'sound/effects/slime_squish.ogg'
-
+	
 /*
 	MISC
 */
