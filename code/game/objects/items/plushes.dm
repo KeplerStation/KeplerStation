@@ -498,8 +498,7 @@
 
 /obj/item/toy/plush/lizardplushie/durgit
 	icon_state = "durgit"
-	item_state = "durgit"
-	squeak_override = list('modular_citadel/sound/voice/weh.ogg' = 1) //Durgit's the origin of the sound
+	item_state = "durgit" // You have been purged.
 
 /obj/item/toy/plush/lizardplushie/rio
 	icon_state = "rio"
@@ -730,8 +729,7 @@
 	name = "sergal plushie"
 	desc = "An adorable stuffed plushie that resembles a sagaru."
 	icon_state = "faux"
-	item_state = "faux"
-	squeak_override = list('modular_citadel/sound/voice/merp.ogg' = 1)
+	item_state = "faux" // No more merps for you.
 
 /obj/item/toy/plush/sergal/gladwyn
 	icon_state = "gladwyn"
@@ -886,8 +884,7 @@
 	desc = "An adorable stuffed toy that resembles a feline."
 	icon_state = "bailey"
 	item_state = "bailey"
-	attack_verb = list("headbutt", "scritched", "bit")
-	squeak_override = list('modular_citadel/sound/voice/nya.ogg' = 1)
+	attack_verb = list("headbutt", "scritched", "bit") // No more nya's.
 
 /obj/item/toy/plush/catgirl/mikeel
 	desc = "An adorable stuffed toy of some tauric cat person."	

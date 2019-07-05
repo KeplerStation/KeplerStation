@@ -120,48 +120,6 @@
 		playsound(user, 'modular_citadel/sound/voice/snap3.ogg', 50, 1, -1)
 	. = ..()
 
-/datum/emote/living/awoo
-	key = "awoo"
-	key_third_person = "lets out an awoo"
-	message = "lets out an awoo!"
-	emote_type = EMOTE_AUDIBLE
-
-/datum/emote/living/awoo/run_emote(mob/living/user, params)
-	if(ishuman(user))
-		if(user.nextsoundemote >= world.time)
-			return
-		user.nextsoundemote = world.time + 7
-		playsound(user, 'modular_citadel/sound/voice/awoo.ogg', 50, 1, -1)
-	. = ..()
-
-/datum/emote/living/nya
-	key = "nya"
-	key_third_person = "lets out a nya"
-	message = "lets out a nya!"
-	emote_type = EMOTE_AUDIBLE
-
-/datum/emote/living/nya/run_emote(mob/living/user, params)
-	if(ishuman(user))
-		if(user.nextsoundemote >= world.time)
-			return
-		user.nextsoundemote = world.time + 7
-		playsound(user, 'modular_citadel/sound/voice/nya.ogg', 50, 1, -1)
-	. = ..()
-
-/datum/emote/living/weh
-	key = "weh"
-	key_third_person = "lets out a weh"
-	message = "lets out a weh!"
-	emote_type = EMOTE_AUDIBLE
-
-/datum/emote/living/weh/run_emote(mob/living/user, params)
-	if(ishuman(user))
-		if(user.nextsoundemote >= world.time)
-			return
-		user.nextsoundemote = world.time + 7
-		playsound(user, 'modular_citadel/sound/voice/weh.ogg', 50, 1, -1)
-	. = ..()
-
 /datum/emote/living/peep
 	key = "peep"
 	key_third_person = "peeps like a bird"
@@ -176,29 +134,6 @@
 		playsound(user, 'modular_citadel/sound/voice/peep.ogg', 50, 1, -1)
 	. = ..()
 
-/datum/emote/living/dab
-	key = "dab"
-	key_third_person = "suddenly hits a dab"
-	message = "suddenly hits a dab!"
-	emote_type = EMOTE_AUDIBLE
-	restraint_check = TRUE
-
-
-
-/datum/emote/living/dab/run_emote(mob/living/user, params)
-	if (ishuman(user))
-		var/def_zone = BODY_ZONE_CHEST
-		var/luck = (rand(1,100))
-		if(luck >= 65)
-			user.adjustStaminaLoss(70)
-		if(luck >= 80)
-			def_zone = pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM)
-			user.apply_damage(20, BRUTE, def_zone)
-		if(luck >= 95)
-			user.adjustBrainLoss(100)
-	. = ..()
-
-
 /datum/emote/living/mothsqueak
 	key = "msqueak"
 	key_third_person = "lets out a tiny squeak"
@@ -212,18 +147,4 @@
 			return
 		user.nextsoundemote = world.time + 7
 		playsound(user, 'modular_citadel/sound/voice/mothsqueak.ogg', 50, 1, -1)
-	. = ..()
-
-/datum/emote/living/merp
-	key = "merp"
-	key_third_person = "merps"
-	message = "merps!"
-	emote_type = EMOTE_AUDIBLE
-
-/datum/emote/living/merp/run_emote(mob/living/user, params)
-	if(ishuman(user))
-		if(user.nextsoundemote >= world.time)
-			return
-		user.nextsoundemote = world.time + 7
-		playsound(user, 'modular_citadel/sound/voice/merp.ogg', 50, 1, -1)
 	. = ..()
