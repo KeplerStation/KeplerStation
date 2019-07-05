@@ -1062,6 +1062,20 @@ datum/emote/living/carbon
 	sound = 'sound/machines/chime.ogg'
 
 /*
+	SLIME
+*/
+
+/datum/emote/sound/slime
+	mob_type_allowed_typecache = list(/mob/living/carbon/human/species/jelly/slime, /mob/living/simple_animal/slime)
+
+/datum/emote/sound/slime/squish
+	key = "squish"
+	key_third_person = "squishes"
+	message = "squishes."
+	message_param = "squishes at %t."
+	sound = 'sound/effects/slime_squish.ogg'
+
+/*
 	MISC
 */
 /datum/emote/sound/gorilla
