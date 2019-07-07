@@ -31520,6 +31520,10 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
+/obj/structure/closet/crate{
+	icon_state = "crateopen"
+	},
+/obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "biO" = (
@@ -32396,16 +32400,15 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
 "bks" = (
-/obj/structure/closet/crate{
-	icon_state = "crateopen"
-	},
-/obj/effect/spawner/lootdrop/maintenance,
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
+	},
+/obj/machinery/autolathe{
+	name = "public autolathe"
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
