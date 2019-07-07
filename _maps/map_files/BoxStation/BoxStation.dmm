@@ -56664,8 +56664,6 @@
 /obj/item/stock_parts/cell/high,
 /turf/open/floor/plasteel/white,
 /area/science/circuit)
-<<<<<<< HEAD
-=======
 "eef" = (
 /obj/machinery/autolathe{
 	name = "public autolathe"
@@ -56675,7 +56673,6 @@
 "evR" = (
 /turf/open/floor/plating,
 /area/maintenance/bar)
->>>>>>> a9738e079... Merge pull request #8819 from Sishen1542/publiclathe
 "eyM" = (
 /obj/machinery/mineral/ore_redemption{
 	input_dir = 2;
