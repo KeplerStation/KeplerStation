@@ -124,6 +124,22 @@
 	},
 /turf/open/floor/plating,
 /area/crew_quarters/abandoned_gambling_den)
+"aaq" = (
+/obj/structure/bed,
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/obj/item/bedsheet/clown,
+/turf/open/floor/plasteel/grimy,
+/area/hallway/secondary/service)
+"aar" = (
+/obj/structure/bed,
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/obj/item/bedsheet/mime,
+/turf/open/floor/wood,
+/area/hallway/secondary/service)
 "aas" = (
 /obj/docking_port/stationary/random{
 	id = "pod_lavaland1";
@@ -143,6 +159,52 @@
 /obj/effect/landmark/xeno_spawn,
 /turf/open/space,
 /area/solar/starboard/fore)
+"aav" = (
+/obj/structure/bed,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/obj/effect/spawner/lootdrop/bedsheet,
+/turf/open/floor/carpet,
+/area/crew_quarters/dorms)
+"aaw" = (
+/obj/structure/bed,
+/obj/effect/decal/cleanable/dirt{
+	desc = "A thin layer of dust coating the floor.";
+	name = "dust"
+	},
+/obj/effect/spawner/lootdrop/bedsheet,
+/turf/open/floor/wood,
+/area/crew_quarters/dorms)
+"aax" = (
+/obj/structure/bed,
+/obj/effect/spawner/lootdrop/bedsheet,
+/turf/open/floor/wood,
+/area/crew_quarters/dorms)
+"aay" = (
+/obj/structure/bed,
+/obj/effect/spawner/lootdrop/bedsheet,
+/turf/open/floor/plasteel/grimy,
+/area/crew_quarters/dorms)
+"aaz" = (
+/obj/structure/bed,
+/obj/machinery/light,
+/obj/machinery/status_display{
+	pixel_y = -32
+	},
+/obj/effect/spawner/lootdrop/bedsheet,
+/turf/open/floor/carpet,
+/area/crew_quarters/dorms)
+"aaA" = (
+/obj/structure/bed,
+/obj/item/tank/internals/anesthetic,
+/obj/item/clothing/mask/breath,
+/obj/effect/spawner/lootdrop/bedsheet,
+/turf/open/floor/plating,
+/area/crew_quarters/abandoned_gambling_den)
 "aaE" = (
 /obj/structure/lattice/catwalk,
 /turf/open/space,
@@ -13706,14 +13768,6 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/hallway/secondary/service)
-"aDF" = (
-/obj/structure/bed,
-/obj/machinery/status_display{
-	pixel_y = 32
-	},
-/obj/item/bedsheet/rainbow,
-/turf/open/floor/plasteel/grimy,
-/area/hallway/secondary/service)
 "aDG" = (
 /turf/open/floor/plasteel/grimy,
 /area/hallway/secondary/service)
@@ -16866,14 +16920,6 @@
 /obj/machinery/airalarm{
 	pixel_y = 23
 	},
-/turf/open/floor/wood,
-/area/hallway/secondary/service)
-"aIP" = (
-/obj/structure/bed,
-/obj/machinery/status_display{
-	pixel_y = 32
-	},
-/obj/item/bedsheet/orange,
 /turf/open/floor/wood,
 /area/hallway/secondary/service)
 "aIQ" = (
@@ -78958,17 +79004,6 @@
 /obj/structure/dresser,
 /turf/open/floor/carpet,
 /area/crew_quarters/dorms)
-"cCi" = (
-/obj/structure/bed,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/item/bedsheet/red,
-/obj/machinery/status_display{
-	pixel_y = 32
-	},
-/turf/open/floor/carpet,
-/area/crew_quarters/dorms)
 "cCj" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/item/clothing/suit/jacket{
@@ -80986,22 +81021,8 @@
 	icon_state = "wood-broken2"
 	},
 /area/crew_quarters/dorms)
-"cFx" = (
-/obj/structure/bed,
-/obj/item/bedsheet/black,
-/obj/effect/decal/cleanable/dirt{
-	desc = "A thin layer of dust coating the floor.";
-	name = "dust"
-	},
-/turf/open/floor/wood,
-/area/crew_quarters/dorms)
 "cFy" = (
 /obj/item/twohanded/required/kirbyplants/random,
-/turf/open/floor/wood,
-/area/crew_quarters/dorms)
-"cFz" = (
-/obj/structure/bed,
-/obj/item/bedsheet/blue,
 /turf/open/floor/wood,
 /area/crew_quarters/dorms)
 "cFA" = (
@@ -87800,11 +87821,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
-"cRs" = (
-/obj/structure/bed,
-/obj/item/bedsheet/clown,
-/turf/open/floor/wood,
-/area/crew_quarters/dorms)
 "cRt" = (
 /obj/structure/table/wood,
 /obj/item/storage/briefcase{
@@ -88877,11 +88893,6 @@
 "cTb" = (
 /obj/structure/chair/office/dark,
 /turf/open/floor/wood,
-/area/crew_quarters/dorms)
-"cTc" = (
-/obj/structure/bed,
-/obj/item/bedsheet/mime,
-/turf/open/floor/plasteel/grimy,
 /area/crew_quarters/dorms)
 "cTd" = (
 /obj/structure/table,
@@ -90078,15 +90089,6 @@
 	pixel_y = -22
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/dorms)
-"cUX" = (
-/obj/structure/bed,
-/obj/machinery/light,
-/obj/item/bedsheet/brown,
-/obj/machinery/status_display{
-	pixel_y = -32
-	},
-/turf/open/floor/carpet,
 /area/crew_quarters/dorms)
 "cUY" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
@@ -151646,11 +151648,19 @@ dlc
 dmn
 djm
 fow
+<<<<<<< HEAD
 aad
 aad
 aad
 aad
 aad
+=======
+dod
+dod
+aaA
+dfY
+ajr
+>>>>>>> d218739bf... Merge pull request #8740 from Ghommie/Ghommie-cit87
 aad
 aad
 aad
@@ -160802,11 +160812,11 @@ ary
 aAf
 aBu
 aCB
-aDF
+aaq
 aEJ
 aFV
 aDI
-aIP
+aar
 aKo
 aLE
 aMX
@@ -178342,7 +178352,7 @@ cyY
 cAx
 cCd
 cDD
-cFx
+aaw
 cGU
 cAw
 cJl
@@ -178350,7 +178360,7 @@ cLa
 cMx
 cIi
 cPR
-cRs
+aax
 cDG
 cUW
 cAw
@@ -179123,7 +179133,7 @@ cNU
 cDI
 cFB
 cDI
-cUX
+aaz
 cAw
 cYj
 cZV
@@ -179370,7 +179380,7 @@ czc
 cAw
 cCg
 cDG
-cFz
+aax
 cGW
 cIi
 cJo
@@ -180139,7 +180149,7 @@ bHq
 cxt
 coI
 cAw
-cCi
+aav
 cDI
 cFB
 cDI
@@ -180407,7 +180417,7 @@ cMB
 cIi
 cPW
 cRv
-cTc
+aay
 cVb
 cAw
 cYp
