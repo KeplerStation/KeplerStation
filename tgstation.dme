@@ -3006,5 +3006,6 @@
 #include "modular_citadel\interface\skin.dmf"
 #include "modular_kepler\code\game\objects\ids.dm"
 #include "modular_kepler\code\game\objects\items\cards_ids.dm"
+#include "modular_kepler\code\modules\client\preferences.dm"
 #include "modular_kepler\code\modules\mob\dead\new_player\tos_procs.dm"
 // END_INCLUDE
