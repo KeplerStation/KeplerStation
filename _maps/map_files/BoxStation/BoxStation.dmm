@@ -57321,6 +57321,12 @@
 	},
 /turf/open/floor/carpet,
 /area/crew_quarters/cryopod)
+"qOU" = (
+/obj/machinery/autolathe{
+	name = "public autolathe"
+	},
+/turf/open/floor/plasteel,
+/area/quartermaster/office)
 "rcD" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -81567,7 +81573,7 @@ cNG
 cNJ
 bLF
 aZK
-bbR
+qOU
 bbR
 bqt
 cBq
