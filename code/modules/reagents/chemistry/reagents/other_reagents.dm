@@ -261,7 +261,7 @@
 			qdel(R)
 	T.Bless()
 
-/datum/reagent/fuel/unholywater		//if you somehow managed to extract this from someone, dont splash it on yourself and have a smoke
+/datum/reagent/fuel/unholywater	//if you somehow managed to extract this from someone, dont splash it on yourself and have a smoke
 	name = "Unholy Water"
 	id = "unholywater"
 	description = "Something that shouldn't exist on this plane of existence."
@@ -280,7 +280,7 @@
 		M.AdjustStun(-40, 0)
 		M.AdjustKnockdown(-40, 0)
 		M.adjustStaminaLoss(-10, 0)
-		M.adjustToxLoss(-2, 0)
+		M.adjustToxLoss(-2, 0, TRUE)
 		M.adjustOxyLoss(-2, 0)
 		M.adjustBruteLoss(-2, 0)
 		M.adjustFireLoss(-2, 0)
@@ -1863,3 +1863,23 @@
 	description = "The primary precursor for an ancient feline delicacy known as skooma. While it has no notable effects on it's own, mixing it with morphine in a chilled container may yield interesting results."
 	color = "#FAEAFF"
 	taste_description = "synthetic catnip"
+<<<<<<< HEAD
+=======
+
+/datum/reagent/penis_enlargement
+	name = "Penis Enlargement"
+	id = "penis_enlargement"
+	description = "A patented chemical forumula by Doctor Ronald Hyatt that is guaranteed to bring maximum GROWTH and LENGTH to your penis, today!"
+	color = "#888888"
+	taste_description = "chinese dragon powder"
+	metabolization_rate = INFINITY //So it instantly removes all of itself. Don't want to put strain on the system.
+
+/datum/reagent/penis_enlargement/on_mob_life(mob/living/carbon/C)
+	var/obj/item/organ/genital/penis/P = C.getorganslot(ORGAN_SLOT_PENIS)
+	if(P)
+		var/added_length = round(volume/30,0.01) //Every 30u gives an extra inch. Rounded to the nearest 0.01 so float fuckery doesn't occur with the division by 30.
+		if(added_length >= 0.20) //Only add the length if it's greater than or equal to 0.2. This is to prevent people from smoking the reagents and causing the penis to update constantly.
+			P.length += added_length
+			P.update()
+	..()
+>>>>>>> 739ea950d... Merge pull request #8858 from Trilbyspaceclone/patch-191
