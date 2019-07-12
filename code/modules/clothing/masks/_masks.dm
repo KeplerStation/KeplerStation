@@ -62,28 +62,6 @@
 			IF_HAS_BLOOD_DNA(src)
 				. += mutable_appearance('icons/effects/blood.dmi', "maskblood")
 
-<<<<<<< HEAD
-/obj/item/clothing/mask/equipped(mob/user, slot)
-	..()
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		var/datum/species/pref_species = H.dna.species
-
-		if(mutantrace_variation)
-			if("snout" in pref_species.default_features)
-				if(H.dna.features["snout"] != "None")
-					muzzle_var = ALT_STYLE
-				else
-					muzzle_var = NORMAL_STYLE
-
-			else
-				muzzle_var = NORMAL_STYLE
-
-			H.update_inv_wear_mask()
-
-
-=======
->>>>>>> 1eaddd3eb... Merge pull request #8853 from Ghommie/Ghommie-cit125
 /obj/item/clothing/mask/update_clothes_damaged_state(damaging = TRUE)
 	..()
 	if(ismob(loc))
