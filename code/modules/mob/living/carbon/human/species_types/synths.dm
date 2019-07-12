@@ -115,23 +115,6 @@
 	else
 		return ..()
 
-<<<<<<< HEAD
-
-/datum/species/synth/get_spans()
-	if(fake_species)
-		return fake_species.get_spans()
-	return list()
-
-
-/datum/species/synth/handle_speech(message, mob/living/carbon/human/H)
-	if(H.health > disguise_fail_health)
-		if(fake_species)
-			return fake_species.handle_speech(message,H)
-		else
-			return ..()
-	else
-		return ..()
-=======
 /datum/species/synth/proc/handle_speech(datum/source, list/speech_args)
 	if (isliving(source)) // yeah it's gonna be living but just to be clean
 		var/mob/living/L = source
@@ -141,4 +124,3 @@
 					speech_args[SPEECH_SPANS] |= SPAN_CLOWN
 				if (/datum/species/golem/clockwork)
 					speech_args[SPEECH_SPANS] |= SPAN_ROBOT
->>>>>>> 1eaddd3eb... Merge pull request #8853 from Ghommie/Ghommie-cit125
