@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /obj/item/clothing/under/pj/red
 	name = "red pj's"
 	desc = "Sleepwear."
