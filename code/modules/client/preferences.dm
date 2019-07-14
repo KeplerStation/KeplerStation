@@ -1708,22 +1708,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.hair_style = hair_style
 	character.facial_hair_style = facial_hair_style
 	character.underwear = underwear
-<<<<<<< HEAD
-=======
-
 	character.saved_underwear = underwear
->>>>>>> b153294a2... Merge pull request #8857 from Ghommie/Ghoomie-cit127
 	character.undershirt = undershirt
 	character.socks = socks
-<<<<<<< HEAD
-=======
 	character.saved_socks = socks
 	character.undie_color = undie_color
 	character.shirt_color = shirt_color
 	character.socks_color = socks_color
-
->>>>>>> b153294a2... Merge pull request #8857 from Ghommie/Ghoomie-cit127
-
 	character.backbag = backbag
 
 	var/datum/species/chosen_species
