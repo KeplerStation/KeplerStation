@@ -201,13 +201,10 @@
 	icon_state = "bra_alt"
 	has_color = TRUE
 
-<<<<<<< HEAD
 /datum/sprite_accessory/undershirt/female_green
 	name = "Bra - Green"
 	icon_state = "bra_green"
 
-/datum/sprite_accessory/undershirt/female_commie
-=======
 /datum/sprite_accessory/underwear/top/bra_thin
 	name = "Bra - Thin"
 	icon_state = "bra_thin"
@@ -218,7 +215,6 @@
 	icon_state = "bra_kinky"
 
 /datum/sprite_accessory/underwear/top/bra_freedom
->>>>>>> b153294a2... Merge pull request #8857 from Ghommie/Ghoomie-cit127
 	name = "Bra - Freedom"
 	icon_state = "bra_assblastusa"
 
