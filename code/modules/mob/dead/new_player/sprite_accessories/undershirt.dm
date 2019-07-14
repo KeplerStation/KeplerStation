@@ -258,7 +258,6 @@
 /datum/sprite_accessory/underwear/top/bra_strapless_alt
 	name = "Bra, Strapless - Alt"
 	icon_state = "bra_blue"
-<<<<<<< HEAD
 
 /datum/sprite_accessory/undershirt/swimsuit_green
 	name = "Swimsuit, Top - Green"
@@ -267,8 +266,6 @@
 /datum/sprite_accessory/undershirt/swimsuit_purple
 	name = "Swimsuit, Top - Purple"
 	icon_state = "bra_swimming_purple"
-=======
-	has_color = TRUE
 
 /datum/sprite_accessory/underwear/top/striped_bra
 	name = "Bra - Striped"
