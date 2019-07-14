@@ -298,4 +298,3 @@
 	name = "Tube Top"
 	icon_state = "tubetop"
 	has_color = TRUE
->>>>>>> b153294a2... Merge pull request #8857 from Ghommie/Ghoomie-cit127
