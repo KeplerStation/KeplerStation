@@ -292,7 +292,7 @@
 				if(!checkCCcooldown())
 					to_chat(usr, "<span class='warning'>Arrays recycling.  Please stand by.</span>")
 					return
-				var/input = stripped_input(usr, "Please choose a message to transmit to the Board of Directors via quantum entanglement.  Please be aware that this process is expensive and routes to the Board of Directors, not Head Office--abuse will result in contract termination.  Transmission does not guarantee a response.", "Send a message to CentCom.", "")
+				var/input = stripped_input(usr, "Please choose a message to transmit to the Board of Directors via quantum entanglement.  Please be aware that this process is expensive and routes to the Board of Directors, not Head Office--abuse will result in contract termination.  Transmission does not guarantee a response.", "Send a message to Board of Directors.", "")
 				if(!input || !(usr in view(1,src)) || !checkCCcooldown())
 					return
 				playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
@@ -309,7 +309,7 @@
 					to_chat(usr, "<span class='warning'>Arrays recycling.  Please stand by.</span>")
 					playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, 0)
 					return
-				var/input = stripped_input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is expensive and routes to \[UNKNOWN]\, not Head Office--abuse will result in contract termination.  Transmission does not guarantee a response.", "Send a message to /??????/.", "")
+				var/input = stripped_input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is expensive and routes to \[UNKNOWN\], not Head Office--abuse will result in contract termination.  Transmission does not guarantee a response.", "Send a message to /??????/.", "")
 				if(!input || !(usr in view(1,src)) || !checkCCcooldown())
 					return
 				playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
