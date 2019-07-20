@@ -23,10 +23,17 @@
 #define NO_MAT_REDEMPTION			(1<<5) // Stops you from putting things like an RCD or other items into an ORM or protolathe for materials.
 #define DROPDEL						(1<<6) // When dropped, it calls qdel on itself
 #define NOBLUDGEON				(1<<7)		// when an item has this it produces no "X has been hit by Y with Z" message in the default attackby()
+<<<<<<< HEAD
 #define NODROP					(1<<8)		// This flag makes it so that an item literally cannot be removed at all, or at least that's how it should be. Only deleted.
 #define ABSTRACT				(1<<9) 	// for all things that are technically items but used for various different stuff
 #define IMMUTABLE_SLOW          (1<<10) //When players should not be able to change the slowdown of the item (Speed potions, ect)
 #define SURGICAL_TOOL			(1<<12)	//Tool commonly used for surgery: won't attack targets in an active surgical operation on help intent (in case of mistakes)
+=======
+#define ABSTRACT				(1<<8) 	// for all things that are technically items but used for various different stuff
+#define IMMUTABLE_SLOW          (1<<9) //When players should not be able to change the slowdown of the item (Speed potions, ect)
+#define SURGICAL_TOOL			(1<<10)	//Tool commonly used for surgery: won't attack targets in an active surgical operation on help intent (in case of mistakes)
+#define NO_UNIFORM_REQUIRED		(1<<11) // Can be worn on certain slots (currently belt and id) that would otherwise require an uniform.
+>>>>>>> c657244d9... Merge pull request #8920 from Ghommie/Ghommie-cit149
 
 // Flags for the clothing_flags var on /obj/item/clothing
 
