@@ -136,7 +136,7 @@
 
 /obj/item/melee/rapier
 	name = "plastitanium rapier"
-	desc = "A impossibly thin blade made of plastitanium with a tip made of diamond. It looks to be able to cut through any armor."
+	desc = "Don't slice your fingers."
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "rapier"
 	item_state = "rapier"

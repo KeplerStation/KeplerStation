@@ -666,7 +666,7 @@
 
 /obj/item/storage/belt/sabre/rapier
 	name = "rapier sheath"
-	desc = "A black, thin sheath that looks to house only a long thin blade. Feels like its made of metal."
+	desc = "A black sheath, feels seemingly metallic."
 	icon_state = "rsheath"
 	item_state = "rsheath"
 	force = 5
