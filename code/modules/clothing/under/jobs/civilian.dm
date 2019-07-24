@@ -25,12 +25,27 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 
+/obj/item/clothing/under/rank/captain/dress
+	name = "captain's dress uniform"
+	desc = "Feminine fashion for the style concious captain."
+	icon_state = "dress_cap"
+	item_color = "dress_cap"
+	can_adjust = FALSE
+
 /obj/item/clothing/under/rank/cargo
 	name = "quartermaster's jumpsuit"
 	desc = "It's a jumpsuit worn by the quartermaster. It's specially designed to prevent back injuries caused by pushing paper."
 	icon_state = "qm"
 	item_state = "lb_suit"
 	item_color = "qm"
+
+/obj/item/clothing/under/rank/cargo/skirt
+	name = "quartermaster's jumpskirt"
+	desc = "It's a jumpskirt worn by the quartermaster. It's specially designed to prevent back injuries caused by pushing paper."
+	icon_state = "qmf"
+	item_color = "qmf"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/cargotech
 	name = "cargo technician's jumpsuit"
@@ -42,6 +57,12 @@
 	mutantrace_variation = MUTANTRACE_VARIATION
 	alt_covers_chest = TRUE
 
+/obj/item/clothing/under/rank/cargotech/skirt
+	name = "cargo technician's jumpskirt"
+	desc = "Skirrrrrts! They're comfy and easy to wear!"
+	icon_state = "cargof"
+	item_color = "cargof"
+	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/chaplain
 	desc = "It's a black jumpsuit, often worn by religious folk."
@@ -138,6 +159,12 @@
 	item_state = "b_suit"
 	item_color = "hop"
 	can_adjust = FALSE
+
+/obj/item/clothing/under/rank/head_of_personnel/dress
+	name = "head of personal's dress uniform"
+	desc = "Feminine fashion for the style concious HoP."
+	icon_state = "dress_hop"
+	item_color = "dress_hop"
 
 /obj/item/clothing/under/rank/hydroponics
 	desc = "It's a jumpsuit designed to protect against minor plant-related hazards."
@@ -242,3 +269,31 @@
 	item_state = "explorer"
 	item_color = "explorer"
 	can_adjust = FALSE
+
+//Sprites for later use.
+
+/obj/item/clothing/under/rank/ntrep/skirt
+	desc = "A silky smooth black and gold representative uniform with blue markings."
+	name = "representative skirt"
+	icon_state = "ntrepf"
+	item_state = "ntrepf"
+	item_color = "ntrepf"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
+
+/obj/item/clothing/under/rank/blueshield
+	name = "blueshield uniform"
+	desc = "A short-sleeved black uniform, paired with grey digital-camo cargo pants. Standard issue to Blueshield officers."
+	icon_state = "ert_uniform"
+	item_state = "bl_suit"
+	item_color = "ert_uniform"
+	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	can_adjust = FALSE
+
+/obj/item/clothing/under/rank/blueshield/skirt
+	name = "blueshield skirt"
+	desc = "A short, black and grey with blue markings skirted uniform. For the feminine Blueshield officers."
+	icon_state = "blueshieldf"
+	item_state = "blueshieldf"
+	item_color = "blueshieldf"
+	body_parts_covered = CHEST|GROIN|ARMS

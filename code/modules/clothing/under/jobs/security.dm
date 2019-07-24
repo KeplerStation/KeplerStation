@@ -29,14 +29,13 @@
 	item_color = "security"
 
 /obj/item/clothing/under/rank/security/skirt
-	name = "security jumpskirt"
-	desc = "A \"tactical\" security jumpsuit with the legs replaced by a skirt."
-	icon_state = "secskirt"
+	name = "security officer's jumpskirt"
+	desc = "Standard feminine fashion for Security Officers.  It's made of sturdier material than the standard jumpskirts."
+	icon_state = "secredf"
 	item_state = "r_suit"
-	item_color = "secskirt"
+	item_color = "secredf"
 	body_parts_covered = CHEST|GROIN|ARMS
-	can_adjust = FALSE //you know now that i think of it if you adjust the skirt and the sprite disappears isn't that just like flashing everyone
-
+	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/warden
 	name = "security suit"
@@ -49,6 +48,15 @@
 	alt_covers_chest = TRUE
 	sensor_mode = 3
 	random_sensor = FALSE
+
+/obj/item/clothing/under/rank/warden/skirt
+	desc = "Standard feminine fashion for a Warden. It is made of sturdier material than standard jumpskirts. It has the word \"Warden\" written on the shoulders."
+	name = "warden's jumpskirt"
+	icon_state = "wardenf"
+	item_state = "r_suit"
+	item_color = "wardenf"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/warden/grey
 	name = "grey security suit"
@@ -94,6 +102,15 @@
 	alt_covers_chest = TRUE
 	sensor_mode = 3
 	random_sensor = FALSE
+
+/obj/item/clothing/under/rank/head_of_security/skirt
+	desc = "It's a fashionable jumpskirt worn by those few with the dedication to achieve the position of \"Head of Security\". It has additional armor to protect the wearer."
+	name = "head of security's jumpskirt"
+	icon_state = "hosredf"
+	item_state = "r_suit"
+	item_color = "hosredf"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/head_of_security/grey
 	name = "head of security's grey jumpsuit"
@@ -147,4 +164,24 @@
 	icon_state = "blueshift"
 	item_state = "blueshift"
 	item_color = "blueshift"
+	can_adjust = FALSE
+
+/*
+ *Brig phys
+ */
+
+ /obj/item/clothing/under/rank/security/brigphys
+	desc = "Jumpsuit for Brig Physician it has both medical and security protection."
+	name = "brig physician's jumpsuit"
+	icon_state = "brig_phys"
+	item_state = "brig_phys"
+	item_color = "brig_phys"
+
+ /obj/item/clothing/under/rank/security/brigphys/skirt
+	desc = "A skirted Brig Physician uniform. It has both security and medical protection."
+	name = "brig physician's jumpskirt"
+	icon_state = "brig_physf"
+	item_state = "brig_physf"
+	item_color = "brig_physf"
+	body_parts_covered = CHEST|GROIN|ARMS
 	can_adjust = FALSE
