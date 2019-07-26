@@ -11,6 +11,10 @@
 #define ui_boxcraft "EAST-4:22,SOUTH+1:6"
 #define ui_boxarea "EAST-4:6,SOUTH+1:6"
 #define ui_boxlang "EAST-5:22,SOUTH+1:6"
+<<<<<<< HEAD
+=======
+#define ui_boxvore	"EAST-5:22,SOUTH+1:6"
+>>>>>>> f50e46719... Merge pull request #8962 from Poojawa/edgecase-hud
 
 //Filters
 #define CIT_FILTER_STAMINACRIT filter(type="drop_shadow", x=0, y=0, size=-3, border=0, color="#04080F")
