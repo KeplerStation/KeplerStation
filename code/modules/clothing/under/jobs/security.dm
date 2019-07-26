@@ -4,11 +4,9 @@
  *		Detective
  *		Navy uniforms
  */
-
 /*
  * Security
  */
-
 /obj/item/clothing/under/rank/security
 	name = "security jumpsuit"
 	desc = "A tactical security jumpsuit for officers complete with Nanotrasen belt buckle."
@@ -20,14 +18,12 @@
 	alt_covers_chest = TRUE
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
-
 /obj/item/clothing/under/rank/security/grey
 	name = "grey security jumpsuit"
 	desc = "A tactical relic of years past before Nanotrasen decided it was cheaper to dye the suits red instead of washing out the blood."
 	icon_state = "security"
 	item_state = "gy_suit"
 	item_color = "security"
-
 /obj/item/clothing/under/rank/security/skirt
 	name = "security officer's jumpskirt"
 	desc = "Standard feminine fashion for Security Officers.  It's made of sturdier material than the standard jumpskirts."
@@ -35,7 +31,13 @@
 	item_state = "r_suit"
 	item_color = "secredf"
 	body_parts_covered = CHEST|GROIN|ARMS
+<<<<<<< HEAD
 	can_adjust = FALSE
+=======
+	can_adjust = FALSE //you know now that i think of it if you adjust the skirt and the sprite disappears isn't that just like flashing everyone
+	fitted = FEMALE_UNIFORM_TOP
+
+>>>>>>> 751e87b96... Merge pull request #8970 from Sishen1542/master
 
 /obj/item/clothing/under/rank/warden
 	name = "security suit"
@@ -48,6 +50,7 @@
 	alt_covers_chest = TRUE
 	sensor_mode = 3
 	random_sensor = FALSE
+<<<<<<< HEAD
 
 /obj/item/clothing/under/rank/warden/skirt
 	desc = "Standard feminine fashion for a Warden. It is made of sturdier material than standard jumpskirts. It has the word \"Warden\" written on the shoulders."
@@ -58,12 +61,24 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	can_adjust = FALSE
 
+=======
+>>>>>>> 751e87b96... Merge pull request #8970 from Sishen1542/master
 /obj/item/clothing/under/rank/warden/grey
 	name = "grey security suit"
 	desc = "A formal relic of years past before Nanotrasen decided it was cheaper to dye the suits red instead of washing out the blood."
 	icon_state = "warden"
 	item_state = "gy_suit"
 	item_color = "warden"
+
+/obj/item/clothing/under/rank/warden/skirt
+	name = "warden's suitskirt"
+	desc = "A formal security suitskirt for officers complete with Nanotrasen belt buckle."
+	icon_state = "rwarden_skirt"
+	item_state = "r_suit"
+	item_color = "rwarden_skirt"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
+	fitted = FEMALE_UNIFORM_TOP
 
 /*
  * Detective
@@ -80,6 +95,16 @@
 	sensor_mode = 3
 	random_sensor = FALSE
 
+/obj/item/clothing/under/rank/det/skirt
+	name = "detective's suitskirt"
+	desc = "Someone who wears this means business."
+	icon_state = "detective_skirt"
+	item_state = "det"
+	item_color = "detective_skirt"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
+	fitted = FEMALE_UNIFORM_TOP
+
 /obj/item/clothing/under/rank/det/grey
 	name = "noir suit"
 	desc = "A hard-boiled private investigator's grey suit, complete with tie clip."
@@ -87,6 +112,16 @@
 	item_state = "greydet"
 	item_color = "greydet"
 	alt_covers_chest = TRUE
+
+/obj/item/clothing/under/rank/det/grey/skirt
+	name = "noir suitskirt"
+	desc = "A hard-boiled private investigator's grey suitskirt, complete with tie clip."
+	icon_state = "greydet_skirt"
+	item_state = "greydet"
+	item_color = "greydet_skirt"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
+	fitted = FEMALE_UNIFORM_TOP
 
 /*
  * Head of Security
@@ -104,6 +139,7 @@
 	random_sensor = FALSE
 
 /obj/item/clothing/under/rank/head_of_security/skirt
+<<<<<<< HEAD
 	desc = "It's a fashionable jumpskirt worn by those few with the dedication to achieve the position of \"Head of Security\". It has additional armor to protect the wearer."
 	name = "head of security's jumpskirt"
 	icon_state = "hosredf"
@@ -111,6 +147,16 @@
 	item_color = "hosredf"
 	body_parts_covered = CHEST|GROIN|ARMS
 	can_adjust = FALSE
+=======
+	name = "head of security's jumpskirt"
+	desc = "A security jumpskirt decorated for those few with the dedication to achieve the position of Head of Security."
+	icon_state = "rhos_skirt"
+	item_state = "r_suit"
+	item_color = "rhos_skirt"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
+	fitted = FEMALE_UNIFORM_TOP
+>>>>>>> 751e87b96... Merge pull request #8970 from Sishen1542/master
 
 /obj/item/clothing/under/rank/head_of_security/grey
 	name = "head of security's grey jumpsuit"
@@ -118,7 +164,6 @@
 	icon_state = "hos"
 	item_state = "gy_suit"
 	item_color = "hos"
-
 /obj/item/clothing/under/rank/head_of_security/alt
 	name = "head of security's turtleneck"
 	desc = "A stylish alternative to the normal head of security jumpsuit, complete with tactical pants."
@@ -126,10 +171,19 @@
 	item_state = "bl_suit"
 	item_color = "hosalt"
 
+/obj/item/clothing/under/rank/head_of_security/alt/skirt
+	name = "head of security's turtleneck skirt"
+	desc = "A stylish alternative to the normal head of security jumpsuit, complete with a tactical skirt."
+	icon_state = "hosalt_skirt"
+	item_state = "bl_suit"
+	item_color = "hosalt_skirt"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
+	fitted = FEMALE_UNIFORM_TOP
+
 /*
  * Navy uniforms
  */
-
 /obj/item/clothing/under/rank/security/navyblue
 	name = "security officer's formal uniform"
 	desc = "The latest in fashionable security outfits."
@@ -137,7 +191,6 @@
 	item_state = "officerblueclothes"
 	item_color = "officerblueclothes"
 	alt_covers_chest = TRUE
-
 /obj/item/clothing/under/rank/head_of_security/navyblue
 	desc = "The insignia on this uniform tells you that this uniform belongs to the Head of Security."
 	name = "head of security's formal uniform"
@@ -145,7 +198,6 @@
 	item_state = "hosblueclothes"
 	item_color = "hosblueclothes"
 	alt_covers_chest = TRUE
-
 /obj/item/clothing/under/rank/warden/navyblue
 	desc = "The insignia on this uniform tells you that this uniform belongs to the Warden."
 	name = "warden's formal uniform"
@@ -153,11 +205,9 @@
 	item_state = "wardenblueclothes"
 	item_color = "wardenblueclothes"
 	alt_covers_chest = TRUE
-
 /*
  *Blueshirt
  */
-
 /obj/item/clothing/under/rank/security/blueshirt
 	name = "blue shirt and tie"
 	desc = "I'm a little busy right now, Calhoun."
@@ -165,6 +215,7 @@
 	item_state = "blueshift"
 	item_color = "blueshift"
 	can_adjust = FALSE
+<<<<<<< HEAD
 
 /*
  *Brig phys
@@ -184,4 +235,15 @@
 	item_state = "brig_physf"
 	item_color = "brig_physf"
 	body_parts_covered = CHEST|GROIN|ARMS
+=======
+/*
+ *Spacepol
+ */
+/obj/item/clothing/under/rank/security/spacepol
+	name = "police uniform"
+	desc = "Space not controlled by megacorporations, planets, or pirates is under the jurisdiction of Spacepol."
+	icon_state = "spacepol"
+	item_state = "spacepol"
+	item_color = "spacepol"
+>>>>>>> 751e87b96... Merge pull request #8970 from Sishen1542/master
 	can_adjust = FALSE

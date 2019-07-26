@@ -11,9 +11,15 @@
 	new /obj/item/clothing/head/bio_hood/scientist(src)
 	new /obj/item/clothing/suit/toggle/labcoat(src)
 	new /obj/item/clothing/under/rank/research_director(src)
+<<<<<<< HEAD
 	new /obj/item/clothing/under/rank/research_director/dress(src)
+=======
+	new /obj/item/clothing/under/rank/research_director/skirt(src)
+>>>>>>> 751e87b96... Merge pull request #8970 from Sishen1542/master
 	new /obj/item/clothing/under/rank/research_director/alt(src)
+	new /obj/item/clothing/under/rank/research_director/alt/skirt(src)
 	new /obj/item/clothing/under/rank/research_director/turtleneck(src)
+	new /obj/item/clothing/under/rank/research_director/turtleneck/skirt(src)
 	new /obj/item/clothing/shoes/sneakers/brown(src)
 	new /obj/item/cartridge/rd(src)
 	new /obj/item/clothing/gloves/color/latex(src)
