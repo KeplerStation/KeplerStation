@@ -8,8 +8,6 @@
 	icon_state = "platingdmg3"
 	},
 /area/maintenance/department/science)
-<<<<<<< HEAD
-=======
 "aae" = (
 /obj/structure/bed,
 /obj/machinery/button/door{
@@ -103,7 +101,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/disposal)
->>>>>>> c1c30c0f9... Merge pull request #8945 from Ghommie/Ghommie-cit155
 "abf" = (
 /obj/structure/bed,
 /turf/open/floor/plating,
