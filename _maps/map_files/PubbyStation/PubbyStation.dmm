@@ -16,7 +16,6 @@
 	pixel_y = 26;
 	req_access_txt = "0"
 	},
-/obj/effect/spawner/lootdrop/bedsheet,
 /turf/open/floor/plasteel/grimy,
 /area/crew_quarters/dorms)
 "aaf" = (
