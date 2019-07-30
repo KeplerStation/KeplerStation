@@ -8,12 +8,13 @@
 	id = "slimeperson"
 	limbs_id = "slime"
 	default_color = "00FFFF"
-	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR,NOBLOOD)
+	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR,NOBLOOD,TRANSPARENT_BODY,NOEYES)
 	inherent_traits = list(TRAIT_TOXINLOVER)
 	default_features = list("mcolor" = "FFF", "mcolor2" = "FFF","mcolor3" = "FFF")
 	say_mod = "says"
 	hair_color = "mutcolor"
 	hair_alpha = 160 //a notch brighter so it blends better.
+	body_alpha = 200
 	coldmod = 3
 	heatmod = 1
 	burnmod = 1

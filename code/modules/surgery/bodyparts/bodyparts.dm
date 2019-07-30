@@ -45,6 +45,7 @@
 	var/species_color = ""
 	var/mutation_color = ""
 	var/no_update = 0
+	var/bodypart_alpha = ""
 	
 	var/animal_origin = null //for nonhuman bodypart (e.g. monkey)
 	var/dismemberable = 1 //whether it can be dismembered with a weapon.
@@ -351,6 +352,9 @@
 
 		dmg_overlay_type = S.damage_overlay_type
 
+		if(TRANSPARENT_BODY in S.species_traits)
+			bodypart_alpha = S.body_alpha
+
 	else if(animal_origin == MONKEY_BODYPART) //currently monkeys are the only non human mob to have damage overlays.
 		dmg_overlay_type = animal_origin
 
@@ -445,6 +449,9 @@
 			limb.color = "#[draw_color]"
 			if(aux_zone)
 				aux.color = "#[draw_color]"
+		if(bodypart_alpha)
+			message_admins("bodypart_alpha detected")
+			limb.alpha = bodypart_alpha
 
 /obj/item/bodypart/deconstruct(disassembled = TRUE)
 	drop_organs()

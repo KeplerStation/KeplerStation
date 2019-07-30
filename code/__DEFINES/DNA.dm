@@ -97,6 +97,7 @@
 #define DRINKSBLOOD		15
 #define NOEYES			16
 #define MARKINGS		17
+#define TRANSPARENT_BODY 18
 
 #define ORGAN_SLOT_BRAIN "brain"
 #define ORGAN_SLOT_APPENDIX "appendix"
