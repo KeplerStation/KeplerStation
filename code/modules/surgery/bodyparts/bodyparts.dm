@@ -450,7 +450,6 @@
 			if(aux_zone)
 				aux.color = "#[draw_color]"
 		if(bodypart_alpha)
-			message_admins("bodypart_alpha detected")
 			limb.alpha = bodypart_alpha
 
 /obj/item/bodypart/deconstruct(disassembled = TRUE)
