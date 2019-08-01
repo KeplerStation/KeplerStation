@@ -279,21 +279,6 @@ em						{font-style: normal;	font-weight: bold;}
 .binarysay    			{color: #20c20e; background-color: #000000; display: block;}
 .binarysay a  			{color: #00ff00;}
 .binarysay a:active, .binarysay a:visited {color: #88ff88;}
-<<<<<<< HEAD
-.radio					{color: #408010;}
-.sciradio				{color: #993399;}
-.comradio				{color: #204090;}
-.secradio				{color: #A30000;}
-.medradio				{color: #009190;}
-.engradio				{color: #A66300;}
-.suppradio				{color: #7F6539;}
-.servradio				{color: #80A000;}
-.syndradio				{color: #6D3F40;}
-.centcomradio			{color: #686868;}
-.aiprivradio			{color: #F00FFF;}
-.redteamradio           {color: #FF0000;}
-.blueteamradio          {color: #0000FF;}
-=======
 .radio					{color: #1ecc43;}
 .sciradio				{color: #c68cfa;}
 .comradio				{color: #5177ff;}
@@ -307,7 +292,6 @@ em						{font-style: normal;	font-weight: bold;}
 .aiprivradio			{color: #d65d95;}
 .redteamradio           {color: #ff4444;}
 .blueteamradio          {color: #3434fd;}
->>>>>>> 08fd6af7f... Merge pull request #8830 from Ghommie/Ghommie-cit114
 
 .yell					{					font-weight: bold;}
 
