@@ -29891,7 +29891,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
-/obj/structure/closet/crate/bin,
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "baW" = (
@@ -30741,6 +30740,7 @@
 /area/science/robotics/lab)
 "bcA" = (
 /obj/effect/turf_decal/stripes/line,
+/obj/structure/closet/crate/bin,
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "bcB" = (
@@ -37973,10 +37973,6 @@
 	name = "Robotics Lab";
 	req_access_txt = "29"
 	},
-/obj/machinery/door/airlock/research/glass{
-	name = "Robotics Lab";
-	req_access_txt = "29"
-	},
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "hUG" = (
@@ -41094,7 +41090,7 @@
 "sLL" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
-	id = "AI Core shutters";
+	id = "aicorewindow";
 	name = "AI core shutters"
 	},
 /turf/open/floor/plating,
