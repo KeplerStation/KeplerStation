@@ -411,6 +411,18 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	surplus = 20
 	include_modes = list(/datum/game_mode/nuclear)
 
+<<<<<<< HEAD
+=======
+/datum/uplink_item/dangerous/rapier
+	name = "Rapier"
+	desc = "A fancy rapier with a diamond tip piercing anything that it comes into contack with. \
+			The rapier comes with its own sheath, this is rather noticeable as only the captain is known to carry a sheath. \
+			The sheath itself can be used to block melee attacks only. Its also jet black colours."
+	item = /obj/item/storage/belt/sabre/rapier
+	cost = 8
+	exclude_modes = list(/datum/game_mode/nuclear/clown_ops)
+
+>>>>>>> 0a83649f2... Merge pull request #9000 from EgoSumStultus/shielf
 /datum/uplink_item/dangerous/flamethrower
 	name = "Flamethrower"
 	desc = "A flamethrower, fueled by a portion of highly flammable biotoxins stolen previously from Nanotrasen \
