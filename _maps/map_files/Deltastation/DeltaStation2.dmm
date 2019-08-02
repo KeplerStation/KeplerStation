@@ -1010,6 +1010,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
+"aez" = (
+/obj/machinery/keycard_auth,
+/turf/closed/wall,
+/area/quartermaster/qm)
 "aeB" = (
 /obj/machinery/status_display,
 /turf/closed/wall,
@@ -13711,7 +13715,11 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+<<<<<<< HEAD
 /obj/item/bedsheet/rainbow,
+=======
+/obj/item/bedsheet/clown,
+>>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/plasteel/grimy,
 /area/hallway/secondary/service)
 "aDG" = (
@@ -16873,7 +16881,11 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+<<<<<<< HEAD
 /obj/item/bedsheet/orange,
+=======
+/obj/item/bedsheet/mime,
+>>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/wood,
 /area/hallway/secondary/service)
 "aIQ" = (
@@ -78963,10 +78975,17 @@
 /obj/machinery/light{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/item/bedsheet/red,
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+=======
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/obj/effect/spawner/lootdrop/bedsheet,
+>>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/carpet,
 /area/crew_quarters/dorms)
 "cCj" = (
@@ -80988,11 +81007,18 @@
 /area/crew_quarters/dorms)
 "cFx" = (
 /obj/structure/bed,
+<<<<<<< HEAD
 /obj/item/bedsheet/black,
+=======
+>>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/spawner/lootdrop/bedsheet,
+>>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/wood,
 /area/crew_quarters/dorms)
 "cFy" = (
@@ -81001,7 +81027,11 @@
 /area/crew_quarters/dorms)
 "cFz" = (
 /obj/structure/bed,
+<<<<<<< HEAD
 /obj/item/bedsheet/blue,
+=======
+/obj/effect/spawner/lootdrop/bedsheet,
+>>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/wood,
 /area/crew_quarters/dorms)
 "cFA" = (
@@ -88880,7 +88910,11 @@
 /area/crew_quarters/dorms)
 "cTc" = (
 /obj/structure/bed,
+<<<<<<< HEAD
 /obj/item/bedsheet/mime,
+=======
+/obj/effect/spawner/lootdrop/bedsheet,
+>>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/plasteel/grimy,
 /area/crew_quarters/dorms)
 "cTd" = (
@@ -90082,10 +90116,17 @@
 "cUX" = (
 /obj/structure/bed,
 /obj/machinery/light,
+<<<<<<< HEAD
 /obj/item/bedsheet/brown,
 /obj/machinery/status_display{
 	pixel_y = -32
 	},
+=======
+/obj/machinery/status_display{
+	pixel_y = -32
+	},
+/obj/effect/spawner/lootdrop/bedsheet,
+>>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/carpet,
 /area/crew_quarters/dorms)
 "cUY" = (
@@ -127186,6 +127227,13 @@
 	dir = 1
 	},
 /area/science/circuit)
+"poI" = (
+/obj/structure/bed,
+/obj/item/tank/internals/anesthetic,
+/obj/item/clothing/mask/breath,
+/obj/effect/spawner/lootdrop/bedsheet,
+/turf/open/floor/plating,
+/area/crew_quarters/abandoned_gambling_den)
 "psi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bodycontainer/morgue{
@@ -151646,11 +151694,19 @@ dlc
 dmn
 djm
 fow
+<<<<<<< HEAD
 aad
 aad
 aad
 aad
 aad
+=======
+dod
+dod
+poI
+dfY
+ajr
+>>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 aad
 aad
 aad
@@ -174433,7 +174489,7 @@ aaa
 aaa
 aad
 aQQ
-aQQ
+aez
 aUp
 aVY
 aXE
@@ -178350,7 +178406,11 @@ cLa
 cMx
 cIi
 cPR
+<<<<<<< HEAD
 cRs
+=======
+cFz
+>>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 cDG
 cUW
 cAw
