@@ -355,7 +355,7 @@
 		var/new_staminaloss = owner.getStaminaLoss()
 		if(new_staminaloss < last_staminaloss)
 			var/heal_amount = -5 // CIT CHANGE - makes blood drunk status effect not exhaust you
-			owner.adjustStaminaLoss(heal_amount, updating_health = FALSE)
+			owner.adjustStaminaLoss(heal_amount, FALSE)
 			new_staminaloss = owner.getStaminaLoss()
 			needs_health_update = TRUE
 		last_staminaloss = new_staminaloss

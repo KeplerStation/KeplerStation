@@ -80,22 +80,22 @@
 	var/dy = A.y - y
 	if(!dx && !dy) // Wall items are graphically shifted but on the floor
 		if(A.pixel_y > 16)
-			setDir(NORTH, ismousemovement = TRUE)
+			setDir(NORTH)
 		else if(A.pixel_y < -16)
-			setDir(SOUTH, ismousemovement = TRUE)
+			setDir(SOUTH)
 		else if(A.pixel_x > 16)
-			setDir(EAST, ismousemovement = TRUE)
+			setDir(EAST)
 		else if(A.pixel_x < -16)
-			setDir(WEST, ismousemovement = TRUE)
+			setDir(WEST)
 		return
 
 	if(abs(dx) < abs(dy))
 		if(dy > 0)
-			setDir(NORTH, ismousemovement = TRUE)
+			setDir(NORTH)
 		else
-			setDir(SOUTH, ismousemovement = TRUE)
+			setDir(SOUTH)
 	else
 		if(dx > 0)
-			setDir(EAST, ismousemovement = TRUE)
+			setDir(EAST)
 		else
-			setDir(WEST, ismousemovement = TRUE)
+			setDir(WEST)

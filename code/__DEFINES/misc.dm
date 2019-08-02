@@ -478,3 +478,5 @@ GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi', PDA_S
 
 #define VOMIT_TOXIC 1
 #define VOMIT_PURPLE 2
+
+#define CRYOMOBS 'icons/obj/cryo_mobs.dmi'

@@ -70,7 +70,7 @@
 		return TRUE
 	if(!isturf(loc))
 		return FALSE
-	if(loc.Adjacent(neighbor,target = neighbor, mover = src))
+	if(loc.Adjacent(neighbor))
 		return TRUE
 	return FALSE
 
