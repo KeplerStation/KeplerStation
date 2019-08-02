@@ -7412,10 +7412,7 @@
 /area/maintenance/fore/secondary)
 "aqn" = (
 /obj/structure/bed,
-<<<<<<< HEAD
 /obj/item/bedsheet,
-=======
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /obj/machinery/airalarm{
 	pixel_y = 23
 	},
@@ -7429,10 +7426,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
-<<<<<<< HEAD
-=======
-/obj/effect/spawner/lootdrop/bedsheet,
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/carpet,
 /area/crew_quarters/dorms)
 "aqo" = (
@@ -8217,10 +8210,7 @@
 /area/crew_quarters/fitness)
 "asu" = (
 /obj/structure/bed,
-<<<<<<< HEAD
 /obj/item/bedsheet/red,
-=======
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /obj/machinery/button/door{
 	id = "Dorm5";
 	name = "Cabin Bolt Control";
@@ -8229,10 +8219,6 @@
 	specialfunctions = 4
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
-<<<<<<< HEAD
-=======
-/obj/effect/spawner/lootdrop/bedsheet,
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/wood,
 /area/crew_quarters/dorms)
 "asv" = (
@@ -8328,10 +8314,7 @@
 /area/maintenance/port/fore)
 "asL" = (
 /obj/structure/bed,
-<<<<<<< HEAD
 /obj/item/bedsheet/red,
-=======
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /obj/machinery/button/door{
 	id = "Dorm6";
 	name = "Cabin Bolt Control";
@@ -8340,10 +8323,6 @@
 	specialfunctions = 4
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
-<<<<<<< HEAD
-=======
-/obj/effect/spawner/lootdrop/bedsheet,
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/wood,
 /area/crew_quarters/dorms)
 "asM" = (
@@ -8954,10 +8933,7 @@
 /area/crew_quarters/fitness)
 "auw" = (
 /obj/structure/bed,
-<<<<<<< HEAD
 /obj/item/bedsheet,
-=======
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /obj/machinery/airalarm{
 	pixel_y = 23
 	},
@@ -8971,10 +8947,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
-<<<<<<< HEAD
-=======
-/obj/effect/spawner/lootdrop/bedsheet,
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/carpet,
 /area/crew_quarters/dorms)
 "aux" = (
@@ -10845,10 +10817,7 @@
 /area/ai_monitored/storage/eva)
 "ayV" = (
 /obj/structure/bed,
-<<<<<<< HEAD
 /obj/item/bedsheet,
-=======
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /obj/machinery/airalarm{
 	pixel_y = 23
 	},
@@ -10862,10 +10831,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
-<<<<<<< HEAD
-=======
-/obj/effect/spawner/lootdrop/bedsheet,
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/carpet,
 /area/crew_quarters/dorms)
 "ayW" = (
@@ -39399,13 +39364,8 @@
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
 "bOm" = (
-<<<<<<< HEAD
-/obj/item/bedsheet,
-/obj/structure/bed,
-=======
 /obj/structure/bed,
 /obj/item/bedsheet/medical,
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "bOn" = (
@@ -56707,12 +56667,9 @@
 /obj/item/stock_parts/cell/high,
 /turf/open/floor/plasteel/white,
 /area/science/circuit)
-<<<<<<< HEAD
-=======
 "evR" = (
 /turf/open/floor/plating,
 /area/maintenance/bar)
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 "eyM" = (
 /obj/machinery/mineral/ore_redemption{
 	input_dir = 2;
@@ -57401,8 +57358,6 @@
 /obj/structure/bed,
 /obj/item/tank/internals/anesthetic,
 /obj/item/clothing/mask/breath,
-/obj/effect/decal/cleanable/semen,
-/obj/effect/spawner/lootdrop/bedsheet,
 /turf/open/floor/plating,
 /area/maintenance/bar)
 "rNc" = (
@@ -79865,17 +79820,10 @@ sXA
 mPE
 kyF
 sAM
-<<<<<<< HEAD
 cxo
 mpI
 bcU
 vzO
-=======
-imH
-evR
-evR
-rMN
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 bCq
 bUs
 bLv
@@ -81637,11 +81585,7 @@ cNG
 cNJ
 bLF
 aZK
-<<<<<<< HEAD
-bbR
-=======
 urE
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 bbR
 bqt
 cBq
@@ -98373,11 +98317,7 @@ bRQ
 bOr
 bSQ
 bWj
-<<<<<<< HEAD
-bWk
-=======
 bOm
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 bXc
 bYe
 bNd
@@ -98891,11 +98831,7 @@ bRQ
 bOr
 bSQ
 bWj
-<<<<<<< HEAD
-bWk
-=======
 bOm
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 bXc
 bYe
 bNd

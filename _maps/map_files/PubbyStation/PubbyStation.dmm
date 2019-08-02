@@ -8,101 +8,6 @@
 	icon_state = "platingdmg3"
 	},
 /area/maintenance/department/science)
-<<<<<<< HEAD
-"aae" = (
-/obj/structure/bed,
-/obj/machinery/button/door{
-	id = "Dorm1Shutters";
-	name = "Privacy Shutters Control";
-	pixel_y = 26;
-	req_access_txt = "0"
-	},
-/turf/open/floor/plasteel/grimy,
-/area/crew_quarters/dorms)
-"aaf" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "garbage"
-	},
-/turf/open/floor/plating,
-/area/maintenance/disposal)
-"aag" = (
-/obj/machinery/mineral/stacking_unit_console{
-	dir = 2;
-	machinedir = 8;
-	pixel_x = -32;
-	pixel_y = 32
-	},
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "garbagestacked"
-	},
-/turf/open/floor/plating,
-/area/maintenance/disposal)
-"aah" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "garbagestacked"
-	},
-/turf/open/floor/plating,
-/area/maintenance/disposal)
-"aai" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "garbage"
-	},
-/turf/open/floor/plating,
-/area/maintenance/disposal)
-"aaj" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "garbage"
-	},
-/turf/open/floor/plating,
-/area/maintenance/disposal)
-"aak" = (
-/obj/machinery/recycler,
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "garbage"
-	},
-/turf/open/floor/plating,
-/area/maintenance/disposal)
-"aal" = (
-/obj/structure/chair/comfy/black,
-/obj/structure/sign/plaques/kiddie{
-	desc = "An embossed piece of paper from the Third University of Harvard.";
-	name = "\improper 'Diploma' frame";
-	pixel_y = 32
-	},
-/obj/machinery/light/small{
-	dir = 1;
-	light_color = "#ffc1c1"
-	},
-/obj/effect/landmark/start/lawyer,
-/turf/open/floor/wood,
-/area/lawoffice)
-"aam" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "garbage"
-	},
-/obj/structure/disposaloutlet{
-	dir = 4
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 8
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/maintenance/disposal)
-=======
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 "abf" = (
 /obj/structure/bed,
 /turf/open/floor/plating,
@@ -8702,19 +8607,11 @@
 /area/crew_quarters/dorms)
 "ave" = (
 /obj/structure/bed,
-<<<<<<< HEAD
-/obj/item/bedsheet/nanotrasen,
-=======
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /obj/machinery/button/door{
 	id = "Dorm3Shutters";
 	name = "Privacy Shutters Control";
 	pixel_y = 26
 	},
-<<<<<<< HEAD
-=======
-/obj/effect/spawner/lootdrop/bedsheet,
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/wood,
 /area/crew_quarters/dorms)
 "avf" = (
@@ -10162,20 +10059,12 @@
 /area/crew_quarters/dorms)
 "ayj" = (
 /obj/structure/bed,
-<<<<<<< HEAD
-/obj/item/bedsheet/nanotrasen,
-=======
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /obj/machinery/button/door{
 	id = "Dorm2Shutters";
 	name = "Privacy Shutters Control";
 	pixel_y = 26;
 	req_access_txt = "0"
 	},
-<<<<<<< HEAD
-=======
-/obj/effect/spawner/lootdrop/bedsheet,
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/carpet,
 /area/crew_quarters/dorms)
 "ayk" = (
@@ -11627,20 +11516,13 @@
 /area/crew_quarters/dorms)
 "aBM" = (
 /obj/structure/bed,
-<<<<<<< HEAD
 /obj/item/bedsheet/nanotrasen,
-=======
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /obj/machinery/button/door{
 	id = "Dorm1Shutters";
 	name = "Privacy Shutters Control";
 	pixel_y = 26;
 	req_access_txt = "0"
 	},
-<<<<<<< HEAD
-=======
-/obj/effect/spawner/lootdrop/bedsheet,
->>>>>>> e1187036e... Merge pull request #9005 from Trilbyspaceclone/ID_Swipers
 /turf/open/floor/plasteel/grimy,
 /area/crew_quarters/dorms)
 "aBN" = (
