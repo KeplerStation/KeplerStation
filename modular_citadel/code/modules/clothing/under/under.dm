@@ -4,6 +4,10 @@
 ///////																		///////
 *//////////////////////////////////////////////////////////////////////////////////
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 64267c7ce... Merge pull request #9001 from Linzolle/skirtfix
 /obj/item/clothing/under/corporateuniform
 	name = "corporate uniform"
 	desc = "A comfortable, tight fitting jumpsuit made of premium materials. Not space-proof."
