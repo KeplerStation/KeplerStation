@@ -237,7 +237,6 @@
 		return
 	deactivate(silent = TRUE)
 
-<<<<<<< HEAD
 /obj/item/organ/eyes/robotic/glow/Insert(mob/living/carbon/M, special = FALSE, drop_if_replaced = FALSE)
 	. = ..()
 	if (mobhook && mobhook.parent != M)
@@ -246,9 +245,6 @@
 		mobhook = M.AddComponent(/datum/component/redirect, list(COMSIG_ATOM_DIR_CHANGE = CALLBACK(src, .proc/update_visuals)))
 
 /obj/item/organ/eyes/robotic/glow/Remove(mob/living/carbon/M, special = 0)
-=======
-/obj/item/organ/eyes/robotic/glow/Remove(mob/living/carbon/M)
->>>>>>> f8cede1ca... Merge pull request #8998 from Ghommie/Ghommie-cit167
 	. = ..()
 	if(active)
 		UnregisterSignal(M, COMSIG_ATOM_DIR_CHANGE)
