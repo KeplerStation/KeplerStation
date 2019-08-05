@@ -210,15 +210,27 @@
 /datum/sprite_accessory/undershirt/female_midriff
 	name = "Tank Top - Midriff"
 	icon_state = "tank_midriff"
+<<<<<<< HEAD
 
 /datum/sprite_accessory/undershirt/tank_red
 	name = "Tank Top - Red"
 	icon_state = "tank_red"
+=======
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/tanktop_midriff_alt
+	name = "Tank Top - Midriff Halterneck"
+	icon_state = "tank_midriff_alt"
+	has_color = TRUE
+	gender = FEMALE
+>>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
 
 /datum/sprite_accessory/undershirt/tankstripe
 	name = "Tank Top - Striped"
 	icon_state = "tank_stripes"
 
+<<<<<<< HEAD
 /datum/sprite_accessory/undershirt/tank_white
 	name = "Tank Top - White"
 	icon_state = "tank_white"
@@ -236,12 +248,50 @@
 	icon_state = "bra_green"
 
 /datum/sprite_accessory/undershirt/female_commie
+=======
+/datum/sprite_accessory/underwear/top/tank_top_sun
+	name = "Tank top - Sun"
+	icon_state = "tank_sun"
+
+/datum/sprite_accessory/underwear/top/babydoll
+	name = "Baby-Doll"
+	icon_state = "babydoll"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/bra
+	name = "Bra"
+	icon_state = "bra"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/bra_alt
+	name = "Bra - Alt"
+	icon_state = "bra_alt"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/bra_thin
+	name = "Bra - Thin"
+	icon_state = "bra_thin"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/bra_kinky
+	name = "Bra - Kinky Black"
+	icon_state = "bra_kinky"
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/bra_freedom
+>>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
 	name = "Bra - Freedom"
 	icon_state = "bra_assblastusa"
+	gender = FEMALE
 
 /datum/sprite_accessory/undershirt/female_commie
 	name = "Bra - Commie"
 	icon_state = "bra_commie"
+	gender = FEMALE
 
 /datum/sprite_accessory/undershirt/female_babyblue
 	name = "Bra - Baby Blue"
@@ -250,6 +300,7 @@
 /datum/sprite_accessory/undershirt/female_beekini
 	name = "Bra - Bee-kini"
 	icon_state = "bra_bee-kini"
+	gender = FEMALE
 
 /datum/sprite_accessory/undershirt/female_black
 	name = "Bra - Black"
@@ -258,7 +309,9 @@
 /datum/sprite_accessory/undershirt/female_uk
 	name = "Bra - UK"
 	icon_state = "bra_uk"
+	gender = FEMALE
 
+<<<<<<< HEAD
 /datum/sprite_accessory/undershirt/female_white
 	name = "Bra - White"
 	icon_state = "bra_white"
@@ -274,10 +327,28 @@
 /datum/sprite_accessory/undershirt/female_blackalt
 	name = "Bra, Sports - Black"
 	icon_state = "bra_sports_black"
+=======
+/datum/sprite_accessory/underwear/top/bra_neko
+	name = "Bra - Neko"
+	icon_state = "bra_neko"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/halterneck_bra
+	name = "Bra - Halterneck"
+	icon_state = "halterneck_bra"
+	has_color = TRUE
+	gender = FEMALE
+>>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
 
 /datum/sprite_accessory/undershirt/sports_bra
 	name = "Bra, Sports 1 - White"
 	icon_state = "sports_bra"
+<<<<<<< HEAD
+=======
+	has_color = TRUE
+	gender = FEMALE
+>>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
 
 /datum/sprite_accessory/undershirt/female_whitealt
 	name = "Bra, Sports 2 - White"
@@ -286,6 +357,7 @@
 /datum/sprite_accessory/undershirt/sports_bra2
 	name = "Bra, Sports 3 - White"
 	icon_state = "sports_bra_alt"
+<<<<<<< HEAD
 
 /datum/sprite_accessory/undershirt/female_yellow
 	name = "Bra - Yellow"
@@ -294,10 +366,21 @@
 /datum/sprite_accessory/undershirt/female_thong
 	name = "Bra, Strapless - Pink"
 	icon_state = "bra_strapless_pink"
+=======
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/bra_strapless
+	name = "Bra, Strapless"
+	icon_state = "bra_strapless"
+	has_color = TRUE
+	gender = FEMALE
+>>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
 
 /datum/sprite_accessory/undershirt/female_blue
 	name = "Bra, Strapless - Blue"
 	icon_state = "bra_blue"
+<<<<<<< HEAD
 
 /datum/sprite_accessory/undershirt/swimsuit_green
 	name = "Swimsuit, Top - Green"
@@ -306,3 +389,46 @@
 /datum/sprite_accessory/undershirt/swimsuit_purple
 	name = "Swimsuit, Top - Purple"
 	icon_state = "bra_swimming_purple"
+=======
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/striped_bra
+	name = "Bra - Striped"
+	icon_state = "striped_bra"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/fishnet_sleeves
+	name = "Fishnet - sleeves"
+	icon_state = "fishnet_sleeves"
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/fishnet_gloves
+	name = "Fishnet - gloves"
+	icon_state = "fishnet_gloves"
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/fishnet_base
+	name = "Fishnet - top"
+	icon_state = "fishnet_body"
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/swimsuit
+	name = "Swimsuit Top"
+	icon_state = "bra_swimming"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/swimsuit_alt
+	name = "Swimsuit Top - Strapless"
+	icon_state = "bra_swimming_alt"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/tubetop
+	name = "Tube Top"
+	icon_state = "tubetop"
+	has_color = TRUE
+	gender = FEMALE
+>>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170

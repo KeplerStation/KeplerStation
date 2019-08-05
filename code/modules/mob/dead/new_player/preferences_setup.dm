@@ -6,8 +6,16 @@
 	else
 		gender = pick(MALE,FEMALE)
 	underwear = random_underwear(gender)
+<<<<<<< HEAD
 	undershirt = random_undershirt(gender)
 	socks = random_socks()
+=======
+	undie_color = random_short_color()
+	undershirt = random_undershirt(gender)
+	shirt_color = random_short_color()
+	socks = random_socks()
+	socks_color = random_short_color()
+>>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
 	skin_tone = random_skin_tone()
 	hair_style = random_hair_style(gender)
 	facial_hair_style = random_facial_hair_style(gender)
