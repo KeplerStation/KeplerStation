@@ -237,13 +237,6 @@
 		return
 	deactivate(silent = TRUE)
 
-/obj/item/organ/eyes/robotic/glow/Insert(mob/living/carbon/M, special = FALSE, drop_if_replaced = FALSE)
-	. = ..()
-	if (mobhook && mobhook.parent != M)
-		QDEL_NULL(mobhook)
-	if (!mobhook)
-		mobhook = M.AddComponent(/datum/component/redirect, list(COMSIG_ATOM_DIR_CHANGE = CALLBACK(src, .proc/update_visuals)))
-
 /obj/item/organ/eyes/robotic/glow/Remove(mob/living/carbon/M, special = 0)
 	. = ..()
 	if(active)
