@@ -21,40 +21,25 @@
 
 /obj/structure/dresser/attack_hand(mob/user)
 	. = ..()
-	if(.)
+	if(. || !ishuman(user) || !user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
 		return
-	if(!Adjacent(user))//no tele-grooming
+	var/mob/living/carbon/human/H = user
+
+	if(H.dna && H.dna.species && (NO_UNDERWEAR in H.dna.species.species_traits))
+		to_chat(H, "<span class='warning'>You are not capable of wearing underwear.</span>")
 		return
-<<<<<<< HEAD
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
 
-		if(H.dna && H.dna.species && (NO_UNDERWEAR in H.dna.species.species_traits))
-			to_chat(user, "<span class='warning'>You are not capable of wearing underwear.</span>")
-			return
+	var/list/undergarment_choices = list("Underwear", "Underwear Color", "Undershirt", "Undershirt Color", "Socks", "Socks Color")
+	if(!UNDIE_COLORABLE(GLOB.underwear_list[H.underwear]))
+		undergarment_choices -= "Underwear Color"
+	if(!UNDIE_COLORABLE(GLOB.undershirt_list[H.undershirt]))
+		undergarment_choices -= "Undershirt Color"
+	if(!UNDIE_COLORABLE(GLOB.socks_list[H.socks]))
+		undergarment_choices -= "Socks Color"
 
-		var/choice = input(user, "Underwear, Undershirt, or Socks?", "Changing") as null|anything in list("Underwear","Undershirt","Socks")
-
-		if(!Adjacent(user))
-			return
-		switch(choice)
-			if("Underwear")
-				var/new_undies = input(user, "Select your underwear", "Changing")  as null|anything in GLOB.underwear_list
-				if(new_undies)
-					H.underwear = new_undies
-
-			if("Undershirt")
-				var/new_undershirt = input(user, "Select your undershirt", "Changing") as null|anything in GLOB.undershirt_list
-				if(new_undershirt)
-					H.undershirt = new_undershirt
-			if("Socks")
-				var/new_socks = input(user, "Select your socks", "Changing") as null|anything in GLOB.socks_list
-				if(new_socks)
-					H.socks= new_socks
-
-		add_fingerprint(H)
-		H.update_body()
-=======
+	var/choice = input(H, "Underwear, Undershirt, or Socks?", "Changing") as null|anything in undergarment_choices
+	if(!H.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
+		return
 	var/dye_undie = FALSE
 	var/dye_shirt = FALSE
 	var/dye_socks = FALSE
@@ -95,4 +80,3 @@
 	if(!n_color || !H.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
 		return default_color
 	return sanitize_hexcolor(n_color, include_crunch= TRUE)
->>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
