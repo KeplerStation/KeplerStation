@@ -1197,8 +1197,6 @@
 	new /obj/item/reagent_containers/food/snacks/grown/chili(src)
 	new /obj/item/reagent_containers/food/drinks/coffee/type2(src)
 	new /obj/item/tank/internals/emergency_oxygen(src)
-<<<<<<< HEAD
-=======
 
 /obj/item/storage/box/mre/menu4
 	name = "\improper Nanotrasen MRE Ration Kit Menu 4"
@@ -1234,4 +1232,3 @@
 	var/obj/item/stack/sheet/cardboard/I = new(user.drop_location())
 	qdel(src)
 	user.put_in_hands(I)
->>>>>>> 985208420... Merge pull request #9019 from Ghommie/Ghommie-cit172
