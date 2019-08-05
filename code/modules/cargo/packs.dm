@@ -2604,14 +2604,7 @@
 	contains = list(/obj/item/vending_refill/wardrobe/sec_wardrobe,
 					/obj/item/vending_refill/wardrobe/law_wardrobe)
 	crate_name = "security department supply crate"
-
-/datum/supply_pack/costumes_toys/kinkmate
-	name = "Kinkmate construction kit"
-	cost = 2000
-	contraband = TRUE
-	contains = list(/obj/item/vending_refill/kink, /obj/item/circuitboard/machine/kinkmate)
-	crate_name = "Kinkmate construction kit"
-
+	
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////// Miscellaneous ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
