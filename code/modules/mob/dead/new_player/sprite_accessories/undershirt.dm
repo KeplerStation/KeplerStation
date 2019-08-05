@@ -210,12 +210,10 @@
 /datum/sprite_accessory/undershirt/female_midriff
 	name = "Tank Top - Midriff"
 	icon_state = "tank_midriff"
-<<<<<<< HEAD
 
 /datum/sprite_accessory/undershirt/tank_red
 	name = "Tank Top - Red"
 	icon_state = "tank_red"
-=======
 	has_color = TRUE
 	gender = FEMALE
 
@@ -224,40 +222,14 @@
 	icon_state = "tank_midriff_alt"
 	has_color = TRUE
 	gender = FEMALE
->>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
 
 /datum/sprite_accessory/undershirt/tankstripe
 	name = "Tank Top - Striped"
 	icon_state = "tank_stripes"
 
-<<<<<<< HEAD
 /datum/sprite_accessory/undershirt/tank_white
 	name = "Tank Top - White"
 	icon_state = "tank_white"
-
-/datum/sprite_accessory/undershirt/female_red
-	name = "Bra - Red"
-	icon_state = "bra_red"
-
-/datum/sprite_accessory/undershirt/female_pink
-	name = "Bra - Pink"
-	icon_state = "bra_pink"
-
-/datum/sprite_accessory/undershirt/female_green
-	name = "Bra - Green"
-	icon_state = "bra_green"
-
-/datum/sprite_accessory/undershirt/female_commie
-=======
-/datum/sprite_accessory/underwear/top/tank_top_sun
-	name = "Tank top - Sun"
-	icon_state = "tank_sun"
-
-/datum/sprite_accessory/underwear/top/babydoll
-	name = "Baby-Doll"
-	icon_state = "babydoll"
-	has_color = TRUE
-	gender = FEMALE
 
 /datum/sprite_accessory/underwear/top/bra
 	name = "Bra"
@@ -275,17 +247,6 @@
 	name = "Bra - Thin"
 	icon_state = "bra_thin"
 	has_color = TRUE
-	gender = FEMALE
-
-/datum/sprite_accessory/underwear/top/bra_kinky
-	name = "Bra - Kinky Black"
-	icon_state = "bra_kinky"
-	gender = FEMALE
-
-/datum/sprite_accessory/underwear/top/bra_freedom
->>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
-	name = "Bra - Freedom"
-	icon_state = "bra_assblastusa"
 	gender = FEMALE
 
 /datum/sprite_accessory/undershirt/female_commie
@@ -311,85 +272,25 @@
 	icon_state = "bra_uk"
 	gender = FEMALE
 
-<<<<<<< HEAD
-/datum/sprite_accessory/undershirt/female_white
-	name = "Bra - White"
-	icon_state = "bra_white"
-
-/datum/sprite_accessory/undershirt/female_white_neko
-	name = "Bra, Neko - white"
-	icon_state = "bra_neko_white"
-
-/datum/sprite_accessory/undershirt/female_black_neko
-	name = "Bra, Neko - Black"
-	icon_state = "bra_neko_black"
-
-/datum/sprite_accessory/undershirt/female_blackalt
-	name = "Bra, Sports - Black"
-	icon_state = "bra_sports_black"
-=======
-/datum/sprite_accessory/underwear/top/bra_neko
-	name = "Bra - Neko"
-	icon_state = "bra_neko"
-	has_color = TRUE
-	gender = FEMALE
-
-/datum/sprite_accessory/underwear/top/halterneck_bra
-	name = "Bra - Halterneck"
-	icon_state = "halterneck_bra"
-	has_color = TRUE
-	gender = FEMALE
->>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
-
 /datum/sprite_accessory/undershirt/sports_bra
 	name = "Bra, Sports 1 - White"
 	icon_state = "sports_bra"
-<<<<<<< HEAD
-=======
 	has_color = TRUE
 	gender = FEMALE
->>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
 
 /datum/sprite_accessory/undershirt/female_whitealt
 	name = "Bra, Sports 2 - White"
 	icon_state = "bra_sports_white"
-
-/datum/sprite_accessory/undershirt/sports_bra2
-	name = "Bra, Sports 3 - White"
-	icon_state = "sports_bra_alt"
-<<<<<<< HEAD
-
-/datum/sprite_accessory/undershirt/female_yellow
-	name = "Bra - Yellow"
-	icon_state = "bra_yellow"
-
-/datum/sprite_accessory/undershirt/female_thong
-	name = "Bra, Strapless - Pink"
-	icon_state = "bra_strapless_pink"
-=======
-	has_color = TRUE
-	gender = FEMALE
 
 /datum/sprite_accessory/underwear/top/bra_strapless
 	name = "Bra, Strapless"
 	icon_state = "bra_strapless"
 	has_color = TRUE
 	gender = FEMALE
->>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
 
 /datum/sprite_accessory/undershirt/female_blue
 	name = "Bra, Strapless - Blue"
 	icon_state = "bra_blue"
-<<<<<<< HEAD
-
-/datum/sprite_accessory/undershirt/swimsuit_green
-	name = "Swimsuit, Top - Green"
-	icon_state = "bra_swimming_green"
-
-/datum/sprite_accessory/undershirt/swimsuit_purple
-	name = "Swimsuit, Top - Purple"
-	icon_state = "bra_swimming_purple"
-=======
 	has_color = TRUE
 	gender = FEMALE
 
@@ -431,4 +332,3 @@
 	icon_state = "tubetop"
 	has_color = TRUE
 	gender = FEMALE
->>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
