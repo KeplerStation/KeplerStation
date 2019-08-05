@@ -10,6 +10,7 @@
 	attack_verb = list("whipped", "lashed", "disciplined")
 	max_integrity = 300
 	var/content_overlays = FALSE //If this is true, the belt will gain overlays based on what it's holding
+	var/worn_overlays = FALSE //worn counterpart of the above.
 
 /obj/item/storage/belt/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] begins belting [user.p_them()]self with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
@@ -22,6 +23,12 @@
 			var/mutable_appearance/M = I.get_belt_overlay()
 			add_overlay(M)
 	..()
+
+/obj/item/storage/belt/worn_overlays(isinhands, icon_file)
+	. = ..()
+	if(!isinhands && worn_overlays)
+		for(var/obj/item/I in contents)
+			. += I.get_worn_belt_overlay(icon_file)
 
 /obj/item/storage/belt/Initialize()
 	. = ..()
@@ -653,6 +660,13 @@
 	icon_state = "sheath"
 	item_state = "sheath"
 	w_class = WEIGHT_CLASS_BULKY
+<<<<<<< HEAD
+=======
+	content_overlays = TRUE
+	worn_overlays = TRUE
+	var/list/fitting_swords = list(/obj/item/melee/sabre, /obj/item/melee/baton/stunsword)
+	var/starting_sword = /obj/item/melee/sabre
+>>>>>>> b292bc718... Merge pull request #9007 from Ghommie/Ghommie-cit168
 
 /obj/item/storage/belt/sabre/ComponentInitialize()
 	. = ..()
@@ -707,6 +721,7 @@
 		to_chat(user, "[src] is empty.")
 
 /obj/item/storage/belt/sabre/update_icon()
+<<<<<<< HEAD
 	icon_state = initial(icon_state)
 	item_state = initial(item_state)
 	if(contents.len)
@@ -720,6 +735,15 @@
 /obj/item/storage/belt/sabre/PopulateContents()
 	new /obj/item/melee/sabre(src)
 	update_icon()
+=======
+	. = ..()
+	if(isliving(loc))
+		var/mob/living/L = loc
+		L.regenerate_icons()
+
+/obj/item/storage/belt/sabre/PopulateContents()
+	new starting_sword(src)
+>>>>>>> b292bc718... Merge pull request #9007 from Ghommie/Ghommie-cit168
 
 /obj/item/storage/belt/sabre/rapier/PopulateContents()
 	new /obj/item/melee/rapier(src)
