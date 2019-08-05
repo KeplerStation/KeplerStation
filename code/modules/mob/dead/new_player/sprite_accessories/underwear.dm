@@ -9,36 +9,9 @@
 	name = "Nude"
 	icon_state = null
 
-<<<<<<< HEAD
-/datum/sprite_accessory/underwear/mankini
-	name = "Mankini - Green"
-	icon_state = "mankini_green"
-
-/datum/sprite_accessory/underwear/male_white
-	name = "Briefs - White"
-	icon_state = "briefs_white"
-
-/datum/sprite_accessory/underwear/male_black
-	name = "Briefs - Black"
-	icon_state = "briefs_black"
-
-/datum/sprite_accessory/underwear/male_grey
-	name = "Briefs - Grey"
-	icon_state = "briefs_grey"
-
-/datum/sprite_accessory/underwear/male_red
-	name = "Briefs - Red"
-	icon_state = "briefs_red"
-=======
 /datum/sprite_accessory/underwear/bottom/mankini
 	name = "Mankini"
 	icon_state = "mankini"
-	has_color = TRUE
-	gender = MALE
-
-/datum/sprite_accessory/underwear/bottom/male_kinky
-	name = "Jockstrap"
-	icon_state = "jockstrap"
 	has_color = TRUE
 	gender = MALE
 
@@ -53,12 +26,6 @@
 	icon_state = "boxers"
 	has_color = TRUE
 	gender = MALE
-
-/datum/sprite_accessory/underwear/bottom/male_bee
-	name = "Boxers - Bee"
-	icon_state = "bee_shorts"
-	gender = MALE
->>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
 
 /datum/sprite_accessory/underwear/male_green
 	name = "Briefs - Green"
@@ -101,20 +68,6 @@
 	icon_state = "boxers_uk"
 	gender = MALE
 
-
-<<<<<<< HEAD
-/datum/sprite_accessory/underwear/female_whitealt
-	name = "Boxer Briefs - White"
-	icon_state = "boxer_briefs_white"
-
-/datum/sprite_accessory/underwear/female_blackalt
-	name = "Boxer Briefs - Black"
-	icon_state = "boxer_briefs_black"
-
-/datum/sprite_accessory/underwear/female_pink
-	name = "Boxer Briefs - Pink"
-	icon_state = "boxer_briefs_pink"
-=======
 /datum/sprite_accessory/underwear/bottom/panties
 	name = "Panties"
 	icon_state = "panties"
@@ -131,7 +84,6 @@
 	name = "Panties - Fishnet"
 	icon_state = "fishnet_lower"
 	gender = FEMALE
->>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
 
 /datum/sprite_accessory/underwear/female_babyblue
 	name = "Boxer Briefs - Baby Blue"
@@ -164,17 +116,6 @@
 	icon_state = "panties_assblastusa"
 	gender = FEMALE
 
-<<<<<<< HEAD
-/datum/sprite_accessory/underwear/female_green
-	name = "Panties - Green"
-	icon_state = "panties_green"
-=======
-/datum/sprite_accessory/underwear/bottom/female_kinky
-	name = "Panties - Kinky Black"
-	icon_state = "panties_kinky"
-	gender = FEMALE
->>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
-
 /datum/sprite_accessory/underwear/female_red
 	name = "Panties - Red"
 	icon_state = "panties_red"
@@ -182,34 +123,6 @@
 /datum/sprite_accessory/underwear/female_uk
 	name = "Panties - UK"
 	icon_state = "panties_uk"
-	gender = FEMALE
-
-<<<<<<< HEAD
-/datum/sprite_accessory/underwear/female_white
-	name = "Panties - White"
-	icon_state = "panties_white"
-
-/datum/sprite_accessory/underwear/female_white_neko
-	name = "Panties, Neko - White"
-	icon_state = "panties_neko_white"
-
-/datum/sprite_accessory/underwear/female_black_neko
-	name = "Panties, Neko - Black"
-	icon_state = "panties_neko_black"
-
-
-/datum/sprite_accessory/underwear/swimsuit_red
-=======
-/datum/sprite_accessory/underwear/bottom/panties_neko
-	name = "Panties - Neko"
-	icon_state = "panties_neko"
-	has_color = TRUE
-	gender = FEMALE
-
-/datum/sprite_accessory/underwear/bottom/panties_slim
-	name = "Panties - Slim"
-	icon_state = "panties_slim"
-	has_color = TRUE
 	gender = FEMALE
 
 /datum/sprite_accessory/underwear/bottom/striped_panties
@@ -236,7 +149,6 @@
 	has_color = TRUE
 
 /datum/sprite_accessory/underwear/bottom/swimsuit_red
->>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
 	name = "Swimsuit, One Piece - Red"
 	icon_state = "swimming_red"
 	gender = FEMALE
@@ -251,27 +163,6 @@
 	icon_state = "swimming_blue"
 	gender = FEMALE
 
-<<<<<<< HEAD
-/datum/sprite_accessory/underwear/swimsuit_green
-	name = "Swimsuit, Bottom - Green"
-	icon_state = "panties_swimming_green"
-
-/datum/sprite_accessory/underwear/swimsuit_purple
-	name = "Swimsuit, Bottom - Purple"
-	icon_state = "panties_swimming_purple"
-
-/datum/sprite_accessory/underwear/female_thong_black
-	name = "Thong - Black"
-	icon_state = "thong_black"
-
-/datum/sprite_accessory/underwear/female_thong
-	name = "Thong - Pink"
-	icon_state = "thong_pink"
-
-/datum/sprite_accessory/underwear/female_babydoll
-	name = "Babydoll - Black"
-	icon_state = "babydoll"
-=======
 /datum/sprite_accessory/underwear/bottom/thong
 	name = "Thong"
 	icon_state = "thong"
@@ -283,6 +174,4 @@
 	icon_state = "thong_babydoll"
 	has_color = TRUE
 	gender = FEMALE
->>>>>>> 8452cf3b8... Merge pull request #9014 from Ghommie/Ghommie-cit170
-
 
