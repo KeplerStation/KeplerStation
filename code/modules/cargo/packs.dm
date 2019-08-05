@@ -2763,28 +2763,6 @@
 	contains = list(/obj/machinery/jukebox)
 	crate_name = "Jukebox"
 
-<<<<<<< HEAD
-/datum/supply_pack/misc/paper_work
-	name = "Freelance Paper work"
-	desc = "The Nanotrasen Primary Bureaucratic Database Intelligence (PDBI) reports that the station has not completed its funding and grant paperwork this solar cycle. In order to gain further funding, your station is required to fill out (10) ten of these forms or no additional capital will be disbursed. We have sent you ten copies of the following form and we expect every one to be up to Nanotrasen Standards." // Disbursement. It's not a typo, look it up.
-	cost = 400 // Net of 0 credits
-	contains = list(/obj/item/folder/paperwork,
-					/obj/item/folder/paperwork,
-					/obj/item/folder/paperwork,
-					/obj/item/folder/paperwork,
-					/obj/item/folder/paperwork,
-					/obj/item/folder/paperwork,
-					/obj/item/folder/paperwork,
-					/obj/item/folder/paperwork,
-					/obj/item/folder/paperwork,
-					/obj/item/folder/paperwork,
-					/obj/item/pen/fountain,
-					/obj/item/pen/fountain,
-					/obj/item/pen/fountain,
-					/obj/item/pen/fountain,
-					/obj/item/pen/fountain)
-	crate_name = "Paperwork"
-
 /datum/supply_pack/misc/religious_supplies
 	name = "Religious Supplies Crate"
 	desc = "Keep your local chaplain happy and well-supplied, lest they call down judgement upon your cargo bay. Contains two bottles of holywater, bibles, chaplain robes, and burial garmets."
