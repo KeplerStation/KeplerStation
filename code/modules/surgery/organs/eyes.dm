@@ -169,7 +169,6 @@
 	var/list/obj/effect/abstract/eye_lighting/eye_lighting
 	var/obj/effect/abstract/eye_lighting/on_mob
 	var/image/mob_overlay
-	var/datum/component/mobhook
 
 /obj/item/organ/eyes/robotic/glow/Initialize()
 	. = ..()
@@ -238,6 +237,7 @@
 		return
 	deactivate(silent = TRUE)
 
+<<<<<<< HEAD
 /obj/item/organ/eyes/robotic/glow/Insert(mob/living/carbon/M, special = FALSE, drop_if_replaced = FALSE)
 	. = ..()
 	if (mobhook && mobhook.parent != M)
@@ -246,18 +246,20 @@
 		mobhook = M.AddComponent(/datum/component/redirect, list(COMSIG_ATOM_DIR_CHANGE = CALLBACK(src, .proc/update_visuals)))
 
 /obj/item/organ/eyes/robotic/glow/Remove(mob/living/carbon/M, special = 0)
+=======
+/obj/item/organ/eyes/robotic/glow/Remove(mob/living/carbon/M)
+>>>>>>> f8cede1ca... Merge pull request #8998 from Ghommie/Ghommie-cit167
 	. = ..()
-	QDEL_NULL(mobhook)
-
-/obj/item/organ/eyes/robotic/glow/Destroy()
-	QDEL_NULL(mobhook) // mobhook is not our component
-	return ..()
+	if(active)
+		UnregisterSignal(M, COMSIG_ATOM_DIR_CHANGE)
+		active = FALSE
 
 /obj/item/organ/eyes/robotic/glow/proc/activate(silent = FALSE)
 	start_visuals()
 	if(!silent)
 		to_chat(owner, "<span class='warning'>Your [src] clicks and makes a whining noise, before shooting out a beam of light!</span>")
 	active = TRUE
+	RegisterSignal(owner, COMSIG_ATOM_DIR_CHANGE, .proc/update_visuals)
 	cycle_mob_overlay()
 
 /obj/item/organ/eyes/robotic/glow/proc/deactivate(silent = FALSE)
@@ -265,6 +267,7 @@
 	if(!silent)
 		to_chat(owner, "<span class='warning'>Your [src] shuts off!</span>")
 	active = FALSE
+	UnregisterSignal(owner, COMSIG_ATOM_DIR_CHANGE)
 	remove_mob_overlay()
 
 /obj/item/organ/eyes/robotic/glow/proc/update_visuals(datum/source, olddir, newdir)
