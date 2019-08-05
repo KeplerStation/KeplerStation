@@ -254,11 +254,7 @@
 	display_name = "Advanced Bluespace Research"
 	description = "Deeper understanding of how the Bluespace dimension works"
 	prereq_ids = list("practical_bluespace", "high_efficiency")
-<<<<<<< HEAD
-	design_ids = list("bluespace_matter_bin", "femto_mani", "triphasic_scanning", "bluespace_crystal")
-=======
 	design_ids = list("bluespace_matter_bin", "femto_mani", "triphasic_scanning", "bluespace_crystal", "xenobio_slimeadv")
->>>>>>> cd6699cfe... Merge pull request #8660 from Trilbyspaceclone/Unmodular
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
 
@@ -294,11 +290,7 @@
 	display_name = "Bluespace Teleportation tech"
 	description = "Traversing through space at an instant with Bluespace."
 	prereq_ids = list("adv_power", "adv_bluespace")
-<<<<<<< HEAD
-	design_ids = list( "tele_station", "tele_hub", "quantumpad", "launchpad", "launchpad_console", "teleconsole", "roastingstick")
-=======
 	design_ids = list("tele_station", "tele_hub", "quantumpad", "quantum_keycard", "launchpad", "launchpad_console", "teleconsole", "roastingstick")
->>>>>>> cd6699cfe... Merge pull request #8660 from Trilbyspaceclone/Unmodular
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
