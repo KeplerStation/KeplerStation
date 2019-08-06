@@ -134,6 +134,16 @@
 		playsound(user, 'modular_citadel/sound/voice/peep.ogg', 50, 1, -1)
 	. = ..()
 
+<<<<<<< HEAD
+=======
+/datum/emote/living/dab
+	key = "dab"
+	key_third_person = "suddenly hits a dab"
+	message = "suddenly hits a dab!"
+	emote_type = EMOTE_AUDIBLE
+	restraint_check = TRUE
+
+>>>>>>> 98cecb2cc... Merge pull request #8923 from Citadel-Station-13/kevinz000-patch-53
 /datum/emote/living/mothsqueak
 	key = "msqueak"
 	key_third_person = "lets out a tiny squeak"
