@@ -164,6 +164,7 @@
 /obj/item/restraints/handcuffs/cable/white
 	item_color = "white"
 
+<<<<<<< HEAD
 /obj/item/restraints/handcuffs/alien
 	icon_state = "handcuffAlien"
 
@@ -172,6 +173,8 @@
 	desc = "Fake handcuffs meant for gag purposes."
 	breakouttime = 10 //Deciseconds = 1s
 
+=======
+>>>>>>> 74008beb8... Merge pull request #9066 from Ghommie/Ghommie-cit181
 /obj/item/restraints/handcuffs/cable/attackby(obj/item/I, mob/user, params)
 	..()
 	if(istype(I, /obj/item/stack/rods))
@@ -206,7 +209,6 @@
 /obj/item/restraints/handcuffs/cable/zipties
 	name = "zipties"
 	desc = "Plastic, disposable zipties that can be used to restrain temporarily but are destroyed after use."
-	icon_state = "zipties"
 	item_state = "zipties"
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
@@ -221,6 +223,21 @@
 
 /obj/item/restraints/handcuffs/cable/zipties/used/attack()
 	return
+
+/obj/item/restraints/handcuffs/alien
+	icon_state = "handcuffAlien"
+
+/obj/item/restraints/handcuffs/fake
+	name = "fake handcuffs"
+	desc = "Fake handcuffs meant for gag purposes."
+	breakouttime = 10 //Deciseconds = 1s
+
+/obj/item/restraints/handcuffs/fake/kinky
+	name = "kinky handcuffs"
+	desc = "Fake handcuffs meant for erotic roleplay."
+	icon = 'modular_citadel/icons/obj/items_and_weapons.dmi'
+	icon_state = "handcuffgag"
+	item_state = "kinkycuff"
 
 //Legcuffs
 
