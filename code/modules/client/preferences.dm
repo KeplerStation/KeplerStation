@@ -70,8 +70,16 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/gender = MALE					//gender of character (well duh)
 	var/age = 30						//age of character
 	var/underwear = "Nude"				//underwear type
+<<<<<<< HEAD
 	var/undershirt = "Nude"				//undershirt type
 	var/socks = "Nude"					//socks type
+=======
+	var/undie_color = "FFF"
+	var/undershirt = "Nude"				//undershirt type
+	var/shirt_color = "FFF"
+	var/socks = "Nude"					//socks type
+	var/socks_color = "FFF"
+>>>>>>> 14033d987... Merge pull request #9085 from Ghommie/Ghommie-cit186
 	var/backbag = DBACKPACK				//backpack type
 	var/hair_style = "Bald"				//Hair type
 	var/hair_color = "000"				//Hair color
@@ -1281,6 +1289,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(new_underwear)
 						underwear = new_underwear
 
+<<<<<<< HEAD
+=======
+				if("undie_color")
+					var/n_undie_color = input(user, "Choose your underwear's color.", "Character Preference", undie_color) as color|null
+					if(n_undie_color)
+						undie_color = sanitize_hexcolor(n_undie_color)
+
+>>>>>>> 14033d987... Merge pull request #9085 from Ghommie/Ghommie-cit186
 				if("undershirt")
 					var/new_undershirt
 					if(gender == MALE)
@@ -1290,12 +1306,28 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(new_undershirt)
 						undershirt = new_undershirt
 
+<<<<<<< HEAD
+=======
+				if("shirt_color")
+					var/n_shirt_color = input(user, "Choose your undershirt's color.", "Character Preference", shirt_color) as color|null
+					if(n_shirt_color)
+						shirt_color = sanitize_hexcolor(n_shirt_color)
+
+>>>>>>> 14033d987... Merge pull request #9085 from Ghommie/Ghommie-cit186
 				if("socks")
 					var/new_socks
 					new_socks = input(user, "Choose your character's socks:", "Character Preference") as null|anything in GLOB.socks_list
 					if(new_socks)
 						socks = new_socks
 
+<<<<<<< HEAD
+=======
+				if("socks_color")
+					var/n_socks_color = input(user, "Choose your socks' color.", "Character Preference", socks_color) as color|null
+					if(n_socks_color)
+						socks_color = sanitize_hexcolor(n_socks_color)
+
+>>>>>>> 14033d987... Merge pull request #9085 from Ghommie/Ghommie-cit186
 				if("eyes")
 					var/new_eyes = input(user, "Choose your character's eye colour:", "Character Preference","#"+eye_color) as color|null
 					if(new_eyes)
