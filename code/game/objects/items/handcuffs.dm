@@ -164,17 +164,9 @@
 /obj/item/restraints/handcuffs/cable/white
 	item_color = "white"
 
-<<<<<<< HEAD
 /obj/item/restraints/handcuffs/alien
 	icon_state = "handcuffAlien"
 
-/obj/item/restraints/handcuffs/fake
-	name = "fake handcuffs"
-	desc = "Fake handcuffs meant for gag purposes."
-	breakouttime = 10 //Deciseconds = 1s
-
-=======
->>>>>>> 74008beb8... Merge pull request #9066 from Ghommie/Ghommie-cit181
 /obj/item/restraints/handcuffs/cable/attackby(obj/item/I, mob/user, params)
 	..()
 	if(istype(I, /obj/item/stack/rods))
