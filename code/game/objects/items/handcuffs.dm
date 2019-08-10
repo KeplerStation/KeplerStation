@@ -224,13 +224,6 @@
 	desc = "Fake handcuffs meant for gag purposes."
 	breakouttime = 10 //Deciseconds = 1s
 
-/obj/item/restraints/handcuffs/fake/kinky
-	name = "kinky handcuffs"
-	desc = "Fake handcuffs meant for erotic roleplay."
-	icon = 'modular_citadel/icons/obj/items_and_weapons.dmi'
-	icon_state = "handcuffgag"
-	item_state = "kinkycuff"
-
 //Legcuffs
 
 /obj/item/restraints/legcuffs
