@@ -84,7 +84,7 @@
 /obj/item/clothing/gloves/rapid/hug
 	name = "Hugs of the North Star"
 	desc = "Just looking at these fills you with an urge to hug the shit out of people"
-	warcry = "owo" //Shouldn't ever come into play
+	warcry = "" //Shouldn't ever come into play
 
 /obj/item/clothing/gloves/rapid/hug/Touch(mob/living/target,proximity = TRUE)
 	var/mob/living/M = loc
