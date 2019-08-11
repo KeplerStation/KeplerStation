@@ -49,10 +49,7 @@
 #define STAMINA_CRIT									140 //crit for stamina damage. forces a rest, and stops movement until stamina goes back to stamina softcrit
 #define STAMINA_SOFTCRIT_TRADITIONAL	0	//same as STAMINA_SOFTCRIT except for the more traditional health calculations
 #define STAMINA_CRIT_TRADITIONAL			-40 //ditto, but for STAMINA_CRIT
-<<<<<<< HEAD
 #define MIN_MELEE_STAMCOST						1.25 //Minimum cost for swinging items around. Will be extra useful when stats and skills are introduced.
-=======
->>>>>>> 123b478ed... Merge pull request #8927 from Ghommie/Ghommie-cit151
 
 #define CRAWLUNDER_DELAY							30 //Delay for crawling under a standing mob
 
