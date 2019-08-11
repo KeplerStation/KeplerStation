@@ -21,7 +21,6 @@
 	addiction_stage2_end = 30
 	addiction_stage3_end = 41
 	addiction_stage4_end = 44 //Incase it's too long
-	data = list("location_created" = null)
 	var/turf/location_created
 	var/obj/effect/overlay/holo_pad_hologram/Eigenstate
 	var/turf/open/location_return = null
@@ -31,8 +30,8 @@
 	pH = 3.7
 	can_synth = TRUE
 
-/datum/reagent/fermi/eigenstate/on_new(list/data)
-	location_created = data.["location_created"]
+/datum/reagent/fermi/eigenstate/on_new()
+	location_created = data["location_created"]
 
 //Main functions
 /datum/reagent/fermi/eigenstate/on_mob_life(mob/living/M) //Teleports to chemistry!
@@ -54,7 +53,7 @@
 		to_chat(M, "<span class='userdanger'>You feel your wavefunction split!</span>")
 		if(purity > 0.9) //Teleports you home if it's pure enough
 			if(!location_created && data) //Just in case
-				location_created = data.["location_created"]
+				location_created = data["location_created"]
 			log_game("FERMICHEM: [M] ckey: [M.key] returned to [location_created] using eigenstasium")
 			do_sparks(5,FALSE,M)
 			do_teleport(M, location_created, 0, asoundin = 'sound/effects/phasein.ogg')

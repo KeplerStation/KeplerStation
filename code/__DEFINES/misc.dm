@@ -56,10 +56,6 @@ Will print: "/mob/living/carbon/human/death" (you can optionally embed it in a s
 #define BODYPARTS_LAYER			28		//Initially "AUGMENTS", this was repurposed to be a catch-all bodyparts flag
 #define MARKING_LAYER			27		//Matrixed body markings because clashing with snouts?
 #define BODY_ADJ_LAYER			26		//certain mutantrace features (snout, body markings) that must appear above the body parts
-<<<<<<< HEAD
-=======
-#define GENITALS_FRONT_LAYER	25		//Draws some genitalia above clothes and the TAUR body if need be.
->>>>>>> 5dcd419d8... Merge pull request #8356 from Thalpy/master
 #define BODY_LAYER				24		//underwear, undershirts, socks, eyes, lips(makeup)
 #define FRONT_MUTATIONS_LAYER	23		//mutations that should appear above body, body_adj and bodyparts layer (e.g. laser eyes)
 #define DAMAGE_LAYER			22		//damage indicators (cuts and burns)
@@ -489,8 +485,5 @@ GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi', PDA_S
 
 #define VOMIT_TOXIC 1
 #define VOMIT_PURPLE 2
-<<<<<<< HEAD
 
 #define CRYOMOBS 'icons/obj/cryo_mobs.dmi'
-=======
->>>>>>> 5dcd419d8... Merge pull request #8356 from Thalpy/master

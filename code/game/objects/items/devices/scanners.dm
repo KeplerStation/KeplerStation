@@ -185,15 +185,7 @@ SLIME SCANNER
 				msg += "\t<span class='danger'>Subject is suffering from acute emphysema leading to trouble breathing.</span>\n" //i.e. Their lungs are shot
 		else
 			msg += "\t<span class='danger'>Subject's lungs have collapsed from trauma!</span>\n"
-		var/obj/item/organ/genital/penis/P = H.getorganslot("penis")
-		if(P)
-			if(P.length>20)
-				msg += "\t<span class='info'>Subject has a sizeable gentleman's organ at [P.length] inches.</span>\n"
-		var/obj/item/organ/genital/breasts/Br = H.getorganslot("breasts")
-		if(Br)
-			if(Br.cached_size>5)
-				msg += "\t<span class='info'>Subject has a sizeable bosom with a [Br.size] cup.</span>\n"
-
+		
 		var/mob/living/carbon/C = M
 		if(LAZYLEN(C.get_traumas()))
 			var/list/trauma_text = list()

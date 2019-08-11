@@ -31,9 +31,6 @@
 
 /obj/item/organ/tongue/proc/handle_speech(datum/source, list/speech_args)
 
-<<<<<<< HEAD
-/obj/item/organ/tongue/Insert(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
-=======
 /obj/item/organ/tongue/proc/adjustTongueLoss(mob/living/carbon/M, damage_mod)
 	if (maxHealth == "alien")
 		return
@@ -57,8 +54,7 @@
 		to_chat(M, "<span class='notice'>Your tongue is really starting to hurt.</span>")
 
 
-/obj/item/organ/tongue/Insert(mob/living/carbon/M, special = 0)
->>>>>>> 5dcd419d8... Merge pull request #8356 from Thalpy/master
+/obj/item/organ/tongue/Insert(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
 	..()
 	if(say_mod && M.dna && M.dna.species)
 		M.dna.species.say_mod = say_mod
