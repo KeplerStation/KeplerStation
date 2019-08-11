@@ -2881,10 +2881,13 @@
 #include "modular_citadel\code\game\objects\items\devices\aicard.dm"
 #include "modular_citadel\code\game\objects\items\devices\radio\encryptionkey.dm"
 #include "modular_citadel\code\game\objects\items\devices\radio\headset.dm"
+<<<<<<< HEAD
 #include "modular_citadel\code\game\objects\items\melee\energy.dm"
+=======
+#include "modular_citadel\code\game\objects\items\devices\radio\shockcollar.dm"
+>>>>>>> 123b478ed... Merge pull request #8927 from Ghommie/Ghommie-cit151
 #include "modular_citadel\code\game\objects\items\melee\eutactic_blades.dm"
 #include "modular_citadel\code\game\objects\items\melee\misc.dm"
-#include "modular_citadel\code\game\objects\items\melee\transforming.dm"
 #include "modular_citadel\code\game\objects\items\robot\robot_upgrades.dm"
 #include "modular_citadel\code\game\objects\items\storage\firstaid.dm"
 #include "modular_citadel\code\game\objects\structures\tables_racks.dm"
