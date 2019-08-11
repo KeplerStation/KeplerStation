@@ -548,6 +548,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			dat +="<td width='300px' height='300px' valign='top'>"
 			dat += "<h2>Citadel Preferences</h2>" //Because fuck me if preferences can't be fucking modularized and expected to update in a reasonable timeframe.
+<<<<<<< HEAD
+=======
+			dat += "<b>Arousal:</b><a href='?_src_=prefs;preference=arousable'>[arousable == TRUE ? "Enabled" : "Disabled"]</a><BR>"
+			dat += "<b>Exhibitionist:</b><a href='?_src_=prefs;preference=exhibitionist'>[features["exhibitionist"] == TRUE ? "Yes" : "No"]</a><BR>"
+			dat += "<b>Voracious MediHound sleepers:</b> <a href='?_src_=prefs;preference=hound_sleeper'>[(cit_toggles & MEDIHOUND_SLEEPER) ? "Yes" : "No"]</a><br>"
+			dat += "<b>Hear Vore Sounds:</b> <a href='?_src_=prefs;preference=toggleeatingnoise'>[(cit_toggles & EATING_NOISES) ? "Yes" : "No"]</a><br>"
+			dat += "<b>Hear Vore Digestion Sounds:</b> <a href='?_src_=prefs;preference=toggledigestionnoise'>[(cit_toggles & DIGESTION_NOISES) ? "Yes" : "No"]</a><br>"
+			dat += "<b>Lewdchem:</b><a href='?_src_=prefs;preference=lewdchem'>[lewdchem == TRUE ? "Enabled" : "Disabled"]</a><BR>"
+>>>>>>> 5dcd419d8... Merge pull request #8356 from Thalpy/master
 			dat += "<b>Widescreen:</b> <a href='?_src_=prefs;preference=widescreenpref'>[widescreenpref ? "Enabled ([CONFIG_GET(string/default_view)])" : "Disabled (15x15)"]</a><br>"
 			dat += "<b>Auto stand:</b> <a href='?_src_=prefs;preference=autostand'>[autostand ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Screen Shake:</b> <a href='?_src_=prefs;preference=screenshake'>[(screenshake==100) ? "Full" : ((screenshake==0) ? "None" : "[screenshake]")]</a><br>"
@@ -1492,6 +1501,39 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		else
 			switch(href_list["preference"])
 				//CITADEL PREFERENCES EDIT - I can't figure out how to modularize these, so they have to go here. :c -Pooj
+<<<<<<< HEAD
+=======
+				if("genital_colour")
+					features["genitals_use_skintone"] = !features["genitals_use_skintone"]
+				if("arousable")
+					arousable = !arousable
+				if("lewdchem")
+					lewdchem = !lewdchem
+				if("has_cock")
+					features["has_cock"] = !features["has_cock"]
+					if(features["has_cock"] == FALSE)
+						features["has_balls"] = FALSE
+				if("has_balls")
+					features["has_balls"] = !features["has_balls"]
+				if("has_ovi")
+					features["has_ovi"] = !features["has_ovi"]
+				if("has_eggsack")
+					features["has_eggsack"] = !features["has_eggsack"]
+				if("balls_internal")
+					features["balls_internal"] = !features["balls_internal"]
+				if("eggsack_internal")
+					features["eggsack_internal"] = !features["eggsack_internal"]
+				if("has_breasts")
+					features["has_breasts"] = !features["has_breasts"]
+				if("has_vag")
+					features["has_vag"] = !features["has_vag"]
+					if(features["has_vag"] == FALSE)
+						features["has_womb"] = FALSE
+				if("has_womb")
+					features["has_womb"] = !features["has_womb"]
+				if("exhibitionist")
+					features["exhibitionist"] = !features["exhibitionist"]
+>>>>>>> 5dcd419d8... Merge pull request #8356 from Thalpy/master
 				if("widescreenpref")
 					widescreenpref = !widescreenpref
 					user.client.change_view(CONFIG_GET(string/default_view))
