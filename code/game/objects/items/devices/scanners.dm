@@ -213,10 +213,6 @@ SLIME SCANNER
 	if(advanced && M.hallucinating())
 		msg += "\t<span class='info'>Subject is hallucinating.</span>\n"
 
-	//MKUltra
-	if(advanced && M.has_status_effect(/datum/status_effect/chem/enthrall))
-		msg += "\t<span class='info'>Subject has abnormal brain fuctions.</span>\n"
-
 	//Astrogen shenanigans
 	if(advanced && M.reagents.has_reagent("astral"))
 		if(M.mind)

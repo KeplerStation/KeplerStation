@@ -170,71 +170,6 @@
 	FermiExplode 			= TRUE
 	PurityMin 				= 0.25
 
-
-/datum/chemical_reaction/fermi/enthrall/ //check this
-	name = "MKUltra"
-	id = "enthrall"
-	results = list("enthrall" = 0.5)
-	//required_reagents = list("iron" = 1, "iodine" = 1) Test vars
-	//required_reagents = list("cocoa" = 0.1, "astral" = 0.1, "mindbreaker" = 0.1, "psicodine" = 0.1, "happiness" = 0.1)
-	required_reagents = list("cocoa" = 0.1, "bluespace" = 0.1, "mindbreaker" = 0.1, "psicodine" = 0.1, "happiness" = 0.1) //TEMPORARY UNTIL HEADMINS GIVE THE OKAY FOR MK USE.
-	required_catalysts = list("blood" = 1)
-	mix_message = "the reaction gives off a burgundy plume of smoke!"
-	//FermiChem vars:
-	OptimalTempMin 			= 780
-	OptimalTempMax			= 820
-	ExplodeTemp 			= 840
-	OptimalpHMin 			= 12
-	OptimalpHMax 			= 13
-	ReactpHLim 				= 2
-	//CatalystFact 			= 0
-	CurveSharpT 			= 0.5
-	CurveSharppH 			= 4
-	ThermicConstant 		= 15
-	HIonRelease 			= 0.1
-	RateUpLim 				= 1
-	FermiChem				= TRUE
-	FermiExplode 			= TRUE
-	PurityMin 				= 0.2
-
-/datum/chemical_reaction/fermi/enthrall/FermiFinish(datum/reagents/holder, var/atom/my_atom)
-	var/datum/reagent/blood/B = locate(/datum/reagent/blood) in my_atom.reagents.reagent_list
-	var/datum/reagent/fermi/enthrall/E = locate(/datum/reagent/fermi/enthrall) in my_atom.reagents.reagent_list
-	if(!B)
-		return
-	if(!B.data)
-		var/list/seen = viewers(5, get_turf(my_atom))
-		for(var/mob/M in seen)
-			to_chat(M, "<span class='warning'>The reaction splutters and fails to react properly.</span>") //Just in case
-			E.purity = 0
-
-	E.data["creatorName"] = B.data["real_name"]
-	E.creatorName = B.data["real_name"]
-	E.data["creatorID"] = B.data["ckey"]
-	E.creatorID = B.data["ckey"]
-
-//So slimes can play too.
-/datum/chemical_reaction/fermi/enthrall/slime
-	required_catalysts = list("slimejelly" = 1)
-
-/datum/chemical_reaction/fermi/enthrall/slime/FermiFinish(datum/reagents/holder, var/atom/my_atom)
-	var/datum/reagent/toxin/slimejelly/B = locate(/datum/reagent/toxin/slimejelly) in my_atom.reagents.reagent_list//The one line change.
-	var/datum/reagent/fermi/enthrall/E = locate(/datum/reagent/fermi/enthrall) in my_atom.reagents.reagent_list
-	if(!B.data)
-		var/list/seen = viewers(5, get_turf(my_atom))
-		for(var/mob/M in seen)
-			to_chat(M, "<span class='warning'>The reaction splutters and fails to react.</span>") //Just in case
-			E.purity = 0
-
-/datum/chemical_reaction/fermi/enthrall/FermiExplode(datum/reagents, var/atom/my_atom, volume, temp, pH)
-	var/turf/T = get_turf(my_atom)
-	var/datum/reagents/R = new/datum/reagents(1000)
-	var/datum/effect_system/smoke_spread/chem/s = new()
-	R.add_reagent("enthrallExplo", volume)
-	s.set_up(R, volume/2, T)
-	s.start()
-	my_atom.reagents.clear_reagents()
-
 /datum/chemical_reaction/fermi/hatmium // done
 	name = "Hat growth serum"
 	id = "hatmium"
@@ -265,28 +200,6 @@
 	for(var/mob/M in seen)
 		to_chat(M, "<span class='warning'>The makes an off sounding pop, as a hat suddenly climbs out of the beaker!</b></span>")
 	my_atom.reagents.clear_reagents()
-
-/datum/chemical_reaction/fermi/furranium
-	name = "Furranium"
-	id = "furranium"
-	results = list("furranium" = 0.5)
-	required_reagents = list("aphro" = 0.1, "moonsugar" = 0.1, "silver" = 0.2, "salglu_solution" = 0.1)
-	mix_message = "You think you can hear a howl come from the beaker."
-	//FermiChem vars:
-	OptimalTempMin 	= 350
-	OptimalTempMax 	= 600
-	ExplodeTemp 	= 700
-	OptimalpHMin 	= 8
-	OptimalpHMax 	= 10
-	ReactpHLim 		= 2
-	//CatalystFact 	= 0 //To do 1
-	CurveSharpT 	= 2
-	CurveSharppH 	= 0.5
-	ThermicConstant = -10
-	HIonRelease 	= -0.1
-	RateUpLim 		= 2
-	FermiChem 		= TRUE
-	PurityMin		= 0.3
 
 //FOR INSTANT REACTIONS - DO NOT MULTIPLY LIMIT BY 10.
 //There's a weird rounding error or something ugh.
