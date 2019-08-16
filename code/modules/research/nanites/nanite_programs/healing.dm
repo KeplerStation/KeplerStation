@@ -48,7 +48,11 @@
 
 /datum/nanite_program/purging
 	name = "Blood Purification"
+<<<<<<< HEAD
 	desc = "The nanites purge toxins and chemicals from the host's bloodstream."
+=======
+	desc = "The nanites purge toxins and chemicals from the host's bloodstream, however it is dangerous to slimepeople biology due to inaccuracy."
+>>>>>>> b7ae88b6e... Made it sound a bit nicer
 	use_rate = 1
 	rogue_types = list(/datum/nanite_program/suffocating, /datum/nanite_program/necrotic)
 
@@ -143,7 +147,11 @@
 /datum/nanite_program/purging_advanced
 	name = "Selective Blood Purification"
 	desc = "The nanites purge toxins and dangerous chemicals from the host's bloodstream, while ignoring beneficial chemicals. \
+<<<<<<< HEAD
 			The added processing power required to analyze the chemicals severely increases the nanite consumption rate."
+=======
+			The added processing power required to analyze the chemicals severely increases the nanite consumption rate. Due to added complexity, it is safe with slimepeople biology."
+>>>>>>> b7ae88b6e... Made it sound a bit nicer
 	use_rate = 2
 	rogue_types = list(/datum/nanite_program/suffocating, /datum/nanite_program/necrotic)
 
