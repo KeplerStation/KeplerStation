@@ -218,7 +218,7 @@
 
 // Strawberry
 /obj/item/seeds/strawberries
-	name = "pack of strawberrie seeds"
+	name = "pack of strawberry seeds"
 	desc = "These seeds grow into strawberries vines."
 	icon_state = "seed-strawberry"
 	species = "strawberry"
