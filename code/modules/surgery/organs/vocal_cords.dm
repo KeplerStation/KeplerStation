@@ -571,13 +571,6 @@
 
 	//CITADEL CHANGES
 
-	//DAB
-	else if((findtext(message, dab_words)))
-		cooldown = COOLDOWN_DAMAGE
-		for(var/V in listeners)
-			var/mob/living/M = V
-			M.say("*dab")
-
 	//SNAP
 	else if((findtext(message, snap_words)))
 		cooldown = COOLDOWN_MEME
@@ -600,7 +593,6 @@
 	SSblackbox.record_feedback("tally", "voice_of_god", 1, log_message)
 
 	return cooldown
-
 
 #undef COOLDOWN_STUN
 #undef COOLDOWN_DAMAGE
