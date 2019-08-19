@@ -64,7 +64,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	//character preferences
 	var/real_name						//our character's name
-	var/nameless = FALSE				//whether or not our character is nameless
 	var/be_random_name = 0				//whether we'll have a random name every round
 	var/be_random_body = 0				//whether we'll have a random body every round
 	var/gender = MALE					//gender of character (well duh)
@@ -228,11 +227,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<a style='display:block;width:100px' href='?_src_=prefs;preference=name;task=random'>Random Name</A> "
 			dat += "<b>Always Random Name:</b><a style='display:block;width:30px' href='?_src_=prefs;preference=name'>[be_random_name ? "Yes" : "No"]</a><BR>"
 
-			dat += "<b>[nameless ? "Default designation" : "Name"]:</b>"
+			dat += "<b>Name:</b>"
 			dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a><BR>"
-			dat += "<a href='?_src_=prefs;preference=nameless'>Be nameless: [nameless ? "Yes" : "No"]</a><BR>"
 
-			dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : (gender == FEMALE ? "Female" : (gender == PLURAL ? "Non-binary" : "Object"))]</a><BR>"
+			dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : "Female"]</a><BR>"
 			dat += "<b>Age:</b> <a style='display:block;width:30px' href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
 
 			dat += "<b>Special Names:</b><BR>"
@@ -284,7 +282,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			else
 				dat += "[TextPreview(features["flavor_text"])]...<BR>"
 			dat += "<h2>Body</h2>"
-			dat += "<b>Gender:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : (gender == FEMALE ? "Female" : (gender == PLURAL ? "Non-binary" : "Object"))]</a><BR>"
+			dat += "<b>Gender:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : "Female"]</a><BR>"
 			dat += "<b>Species:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=species;task=input'>[pref_species.id]</a><BR>"
 			dat += "<a style='display:block;width:100px' href='?_src_=prefs;preference=all;task=random'>Random Body</A><BR>"
 			dat += "<b>Always Random Body:</b><a href='?_src_=prefs;preference=all'>[be_random_body ? "Yes" : "No"]</A><BR>"
@@ -1511,20 +1509,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							damagescreenshake = 0
 						else
 							damagescreenshake = 1
-				if("nameless")
-					nameless = !nameless
 				//END CITADEL EDIT
 				if("publicity")
 					if(unlock_content)
 						toggles ^= MEMBER_PUBLIC
 				if("gender")
-					var/chosengender = input(user, "Select your character's gender.", "Gender Selection", gender) in list(MALE,FEMALE,"nonbinary","object")
-					switch(chosengender)
-						if("nonbinary")
-							chosengender = PLURAL
-						if("object")
-							chosengender = NEUTER
-					gender = chosengender
+					if(gender == MALE)
+						gender = FEMALE
+					else
+						gender = MALE
 					facial_hair_style = random_facial_hair_style(gender)
 					hair_style = random_hair_style(gender)
 
@@ -1678,9 +1671,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			else if(firstspace == name_length)
 				real_name += "[pick(GLOB.last_names)]"
 
-	character.real_name = nameless ? "[real_name] #[rand(10000, 99999)]" : real_name
+	character.real_name = real_name
 	character.name = character.real_name
-	character.nameless = nameless
 
 	character.gender = gender
 	character.age = age
@@ -1714,7 +1706,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.set_species(chosen_species, icon_update = FALSE, pref_load = TRUE)
 	character.dna.features = features.Copy()
 	character.dna.real_name = character.real_name
-	character.dna.nameless = character.nameless
 
 	if("tail_lizard" in pref_species.default_features)
 		character.dna.species.mutant_bodyparts |= "tail_lizard"
