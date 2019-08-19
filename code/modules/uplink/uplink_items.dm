@@ -1270,13 +1270,6 @@ datum/uplink_item/stealthy_weapons/taeclowndo_shoes
 	cost = 1
 	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops) //They already get these
 
-/datum/uplink_item/suits/turtlenck_skirt
-	name = "Tactical Skirtleneck"
-	desc = "A slightly armored suit that has no sensor on them, if someone sees you in this hope they think its a fake."
-	item = /obj/item/clothing/under/syndicate/skirt
-	cost = 1
-	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops) //They already get these
-
 /datum/uplink_item/suits/padding
 	name = "Soft Padding"
 	desc = "Padding to add to a jumpsuit to help against melee and bullets."
