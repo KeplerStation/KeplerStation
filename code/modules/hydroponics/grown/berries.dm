@@ -217,15 +217,9 @@
 	distill_reagent = "cognac"
 
 // Strawberry
-<<<<<<< HEAD
-/obj/item/seeds/strawberries
-	name = "pack of strawberry seeds"
-	desc = "These seeds grow into strawberries vines."
-=======
 /obj/item/seeds/strawberry
 	name = "pack of strawberry seeds"
 	desc = "These seeds grow into strawberry vines."
->>>>>>> 3ef29bbbe... Merge pull request #9097 from lolman360/durathread
 	icon_state = "seed-strawberry"
 	species = "strawberry"
 	plantname = "Strawberry Vine"
