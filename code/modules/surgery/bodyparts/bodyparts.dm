@@ -449,6 +449,8 @@
 			limb.color = "#[draw_color]"
 			if(aux_zone)
 				aux.color = "#[draw_color]"
+				if(bodypart_alpha)
+					aux.alpha = bodypart_alpha
 		if(bodypart_alpha)
 			limb.alpha = bodypart_alpha
 
