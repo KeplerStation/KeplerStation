@@ -22,7 +22,8 @@
 					/obj/item/storage/hypospraykit/toxin = 2,
 					/obj/item/storage/hypospraykit/o2 = 2,
 					/obj/item/storage/hypospraykit/brute = 2,
-					/obj/item/reagent_containers/glass/bottle/vial/small = 5)
+					/obj/item/reagent_containers/glass/bottle/vial/small = 5,
+					/obj/item/stack/medical/splint = 5)
 
 /obj/machinery/vending/wardrobe/chap_wardrobe
 	premium = list(/obj/item/toy/plush/plushvar = 1,

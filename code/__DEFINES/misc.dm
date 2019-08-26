@@ -65,6 +65,7 @@ Will print: "/mob/living/carbon/human/death" (you can optionally embed it in a s
 #define SHOES_LAYER				19
 #define GLOVES_LAYER			18
 #define EARS_LAYER				17
+#define SPLINT_LAYER			16
 #define SUIT_LAYER				15
 #define GLASSES_LAYER			13
 #define BELT_LAYER				12		//Possible make this an overlay of somethign required to wear a belt?
@@ -487,3 +488,9 @@ GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi', PDA_S
 #define VOMIT_PURPLE 2
 
 #define CRYOMOBS 'icons/obj/cryo_mobs.dmi'
+
+// For bones
+#define BONE_FLAG_NO_BONES 0
+#define BONE_FLAG_NORMAL 1
+#define BONE_FLAG_BROKEN 2
+#define BONE_FLAG_SPLINTED 3

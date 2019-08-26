@@ -810,6 +810,7 @@
 	update_hud_handcuffed()
 
 /mob/living/carbon/fully_heal(admin_revive = FALSE)
+	mend_fractures() // Bone fixing juice
 	if(reagents)
 		reagents.clear_reagents()
 	var/obj/item/organ/brain/B = getorgan(/obj/item/organ/brain)

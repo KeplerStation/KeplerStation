@@ -15,6 +15,7 @@
 	var/heal_burn = 0
 	var/stop_bleeding = 0
 	var/self_delay = 50
+	var/splint_fracture = FALSE
 
 /obj/item/stack/medical/attack(mob/living/M, mob/user)
 
@@ -48,6 +49,15 @@
 					to_chat(user, "<span class='warning'>[H] isn't bleeding!</span>")
 					return
 
+		if(splint_fracture)
+			if(affecting.body_part in list(CHEST, HEAD))
+				to_chat(user, "<span class='warning'>You can't splint that bodypart!</span>")
+			else if(!affecting.bone_status == BONE_FLAG_BROKEN)
+				to_chat(user, "<span class='warning'>[M]'s [parse_zone(user.zone_selected)] isn't broken!</span>")
+				return
+			else if(affecting.bone_status == BONE_FLAG_SPLINTED)
+				to_chat(user, "<span class='warning'>[M]'s [parse_zone(user.zone_selected)] is already splinted!</span>")
+				return
 
 	if(isliving(M))
 		if(!M.can_inject(user, 1))
@@ -93,8 +103,11 @@
 		if(affecting.status == BODYPART_ORGANIC) //Limb must be organic to be healed - RR
 			if(affecting.heal_damage(heal_brute, heal_burn))
 				C.update_damage_overlays()
+			if(splint_fracture)
+				affecting.bone_status = BONE_FLAG_SPLINTED
+				C.update_inv_splints()
 		else
-			to_chat(user, "<span class='notice'>Medicine won't work on a robotic limb!</span>")
+			to_chat(user, "<span class='notice'>[src] won't work on a robotic limb!</span>")
 	else
 		M.heal_bodypart_damage((src.heal_brute/2), (src.heal_burn/2))
 
@@ -174,3 +187,13 @@
 
 /obj/item/stack/medical/get_belt_overlay()
 	return mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "pouch")
+
+/obj/item/stack/medical/splint
+	name = "splints"
+	desc = "Used to secure limbs following a fracture."
+	gender = PLURAL
+	singular_name = "splint"
+	icon = 'modular_kepler/icons/obj/items_and_weapons.dmi'
+	icon_state = "splint"
+	self_delay = 40
+	splint_fracture = TRUE 

@@ -12,6 +12,12 @@
 	if(stat == SOFT_CRIT)
 		. += SOFTCRIT_ADD_SLOWDOWN
 
+	for(var/obj/item/bodypart/X in bodyparts)
+		if(X.bone_status == BONE_FLAG_BROKEN)
+			if(X.body_part == LEG_RIGHT || X.body_part == LEG_LEFT)
+				. += 2 //can't move fast with a broken leg
+				break // Dont stack the speed if a lot of shit is broken
+
 /mob/living/carbon/slip(knockdown_amount, obj/O, lube)
 	if(movement_type & FLYING)
 		return 0

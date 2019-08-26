@@ -20,6 +20,8 @@
 	var/list/embedded_objects = list()
 	var/held_index = 0 //are we a hand? if so, which one!
 	var/is_pseudopart = FALSE //For limbs that don't really exist, eg chainsaws
+	
+	var/bone_status = BONE_FLAG_NO_BONES // Is it fine, broken, splinted, or just straight up fucking gone
 
 	var/disabled = BODYPART_NOT_DISABLED //If disabled, limb is as good as missing
 	var/body_damage_coeff = 1 //Multiplier of the limb's damage that gets applied to the mob
@@ -126,6 +128,32 @@
 	for(var/obj/item/I in src)
 		I.forceMove(T)
 
+/obj/item/bodypart/proc/can_break_bone()
+	// Do they have bones, are the bones not broken, is the limb not robotic? If yes to all, return 1
+	return (bone_status && bone_status != BONE_FLAG_BROKEN && status != BODYPART_ROBOTIC)
+
+/obj/item/bodypart/proc/break_bone()
+	if(!can_break_bone())
+		return
+	bone_status = BONE_FLAG_BROKEN
+	spawn(1) // Delay so it happens after the punch message
+		owner.visible_message("<span class='userdanger'>You hear a cracking sound coming from [owner]'s [parse_zone(src)].</span>", "<span class='warning'>You feel something crack in your [parse_zone(src)]!</span>", "<span class='warning'>You hear an awful cracking sound.</span>")
+
+/obj/item/bodypart/proc/fix_bone()
+	bone_status = BONE_FLAG_NORMAL
+	owner.update_inv_splints()
+
+/obj/item/bodypart/proc/on_mob_move()
+	// Dont trigger if it aint broke, or robotic, or if its splinted, or if it has no owner??
+	if(bone_status != BONE_FLAG_NO_BONES || status == BODYPART_ROBOTIC || bone_status == BONE_FLAG_SPLINTED || !owner)
+		return
+
+	if(prob(5))
+		to_chat(owner, "<span class='userdange'>[pick("You feel broken bones moving around in your [src]!", "There are broken bones moving around in your [src]!", "The bones in your [src] are moving around!")]</span>")
+		receive_damage(rand(1, 3))
+		//1-3 damage every 20 tiles for every broken bodypart.
+		//A single broken bodypart will give you an average of 650 tiles to run before you get a total of 100 damage and fall into crit
+
 /obj/item/bodypart/proc/consider_processing()
 	if(stamina_dam > DAMAGE_PRECISION)
 		. = TRUE
@@ -143,7 +171,7 @@
 //Applies brute and burn damage to the organ. Returns 1 if the damage-icon states changed at all.
 //Damage will not exceed max_damage using this proc
 //Cannot apply negative damage
-/obj/item/bodypart/proc/receive_damage(brute = 0, burn = 0, stamina = 0, updating_health = TRUE)
+/obj/item/bodypart/proc/receive_damage(brute = 0, burn = 0, stamina = 0, updating_health = TRUE, break_modifier = TRUE)
 	if(owner && (owner.status_flags & GODMODE))
 		return FALSE	//godmode
 	var/dmg_mlt = CONFIG_GET(number/damage_multiplier)
@@ -160,6 +188,9 @@
 	switch(animal_origin)
 		if(ALIEN_BODYPART,LARVA_BODYPART) //aliens take double burn //nothing can burn with so much snowflake code around
 			burn *= 2
+	
+	if(prob(brute*break_modifier) && ((brute_dam + burn_dam)/max_damage) > 0.3 )
+		break_bone()
 
 	var/can_inflict = max_damage - get_damage()
 	if(can_inflict <= 0)
@@ -298,6 +329,11 @@
 		C = owner
 		no_update = FALSE
 
+	if(C.has_bones) // Get the data from default carbon
+		bone_status = BONE_FLAG_NORMAL //get the carbon's default bone settings
+	else
+		bone_status = BONE_FLAG_NO_BONES
+
 	if(HAS_TRAIT(C, TRAIT_HUSK) && is_organic_limb())
 		species_id = "husk" //overrides species_id
 		dmg_overlay_type = "" //no damage overlay shown when husked
@@ -316,6 +352,13 @@
 		species_id = S.limbs_id
 		should_draw_citadel = S.should_draw_citadel // Citadel Addition
 		species_flags_list = H.dna.species.species_traits
+
+		if(NO_BONES in S.species_traits)
+			bone_status = BONE_FLAG_NO_BONES
+			fix_bone()
+		else
+			bone_status = BONE_FLAG_NORMAL
+
 
 		//body marking memes
 		var/list/colorlist = list()

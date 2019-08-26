@@ -1,6 +1,6 @@
 
 
-/mob/living/carbon/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked = FALSE)
+/mob/living/carbon/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked = FALSE, break_modifier = TRUE)
 	var/hit_percent = (100-blocked)/100
 	if(hit_percent <= 0)
 		return 0
@@ -18,13 +18,13 @@
 	switch(damagetype)
 		if(BRUTE)
 			if(BP)
-				if(damage > 0 ? BP.receive_damage(damage * hit_percent, 0) : BP.heal_damage(abs(damage * hit_percent), 0))
+				if(damage > 0 ? BP.receive_damage(damage * hit_percent, 0, break_modifier) : BP.heal_damage(abs(damage * hit_percent), 0))
 					update_damage_overlays()
 			else //no bodypart, we deal damage with a more general method.
 				adjustBruteLoss(damage * hit_percent)
 		if(BURN)
 			if(BP)
-				if(damage > 0 ? BP.receive_damage(0, damage * hit_percent) : BP.heal_damage(0, abs(damage * hit_percent)))
+				if(damage > 0 ? BP.receive_damage(0, damage * hit_percent, break_modifier) : BP.heal_damage(0, abs(damage * hit_percent)))
 					update_damage_overlays()
 			else
 				adjustFireLoss(damage * hit_percent)
