@@ -302,6 +302,8 @@
 		return FALSE
 	if(stat & BROKEN)
 		return FALSE
+	if(Adjacent(user))
+		return TRUE
 	return ..()
 	
 
@@ -316,7 +318,7 @@
 	data["isai"] = isAI(user)
 	return data
 
-/obj/machinery/disposal/bin/oui_act(action, params)
+/obj/machinery/disposal/bin/oui_act(mob/user, action, list/params)
 	if(..())
 		return
 

@@ -306,7 +306,7 @@
 
 	if(istype(P, /obj/item/pen) || istype(P, /obj/item/toy/crayon))
 		if(user.is_literate())
-			show_content(src)
+			show_content(user)
 			return
 		else
 			to_chat(user, "<span class='notice'>You don't know how to read or write.</span>")
