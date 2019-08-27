@@ -27,7 +27,7 @@ GLOBAL_LIST_EMPTY(oui_file_cache)
 		return data
 	else
 		var/errormsg = "MISSING PATH '[path]'"
-#ifndef TRAVISTESTING
+#ifndef UNIT_TESTS
 		log_world(errormsg) //Because Travis absolutely hates these procs
 #endif
 		return errormsg
