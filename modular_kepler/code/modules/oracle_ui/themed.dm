@@ -27,7 +27,9 @@ GLOBAL_LIST_EMPTY(oui_file_cache)
 		return data
 	else
 		var/errormsg = "MISSING PATH '[path]'"
-		log_world(errormsg)
+#ifndef TRAVISTESTING
+		log_world(errormsg) //Because Travis absolutely hates these procs
+#endif
 		return errormsg
 
 /datum/oracle_ui/themed/proc/get_content_file(filename)
