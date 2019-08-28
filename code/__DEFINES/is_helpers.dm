@@ -60,6 +60,9 @@
 #define ishumanbasic(A) (is_species(A, /datum/species/human))
 #define iscatperson(A) (ishumanbasic(A) && istype(A.dna.species, /datum/species/human/felinid) )
 
+// Misc species
+#define isashwalker(A) (is_species(A, /datum/species/lizard/ashwalker))
+
 //more carbon mobs
 #define ismonkey(A) (istype(A, /mob/living/carbon/monkey))
 

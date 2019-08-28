@@ -120,7 +120,7 @@
 		if(user.resting)
 			totitemdamage *= 0.5
 	//CIT CHANGES END HERE
-		apply_damage(totitemdamage, I.damtype, break_modifier = (I.sharpness ? 1 : 2)) //CIT CHANGE - replaces I.force with totitemdamage | Kepler change: Code for broken bones
+		apply_damage(totitemdamage, I.damtype, break_modifier = I.sharpness) //CIT CHANGE - replaces I.force with totitemdamage | Kepler change: Code for broken bones
 		if(I.damtype == BRUTE)
 			if(prob(33))
 				I.add_mob_blood(src)

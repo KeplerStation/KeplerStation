@@ -3023,6 +3023,7 @@
 #include "modular_citadel\code\modules\research\techweb\_techweb.dm"
 #include "modular_citadel\code\modules\research\xenobiology\xenobio_camera.dm"
 #include "modular_citadel\code\modules\vehicles\secway.dm"
+#include "modular_kepler\code\game\machinery\body_scanner.dm"
 #include "modular_kepler\code\game\objects\ids.dm"
 #include "modular_kepler\code\game\objects\items\cards_ids.dm"
 #include "modular_kepler\code\modules\client\preferences.dm"

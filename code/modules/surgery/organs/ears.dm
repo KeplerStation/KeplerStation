@@ -10,10 +10,9 @@
 	// to hear anything.
 	var/deaf = 0
 
-	// `ear_damage` measures long term damage to the ears, if too high,
-	// the person will not have either `deaf` or `ear_damage` decrease
+	// damage measures long term damage to the ears, if too high,
+	// the person will not have either `deaf` or damage decrease
 	// without external aid (earmuffs, drugs)
-	var/ear_damage = 0
 
 	//Resistance against loud noises
 	var/bang_protect = 0
@@ -27,21 +26,21 @@
 	// genetic deafness prevents the body from using the ears, even if healthy
 	if(HAS_TRAIT(C, TRAIT_DEAF))
 		deaf = max(deaf, 1)
-	else if(ear_damage < UNHEALING_EAR_DAMAGE) // if higher than UNHEALING_EAR_DAMAGE, no natural healing occurs.
-		ear_damage = max(ear_damage - 0.05, 0)
+	else if(get_damage_perc() < ORGAN_DAMAGE_HIGH) // if higher than UNHEALING_EAR_DAMAGE, no natural healing occurs.
+		heal_damage(0.05)
 		deaf = max(deaf - 1, 0)
 
 /obj/item/organ/ears/proc/restoreEars()
 	deaf = 0
-	ear_damage = 0
+	set_damage(0)
 
 	var/mob/living/carbon/C = owner
 
 	if(iscarbon(owner) && HAS_TRAIT(C, TRAIT_DEAF))
 		deaf = 1
 
-/obj/item/organ/ears/proc/adjustEarDamage(ddmg, ddeaf)
-	ear_damage = max(ear_damage + (ddmg*damage_multiplier), 0)
+/obj/item/organ/ears/proc/adjustEarDamage(ddmg, ddeaf)//this instead of a regular take_damage, because the deafness breaks everything
+	take_damage(ddmg)
 	deaf = max(deaf + (ddeaf*damage_multiplier), 0)
 
 /obj/item/organ/ears/proc/minimumDeafTicks(value)

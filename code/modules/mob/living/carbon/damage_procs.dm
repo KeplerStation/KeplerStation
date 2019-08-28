@@ -214,20 +214,21 @@
 	. = 0
 	var/obj/item/organ/brain/B = getorganslot(ORGAN_SLOT_BRAIN)
 	if(B)
-		. = B.get_brain_damage()
+		. = B.get_damage_perc()
 
 //Some sources of brain damage shouldn't be deadly
-/mob/living/carbon/adjustBrainLoss(amount, maximum = BRAIN_DAMAGE_DEATH)
+/mob/living/carbon/adjustBrainLoss(amount, maximum_perc = BRAIN_DAMAGE_DEATH)
 	if(status_flags & GODMODE)
 		return FALSE
-	var/prev_brainloss = getBrainLoss()
+
 	var/obj/item/organ/brain/B = getorganslot(ORGAN_SLOT_BRAIN)
 	if(!B)
 		return
-	B.adjust_brain_damage(amount, maximum)
+	var/prev_brainloss = B.get_damage_perc()
+	B.take_damage(amount, maximum_perc)
 	if(amount <= 0) //cut this early
 		return
-	var/brainloss = getBrainLoss()
+	var/brainloss = B.get_damage_perc()
 	if(brainloss > BRAIN_DAMAGE_MILD)
 		if(prob(amount * ((2 * (100 + brainloss - BRAIN_DAMAGE_MILD)) / 100))) //Base chance is the hit damage; for every point of damage past the threshold the chance is increased by 2%
 			gain_trauma_type(BRAIN_TRAUMA_MILD)
@@ -244,9 +245,3 @@
 		to_chat(src, "<span class='warning'>You feel less in control of your thoughts.</span>")
 	else if(prev_brainloss < (BRAIN_DAMAGE_DEATH - 20) && brainloss >= (BRAIN_DAMAGE_DEATH - 20))
 		to_chat(src, "<span class='warning'>You can feel your mind flickering on and off...</span>")
-
-/mob/living/carbon/setBrainLoss(amount)
-	var/obj/item/organ/brain/B = getorganslot(ORGAN_SLOT_BRAIN)
-	if(B)
-		var/adjusted_amount = amount - B.get_brain_damage()
-		B.adjust_brain_damage(adjusted_amount, null)

@@ -217,20 +217,25 @@ Class Procs:
 /obj/machinery/can_interact(mob/user)
 	var/silicon = issiliconoradminghost(user)
 	if((stat & (NOPOWER|BROKEN)) && !(interaction_flags_machine & INTERACT_MACHINE_OFFLINE))
+		message_admins("Failed can_interact, L220")
 		return FALSE
 	if(panel_open && !(interaction_flags_machine & INTERACT_MACHINE_OPEN))
 		if(!silicon || !(interaction_flags_machine & INTERACT_MACHINE_OPEN_SILICON))
+			message_admins("Failed can_interact, L224")
 			return FALSE
 
 	if(silicon)
 		if(!(interaction_flags_machine & INTERACT_MACHINE_ALLOW_SILICON))
+			message_admins("Failed can_interact, L229")
 			return FALSE
 	else
 		if(interaction_flags_machine & INTERACT_MACHINE_REQUIRES_SILICON)
+			message_admins("Failed can_interact, L233")
 			return FALSE
 		if(!Adjacent(user))
 			var/mob/living/carbon/H = user
 			if(!(istype(H) && H.has_dna() && H.dna.check_mutation(TK)))
+				message_admins("Failed can_interact, L238")
 				return FALSE
 	return TRUE
 

@@ -54,6 +54,9 @@
 		to_chat(M, "<span class='notice'>Your tongue is really starting to hurt.</span>")
 
 
+/obj/item/organ/tongue/on_life()
+	return //nothing happens
+
 /obj/item/organ/tongue/Insert(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
 	..()
 	if(say_mod && M.dna && M.dna.species)
@@ -116,6 +119,7 @@
 	taste_sensitivity = 101 // ayys cannot taste anything.
 	maxHealth = 120 //Ayys probe a lot
 	modifies_speech = TRUE
+	max_integrity = ORGAN_HEALTH_NONE
 
 /obj/item/organ/tongue/abductor/handle_speech(datum/source, list/speech_args)
 	//Hacks

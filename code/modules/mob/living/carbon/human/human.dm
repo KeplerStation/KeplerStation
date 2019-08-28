@@ -771,6 +771,8 @@
 		if(hud_used.healthdoll)
 			hud_used.healthdoll.cut_overlays()
 			if(stat != DEAD)
+				if(hal_screwyhud == SCREWYHUD_HEALTHY)
+					return
 				hud_used.healthdoll.icon_state = "healthdoll_OVERLAY"
 				for(var/X in bodyparts)
 					var/obj/item/bodypart/BP = X
@@ -791,6 +793,8 @@
 						icon_num = 0
 					if(icon_num)
 						hud_used.healthdoll.add_overlay(mutable_appearance('icons/mob/screen_gen.dmi', "[BP.body_zone][icon_num]"))
+					if(BP.bone_status == BONE_FLAG_BROKEN)
+						hud_used.healthdoll.add_overlay(mutable_appearance('icons/mob/screen_gen.dmi', "[BP.body_zone]_fract"))
 				for(var/t in get_missing_limbs()) //Missing limbs
 					hud_used.healthdoll.add_overlay(mutable_appearance('icons/mob/screen_gen.dmi', "[t]6"))
 				for(var/t in get_disabled_limbs()) //Disabled limbs

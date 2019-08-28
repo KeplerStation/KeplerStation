@@ -759,7 +759,7 @@
 	else if(M.eye_blind || M.eye_blurry)
 		M.set_blindness(0)
 		M.set_blurriness(0)
-	else if(eyes.eye_damage > 0)
+	else if(eyes.get_damage_perc() > 0)
 		M.adjust_eye_damage(-1)
 	..()
 
@@ -828,6 +828,38 @@
 		M.adjustToxLoss(1*REM, 0)
 		M.losebreath++
 		. = 1
+	..()
+
+
+/datum/reagent/medicine/mitocholide
+	name = "Mitocholide"
+	id = "mitocholide"
+	description = "Slowly heals all organ damage. Easy to overdose."
+	reagent_state = LIQUID
+	taste_description = "bitterness"
+	overdose_threshold = 15
+	metabolization_rate = 0.2 * REAGENTS_METABOLISM
+
+/datum/reagent/medicine/mitocholide/on_mob_life(mob/living/M)
+	var/mob/living/carbon/C = M
+	if(!C || !C.organ_damage_tracker)
+		return ..()
+	for(var/thing in C.internal_organs)
+		var/obj/item/organ/O = thing
+		O.heal_damage(rand(2, 6))
+	..()
+
+/datum/reagent/medicine/mitocholide/overdose_process(mob/living/M)
+	var/mob/living/carbon/C = M
+	if(!C)
+		return ..()
+	for(var/thing in C.internal_organs)
+		var/obj/item/organ/O = thing
+		O.take_damage(rand(1, 2))
+	if(prob(8))
+		C.vomit()
+	if(prob(10))
+		to_chat(C, "<span class='boldwarning'>[pick(list("Something hurts in your lower body", "Your insides are burning"))]!</span>")
 	..()
 
 /datum/reagent/medicine/strange_reagent
@@ -1175,7 +1207,7 @@
 	M.adjustFireLoss(-3 * REM, 0)
 	M.adjustOxyLoss(-15 * REM, 0)
 	M.adjustToxLoss(-3 * REM, 0, TRUE) //Heals TOXINLOVERS
-	M.adjustBrainLoss(2 * REM, 150) //This does, after all, come from ambrosia, and the most powerful ambrosia in existence, at that!
+	M.adjustBrainLoss(2 * REM, 75) //This does, after all, come from ambrosia, and the most powerful ambrosia in existence, at that!
 	M.adjustCloneLoss(-1 * REM, 0)
 	M.adjustStaminaLoss(-30 * REM, 0)
 	M.jitteriness = min(max(0, M.jitteriness + 3), 30)
@@ -1223,6 +1255,16 @@
 
 /datum/reagent/medicine/lavaland_extract/on_mob_life(mob/living/carbon/M)
 	M.heal_bodypart_damage(5,5)
+	var/mob/living/carbon/C = M
+	if(C)
+		for(var/thing in C.bodyparts)
+			var/obj/item/bodypart/B = thing
+			if(prob(25))
+				B.fix_bone()
+		if(C.organ_damage_tracker)
+			for(var/thing in C.internal_organs)
+				var/obj/item/organ/O = thing
+				O.heal_damage(10)//heals 50 damage per survival medipen to every organ
 	..()
 	return TRUE
 
@@ -1276,7 +1318,8 @@
 	return TRUE
 
 /datum/reagent/medicine/corazone
-	// Heart attack code will not do damage if corazone is present
+	// Stops all organ damage effects from happening
+	// Also stops heart attacks
 	// because it's SPACE MAGIC ASPIRIN
 	name = "Corazone"
 	id = "corazone"
@@ -1284,6 +1327,7 @@
 	color = "#F5F5F5"
 	self_consuming = TRUE
 	pH = 12.5
+	metabolization_rate = 0 // it gets filtered out manually in carbon code; rip
 
 /datum/reagent/medicine/corazone/on_mob_metabolize(mob/living/M)
 	..()

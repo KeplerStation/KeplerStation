@@ -33400,13 +33400,13 @@
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
 "bzS" = (
-/obj/structure/chair,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/machinery/body_scanner,
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
 "bzT" = (

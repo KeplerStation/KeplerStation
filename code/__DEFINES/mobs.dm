@@ -88,10 +88,19 @@
 #define COLD_GAS_DAMAGE_LEVEL_2 1.5 //Amount of damage applied when the current breath's temperature passes the 200K point
 #define COLD_GAS_DAMAGE_LEVEL_3 3 //Amount of damage applied when the current breath's temperature passes the 120K point
 
+//default HP values; 200 for more important organs or sth
+#define ORGAN_HEALTH_NONE 0 //for stuff that doesn't get damaged at all
+#define ORGAN_HEALTH_DEFAULT 100
+#define ORGAN_HEALTH_HIGH 200
+
+//percentage tiers
+#define ORGAN_DAMAGE_LOW 30
+#define ORGAN_DAMAGE_HIGH 90
+
 //Brain Damage defines
-#define BRAIN_DAMAGE_MILD 20
-#define BRAIN_DAMAGE_SEVERE 100
-#define BRAIN_DAMAGE_DEATH 200
+#define BRAIN_DAMAGE_MILD 10
+#define BRAIN_DAMAGE_SEVERE 50
+#define BRAIN_DAMAGE_DEATH 100
 
 #define BRAIN_TRAUMA_MILD /datum/brain_trauma/mild
 #define BRAIN_TRAUMA_SEVERE /datum/brain_trauma/severe
@@ -109,8 +118,6 @@
 #define TRAUMA_LIMIT_LOBOTOMY 3
 #define TRAUMA_LIMIT_MAGIC 3
 #define TRAUMA_LIMIT_ABSOLUTE INFINITY
-
-#define BRAIN_DAMAGE_INTEGRITY_MULTIPLIER 0.5
 
 //Surgery Defines
 #define BIOWARE_GENERIC "generic"
@@ -202,9 +209,6 @@
 #define SLIDE_ICE				(1<<3)
 
 #define MAX_CHICKENS 50
-
-#define UNHEALING_EAR_DAMAGE 100
-
 
 #define INCORPOREAL_MOVE_BASIC 1
 #define INCORPOREAL_MOVE_SHADOW 2 // leaves a trail of shadows

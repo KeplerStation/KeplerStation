@@ -586,22 +586,23 @@
 				var/failed
 
 				if (H.suiciding || (HAS_TRAIT(H, TRAIT_NOCLONE)))
-					failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Recovery of patient impossible. Further attempts futile.</span>"
+					failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Genetic material makes recovery. Further attempts futile.</span>"
 				else if (H.hellbound)
-					failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Patient's soul appears to be on another plane of existence.  Further attempts futile.</span>"
+					failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Patient's soul appears to be on another plane of existence. Further attempts futile.</span>"
 				else if (tplus > tlimit)
 					failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Body has decayed for too long. Further attempts futile.</span>"
 				else if (!H.getorgan(/obj/item/organ/heart))
 					failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Patient's heart is missing.</span>"
 				else if(total_burn >= 180 || total_brute >= 180)
-					failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Severe tissue damage makes recovery of patient impossible via defibrillator. Further attempts futile.</span>"
+					failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Severe tissue damage makes recovery of patient impossible via defibrillator. External trauma treatment required.</span>"
 				else if(H.get_ghost())
 					failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - No activity in patient's brain. Further attempts may be successful.</span>"
 				else
 					var/obj/item/organ/brain/BR = H.getorgan(/obj/item/organ/brain)
 					if(!BR || BR.damaged_brain)
-						failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Patient's brain is missing or damaged beyond point of no return. Further attempts futile.</span>"
-
+						failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Patient's brain is missing.</span>"
+					else if(BR.damaged_brain)
+						failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Patient's brain is too severely damaged. Surgery required.</span>"
 				if(failed)
 					user.visible_message(failed)
 					playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
@@ -625,7 +626,7 @@
 					H.Jitter(100)
 					SEND_SIGNAL(H, COMSIG_LIVING_MINOR_SHOCK)
 					if(tplus > tloss)
-						H.adjustBrainLoss( max(0, min(99, ((tlimit - tplus) / tlimit * 100))), 150)
+						H.adjustBrainLoss( max(0, min(99, ((tlimit - tplus) / tlimit * 100))), 75)
 					log_combat(user, H, "revived", defib)
 					if(req_defib)
 						if(defib.healdisk)
