@@ -178,3 +178,8 @@
 	if(Adjacent(user))
 		return TRUE
 	return ..()
+
+/obj/machinery/body_scanner/process()
+    if(stat & (NOPOWER|BROKEN)) // dont update UI if theres no power
+        return
+    ui.soft_update_fields()
