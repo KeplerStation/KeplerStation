@@ -25,8 +25,16 @@
 	var/age = 30		//Player's age
 
 	var/underwear = "Nude"	//Which underwear the player wants
+<<<<<<< HEAD
 	var/undershirt = "Nude" //Which undershirt the player wants
 	var/socks = "Nude" //Which socks the player wants
+=======
+	var/undie_color = "FFFFFF"
+	var/undershirt = "Nude" //Which undershirt the player wants
+	var/shirt_color = "FFFFFF"
+	var/socks = "Nude" //Which socks the player wants
+	var/socks_color = "FFFFFF"
+>>>>>>> 36a07f134... Merge pull request #9208 from Ghommie/Ghommie-cit190
 	var/backbag = DBACKPACK		//Which backpack type the player has chosen.
 
 	//Equipment slots
