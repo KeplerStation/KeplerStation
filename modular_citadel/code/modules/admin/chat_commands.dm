@@ -1,6 +1,6 @@
 /datum/tgs_chat_command/wheelofsalt
 	name = "wheelofsalt"
-	help_text = "What are Citadel Station 13 players salting about today? Spin the wheel and find out!"
+	help_text = "What are the players salting about today? Spin the wheel and find out!"
 
 /datum/tgs_chat_command/wheelofsalt/Run(datum/tgs_chat_user/sender, params)
 	var/saltresult = "The wheel of salt [pick("clatters","screams","vibrates","clanks","resonates","groans","moans","squeaks","emits a[pick(" god-forsaken"," creepy"," generic"," demonic")] [pick("airhorn","bike horn","trumpet","clown","dog","laughing")] noise")] as it spins violently... And it seems the salt of the day is the "
@@ -20,20 +20,3 @@
 
 /datum/tgs_chat_command/despacito/Run()
 	return "https://www.youtube.com/watch?v=kJQP7kiw5Fk"
-
-/datum/tgs_chat_command/poly
-	name = "poly"
-	help_text = "The Lewder, more applicable Poly speak for Citadel Station 13."
-	var/list/speech_buffer
-
-/datum/tgs_chat_command/poly/Run()
-	LAZYINITLIST(speech_buffer) //I figure this is just safe to do for everything at this point
-	if(length(speech_buffer))	//Let's not look up the whole json EVERY TIME, just the first time.
-		return "[pick(speech_buffer)]"
-	else
-		var/json_file = file("data/npc_saves/Poly.json")
-		if(!fexists(json_file))
-			return "**BAWWWWWK!** LEAVE THE HEADSET! ***BAWKKKKK!!***"
-		var/list/json = json_decode(file2text(json_file))
-		speech_buffer = json["phrases"]
-		return "[pick(speech_buffer)]"
