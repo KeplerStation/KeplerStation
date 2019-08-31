@@ -23,5 +23,3 @@ sound/music/flytothemoon_otomatone.ogg
 sound/music/milkyway.ogg
 sound/music/rocketridersprayer.ogg
 sound/music/theend.ogg
-sound/music/flyinghigh.ogg
-sound/music/samsara.ogg
