@@ -299,7 +299,7 @@ SLIME SCANNER
 			if(B.bone_status == BONE_FLAG_BROKEN)
 				broken_stuff += B.name
 		if(broken_stuff.len)
-			msg += "\t<span class='alert'>Bone fractures detected. Subject's [english_list(broken_stuff)] [broken_stuff.len > 1 ? "require" : "requires"] surgical treatment!</span>"
+			msg += "\t<span class='alert'>Bone fractures detected. More advanced scanner required for location. Surgical treatment required.\n</span>"
 		
 		if(C.organ_damage_tracker > 30)
 			to_chat(user, "\t<span class='alert'>Significant internal organ damage detected. More advanced scanner required for location.</span>")
