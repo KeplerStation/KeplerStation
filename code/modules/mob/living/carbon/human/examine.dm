@@ -169,7 +169,7 @@
 			damage_text = "limp and lifeless"
 		else
 			var/more_brute = BP.brute_dam >= BP.burn_dam
-			damage_text = more_brute ? "broken and mangled" : "burnt and blistered"
+			damage_text = more_brute ? "mangled" : "burnt and blistered"
 		msg += "<B>[capitalize(t_his)] [BP.name] is [damage_text]!</B>\n"
 
 	//stores missing limbs
