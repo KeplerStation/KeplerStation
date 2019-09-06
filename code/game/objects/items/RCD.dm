@@ -414,10 +414,12 @@ RLD
 		return FALSE
 	if(do_after(user, rcd_results["delay"] * delay_mod, target = A))
 		if(checkResource(rcd_results["cost"], user))
+			var/atom/cached = A
 			if(A.rcd_act(user, src, rcd_results["mode"]))
 				useResource(rcd_results["cost"], user)
 				activate()
-				playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
+				investigate_log("[user] used [src] on [cached] (now [A]) with cost [rcd_results["cost"]], delay [rcd_results["delay"]], mode [rcd_results["mode"]].", INVESTIGATE_RCD)
+				playsound(src, 'sound/machines/click.ogg', 50, 1)
 				return TRUE
 
 /obj/item/construction/rcd/Initialize()
@@ -614,7 +616,7 @@ RLD
 	name = "rapid-light-device (RLD)"
 	desc = "A device used to rapidly provide lighting sources to an area. Reload with metal, plasteel, glass or compressed matter cartridges."
 	icon = 'icons/obj/tools.dmi'
-	icon_state = "rld-5"
+	icon_state = "rld"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
 	matter = 500
@@ -622,6 +624,8 @@ RLD
 	sheetmultiplier = 16
 	var/mode = LIGHT_MODE
 	actions_types = list(/datum/action/item_action/pick_color)
+	ammo_sections = 5
+	has_ammobar = TRUE
 
 	var/wallcost = 10
 	var/floorcost = 15
@@ -635,6 +639,10 @@ RLD
 	var/color_choice = null
 
 
+/obj/item/construction/rld/Initialize()
+	. = ..()
+	update_icon()
+
 /obj/item/construction/rld/ui_action_click(mob/user, var/datum/action/A)
 	if(istype(A, /datum/action/item_action/pick_color))
 		color_choice = input(user,"","Choose Color",color_choice) as color
@@ -642,9 +650,10 @@ RLD
 		..()
 
 /obj/item/construction/rld/update_icon()
-	icon_state = "rld-[round(matter/35)]"
 	..()
-
+	var/ratio = CEILING((matter / max_matter) * ammo_sections, 1)
+	cut_overlays()	//To prevent infinite stacking of overlays
+	add_overlay("rld_light[ratio]")
 
 /obj/item/construction/rld/attack_self(mob/user)
 	..()

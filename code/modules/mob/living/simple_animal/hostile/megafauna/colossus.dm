@@ -50,6 +50,10 @@ Difficulty: Very Hard
 	deathmessage = "disintegrates, leaving a glowing core in its wake."
 	death_sound = 'sound/magic/demon_dies.ogg'
 
+/mob/living/simple_animal/hostile/megafauna/colossus/devour(mob/living/L)	
+	visible_message("<span class='colossus'>[src] disintegrates [L]!</span>")	
+	L.dust()
+	
 /mob/living/simple_animal/hostile/megafauna/colossus/OpenFire()
 	anger_modifier = CLAMP(((maxHealth - health)/50),0,20)
 	ranged_cooldown = world.time + 120
@@ -724,7 +728,7 @@ Difficulty: Very Hard
 		holder_animal.mind.AddSpell(P)
 		holder_animal.verbs -= /mob/living/verb/pulled
 
-/obj/structure/closet/stasis/dump_contents(var/kill = 1)
+/obj/structure/closet/stasis/dump_contents(var/override = TRUE, var/kill = 1)
 	STOP_PROCESSING(SSobj, src)
 	for(var/mob/living/L in src)
 		REMOVE_TRAIT(L, TRAIT_MUTE, STASIS_MUTE)
@@ -741,6 +745,12 @@ Difficulty: Very Hard
 	return
 
 /obj/structure/closet/stasis/ex_act()
+	return
+
+/obj/structure/closet/stasis/handle_lock_addition()
+	return
+
+/obj/structure/closet/stasis/handle_lock_removal()
 	return
 
 /obj/effect/proc_holder/spell/targeted/exit_possession
@@ -764,7 +774,7 @@ Difficulty: Very Hard
 	for(var/i in user)
 		if(istype(i, /obj/structure/closet/stasis))
 			var/obj/structure/closet/stasis/S = i
-			S.dump_contents(0)
+			S.dump_contents(kill=0)
 			qdel(S)
 			break
 	user.gib()

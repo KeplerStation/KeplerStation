@@ -69,10 +69,13 @@
 			if(QDELETED(src))
 				return
 
+	if(GLOB.server_tos)
+		output += "<p><a href='byond://?src=[REF(src)];tos=1'>Terms of Service</A></p>"
+
 	output += "</center>"
 
 	//src << browse(output,"window=playersetup;size=210x240;can_close=0")
-	var/datum/browser/popup = new(src, "playersetup", "<div align='center'>New Player Options</div>", 250, 265)
+	var/datum/browser/popup = new(src, "playersetup", "<div align='center'>New Player Options</div>", 250, 300)
 	popup.set_window_options("can_close=0")
 	popup.set_content(output)
 	popup.open(0)
@@ -93,11 +96,37 @@
 	else
 		relevant_cap = max(hpc, epc)
 
+	// KEPLER CHANGE: Add in TOS code
+	if(href_list["consent_signed"])
+		var/sqltime = time2text(world.realtime, "YYYY-MM-DD hh:mm:ss")
+		var/datum/DBQuery/tos_accept = SSdbcore.NewQuery("REPLACE INTO [format_table_name("tos")] (ckey, datetime, consent) VALUES ('[ckey]', '[sqltime]', 1)")
+		tos_accept.warn_execute()
+		qdel(tos_accept)
+		src << browse(null, "window=privacy_consent")
+		tos_consent = 1
+		new_player_panel()
+
+	if(href_list["consent_rejected"])
+		tos_consent = 0
+		to_chat(usr, "<span class='warning'>You must consent to the terms of service before you can join!</span>")
+		var/sqltime = time2text(world.realtime, "YYYY-MM-DD hh:mm:ss")
+		var/datum/DBQuery/tos_reject = SSdbcore.NewQuery("REPLACE INTO [format_table_name("tos")] (ckey, datetime, consent) VALUES ('[ckey]', '[sqltime]', 0)")
+		tos_reject.warn_execute()
+		qdel(tos_reject)
+
+	if(href_list["tos"])
+		tos_consent()
+		return 0
+	// END KEPLER CHANGE
+
 	if(href_list["show_preferences"])
 		client.prefs.ShowChoices(src)
 		return 1
 
 	if(href_list["ready"])
+		if(!tos_consent)
+			to_chat(usr, "<span class='warning'>You must consent to the terms of service before you can join!</span>")
+			return 0
 		var/tready = text2num(href_list["ready"])
 		//Avoid updating ready if we're after PREGAME (they should use latejoin instead)
 		//This is likely not an actual issue but I don't have time to prove that this
@@ -115,6 +144,9 @@
 		new_player_panel()
 
 	if(href_list["late_join"])
+		if(!tos_consent)
+			to_chat(usr, "<span class='warning'>You must consent to the terms of service before you can join!</span>")
+			return 0
 		if(!SSticker || !SSticker.IsRoundInProgress())
 			to_chat(usr, "<span class='danger'>The round is either not ready, or has already finished...</span>")
 			return
@@ -164,7 +196,7 @@
 				return
 
 		var/obj/effect/mob_spawn/MS = pick(GLOB.mob_spawners[href_list["JoinAsGhostRole"]])
-		if(MS?.attack_ghost(src, latejoinercalling = TRUE))
+		if(MS.attack_ghost(src, latejoinercalling = TRUE))
 			SSticker.queued_players -= src
 			SSticker.queue_delay = 4
 			qdel(src)
@@ -261,6 +293,9 @@
 
 //When you cop out of the round (NB: this HAS A SLEEP FOR PLAYER INPUT IN IT)
 /mob/dead/new_player/proc/make_me_an_observer()
+	if(!tos_consent)
+		to_chat(usr, "<span class='warning'>You must consent to the terms of service before you can join!</span>")
+		return 0
 	if(QDELETED(src) || !src.client)
 		ready = PLAYER_NOT_READY
 		return FALSE
@@ -416,7 +451,7 @@
 						SSticker.mode.make_antag_chance(humanc)
 
 	if(humanc && CONFIG_GET(flag/roundstart_traits))
-		SSquirks.AssignQuirks(humanc, humanc.client, TRUE)
+		SSquirks.AssignQuirks(humanc, humanc.client, TRUE, FALSE, job, FALSE)
 
 	log_manifest(character.mind.key,character.mind,character,latejoin = TRUE)
 
@@ -429,7 +464,19 @@
 
 
 /mob/dead/new_player/proc/LateChoices()
-	var/dat = "<div class='notice'>Round Duration: [DisplayTimeText(world.time - SSticker.round_start_time)]</div>"
+
+	var/level = "green"
+	switch(GLOB.security_level)
+		if(SEC_LEVEL_BLUE)
+			level = "blue"
+		if(SEC_LEVEL_AMBER)
+			level = "amber"
+		if(SEC_LEVEL_RED)
+			level = "red"
+		if(SEC_LEVEL_DELTA)
+			level = "delta"	
+
+	var/dat = "<div class='notice'>Round Duration: [DisplayTimeText(world.time - SSticker.round_start_time)]<br>Alert Level: [capitalize(level)]</div>"
 
 	if(SSshuttle.emergency)
 		switch(SSshuttle.emergency.mode)
@@ -443,10 +490,14 @@
 	for(var/datum/job/job in SSjob.occupations)
 		if(job && IsJobUnavailable(job.title, TRUE) == JOB_AVAILABLE)
 			available_job_count++
-	for(var/obj/effect/mob_spawn/spawner in GLOB.mob_spawners)
-		if(spawner.can_latejoin())
-			available_job_count++
-			break
+	for(var/spawner in GLOB.mob_spawners)
+		if(!LAZYLEN(spawner))
+			continue
+		var/obj/effect/mob_spawn/S = pick(GLOB.mob_spawners[spawner])
+		if(!istype(S) || !S.can_latejoin())
+			continue
+		available_job_count++
+		break
 
 	if(!available_job_count)
 		dat += "<div class='notice red'>There are currently no open positions!</div>"
@@ -465,9 +516,13 @@
 			"Science" = list(jobs = list(), titles = GLOB.science_positions, color = "#e6b3e6"),
 			"Security" = list(jobs = list(), titles = GLOB.security_positions, color = "#ff9999"),
 		)
-		for(var/obj/effect/mob_spawn/spawner in GLOB.mob_spawners)
-			if(spawner.can_latejoin())
-				categorizedJobs["Ghost Role"]["jobs"] += spawner
+		for(var/spawner in GLOB.mob_spawners)
+			if(!LAZYLEN(spawner))
+				continue
+			var/obj/effect/mob_spawn/S = pick(GLOB.mob_spawners[spawner])
+			if(!istype(S) || !S.can_latejoin())
+				continue
+			categorizedJobs["Ghost Role"]["jobs"] += spawner
 
 		for(var/datum/job/job in SSjob.occupations)
 			if(job && IsJobUnavailable(job.title, TRUE) == JOB_AVAILABLE)

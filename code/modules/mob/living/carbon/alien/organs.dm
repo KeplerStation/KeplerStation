@@ -13,13 +13,13 @@
 	QDEL_LIST(alien_powers)
 	return ..()
 
-/obj/item/organ/alien/Insert(mob/living/carbon/M, special = 0)
+/obj/item/organ/alien/Insert(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
 	..()
 	for(var/obj/effect/proc_holder/alien/P in alien_powers)
 		M.AddAbility(P)
 
 
-/obj/item/organ/alien/Remove(mob/living/carbon/M, special = 0)
+/obj/item/organ/alien/Remove(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
 	for(var/obj/effect/proc_holder/alien/P in alien_powers)
 		M.RemoveAbility(P)
 	..()
@@ -91,13 +91,13 @@
 	else
 		owner.adjustPlasma(plasma_rate * 0.1)
 
-/obj/item/organ/alien/plasmavessel/Insert(mob/living/carbon/M, special = 0)
+/obj/item/organ/alien/plasmavessel/Insert(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
 	..()
 	if(isalien(M))
 		var/mob/living/carbon/alien/A = M
 		A.updatePlasmaDisplay()
 
-/obj/item/organ/alien/plasmavessel/Remove(mob/living/carbon/M, special = 0)
+/obj/item/organ/alien/plasmavessel/Remove(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
 	..()
 	if(isalien(M))
 		var/mob/living/carbon/alien/A = M
@@ -114,11 +114,11 @@
 	var/recent_queen_death = 0 //Indicates if the queen died recently, aliens are heavily weakened while this is active.
 	alien_powers = list(/obj/effect/proc_holder/alien/whisper)
 
-/obj/item/organ/alien/hivenode/Insert(mob/living/carbon/M, special = 0)
+/obj/item/organ/alien/hivenode/Insert(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
 	..()
 	M.faction |= ROLE_ALIEN
 
-/obj/item/organ/alien/hivenode/Remove(mob/living/carbon/M, special = 0)
+/obj/item/organ/alien/hivenode/Remove(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
 	M.faction -= ROLE_ALIEN
 	..()
 

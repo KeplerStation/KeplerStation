@@ -134,7 +134,7 @@
 	name = "Donkpocket"
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/pastrybase = 1,
-		/obj/item/reagent_containers/food/snacks/faggot = 1
+		/obj/item/reagent_containers/food/snacks/meatball = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/donkpocket
 	subcategory = CAT_PASTRY
@@ -200,7 +200,7 @@
 	reqs = list(
 		/datum/reagent/consumable/soysauce = 5,
 		/obj/item/reagent_containers/food/snacks/bun = 1,
-		/obj/item/reagent_containers/food/snacks/faggot = 1,
+		/obj/item/reagent_containers/food/snacks/meatball = 1,
 		/obj/item/reagent_containers/food/snacks/grown/cabbage = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/meatbun
@@ -313,6 +313,15 @@
 		/obj/item/reagent_containers/food/snacks/grown/bluecherries = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/bluecherrycupcake
+	subcategory = CAT_PASTRY
+
+/datum/crafting_recipe/food/strawberrycupcake
+	name = "Strawberry cherry cupcake"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/pastrybase = 1,
+		/obj/item/reagent_containers/food/snacks/grown/strawberry  = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/strawberrycupcake
 	subcategory = CAT_PASTRY
 
 /datum/crafting_recipe/food/honeybun

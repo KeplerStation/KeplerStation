@@ -22,7 +22,7 @@
 	var/lip_style = null	//no lipstick by default- arguably misleading, as it could be used for general makeup
 	var/lip_color = "white"
 
-	var/age = 30		//Player's age (pure fluff)
+	var/age = 30		//Player's age
 
 	var/underwear = "Nude"	//Which underwear the player wants
 	var/undershirt = "Nude" //Which undershirt the player wants
@@ -44,8 +44,6 @@
 	var/bleedsuppress = 0 //for stopping bloodloss, eventually this will be limb-based like bleeding
 
 	var/name_override //For temporary visible name changes
-
-	var/nameless = FALSE //For drones of both the insectoid and robotic kind. And other types of nameless critters.
 
 	var/datum/personal_crafting/handcrafting
 	var/datum/physiology/physiology

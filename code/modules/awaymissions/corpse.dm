@@ -71,13 +71,14 @@
 
 /obj/effect/mob_spawn/Destroy()
 	GLOB.poi_list -= src
-	LAZYREMOVE(GLOB.mob_spawners[job_description ? job_description : name], src)
-	if(!LAZYLEN(GLOB.mob_spawners[job_description ? job_description : name]))
-		GLOB.mob_spawners -= job_description ? job_description : name
+	var/job_name = job_description ? job_description : name
+	LAZYREMOVE(GLOB.mob_spawners[job_name], src)
+	if(!LAZYLEN(GLOB.mob_spawners[job_name]))
+		GLOB.mob_spawners -= job_name
 	return ..()
 
 /obj/effect/mob_spawn/proc/can_latejoin() //If it can be taken from the lobby.
-	return TRUE
+	return ghost_usable
 
 /obj/effect/mob_spawn/proc/special(mob/M)
 	return
@@ -248,7 +249,7 @@
 
 //Non-human spawners
 
-/obj/effect/mob_spawn/AICorpse/create() //Creates a corrupted AI
+/obj/effect/mob_spawn/AICorpse/create(ckey, name) //Creates a corrupted AI
 	var/A = locate(/mob/living/silicon/ai) in loc
 	if(A)
 		return
@@ -268,7 +269,7 @@
 /obj/effect/mob_spawn/slime/equip(mob/living/simple_animal/slime/S)
 	S.colour = mobcolour
 
-/obj/effect/mob_spawn/human/facehugger/create() //Creates a squashed facehugger
+/obj/effect/mob_spawn/human/facehugger/create(ckey, name) //Creates a squashed facehugger
 	var/obj/item/clothing/mask/facehugger/O = new(src.loc) //variable O is a new facehugger at the location of the landmark
 	O.name = src.name
 	O.Die() //call the facehugger's death proc

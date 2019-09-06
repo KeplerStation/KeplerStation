@@ -53,13 +53,19 @@
  	restricted_roles = list("Warden")
 
 /datum/gear/secskirt
-	name = "Security skirt"
+	name = "Security Officer's Jumpskirt"
 	category = SLOT_W_UNIFORM
 	path = /obj/item/clothing/under/rank/security/skirt
 	restricted_roles = list("Security Officer", "Warden", "Head of Security")
 
+/datum/gear/wardenskirt
+	name = "Warden's Jumpskirt"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/rank/warden/skirt
+	restricted_roles = list("Warden", "Head of Security")
+
 /datum/gear/hosskirt
-	name = "Head of security's skirt"
+	name = "Head of Security's Jumpskirt"
 	category = SLOT_W_UNIFORM
 	path = /obj/item/clothing/under/rank/head_of_security/skirt
 	restricted_roles = list("Head of Security")

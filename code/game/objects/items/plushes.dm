@@ -16,6 +16,7 @@
 	var/obj/item/toy/plush/plush_child
 	var/obj/item/toy/plush/paternal_parent	//who initiated creation
 	var/obj/item/toy/plush/maternal_parent	//who owns, see love()
+	var/static/list/breeding_blacklist = typecacheof(/obj/item/toy/plush/carpplushie/dehy_carp) // you cannot have sexual relations with this plush
 	var/list/scorned	= list()	//who the plush hates
 	var/list/scorned_by	= list()	//who hates the plush, to remove external references on Destroy()
 	var/heartbroken = FALSE
@@ -203,9 +204,9 @@
 	else if(Kisser.partner == src && !plush_child)	//the one advancing does not take ownership of the child and we have a one child policy in the toyshop
 		user.visible_message("<span class='notice'>[user] is going to break [Kisser] and [src] by bashing them like that.</span>",
 									"<span class='notice'>[Kisser] passionately embraces [src] in your hands. Look away you perv!</span>")
-		plop(Kisser)
-		user.visible_message("<span class='notice'>Something drops at the feet of [user].</span>",
-							"<span class='notice'>The miracle of oh god did that just come out of [src]?!</span>")
+		if(plop(Kisser))
+			user.visible_message("<span class='notice'>Something drops at the feet of [user].</span>",
+								"<span class='notice'>The miracle of oh god did that just come out of [src]?!</span>")
 
 	//then comes protection, or abstinence if we are catholic
 	else if(Kisser.partner == src && plush_child)
@@ -271,7 +272,10 @@
 
 /obj/item/toy/plush/proc/plop(obj/item/toy/plush/Daddy)
 	if(partner != Daddy)
-		return	//we do not have bastards in our toyshop
+		return	FALSE //we do not have bastards in our toyshop
+
+	if(is_type_in_typecache(Daddy, breeding_blacklist))
+		return FALSE // some love is forbidden
 
 	if(prob(50))	//it has my eyes
 		plush_child = new type(get_turf(loc))
@@ -498,8 +502,7 @@
 
 /obj/item/toy/plush/lizardplushie/durgit
 	icon_state = "durgit"
-	item_state = "durgit"
-	squeak_override = list('modular_citadel/sound/voice/weh.ogg' = 1) //Durgit's the origin of the sound
+	item_state = "durgit" // You have been purged.
 
 /obj/item/toy/plush/lizardplushie/rio
 	icon_state = "rio"
@@ -668,6 +671,27 @@
 	item_state = "box"
 	attack_verb = list("open", "closed", "packed", "hidden", "rigged", "bombed", "sent", "gave")
 
+/obj/item/toy/plush/slaggy
+	name = "slag plushie"
+	desc = "A piece of slag with some googly eyes and a drawn on mouth."
+	icon_state = "slaggy"
+	item_state = "slaggy"
+	attack_verb = list("melted", "refined", "stared")
+
+/obj/item/toy/plush/mr_buckety
+	name = "bucket plushie"
+	desc = "A bucket that is missing its handle with some googly eyes and a drawn on mouth."
+	icon_state = "mr_buckety"
+	item_state = "mr_buckety"
+	attack_verb = list("filled", "dumped", "stared")
+
+/obj/item/toy/plush/dr_scanny
+	name = "scanner plushie"
+	desc = "A old outdated scanner that has been modified to have googly eyes, a dawn on mouth and, heart."
+	icon_state = "dr_scanny"
+	item_state = "dr_scanny"
+	attack_verb = list("scanned", "beeped", "stared")
+
 /obj/item/toy/plush/borgplushie
 	name = "robot plushie"
 	desc = "An adorable stuffed toy of a robot."
@@ -730,8 +754,7 @@
 	name = "sergal plushie"
 	desc = "An adorable stuffed plushie that resembles a sagaru."
 	icon_state = "faux"
-	item_state = "faux"
-	squeak_override = list('modular_citadel/sound/voice/merp.ogg' = 1)
+	item_state = "faux" // No more merps for you.
 
 /obj/item/toy/plush/sergal/gladwyn
 	icon_state = "gladwyn"
@@ -886,8 +909,7 @@
 	desc = "An adorable stuffed toy that resembles a feline."
 	icon_state = "bailey"
 	item_state = "bailey"
-	attack_verb = list("headbutt", "scritched", "bit")
-	squeak_override = list('modular_citadel/sound/voice/nya.ogg' = 1)
+	attack_verb = list("headbutt", "scritched", "bit") // No more nya's.
 
 /obj/item/toy/plush/catgirl/mikeel
 	desc = "An adorable stuffed toy of some tauric cat person."	

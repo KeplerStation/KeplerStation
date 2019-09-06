@@ -15,7 +15,7 @@
 
 	var/list/datum/brain_trauma/traumas = list()
 
-/obj/item/organ/brain/Insert(mob/living/carbon/C, special = 0,no_id_transfer = FALSE)
+/obj/item/organ/brain/Insert(mob/living/carbon/C, special = 0,no_id_transfer = FALSE, drop_if_replaced = TRUE)
 	..()
 
 	name = "brain"
@@ -265,7 +265,7 @@
 	var/list/datum/brain_trauma/possible_traumas = list()
 	for(var/T in subtypesof(brain_trauma_type))
 		var/datum/brain_trauma/BT = T
-		if(can_gain_trauma(BT, resilience))
+		if(can_gain_trauma(BT, resilience) && initial(BT.random_gain))
 			possible_traumas += BT
 
 	if(!LAZYLEN(possible_traumas))

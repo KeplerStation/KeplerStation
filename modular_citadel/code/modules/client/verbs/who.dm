@@ -1,3 +1,4 @@
+/* KEPLER CHANGE: Mentors show in adminwho
 /client/verb/mentorwho()
 	set category = "Mentor"
 	set name = "Mentorwho"
@@ -20,6 +21,7 @@
 				suffix += " (AFK)"
 		msg += "\t[C][suffix]\n"
 	to_chat(src, msg)
+*/
 
 /client/verb/who()
 	set name = "Who"
@@ -32,32 +34,22 @@
 	var/admin_mode = check_rights_for(src, R_ADMIN) && isobserver(mob)
 	if(admin_mode)
 		log_admin("[key_name(usr)] checked advanced who in-round")
-	if(length(GLOB.admins))
-		Lines += "<b>Admins:</b>"
-		for(var/X in GLOB.admins)
-			var/client/C = X
-			if(C && C.holder && !C.holder.fakekey)
-				assembled += "\t <font color='#FF0000'>[C.key]</font>[admin_mode? "[show_admin_info(C)]":""] ([round(C.avgping, 1)]ms)"
-		Lines += sortList(assembled)
-	assembled.len = 0
-	if(length(GLOB.mentors))
-		Lines += "<b>Mentors:</b>"
-		for(var/X in GLOB.mentors)
-			var/client/C = X
-			if(C && (!C.holder || (C.holder && !C.holder.fakekey)))			//>using stuff this complex instead of just using if/else lmao
-				assembled += "\t <font color='#0033CC'>[C.key]</font>[admin_mode? "[show_admin_info(C)]":""] ([round(C.avgping, 1)]ms)"
-		Lines += sortList(assembled)
-	assembled.len = 0
-	Lines += "<b>Players:</b>"
-	for(var/X in sortList(GLOB.clients))
+
+	// KEPLER CHANGE: Make admins and mentors highlight instead of being in their own categoriess
+	Lines += "<b>Players | <font color='#FF0000'>Admins</font> | <font color='#0033CC'>Mentors</font></b>"
+	for(var/X in sortKey(GLOB.clients))
 		var/client/C = X
 		if(!C)
 			continue
 		var/key = C.key
 		if(C.holder && C.holder.fakekey)
 			key = C.holder.fakekey
+		if(C.holder)
+			key = "<font color='#FF0000'>[key]</font>"
+		else if(C in GLOB.mentors)
+			key = "<font color='#0033CC'>[key]</font>"
 		assembled += "\t [key][admin_mode? "[show_admin_info(C)]":""] ([round(C.avgping, 1)]ms)"
-	Lines += sortList(assembled)
+	Lines += jointext(assembled, "\n")
 	
 	for(var/line in Lines)
 		msg += "[line]\n"
@@ -127,5 +119,25 @@
 				continue //Don't show afk admins to adminwho
 			if(!C.holder.fakekey)
 				msg += "\t[C] is a [C.holder.rank]\n"
-		msg += "<span class='info'>Adminhelps are also sent to Discord. If no admins are available in game adminhelp anyways and an admin on Discord will see it and respond.</span>"
+	
+	// KEPLER CHANGE, mentors in adminwho
+	msg += "<b>Current Mentors:</b>\n"
+	for(var/X in GLOB.mentors)
+		var/client/C = X
+		if(!C)
+			GLOB.mentors -= C
+			continue // weird runtime that happens randomly
+		var/suffix = ""
+		if(holder)
+			if(isobserver(C.mob))
+				suffix += " - Observing"
+			else if(istype(C.mob,/mob/dead/new_player))
+				suffix += " - Lobby"
+			else
+				suffix += " - Playing"
+
+			if(C.is_afk())
+				suffix += " (AFK)"
+		msg += "\t[C][suffix]\n"
+	msg += "<span class='info'>Adminhelps are also sent to Discord. If no admins are available in game adminhelp anyways and an admin on Discord will see it and respond.</span>"
 	to_chat(src, msg)

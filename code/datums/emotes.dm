@@ -21,6 +21,7 @@
 	var/list/mob_type_ignore_stat_typecache
 	var/stat_allowed = CONSCIOUS
 	var/static/list/emote_list = list()
+	var/list/restricted_species = list()
 
 /datum/emote/New()
 	if(key_third_person)

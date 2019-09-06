@@ -103,6 +103,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["menuoptions"]		>> menuoptions
 	S["enable_tips"]		>> enable_tips
 	S["tip_delay"]			>> tip_delay
+	S["pda_skin"]			>> pda_skin
 
 	//citadel code
 	S["arousable"]			>> arousable
@@ -136,6 +137,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	ghost_others	= sanitize_inlist(ghost_others, GLOB.ghost_others_options, GHOST_OTHERS_DEFAULT_OPTION)
 	menuoptions		= SANITIZE_LIST(menuoptions)
 	be_special		= SANITIZE_LIST(be_special)
+	pda_skin		= sanitize_inlist(pda_skin, GLOB.pda_reskins, PDA_SKIN_ALT)
 
 	screenshake			= sanitize_integer(screenshake, 0, 800, initial(screenshake))
 	damagescreenshake	= sanitize_integer(damagescreenshake, 0, 2, initial(damagescreenshake))
@@ -188,6 +190,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["menuoptions"], menuoptions)
 	WRITE_FILE(S["enable_tips"], enable_tips)
 	WRITE_FILE(S["tip_delay"], tip_delay)
+	WRITE_FILE(S["pda_skin"], pda_skin)
 
 	//citadel code
 	WRITE_FILE(S["screenshake"], screenshake)
@@ -236,7 +239,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	//Character
 	S["real_name"]			>> real_name
-	S["nameless"]			>> nameless
 	S["name_is_always_random"] >> be_random_name
 	S["body_is_always_random"] >> be_random_body
 	S["gender"]				>> gender
@@ -290,18 +292,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["negative_quirks"]	>> negative_quirks
 	S["neutral_quirks"]		>> neutral_quirks
 
-	//Citadel code
-	S["feature_mcolor2"]				>> features["mcolor2"]
-	S["feature_mcolor3"]				>> features["mcolor3"]
-	S["feature_mam_body_markings"]		>> features["mam_body_markings"]
-	S["feature_mam_tail"]				>> features["mam_tail"]
-	S["feature_mam_ears"]				>> features["mam_ears"]
-	S["feature_mam_tail_animated"]		>> features["mam_tail_animated"]
-	S["feature_mam_snouts"]				>> features["mam_snouts"]
-	//Xeno features
-	S["feature_xeno_tail"]				>> features["xenotail"]
-	S["feature_xeno_dors"]				>> features["xenodorsal"]
-	S["feature_xeno_head"]				>> features["xenohead"]
 	//flavor text
 	//Let's make our players NOT cry desperately as we wipe their savefiles of their special snowflake texts:
 	if((S["flavor_text"] != "") && (S["flavor_text"] != null) && S["flavor_text"]) //If old text isn't null and isn't "" but still exists.
@@ -333,7 +323,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(!features["mcolor"] || features["mcolor"] == "#000")
 		features["mcolor"] = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F")
 
-	nameless = sanitize_integer(nameless, 0, 1, initial(nameless))
 	be_random_name	= sanitize_integer(be_random_name, 0, 1, initial(be_random_name))
 	be_random_body	= sanitize_integer(be_random_body, 0, 1, initial(be_random_body))
 
@@ -404,7 +393,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	//Character
 	WRITE_FILE(S["real_name"]			, real_name)
-	WRITE_FILE(S["nameless"]			, nameless)
 	WRITE_FILE(S["name_is_always_random"] , be_random_name)
 	WRITE_FILE(S["body_is_always_random"] , be_random_body)
 	WRITE_FILE(S["gender"]				, gender)

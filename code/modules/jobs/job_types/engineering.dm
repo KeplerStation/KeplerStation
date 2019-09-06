@@ -6,7 +6,7 @@ Chief Engineer
 	flag = CHIEF
 	department_head = list("Captain")
 	department_flag = ENGSEC
-	head_announce = list("Engineering")
+	head_announce = list(RADIO_CHANNEL_ENGINEERING)
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
@@ -29,11 +29,13 @@ Chief Engineer
 			            ACCESS_HEADS, ACCESS_CONSTRUCTION, ACCESS_SEC_DOORS, ACCESS_MINISAT,
 			            ACCESS_CE, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT, ACCESS_MINERAL_STOREROOM)
 
+	blacklisted_quirks = list(/datum/quirk/mute, /datum/quirk/brainproblems, /datum/quirk/paraplegic, /datum/quirk/insanity)
+
 /datum/outfit/job/ce
 	name = "Chief Engineer"
 	jobtype = /datum/job/chief_engineer
 
-	id = /obj/item/card/id/silver
+	id = /obj/item/card/id/job/ce
 	belt = /obj/item/storage/belt/utility/chief/full
 	l_pocket = /obj/item/pda/heads/ce
 	ears = /obj/item/radio/headset/heads/ce
@@ -90,6 +92,7 @@ Station Engineer
 	name = "Station Engineer"
 	jobtype = /datum/job/engineer
 
+	id = /obj/item/card/id/job/engineering
 	belt = /obj/item/storage/belt/utility/full/engi
 	l_pocket = /obj/item/pda/engineering
 	ears = /obj/item/radio/headset/headset_eng
@@ -145,6 +148,7 @@ Atmospheric Technician
 	name = "Atmospheric Technician"
 	jobtype = /datum/job/atmos
 
+	id = /obj/item/card/id/job/engineering
 	belt = /obj/item/storage/belt/utility/atmostech
 	l_pocket = /obj/item/pda/atmos
 	ears = /obj/item/radio/headset/headset_eng

@@ -20,7 +20,7 @@
 	var/matrix/mtrx=new()
 	return mtrx.Scale(0.65)
 
-proc/get_racelist(var/mob/user)//This proc returns a list of species that 'user' has available to them. It searches the list of ckeys attached to the 'whitelist' var for a species and also checks if they're an admin.
+/proc/get_racelist(var/mob/user)//This proc returns a list of species that 'user' has available to them. It searches the list of ckeys attached to the 'whitelist' var for a species and also checks if they're an admin.
 	for(var/spath in subtypesof(/datum/species))
 		var/datum/species/S = new spath()
 		var/list/wlist = S.whitelist
@@ -31,13 +31,6 @@ proc/get_racelist(var/mob/user)//This proc returns a list of species that 'user'
 
 	return GLOB.whitelisted_species_list
 
-	//Mammal Species
-GLOBAL_LIST_EMPTY(mam_body_markings_list)
-GLOBAL_LIST_EMPTY(mam_ears_list)
-GLOBAL_LIST_EMPTY(mam_tails_list)
-GLOBAL_LIST_EMPTY(mam_tails_animated_list)
-GLOBAL_LIST_EMPTY(mam_snouts_list)
-
 	//Exotic Species
 GLOBAL_LIST_EMPTY(exotic_tails_list)
 GLOBAL_LIST_EMPTY(exotic_tails_animated_list)
@@ -45,14 +38,6 @@ GLOBAL_LIST_EMPTY(exotic_ears_list)
 GLOBAL_LIST_EMPTY(exotic_head_list)
 GLOBAL_LIST_EMPTY(exotic_back_list)
 
-	//Xenomorph Species
-GLOBAL_LIST_EMPTY(xeno_head_list)
-GLOBAL_LIST_EMPTY(xeno_tail_list)
-GLOBAL_LIST_EMPTY(xeno_dorsal_list)
-
-	//IPC species
-GLOBAL_LIST_EMPTY(ipc_screens_list)
-GLOBAL_LIST_EMPTY(ipc_antennas_list)
 //Crew objective and miscreants stuff
 GLOBAL_VAR_INIT(miscreants_allowed, FALSE)
 

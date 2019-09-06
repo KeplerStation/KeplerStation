@@ -3,7 +3,7 @@
 #define COOLDOWN_MEME 300
 #define COOLDOWN_NONE 100
 
-/obj/item/organ/vocal_cords //organs that are activated through speech with the :x channel
+/obj/item/organ/vocal_cords //organs that are activated through speech with the :x/MODE_KEY_VOCALCORDS channel
 	name = "vocal cords"
 	icon_state = "appendix"
 	zone = BODY_ZONE_PRECISE_MOUTH
@@ -137,7 +137,7 @@
 	user.say(message, spans = span_list, sanitize = FALSE)
 
 	message = lowertext(message)
-	var/mob/living/list/listeners = list()
+	var/list/mob/living/listeners = list()
 	for(var/mob/living/L in get_hearers_in_view(8, user))
 		if(L.can_hear() && !L.anti_magic_check(FALSE, TRUE) && L.stat != DEAD)
 			if(L == user && !include_speaker)
@@ -571,13 +571,6 @@
 
 	//CITADEL CHANGES
 
-	//DAB
-	else if((findtext(message, dab_words)))
-		cooldown = COOLDOWN_DAMAGE
-		for(var/V in listeners)
-			var/mob/living/M = V
-			M.say("*dab")
-
 	//SNAP
 	else if((findtext(message, snap_words)))
 		cooldown = COOLDOWN_MEME
@@ -600,7 +593,6 @@
 	SSblackbox.record_feedback("tally", "voice_of_god", 1, log_message)
 
 	return cooldown
-
 
 #undef COOLDOWN_STUN
 #undef COOLDOWN_DAMAGE

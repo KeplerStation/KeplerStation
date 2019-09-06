@@ -12,11 +12,11 @@
 					/obj/item/storage/backpack/satchel/sec = 2,
 					/obj/item/storage/backpack/duffelbag/sec = 3,
 					/obj/item/clothing/under/rank/security = 5,
+					/obj/item/clothing/under/rank/security/skirt = 5,
 					/obj/item/clothing/shoes/jackboots = 5,
 					/obj/item/clothing/head/beret/sec =5,
 					/obj/item/clothing/head/soft/sec = 5,
 					/obj/item/clothing/mask/bandana/red = 5,
-					/obj/item/clothing/under/rank/security/skirt = 5,
 					/obj/item/clothing/under/rank/security/grey = 5,
 					/obj/item/clothing/under/pants/khaki = 5)
 	premium = list(/obj/item/clothing/under/rank/security/navyblue = 5,
@@ -44,6 +44,7 @@
 					/obj/item/clothing/under/rank/medical/green = 2,
 					/obj/item/clothing/under/rank/medical/purple = 2,
 					/obj/item/clothing/under/rank/medical = 5,
+					/obj/item/clothing/under/rank/medical/skirt = 5,
 					/obj/item/clothing/suit/toggle/labcoat = 5,
 					/obj/item/clothing/suit/toggle/labcoat/emt = 5,
 					/obj/item/clothing/shoes/sneakers/white = 5,
@@ -67,6 +68,7 @@
 					/obj/item/storage/backpack/satchel/eng = 3,
 					/obj/item/clothing/suit/hooded/wintercoat/engineering = 3,
 					/obj/item/clothing/under/rank/engineer = 5,
+					/obj/item/clothing/under/rank/engineer/skirt = 5,
 					/obj/item/clothing/suit/hazardvest = 5,
 					/obj/item/clothing/shoes/workboots = 5,
 					/obj/item/clothing/head/hardhat = 5)
@@ -87,6 +89,7 @@
 					/obj/item/storage/backpack/industrial = 3,
 					/obj/item/clothing/suit/hooded/wintercoat/engineering/atmos = 5,
 					/obj/item/clothing/under/rank/atmospheric_technician = 5,
+					/obj/item/clothing/under/rank/atmospheric_technician/skirt = 5,
 					/obj/item/clothing/shoes/sneakers/black = 5)
 	refill_canister = /obj/item/vending_refill/wardrobe/atmos_wardrobe
 
@@ -101,6 +104,7 @@
 	vend_reply = "Thank you for using the CargoDrobe!"
 	products = list(/obj/item/clothing/suit/hooded/wintercoat/cargo = 3,
 					/obj/item/clothing/under/rank/cargotech = 5,
+					/obj/item/clothing/under/rank/cargotech/skirt = 5,
 					/obj/item/clothing/shoes/sneakers/black = 5,
 					/obj/item/clothing/gloves/fingerless = 5,
 					/obj/item/clothing/head/soft = 5,
@@ -118,12 +122,14 @@
 	vend_reply = "Thank you for using the RoboDrobe!"
 	products = list(/obj/item/clothing/glasses/hud/diagnostic = 3,
 					/obj/item/clothing/under/rank/roboticist = 3,
+					/obj/item/clothing/under/rank/roboticist/skirt = 3,
 					/obj/item/clothing/suit/toggle/labcoat = 3,
 					/obj/item/clothing/shoes/sneakers/black = 3,
 					/obj/item/clothing/gloves/fingerless = 3,
 					/obj/item/clothing/head/soft/black = 3,
 					/obj/item/clothing/mask/bandana/skull = 2)
 	premium = list(/obj/item/radio/headset/headset_rob = 2) //Cit change
+	contraband = list(/obj/item/clothing/suit/hooded/techpriest = 2)
 	refill_canister = /obj/item/vending_refill/wardrobe/robo_wardrobe
 
 /obj/item/vending_refill/wardrobe/robo_wardrobe
@@ -140,6 +146,7 @@
 					/obj/item/storage/backpack/satchel/tox = 3,
 					/obj/item/clothing/suit/hooded/wintercoat/science = 3,
 					/obj/item/clothing/under/rank/scientist = 4,
+					/obj/item/clothing/under/rank/scientist/skirt = 4,
 					/obj/item/clothing/suit/toggle/labcoat/science = 4,
 					/obj/item/clothing/shoes/sneakers/white = 4,
 					/obj/item/radio/headset/headset_sci = 4,
@@ -199,7 +206,7 @@
 					/obj/item/clothing/suit/apron/purple_bartender = 2,
 					/obj/item/clothing/head/soft/black = 4,
 					/obj/item/clothing/shoes/sneakers/black = 4,
-					/obj/item/reagent_containers/glass/rag = 4,
+					/obj/item/reagent_containers/rag = 4,
 					/obj/item/storage/box/beanbag = 1,
 					/obj/item/clothing/suit/armor/vest/alt = 1,
 					/obj/item/circuitboard/machine/dish_drive = 1,
@@ -227,7 +234,8 @@
 					/obj/item/clothing/suit/toggle/chef = 2,
 					/obj/item/clothing/under/rank/chef = 2,
 					/obj/item/clothing/head/chefhat = 2,
-					/obj/item/reagent_containers/glass/rag = 3)
+					/obj/item/reagent_containers/rag = 3,
+					/obj/item/book/granter/crafting_recipe/cooking_sweets_101 = 2)
 	refill_canister = /obj/item/vending_refill/wardrobe/chef_wardrobe
 
 /obj/item/vending_refill/wardrobe/chef_wardrobe
@@ -295,6 +303,9 @@
 					/obj/item/clothing/suit/nun = 2,
 					/obj/item/clothing/head/nun_hood = 2,
 					/obj/item/clothing/suit/holidaypriest = 2,
+					/obj/item/clothing/suit/pharaoh = 2,
+					/obj/item/clothing/head/nemes = 1,
+					/obj/item/clothing/head/pharaoh = 1,
 					/obj/item/storage/fancy/candle_box = 3)
 	refill_canister = /obj/item/vending_refill/wardrobe/chap_wardrobe
 
@@ -308,11 +319,13 @@
 	product_ads = "Our clothes are 0.5% more resistant to acid spills! Get yours now!"
 	vend_reply = "Thank you for using the ChemDrobe!"
 	products = list(/obj/item/clothing/under/rank/chemist = 3,
+					/obj/item/clothing/under/rank/chemist/skirt = 3,
 					/obj/item/clothing/shoes/sneakers/white = 3,
 					/obj/item/clothing/suit/toggle/labcoat/chemist = 3,
 					/obj/item/storage/backpack/chemistry = 3,
 					/obj/item/storage/backpack/satchel/chem = 3,
-					/obj/item/storage/bag/chemistry = 3)
+					/obj/item/storage/bag/chemistry = 3,
+					/obj/item/fermichem/pHbooklet = 3)//pH indicator)
 	refill_canister = /obj/item/vending_refill/wardrobe/chem_wardrobe
 
 /obj/item/vending_refill/wardrobe/chem_wardrobe
@@ -325,6 +338,7 @@
 	product_ads = "Perfect for the mad scientist in you!"
 	vend_reply = "Thank you for using the GeneDrobe!"
 	products = list(/obj/item/clothing/under/rank/geneticist = 3,
+					/obj/item/clothing/under/rank/geneticist/skirt = 3,
 					/obj/item/clothing/shoes/sneakers/white = 3,
 					/obj/item/clothing/suit/toggle/labcoat/genetics = 3,
 					/obj/item/storage/backpack/genetics = 3,
@@ -341,6 +355,7 @@
 	product_ads = " Viruses getting you down? Then upgrade to sterilized clothing today!"
 	vend_reply = "Thank you for using the ViroDrobe"
 	products = list(/obj/item/clothing/under/rank/virologist = 3,
+					/obj/item/clothing/under/rank/virologist/skirt = 3,
 					/obj/item/clothing/shoes/sneakers/white = 3,
 					/obj/item/clothing/suit/toggle/labcoat/virologist = 3,
 					/obj/item/clothing/mask/surgical = 3,

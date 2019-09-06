@@ -2833,7 +2833,9 @@
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hop)
 "aeP" = (
-/obj/machinery/status_display/supply,
+/obj/machinery/status_display/supply{
+	pixel_x = -32
+	},
 /obj/effect/turf_decal/loading_area,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
@@ -13482,7 +13484,7 @@
 /obj/structure/table/wood,
 /obj/item/book/manual/wiki/barman_recipes,
 /obj/item/reagent_containers/food/drinks/shaker,
-/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/rag,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -15947,7 +15949,6 @@
 	},
 /area/crew_quarters/theatre)
 "aBX" = (
-/obj/machinery/vending/autodrobe,
 /obj/structure/cable/white{
 	icon_state = "0-2"
 	},
@@ -15974,6 +15975,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/machinery/vending/autodrobe/all_access,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/theatre)
 "aBY" = (
@@ -17478,9 +17480,6 @@
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/dorms)
 "aEN" = (
-/obj/machinery/vending/autodrobe{
-	req_access_txt = "0"
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 26
 	},
@@ -17499,6 +17498,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/machinery/vending/autodrobe/all_access,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/dorms)
 "aEO" = (
@@ -29889,7 +29889,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
-/obj/structure/closet/crate/bin,
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "baW" = (
@@ -30025,15 +30024,13 @@
 /turf/open/floor/plasteel,
 /area/maintenance/port)
 "bbn" = (
-/obj/machinery/vending/autodrobe{
-	req_access_txt = "0"
-	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/machinery/vending/autodrobe/all_access,
 /turf/open/floor/plasteel/dark,
 /area/maintenance/port)
 "bbp" = (
@@ -30739,6 +30736,7 @@
 /area/science/robotics/lab)
 "bcA" = (
 /obj/effect/turf_decal/stripes/line,
+/obj/structure/closet/crate/bin,
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "bcB" = (
@@ -32328,6 +32326,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/turf_decal/delivery,
+/obj/machinery/light/floor,
 /turf/open/floor/plasteel,
 /area/maintenance/starboard/aft)
 "bfm" = (
@@ -32345,6 +32344,7 @@
 	icon_state = "2-4"
 	},
 /obj/effect/turf_decal/delivery,
+/obj/machinery/light/floor,
 /turf/open/floor/plasteel,
 /area/maintenance/starboard/aft)
 "bfn" = (
@@ -34243,6 +34243,9 @@
 	dir = 4;
 	pixel_y = -5
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
 "biD" = (
@@ -34256,6 +34259,10 @@
 	},
 /obj/effect/turf_decal/stripes/end{
 	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#e8eaff"
 	},
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
@@ -37393,6 +37400,9 @@
 	dir = 4;
 	pixel_y = -5
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
 "eGm" = (
@@ -37597,6 +37607,14 @@
 /obj/machinery/portable_atmospherics/canister,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+"fHR" = (
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel,
+/area/science/xenobiology)
 "fIN" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 10
@@ -37967,10 +37985,6 @@
 /area/engine/atmos)
 "hTn" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/machinery/door/airlock/research/glass{
-	name = "Robotics Lab";
-	req_access_txt = "29"
-	},
 /obj/machinery/door/airlock/research/glass{
 	name = "Robotics Lab";
 	req_access_txt = "29"
@@ -38988,6 +39002,16 @@
 /obj/machinery/atmospherics/pipe/simple/yellow/visible,
 /turf/closed/wall/r_wall,
 /area/engine/atmos)
+"ocf" = (
+/obj/structure/table/reinforced,
+/obj/machinery/button/door{
+	id = "xeno5";
+	name = "Containment Control";
+	req_access_txt = "55"
+	},
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel,
+/area/science/xenobiology)
 "ogL" = (
 /obj/structure/sign/warning/vacuum/external{
 	pixel_y = -32
@@ -39210,19 +39234,9 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/obj/machinery/button/door{
-	id = "xeno5";
-	name = "Containment Control";
-	pixel_x = 26;
-	pixel_y = -6;
-	req_access_txt = "55"
-	},
-/obj/machinery/button/door{
-	id = "xeno4";
-	name = "Containment Control";
-	pixel_x = 26;
-	pixel_y = 6;
-	req_access_txt = "55"
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#e8eaff"
 	},
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
@@ -41092,7 +41106,7 @@
 "sLL" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
-	id = "AI Core shutters";
+	id = "aicorewindow";
 	name = "AI core shutters"
 	},
 /turf/open/floor/plating,
@@ -42640,6 +42654,16 @@
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
+"tNh" = (
+/obj/structure/table/reinforced,
+/obj/machinery/button/door{
+	id = "xeno4";
+	name = "Containment Control";
+	req_access_txt = "55"
+	},
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel,
+/area/science/xenobiology)
 "tPn" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -43065,20 +43089,6 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
-"vsf" = (
-/obj/effect/decal/cleanable/xenoblood/xgibs,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/turf/open/floor/plasteel/dark,
-/area/science/xenobiology)
 "vsL" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -43186,6 +43196,16 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/mixing)
+"vSG" = (
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/delivery,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/science/xenobiology)
 "vVA" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 4
@@ -88783,13 +88803,13 @@ baa
 aZl
 dfP
 bfP
-bgo
-rCw
-bhN
+tNh
+bhb
+fHR
 ibv
-bgo
-yeE
-bhN
+ocf
+vSG
+fHR
 nTi
 biZ
 bjs
@@ -89040,13 +89060,13 @@ bem
 beO
 sOV
 bfP
-bgm
-bgm
-bhS
+bgo
+rCw
+bhN
 ibv
-bgm
-bgm
-bhS
+bgo
+yeE
+bhN
 ibv
 bja
 bjt
@@ -89297,13 +89317,13 @@ ben
 beP
 bfn
 bfP
-vsf
-bhg
 bgm
+bgm
+bhS
 ibv
-psq
-bgZ
 bgm
+bgm
+bhS
 xFw
 bjb
 bju
@@ -89558,8 +89578,8 @@ bgm
 bhg
 bgm
 ibv
-bgm
-bhg
+psq
+bgZ
 bgm
 bfP
 bjc

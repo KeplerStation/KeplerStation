@@ -672,7 +672,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 		"AI [pick("rogue", "is dead")]!!")
 
 	var/list/mob/living/carbon/people = list()
-	var/list/mob/living/carbon/person = null
+	var/mob/living/carbon/person = null
 	var/datum/language/understood_language = target.get_random_understood_language()
 	for(var/mob/living/carbon/H in view(target))
 		if(H == target)
@@ -689,7 +689,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 			chosen = capitalize(pick(speak_messages))
 		chosen = replacetext(chosen, "%TARGETNAME%", target_name)
 		var/image/speech_overlay = image('icons/mob/talk.dmi', person, "default0", layer = ABOVE_MOB_LAYER)
-		var/message = target.compose_message(person,understood_language,chosen,null,person.get_spans(),face_name = TRUE)
+		var/message = target.compose_message(person,understood_language,chosen,null,list(person.speech_span),face_name = TRUE)
 		feedback_details += "Type: Talk, Source: [person.real_name], Message: [message]"
 		to_chat(target, message)
 		if(target.client)
@@ -705,7 +705,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 		for(var/mob/living/carbon/human/H in GLOB.alive_mob_list)
 			humans += H
 		person = pick(humans)
-		var/message = target.compose_message(person,understood_language,chosen,"[FREQ_COMMON]",person.get_spans(),face_name = TRUE)
+		var/message = target.compose_message(person,understood_language,chosen,"[FREQ_COMMON]",list(person.speech_span),face_name = TRUE)
 		feedback_details += "Type: Radio, Source: [person.real_name], Message: [message]"
 		to_chat(target, message)
 	qdel(src)

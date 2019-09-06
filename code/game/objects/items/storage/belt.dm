@@ -424,6 +424,48 @@
 	GET_COMPONENT(STR, /datum/component/storage)
 	STR.max_items = 6
 
+/obj/item/storage/belt/durathread
+	name = "durathread toolbelt"
+	desc = "A toolbelt made out of durathread, it seems resistant enough to hold even big tools like an RCD, it also has higher capacity."
+	icon_state = "webbing-durathread"
+	item_state = "webbing-durathread"
+	resistance_flags = FIRE_PROOF
+
+/obj/item/storage/belt/durathread/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 14
+	STR.max_combined_w_class = 32
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.can_hold = typecacheof(list(
+		/obj/item/crowbar,
+		/obj/item/screwdriver,
+		/obj/item/weldingtool,
+		/obj/item/wirecutters,
+		/obj/item/wrench,
+		/obj/item/multitool,
+		/obj/item/flashlight,
+		/obj/item/stack/cable_coil,
+		/obj/item/t_scanner,
+		/obj/item/analyzer,
+		/obj/item/geiger_counter,
+		/obj/item/extinguisher/mini,
+		/obj/item/radio,
+		/obj/item/clothing/gloves,
+		/obj/item/holosign_creator/atmos,
+		/obj/item/holosign_creator/engineering,
+		/obj/item/forcefield_projector,
+		/obj/item/assembly/signaler,
+		/obj/item/lightreplacer,
+		/obj/item/rcd_ammo,
+		/obj/item/construction/rcd,
+		/obj/item/pipe_dispenser,
+		/obj/item/stack/rods,
+		/obj/item/stack/tile/plasteel,
+		/obj/item/grenade/chem_grenade/metalfoam,
+		/obj/item/grenade/chem_grenade/smart_metal_foam
+		))
+
 /obj/item/storage/belt/grenade
 	name = "grenadier belt"
 	desc = "A belt for holding grenades."
@@ -517,12 +559,15 @@
 		/obj/item/grenade/chem_grenade,
 		/obj/item/lightreplacer,
 		/obj/item/flashlight,
+		/obj/item/reagent_containers/glass/beaker,
+		/obj/item/reagent_containers/glass/bottle,
 		/obj/item/reagent_containers/spray,
 		/obj/item/soap,
 		/obj/item/holosign_creator,
 		/obj/item/key/janitor,
 		/obj/item/clothing/gloves,
 		/obj/item/melee/flyswatter,
+		/obj/item/paint/paint_remover,
 		/obj/item/assembly/mousetrap
 		))
 
@@ -539,6 +584,22 @@
 	STR.display_numerical_stacking = TRUE
 	STR.can_hold = typecacheof(list(
 		/obj/item/ammo_casing/shotgun
+		))
+
+/obj/item/storage/belt/bandolier/durathread
+	name = "durathread bandolier"
+	desc = "An double stacked bandolier made out of durathread."
+	icon_state = "bandolier-durathread"
+	item_state = "bandolier-durathread"
+	resistance_flags = FIRE_PROOF
+	
+/obj/item/storage/belt/bandolier/durathread/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_items = 32
+	STR.display_numerical_stacking = TRUE
+	STR.can_hold = typecacheof(list(
+		/obj/item/ammo_casing
 		))
 
 /obj/item/storage/belt/medolier
@@ -664,6 +725,32 @@
 		/obj/item/melee/sabre
 		))
 
+/obj/item/storage/belt/sabre/rapier
+	name = "rapier sheath"
+	desc = "A black sheath, feels seemingly metallic."
+	icon_state = "rsheath"
+	item_state = "rsheath"
+	force = 5
+	throwforce = 15
+	block_chance = 30
+	w_class = WEIGHT_CLASS_BULKY
+	attack_verb = list("bashed", "slashes", "prods", "pokes")
+
+/obj/item/storage/belt/sabre/rapier/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_items = 1
+	STR.rustle_sound = FALSE
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.can_hold = typecacheof(list(
+		/obj/item/melee/rapier
+		))
+
+/obj/item/storage/belt/sabre/rapier/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	if(attack_type == PROJECTILE_ATTACK)
+		final_block_chance = 0 //To thin to block bullets
+	return ..()
+
 /obj/item/storage/belt/sabre/examine(mob/user)
 	..()
 	if(length(contents))
@@ -681,8 +768,8 @@
 		to_chat(user, "[src] is empty.")
 
 /obj/item/storage/belt/sabre/update_icon()
-	icon_state = "sheath"
-	item_state = "sheath"
+	icon_state = initial(icon_state)
+	item_state = initial(item_state)
 	if(contents.len)
 		icon_state += "-sabre"
 		item_state += "-sabre"
@@ -693,4 +780,8 @@
 
 /obj/item/storage/belt/sabre/PopulateContents()
 	new /obj/item/melee/sabre(src)
+	update_icon()
+
+/obj/item/storage/belt/sabre/rapier/PopulateContents()
+	new /obj/item/melee/rapier(src)
 	update_icon()
