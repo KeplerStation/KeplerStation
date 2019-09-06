@@ -107,7 +107,7 @@
 
 /datum/bounty/item/medical/advhealthscaner
 	name = "Advanced Health Analyzer"
-	description = "A ERT Medical unit needs the new 'advanced health analyzer', for a mission at a Station 4. Can you send some?."
+	description = "A RRT trauma specialist needs the new 'advanced health analyzer', for a mission at a Station 4. Can you send some?."
 	reward = 4000
 	required_count = 5
 	wanted_types = list(/obj/item/healthanalyzer/advanced)

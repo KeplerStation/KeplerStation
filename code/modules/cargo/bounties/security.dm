@@ -21,7 +21,7 @@
 
 /datum/bounty/item/security/flashshield
 	name = "Strobe Shield"
-	description = "One of our Emergency Response Agents thinks there's vampires in a local station. Send him something to help with his fear of the dark and protect him, too."
+	description = "One of our Rescue & Response Agents thinks there's vampires in a local station. Send him something to help with his fear of the dark and protect him, too."
 	reward = 5000
 	wanted_types = list(/obj/item/assembly/flash/shield)
 

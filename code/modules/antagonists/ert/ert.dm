@@ -1,10 +1,10 @@
 //Both ERT and DS are handled by the same datums since they mostly differ in equipment in objective.
 /datum/team/ert
-	name = "Emergency Response Team"
+	name = "Rescue & Response Team"
 	var/datum/objective/mission //main mission
 
 /datum/antagonist/ert
-	name = "Emergency Response Officer"
+	name = "Rescue & Response Officer"
 	var/datum/team/ert/ert_team
 	var/leader = FALSE
 	var/datum/outfit/outfit = /datum/outfit/ert/security
@@ -40,14 +40,14 @@
 	outfit = /datum/outfit/ert/security/alert
 
 /datum/antagonist/ert/engineer
-	role = "Engineer"
+	role = "Technician"
 	outfit = /datum/outfit/ert/engineer
 
 /datum/antagonist/ert/engineer/red
 	outfit = /datum/outfit/ert/engineer/alert
 
 /datum/antagonist/ert/medic
-	role = "Medical Officer"
+	role = "Trauma Specialist"
 	outfit = /datum/outfit/ert/medic
 
 /datum/antagonist/ert/medic/red
@@ -61,7 +61,7 @@
 	outfit = /datum/outfit/ert/commander/alert
 
 /datum/antagonist/ert/deathsquad
-	name = "Deathsquad Trooper"
+	name = "Human Resources Agent"
 	outfit = /datum/outfit/death_commando
 	role = "Trooper"
 
@@ -90,7 +90,7 @@
 	owner.isholy = TRUE
 
 /datum/antagonist/ert/deathsquad/leader
-	name = "Deathsquad Officer"
+	name = "Human Resources Director"
 	outfit = /datum/outfit/death_commando
 	role = "Officer"
 

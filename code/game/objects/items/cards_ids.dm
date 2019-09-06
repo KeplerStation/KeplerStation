@@ -307,8 +307,8 @@ update_label("John Doe", "Clowny")
 	name = "\improper RRT ID"
 	desc = "A RRT ID card."
 	icon_state = "centcom"
-	registered_name = "Rescue & Response Team Commander"
-	assignment = "Rescue & Response Team Commander"
+	registered_name = "Rescue & Response Director"
+	assignment = "Rescue & Response Director"
 
 /obj/item/card/id/ert/Initialize()
 	access = get_all_accesses()+get_ert_access("commander")-ACCESS_CHANGE_IDS

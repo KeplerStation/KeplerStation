@@ -162,10 +162,10 @@ Contains:
 	strip_delay = 40
 	equip_delay_other = 20
 
-	//Emergency Response Team suits
+	//Rescue & Response Team suits
 /obj/item/clothing/head/helmet/space/hardsuit/ert
-	name = "emergency response unit helmet"
-	desc = "Standard issue command helmet for the ERT."
+	name = "rescue & response helmet"
+	desc = "Standard issue director helmet for the RRT."
 	icon_state = "hardsuit0-ert_commander"
 	item_state = "hardsuit0-ert_commander"
 	item_color = "ert_commander"
@@ -176,8 +176,8 @@ Contains:
 	resistance_flags = ACID_PROOF
 
 /obj/item/clothing/suit/space/hardsuit/ert
-	name = "emergency response team suit"
-	desc = "Standard issue command suit for the ERT."
+	name = "rescue & response suit"
+	desc = "Standard issue director suit for the RRT."
 	icon_state = "ert_command"
 	item_state = "ert_command"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/ert
@@ -189,39 +189,39 @@ Contains:
 
 	//ERT Security
 /obj/item/clothing/head/helmet/space/hardsuit/ert/sec
-	desc = "Standard issue security helmet for the ERT."
+	desc = "Standard issue security helmet for the RRT."
 	icon_state = "hardsuit0-ert_security"
 	item_state = "hardsuit0-ert_security"
 	item_color = "ert_security"
 
 /obj/item/clothing/suit/space/hardsuit/ert/sec
-	desc = "Standard issue security suit for the ERT."
+	desc = "Standard issue security suit for the RRT."
 	icon_state = "ert_security"
 	item_state = "ert_security"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/ert/sec
 
 	//ERT Engineering
 /obj/item/clothing/head/helmet/space/hardsuit/ert/engi
-	desc = "Standard issue engineer helmet for the ERT."
+	desc = "Standard issue engineer helmet for the RRT."
 	icon_state = "hardsuit0-ert_engineer"
 	item_state = "hardsuit0-ert_engineer"
 	item_color = "ert_engineer"
 
 /obj/item/clothing/suit/space/hardsuit/ert/engi
-	desc = "Standard issue engineer suit for the ERT."
+	desc = "Standard issue engineer suit for the RRT."
 	icon_state = "ert_engineer"
 	item_state = "ert_engineer"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/ert/engi
 
 	//ERT Medical
 /obj/item/clothing/head/helmet/space/hardsuit/ert/med
-	desc = "Standard issue medical helmet for the ERT."
+	desc = "Standard issue medical helmet for the RRT."
 	icon_state = "hardsuit0-ert_medical"
 	item_state = "hardsuit0-ert_medical"
 	item_color = "ert_medical"
 
 /obj/item/clothing/suit/space/hardsuit/ert/med
-	desc = "Standard issue medical suit for the ERT."
+	desc = "Standard issue medical suit for the RRT."
 	icon_state = "ert_medical"
 	item_state = "ert_medical"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/ert/med
@@ -230,8 +230,8 @@ Contains:
 	//Red alert ERT
 
 /obj/item/clothing/head/helmet/space/hardsuit/ert/alert
-	name = "emergency response unit helmet"
-	desc = "Red alert command helmet for the ERT. This one is more armored than its standard version."
+	name = "rescue & response helmet"
+	desc = "Red alert director helmet for the RRT. This one is more armored than its standard version."
 	icon_state = "hardsuit0-ert_commander-alert"
 	item_state = "hardsuit0-ert_commander-alert"
 	item_color = "ert_commander-alert"
@@ -242,8 +242,8 @@ Contains:
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
 /obj/item/clothing/suit/space/hardsuit/ert/alert
-	name = "emergency response team suit"
-	desc = "Red alert command suit for the ERT. This one is more armored than its standard version."
+	name = "rescue & response suit"
+	desc = "Red alert director suit for the RRT. This one is more armored than its standard version."
 	icon_state = "ert_command-alert"
 	item_state = "ert_command-alert"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/ert/alert
@@ -254,39 +254,39 @@ Contains:
 
 	//ERT Security
 /obj/item/clothing/head/helmet/space/hardsuit/ert/alert/sec
-	desc = "Red alert security helmet for the ERT. This one is more armored than its standard version."
+	desc = "Red alert security helmet for the RRT. This one is more armored than its standard version."
 	icon_state = "hardsuit0-ert_security-alert"
 	item_state = "hardsuit0-ert_security-alert"
 	item_color = "ert_security-alert"
 
 /obj/item/clothing/suit/space/hardsuit/ert/alert/sec
-	desc = "Red alert security suit for the ERT. This one is more armored than its standard version."
+	desc = "Red alert security suit for the RRT. This one is more armored than its standard version."
 	icon_state = "ert_security-alert"
 	item_state = "ert_security-alert"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/ert/alert/sec
 
 	//ERT Engineering
 /obj/item/clothing/head/helmet/space/hardsuit/ert/alert/engi
-	desc = "Red alert engineer helmet for the ERT. This one is more armored than its standard version."
+	desc = "Red alert engineer helmet for the RRT. This one is more armored than its standard version."
 	icon_state = "hardsuit0-ert_engineer-alert"
 	item_state = "hardsuit0-ert_engineer-alert"
 	item_color = "ert_engineer-alert"
 
 /obj/item/clothing/suit/space/hardsuit/ert/alert/engi
-	desc = "Red alert engineer suit for the ERT. This one is more armored than its standard version."
+	desc = "Red alert engineer suit for the RRT. This one is more armored than its standard version."
 	icon_state = "ert_engineer-alert"
 	item_state = "ert_engineer-alert"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/ert/alert/engi
 
 	//ERT Medical
 /obj/item/clothing/head/helmet/space/hardsuit/ert/alert/med
-	desc = "Red alert medical helmet for the ERT. This one is more armored than its standard version."
+	desc = "Red alert medical helmet for the RRT. This one is more armored than its standard version."
 	icon_state = "hardsuit0-ert_medical-alert"
 	item_state = "hardsuit0-ert_medical-alert"
 	item_color = "ert_medical-alert"
 
 /obj/item/clothing/suit/space/hardsuit/ert/alert/med
-	desc = "Red alert medical suit for the ERT. This one is more armored than its standard version."
+	desc = "Red alert medical suit for the RRT. This one is more armored than its standard version."
 	icon_state = "ert_medical-alert"
 	item_state = "ert_medical-alert"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/ert/alert/med
