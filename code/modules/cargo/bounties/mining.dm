@@ -45,21 +45,21 @@
 
 /datum/bounty/item/mining/bone_dagger
 	name = "Bone Daggers"
-	description = "Central Command's canteen is undergoing budget cuts. Ship over some bone daggers so our Chef can keep working."
+	description = "Head Office's canteen is undergoing budget cuts. Ship over some bone daggers so our Chef can keep working."
 	reward = 5000
 	required_count = 3
 	wanted_types = list(/obj/item/kitchen/knife/combat/bone)
 
 /datum/bounty/item/mining/basalt
 	name = "Artificial Basalt Tiles"
-	description = "Central Command's Ash Walker exhibit needs to be expanded again, we just need some more basalt flooring."
+	description = "The PESC's Ash Walker exhibit needs to be expanded again, we just need some more basalt flooring."
 	reward = 5000
 	required_count = 60
 	wanted_types = list(/obj/item/stack/tile/basalt)
 
 /datum/bounty/item/mining/fruit
 	name = "Cactus Fruit"
-	description = "Central Command's Ash Walker habitat needs more fauna, send us some local fruit seeds!"
+	description = "The PESC's Ash Walker habitat needs more fauna, send us some local fruit seeds!"
 	reward = 2000
 	required_count = 1
 	wanted_types = list(/obj/item/seeds/lavaland/cactus)

@@ -1,6 +1,6 @@
 /obj/item/encryptionkey
 	name = "standard encryption key"
-	desc = "An encryption key for a radio headset.  Has no special codes in it.  WHY DOES IT EXIST?  ASK NANOTRASEN."
+	desc = "An encryption key for a radio headset.  Has no special codes in it."
 	icon = 'icons/obj/radio.dmi'
 	icon_state = "cypherkey"
 	w_class = WEIGHT_CLASS_TINY
@@ -119,11 +119,11 @@
 	channels = list("Service" = 1)
 
 /obj/item/encryptionkey/headset_cent
-	name = "\improper CentCom radio encryption key"
-	desc = "An encryption key for a radio headset.  To access the CentCom channel, use :y."
+	name = "\improper Head Office radio encryption key"
+	desc = "An encryption key for a radio headset.  To access the Head Office channel, use :y."
 	icon_state = "cent_cypherkey"
 	independent = TRUE
-	channels = list("CentCom" = 1)
+	channels = list("Head Office" = 1)
 
 /obj/item/encryptionkey/ai //ported from NT, this goes 'inside' the AI.
 	channels = list("Command" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "AI Private" = 1)

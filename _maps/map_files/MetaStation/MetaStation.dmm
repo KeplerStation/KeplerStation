@@ -3156,7 +3156,7 @@
 /area/crew_quarters/heads/hos)
 "agj" = (
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Head Office. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -9297,7 +9297,7 @@
 /area/security/main)
 "arx" = (
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Head Office. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -47050,7 +47050,7 @@
 "bNe" = (
 /obj/structure/table/wood,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Head Office. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},

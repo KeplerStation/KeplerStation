@@ -166,13 +166,13 @@
 					borg.radio.channels -= channel
 					if (channel == "Syndicate")
 						borg.radio.syndie = FALSE
-					else if (channel == "CentCom")
+					else if (channel == "Head Office")
 						borg.radio.independent = FALSE
 				else
 					borg.radio.keyslot.channels -= channel
 					if (channel == "Syndicate")
 						borg.radio.keyslot.syndie = FALSE
-					else if (channel == "CentCom")
+					else if (channel == "Head Office")
 						borg.radio.keyslot.independent = FALSE
 				message_admins("[key_name_admin(user)] removed the [channel] radio channel from [ADMIN_LOOKUPFLW(borg)].")
 				log_admin("[key_name(user)] removed the [channel] radio channel from [key_name(borg)].")
@@ -182,7 +182,7 @@
 				borg.radio.keyslot.channels[channel] = 1
 				if (channel == "Syndicate")
 					borg.radio.keyslot.syndie = TRUE
-				else if (channel == "CentCom")
+				else if (channel == "Head Office")
 					borg.radio.keyslot.independent = TRUE
 				message_admins("[key_name_admin(user)] added the [channel] radio channel to [ADMIN_LOOKUPFLW(borg)].")
 				log_admin("[key_name(user)] added the [channel] radio channel to [key_name(borg)].")

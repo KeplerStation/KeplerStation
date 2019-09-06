@@ -32,7 +32,7 @@
 	AddComponent(/datum/component/slippery, 80)
 
 /obj/item/soap/nanotrasen
-	desc = "A Nanotrasen brand bar of soap. Smells of plasma."
+	desc = "A Nu-Clean brand bar of soap. Smells like peaches."
 	icon_state = "soapnt"
 
 /obj/item/soap/homemade

@@ -89,7 +89,7 @@
 	icon_state = "shirt_meat"
 
 /datum/sprite_accessory/undershirt/nano
-	name = "Shirt - Nanotrasen"
+	name = "Shirt - Nano"
 	icon_state = "shirt_nano"
 
 /datum/sprite_accessory/undershirt/peace

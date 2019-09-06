@@ -27,8 +27,8 @@
 	do_footstep = TRUE
 
 /mob/living/simple_animal/hostile/retaliate/nanotrasenpeace //this should be in a different file
-	name = "Nanotrasen Private Security Officer"
-	desc = "An officer part of Nanotrasen's private security force."
+	name = "Private Security Officer"
+	desc = "An officer who's part of a private security force."
 	icon = 'icons/mob/simple_human.dmi'
 	icon_state = "nanotrasen"
 	icon_living = "nanotrasen"

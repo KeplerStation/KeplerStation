@@ -20,12 +20,12 @@
 /datum/job/captain/New()
 	..()
 	MAP_JOB_CHECK
-	supervisors = "Nanotrasen and Central Command"
+	supervisors = "Head Office and the Board of Directors"
 
 /datum/job/hop/New()
 	..()
 	MAP_JOB_CHECK
-	supervisors = "the captain and Central Command"
+	supervisors = "the captain and Head Office"
 
 /datum/job/hop/get_access()
 	MAP_JOB_CHECK_BASE

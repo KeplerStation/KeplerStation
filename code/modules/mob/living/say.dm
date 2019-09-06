@@ -18,7 +18,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	// Faction
 	"t" = "Syndicate",
-	"y" = "CentCom",
+	"y" = "Horizons",
 
 	// Admin
 	"p" = "admin",
@@ -48,7 +48,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	// Faction
 	"å" = "Syndicate",
-	"í" = "CentCom",
+	"í" = "Horizons",
 
 	// Admin
 	"ç" = "admin",

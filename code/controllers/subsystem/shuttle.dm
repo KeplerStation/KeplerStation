@@ -247,7 +247,7 @@ SUBSYSTEM_DEF(shuttle)
 
 	if(!admiral_message)
 		admiral_message = pick(GLOB.admiral_messages)
-	var/intercepttext = "<font size = 3><b>Nanotrasen Update</b>: Request For Shuttle.</font><hr>\
+	var/intercepttext = "<font size = 3><b>Head Office Update</b>: Request For Shuttle.</font><hr>\
 						To whom it may concern:<br><br>\
 						We have taken note of the situation upon [station_name()] and have come to the \
 						conclusion that it does not warrant the abandonment of the station.<br>\
@@ -256,7 +256,7 @@ SUBSYSTEM_DEF(shuttle)
 						<i>This message has been automatically generated based upon readings from long \
 						range diagnostic tools. To assure the quality of your request every finalized report \
 						is reviewed by an on-call rear admiral.<br>\
-						<b>Rear Admiral's Notes:</b> \
+						<b>Director's Notes:</b> \
 						[admiral_message]"
 	print_command_report(intercepttext, announce = TRUE)
 

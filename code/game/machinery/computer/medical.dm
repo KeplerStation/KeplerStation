@@ -244,7 +244,7 @@
 				src.active1 = null
 				src.active2 = null
 				src.authenticated = 1
-				src.rank = "Central Command"
+				src.rank = "Head Office"
 				src.screen = 1
 			else if(istype(src.scan, /obj/item/card/id))
 				src.active1 = null
@@ -591,7 +591,7 @@
 
 /obj/machinery/computer/med_data/laptop
 	name = "medical laptop"
-	desc = "A cheap Nanotrasen medical laptop, it functions as a medical records computer. It's bolted to the table."
+	desc = "A cheap medical laptop, it functions as a medical records computer. It's bolted to the table."
 	icon_state = "laptop"
 	icon_screen = "medlaptop"
 	icon_keyboard = "laptop_key"

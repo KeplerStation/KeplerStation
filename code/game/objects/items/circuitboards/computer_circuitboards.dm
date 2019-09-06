@@ -241,7 +241,7 @@
 	build_path = /obj/machinery/computer/cargo/request
 
 /obj/item/circuitboard/computer/bounty
-	name = "Nanotrasen Bounty Console (Computer Board)"
+	name = "Horizons Bounty Console (Computer Board)"
 	build_path = /obj/machinery/computer/bounty
 
 /obj/item/circuitboard/computer/operating

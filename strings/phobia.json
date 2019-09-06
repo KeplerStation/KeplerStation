@@ -40,7 +40,7 @@
 	],
 	
 	"conspiracies": [
-		"central command",
+		"head office",
 		"command",
 		"chain of command",
 		"heads of staff",
@@ -55,8 +55,7 @@
 		"chief engineer",
 		"ce",
 		"captain",
-		"deathsquad",
-		"death squad",
+		"human resources",
 		"alien",
 		"xeno",
 		"abductor",
@@ -185,9 +184,9 @@
 		"cmo",
 		"rd",
 		"command",
-		"nanotrasen",
-		"admiral",
-		"centcom",
+		"horizons",
+		"board of directors",
+		"head office",
 		"comdom",
 		"condom"
 	],

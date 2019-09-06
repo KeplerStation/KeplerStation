@@ -55,7 +55,7 @@
 	path = /obj/item/clothing/suit/jacket/letterman_red
 
 /datum/gear/jacketlettermanNT
-	name = "Nanotrasen letterman jacket"
+	name = "letterman jacket"
 	category = SLOT_WEAR_SUIT
 	path = /obj/item/clothing/suit/jacket/letterman_nanotrasen
 

@@ -55,7 +55,7 @@
 
 /proc/CentCom_announce(text , mob/Sender)
 	var/msg = copytext(sanitize(text), 1, MAX_MESSAGE_LEN)
-	msg = "<span class='adminnotice'><b><font color=orange>CENTCOM:</font>[ADMIN_FULLMONTY(Sender)] [ADMIN_CENTCOM_REPLY(Sender)]:</b> [msg]</span>"
+	msg = "<span class='adminnotice'><b><font color=orange>HEAD OFFICE:</font>[ADMIN_FULLMONTY(Sender)] [ADMIN_CENTCOM_REPLY(Sender)]:</b> [msg]</span>"
 	to_chat(GLOB.admins, msg)
 	for(var/obj/machinery/computer/communications/C in GLOB.machines)
 		C.overrideCooldown()

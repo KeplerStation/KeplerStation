@@ -97,7 +97,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	"Medical" = FREQ_MEDICAL,
 	"Engineering" = FREQ_ENGINEERING,
 	"Security" = FREQ_SECURITY,
-	"CentCom" = FREQ_CENTCOM,
+	"Head Office" = FREQ_CENTCOM,
 	"Syndicate" = FREQ_SYNDICATE,
 	"Supply" = FREQ_SUPPLY,
 	"Service" = FREQ_SERVICE,

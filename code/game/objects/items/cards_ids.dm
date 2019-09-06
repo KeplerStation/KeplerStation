@@ -293,54 +293,54 @@ update_label("John Doe", "Clowny")
 	. = ..()
 
 /obj/item/card/id/centcom
-	name = "\improper CentCom ID"
-	desc = "An ID straight from Central Command."
+	name = "\improper Head Office"
+	desc = "An ID straight from Head Office."
 	icon_state = "centcom"
-	registered_name = "Central Command"
-	assignment = "General"
+	registered_name = "Head Office"
+	assignment = "Director"
 
 /obj/item/card/id/centcom/Initialize()
 	access = get_all_centcom_access()
 	. = ..()
 
 /obj/item/card/id/ert
-	name = "\improper CentCom ID"
-	desc = "An ERT ID card."
+	name = "\improper RRT ID"
+	desc = "A RRT ID card."
 	icon_state = "centcom"
-	registered_name = "Emergency Response Team Commander"
-	assignment = "Emergency Response Team Commander"
+	registered_name = "Rescue & Response Team Commander"
+	assignment = "Rescue & Response Team Commander"
 
 /obj/item/card/id/ert/Initialize()
 	access = get_all_accesses()+get_ert_access("commander")-ACCESS_CHANGE_IDS
 	. = ..()
 
 /obj/item/card/id/ert/Security
-	registered_name = "Security Response Officer"
-	assignment = "Security Response Officer"
+	registered_name = "Rescue & Response Officer"
+	assignment = "Rescue & Response Security Agent"
 
 /obj/item/card/id/ert/Security/Initialize()
 	access = get_all_accesses()+get_ert_access("sec")-ACCESS_CHANGE_IDS
 	. = ..()
 
 /obj/item/card/id/ert/Engineer
-	registered_name = "Engineer Response Officer"
-	assignment = "Engineer Response Officer"
+	registered_name = "Rescue & Response Technician"
+	assignment = "Rescue & Response Technician"
 
 /obj/item/card/id/ert/Engineer/Initialize()
 	access = get_all_accesses()+get_ert_access("eng")-ACCESS_CHANGE_IDS
 	. = ..()
 
 /obj/item/card/id/ert/Medical
-	registered_name = "Medical Response Officer"
-	assignment = "Medical Response Officer"
+	registered_name = "Rescue & Response Trauma Specialist"
+	assignment = "Rescue & Response Trauma Specialist"
 
 /obj/item/card/id/ert/Medical/Initialize()
 	access = get_all_accesses()+get_ert_access("med")-ACCESS_CHANGE_IDS
 	. = ..()
 
 /obj/item/card/id/ert/chaplain
-	registered_name = "Religious Response Officer"
-	assignment = "Religious Response Officer"
+	registered_name = "Rescue & Response Inquisitor"
+	assignment = "Rescue & Response Inquisitor"
 
 /obj/item/card/id/ert/chaplain/Initialize()
 	access = get_all_accesses()+get_ert_access("sec")-ACCESS_CHANGE_IDS

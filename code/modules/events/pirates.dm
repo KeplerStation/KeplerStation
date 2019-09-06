@@ -348,7 +348,7 @@
 	status_report = "Sold:<br>"
 	var/value = 0
 	for(var/datum/export/E in ex.total_amount)
-		var/export_text = E.total_printout(ex,notes = FALSE) //Don't want nanotrasen messages, makes no sense here.
+		var/export_text = E.total_printout(ex,notes = FALSE) //Don't want company messages, makes no sense here.
 		if(!export_text)
 			continue
 

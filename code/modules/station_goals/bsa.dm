@@ -6,11 +6,12 @@
 	name = "Bluespace Artillery"
 
 /datum/station_goal/bluespace_cannon/get_report()
-	return {"Our military presence is inadequate in your sector.
+	return {"The ICC reports that their enforcement capabilities are inadequate in this sector.
 	 We need you to construct BSA-[rand(1,99)] Artillery position aboard your station.
+	 We can't stress how important completion of this contract with the ICC is.
 
 	 Base parts are available for shipping via cargo.
-	 -Nanotrasen Naval Command"}
+	 -Head Office"}
 
 /datum/station_goal/bluespace_cannon/on_report()
 	//Unlock BSA parts
@@ -64,7 +65,7 @@
 
 /obj/machinery/bsa/middle
 	name = "Bluespace Artillery Fusor"
-	desc = "Contents classified by Nanotrasen Naval Command. Needs to be linked with the other BSA parts using multitool."
+	desc = "Contents classified by the ICC. Needs to be linked with the other BSA parts using multitool."
 	icon_state = "fuel_chamber"
 	var/obj/machinery/bsa/back/back
 	var/obj/machinery/bsa/front/front

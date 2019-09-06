@@ -200,8 +200,8 @@
 	keyslot = new /obj/item/encryptionkey/headset_service
 
 /obj/item/radio/headset/headset_cent
-	name = "\improper CentCom headset"
-	desc = "A headset used by the upper echelons of Nanotrasen.\nTo access the CentCom channel, use :y."
+	name = "corporate headset"
+	desc = "A headset used by the upper echelons of the corporate world.\nTo access the Head Office channel, use :y."
 	icon_state = "cent_headset"
 	keyslot = new /obj/item/encryptionkey/headset_com
 	keyslot2 = new /obj/item/encryptionkey/headset_cent
@@ -214,8 +214,8 @@
 	keyslot = new /obj/item/encryptionkey/heads/captain
 
 /obj/item/radio/headset/headset_cent/alt
-	name = "\improper CentCom bowman headset"
-	desc = "A headset especially for emergency response personnel. Protects ears from flashbangs.\nTo access the CentCom channel, use :y."
+	name = "corporate bowman headset"
+	desc = "A headset designed for emergency rescue teams. Protects ears from flashbangs.\nTo access the Head Office channel, use :y."
 	icon_state = "cent_headset_alt"
 	item_state = "cent_headset_alt"
 	keyslot = null

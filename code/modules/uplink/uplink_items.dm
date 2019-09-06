@@ -401,8 +401,8 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 
 /datum/uplink_item/dangerous/flamethrower
 	name = "Flamethrower"
-	desc = "A flamethrower, fueled by a portion of highly flammable biotoxins stolen previously from Nanotrasen \
-			stations. Make a statement by roasting the filth in their own greed. Use with caution."
+	desc = "A flamethrower, fueled by a portion of highly flammable biotoxins stolen \
+	Make a statement by roasting the filth in their own greed. Use with caution."
 	item = /obj/item/flamethrower/full/tank
 	cost = 4
 	surplus = 40
@@ -1204,8 +1204,8 @@ datum/uplink_item/stealthy_weapons/taeclowndo_shoes
 
 /datum/uplink_item/suits/space_suit
 	name = "Syndicate Space Suit"
-	desc = "This red and black syndicate space suit is less encumbering than Nanotrasen variants, \
-			fits inside bags, and has a weapon slot. Nanotrasen crew members are trained to report red space suit \
+	desc = "This red and black syndicate space suit is less encumbering than other variants, \
+			fits inside bags, and has a weapon slot. Horizons crew members are trained to report red space suit \
 			sightings, however."
 	item = /obj/item/storage/box/syndie_kit/space
 	cost = 4
@@ -1216,7 +1216,7 @@ datum/uplink_item/stealthy_weapons/taeclowndo_shoes
 			that runs off standard atmospheric tanks. Toggling the suit in and out of \
 			combat mode will allow you all the mobility of a loose fitting uniform without sacrificing armoring. \
 			Additionally the suit is collapsible, making it small enough to fit within a backpack. \
-			Nanotrasen crew who spot these suits are known to panic."
+			hapless crewmembers who spot these suits are known to panic."
 	item = /obj/item/clothing/suit/space/hardsuit/syndi
 	cost = 8
 	exclude_modes = list(/datum/game_mode/nuclear) //you can't buy it in nuke, because the elite hardsuit costs the same while being better
@@ -1273,8 +1273,8 @@ datum/uplink_item/stealthy_weapons/taeclowndo_shoes
 /datum/uplink_item/device_tools/magboots
 	name = "Blood-Red Magboots"
 	desc = "A pair of magnetic boots with a Syndicate paintjob that assist with freer movement in space or on-station \
-			during gravitational generator failures. These reverse-engineered knockoffs of Nanotrasen's \
-			'Advanced Magboots' slow you down in simulated-gravity environments much like the standard issue variety."
+			during gravitational generator failures. These reverse-engineered knockoffs \
+			slow you down in simulated-gravity environments much like the standard issue variety."
 	item = /obj/item/clothing/shoes/magboots/syndie
 	cost = 2
 	include_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops)
@@ -1396,7 +1396,7 @@ datum/uplink_item/stealthy_weapons/taeclowndo_shoes
 
 /datum/uplink_item/device_tools/rad_laser
 	name = "Radioactive Microlaser"
-	desc = "A radioactive microlaser disguised as a standard Nanotrasen health analyzer. When used, it emits a \
+	desc = "A radioactive microlaser disguised as a standard health analyzer. When used, it emits a \
 			powerful burst of radiation, which, after a short delay, can incapacitate all but the most protected \
 			of humanoids. It has two settings: intensity, which controls the power of the radiation, \
 			and wavelength, which controls how long the radiation delay is."
@@ -1776,7 +1776,7 @@ datum/uplink_item/stealthy_weapons/taeclowndo_shoes
 	cant_discount = TRUE
 
 /datum/uplink_item/badass/costumes/centcom_official
-	name = "CentCom Official Costume"
+	name = "Head Office Official Costume"
 	desc = "Ask the crew to \"inspect\" their nuclear disk and weapons system, and then when they decline, pull out a fully automatic rifle and gun down the Captain. Radio headset does not include key. No gun included."
 	item = /obj/item/storage/box/syndie_kit/centcom_costume
 

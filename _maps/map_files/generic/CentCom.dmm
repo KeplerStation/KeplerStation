@@ -3471,7 +3471,7 @@
 "ja" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom";
+	name = "Head Office";
 	opacity = 1
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -3729,7 +3729,7 @@
 	height = 7;
 	id = "supply_away";
 	json_key = "cargo";
-	name = "CentCom";
+	name = "Head Office";
 	width = 20
 	},
 /turf/open/space,
@@ -4035,7 +4035,7 @@
 "kf" = (
 /obj/structure/table/wood,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Head Office. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -4430,7 +4430,7 @@
 /area/centcom/control)
 "kZ" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -4444,7 +4444,7 @@
 	base_state = "rightsecure";
 	dir = 2;
 	icon_state = "leftsecure";
-	name = "CentCom Stand";
+	name = "Head Office Stand";
 	req_access_txt = "109"
 	},
 /obj/machinery/light{
@@ -4481,7 +4481,7 @@
 	base_state = "rightsecure";
 	dir = 2;
 	icon_state = "leftsecure";
-	name = "CentCom Stand";
+	name = "Head Office Stand";
 	req_access_txt = "109"
 	},
 /turf/open/floor/plasteel/grimy,
@@ -4500,7 +4500,7 @@
 	base_state = "rightsecure";
 	dir = 2;
 	icon_state = "leftsecure";
-	name = "CentCom Stand";
+	name = "Head Office Stand";
 	req_access_txt = "109"
 	},
 /obj/machinery/light{
@@ -4569,7 +4569,7 @@
 /area/centcom/supply)
 "lr" = (
 /turf/closed/indestructible/fakedoor{
-	name = "CentCom"
+	name = "Head Office"
 	},
 /area/centcom/control)
 "ls" = (
@@ -4711,7 +4711,7 @@
 /area/centcom/supply)
 "lK" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Supply";
+	name = "Head Office Supply";
 	req_access_txt = "106"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -4794,7 +4794,7 @@
 /area/centcom/control)
 "lT" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -5771,7 +5771,7 @@
 	base_state = "rightsecure";
 	dir = 2;
 	icon_state = "leftsecure";
-	name = "CentCom Stand";
+	name = "Head Office Stand";
 	req_access_txt = "109"
 	},
 /obj/machinery/firealarm{
@@ -5795,7 +5795,7 @@
 	base_state = "rightsecure";
 	dir = 2;
 	icon_state = "leftsecure";
-	name = "CentCom Stand";
+	name = "Head Office Stand";
 	req_access_txt = "109"
 	},
 /obj/machinery/firealarm{
@@ -6493,7 +6493,7 @@
 "pa" = (
 /obj/structure/table/wood,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Head Office. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -6610,7 +6610,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/brigdoor{
-	name = "CentCom Customs";
+	name = "Head Office Customs";
 	icon_state = "rightsecure";
 	dir = 4;
 	req_access_txt = "109";
@@ -6810,7 +6810,7 @@
 /area/centcom/holding)
 "pz" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Supply";
+	name = "Head Office Supply";
 	req_access_txt = "106"
 	},
 /turf/open/floor/plasteel/dark,
@@ -7360,7 +7360,7 @@
 /area/centcom/ferry)
 "qS" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -7372,7 +7372,7 @@
 /area/centcom/supply)
 "qT" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom";
+	name = "Head Office";
 	opacity = 1
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -8258,7 +8258,7 @@
 /area/centcom/control)
 "sL" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -8455,7 +8455,7 @@
 /area/centcom/ferry)
 "tu" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Supply";
+	name = "Head Office Supply";
 	req_access_txt = "106"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -9273,7 +9273,7 @@
 	base_state = "rightsecure";
 	dir = 1;
 	icon_state = "rightsecure";
-	name = "CentCom Customs";
+	name = "Head Office Customs";
 	req_access_txt = "109"
 	},
 /obj/machinery/door/window,
@@ -9306,7 +9306,7 @@
 	dwidth = 25;
 	height = 50;
 	id = "emergency_away";
-	name = "CentCom Emergency Shuttle Dock";
+	name = "Head Office Emergency Shuttle Dock";
 	width = 50;
 	json_key = "emergency"
 	},
@@ -9340,7 +9340,7 @@
 /area/wizard_station)
 "vo" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Supply";
+	name = "Head Office Supply";
 	req_access_txt = "106"
 	},
 /turf/open/floor/plasteel,
@@ -9810,7 +9810,7 @@
 "wu" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -9877,7 +9877,7 @@
 /area/centcom/ferry)
 "wC" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Customs";
+	name = "Head Office Customs";
 	opacity = 1;
 	req_access_txt = "109"
 	},
@@ -9964,7 +9964,7 @@
 "wJ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom";
+	name = "Head Office";
 	opacity = 1
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -10045,7 +10045,7 @@
 	height = 13;
 	id = "ferry_away";
 	json_key = "ferry";
-	name = "CentCom Ferry Dock";
+	name = "Head Office Ferry Dock";
 	width = 5
 	},
 /turf/open/space,
@@ -10392,7 +10392,7 @@
 /area/centcom/evac)
 "yj" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -10652,7 +10652,7 @@
 "yU" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom";
+	name = "Head Office";
 	opacity = 1
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -10686,7 +10686,7 @@
 "yZ" = (
 /obj/structure/table/wood,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Head Office. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -11836,7 +11836,7 @@
 /area/centcom/control)
 "BM" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -11853,7 +11853,7 @@
 	base_state = "rightsecure";
 	dir = 1;
 	icon_state = "rightsecure";
-	name = "CentCom Customs";
+	name = "Head Office Customs";
 	req_access_txt = "109"
 	},
 /obj/effect/turf_decal/bot,
@@ -11877,7 +11877,7 @@
 	base_state = "rightsecure";
 	dir = 1;
 	icon_state = "rightsecure";
-	name = "CentCom Customs";
+	name = "Head Office Customs";
 	req_access_txt = "109"
 	},
 /obj/effect/turf_decal/bot,
@@ -12867,7 +12867,7 @@
 /obj/item/folder/red,
 /obj/item/pen/red,
 /obj/machinery/door/window/brigdoor{
-	name = "CentCom Customs";
+	name = "Head Office Customs";
 	icon_state = "rightsecure";
 	dir = 4;
 	req_access_txt = "109";
@@ -12882,7 +12882,7 @@
 /obj/item/folder/white,
 /obj/item/pen/blue,
 /obj/machinery/door/window/brigdoor{
-	name = "CentCom Customs";
+	name = "Head Office Customs";
 	icon_state = "rightsecure";
 	dir = 8;
 	req_access_txt = "109";
@@ -12905,7 +12905,7 @@
 /area/centcom/control)
 "DK" = (
 /turf/closed/indestructible/fakedoor{
-	name = "CentCom"
+	name = "Head Office"
 	},
 /area/centcom/evac)
 "DL" = (
@@ -13253,7 +13253,7 @@
 /area/tdome/tdomeobserve)
 "EB" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -15973,7 +15973,7 @@
 "Kr" = (
 /obj/structure/table/wood,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to Head Office. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -16842,7 +16842,7 @@
 /area/fabric_of_reality)
 "NG" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -16879,7 +16879,7 @@
 /area/centcom/holding)
 "NU" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom";
+	name = "Head Office";
 	opacity = 1
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -16933,7 +16933,7 @@
 "Oj" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom";
+	name = "Head Office";
 	opacity = 1
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -17906,7 +17906,7 @@
 /area/centcom/supplypod)
 "UO" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -18112,7 +18112,7 @@
 /area/centcom/holding)
 "Wc" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -18193,7 +18193,7 @@
 "WQ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -18283,7 +18283,7 @@
 /area/syndicate_mothership)
 "Xt" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -18416,7 +18416,7 @@
 /area/centcom/evac)
 "Yt" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -18558,7 +18558,7 @@
 /area/syndicate_mothership)
 "ZJ" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},
@@ -18617,7 +18617,7 @@
 /area/centcom/holding)
 "ZX" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom Security";
+	name = "Head Office Security";
 	opacity = 1;
 	req_access_txt = "101"
 	},

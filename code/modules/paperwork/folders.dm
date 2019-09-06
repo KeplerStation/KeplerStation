@@ -83,7 +83,7 @@
 
 /obj/item/folder/documents
 	name = "folder- 'TOP SECRET'"
-	desc = "A folder stamped \"Top Secret - Property of Nanotrasen Corporation. Unauthorized distribution is punishable by death.\""
+	desc = "A folder stamped \"Top Secret - Property of Horizons. Unauthorized distribution is punishable by contract termination.\""
 
 /obj/item/folder/documents/Initialize()
 	. = ..()

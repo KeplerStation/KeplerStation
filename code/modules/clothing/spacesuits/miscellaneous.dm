@@ -46,7 +46,7 @@ Contains:
 	//NEW SWAT suit
 /obj/item/clothing/suit/space/swat
 	name = "MK.I SWAT Suit"
-	desc = "A tactical space suit first developed in a joint effort by the defunct IS-ERI and Nanotrasen in 20XX for military space operations. A tried and true workhorse, it is very difficult to move in but offers robust protection against all threats!"
+	desc = "A tactical space suit first developed in a joint effort by the now defunct IS-ERI for military space operations. A tried and true workhorse, it is very difficult to move in but offers robust protection against all threats!"
 	icon_state = "heavy"
 	item_state = "swat_suit"
 	allowed = list(/obj/item/gun, /obj/item/ammo_box, /obj/item/ammo_casing, /obj/item/melee/baton, /obj/item/restraints/handcuffs, /obj/item/tank/internals, /obj/item/kitchen/knife/combat)
@@ -85,7 +85,7 @@ Contains:
 	//NASA Voidsuit
 /obj/item/clothing/head/helmet/space/nasavoid
 	name = "NASA Void Helmet"
-	desc = "An old, NASA CentCom branch designed, dark red space suit helmet."
+	desc = "An old, NASA designed, dark red space suit helmet."
 	icon_state = "void"
 	item_state = "void"
 
@@ -93,12 +93,12 @@ Contains:
 	name = "NASA Voidsuit"
 	icon_state = "void"
 	item_state = "void"
-	desc = "An old, NASA CentCom branch designed, dark red space suit."
+	desc = "An old, NASA designed, dark red space suit."
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/multitool)
 
 /obj/item/clothing/head/helmet/space/nasavoid/old
 	name = "Engineering Void Helmet"
-	desc = "A CentCom engineering dark red space suit helmet. While old and dusty, it still gets the job done."
+	desc = "A dark red engineering space suit helmet. While old and dusty, it still gets the job done."
 	icon_state = "void"
 	item_state = "void"
 
@@ -106,7 +106,7 @@ Contains:
 	name = "Engineering Voidsuit"
 	icon_state = "void"
 	item_state = "void"
-	desc = "A CentCom engineering dark red space suit. Age has degraded the suit making is difficult to move around in."
+	desc = "A dark red engineering space suit. Age has degraded the suit making is difficult to move around in."
 	slowdown = 4
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/multitool)
 

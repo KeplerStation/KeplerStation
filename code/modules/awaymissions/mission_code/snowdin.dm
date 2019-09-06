@@ -268,7 +268,7 @@
 
 /obj/item/paper/crumpled/ruins/snowdin/misc1
 	name = "Mission Prologue"
-	info = {"Holy shit, what a rush! Those Nanotrasen bastards didn't even know what hit 'em! All five of us dropped in right on the captain, didn't even have time to yell! We were in and out with that disk in mere minutes!
+	info = {"Holy shit, what a rush! Those bastards didn't even know what hit 'em! All five of us dropped in right on the captain, didn't even have time to yell! We were in and out with that disk in mere minutes!
 	Crew didn't even know what was happening till the delta alert went down and by then we were already gone. We got a case to drink on the way home to celebrate, fuckin' job well done!"}
 
 /obj/item/paper/crumpled/ruins/snowdin/dontdeadopeninside
@@ -290,14 +290,14 @@
 /obj/item/paper/fluff/awaymissions/snowdin/profile/overseer
 	name = "Personnel Record AOP#01"
 	info = {"<b><center>Personnel Log</b></center><br><br><b>Name:</b>Caleb Reed<br><b>Age:</b>38<br><b>Gender:</b>Male<br><b>On-Site Profession:</b>Outpost Overseer<br><br><center><b>Information</b></center><br><center>Caleb Reed lead several expeditions
-	 among uncharted planets in search of plasma for Nanotrasen, scouring from hot savanas to freezing arctics. Track record is fairly clean with only incidient including the loss of two researchers during the
+	 among uncharted planets in search of plasma, scouring from hot savanas to freezing arctics. Track record is fairly clean with only incidient including the loss of two researchers during the
 	 expedition of <b>_______</b>, where mis-used of explosive ordinance for tunneling causes a cave-in."}
 
 /obj/item/paper/fluff/awaymissions/snowdin/profile/sec1
 	name = "Personnel Record AOP#02"
 	info = {"<b><center>Personnel Log</b></center><br><br><b>Name:</b>James Reed<br><b>Age:</b>43<br><b>Gender:</b>Male<br><b>On-Site Profession:</b>Outpost Security<br><br><center><b>Information</b></center><br><center>James Reed has been a part
-	 of Nanotrasen's security force for over 20 years, first joining in 22XX. A clean record and unwavering loyalty to the corperation through numerous deployments to various sites makes him a valuable asset to Natotrasen
-	  when it comes to keeping the peace while prioritizing Nanotrasen privacy matters. "}
+	 of our security force for over 20 years, first joining in 22XX. A clean record and unwavering loyalty to the corperation through numerous deployments to various sites makes him a valuable asset to us
+	  when it comes to keeping the peace while prioritizing privacy matters. "}
 
 /obj/item/paper/fluff/awaymissions/snowdin/profile/hydro1
 	name = "Personnel Record AOP#03"
@@ -323,7 +323,7 @@
 
 /obj/item/paper/fluff/awaymissions/snowdin/secnotice
 	name = "Security Notice"
-	info = {"YOu have been assigned to this Arctic Post with intention of protecting Nanotrasen assets and ensuring vital information is kept secure while the stationed crew obeys protocol. The picked
+	info = {"You have been assigned to this Arctic Post with intention of protecting Nanotrasen assets and ensuring vital information is kept secure while the stationed crew obeys protocol. The picked
 		staff for this post have been pre-screened with no prior incidients on record, but incase of an issue you have been given a single holding cell and instructions to contact Central to terminate the
 		offending crewmember."}
 

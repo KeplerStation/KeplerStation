@@ -329,7 +329,7 @@
 
 /datum/supply_pack/security/forensics
 	name = "Forensics Crate"
-	desc = "Stay hot on the criminal's heels with Nanotrasen's Detective Essentials(tm). Contains a forensics scanner, six evidence bags, camera, tape recorder, white crayon, and of course, a fedora. Requires Security access to open."
+	desc = "Stay hot on the criminal's heels with Patterson's Detective Essentials(tm). Contains a forensics scanner, six evidence bags, camera, tape recorder, white crayon, and of course, a fedora. Requires Security access to open."
 	cost = 2000
 	contains = list(/obj/item/detective_scanner,
 	                /obj/item/storage/box/evidence,
@@ -414,7 +414,7 @@
 
 /datum/supply_pack/security/justiceinbound
 	name = "Standard Justice Enforcer Crate"
-	desc = "This is it. The Bee's Knees. The Creme of the Crop. The Pick of the Litter. The best of the best of the best. The Crown Jewel of Nanotrasen. The Alpha and the Omega of security headwear. Guaranteed to strike fear into the hearts of each and every criminal aboard the station. Also comes with a security gasmask. Requires Security access to open."
+	desc = "This is it. The Bee's Knees. The Cream of the Crop. The Pick of the Litter. The best of the best of the best. The Crown Jewel of Horizons. The Alpha and the Omega of security headwear. Guaranteed to strike fear into the hearts of each and every criminal aboard the station. Also comes with a security gasmask. Requires Security access to open."
 	cost = 6000 //justice comes at a price. An expensive, noisy price.
 	contraband = TRUE
 	contains = list(/obj/item/clothing/head/helmet/justice,
@@ -507,7 +507,7 @@
 
 /datum/supply_pack/security/armory/combatknives
 	name = "Combat Knives Crate"
-	desc = "Contains three sharpened combat knives. Each knife guaranteed to fit snugly inside any Nanotrasen-standard boot. Requires Armory access to open."
+	desc = "Contains three sharpened combat knives. Each knife guaranteed to fit snugly inside any standard-issue boot. Requires Armory access to open."
 	cost = 3000
 	contains = list(/obj/item/kitchen/knife/combat,
 					/obj/item/kitchen/knife/combat,
@@ -643,7 +643,7 @@
 
 /datum/supply_pack/security/armory/swat
 	name = "SWAT Crate"
-	desc = "Contains two fullbody sets of tough, fireproof, pressurized suits designed in a joint effort by IS-ERI and Nanotrasen. Each set contains a suit, helmet, mask, combat belt, and combat gloves. Requires Armory access to open."
+	desc = "Contains two fullbody sets of tough, fireproof, pressurized suits designed by IS-ERI. Each set contains a suit, helmet, mask, combat belt, and combat gloves. Requires Armory access to open."
 	cost = 6000
 	contains = list(/obj/item/clothing/head/helmet/swat/nanotrasen,
 					/obj/item/clothing/head/helmet/swat/nanotrasen,
@@ -713,7 +713,7 @@
 
 /datum/supply_pack/engineering/shieldgen
 	name = "Anti-breach Shield Projector Crate"
-	desc = "Hull breaches again? Say no more with the Nanotrasen Anti-Breach Shield Projector! Uses forcefield technology to keep the air in, and the space out. Contains two shield projectors."
+	desc = "Hull breaches again? Say no more with the StayIn! Anti-Breach Shield Projector! Uses forcefield technology to keep the air in, and the space out. Contains two shield projectors."
 	cost = 2500
 	contains = list(/obj/machinery/shieldgen,
 					/obj/machinery/shieldgen)
@@ -846,7 +846,7 @@
 
 /datum/supply_pack/engineering/bsa
 	name = "Bluespace Artillery Parts"
-	desc = "The pride of Nanotrasen Naval Command. The legendary Bluespace Artillery Cannon is a devastating feat of human engineering and testament to wartime determination. Highly advanced research is required for proper construction. "
+	desc = "The pride of modern navies. The legendary Bluespace Artillery Cannon is a devastating feat of human engineering and testament to wartime determination. Highly advanced research is required for proper construction. "
 	cost = 15000
 	special = TRUE
 	contains = list(/obj/item/circuitboard/machine/bsa/front,
@@ -1622,7 +1622,7 @@
 
 /datum/supply_pack/service/janitor
 	name = "Janitorial Supplies Crate"
-	desc = "Fight back against dirt and grime with Nanotrasen's Janitorial Essentials(tm)! Contains three buckets, caution signs, and cleaner grenades. Also has a single mop, spray cleaner, rag, NT soap and a trash bag."
+	desc = "Fight back against dirt and grime with EasyClean Janitorial Essentials(tm)! Contains three buckets, caution signs, and cleaner grenades. Also has a single mop, spray cleaner, rag, soap and a trash bag."
 	cost = 1000
 	contains = list(/obj/item/reagent_containers/glass/bucket,
 					/obj/item/reagent_containers/glass/bucket,
@@ -1682,7 +1682,7 @@
 
 /datum/supply_pack/service/party
 	name = "Party Equipment"
-	desc = "Celebrate both life and death on the station with Nanotrasen's Party Essentials(tm)! Contains seven colored glowsticks, four beers, two ales, and a bottle of patron, goldschlager, and shaker!"
+	desc = "Celebrate both life and death on the station with these party essentials! Contains seven colored glowsticks, four beers, two ales, and a bottle of patron, goldschlager, and shaker!"
 	cost = 2000
 	contains = list(/obj/item/storage/box/drinkingglasses,
 					/obj/item/reagent_containers/food/drinks/shaker,
@@ -1812,7 +1812,7 @@
 
 /datum/supply_pack/organic/hydroponics/beekeeping_fullkit
 	name = "Beekeeping Starter Crate"
-	desc = "BEES BEES BEES. Contains three honey frames, a beekeeper suit and helmet, flyswatter, bee house, and, of course, a pure-bred Nanotrasen-Standardized Queen Bee!"
+	desc = "BEES BEES BEES. Contains three honey frames, a beekeeper suit and helmet, flyswatter, bee house, and, of course, a pure-bred Queen Bee!"
 	cost = 1500
 	contains = list(/obj/structure/beebox/unwrenched,
 					/obj/item/honey_frame,
@@ -1962,7 +1962,7 @@
 
 /datum/supply_pack/organic/mre
 	name = "MRE supply kit (emergency rations)"
-	desc = "The lights are out. Oxygen's running low. You've run out of food except space weevils. Don't let this be you! Order our NT branded MRE kits today! This pack contains 5 MRE packs with a randomized menu and an oxygen tank."
+	desc = "The lights are out. Oxygen's running low. You've run out of food except space weevils. Don't let this be you! Order our MRE kits today! This pack contains 5 MRE packs with a randomized menu and an oxygen tank."
 	cost = 2000
 	contains = list(/obj/item/storage/box/mre/menu1/safe,
 					/obj/item/storage/box/mre/menu1/safe,
@@ -2007,7 +2007,7 @@
 
 /datum/supply_pack/organic/potted_plants
 	name = "Potted Plants Crate"
-	desc = "Spruce up the station with these lovely plants! Contains a random assortment of five potted plants from Nanotrasen's potted plant research division. Warranty void if thrown."
+	desc = "Spruce up the station with these lovely plants! Contains a random assortment of five potted plants from PottedPlants LLC. Warranty void if thrown."
 	cost = 700
 	contains = list(/obj/item/twohanded/required/kirbyplants/random,
 					/obj/item/twohanded/required/kirbyplants/random,
@@ -2389,7 +2389,7 @@
 
 /datum/supply_pack/costumes_toys/costume
 	name = "Standard Costume Crate"
-	desc = "Supply the station's entertainers with the equipment of their trade with these Nanotrasen-approved costumes! Contains a full clown and mime outfit, along with a bike horn and a bottle of nothing."
+	desc = "Supply the station's entertainers with the equipment of their trade with these costumes! Contains a full clown and mime outfit, along with a bike horn and a bottle of nothing."
 	cost = 1000
 	access = ACCESS_THEATRE
 	contains = list(/obj/item/storage/backpack/clown,
@@ -2480,7 +2480,7 @@
 
 /datum/supply_pack/costumes_toys/wizard
 	name = "Wizard Costume Crate"
-	desc = "Pretend to join the Wizard Federation with this full wizard outfit! Nanotrasen would like to remind its employees that actually joining the Wizard Federation is subject to termination of job and life."
+	desc = "Pretend to join the Wizard Federation with this full wizard outfit! Horizons would like to remind its employees that actually joining the Wizard Federation is subject to termination of job and life."
 	cost = 2000
 	contains = list(/obj/item/staff,
 					/obj/item/clothing/suit/wizrobe/fake,
@@ -2599,7 +2599,7 @@
 
 /datum/supply_pack/misc/bicycle
 	name = "Bicycle"
-	desc = "Nanotrasen reminds all employees to never toy with powers outside their control."
+	desc = "The ICC reminds all employees to never toy with powers outside their control."
 	cost = 1000000
 	contains = list(/obj/vehicle/ridden/bicycle)
 	crate_name = "Bicycle Crate"
@@ -2623,7 +2623,7 @@
 
 /datum/supply_pack/misc/book_crate
 	name = "Book Crate"
-	desc = "Surplus from the Nanotrasen Archives, these five books are sure to be good reads."
+	desc = "Surplus from the local space library, these five books are sure to be good reads."
 	cost = 1500
 	contains = list(/obj/item/book/codex_gigas,
 					/obj/item/book/manual/random/,
@@ -2701,7 +2701,7 @@
 
 /datum/supply_pack/misc/paper_work
 	name = "Freelance Paper work"
-	desc = "The Nanotrasen Primary Bureaucratic Database Intelligence (PDBI) reports that the station has not completed its funding and grant paperwork this solar cycle. In order to gain further funding, your station is required to fill out (10) ten of these forms or no additional capital will be disbursed. We have sent you ten copies of the following form and we expect every one to be up to Nanotrasen Standards." // Disbursement. It's not a typo, look it up.
+	desc = "The Primary Bureaucratic Database Intelligence (PDBI) reports that the station has not completed its funding and grant paperwork this solar cycle. In order to gain further funding, your station is required to fill out (10) ten of these forms or no additional capital will be disbursed. We have sent you ten copies of the following form and we expect every one to be up to standard." // Disbursement. It's not a typo, look it up.
 	cost = 400 // Net of 0 credits
 	contains = list(/obj/item/folder/paperwork,
 					/obj/item/folder/paperwork,

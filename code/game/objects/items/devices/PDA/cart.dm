@@ -425,12 +425,12 @@ Code:
 					if(!is_station_level(SSshuttle.supply.z))
 						menu += "station"
 					else
-						menu += "CentCom"
+						menu += "Head Office"
 					menu += " ([SSshuttle.supply.timeLeft(600)] Mins)"
 				else
 					menu += "At "
 					if(!is_station_level(SSshuttle.supply.z))
-						menu += "CentCom"
+						menu += "Head Office"
 					else
 						menu += "station"
 			menu += "<BR>Current approved orders: <BR><ol>"

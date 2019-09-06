@@ -7,11 +7,11 @@
 		return COMPONENT_INCOMPATIBLE
 
 	var/static/list/default_lines = list(
-		"CentCom's profligacy frays another thread.",
+		"Horizons' profligacy frays another thread.",
 		"Another tug at the weave.",
 		"Who knows when the stresses will finally shatter the form?",
 		"Even now a light shines through the cracks.",
-		"CentCom once more twists knowledge beyond its authority.",
+		"Head Office once more twists knowledge beyond its authority.",
 		"There is an uncertain air in the mansus.",
 		)
 	say_lines = text || default_lines

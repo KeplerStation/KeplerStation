@@ -7,7 +7,7 @@
 
 /obj/item/clothing/under/rank/security/skirt
 	name = "security skirt"
-	desc = "A tactical security skirt for officers complete with Nanotrasen belt buckle."
+	desc = "A tactical security skirt for officers complete with belt buckle."
 	icon = 'modular_citadel/icons/obj/clothing/cit_clothes.dmi'
 	icon_state = "secskirt"
 	alternate_worn_icon = 'modular_citadel/icons/mob/citadel/uniforms.dmi'

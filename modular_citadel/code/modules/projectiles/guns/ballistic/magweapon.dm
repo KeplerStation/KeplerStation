@@ -408,7 +408,7 @@
 
 /obj/item/gun/ballistic/automatic/hyperburst
 	name = "\improper Hyper-Burst Rifle"
-	desc = "An extremely beefed up version of a stolen Nanotrasen weapon prototype, this 'rifle' is more like a cannon, with an extremely large bore barrel capable of generating several smaller magnetic 'barrels' to simultaneously launch multiple projectiles at once."
+	desc = "An extremely beefed up version of a stolen weapon prototype, this 'rifle' is more like a cannon, with an extremely large bore barrel capable of generating several smaller magnetic 'barrels' to simultaneously launch multiple projectiles at once."
 	icon = 'modular_citadel/icons/obj/guns/cit_guns.dmi'
 	icon_state = "hyperburst"
 	item_state = "arg"
