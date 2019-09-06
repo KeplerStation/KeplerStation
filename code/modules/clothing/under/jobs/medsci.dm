@@ -10,6 +10,12 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 10, "bio" = 10, "rad" = 0, "fire" = 0, "acid" = 35)
 	can_adjust = FALSE
 
+/obj/item/clothing/under/rank/research_director/dress
+	name = "research director dress uniform"
+	desc = "Feminine fashion for the style concious RD."
+	icon_state = "dress_rd"
+	item_color = "dress_rd"
+
 /obj/item/clothing/under/rank/research_director/alt
 	desc = "Maybe you'll engineer your own half-man, half-pig creature some day. Its fabric provides minor protection from biological contaminants."
 	name = "research director's tan suit"
@@ -39,6 +45,12 @@
 	permeability_coefficient = 0.5
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
+/obj/item/clothing/under/rank/scientist/skirt
+	name = "scientist's jumpskirt"
+	icon_state = "sciencewhitef"
+	item_color = "sciencewhitef"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/chemist
 	desc = "It's made of a special fiber that gives special protection against biohazards. It has a chemist rank stripe on it."
@@ -48,6 +60,13 @@
 	item_color = "chemistrywhite"
 	permeability_coefficient = 0.5
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 10, "rad" = 0, "fire" = 50, "acid" = 65)
+
+/obj/item/clothing/under/rank/chemist/skirt
+	name = "chemist's jumpskirt"
+	icon_state = "chemistrywhitef"
+	item_color = "chemistrywhitef"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
 
 /*
  * Medical
@@ -61,6 +80,14 @@
 	permeability_coefficient = 0.5
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 10, "rad" = 0, "fire" = 0, "acid" = 0)
 
+/obj/item/clothing/under/rank/chief_medical_officer/skirt
+	desc = "It's a jumpskirt worn by those with the experience to be \"Chief Medical Officer\". It provides minor biological protection."
+	name = "chief medical officer's jumpskirt"
+	icon_state = "cmof"
+	item_color = "cmof"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
+
 /obj/item/clothing/under/rank/geneticist
 	desc = "It's made of a special fiber that gives special protection against biohazards. It has a genetics rank stripe on it."
 	name = "geneticist's jumpsuit"
@@ -70,6 +97,13 @@
 	permeability_coefficient = 0.5
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 10, "rad" = 0, "fire" = 0, "acid" = 0)
 
+/obj/item/clothing/under/rank/geneticist/skirt
+	name = "geneticist's jumpskirt"
+	icon_state = "geneticswhitef"
+	item_color = "geneticswhitef"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
+
 /obj/item/clothing/under/rank/virologist
 	desc = "It's made of a special fiber that gives special protection against biohazards. It has a virologist rank stripe on it."
 	name = "virologist's jumpsuit"
@@ -78,6 +112,13 @@
 	item_color = "virologywhite"
 	permeability_coefficient = 0.5
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 10, "rad" = 0, "fire" = 0, "acid" = 0)
+
+/obj/item/clothing/under/rank/virologist/skirt
+	name = "virologist's jumpskirt"
+	icon_state = "virologywhitef"
+	item_color = "virologywhitef"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/nursesuit
 	desc = "It's a jumpsuit commonly worn by nursing staff in the medical department."
@@ -99,6 +140,13 @@
 	item_color = "medical"
 	permeability_coefficient = 0.5
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 10, "rad" = 0, "fire" = 0, "acid" = 0)
+
+/obj/item/clothing/under/rank/medical/skirt
+	name = "medical doctor's jumpskirt"
+	icon_state = "medicalf"
+	item_color = "medicalf"
+	body_parts_covered = CHEST|GROIN|ARMS
+	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/medical/blue
 	name = "medical scrubs"

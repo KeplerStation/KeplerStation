@@ -1,11 +1,11 @@
 /world/proc/_BSQL_Internal_Call(func, ...)
 	var/list/call_args = args.Copy(2)
-	BSQL_Debug("[.....]: [args[1]]([call_args.Join(", ")])")
+	BSQL_Debug("_BSQL_Internal_Call(): [args[1]]([call_args.Join(", ")])")
 	. = call(_BSQL_Library_Path(), func)(arglist(call_args))
 	BSQL_Debug("Result: [. == null ? "NULL" : "\"[.]\""]")
 
 /world/proc/_BSQL_Library_Path()
-	return system_type == MS_WINDOWS ? "BSQL.dll" : "libBSQL.so"
+	return system_type == MS_WINDOWS ? "BSQL.dll" : "./libBSQL.so"
 
 /world/proc/_BSQL_InitCheck(datum/BSQL_Connection/caller)
 	var/static/library_initialized = FALSE

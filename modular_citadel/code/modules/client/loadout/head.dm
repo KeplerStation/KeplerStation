@@ -59,6 +59,11 @@
 	category = SLOT_HEAD
 	path = /obj/item/clothing/head/rabbitears
 
+/datum/gear/kittyears
+	name = "Kitty Ears"
+	category = SLOT_HEAD
+	path = /obj/item/clothing/head/kitty
+
 //trek fancy Hats!
 /datum/gear/trekcap
 	name = "Federation Officer's Cap (White)"

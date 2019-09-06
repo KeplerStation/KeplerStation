@@ -79,7 +79,7 @@ Will print: "/mob/living/carbon/human/death" (you can optionally embed it in a s
 #define HANDS_LAYER				3
 #define BODY_FRONT_LAYER		2
 #define FIRE_LAYER				1		//If you're on fire
-#define TOTAL_LAYERS			31		//KEEP THIS UP-TO-DATE OR SHIT WILL BREAK ;_;
+#define TOTAL_LAYERS			30		//KEEP THIS UP-TO-DATE OR SHIT WILL BREAK ;_;
 
 //Human Overlay Index Shortcuts for alternate_worn_layer, layers
 //Because I *KNOW* somebody will think layer+1 means "above"
@@ -254,9 +254,14 @@ GLOBAL_LIST_INIT(ghost_accs_options, list(GHOST_ACCS_NONE, GHOST_ACCS_DIR, GHOST
 
 GLOBAL_LIST_INIT(ghost_others_options, list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DEFAULT_SPRITE, GHOST_OTHERS_THEIR_SETTING)) //Same as ghost_accs_options.
 
-//Color Defines
-#define OOC_COLOR  "#002eb8"
-#define AOOC_COLOR "#b8002e"
+//pda icon reskins
+#define PDA_SKIN_CLASSIC "Classic"
+#define PDA_SKIN_ALT "Holographic"
+#define PDA_SKIN_RUGGED "Rugged"
+#define PDA_SKIN_MODERN "Modern"
+
+GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi', PDA_SKIN_ALT = 'icons/obj/pda_alt.dmi',
+								PDA_SKIN_RUGGED = 'icons/obj/pda_rugged.dmi', PDA_SKIN_MODERN = 'icons/obj/pda_modern.dmi'))
 
 /////////////////////////////////////
 // atom.appearence_flags shortcuts //
@@ -361,6 +366,7 @@ GLOBAL_LIST_INIT(ghost_others_options, list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DE
 #define CLOCK_SILICONS 22
 #define CLOCK_PROSELYTIZATION 23
 #define SHUTTLE_HIJACK 24
+#define GANG_VICTORY 25
 
 #define FIELD_TURF 1
 #define FIELD_EDGE 2
@@ -437,6 +443,13 @@ GLOBAL_LIST_INIT(ghost_others_options, list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DE
 #define SUMMON_GUNS "guns"
 #define SUMMON_MAGIC "magic"
 
+#define TELEPORT_CHANNEL_BLUESPACE "bluespace"	//Classic bluespace teleportation, requires a sender but no receiver
+#define TELEPORT_CHANNEL_QUANTUM "quantum"		//Quantum-based teleportation, requires both sender and receiver, but is free from normal disruption
+#define TELEPORT_CHANNEL_WORMHOLE "wormhole"	//Wormhole teleportation, is not disrupted by bluespace fluctuations but tends to be very random or unsafe
+#define TELEPORT_CHANNEL_MAGIC "magic"			//Magic teleportation, does whatever it wants (unless there's antimagic)
+#define TELEPORT_CHANNEL_CULT "cult"			//Cult teleportation, does whatever it wants (unless there's holiness)
+#define TELEPORT_CHANNEL_FREE "free"			//Anything else
+
 //Run the world with this parameter to enable a single run though of the game setup and tear down process with unit tests in between
 #define TEST_RUN_PARAMETER "test-run"
 //Force the log directory to be something specific in the data/logs folder
@@ -469,3 +482,8 @@ GLOBAL_LIST_INIT(ghost_others_options, list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DE
 #define AREASELECT_CORNERB "corner B"
 
 #define PREF_SAVELOAD_COOLDOWN 5
+
+#define VOMIT_TOXIC 1
+#define VOMIT_PURPLE 2
+
+#define CRYOMOBS 'icons/obj/cryo_mobs.dmi'

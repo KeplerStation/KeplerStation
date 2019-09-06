@@ -100,6 +100,7 @@
 			var/datum/DBQuery/query_memoshow = SSdbcore.NewQuery("SELECT ckey, memotext, timestamp, last_editor FROM [format_table_name("mentor_memo")]")
 			if(!query_memoshow.Execute())
 				var/err = query_memoshow.ErrorMsg()
+				qdel(query_memoshow)
 				log_game("SQL ERROR obtaining ckey, memotext, timestamp, last_editor from memo table. Error : \[[err]\]\n")
 				return
 			var/output = null
@@ -112,11 +113,11 @@
 				if(last_editor)
 					output += "<br><span class='memoedit'>Last edit by [last_editor] <A href='?_src_=holder;mentormemoeditlist=[ckey]'>(Click here to see edit log)</A></span>"
 				output += "<br>[memotext]</span><br>"
+			qdel(query_memoshow)
 			if(!output)
 				to_chat(src, "No memos found in database.")
 				return
 			to_chat(src, output)
-			qdel(query_memoshow)
 		if("Remove")
 			var/datum/DBQuery/query_memodellist = SSdbcore.NewQuery("SELECT ckey FROM [format_table_name("mentor_memo")]")
 			if(!query_memodellist.Execute())

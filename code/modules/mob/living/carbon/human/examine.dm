@@ -238,7 +238,7 @@
 		if(DISGUST_LEVEL_DISGUSTED to INFINITY)
 			msg += "[t_He] look[p_s()] extremely disgusted.\n"
 
-	if(blood_volume < BLOOD_VOLUME_SAFE)
+	if(blood_volume < (BLOOD_VOLUME_SAFE*blood_ratio))
 		msg += "[t_He] [t_has] pale skin.\n"
 
 	if(bleedsuppress)
@@ -271,6 +271,13 @@
 				msg += "[t_He] look[p_s()] like a drunken mess.\n"
 			if(91.01 to INFINITY)
 				msg += "[t_He] [t_is] a shitfaced, slobbering wreck.\n"
+
+	if(reagents.has_reagent("astral"))
+		msg += "[t_He] have wild, spacey eyes"
+		if(mind)
+			msg += " and have a strange, abnormal look to them.\n"
+		else
+			msg += " and don't look like they're all there.\n"
 
 	if(isliving(user))
 		var/mob/living/L = user

@@ -48,6 +48,7 @@
 
 	var/mob/living/simple_animal/bot/active_bot
 	var/list/botlist = list()
+	var/has_menus = FALSE
 
 /obj/item/cartridge/Initialize()
 	. = ..()
@@ -60,6 +61,7 @@
 	icon_state = "cart-e"
 	access = CART_ENGINE | CART_DRONEPHONE
 	bot_access_flags = FLOOR_BOT
+	has_menus = TRUE
 
 /obj/item/cartridge/atmos
 	name = "\improper BreatheDeep cartridge"
@@ -72,6 +74,7 @@
 	icon_state = "cart-m"
 	access = CART_MEDICAL
 	bot_access_flags = MED_BOT
+	has_menus = TRUE
 
 /obj/item/cartridge/chemistry
 	name = "\improper ChemWhiz cartridge"
@@ -84,12 +87,14 @@
 	icon_state = "cart-s"
 	access = CART_SECURITY
 	bot_access_flags = SEC_BOT
+	has_menus = TRUE
 
 /obj/item/cartridge/detective
 	name = "\improper D.E.T.E.C.T. cartridge"
-	icon_state = "cart-s"
+	icon_state = "cart-eye"
 	access = CART_SECURITY | CART_MEDICAL
 	bot_access_flags = SEC_BOT
+	has_menus = TRUE
 
 /obj/item/cartridge/janitor
 	name = "\improper CustodiPRO cartridge"
@@ -97,27 +102,31 @@
 	icon_state = "cart-j"
 	access = CART_JANITOR | CART_DRONEPHONE
 	bot_access_flags = CLEAN_BOT
+	has_menus = TRUE
 
 /obj/item/cartridge/lawyer
 	name = "\improper P.R.O.V.E. cartridge"
-	icon_state = "cart-s"
+	icon_state = "cart-law"
 	access = CART_SECURITY
 	spam_enabled = 1
+	has_menus = TRUE
 
 /* Doesnt work, no idea why
 /obj/item/cartridge/curator
 	name = "\improper Lib-Tweet cartridge"
-	icon_state = "cart-s"
+	icon_state = "cart-lib"
 	access = CART_NEWSCASTER
 */
 /obj/item/cartridge/roboticist
 	name = "\improper B.O.O.P. Remote Control cartridge"
 	desc = "Packed with heavy duty triple-bot interlink!"
+	icon_state = "cart-robo"
 	bot_access_flags = FLOOR_BOT | CLEAN_BOT | MED_BOT | FIRE_BOT
 	access = CART_DRONEPHONE
 
 /obj/item/cartridge/signal
 	name = "generic signaler cartridge"
+	icon_state = "cart-sig"
 	desc = "A data cartridge with an integrated radio signaler module."
 
 /obj/item/cartridge/signal/toxins
@@ -138,23 +147,27 @@
 	icon_state = "cart-q"
 	access = CART_QUARTERMASTER
 	bot_access_flags = MULE_BOT
+	has_menus = TRUE
 
 /obj/item/cartridge/head
 	name = "\improper Easy-Record DELUXE cartridge"
 	icon_state = "cart-h"
 	access = CART_STATUS_DISPLAY
+	has_menus = TRUE
 
 /obj/item/cartridge/hop
 	name = "\improper HumanResources9001 cartridge"
 	icon_state = "cart-h"
 	access = CART_STATUS_DISPLAY | CART_JANITOR | CART_SECURITY | CART_QUARTERMASTER | CART_DRONEPHONE
 	bot_access_flags = MULE_BOT | CLEAN_BOT
+	has_menus = TRUE
 
 /obj/item/cartridge/hos
 	name = "\improper R.O.B.U.S.T. DELUXE cartridge"
 	icon_state = "cart-hos"
 	access = CART_STATUS_DISPLAY | CART_SECURITY
 	bot_access_flags = SEC_BOT
+	has_menus = TRUE
 
 
 /obj/item/cartridge/ce
@@ -162,18 +175,21 @@
 	icon_state = "cart-ce"
 	access = CART_STATUS_DISPLAY | CART_ENGINE | CART_ATMOS | CART_DRONEPHONE
 	bot_access_flags = FLOOR_BOT | FIRE_BOT
+	has_menus = TRUE
 
 /obj/item/cartridge/cmo
 	name = "\improper Med-U DELUXE cartridge"
 	icon_state = "cart-cmo"
 	access = CART_STATUS_DISPLAY | CART_REAGENT_SCANNER | CART_MEDICAL
 	bot_access_flags = MED_BOT
+	has_menus = TRUE
 
 /obj/item/cartridge/rd
 	name = "\improper Signal Ace DELUXE cartridge"
 	icon_state = "cart-rd"
 	access = CART_STATUS_DISPLAY | CART_REAGENT_SCANNER | CART_ATMOS | CART_DRONEPHONE
 	bot_access_flags = FLOOR_BOT | CLEAN_BOT | MED_BOT | FIRE_BOT
+	has_menus = TRUE
 
 /obj/item/cartridge/rd/Initialize()
 	. = ..()
@@ -186,6 +202,7 @@
 	access = ~(CART_CLOWN | CART_MIME | CART_REMOTE_DOOR)
 	bot_access_flags = SEC_BOT | MULE_BOT | FLOOR_BOT | CLEAN_BOT | MED_BOT | FIRE_BOT
 	spam_enabled = 1
+	has_menus = TRUE
 
 /obj/item/cartridge/captain/New()
 	..()
@@ -486,6 +503,23 @@ Code:
 				else
 					menu += "[ldat]"
 
+				menu += "<h4>Pimpin' Ride:</h4>"
+
+				ldat = null
+				for (var/obj/vehicle/ridden/janicart/M in world)
+					var/turf/ml = get_turf(M)
+
+					if(ml)
+						if (ml.z != cl.z)
+							continue
+						var/direction = get_dir(src, M)
+						ldat += "Ride - <b>\[[ml.x],[ml.y] ([uppertext(dir2text(direction))])\]</b><br>"
+
+				if (!ldat)
+					menu += "None"
+				else
+					menu += "[ldat]"
+
 				menu += "<h4>Located Janitorial Cart:</h4>"
 
 				ldat = null
@@ -668,7 +702,7 @@ Code:
 
 	if(href_list["mule"]) //MULEbots are special snowflakes, and need different args due to how they work.
 
-		active_bot.bot_control(command= href_list["mule"], user= usr, pda= 1)
+		active_bot.bot_control(command= href_list["mule"], user= usr)
 
 	if(!host_pda)
 		return
@@ -743,4 +777,4 @@ Code:
 	return ""
 
 //This is called for special abilities of cartridges
-/obj/item/cartridge/proc/special(mov/living/user, list/params)
+/obj/item/cartridge/proc/special(mob/living/user, list/params)

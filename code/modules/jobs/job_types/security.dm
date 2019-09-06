@@ -12,7 +12,7 @@ Head of Security
 	flag = HOS
 	department_head = list("Captain")
 	department_flag = ENGSEC
-	head_announce = list("Security")
+	head_announce = list(RADIO_CHANNEL_SECURITY)
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
@@ -35,11 +35,15 @@ Head of Security
 			            ACCESS_RESEARCH, ACCESS_ENGINE, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CONSTRUCTION, ACCESS_MAILSORTING,
 			            ACCESS_HEADS, ACCESS_HOS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_GATEWAY, ACCESS_MAINT_TUNNELS, ACCESS_MINERAL_STOREROOM)
 
+	mind_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM)
+
+	blacklisted_quirks = list(/datum/quirk/mute, /datum/quirk/brainproblems, /datum/quirk/nonviolent, /datum/quirk/paraplegic, /datum/quirk/insanity)
+
 /datum/outfit/job/hos
 	name = "Head of Security"
 	jobtype = /datum/job/hos
 
-	id = /obj/item/card/id/silver
+	id = /obj/item/card/id/job/hos
 	belt = /obj/item/pda/heads/hos
 	ears = /obj/item/radio/headset/heads/hos/alt
 	uniform = /obj/item/clothing/under/rank/head_of_security
@@ -92,6 +96,9 @@ Warden
 	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_COURT, ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_WEAPONS, ACCESS_FORENSICS_LOCKERS, ACCESS_MINERAL_STOREROOM)
 	minimal_access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_COURT, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM) //SEE /DATUM/JOB/WARDEN/GET_ACCESS()
 
+	mind_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM)
+	blacklisted_quirks = list(/datum/quirk/mute, /datum/quirk/nonviolent, /datum/quirk/paraplegic)
+
 /datum/job/warden/get_access()
 	var/list/L = list()
 	L = ..() | check_config_for_sec_maint()
@@ -101,6 +108,7 @@ Warden
 	name = "Warden"
 	jobtype = /datum/job/warden
 
+	id = /obj/item/card/id/job/sec
 	belt = /obj/item/pda/warden
 	ears = /obj/item/radio/headset/headset_sec/alt
 	uniform = /obj/item/clothing/under/rank/warden
@@ -145,10 +153,14 @@ Detective
 	access = list(ACCESS_SEC_DOORS, ACCESS_FORENSICS_LOCKERS, ACCESS_MORGUE, ACCESS_MAINT_TUNNELS, ACCESS_COURT, ACCESS_BRIG, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM)
 	minimal_access = list(ACCESS_SEC_DOORS, ACCESS_FORENSICS_LOCKERS, ACCESS_MORGUE, ACCESS_MAINT_TUNNELS, ACCESS_COURT, ACCESS_BRIG, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM)
 
+	mind_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM)
+	blacklisted_quirks = list(/datum/quirk/mute, /datum/quirk/nonviolent, /datum/quirk/paraplegic)
+
 /datum/outfit/job/detective
 	name = "Detective"
 	jobtype = /datum/job/detective
 
+	id = /obj/item/card/id/job/sec
 	belt = /obj/item/pda/detective
 	ears = /obj/item/radio/headset/headset_sec/alt
 	uniform = /obj/item/clothing/under/rank/det
@@ -198,6 +210,8 @@ Security Officer
 	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_COURT, ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_WEAPONS, ACCESS_FORENSICS_LOCKERS, ACCESS_MINERAL_STOREROOM)
 	minimal_access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_COURT, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM) //BUT SEE /DATUM/JOB/WARDEN/GET_ACCESS()
 
+	mind_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM)
+	blacklisted_quirks = list(/datum/quirk/mute, /datum/quirk/nonviolent, /datum/quirk/paraplegic)
 
 /datum/job/officer/get_access()
 	var/list/L = list()
@@ -288,6 +302,7 @@ GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, S
 	name = "Security Officer"
 	jobtype = /datum/job/officer
 
+	id = /obj/item/card/id/job/sec
 	belt = /obj/item/pda/security
 	ears = /obj/item/radio/headset/headset_sec/alt
 	uniform = /obj/item/clothing/under/rank/security

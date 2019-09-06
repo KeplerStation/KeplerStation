@@ -60,5 +60,11 @@ SUBSYSTEM_DEF(server_maint)
 	var/tgsversion = world.TgsVersion()
 	if(tgsversion)
 		SSblackbox.record_feedback("text", "server_tools", 1, tgsversion)
+	// Insert row for server log parsing
+	var/datum/DBQuery/insert_round_logs = SSdbcore.NewQuery("INSERT INTO [format_table_name("complete_rounds")] (round_id, log_dir) VALUES ([sanitizeSQL(GLOB.round_id)], '[sanitizeSQL(GLOB.log_directory)]')")
+	if(!insert_round_logs.warn_execute())
+		qdel(insert_round_logs)
+		return
+	qdel(insert_round_logs)
 
 #undef PING_BUFFER_TIME

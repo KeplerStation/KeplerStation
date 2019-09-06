@@ -288,8 +288,10 @@ There are several things that need to be remembered:
 				S.alternate_worn_icon = 'modular_citadel/icons/mob/digishoes.dmi'
 			else
 				S.alternate_worn_icon = null
-
-		overlays_standing[SHOES_LAYER] = shoes.build_worn_icon(state = shoes.icon_state, default_layer = SHOES_LAYER, default_icon_file = ((shoes.alternate_worn_icon) ? shoes.alternate_worn_icon : 'icons/mob/feet.dmi'))
+		var/t_state = shoes.item_state
+		if (!t_state)
+			t_state = shoes.icon_state
+		overlays_standing[SHOES_LAYER] = shoes.build_worn_icon(state = t_state, default_layer = SHOES_LAYER, default_icon_file = ((shoes.alternate_worn_icon) ? shoes.alternate_worn_icon : 'icons/mob/feet.dmi'))
 		var/mutable_appearance/shoes_overlay = overlays_standing[SHOES_LAYER]
 		if(OFFSET_SHOES in dna.species.offset_features)
 			shoes_overlay.pixel_x += dna.species.offset_features[OFFSET_SHOES][1]
@@ -377,6 +379,9 @@ There are several things that need to be remembered:
 
 	if(wear_suit)
 		var/obj/item/clothing/suit/S = wear_suit
+		var/no_taur_thanks = FALSE
+		if(!istype(S))
+			no_taur_thanks = TRUE
 		wear_suit.screen_loc = ui_oclothing
 		if(client && hud_used && hud_used.hud_shown)
 			if(hud_used.inventory_shown)
@@ -391,7 +396,7 @@ There are several things that need to be remembered:
 		if(OFFSET_SUIT in dna.species.offset_features)
 			suit_overlay.pixel_x += dna.species.offset_features[OFFSET_SUIT][1]
 			suit_overlay.pixel_y += dna.species.offset_features[OFFSET_SUIT][2]
-		if(S.center)
+		if(!no_taur_thanks && S.center)
 			suit_overlay = center_image(suit_overlay, S.dimension_x, S.dimension_y)
 		overlays_standing[SUIT_LAYER] = suit_overlay
 	update_hair()
@@ -454,14 +459,6 @@ There are several things that need to be remembered:
 			back_overlay.pixel_y += dna.species.offset_features[OFFSET_BACK][2]
 			overlays_standing[BACK_LAYER] = back_overlay
 		apply_overlay(BACK_LAYER)
-
-/mob/living/carbon/human/update_inv_legcuffed()
-	remove_overlay(LEGCUFF_LAYER)
-	clear_alert("legcuffed")
-	if(legcuffed)
-		overlays_standing[LEGCUFF_LAYER] = mutable_appearance('icons/mob/mob.dmi', "legcuff1", -LEGCUFF_LAYER)
-		apply_overlay(LEGCUFF_LAYER)
-		throw_alert("legcuffed", /obj/screen/alert/restrained/legcuffed, new_master = src.legcuffed)
 
 /proc/wear_female_version(t_color, icon, layer, type)
 	var/index = t_color
@@ -633,8 +630,6 @@ generate/load female uniform sprites matching all previously decided variables
 			. += "-digitigrade[BP.use_digitigrade]"
 		if(BP.dmg_overlay_type)
 			. += "-[BP.dmg_overlay_type]"
-		if(BP.body_markings)
-			. += "-[BP.body_markings]"
 		else
 			. += "-no_marking"
 

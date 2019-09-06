@@ -39,7 +39,7 @@
 	set name = "Release Contents"
 	set category = "Gondola"
 	set desc = "Release any contents stored within your vast belly."
-	linked_pod.open(src, manual = TRUE)
+	linked_pod.open(src)
 
 /mob/living/simple_animal/pet/gondola/gondolapod/verb/check()
 	set name = "Count Contents"

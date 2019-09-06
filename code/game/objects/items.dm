@@ -33,6 +33,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	var/usesound = null
 	var/throwhitsound = null
 	var/w_class = WEIGHT_CLASS_NORMAL
+	var/total_mass //Total mass in arbitrary pound-like values. If there's no balance reasons for an item to have otherwise, this var should be the item's weight in pounds.
 	var/slot_flags = 0		//This is used to determine on which slots an item can fit.
 	pass_flags = PASSTABLE
 	pressure_resistance = 4
@@ -229,9 +230,6 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		research_msg += "None"
 	research_msg += "."
 	to_chat(user, research_msg.Join())
-
-/obj/item/proc/speechModification(message)			//for message modding by mask slot.
-	return message
 
 /obj/item/interact(mob/user)
 	add_fingerprint(user)
@@ -647,11 +645,6 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	else
 		. = ""
 
-
-//when an item modify our speech spans when in our active hand. Override this to modify speech spans.
-/obj/item/proc/get_held_item_speechspans(mob/living/carbon/user)
-	return
-
 /obj/item/hitby(atom/movable/AM)
 	return
 
@@ -825,6 +818,6 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	return ..()
 
 /obj/item/throw_at(atom/target, range, speed, mob/thrower, spin=TRUE, diagonals_first = FALSE, var/datum/callback/callback)
-	if (item_flags & NODROP)
+	if (HAS_TRAIT(src, TRAIT_NODROP))
 		return
 	return ..()

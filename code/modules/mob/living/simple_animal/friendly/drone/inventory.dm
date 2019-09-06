@@ -19,7 +19,7 @@
 	return 0
 
 
-/mob/living/simple_animal/drone/can_equip(obj/item/I, slot)
+/mob/living/simple_animal/drone/can_equip(obj/item/I, slot, disable_warning = 0)
 	switch(slot)
 		if(SLOT_HEAD)
 			if(head)

@@ -170,7 +170,7 @@
 	tick_interval = 4
 	alert_type = /obj/screen/alert/status_effect/his_grace
 	var/bloodlust = 0
-
+	
 /obj/screen/alert/status_effect/his_grace
 	name = "His Grace"
 	desc = "His Grace hungers, and you must feed Him."
@@ -208,6 +208,7 @@
 	owner.adjustToxLoss(-grace_heal, TRUE, TRUE)
 	owner.adjustOxyLoss(-(grace_heal * 2))
 	owner.adjustCloneLoss(-grace_heal)
+	owner.adjustStaminaLoss(-(grace_heal * 25))
 
 /datum/status_effect/his_grace/on_remove()
 	owner.log_message("lost His Grace's stun immunity", LOG_ATTACK)
@@ -355,7 +356,7 @@
 		var/new_staminaloss = owner.getStaminaLoss()
 		if(new_staminaloss < last_staminaloss)
 			var/heal_amount = -5 // CIT CHANGE - makes blood drunk status effect not exhaust you
-			owner.adjustStaminaLoss(heal_amount, updating_health = FALSE)
+			owner.adjustStaminaLoss(heal_amount, FALSE)
 			new_staminaloss = owner.getStaminaLoss()
 			needs_health_update = TRUE
 		last_staminaloss = new_staminaloss

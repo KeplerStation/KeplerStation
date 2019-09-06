@@ -6,7 +6,7 @@ Chief Medical Officer
 	flag = CMO_JF
 	department_head = list("Captain")
 	department_flag = MEDSCI
-	head_announce = list("Medical")
+	head_announce = list(RADIO_CHANNEL_MEDICAL)
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
@@ -27,11 +27,13 @@ Chief Medical Officer
 			ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_CMO, ACCESS_SURGERY, ACCESS_RC_ANNOUNCE,
 			ACCESS_KEYCARD_AUTH, ACCESS_SEC_DOORS, ACCESS_MAINT_TUNNELS)
 
+	blacklisted_quirks = list(/datum/quirk/mute, /datum/quirk/brainproblems, /datum/quirk/insanity)
+
 /datum/outfit/job/cmo
 	name = "Chief Medical Officer"
 	jobtype = /datum/job/cmo
 
-	id = /obj/item/card/id/silver
+	id = /obj/item/card/id/job/cmo
 	belt = /obj/item/pda/heads/cmo
 	l_pocket = /obj/item/pinpointer/crew
 	ears = /obj/item/radio/headset/heads/cmo
@@ -79,6 +81,7 @@ Medical Doctor
 	name = "Medical Doctor"
 	jobtype = /datum/job/doctor
 
+	id = /obj/item/card/id/job/medical
 	belt = /obj/item/pda/medical
 	ears = /obj/item/radio/headset/headset_med
 	uniform = /obj/item/clothing/under/rank/medical
@@ -118,6 +121,7 @@ Chemist
 	name = "Chemist"
 	jobtype = /datum/job/chemist
 
+	id = /obj/item/card/id/job/medical
 	glasses = /obj/item/clothing/glasses/science
 	belt = /obj/item/pda/chemist
 	ears = /obj/item/radio/headset/headset_med
@@ -127,6 +131,7 @@ Chemist
 	backpack = /obj/item/storage/backpack/chemistry
 	satchel = /obj/item/storage/backpack/satchel/chem
 	duffelbag = /obj/item/storage/backpack/duffelbag/med
+	l_hand = /obj/item/fermichem/pHbooklet
 
 	chameleon_extras = /obj/item/gun/syringe
 
@@ -155,6 +160,7 @@ Geneticist
 	name = "Geneticist"
 	jobtype = /datum/job/geneticist
 
+	id = /obj/item/card/id/job/medical
 	belt = /obj/item/pda/geneticist
 	ears = /obj/item/radio/headset/headset_medsci
 	uniform = /obj/item/clothing/under/rank/geneticist
@@ -191,6 +197,7 @@ Virologist
 	name = "Virologist"
 	jobtype = /datum/job/virologist
 
+	id = /obj/item/card/id/job/medical
 	belt = /obj/item/pda/viro
 	ears = /obj/item/radio/headset/headset_med
 	uniform = /obj/item/clothing/under/rank/virologist
