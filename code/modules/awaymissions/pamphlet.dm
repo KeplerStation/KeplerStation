@@ -32,7 +32,7 @@
 			<br><br><b>A New World</b><br>\
 			As a participant in the Horizons Gateway Project, you will be on the frontiers of space. \
 			Though we've prepared you for a safe journey, participants are advised to prepare for inhospitable \
-			environs."
+			environments."
 
 //we don't want the silly text overlay!
 /obj/item/paper/pamphlet/update_icon()

@@ -486,7 +486,7 @@
 	death = FALSE
 	random = TRUE
 	mob_species = /datum/species/human
-	flavour_text = "<span class='big bold'>You were security officer</span><b> stationed onboard a state of the art research station. You vaguely recall rushing into a \
+	flavour_text = "<span class='big bold'>You were a security officer</span><b> stationed onboard a state of the art research station. You vaguely recall rushing into a \
 	cryogenics pod due to an oncoming radiation storm. The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
 	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod. \
 	Work as a team with your fellow survivors and do not abandon them.</b>"
