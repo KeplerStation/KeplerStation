@@ -26,7 +26,6 @@
 				H.update_inv_wear_suit()
 			else if(adjusted == ALT_STYLE)
 				adjusted = NORMAL_STYLE
-				H.update_inv_wear_suit()
 
 		H.update_inv_wear_suit()
 

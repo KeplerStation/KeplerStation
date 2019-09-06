@@ -1,3 +1,7 @@
+/*
+This is disabled
+Reason: This event destroys the ping of any server its ran on, and is in need of a rework
+
 /datum/round_event_control/aurora_caelus
 	name = "Aurora Caelus"
 	typepath = /datum/round_event/aurora_caelus
@@ -60,3 +64,4 @@
 		S.set_light(S.light_range - 0.2)
 		sleep(30)
 	S.set_light(new_light, initial(S.light_power), initial(S.light_color))
+*/

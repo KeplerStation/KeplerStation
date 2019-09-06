@@ -35,6 +35,7 @@ var opts = {
 	'wasd': false, //Is the user in wasd mode?
 	'priorChatHeight': 0, //Thing for height-resizing detection
 	'restarting': false, //Is the round restarting?
+	'darkmode':false, //Are we using darkmode? If not WHY ARE YOU LIVING IN 2009???
 
 	//Options menu
 	'selectedSubLoop': null, //Contains the interval loop for closing the selected sub menu
@@ -71,6 +72,7 @@ var opts = {
 	'messageCombining': true,
 
 };
+var replaceRegexes = {};
 
 function clamp(val, min, max) {
 	return Math.max(min, Math.min(val, max))
@@ -169,6 +171,15 @@ function byondDecode(message) {
 		message = unescape(message);
 	}
 	return message;
+}
+
+function replaceRegex() {
+	var selectedRegex = replaceRegexes[$(this).attr('replaceRegex')];
+	if (selectedRegex) {
+		var replacedText = $(this).html().replace(selectedRegex[0], selectedRegex[1]);
+		$(this).html(replacedText);
+	}
+	$(this).removeAttr('replaceRegex');
 }
 
 //Actually turns the highlight term match into appropriate html
@@ -309,6 +320,7 @@ function output(message, flag) {
 				badge = $('<span/>', {'class': 'r', 'text': 2});
 			}
 			lastmessages.html(message);
+			lastmessages.find('[replaceRegex]').each(replaceRegex);
 			lastmessages.append(badge);
 			badge.animate({
 				"font-size": "0.9em"
@@ -325,7 +337,7 @@ function output(message, flag) {
 	if (!handled) {
 		//Actually append the message
 		entry.className = 'entry';
-
+		$(entry).find('[replaceRegex]').each(replaceRegex);
 		$last_message = trimmed_message;
 		$messages[0].appendChild(entry);
 		$(entry).find("img.icon").error(iconError);
@@ -392,6 +404,19 @@ function toHex(n) {
 	if (isNaN(n)) return "00";
 	n = Math.max(0,Math.min(n,255));
 	return "0123456789ABCDEF".charAt((n-n%16)/16) + "0123456789ABCDEF".charAt(n%16);
+}
+
+function swap() { //Swap to darkmode
+	if (opts.darkmode){
+		document.getElementById("sheetofstyles").href = "browserOutput_white.css";
+		opts.darkmode = false;
+		runByond('?_src_=chat&proc=swaptolightmode');
+	} else {
+		document.getElementById("sheetofstyles").href = "browserOutput.css";
+		opts.darkmode = true;
+		runByond('?_src_=chat&proc=swaptodarkmode');
+	}
+	setCookie('darkmode', (opts.darkmode ? 'true' : 'false'), 365);
 }
 
 function handleClientData(ckey, ip, compid) {
@@ -485,6 +510,16 @@ function ehjaxCallback(data) {
 				}
 				$('#adminMusic').prop('src', adminMusic);
 				$('#adminMusic').trigger("play");
+			}
+		} else if (data.syncRegex) {
+			for (var i in data.syncRegex) {
+
+				var regexData = data.syncRegex[i];
+				var regexName = regexData[0];
+				var regexFlags = regexData[1];
+				var regexReplaced = regexData[2];
+
+				replaceRegexes[i] = [new RegExp(regexName, regexFlags), regexReplaced];
 			}
 		}
 	}
@@ -601,6 +636,7 @@ $(function() {
 		'shighlightColor': getCookie('highlightcolor'),
 		'smusicVolume': getCookie('musicVolume'),
 		'smessagecombining': getCookie('messagecombining'),
+		'sdarkmode': getCookie('darkmode'),
 	};
 
 	if (savedConfig.sfontSize) {
@@ -610,6 +646,9 @@ $(function() {
 	if (savedConfig.slineHeight) {
 		$("body").css('line-height', savedConfig.slineHeight);
 		internalOutput('<span class="internal boldnshit">Loaded line height setting of: '+savedConfig.slineHeight+'</span>', 'internal');
+	}
+	if(savedConfig.sdarkmode == 'true'){
+		swap();
 	}
 	if (savedConfig.spingDisabled) {
 		if (savedConfig.spingDisabled == 'true') {
@@ -655,8 +694,6 @@ $(function() {
 			opts.messageCombining = true;
 		}
 	}
-
-
 	(function() {
 		var dataCookie = getCookie('connData');
 		if (dataCookie) {
@@ -823,7 +860,9 @@ $(function() {
 	$('#toggleOptions').click(function(e) {
 		handleToggleClick($subOptions, $(this));
 	});
-
+	$('#darkmodetoggle').click(function(e) {
+		swap();
+	});
 	$('#toggleAudio').click(function(e) {
 		handleToggleClick($subAudio, $(this));
 	});
@@ -895,7 +934,7 @@ $(function() {
 
 		$.ajax({
 			type: 'GET',
-			url: 'browserOutput.css',
+			url: 'browserOutput_white.css',
 			success: function(styleData) {
 				var blob = new Blob(['<head><title>Chat Log</title><style>', styleData, '</style></head><body>', $messages.html(), '</body>']);
 

@@ -1,6 +1,6 @@
 /datum/tgs_chat_command/wheelofsalt
 	name = "wheelofsalt"
-	help_text = "What are Citadel Station 13 players salting about today? Spin the wheel and find out!"
+	help_text = "What are the players salting about today? Spin the wheel and find out!"
 
 /datum/tgs_chat_command/wheelofsalt/Run(datum/tgs_chat_user/sender, params)
 	var/saltresult = "The wheel of salt [pick("clatters","screams","vibrates","clanks","resonates","groans","moans","squeaks","emits a[pick(" god-forsaken"," creepy"," generic"," demonic")] [pick("airhorn","bike horn","trumpet","clown","dog","laughing")] noise")] as it spins violently... And it seems the salt of the day is the "

@@ -1,3 +1,7 @@
+/*
+This is disabled
+Reason: Fuck these events. They make everyone think theres a major issue, and is extremely disrupting for no reason at all
+
 /datum/round_event_control/falsealarm
 	name 			= "False Alarm"
 	typepath 		= /datum/round_event/falsealarm
@@ -60,3 +64,4 @@
 		if(!initial(event.fakeable))
 			continue
 		. += E
+*/

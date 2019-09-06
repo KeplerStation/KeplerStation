@@ -35,23 +35,23 @@ em						{font-style: normal;	font-weight: bold;}
 .name					{					font-weight: bold;}
 
 .say					{}
-.deadsay				{color: #5c00e6;}
+.deadsay				{color: #5C00E6;}
 .binarysay    			{color: #20c20e; background-color: #000000; display: block;}
 .binarysay a  			{color: #00ff00;}
 .binarysay a:active, .binarysay a:visited {color: #88ff88;}
-.radio					{color: #008000;}
+.radio					{color: #408010;}
 .sciradio				{color: #993399;}
-.comradio				{color: #948f02;}
-.secradio				{color: #a30000;}
-.medradio				{color: #337296;}
-.engradio				{color: #fb5613;}
-.suppradio				{color: #a8732b;}
-.servradio				{color: #6eaa2c;}
-.syndradio				{color: #6d3f40;}
+.comradio				{color: #204090;}
+.secradio				{color: #A30000;}
+.medradio				{color: #009190;}
+.engradio				{color: #A66300;}
+.suppradio				{color: #7F6539;}
+.servradio				{color: #80A000;}
+.syndradio				{color: #6D3F40;}
 .centcomradio			{color: #686868;}
-.aiprivradio			{color: #ff00ff;}
-.redteamradio           {color: #ff0000;}
-.blueteamradio          {color: #0000ff;}
+.aiprivradio			{color: #F00FFF;}
+.redteamradio           {color: #FF0000;}
+.blueteamradio          {color: #0000FF;}
 
 .yell					{					font-weight: bold;}
 
@@ -153,6 +153,30 @@ h1.alert, h2.alert		{color: #000000;}
 .redtext				{color: #FF0000;	font-size: 3;}
 .clown					{color: #FF69Bf;	font-size: 3; font-family: "Comic Sans MS", cursive, sans-serif; font-weight: bold;}
 .his_grace				{color: #15D512;	font-family: "Courier New", cursive, sans-serif; font-style: italic;}
+.velvet					{color: #660015; 	font-weight: bold; animation: velvet 5000ms infinite;}
+@keyframes velvet {
+	0% { color: #400020; }
+	40% { color: #FF0000; }
+	50% { color: #FF8888; }
+	60% { color: #FF0000; }
+	100% { color: #400020; }
+}
+
+.hypnophrase			{color: #3bb5d3;	font-weight: bold; animation: hypnocolor 1500ms infinite;}
+@keyframes hypnocolor {
+    0% { color: #0d0d0d; }
+    25% { color: #410194; }
+    50% { color: #7f17d8; }
+	75% { color: #410194; }
+	100% { color: #3bb5d3; }
+}
+
+.phobia			{color: #dd0000;	font-weight: bold; animation: phobia 750ms infinite;}
+	@keyframes phobia {
+		0% { color: #0d0d0d; }
+		50% { color: #dd0000; }
+		100% { color: #0d0d0d; }
+}
 
 .icon 					{height: 1em;	width: auto;}
 

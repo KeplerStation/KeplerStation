@@ -1,7 +1,8 @@
 	////////////
 	//SECURITY//
 	////////////
-#define UPLOAD_LIMIT		1048576	//Restricts client uploads to the server to 1MB //Could probably do with being lower.
+#define UPLOAD_LIMIT		10485760	// Restricts client uploads to the server to 10MB Could probably do with being lower.
+										// KEPLER CHANGE: No this does not need to be lower. This thing used to be 1mb and that is fuck all
 
 GLOBAL_LIST_INIT(blacklisted_builds, list(
 	"1407" = "bug preventing client display overrides from working leads to clients being able to see things/mobs they shouldn't be able to see",
@@ -402,7 +403,7 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 		for (var/child in entries)
 			winset(src, "[child]", "[entries[child]]")
 			if (!ispath(child, /datum/verbs/menu))
-				var/atom/verb/verbpath = child
+				var/procpath/verbpath = child
 				if (copytext(verbpath.name,1,2) != "@")
 					new child(src)
 
@@ -807,6 +808,10 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 		#if (PRELOAD_RSC == 0)
 		for (var/name in GLOB.vox_sounds)
 			var/file = GLOB.vox_sounds[name]
+			Export("##action=load_rsc", file)
+			stoplag()
+		for (var/name in GLOB.vox_sounds_male)
+			var/file = GLOB.vox_sounds_male[name]
 			Export("##action=load_rsc", file)
 			stoplag()
 		#endif

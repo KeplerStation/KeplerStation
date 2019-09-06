@@ -55,6 +55,7 @@
 	return TRUE
 
 /datum/round_event_control/proc/preRunEvent()
+	return EVENT_READY
 	if(!ispath(typepath, /datum/round_event))
 		return EVENT_CANT_RUN
 

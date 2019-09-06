@@ -8,7 +8,6 @@
 	var/datum/species/species = new /datum/species/human //The type of mutant race the player is if applicable (i.e. potato-man)
 	var/list/features = list("FFF") //first value is mutant color
 	var/real_name //Stores the real name of the person who originally got this dna datum. Used primarely for changelings,
-	var/nameless = FALSE
 	var/list/mutations = list()   //All mutations are from now on here
 	var/list/temporary_mutations = list() //Timers for temporary mutations
 	var/list/previous = list() //For temporary name/ui/ue/blood_type modifications
@@ -44,7 +43,6 @@
 	destination.set_species(species.type, icon_update=0)
 	destination.dna.features = features.Copy()
 	destination.dna.real_name = real_name
-	destination.dna.nameless = nameless
 	destination.dna.temporary_mutations = temporary_mutations.Copy()
 	destination.flavor_text = destination.dna.features["flavor_text"] //Update the flavor_text to use new dna text
 	if(transfer_SE)
@@ -58,7 +56,6 @@
 	new_dna.features = features.Copy()
 	new_dna.species = new species.type
 	new_dna.real_name = real_name
-	new_dna.nameless = nameless
 	new_dna.mutations = mutations.Copy()
 
 /datum/dna/proc/add_mutation(mutation_name)
@@ -102,15 +99,6 @@
 		L[DNA_COLOR_ONE_BLOCK] = sanitize_hexcolor(features["mcolor"])
 		L[DNA_COLOR_TWO_BLOCK] = sanitize_hexcolor(features["mcolor2"])
 		L[DNA_COLOR_THREE_BLOCK] = sanitize_hexcolor(features["mcolor3"])
-		if(!GLOB.mam_tails_list.len)
-			init_sprite_accessory_subtypes(/datum/sprite_accessory/mam_tails, GLOB.mam_tails_list)
-		L[DNA_MUTANTTAIL_BLOCK] = construct_block(GLOB.mam_tails_list.Find(features["mam_tail"]), GLOB.mam_tails_list.len)
-		if(!GLOB.mam_ears_list.len)
-			init_sprite_accessory_subtypes(/datum/sprite_accessory/mam_ears, GLOB.mam_ears_list)
-		L[DNA_MUTANTEAR_BLOCK] = construct_block(GLOB.mam_ears_list.Find(features["mam_ears"]), GLOB.mam_ears_list.len)
-		if(!GLOB.mam_body_markings_list.len)
-			init_sprite_accessory_subtypes(/datum/sprite_accessory/mam_body_markings, GLOB.mam_body_markings_list)
-		L[DNA_MUTANTMARKING_BLOCK] = construct_block(GLOB.mam_body_markings_list.Find(features["mam_body_markings"]), GLOB.mam_body_markings_list.len)
 
 	for(var/i=1, i<=DNA_UNI_IDENTITY_BLOCKS, i++)
 		if(L[i])
@@ -167,34 +155,9 @@
 			sanitize_hexcolor(features["mcolor2"])
 		if(DNA_COLOR_THREE_BLOCK)
 			sanitize_hexcolor(features["mcolor3"])
-		if(DNA_MUTANTTAIL_BLOCK)
-			construct_block(GLOB.mam_tails_list.Find(features["mam_tail"]), GLOB.mam_tails_list.len)
-		if(DNA_MUTANTEAR_BLOCK)
-			construct_block(GLOB.mam_ears_list.Find(features["mam_ears"]), GLOB.mam_ears_list.len)
-		if(DNA_MUTANTMARKING_BLOCK)
-			construct_block(GLOB.mam_body_markings_list.Find(features["mam_body_markings"]), GLOB.mam_body_markings_list.len)
-
-/datum/dna/proc/mutations_say_mods(message)
-	if(message)
-		for(var/datum/mutation/human/M in mutations)
-			message = M.say_mod(message)
-		return message
-
-/datum/dna/proc/mutations_get_spans()
-	var/list/spans = list()
-	for(var/datum/mutation/human/M in mutations)
-		spans |= M.get_spans()
-	return spans
-
-/datum/dna/proc/species_get_spans()
-	var/list/spans = list()
-	if(species)
-		spans |= species.get_spans()
-	return spans
-
 
 /datum/dna/proc/is_same_as(datum/dna/D)
-	if(uni_identity == D.uni_identity && struc_enzymes == D.struc_enzymes && real_name == D.real_name && nameless == D.nameless)
+	if(uni_identity == D.uni_identity && struc_enzymes == D.struc_enzymes && real_name == D.real_name)
 		if(species.type == D.species.type && features == D.features && blood_type == D.blood_type)
 			return 1
 	return 0

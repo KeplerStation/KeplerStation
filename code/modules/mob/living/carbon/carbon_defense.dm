@@ -307,13 +307,6 @@
 						if(!H.dna.species.is_wagging_tail())
 							H.emote("wag")
 
-				if("mam_tail" in pref_species.default_features)
-					if(H.dna.features["mam_tail"] == "None")
-						return
-					else
-						if(!H.dna.species.is_wagging_tail())
-							H.emote("wag")
-
 			else
 				return
 
