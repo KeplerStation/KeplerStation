@@ -15,10 +15,18 @@ Based and maintained from Citadel-Station-13.<BR>
 **Code:** https://github.com/Citadel-Station-13/Citadel-Station-13  <BR>
 **Wiki** http://tgstation13.org/wiki/Main_Page <BR>
 
+<<<<<<< HEAD
 **KeplerStation Information** <BR>
 **Forums:** http://keplerstation.cf/forum/ <BR>
 **Code:** https://github.com/KeplerStation/KeplerStation <BR>
 **Discord:**  [Here](https://discord.gg/R3xFtE5). <BR>
+=======
+**Citadel Station Information** <BR>
+**Forums:** http://citadel-station.net/forum/ <BR>
+**Ban Appeals:** http://citadel-station.net/forum/forumdisplay.php?fid=8 <BR>
+**Code:** https://github.com/Citadel-Station-13/Citadel-Station-13 <BR>
+**Discord:**  [Here](https://discord.gg/E6SQuhz). <BR>
+>>>>>>> dbb4e43c1... Merge pull request #9264 from Citadel-Station-13/BlackMajor-patch-1
 
 ## DOWNLOADING
 
