@@ -108,6 +108,9 @@
 	buckle_lying = FALSE
 	var/static/list/can_ride_typecache = typecacheof(/mob/living/carbon/human)
 
+	var/sitting = 0
+	var/bellyup = 0
+
 /mob/living/silicon/robot/get_cell()
 	return cell
 
@@ -173,6 +176,7 @@
 	diag_hud_set_borgcell()
 
 	verbs += /mob/living/proc/lay_down //CITADEL EDIT gimmie rest verb kthx
+	verbs += /mob/living/silicon/robot/proc/rest_style
 
 //If there's an MMI in the robot, have it ejected when the mob goes away. --NEO
 /mob/living/silicon/robot/Destroy()
@@ -638,6 +642,13 @@
 	if(disabler)
 		add_overlay("disabler")//ditto
 
+<<<<<<< HEAD
+=======
+	if(sleeper_g && module.sleeper_overlay)
+		add_overlay("[module.sleeper_overlay]_g[sleeper_nv ? "_nv" : ""]")
+	if(sleeper_r && module.sleeper_overlay)
+		add_overlay("[module.sleeper_overlay]_r[sleeper_nv ? "_nv" : ""]")
+>>>>>>> 8a1e097ba... Merge pull request #9243 from BlackMajor/Doggo-sit
 	if(stat == DEAD && module.has_snowflake_deadsprite)
 		icon_state = "[module.cyborg_base_icon]-wreck"
 
@@ -670,6 +681,18 @@
 		head_overlay.pixel_y += hat_offset
 		add_overlay(head_overlay)
 	update_fire()
+
+	if(client && stat != DEAD && module.dogborg == TRUE)
+		if(resting)
+			if(sitting)
+				icon_state = "[module.cyborg_base_icon]-sit"
+			if(bellyup)
+				icon_state = "[module.cyborg_base_icon]-bellyup"
+			else if(!sitting && !bellyup)
+				icon_state = "[module.cyborg_base_icon]-rest"
+			cut_overlays()
+		else
+			icon_state = "[module.cyborg_base_icon]"
 
 /mob/living/silicon/robot/proc/self_destruct()
 	if(emagged)
@@ -1216,3 +1239,20 @@
 			connected_ai.aicamera.stored[i] = TRUE
 		for(var/i in connected_ai.aicamera.stored)
 			aicamera.stored[i] = TRUE
+
+/mob/living/silicon/robot/proc/rest_style()
+	set name = "Switch Rest Style"
+	set category = "Robot Commands"
+	set desc = "Select your resting pose."
+	sitting = 0
+	bellyup = 0
+	var/choice = alert(src, "Select resting pose", "", "Resting", "Sitting", "Belly up")
+	switch(choice)
+		if("Resting")
+			update_icons()
+			return 0
+		if("Sitting")
+			sitting = 1
+		if("Belly up")
+			bellyup = 1
+	update_icons()
