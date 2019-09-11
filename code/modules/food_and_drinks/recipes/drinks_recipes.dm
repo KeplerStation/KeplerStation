@@ -795,3 +795,13 @@
 	id = "red_queen"
 	results = list("red_queen" = 10)
 	required_reagents = list("tea" = 6, "mercury" = 2, "blackpepper" = 1, "growthserum" = 1)
+<<<<<<< HEAD
+=======
+	
+/datum/chemical_reaction/commander_and_chief
+	name = "Commander and Chief" 
+	id = "commander_and_chief" 
+	results = list("commander_and_chief" = 50) 
+	required_reagents = list("alliescocktail" = 50, "champagne" = 20, "doctorsdelight" = 10, "quintuple_sec" = 10, "screwdrivercocktail" = 10)
+	mix_message = "When your powers combine, I am Captain Pl-..."	
+>>>>>>> ff0c3ee84... Merge pull request #9147 from Code-Cygnet/The-Art-of-Drunken-Captaining
