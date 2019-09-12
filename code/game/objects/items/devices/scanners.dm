@@ -286,6 +286,13 @@ SLIME SCANNER
 				msg += "\t\t<span class='info'>[capitalize(org.name)]: [(org.brute_dam > 0) ? "<font color='red'>[org.brute_dam]</font></span>" : "<font color='red'>0</font>"]-[(org.burn_dam > 0) ? "<font color='#FF8000'>[org.burn_dam]</font>" : "<font color='#FF8000'>0</font>"]\n"
 
 
+		var/list/broken_stuff = list()
+		for(var/obj/item/bodypart/B in C.bodyparts)
+			if(B.bone_status == BONE_FLAG_BROKEN)
+				broken_stuff += B
+		if(broken_stuff.len)
+			msg += "\t<span class='alert'>Bone fractures detected. Advanced scanner required for location.</span>\n"
+
 	// Species and body temperature
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M

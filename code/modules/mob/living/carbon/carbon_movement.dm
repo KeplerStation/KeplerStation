@@ -9,6 +9,13 @@
 			. += 6 - 3*get_num_arms() //crawling is harder with fewer arms
 		if(legcuffed)
 			. += legcuffed.slowdown
+
+		for(var/obj/item/bodypart/X in bodyparts)
+			if(X.bone_status == BONE_FLAG_BROKEN)
+				if(X.body_part == LEG_RIGHT || X.body_part == LEG_LEFT)
+					. += 2 //can't move fast with a broken leg
+					break // Dont stack the speed if a lot of shit is broken
+
 	if(stat == SOFT_CRIT)
 		. += SOFTCRIT_ADD_SLOWDOWN
 
