@@ -334,9 +334,18 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	else
 		hair_style			= sanitize_inlist(hair_style, GLOB.hair_styles_female_list)
 		facial_hair_style			= sanitize_inlist(facial_hair_style, GLOB.facial_hair_styles_female_list)
+<<<<<<< HEAD
 		underwear		= sanitize_inlist(underwear, GLOB.underwear_f)
 		undershirt		= sanitize_inlist(undershirt, GLOB.undershirt_f)
 	socks			= sanitize_inlist(socks, GLOB.socks_list)
+=======
+	underwear		= sanitize_inlist(underwear, GLOB.underwear_list)
+	undie_color		= sanitize_hexcolor(undie_color, 3, FALSE, initial(undie_color))
+	undershirt		= sanitize_inlist(undershirt, GLOB.undershirt_list)
+	shirt_color		= sanitize_hexcolor(shirt_color, 3, FALSE, initial(shirt_color))
+	socks			= sanitize_inlist(socks, GLOB.socks_list)
+	socks_color		= sanitize_hexcolor(socks_color, 3, FALSE, initial(socks_color))
+>>>>>>> eab0b8934... Merge pull request #9279 from Ghommie/Ghommie-cit192
 	age				= sanitize_integer(age, AGE_MIN, AGE_MAX, initial(age))
 	hair_color			= sanitize_hexcolor(hair_color, 3, 0)
 	facial_hair_color			= sanitize_hexcolor(facial_hair_color, 3, 0)
