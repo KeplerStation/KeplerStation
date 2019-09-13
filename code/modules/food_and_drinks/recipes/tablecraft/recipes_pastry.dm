@@ -23,7 +23,21 @@
 	result = /obj/item/reagent_containers/food/snacks/donut
 	subcategory = CAT_PASTRY
 
+<<<<<<< HEAD
 /datum/crafting_recipe/food/donut/meat
+=======
+/datum/crafting_recipe/food/donut/semen
+	time = 15
+	name = "Semen donut"
+	reqs = list(
+		/datum/reagent/consumable/semen = 10,
+		/obj/item/reagent_containers/food/snacks/pastrybase = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/donut/semen
+	subcategory = CAT_PASTRY
+
+datum/crafting_recipe/food/donut/meat
+>>>>>>> 4494f4215... Merge pull request #9270 from Linzolle/reallyguys
 	time = 15
 	name = "Meat donut"
 	reqs = list(
