@@ -157,12 +157,8 @@ SLIME SCANNER
 		msg += "\t<span class='alert'>Subject appears to have [M.getCloneLoss() > 30 ? "Severe" : "Minor"] cellular damage.</span>\n"
 		if(advanced)
 			msg += "\t<span class='info'>Cellular Damage Level: [M.getCloneLoss()].</span>\n"
-	if (M.getBrainLoss() >= 200 || !M.getorgan(/obj/item/organ/brain))
-		msg += "\t<span class='alert'>Subject's brain function is non-existent.</span>\n"
-	else if (M.getBrainLoss() >= 120)
-		msg += "\t<span class='alert'>Severe brain damage detected. Subject likely to have mental traumas.</span>\n"
-	else if (M.getBrainLoss() >= 45)
-		msg += "\t<span class='alert'>Brain damage detected.</span>\n"
+	if (!M.getorgan(/obj/item/organ/brain))
+		msg += "\t<span class='alert'>Subject lacks a brain.</span>"
 	if(ishuman(M) && advanced) // Should I make this not advanced?
 		var/mob/living/carbon/human/H = M
 		var/obj/item/organ/liver/L = H.getorganslot("liver")
@@ -204,7 +200,7 @@ SLIME SCANNER
 		if(C.roundstart_quirks.len)
 			msg += "\t<span class='info'>Subject has the following physiological traits: [C.get_trait_string()].</span>\n"
 	if(advanced)
-		msg += "\t<span class='info'>Brain Activity Level: [(200 - M.getBrainLoss())/2]%.</span>\n"
+		msg += "\t\t<span class='info'>Brain Activity Level: [(200 - M.getOrganLoss(ORGAN_SLOT_BRAIN))/2]%.</span>\n"
 	if(M.radiation)
 		msg += "\t<span class='alert'>Subject is irradiated.</span>\n"
 		if(advanced)
@@ -268,13 +264,6 @@ SLIME SCANNER
 					msg += "\t<span class='info'>Healthy.</span>\n"
 			else
 				msg += "\t<span class='alert'>Subject does not have eyes.</span>\n"
-
-
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		var/ldamage = H.return_liver_damage()
-		if(ldamage > 10)
-			msg += "\t<span class='alert'>[ldamage > 45 ? "Severe" : "Minor"] liver damage detected.</span>\n"
 
 	// Body part damage report
 	if(iscarbon(M) && mode == 1)
