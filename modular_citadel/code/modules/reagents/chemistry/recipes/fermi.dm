@@ -201,6 +201,34 @@
 		to_chat(M, "<span class='warning'>The makes an off sounding pop, as a hat suddenly climbs out of the beaker!</b></span>")
 	my_atom.reagents.clear_reagents()
 
+<<<<<<< HEAD
+=======
+/datum/chemical_reaction/fermi/furranium
+	name = "Furranium"
+	id = "furranium"
+	results = list("furranium" = 0.5)
+	required_reagents = list("aphro" = 0.1, "moonsugar" = 0.1, "silver" = 0.2, "salglu_solution" = 0.1)
+	mix_message = "You think you can hear a howl come from the beaker."
+	//FermiChem vars:
+	OptimalTempMin 	= 350
+	OptimalTempMax 	= 600
+	ExplodeTemp 	= 700
+	OptimalpHMin 	= 8
+	OptimalpHMax 	= 10
+	ReactpHLim 		= 2
+	//CatalystFact 	= 0 //To do 1
+	CurveSharpT 	= 2
+	CurveSharppH 	= 0.5
+	ThermicConstant = -10
+	HIonRelease 	= -0.1
+	RateUpLim 		= 2
+	FermiChem 		= TRUE
+	PurityMin		= 0.3
+
+/datum/chemical_reaction/fermi/furranium/organic
+	required_reagents = list("aphro" = 0.1, "catnip" = 0.1, "silver" = 0.2, "salglu_solution" = 0.1)
+
+>>>>>>> 63d2273a7... Merge pull request #9220 from Thalpy/Catnip-Furranium
 //FOR INSTANT REACTIONS - DO NOT MULTIPLY LIMIT BY 10.
 //There's a weird rounding error or something ugh.
 
