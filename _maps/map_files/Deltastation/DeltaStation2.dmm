@@ -66569,7 +66569,7 @@
 	pixel_y = 3
 	},
 /obj/item/aiModule/core/full/custom,
-/obj/item/aiModule/core/full/asimov{
+/obj/item/aiModule/core/full/crewsimov/asimov{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -66583,6 +66583,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/item/aiModule/core/full/crewsimov,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai_upload)
 "chk" = (

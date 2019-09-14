@@ -19745,7 +19745,7 @@
 /area/storage/primary)
 "aMG" = (
 /obj/structure/table,
-/obj/item/aiModule/core/full/asimov,
+/obj/item/aiModule/core/full/crewsimov/asimov,
 /obj/effect/spawner/lootdrop/aimodule_harmless,
 /obj/item/aiModule/core/freeformcore,
 /obj/machinery/door/window{
@@ -19762,6 +19762,7 @@
 	pixel_y = 24;
 	id = "AI"
 	},
+/obj/item/aiModule/core/full/crewsimov,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai_upload)
 "aMH" = (
