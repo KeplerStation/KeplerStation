@@ -33,10 +33,17 @@ GLOBAL_LIST_EMPTY(oui_file_cache)
 		return errormsg
 
 /datum/oracle_ui/themed/proc/get_content_file(filename)
+<<<<<<< HEAD:modular_kepler/code/modules/oracle_ui/themed.dm
 	return get_file("./modular_kepler/html/oracle_ui/content/[content_root]/[filename]")
 
 /datum/oracle_ui/themed/proc/get_themed_file(filename)
 	return get_file("./modular_kepler/html/oracle_ui/themes/[theme]/[filename]")
+=======
+	return get_file("./html/oracle_ui/content/[content_root]/[filename]")
+
+/datum/oracle_ui/themed/proc/get_themed_file(filename)
+	return get_file("./html/oracle_ui/themes/[theme]/[filename]")
+>>>>>>> f3592a54a... Merge pull request #9288 from Trilbyspaceclone/patch-227:code/modules/oracle_ui/themed.dm
 
 /datum/oracle_ui/themed/proc/process_template(template, variables)
 	var/regex/pattern = regex("\\@\\{(\\w+)\\}","gi")
