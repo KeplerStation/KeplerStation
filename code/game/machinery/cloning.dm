@@ -245,7 +245,7 @@
 					BP.attach_limb(mob_occupant)
 
 			//Premature clones may have brain damage.
-			mob_occupant.adjustBrainLoss(-((speed_coeff / 2) * dmg_mult))
+			mob_occupant.adjustOrganLoss(ORGAN_SLOT_BRAIN, (-((speed_coeff / 2) * dmg_mult)))
 
 			use_power(7500) //This might need tweaking.
 
@@ -441,7 +441,7 @@
 		unattached_flesh.Cut()
 
 	H.setCloneLoss(CLONE_INITIAL_DAMAGE)     //Yeah, clones start with very low health, not with random, because why would they start with random health
-	H.setBrainLoss(CLONE_INITIAL_DAMAGE)
+	H.adjustOrganLoss(ORGAN_SLOT_BRAIN, CLONE_INITIAL_DAMAGE)
 	// In addition to being cellularly damaged and having barely any
 
 	// brain function, they also have no limbs or internal organs.

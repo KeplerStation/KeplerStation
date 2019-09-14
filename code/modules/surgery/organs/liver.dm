@@ -10,10 +10,14 @@
 	zone = BODY_ZONE_CHEST
 	slot = ORGAN_SLOT_LIVER
 	desc = "Pairing suggestion: chianti and fava beans."
-	var/damage = 0 //liver damage, 0 is no damage, damage=maxHealth causes liver failure
+
+	maxHealth = STANDARD_ORGAN_THRESHOLD
+	healing_factor = STANDARD_ORGAN_HEALING
+	decay_factor = STANDARD_ORGAN_DECAY
+
+	damage = 0 //liver damage, 0 is no damage, damage=maxHealth causes liver failure
 	var/alcohol_tolerance = ALCOHOL_RATE//affects how much damage the liver takes from alcohol
 	var/failing //is this liver failing?
-	var/maxHealth = LIVER_DEFAULT_HEALTH
 	var/toxTolerance = LIVER_DEFAULT_TOX_TOLERANCE//maximum amount of toxins the liver can just shrug off
 	var/toxLethality = LIVER_DEFAULT_TOX_LETHALITY//affects how much damage toxins do to the liver
 	var/filterToxins = TRUE //whether to filter toxins
@@ -24,7 +28,7 @@
 	var/mob/living/carbon/C = owner
 
 	if(istype(C))
-		if(!failing)//can't process reagents with a failing liver
+		if(!(organ_flags & ORGAN_FAILING)) //can't process reagents with a failing liver
 			//slowly heal liver damage
 			damage = max(0, damage - 0.1)
 
@@ -44,6 +48,12 @@
 
 			if(damage > 10 && prob(damage/3))//the higher the damage the higher the probability
 				to_chat(C, "<span class='warning'>You feel a dull pain in your abdomen.</span>")
+		else	//for when our liver's failing
+			reagents.end_metabolization(C, keep_liverless = TRUE) //Stops trait-based effects on reagents, to prevent permanent buffs
+			reagents.metabolize(C, can_overdose=FALSE, liverless = TRUE)
+			C.adjustToxLoss(4, TRUE,  TRUE)
+			if(prob(30))
+				to_chat(C, "<span class='warning'>You feel a stabbing pain in your abdomen!</span>")
 
 	if(damage > maxHealth)//cap liver damage
 		damage = maxHealth
@@ -97,14 +107,15 @@
 	name = "cybernetic liver"
 	icon_state = "liver-c"
 	desc = "An electronic device designed to mimic the functions of a human liver. It has no benefits over an organic liver, but is easy to produce."
-	synthetic = TRUE
+	organ_flags = ORGAN_SYNTHETIC
+	maxHealth = 1.1 * STANDARD_ORGAN_THRESHOLD // little more health
 
 /obj/item/organ/liver/cybernetic/upgraded
 	name = "upgraded cybernetic liver"
 	icon_state = "liver-c-u"
 	desc = "An upgraded version of the cybernetic liver, designed to improve upon organic livers. It is resistant to alcohol poisoning and is very robust at filtering toxins."
 	alcohol_tolerance = 0.001
-	maxHealth = 200 //double the health of a normal liver
+	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD //double the health of a normal liver
 	toxTolerance = 15 //can shrug off up to 15u of toxins
 	toxLethality = 0.008 //20% less damage than a normal liver
 

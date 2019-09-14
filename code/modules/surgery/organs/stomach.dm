@@ -8,13 +8,27 @@
 	desc = "Onaka ga suite imasu."
 	var/disgust_metabolism = 1
 
+		
+	healing_factor = STANDARD_ORGAN_HEALING
+	decay_factor = STANDARD_ORGAN_DECAY
+
+	low_threshold_passed = "<span class='info'>Your stomach flashes with pain before subsiding. Food doesn't seem like a good idea right now.</span>"
+	high_threshold_passed = "<span class='warning'>Your stomach flares up with constant pain- you can hardly stomach the idea of food right now!</span>"
+	high_threshold_cleared = "<span class='info'>The pain in your stomach dies down for now, but food still seems unappealing.</span>"
+	low_threshold_cleared = "<span class='info'>The last bouts of pain in your stomach have died out.</span>"
+
+
 /obj/item/organ/stomach/on_life()
 	var/mob/living/carbon/human/H = owner
 
 	if(istype(H))
-		H.dna.species.handle_digestion(H)
+		if(!(organ_flags & ORGAN_FAILING))
+			H.dna.species.handle_digestion(H)
 		handle_disgust(H)
 
+	if(damage < low_threshold)
+		return
+		
 /obj/item/organ/stomach/proc/handle_disgust(mob/living/carbon/human/H)
 	if(H.disgust)
 		var/pukeprob = 5 + 0.05 * H.disgust

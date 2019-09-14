@@ -3,6 +3,13 @@
 	icon_state = "appendix"
 	zone = BODY_ZONE_PRECISE_GROIN
 	slot = ORGAN_SLOT_APPENDIX
+	
+	healing_factor = STANDARD_ORGAN_HEALING
+	decay_factor = STANDARD_ORGAN_DECAY
+
+	now_failing = "<span class='warning'>An explosion of pain erupts in your lower right abdomen!</span>"
+	now_fixed = "<span class='info'>The pain in your abdomen has subsided.</span>"
+
 	var/inflamed = 0
 
 /obj/item/organ/appendix/update_icon()
@@ -12,6 +19,14 @@
 	else
 		icon_state = "appendix"
 		name = "appendix"
+
+/obj/item/organ/appendix/on_life()
+	..()
+	if(!(organ_flags & ORGAN_FAILING))
+		return
+	var/mob/living/carbon/M = owner
+	if(M)
+		M.adjustToxLoss(4, TRUE, TRUE)	//forced to ensure people don't use it to gain tox as slime person
 
 /obj/item/organ/appendix/Remove(mob/living/carbon/M, special = 0)
 	for(var/datum/disease/appendicitis/A in M.diseases)

@@ -7,12 +7,21 @@
 	layer = ABOVE_MOB_LAYER
 	zone = BODY_ZONE_HEAD
 	slot = ORGAN_SLOT_BRAIN
-	vital = TRUE
+	organ_flags = ORGAN_VITAL
 	attack_verb = list("attacked", "slapped", "whacked")
 	var/mob/living/brain/brainmob = null
-	var/damaged_brain = FALSE //whether the brain organ is damaged.
 	var/decoy_override = FALSE	//I apologize to the security players, and myself, who abused this, but this is going to go.
 
+	///The brain's organ variables are significantly more different than the other organs, with half the decay rate for balance reasons, and twice the maxHealth
+	decay_factor = STANDARD_ORGAN_DECAY	/ 2		//30 minutes of decaying to result in a fully damaged brain, since a fast decay rate would be unfun gameplay-wise
+
+	maxHealth	= BRAIN_DAMAGE_DEATH
+	low_threshold = 45
+	high_threshold = 120
+	var/brain_death = FALSE //if the brainmob was intentionally killed by attacking the brain after removal, or by severe braindamage
+
+	//two variables necessary for calculating whether we get a brain trauma or not
+	var/damage_delta = 0
 	var/list/datum/brain_trauma/traumas = list()
 
 /obj/item/organ/brain/Insert(mob/living/carbon/C, special = 0,no_id_transfer = FALSE, drop_if_replaced = TRUE)
@@ -142,30 +151,6 @@
 	else
 		..()
 
-/obj/item/organ/brain/proc/get_brain_damage()
-	var/brain_damage_threshold = max_integrity * BRAIN_DAMAGE_INTEGRITY_MULTIPLIER
-	var/offset_integrity = obj_integrity - (max_integrity - brain_damage_threshold)
-	. = round((1 - (offset_integrity / brain_damage_threshold)) * BRAIN_DAMAGE_DEATH, DAMAGE_PRECISION)
-
-/obj/item/organ/brain/proc/adjust_brain_damage(amount, maximum)
-	var/adjusted_amount
-	if(amount >= 0 && maximum)
-		var/brainloss = get_brain_damage()
-		var/new_brainloss = CLAMP(brainloss + amount, 0, maximum)
-		if(brainloss > new_brainloss) //brainloss is over the cap already
-			return 0
-		adjusted_amount = new_brainloss - brainloss
-	else
-		adjusted_amount = amount
-
-	adjusted_amount = round(adjusted_amount * BRAIN_DAMAGE_INTEGRITY_MULTIPLIER, DAMAGE_PRECISION)
-	if(adjusted_amount)
-		if(adjusted_amount >= DAMAGE_PRECISION)
-			take_damage(adjusted_amount)
-		else if(adjusted_amount <= -DAMAGE_PRECISION)
-			obj_integrity = min(max_integrity, obj_integrity-adjusted_amount)
-	. = adjusted_amount
-
 /obj/item/organ/brain/Destroy() //copypasted from MMIs.
 	if(brainmob)
 		QDEL_NULL(brainmob)
@@ -177,6 +162,42 @@
 	desc = "We barely understand the brains of terrestial animals. Who knows what we may find in the brain of such an advanced species?"
 	icon_state = "brain-x"
 
+
+
+/obj/item/organ/brain/on_life()
+	if(damage >= BRAIN_DAMAGE_DEATH) //rip
+		to_chat(owner, "<span class='userdanger'>The last spark of life in your brain fizzles out...</span>")
+		owner.death()
+		brain_death = TRUE
+
+/obj/item/organ/brain/process()	//needs to run in life AND death
+	..()
+	//if we're not more injured than before, return without gambling for a trauma
+	if(damage <= prev_damage)
+		prev_damage = damage
+		return
+	damage_delta = damage - prev_damage
+	if(damage > BRAIN_DAMAGE_MILD)
+		if(prob(damage_delta * (1 + max(0, (damage - BRAIN_DAMAGE_MILD)/100)))) //Base chance is the hit damage; for every point of damage past the threshold the chance is increased by 1% //learn how to do your bloody math properly goddamnit
+			gain_trauma_type(BRAIN_TRAUMA_MILD)
+	if(damage > BRAIN_DAMAGE_SEVERE)
+		if(prob(damage_delta * (1 + max(0, (damage - BRAIN_DAMAGE_SEVERE)/100)))) //Base chance is the hit damage; for every point of damage past the threshold the chance is increased by 1%
+			if(prob(20))
+				gain_trauma_type(BRAIN_TRAUMA_SPECIAL)
+			else
+				gain_trauma_type(BRAIN_TRAUMA_SEVERE)
+
+	if (owner)
+		if(owner.stat < UNCONSCIOUS) //conscious or soft-crit
+			if(prev_damage < BRAIN_DAMAGE_MILD && damage >= BRAIN_DAMAGE_MILD)
+				to_chat(owner, "<span class='warning'>You feel lightheaded.</span>")
+			else if(prev_damage < BRAIN_DAMAGE_SEVERE && damage >= BRAIN_DAMAGE_SEVERE)
+				to_chat(owner, "<span class='warning'>You feel less in control of your thoughts.</span>")
+			else if(prev_damage < (BRAIN_DAMAGE_DEATH - 20) && damage >= (BRAIN_DAMAGE_DEATH - 20))
+				to_chat(owner, "<span class='warning'>You can feel your mind flickering on and off...</span>")
+	//update our previous damage holder after we've checked our boundaries
+	prev_damage = damage
+	return
 
 ////////////////////////////////////TRAUMAS////////////////////////////////////////
 

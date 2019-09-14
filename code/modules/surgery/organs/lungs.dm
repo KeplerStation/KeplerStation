@@ -8,6 +8,16 @@
 	gender = PLURAL
 	w_class = WEIGHT_CLASS_NORMAL
 
+	var/failed = FALSE
+	var/operated = FALSE	//whether we can still have our damages fixed through surgery
+
+	healing_factor = STANDARD_ORGAN_HEALING
+	decay_factor = STANDARD_ORGAN_DECAY
+
+	high_threshold_passed = "<span class='warning'>You feel some sort of constriction around your chest as your breathing becomes shallow and rapid.</span>"
+	now_fixed = "<span class='warning'>Your lungs seem to once again be able to hold air.</span>"
+	high_threshold_cleared = "<span class='info'>The constriction around your chest loosens as your breathing calms down.</span>"
+
 	//Breath damage
 
 	var/safe_oxygen_min = 16 // Minimum safe partial pressure of O2, in kPa
@@ -57,8 +67,18 @@
 	var/crit_stabilizing_reagent = "epinephrine"
 
 	//health
-	var/maxHealth = LUNGS_MAX_HEALTH
-	var/damage = 0
+	maxHealth = LUNGS_MAX_HEALTH
+	damage = 0
+
+/obj/item/organ/lungs/on_life()
+	..()
+	if((!failed) && ((organ_flags & ORGAN_FAILING)))
+		if(owner.stat == CONSCIOUS)
+			owner.visible_message("<span class='userdanger'>[owner] grabs [owner.p_their()] throat, struggling for breath!</span>")
+		failed = TRUE
+	else if(!(organ_flags & ORGAN_FAILING))
+		failed = FALSE
+	return
 
 //TODO: lung health affects lung function
 /obj/item/organ/lungs/proc/adjustLungLoss(damage_mod, mob/living/carbon/M) //damage might be too low atm.
@@ -289,7 +309,7 @@
 			H.hallucination += 10
 			H.reagents.add_reagent("bz_metabolites",5)
 			if(prob(33))
-				H.adjustBrainLoss(3, 150)
+				H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3, 150)
 
 		else if(bz_pp > 0.01)
 			H.hallucination += 5
@@ -451,7 +471,8 @@
 	name = "cybernetic lungs"
 	desc = "A cybernetic version of the lungs found in traditional humanoid entities. It functions the same as an organic lung and is merely meant as a replacement."
 	icon_state = "lungs-c"
-	synthetic = TRUE
+	organ_flags = ORGAN_SYNTHETIC
+	maxHealth = 1.1 * STANDARD_ORGAN_THRESHOLD
 	maxHealth = 400
 
 /obj/item/organ/lungs/cybernetic/emp_act()
@@ -468,7 +489,7 @@
 	safe_toxins_max = 20
 	safe_co2_max = 20
 	safe_oxygen_max = 250
-
+	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD
 	cold_level_1_threshold = 200
 	cold_level_2_threshold = 140
 	cold_level_3_threshold = 100
