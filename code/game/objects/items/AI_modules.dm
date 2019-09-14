@@ -362,7 +362,7 @@ AI MODULES
 /obj/item/aiModule/core/full/crewsimov
 	name = "'Crewsimov' Core AI Module"
 	law_id = "crewsimov"
-	var/subject = "person of a Horizons approved crew"
+	var/subject = "person of a Horizons approved crew species"
 
 /obj/item/aiModule/core/full/crewsimov/attack_self(mob/user as mob)
 	var/targName = stripped_input(user, "Please enter a new subject that [law_id] is concerned with.", "[law_id] to whom?", subject)
