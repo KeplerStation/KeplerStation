@@ -64,10 +64,10 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 	jobs["Custodian"] = 211
 	jobs["Medical Officer"] = 212
 	jobs["Research Officer"] = 213
-	jobs["Response & Rescue Team Commander"] = 220
-	jobs["Response & Rescue Agent"] = 221
-	jobs["Response & Rescue Technician"] = 222
-	jobs["Response & Rescue Trauma Specialist"] = 223
+	jobs["Rescue & Response Team Commander"] = 220
+	jobs["Rescue & Response Agent"] = 221
+	jobs["Rescue & Response Technician"] = 222
+	jobs["Rescue & Response Trauma Specialist"] = 223
 	jobs["Assistant"] = 999 //Unknowns/custom jobs should appear after civilians, and before assistants
 
 	src.jobs = jobs
