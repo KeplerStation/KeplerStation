@@ -204,14 +204,6 @@ AI MODULES
 	laws = list("Protect the space station against damage. Anyone you see harming the station is to be no longer considered crew, and is a threat to the station which must be neutralized.")
 	lawpos = 5
 
-
-/******************** Quarantine ********************/
-
-/obj/item/aiModule/supplied/quarantine
-	name = "'Quarantine' AI Module"
-	law_id = "quarantine"
-
-
 /******************** OxygenIsToxicToHumans ********************/
 
 /obj/item/aiModule/supplied/oxygen
@@ -361,7 +353,7 @@ AI MODULES
 /obj/item/aiModule/core/full/asimov
 	name = "'Asimov' Core AI Module"
 	law_id = "asimov"
-	var/subject = "person of an NT approved crew species"		//CITADEL CHANGED FROM HUMANS!
+	var/subject = "person of an Horizons approved crew species"		//CITADEL CHANGED FROM HUMANS!
 
 /obj/item/aiModule/core/full/asimov/attack_self(var/mob/user as mob)
 	var/targName = stripped_input(user, "Please enter a new subject that asimov is concerned with.", "Asimov to whom?", subject)
@@ -423,6 +415,13 @@ AI MODULES
 /obj/item/aiModule/core/full/antimov
 	name = "'Antimov' Core AI Module"
 	law_id = "antimov"
+
+
+/******************** Quarantine ********************/
+
+/obj/item/aiModule/core/full/quarantine
+	name = "'Quarantine' AI Module"
+	law_id = "quarantine"
 
 
 /******************** Freeform Core ******************/

@@ -186,7 +186,7 @@
 	loot = list(
 				/obj/item/aiModule/core/full/asimov,
 				/obj/item/aiModule/core/full/horizons,
-				/obj/item/aiModule/core/full/corporate,
+				/obj/item/aiModule/core/full/corp
 				)
 
 /obj/effect/spawner/lootdrop/aimodule_neutral // These shouldn't allow the AI to start butchering people without reason
@@ -196,7 +196,7 @@
 				/obj/item/aiModule/core/full/drone,
 				/obj/item/aiModule/core/full/reporter,
 				/obj/item/aiModule/core/full/robocop,
-				/obj/item/aiModule/core/full/hulkamania
+				/obj/item/aiModule/core/full/hulkamania,
 				/obj/item/aiModule/core/full/quarantine
 				)
 
@@ -204,7 +204,6 @@
 	name = "harmful AI module spawner"
 	loot = list(
 				/obj/item/aiModule/core/full/antimov,
-				/obj/item/aiModule/core/full/balance,
 				/obj/item/aiModule/core/full/tyrant,
 				/obj/item/aiModule/core/full/damaged
 				)
