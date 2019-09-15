@@ -35994,6 +35994,7 @@
 /area/crew_quarters/heads/cmo)
 "bFF" = (
 /obj/machinery/light,
+/obj/machinery/body_scanner,
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
 "bFG" = (
@@ -57489,6 +57490,13 @@
 /obj/machinery/disposal/bin,
 /turf/open/floor/plasteel/white,
 /area/science/circuit)
+"piS" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/machinery/smartfridge/organ,
+/turf/closed/wall,
+/area/medical/sleeper)
 "poc" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
@@ -93122,7 +93130,7 @@ bvj
 bvj
 bvj
 bvj
-bvd
+piS
 bFu
 bvj
 bvj

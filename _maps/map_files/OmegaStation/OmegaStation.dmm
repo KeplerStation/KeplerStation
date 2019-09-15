@@ -26852,11 +26852,11 @@
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "aWb" = (
-/obj/effect/spawner/structure/window/reinforced/tinted,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/obj/machinery/smartfridge/organ,
+/turf/closed/wall,
 /area/medical/medbay/zone3)
 "aWc" = (
 /obj/machinery/light_switch{
@@ -30059,10 +30059,8 @@
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/zone3)
 "bbs" = (
-/obj/item/twohanded/required/kirbyplants{
-	icon_state = "plant-21"
-	},
 /obj/effect/turf_decal/tile/blue,
+/obj/machinery/body_scanner,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/zone3)
 "bbt" = (

@@ -9,6 +9,7 @@
 	var/allow_multiple = FALSE
 	var/uses = -1
 	item_flags = DROPDEL
+	var/shows_up_on_scanners = TRUE //body scanner, don't let people find storage implants this easily
 
 
 /obj/item/implant/proc/trigger(emote, mob/living/carbon/source)

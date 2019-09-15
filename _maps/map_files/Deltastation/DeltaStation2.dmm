@@ -92895,10 +92895,10 @@
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "cZK" = (
-/obj/item/twohanded/required/kirbyplants/random,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/machinery/body_scanner,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "cZL" = (
@@ -127165,6 +127165,10 @@
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel/dark,
 /area/chapel/office)
+"ngu" = (
+/obj/machinery/smartfridge/organ,
+/turf/closed/wall,
+/area/medical/surgery)
 "nht" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -175435,7 +175439,7 @@ dnF
 dpC
 dnF
 dsM
-dma
+ngu
 dvD
 dma
 dma
