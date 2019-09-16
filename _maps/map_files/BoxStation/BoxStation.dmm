@@ -23053,7 +23053,7 @@
 /area/bridge/meeting_room)
 "bce" = (
 /obj/structure/table,
-/obj/item/aiModule/supplied/quarantine,
+/obj/item/aiModule/core/full/quarantine,
 /obj/machinery/camera/motion{
 	dir = 4;
 	network = list("aiupload")

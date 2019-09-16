@@ -4163,7 +4163,7 @@
 /area/ai_monitored/nuke_storage)
 "ahd" = (
 /obj/structure/table/reinforced,
-/obj/item/aiModule/supplied/quarantine,
+/obj/item/aiModule/core/full/quarantine,
 /obj/item/radio/intercom{
 	broadcasting = 1;
 	frequency = 1447;

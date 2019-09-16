@@ -11962,7 +11962,7 @@
 /area/bridge)
 "aCG" = (
 /obj/structure/table,
-/obj/item/aiModule/supplied/quarantine,
+/obj/item/aiModule/core/full/quarantine,
 /obj/machinery/camera/motion{
 	c_tag = "AI Upload Port";
 	dir = 4;
