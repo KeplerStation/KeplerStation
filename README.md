@@ -53,8 +53,9 @@ If you see any errors or warnings, something has gone wrong - possibly a corrupt
 download or the files extracted wrong. If problems persist, ask for assistance
 in irc://irc.rizon.net/coderbus
 
-Once that's done, open up the config folder. You'll want to edit config.txt to
-set the probabilities for different gamemodes in Secret and to set your server
+Once that's done, open up the config folder. Drag the files from the example 
+folder into the config folder, then you'll want to edit config.txt to set the 
+probabilities for different gamemodes in Secret and to set your server
 location so that all your players don't get disconnected at the end of each
 round. It's recommended you don't turn on the gamemodes with probability 0,
 except Extended, as they have various issues and aren't currently being tested,

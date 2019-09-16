@@ -1,0 +1,5 @@
+<h1>Information</h1>
+
+This is the Terms of Service file. If you are testing on a local server, do not worry about this file.
+
+If you are running a production server for the public, please populate this file with GDPR-Compliant terms of service.
