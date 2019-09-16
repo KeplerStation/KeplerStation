@@ -40,13 +40,23 @@
 	var/skin_tone = ""
 	var/body_gender = ""
 	var/species_id = ""
+	var/should_draw_citadel = FALSE
 	var/should_draw_gender = FALSE
 	var/should_draw_greyscale = FALSE
 	var/species_color = ""
 	var/mutation_color = ""
 	var/no_update = 0
+<<<<<<< HEAD
 	var/bodypart_alpha = ""
 	
+=======
+	var/body_markings = ""	//for bodypart markings
+	var/body_markings_icon = 'modular_citadel/icons/mob/mam_markings.dmi'
+	var/list/markings_color = list()
+	var/aux_marking
+	var/digitigrade_type
+
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 	var/animal_origin = null //for nonhuman bodypart (e.g. monkey)
 	var/dismemberable = 1 //whether it can be dismembered with a weapon.
 
@@ -304,6 +314,11 @@
 		should_draw_gender = FALSE
 		should_draw_greyscale = FALSE
 		no_update = TRUE
+<<<<<<< HEAD
+=======
+		body_markings = "husk" // reeee
+		aux_marking = "husk"
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 
 	if(no_update)
 		return
@@ -345,6 +360,33 @@
 		else
 			species_color = ""
 
+<<<<<<< HEAD
+=======
+		if("legs" in S.default_features)
+			if(body_zone == BODY_ZONE_L_LEG || body_zone == BODY_ZONE_R_LEG)
+				if(DIGITIGRADE in S.species_traits)
+					digitigrade_type = lowertext(H.dna.features.["legs"])
+			else
+				digitigrade_type = null
+
+		if("mam_body_markings" in S.default_features)
+			var/datum/sprite_accessory/Smark
+			Smark = GLOB.mam_body_markings_list[H.dna.features["mam_body_markings"]]
+			if(Smark)
+				body_markings_icon = Smark.icon
+			if(H.dna.features.["mam_body_markings"] != "None")
+				body_markings = lowertext(H.dna.features.["mam_body_markings"])
+				aux_marking = lowertext(H.dna.features.["mam_body_markings"])
+			else
+				body_markings = "plain"
+				aux_marking = "plain"
+			markings_color = list(colorlist)
+
+		else
+			body_markings = null
+			aux_marking = null
+
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 		if(!dropping_limb && H.dna.check_mutation(HULK))
 			mutation_color = "00aa00"
 		else
@@ -360,6 +402,11 @@
 
 	if(status == BODYPART_ROBOTIC)
 		dmg_overlay_type = "robotic"
+<<<<<<< HEAD
+=======
+		body_markings = null
+		aux_marking = null
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 
 	if(dropping_limb)
 		no_update = TRUE //when attached, the limb won't be affected by the appearance changes of its mob owner.
@@ -391,6 +438,18 @@
 			if(burnstate)
 				. += image('icons/mob/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_0[burnstate]", -DAMAGE_LAYER, image_dir)
 
+<<<<<<< HEAD
+=======
+		if(!isnull(body_markings) && status == BODYPART_ORGANIC)
+			if(!use_digitigrade)
+				if(BODY_ZONE_CHEST)
+					. += image(body_markings_icon, "[body_markings]_[body_zone]_[icon_gender]", -MARKING_LAYER, image_dir)
+				else
+					. += image(body_markings_icon, "[body_markings]_[body_zone]", -MARKING_LAYER, image_dir)
+			else
+				. += image(body_markings_icon, "[body_markings]_[digitigrade_type]_[use_digitigrade]_[body_zone]", -MARKING_LAYER, image_dir)
+
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 	var/image/limb = image(layer = -BODYPARTS_LAYER, dir = image_dir)
 	var/image/aux
 	. += limb
@@ -418,18 +477,62 @@
 			if(should_draw_gender)
 				limb.icon_state = "[species_id]_[body_zone]_[icon_gender]"
 			else if(use_digitigrade)
-				limb.icon_state = "digitigrade_[use_digitigrade]_[body_zone]"
+				limb.icon_state = "[digitigrade_type]_[use_digitigrade]_[body_zone]"
 			else
 				limb.icon_state = "[species_id]_[body_zone]"
 		else
 			limb.icon = 'icons/mob/human_parts.dmi'
 			if(should_draw_gender)
 				limb.icon_state = "[species_id]_[body_zone]_[icon_gender]"
+			else if(use_digitigrade)
+				limb.icon_state = "[species_id]_[digitigrade_type]_[use_digitigrade]_[body_zone]"
 			else
 				limb.icon_state = "[species_id]_[body_zone]"
+<<<<<<< HEAD
 		if(aux_zone)
 			aux = image(limb.icon, "[species_id]_[aux_zone]", -aux_layer, image_dir)
 			. += aux
+=======
+
+		// Citadel Start
+		if(should_draw_citadel)
+			limb.icon = 'modular_citadel/icons/mob/mutant_bodyparts.dmi'
+			if(should_draw_gender)
+				limb.icon_state = "[species_id]_[body_zone]_[icon_gender]"
+			else if(use_digitigrade)
+				limb.icon_state = "[species_id]_[digitigrade_type]_[use_digitigrade]_[body_zone]"
+			else
+				limb.icon_state = "[species_id]_[body_zone]"
+
+		// Body markings
+		if(!isnull(body_markings))
+			if(species_id == "husk")
+				marking = image('modular_citadel/icons/mob/markings_notmammals.dmi', "husk_[body_zone]", -MARKING_LAYER, image_dir)
+			else if(species_id == "husk" && use_digitigrade)
+				marking = image('modular_citadel/icons/mob/markings_notmammals.dmi', "husk_[digitigrade_type]_[use_digitigrade]_[body_zone]", -MARKING_LAYER, image_dir)
+
+			else if(!use_digitigrade)
+				if(body_zone == BODY_ZONE_CHEST)
+					marking = image(body_markings_icon, "[body_markings]_[body_zone]_[icon_gender]", -MARKING_LAYER, image_dir)
+				else
+					marking = image(body_markings_icon, "[body_markings]_[body_zone]", -MARKING_LAYER, image_dir)
+			else
+				marking = image(body_markings_icon, "[body_markings]_[digitigrade_type]_[use_digitigrade]_[body_zone]", -MARKING_LAYER, image_dir)
+
+			. += marking
+
+		// Citadel End
+
+		if(aux_zone)
+			aux = image(limb.icon, "[species_id]_[aux_zone]", -aux_layer, image_dir)
+			if(!isnull(aux_marking))
+				if(species_id == "husk")
+					auxmarking = image('modular_citadel/icons/mob/markings_notmammals.dmi', "husk_[aux_zone]", -aux_layer, image_dir)
+				else
+					auxmarking = image(body_markings_icon, "[body_markings]_[aux_zone]", -aux_layer, image_dir)
+			. += aux
+			. += auxmarking
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 
 	else
 		limb.icon = icon
@@ -440,6 +543,30 @@
 		if(aux_zone)
 			aux = image(limb.icon, "[aux_zone]", -aux_layer, image_dir)
 			. += aux
+<<<<<<< HEAD
+=======
+			if(!isnull(aux_marking))
+				if(species_id == "husk")
+					auxmarking = image('modular_citadel/icons/mob/markings_notmammals.dmi', "husk_[aux_zone]", -aux_layer, image_dir)
+				else
+					auxmarking = image(body_markings_icon, "[body_markings]_[aux_zone]", -aux_layer, image_dir)
+				. += auxmarking
+
+		if(!isnull(body_markings))
+			if(species_id == "husk")
+				marking = image('modular_citadel/icons/mob/markings_notmammals.dmi', "husk_[body_zone]", -MARKING_LAYER, image_dir)
+			else if(species_id == "husk" && use_digitigrade)
+				marking = image('modular_citadel/icons/mob/markings_notmammals.dmi', "husk_digitigrade_[use_digitigrade]_[body_zone]", -MARKING_LAYER, image_dir)
+
+			else if(!use_digitigrade)
+				if(body_zone == BODY_ZONE_CHEST)
+					marking = image(body_markings_icon, "[body_markings]_[body_zone]_[icon_gender]", -MARKING_LAYER, image_dir)
+				else
+					marking = image(body_markings_icon, "[body_markings]_[body_zone]", -MARKING_LAYER, image_dir)
+			else
+				marking = image(body_markings_icon, "[body_markings]_[digitigrade_type]_[use_digitigrade]_[body_zone]", -MARKING_LAYER, image_dir)
+			. += marking
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 		return
 
 
@@ -449,10 +576,25 @@
 			limb.color = "#[draw_color]"
 			if(aux_zone)
 				aux.color = "#[draw_color]"
+<<<<<<< HEAD
 				if(bodypart_alpha)
 					aux.alpha = bodypart_alpha
 		if(bodypart_alpha)
 			limb.alpha = bodypart_alpha
+=======
+				if(!isnull(aux_marking))
+					if(species_id == "husk")
+						auxmarking.color = "#141414"
+					else
+						auxmarking.color = list(markings_color)
+
+			if(!isnull(body_markings))
+				if(species_id == "husk")
+					marking.color = "#141414"
+				else
+					marking.color = list(markings_color)
+
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 
 /obj/item/bodypart/deconstruct(disassembled = TRUE)
 	drop_organs()

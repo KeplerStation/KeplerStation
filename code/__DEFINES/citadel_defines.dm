@@ -22,11 +22,16 @@
 #define ADMIN_IC(client) "(<a href='?_src_=holder;icissue=\ref[client]'>IC</a>)"//marks and adminhelp as an IC issue
 #define ADMIN_REJECT(client) "(<a href='?_src_=holder;rejectadminhelp=\ref[client]'>REJT</a>)"//Rejects an adminhelp for being unclear or otherwise unhelpful. resets their adminhelp timer
 
+<<<<<<< HEAD
 //Species stuffs. Remember to change this if upstream updates species flags
 #define MUTCOLORS2		35
 #define MUTCOLORS3		36
 #define MATRIXED		39	//if icon is color matrix'd
 #define SKINTONE		40	//uses skin tones
+=======
+//Damage stuffs
+#define AROUSAL "arousal"
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 
 //Citadel istypes
 #define isborer(A) (istype(A, /mob/living/simple_animal/borer))

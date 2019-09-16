@@ -38,6 +38,63 @@ GLOBAL_LIST_EMPTY(exotic_ears_list)
 GLOBAL_LIST_EMPTY(exotic_head_list)
 GLOBAL_LIST_EMPTY(exotic_back_list)
 
+<<<<<<< HEAD
+=======
+	//Xenomorph Species
+GLOBAL_LIST_EMPTY(xeno_head_list)
+GLOBAL_LIST_EMPTY(xeno_tail_list)
+GLOBAL_LIST_EMPTY(xeno_dorsal_list)
+
+	//IPC species
+GLOBAL_LIST_EMPTY(ipc_screens_list)
+GLOBAL_LIST_EMPTY(ipc_antennas_list)
+
+	//Genitals and Arousal Lists
+GLOBAL_LIST_EMPTY(cock_shapes_list)//global_lists.dm for the list initializations //Now also _DATASTRUCTURES globals.dm
+GLOBAL_LIST_EMPTY(cock_shapes_icons) //Associated list for names->icon_states for cockshapes.
+GLOBAL_LIST_EMPTY(gentlemans_organ_names)
+GLOBAL_LIST_EMPTY(balls_shapes_list)
+GLOBAL_LIST_EMPTY(balls_shapes_icons)
+GLOBAL_LIST_EMPTY(breasts_size_list)
+GLOBAL_LIST_EMPTY(breasts_shapes_list)
+GLOBAL_LIST_EMPTY(breasts_shapes_icons)
+GLOBAL_LIST_EMPTY(vagina_shapes_list)
+GLOBAL_LIST_INIT(cum_into_containers_list, list(/obj/item/reagent_containers/food/snacks/pie)) //Yer fuggin snowflake name list jfc
+GLOBAL_LIST_INIT(dick_nouns, list("dick","cock","member","shaft"))
+GLOBAL_LIST_INIT(cum_id_list,"semen")
+GLOBAL_LIST_INIT(milk_id_list,"milk")
+
+GLOBAL_LIST_INIT(dildo_shapes, list(
+		"Human"		= "human",
+		"Knotted"	= "knotted",
+		"Plain"		= "plain",
+		"Flared"	= "flared"
+		))
+GLOBAL_LIST_INIT(dildo_sizes, list(
+		"Small"		= 1,
+		"Medium"	= 2,
+		"Big"		= 3
+		))
+GLOBAL_LIST_INIT(dildo_colors, list(//mostly neon colors
+		"Cyan"		= "#00f9ff",//cyan
+		"Green"		= "#49ff00",//green
+		"Pink"		= "#ff4adc",//pink
+		"Yellow"	= "#fdff00",//yellow
+		"Blue"		= "#00d2ff",//blue
+		"Lime"		= "#89ff00",//lime
+		"Black"		= "#101010",//black
+		"Red"		= "#ff0000",//red
+		"Orange"	= "#ff9a00",//orange
+		"Purple"	= "#e300ff"//purple
+		))
+
+GLOBAL_LIST_INIT(meat_types, list(
+	"Mammalian" = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/mammal,
+	"Aquatic" = /obj/item/reagent_containers/food/snacks/carpmeat/aquatic,
+	"Avian" = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/avian,
+	"Inesct" = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/insect))
+
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 //Crew objective and miscreants stuff
 GLOBAL_VAR_INIT(miscreants_allowed, FALSE)
 

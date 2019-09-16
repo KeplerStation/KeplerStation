@@ -97,7 +97,17 @@
 #define DRINKSBLOOD		15
 #define NOEYES			16
 #define MARKINGS		17
+<<<<<<< HEAD
 #define TRANSPARENT_BODY 18
+=======
+#define MUTCOLORS2		18
+#define MUTCOLORS3		19
+#define NOAROUSAL		20	//Stops all arousal effects
+#define NOGENITALS		21	//Cannot create, use, or otherwise have genitals
+#define MATRIXED		22	//if icon is color matrix'd
+#define SKINTONE		23	//uses skin tones
+#define HORNCOLOR		24
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 
 #define ORGAN_SLOT_BRAIN "brain"
 #define ORGAN_SLOT_APPENDIX "appendix"

@@ -5,7 +5,11 @@
 //	You do not need to raise this if you are adding new values that have sane defaults.
 //	Only raise this value when changing the meaning/format/name/layout of an existing value
 //	where you would want the updater procs below to run
+<<<<<<< HEAD
 #define SAVEFILE_VERSION_MAX	20
+=======
+#define SAVEFILE_VERSION_MAX	22
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
@@ -45,7 +49,69 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	return
 
 /datum/preferences/proc/update_character(current_version, savefile/S)
+<<<<<<< HEAD
 	return
+=======
+	if(current_version < 19)
+		pda_style = "mono"
+	if(current_version < 20)
+		pda_color = "#808000"
+	if(current_version < 21)
+		job_preferences = list() //It loaded null from nonexistant savefile field.
+		var/job_civilian_high = 0
+		var/job_civilian_med = 0
+		var/job_civilian_low = 0
+
+		var/job_medsci_high = 0
+		var/job_medsci_med = 0
+		var/job_medsci_low = 0
+
+		var/job_engsec_high = 0
+		var/job_engsec_med = 0
+		var/job_engsec_low = 0
+
+		S["job_civilian_high"]	>> job_civilian_high
+		S["job_civilian_med"]	>> job_civilian_med
+		S["job_civilian_low"]	>> job_civilian_low
+		S["job_medsci_high"]	>> job_medsci_high
+		S["job_medsci_med"]		>> job_medsci_med
+		S["job_medsci_low"]		>> job_medsci_low
+		S["job_engsec_high"]	>> job_engsec_high
+		S["job_engsec_med"]		>> job_engsec_med
+		S["job_engsec_low"]		>> job_engsec_low
+
+		//Can't use SSjob here since this happens right away on login
+		for(var/job in subtypesof(/datum/job))
+			var/datum/job/J = job
+			var/new_value
+			var/fval = initial(J.flag)
+			switch(initial(J.department_flag))
+				if(CIVILIAN)
+					if(job_civilian_high & fval)
+						new_value = JP_HIGH
+					else if(job_civilian_med & fval)
+						new_value = JP_MEDIUM
+					else if(job_civilian_low & fval)
+						new_value = JP_LOW
+				if(MEDSCI)
+					if(job_medsci_high & fval)
+						new_value = JP_HIGH
+					else if(job_medsci_med & fval)
+						new_value = JP_MEDIUM
+					else if(job_medsci_low & fval)
+						new_value = JP_LOW
+				if(ENGSEC)
+					if(job_engsec_high & fval)
+						new_value = JP_HIGH
+					else if(job_engsec_med & fval)
+						new_value = JP_MEDIUM
+					else if(job_engsec_low & fval)
+						new_value = JP_LOW
+			if(new_value)
+				job_preferences[initial(J.title)] = new_value
+	if((current_version < 22) && features["meat_type"] && (features["meat_type"] == null))
+		features["meat_type"] = "Mammalian"
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
 	if(!ckey)
@@ -230,6 +296,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	var/species_id
 	S["species"]			>> species_id
 	if(species_id)
+		if(species_id == "avian" || species_id == "aquatic")
+			species_id = "mammal"
+		else if(species_id == "moth")
+			species_id = "insect"
+
 		var/newtype = GLOB.species_list[species_id]
 		if(newtype)
 			pref_species = new newtype
@@ -238,6 +309,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		WRITE_FILE(S["features["mcolor"]"]	, "#FFF")
 
 	//Character
+<<<<<<< HEAD
 	S["real_name"]			>> real_name
 	S["name_is_always_random"] >> be_random_name
 	S["body_is_always_random"] >> be_random_body
@@ -254,6 +326,31 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["socks"]				>> socks
 	S["backbag"]			>> backbag
 	S["uplink_loc"]			>> uplink_spawn_loc
+=======
+	S["real_name"]				>> real_name
+	S["nameless"]				>> nameless
+	S["custom_species"]			>> custom_species
+	S["name_is_always_random"]	>> be_random_name
+	S["body_is_always_random"]	>> be_random_body
+	S["gender"]					>> gender
+	S["age"]					>> age
+	S["hair_color"]				>> hair_color
+	S["facial_hair_color"]		>> facial_hair_color
+	S["eye_color"]				>> eye_color
+	S["skin_tone"]				>> skin_tone
+	S["hair_style_name"]		>> hair_style
+	S["facial_style_name"]		>> facial_hair_style
+	S["underwear"]				>> underwear
+	S["undie_color"]			>> undie_color
+	S["undershirt"]				>> undershirt
+	S["shirt_color"]			>> shirt_color
+	S["socks"]					>> socks
+	S["socks_color"]			>> socks_color
+	S["horn_color"]				>> horn_color
+	S["backbag"]				>> backbag
+	S["jumpsuit_style"]			>> jumpsuit_style
+	S["uplink_loc"]				>> uplink_spawn_loc
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 	S["feature_mcolor"]					>> features["mcolor"]
 	S["feature_lizard_tail"]			>> features["tail_lizard"]
 	S["feature_lizard_snout"]			>> features["snout"]
@@ -262,17 +359,18 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["feature_lizard_spines"]			>> features["spines"]
 	S["feature_lizard_body_markings"]	>> features["body_markings"]
 	S["feature_lizard_legs"]			>> features["legs"]
-	S["feature_moth_wings"]				>> features["moth_wings"]
 	S["feature_human_tail"]				>> features["tail_human"]
 	S["feature_human_ears"]				>> features["ears"]
+	S["feature_insect_wings"]			>> features["insect_wings"]
+	S["feature_insect_fluff"]			>> features["insect_fluff"]
 
 	//Custom names
 	for(var/custom_name_id in GLOB.preferences_custom_names)
 		var/savefile_slot_name = custom_name_id + "_name" //TODO remove this
 		S[savefile_slot_name] >> custom_names[custom_name_id]
 
-	S["preferred_ai_core_display"] >> preferred_ai_core_display
-	S["prefered_security_department"] >> prefered_security_department
+	S["preferred_ai_core_display"]		>> preferred_ai_core_display
+	S["prefered_security_department"]	>> prefered_security_department
 
 	//Jobs
 	S["joblessrole"]		>> joblessrole
@@ -292,6 +390,52 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["negative_quirks"]	>> negative_quirks
 	S["neutral_quirks"]		>> neutral_quirks
 
+<<<<<<< HEAD
+=======
+	//Citadel code
+	S["feature_genitals_use_skintone"]	>> features["genitals_use_skintone"]
+	S["feature_exhibitionist"]			>> features["exhibitionist"]
+	S["feature_mcolor2"]				>> features["mcolor2"]
+	S["feature_mcolor3"]				>> features["mcolor3"]
+	S["feature_mam_body_markings"]		>> features["mam_body_markings"]
+	S["feature_mam_tail"]				>> features["mam_tail"]
+	S["feature_mam_ears"]				>> features["mam_ears"]
+	S["feature_mam_tail_animated"]		>> features["mam_tail_animated"]
+	S["feature_taur"]					>> features["taur"]
+	S["feature_mam_snouts"]				>> features["mam_snouts"]
+	S["feature_meat"]					>> features["meat_type"]
+	//Xeno features
+	S["feature_xeno_tail"]				>> features["xenotail"]
+	S["feature_xeno_dors"]				>> features["xenodorsal"]
+	S["feature_xeno_head"]				>> features["xenohead"]
+	//cock features
+	S["feature_has_cock"]				>> features["has_cock"]
+	S["feature_cock_shape"]				>> features["cock_shape"]
+	S["feature_cock_color"]				>> features["cock_color"]
+	S["feature_cock_length"]			>> features["cock_length"]
+	S["feature_cock_girth"]				>> features["cock_girth"]
+	S["feature_has_sheath"]				>> features["sheath_color"]
+	//balls features
+	S["feature_has_balls"]				>> features["has_balls"]
+	S["feature_balls_color"]			>> features["balls_color"]
+	S["feature_balls_size"]				>> features["balls_size"]
+	S["feature_balls_shape"]			>> features["balls_shape"]
+	S["feature_balls_sack_size"]		>> features["balls_sack_size"]
+	S["feature_balls_fluid"]			>> features["balls_fluid"]
+	//breasts features
+	S["feature_has_breasts"]			>> features["has_breasts"]
+	S["feature_breasts_size"]			>> features["breasts_size"]
+	S["feature_breasts_shape"]			>> features["breasts_shape"]
+	S["feature_breasts_color"]			>> features["breasts_color"]
+	S["feature_breasts_fluid"]			>> features["breasts_fluid"]
+	S["feature_breasts_producing"]		>> features["breasts_producing"]
+	//vagina features
+	S["feature_has_vag"]				>> features["has_vag"]
+	S["feature_vag_shape"]				>> features["vag_shape"]
+	S["feature_vag_color"]				>> features["vag_color"]
+	//womb features
+	S["feature_has_womb"]				>> features["has_womb"]
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 	//flavor text
 	//Let's make our players NOT cry desperately as we wipe their savefiles of their special snowflake texts:
 	if((S["flavor_text"] != "") && (S["flavor_text"] != null) && S["flavor_text"]) //If old text isn't null and isn't "" but still exists.
@@ -310,10 +454,15 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	//Sanitize
 
-	real_name = reject_bad_name(real_name)
-	gender = sanitize_gender(gender, TRUE, TRUE)
+	real_name	= reject_bad_name(real_name)
+	gender		= sanitize_gender(gender, TRUE, TRUE)
 	if(!real_name)
+<<<<<<< HEAD
 		real_name = random_unique_name(gender)
+=======
+		real_name	= random_unique_name(gender)
+	custom_species	= reject_bad_name(custom_species)
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 	for(var/custom_name_id in GLOB.preferences_custom_names)
 		var/namedata = GLOB.preferences_custom_names[custom_name_id]
 		custom_names[custom_name_id] = reject_bad_name(custom_names[custom_name_id],namedata["allow_numbers"])
@@ -323,17 +472,22 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(!features["mcolor"] || features["mcolor"] == "#000")
 		features["mcolor"] = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F")
 
+<<<<<<< HEAD
+=======
+	nameless		= sanitize_integer(nameless, 0, 1, initial(nameless))
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 	be_random_name	= sanitize_integer(be_random_name, 0, 1, initial(be_random_name))
 	be_random_body	= sanitize_integer(be_random_body, 0, 1, initial(be_random_body))
 
 	if(gender == MALE)
-		hair_style			= sanitize_inlist(hair_style, GLOB.hair_styles_male_list)
+		hair_style					= sanitize_inlist(hair_style, GLOB.hair_styles_male_list)
 		facial_hair_style			= sanitize_inlist(facial_hair_style, GLOB.facial_hair_styles_male_list)
 		underwear		= sanitize_inlist(underwear, GLOB.underwear_m)
 		undershirt 		= sanitize_inlist(undershirt, GLOB.undershirt_m)
 	else
-		hair_style			= sanitize_inlist(hair_style, GLOB.hair_styles_female_list)
+		hair_style					= sanitize_inlist(hair_style, GLOB.hair_styles_female_list)
 		facial_hair_style			= sanitize_inlist(facial_hair_style, GLOB.facial_hair_styles_female_list)
+<<<<<<< HEAD
 		underwear		= sanitize_inlist(underwear, GLOB.underwear_f)
 		undershirt		= sanitize_inlist(undershirt, GLOB.undershirt_f)
 	socks			= sanitize_inlist(socks, GLOB.socks_list)
@@ -353,8 +507,35 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["frills"] 	= sanitize_inlist(features["frills"], GLOB.frills_list)
 	features["spines"] 	= sanitize_inlist(features["spines"], GLOB.spines_list)
 	features["body_markings"] 	= sanitize_inlist(features["body_markings"], GLOB.body_markings_list)
+=======
+	underwear						= sanitize_inlist(underwear, GLOB.underwear_list)
+	undie_color						= sanitize_hexcolor(undie_color, 3, FALSE, initial(undie_color))
+	undershirt						= sanitize_inlist(undershirt, GLOB.undershirt_list)
+	shirt_color						= sanitize_hexcolor(shirt_color, 6, FALSE, initial(shirt_color))
+	socks							= sanitize_inlist(socks, GLOB.socks_list)
+	socks_color						= sanitize_hexcolor(socks_color, 6, FALSE, initial(socks_color))
+	age								= sanitize_integer(age, AGE_MIN, AGE_MAX, initial(age))
+	hair_color						= sanitize_hexcolor(hair_color, 3, 0)
+	facial_hair_color				= sanitize_hexcolor(facial_hair_color, 3, 0)
+	eye_color						= sanitize_hexcolor(eye_color, 3, 0)
+	skin_tone						= sanitize_inlist(skin_tone, GLOB.skin_tones)
+	horn_color						= sanitize_hexcolor(horn_color, 3, FALSE)
+	backbag							= sanitize_inlist(backbag, GLOB.backbaglist, initial(backbag))
+	jumpsuit_style					= sanitize_inlist(jumpsuit_style, GLOB.jumpsuitlist, initial(jumpsuit_style))
+	uplink_spawn_loc				= sanitize_inlist(uplink_spawn_loc, GLOB.uplink_spawn_loc_list, initial(uplink_spawn_loc))
+	features["mcolor"]				= sanitize_hexcolor(features["mcolor"], 3, 0)
+	features["tail_lizard"]			= sanitize_inlist(features["tail_lizard"], GLOB.tails_list_lizard)
+	features["tail_human"]			= sanitize_inlist(features["tail_human"], GLOB.tails_list_human)
+	features["snout"]				= sanitize_inlist(features["snout"], GLOB.snouts_list)
+	features["horns"]				= sanitize_inlist(features["horns"], GLOB.horns_list)
+	features["ears"]				= sanitize_inlist(features["ears"], GLOB.ears_list)
+	features["frills"]				= sanitize_inlist(features["frills"], GLOB.frills_list)
+	features["spines"]				= sanitize_inlist(features["spines"], GLOB.spines_list)
+	features["body_markings"]		= sanitize_inlist(features["body_markings"], GLOB.body_markings_list)
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 	features["feature_lizard_legs"]	= sanitize_inlist(features["legs"], GLOB.legs_list)
-	features["moth_wings"] 	= sanitize_inlist(features["moth_wings"], GLOB.moth_wings_list)
+	features["insect_wings"] 		= sanitize_inlist(features["insect_wings"], GLOB.insect_wings_list)
+	features["insect_fluff"]		= sanitize_inlist(features["insect_fluff"], GLOB.insect_fluffs_list)
 
 	joblessrole	= sanitize_integer(joblessrole, 1, 3, initial(joblessrole))
 	job_civilian_high = sanitize_integer(job_civilian_high, 0, 65535, initial(job_civilian_high))
@@ -368,9 +549,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	job_engsec_low = sanitize_integer(job_engsec_low, 0, 65535, initial(job_engsec_low))
 
 	all_quirks = SANITIZE_LIST(all_quirks)
+
 	positive_quirks = SANITIZE_LIST(positive_quirks)
 	negative_quirks = SANITIZE_LIST(negative_quirks)
-	neutral_quirks = SANITIZE_LIST(neutral_quirks)
+	neutral_quirks	= SANITIZE_LIST(neutral_quirks)
 
 	cit_character_pref_load(S)
 
@@ -392,6 +574,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["version"]			, SAVEFILE_VERSION_MAX)	//load_character will sanitize any bad data, so assume up-to-date.)
 
 	//Character
+<<<<<<< HEAD
 	WRITE_FILE(S["real_name"]			, real_name)
 	WRITE_FILE(S["name_is_always_random"] , be_random_name)
 	WRITE_FILE(S["body_is_always_random"] , be_random_body)
@@ -409,8 +592,34 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["backbag"]			, backbag)
 	WRITE_FILE(S["uplink_loc"]			, uplink_spawn_loc)
 	WRITE_FILE(S["species"]			, pref_species.id)
+=======
+	WRITE_FILE(S["real_name"]				, real_name)
+	WRITE_FILE(S["nameless"]				, nameless)
+	WRITE_FILE(S["custom_species"]			, custom_species)
+	WRITE_FILE(S["name_is_always_random"]	, be_random_name)
+	WRITE_FILE(S["body_is_always_random"]	, be_random_body)
+	WRITE_FILE(S["gender"]					, gender)
+	WRITE_FILE(S["age"]						, age)
+	WRITE_FILE(S["hair_color"]				, hair_color)
+	WRITE_FILE(S["facial_hair_color"]		, facial_hair_color)
+	WRITE_FILE(S["eye_color"]				, eye_color)
+	WRITE_FILE(S["skin_tone"]				, skin_tone)
+	WRITE_FILE(S["hair_style_name"]			, hair_style)
+	WRITE_FILE(S["facial_style_name"]		, facial_hair_style)
+	WRITE_FILE(S["underwear"]				, underwear)
+	WRITE_FILE(S["undie_color"]				, undie_color)
+	WRITE_FILE(S["undershirt"]				, undershirt)
+	WRITE_FILE(S["shirt_color"]				, shirt_color)
+	WRITE_FILE(S["socks"]					, socks)
+	WRITE_FILE(S["socks_color"]				, socks_color)
+	WRITE_FILE(S["horn_color"]				, horn_color)
+	WRITE_FILE(S["backbag"]					, backbag)
+	WRITE_FILE(S["jumpsuit_style"]			, jumpsuit_style)
+	WRITE_FILE(S["uplink_loc"]				, uplink_spawn_loc)
+	WRITE_FILE(S["species"]					, pref_species.id)
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 	WRITE_FILE(S["feature_mcolor"]					, features["mcolor"])
-	WRITE_FILE(S["feature_lizard_tail"]			, features["tail_lizard"])
+	WRITE_FILE(S["feature_lizard_tail"]				, features["tail_lizard"])
 	WRITE_FILE(S["feature_human_tail"]				, features["tail_human"])
 	WRITE_FILE(S["feature_lizard_snout"]			, features["snout"])
 	WRITE_FILE(S["feature_lizard_horns"]			, features["horns"])
@@ -418,16 +627,18 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_lizard_frills"]			, features["frills"])
 	WRITE_FILE(S["feature_lizard_spines"]			, features["spines"])
 	WRITE_FILE(S["feature_lizard_body_markings"]	, features["body_markings"])
-	WRITE_FILE(S["feature_lizard_legs"]			, features["legs"])
-	WRITE_FILE(S["feature_moth_wings"]			, features["moth_wings"])
+	WRITE_FILE(S["feature_lizard_legs"]				, features["legs"])
+	WRITE_FILE(S["feature_insect_wings"]			, features["insect_wings"])
+	WRITE_FILE(S["feature_insect_fluff"]			, features["insect_fluff"])
+	WRITE_FILE(S["feature_meat"]					, features["meat_type"])
 
 	//Custom names
 	for(var/custom_name_id in GLOB.preferences_custom_names)
 		var/savefile_slot_name = custom_name_id + "_name" //TODO remove this
 		WRITE_FILE(S[savefile_slot_name],custom_names[custom_name_id])
 
-	WRITE_FILE(S["preferred_ai_core_display"] ,  preferred_ai_core_display)
-	WRITE_FILE(S["prefered_security_department"] , prefered_security_department)
+	WRITE_FILE(S["preferred_ai_core_display"]		,  preferred_ai_core_display)
+	WRITE_FILE(S["prefered_security_department"]	, prefered_security_department)
 
 	//Jobs
 	WRITE_FILE(S["joblessrole"]		, joblessrole)

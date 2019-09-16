@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+/mob/living/carbon/human/species/mammal
+	race = /datum/species/mammal
+
+/mob/living/carbon/human/species/insect
+	race = /datum/species/insect
+
+/mob/living/carbon/human/species/xeno
+	race = /datum/species/xeno
+
+>>>>>>> adb3d6704... Merge pull request #9277 from Poojawa/are-those-horns-are-are-you-just-retarded
 /mob/living/proc/resist_embedded()
 	return
 
