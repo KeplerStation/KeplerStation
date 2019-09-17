@@ -49074,7 +49074,7 @@
 	icon_state = "2-4"
 	},
 /obj/item/toy/beach_ball{
-	desc = "The simple beach ball is a popular consumer product.;
+	desc = "The simple beach ball is a popular consumer product.";
 	item_state = "beachball";
 	name = "beach ball";
 	pixel_y = 7
