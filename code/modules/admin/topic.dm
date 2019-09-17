@@ -134,13 +134,13 @@
 				log_admin("[key_name(usr)] spawned a blob with base resource gain [strength].")
 				new/datum/round_event/ghost_role/blob(TRUE, strength)
 			if("centcom")
-				message_admins("[key_name(usr)] is creating a CentCom response team...")
+				message_admins("[key_name(usr)] is creating a Rescue & Response team...")
 				if(src.makeEmergencyresponseteam())
-					message_admins("[key_name(usr)] created a CentCom response team.")
-					log_admin("[key_name(usr)] created a CentCom response team.")
+					message_admins("[key_name(usr)] created a Rescue & Response team.")
+					log_admin("[key_name(usr)] created a Rescue & Response team.")
 				else
-					message_admins("[key_name_admin(usr)] tried to create a CentCom response team. Unfortunately, there were not enough candidates available.")
-					log_admin("[key_name(usr)] failed to create a CentCom response team.")
+					message_admins("[key_name_admin(usr)] tried to create a Rescue & Response team. Unfortunately, there were not enough candidates available.")
+					log_admin("[key_name(usr)] failed to create a Rescue & Response team.")
 			if("abductors")
 				message_admins("[key_name(usr)] is creating an abductor team...")
 				if(src.makeAbductorTeam())
@@ -2753,7 +2753,7 @@
 			if(!newname)
 				return
 			G.name = newname
-			var/description = input("Enter CentCom message contents:") as message|null
+			var/description = input("Enter Head Office message contents:") as message|null
 			if(!description)
 				return
 			G.report_message = description

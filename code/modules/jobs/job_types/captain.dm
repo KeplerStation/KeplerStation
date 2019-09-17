@@ -4,12 +4,12 @@ Captain
 /datum/job/captain
 	title = "Captain"
 	flag = CAPTAIN
-	department_head = list("CentCom")
+	department_head = list("Head Office")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Nanotrasen officials and Space law"
+	supervisors = "Head Office and Space law"
 	selection_color = "#ccccff"
 	req_admin_notify = 1
 	minimal_player_age = 14

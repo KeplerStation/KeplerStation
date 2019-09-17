@@ -6,14 +6,14 @@
 
 /datum/bounty/item/medical/lung
 	name = "Lungs"
-	description = "A recent explosion at Central Command has left multiple staff with punctured lungs. Ship spare lungs to be rewarded."
+	description = "A recent explosion at Head Office has left multiple staff with punctured lungs. Ship spare lungs to be rewarded."
 	reward = 10000
 	required_count = 3
 	wanted_types = list(/obj/item/organ/lungs)
 
 /datum/bounty/item/medical/appendix
 	name = "Appendix"
-	description = "Chef Gibb of Central Command wants to prepare a meal using a very special delicacy: an appendix. If you ship one, he'll pay."
+	description = "Chef Gibb of Head Office wants to prepare a meal using a very special delicacy: an appendix. If you ship one, he'll pay."
 	reward = 5000 //there are no synthetic appendixes
 	wanted_types = list(/obj/item/organ/appendix)
 
@@ -26,7 +26,7 @@
 
 /datum/bounty/item/medical/liver
 	name = "Livers"
-	description = "Multiple high-ranking CentCom diplomats have been hospitalized with liver failure after a recent meeting with Third Soviet Union ambassadors. Help us out, will you?"
+	description = "Multiple high-ranking ICC diplomats have been hospitalized with liver failure after a recent meeting with Third Soviet Union ambassadors. Help us out, will you?"
 	reward = 10000
 	required_count = 3
 	wanted_types = list(/obj/item/organ/liver)
@@ -46,21 +46,9 @@
 	required_count = 3
 	wanted_types = list(/obj/item/organ/tongue)
 
-/datum/bounty/item/medical/lizard_tail
-	name = "Lizard Tail"
-	description = "The Wizard Federation has made off with Nanotrasen's supply of lizard tails. While CentCom is dealing with the wizards, can the station spare a tail of their own?"
-	reward = 3000
-	wanted_types = list(/obj/item/organ/tail/lizard)
-
-/datum/bounty/item/medical/cat_tail
-	name = "Cat Tail"
-	description = "Central Command has run out of heavy duty pipe cleaners. Can you ship over a cat tail to help us out?"
-	reward = 3000
-	wanted_types = list(/obj/item/organ/tail/cat)
-
 /datum/bounty/item/medical/blood
 	name = "Generic Blood"
-	description = "Nanotrasen's annual blood drive is back up to full speed, following the garlic incident. Good blood in good volumes accepted for Credit returns."
+	description = "Head Office's annual blood drive is back up to full speed, following the garlic incident. Good blood in good volumes accepted for Credit returns."
 	reward = 3500
 	required_count = 600
 	wanted_types = list(/datum/reagent/blood)
@@ -107,7 +95,7 @@
 
 /datum/bounty/item/medical/advhealthscaner
 	name = "Advanced Health Analyzer"
-	description = "A ERT Medical unit needs the new 'advanced health analyzer', for a mission at a Station 4. Can you send some?."
+	description = "A RRT Medical unit needs the new 'advanced health analyzer', for a mission at a Station 4. Can you send some?."
 	reward = 4000
 	required_count = 5
 	wanted_types = list(/obj/item/healthanalyzer/advanced)

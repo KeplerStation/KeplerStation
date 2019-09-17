@@ -232,7 +232,7 @@
 				active1 = null
 				active2 = null
 				authenticated = 1
-				rank = "Central Command"
+				rank = "Head Office"
 				screen = 1
 			else if(istype(I) && check_access(I))
 				active1 = null
@@ -583,7 +583,7 @@
 
 /obj/machinery/computer/med_data/laptop
 	name = "medical laptop"
-	desc = "A cheap Nanotrasen medical laptop, it functions as a medical records computer. It's bolted to the table."
+	desc = "A cheap medical laptop, it functions as a medical records computer. It's bolted to the table."
 	icon_state = "laptop"
 	icon_screen = "medlaptop"
 	icon_keyboard = "laptop_key"

@@ -5986,7 +5986,7 @@
 "aqb" = (
 /obj/structure/table/wood,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to the Board of Directors. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -35401,7 +35401,7 @@
 "bmu" = (
 /mob/living/simple_animal/hostile/carp/cayenne{
 	color = "";
-	desc = "A failed experiment of Nanotrasen to create weaponised carp technology. This less than intimidating carp now serves as an authority figure's pet.";
+	desc = "A failed experiment to create weaponised carp technology. This less than intimidating carp now serves as an authority figure's pet.";
 	health = 200;
 	icon_dead = "magicarp_dead";
 	icon_gib = "magicarp_gib";
@@ -38666,7 +38666,7 @@
 "brB" = (
 /obj/structure/table/wood,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to the Board of Directors. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -52775,7 +52775,7 @@
 	pixel_x = 7
 	},
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to the Board of Directors. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -56655,7 +56655,7 @@
 	pixel_y = -26
 	},
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to the Board of Directors. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -57494,7 +57494,7 @@
 /area/crew_quarters/heads/chief)
 "bTQ" = (
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to the Board of Directors. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -81459,13 +81459,13 @@
 	},
 /obj/item/folder/blue,
 /obj/item/clothing/under/rank/centcom_commander{
-	desc = "A replica of a jumpsuit worn by the highest ranking commanders under Nanotrasen's central command.";
-	name = "Replica CentCom officer's jumpsuit"
+	desc = "A replica of a jumpsuit worn by high ranking commanders.";
+	name = "Replica officer's jumpsuit"
 	},
 /obj/item/clothing/head/centhat{
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0);
-	desc = "A replica hat of a Central Commander's attire. It has a small tag on it saying, 'It's good to be emperor.'";
-	name = "Replica CentCom hat"
+	desc = "A replica hat of a commander's attire. It has a small tag on it saying, 'It's good to be emperor.'";
+	name = "Replica commander hat"
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = -32
@@ -81540,7 +81540,7 @@
 /obj/item/toy/gun,
 /obj/item/clothing/head/beret/sec{
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0);
-	desc = "A replica beret resembling that of a special operations officer under Nanotrasen.";
+	desc = "A replica beret resembling that of a special operations officer.";
 	name = "replica officer's beret"
 	},
 /obj/item/radio/intercom{

@@ -1,7 +1,7 @@
 
 ///////XCOM X9 AR///////
 
-/obj/item/gun/ballistic/automatic/x9	//will be adminspawn only so ERT or something can use them
+/obj/item/gun/ballistic/automatic/x9	//will be adminspawn only so RRT or something can use them
 	name = "\improper X9 Assault Rifle"
 	desc = "A rather old design of a cheap, reliable assault rifle made for combat against unknown enemies. Uses 5.56mm ammo."
 	icon = 'modular_citadel/icons/obj/guns/cit_guns.dmi'

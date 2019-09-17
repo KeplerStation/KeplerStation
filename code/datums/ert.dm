@@ -13,7 +13,7 @@
 
 /datum/ert/New()
 	if (!polldesc)
-		polldesc = "a Code [code] Nanotrasen Emergency Response Team"
+		polldesc = "a Code [code] Horizons Rescue & Response Team"
 
 /datum/ert/blue
 	opendoors = FALSE
@@ -32,10 +32,10 @@
 /datum/ert/deathsquad
 	roles = list(/datum/antagonist/ert/deathsquad)
 	leader_role = /datum/antagonist/ert/deathsquad/leader
-	rename_team = "Deathsquad"
+	rename_team = "Human Resources"
 	code = "Delta"
-	mission = "Leave no witnesses."
-	polldesc = "an elite Nanotrasen Strike Team"
+	mission = "Liquidate all corporate assets. Permanently resolve outstanding employee complaints."
+	polldesc = "a team of HR specialists."
 
 /datum/ert/centcom_official
 	code = "Green"
@@ -43,8 +43,8 @@
 	opendoors = FALSE
 	leader_role = /datum/antagonist/official
 	roles = list(/datum/antagonist/official)
-	rename_team = "CentCom Officials"
-	polldesc = "a CentCom Official"
+	rename_team = "Head Office Directors"
+	polldesc = "a Head Office director"
 
 /datum/ert/centcom_official/New()
 	mission = "Conduct a routine performance review of [station_name()] and its Captain."
@@ -54,7 +54,7 @@
 	leader_role = /datum/antagonist/ert/commander/inquisitor
 	rename_team = "Inquisition"
 	mission = "Destroy any traces of paranormal activity aboard the station."
-	polldesc = "a Nanotrasen paranormal response team"
+	polldesc = "a Horizons paranormal response team"
 
 /datum/ert/greybois
 	code = "Green"

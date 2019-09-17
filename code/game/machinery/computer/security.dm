@@ -25,7 +25,7 @@
 
 /obj/machinery/computer/secure_data/laptop
 	name = "security laptop"
-	desc = "A cheap Nanotrasen security laptop, it functions as a security records console. It's bolted to the table."
+	desc = "A cheap security laptop, it functions as a security records console. It's bolted to the table."
 	icon_state = "laptop"
 	icon_screen = "seclaptop"
 	icon_keyboard = "laptop_key"
@@ -309,7 +309,7 @@ What a mess.*/
 					active1 = null
 					active2 = null
 					authenticated = M.client.holder.admin_signature
-					rank = "Central Command"
+					rank = "Head Office"
 					screen = 1
 				else if(I && check_access(I))
 					active1 = null
@@ -405,7 +405,7 @@ What a mess.*/
 				if(!( printing ))
 					var/wanted_name = stripped_input(usr, "Please enter an alias for the criminal:", "Print Wanted Poster", active1.fields["name"])
 					if(wanted_name)
-						var/default_description = "A poster declaring [wanted_name] to be a dangerous individual, wanted by Nanotrasen. Report any sightings to security immediately."
+						var/default_description = "A poster declaring [wanted_name] to be a dangerous individual. Report any sightings to security immediately."
 						var/list/major_crimes = active2.fields["ma_crim"]
 						var/list/minor_crimes = active2.fields["mi_crim"]
 						if(major_crimes.len + minor_crimes.len)
@@ -676,7 +676,7 @@ What a mess.*/
 							temp += "<li><a href='?src=[REF(src)];choice=Change Criminal Status;criminal2=released'>Discharged</a></li>"
 							temp += "</ul>"
 					if("rank")
-						var/list/L = list( "Head of Personnel", "Captain", "AI", "Central Command" )
+						var/list/L = list( "Head of Personnel", "Captain", "AI", "Head Office" )
 						//This was so silly before the change. Now it actually works without beating your head against the keyboard. /N
 						if((istype(active1, /datum/data/record) && L.Find(rank)))
 							temp = "<h5>Rank:</h5>"

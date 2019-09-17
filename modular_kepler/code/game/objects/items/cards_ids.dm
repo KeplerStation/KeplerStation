@@ -56,9 +56,9 @@
 	access = get_all_accesses()+get_all_centcom_access()+get_all_syndicate_access() // I know this is hacky
 	..()
 
-// ERT
+// RRT
 /obj/item/card/id/ert
-	name = "ERT ID"
+	name = "RRT ID"
 	icon_state = "ERT_empty"
 
 /obj/item/card/id/ert/Commander

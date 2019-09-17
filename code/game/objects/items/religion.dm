@@ -1,6 +1,6 @@
 /obj/item/banner
 	name = "banner"
-	desc = "A banner with Nanotrasen's logo on it."
+	desc = "A banner with Horizons' logo on it."
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "banner"
 	item_state = "banner"
@@ -181,7 +181,7 @@
 	desc = "The banner of Command, a staunch and ancient line of bueraucratic kings and queens."
 	//No icon state here since the default one is the NT banner
 	job_loyalties = list("Captain", "Head of Personnel", "Chief Engineer", "Head of Security", "Research Director", "Chief Medical Officer")
-	warcry = "Hail Nanotrasen!"
+	warcry = "For Horizons!"
 
 /obj/item/banner/command/mundane
 	inspiration_available = FALSE
@@ -211,7 +211,7 @@
 
 /obj/item/storage/backpack/bannerpack
 	name = "nanotrasen banner backpack"
-	desc = "It's a backpack with lots of extra room.  A banner with Nanotrasen's logo is attached, that can't be removed."
+	desc = "It's a backpack with lots of extra room.  An unremovable banner is attached."
 	icon_state = "bannerpack"
 
 /obj/item/storage/backpack/bannerpack/Initialize()
@@ -221,12 +221,12 @@
 
 /obj/item/storage/backpack/bannerpack/red
 	name = "red banner backpack"
-	desc = "It's a backpack with lots of extra room.  A red banner is attached, that can't be removed."
+	desc = "It's a backpack with lots of extra room.  An unremovable banner is attached."
 	icon_state = "bannerpack-red"
 
 /obj/item/storage/backpack/bannerpack/blue
 	name = "blue banner backpack"
-	desc = "It's a backpack with lots of extra room.  A blue banner is attached, that can't be removed."
+	desc = "It's a backpack with lots of extra room.  An unremovable banner is attached."
 	icon_state = "bannerpack-blue"
 
 //this is all part of one item set

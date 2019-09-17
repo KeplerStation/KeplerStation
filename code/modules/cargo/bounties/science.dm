@@ -1,36 +1,36 @@
 /datum/bounty/item/science/boh
 	name = "Bag of Holding"
-	description = "Nanotrasen would make good use of high-capacity backpacks. If you have any, please ship them."
+	description = "The ICC would make good use of high-capacity backpacks. If you have any, please ship them."
 	reward = 10000
 	wanted_types = list(/obj/item/storage/backpack/holding)
 
 /datum/bounty/item/science/tboh
 	name = "Trash Bag of Holding"
-	description = "Nanotrasen would make good use of high-capacity trash bags. If you have any, please ship them."
+	description = "The ICC would make good use of high-capacity trash bags. If you have any, please ship them."
 	reward = 10000
 	wanted_types = list(/obj/item/storage/backpack/holding)
 
 /datum/bounty/item/science/bluespace_syringe
 	name = "Bluespace Syringe"
-	description = "Nanotrasen would make good use of high-capacity syringes. If you have any, please ship them."
+	description = "The ICC would make good use of high-capacity syringes. If you have any, please ship them."
 	reward = 10000
 	wanted_types = list(/obj/item/reagent_containers/syringe/bluespace)
 
 /datum/bounty/item/science/bluespace_body_bag
 	name = "Bluespace Body Bag"
-	description = "Nanotrasen would make good use of high-capacity body bags. If you have any, please ship them."
+	description = "The ICC would make good use of high-capacity body bags. If you have any, please ship them."
 	reward = 10000
 	wanted_types = list(/obj/item/bodybag/bluespace)
 
 /datum/bounty/item/science/nightvision_goggles
 	name = "Night Vision Goggles"
-	description = "An electrical storm has busted all the lights at CentCom. While management is waiting for replacements, perhaps some night vision goggles can be shipped?"
+	description = "An electrical storm has busted all the lights at Head Office. While management is waiting for replacements, perhaps some night vision goggles can be shipped?"
 	reward = 10000
 	wanted_types = list(/obj/item/clothing/glasses/night, /obj/item/clothing/glasses/meson/night, /obj/item/clothing/glasses/hud/health/night, /obj/item/clothing/glasses/hud/security/night, /obj/item/clothing/glasses/hud/diagnostic/night)
 
 /datum/bounty/item/science/experimental_welding_tool
 	name = "Experimental Welding Tool"
-	description = "A recent accident has left most of CentCom's welding tools exploded. Ship replacements to be rewarded."
+	description = "A recent accident has left most of Head Office's welding tools exploded. Ship replacements to be rewarded."
 	reward = 10000
 	required_count = 3
 	wanted_types = list(/obj/item/weldingtool/experimental)
@@ -43,13 +43,13 @@
 
 /datum/bounty/item/science/diamond_drill
 	name = "Diamond Mining Drill"
-	description = "Central Command is willing to pay three months salary in exchange for one diamond mining drill."
+	description = "Head Office is willing to pay three months salary in exchange for one diamond mining drill."
 	reward = 15000
 	wanted_types = list(/obj/item/pickaxe/drill/diamonddrill, /obj/item/mecha_parts/mecha_equipment/drill/diamonddrill)
 
 /datum/bounty/item/science/floor_buffer
 	name = "Floor Buffer Upgrade"
-	description = "One of CentCom's janitors made a small fortune betting on carp races. Now they'd like to commission an upgrade to their floor buffer."
+	description = "One of Head Office's janitors made a small fortune betting on carp races. Now they'd like to commission an upgrade to their floor buffer."
 	reward = 10000
 	wanted_types = list(/obj/item/janiupgrade)
 

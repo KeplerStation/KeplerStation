@@ -229,10 +229,10 @@
 		if("moveferry")
 			if(!check_rights(R_ADMIN))
 				return
-			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Send CentCom Ferry"))
+			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Send Head Office Ferry"))
 			if(!SSshuttle.toggleShuttle("ferry","ferry_home","ferry_away"))
-				message_admins("[key_name_admin(usr)] moved the CentCom ferry")
-				log_admin("[key_name(usr)] moved the CentCom ferry")
+				message_admins("[key_name_admin(usr)] moved the Head Office ferry")
+				log_admin("[key_name(usr)] moved the Head Office ferry")
 
 		if("togglearrivals")
 			if(!check_rights(R_ADMIN))
@@ -469,7 +469,7 @@
 				if(is_station_level(W.z) && !istype(get_area(W), /area/bridge) && !istype(get_area(W), /area/crew_quarters) && !istype(get_area(W), /area/security/prison))
 					W.req_access = list()
 			message_admins("[key_name_admin(usr)] activated Egalitarian Station mode")
-			priority_announce("CentCom airlock control override activated. Please take this time to get acquainted with your coworkers.", null, 'sound/ai/commandreport.ogg')
+			priority_announce("Head Office airlock control override activated. Please take this time to get acquainted with your coworkers.", null, 'sound/ai/commandreport.ogg')
 
 		if("ak47s")
 			if(!check_rights(R_FUN))

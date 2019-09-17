@@ -1,9 +1,9 @@
 /datum/bounty/item/engineering/gas
 	name = "Full Tank of Pluoxium"
-	description = "CentCom RnD is researching extra compact internals. Ship us a tank full of Pluoxium and you'll be compensated."
+	description = "ICC RnD is researching extra compact internals. Ship us a tank full of Pluoxium and you'll be compensated."
 	reward = 7500
 	wanted_types = list(/obj/item/tank)
-	var/moles_required = 20 // A full tank is 28 moles, but CentCom ignores that fact.
+	var/moles_required = 20 // A full tank is 28 moles, but Head Office ignores that fact.
 	var/gas_type = /datum/gas/pluoxium
 
 /datum/bounty/item/engineering/gas/applies_to(obj/O)

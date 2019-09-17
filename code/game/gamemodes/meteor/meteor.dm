@@ -39,7 +39,7 @@
 			++survivors
 
 			if(player.onCentCom())
-				survivor_list += "<span class='greentext'>[player.real_name] escaped to the safety of CentCom.</span>"
+				survivor_list += "<span class='greentext'>[player.real_name] escaped to the safety of the transfer station.</span>"
 			else if(player.onSyndieBase())
 				survivor_list += "<span class='greentext'>[player.real_name] escaped to the (relative) safety of Syndicate Space.</span>"
 			else

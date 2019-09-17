@@ -1,5 +1,5 @@
 /datum/antagonist/official
-	name = "CentCom Official"
+	name = "Head Office Official"
 	show_name_in_check_antagonists = TRUE
 	show_in_antagpanel = FALSE
 	var/datum/objective/mission
@@ -7,11 +7,11 @@
 	can_hijack = HIJACK_PREVENT
 
 /datum/antagonist/official/greet()
-	to_chat(owner, "<B><font size=3 color=red>You are a CentCom Official.</font></B>")
+	to_chat(owner, "<B><font size=3 color=red>You are a Head Office official.</font></B>")
 	if (ert_team)
-		to_chat(owner, "Central Command is sending you to [station_name()] with the task: [ert_team.mission.explanation_text]")
+		to_chat(owner, "Head Office is sending you to [station_name()] with the task: [ert_team.mission.explanation_text]")
 	else
-		to_chat(owner, "Central Command is sending you to [station_name()] with the task: [mission.explanation_text]")
+		to_chat(owner, "Head Office is sending you to [station_name()] with the task: [mission.explanation_text]")
 
 /datum/antagonist/official/proc/equip_official()
 	var/mob/living/carbon/human/H = owner.current

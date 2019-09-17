@@ -30,7 +30,7 @@
 	switch(dispatch_type)
 		if(HIJACK_SYNDIE)
 			if(prob(50))
-				priority_announce("Cargo: The syndicate are trying to infiltrate your station. If you let them hijack your cargo shuttle, you'll save us a headache.","CentCom Counter Intelligence")
+				priority_announce("Cargo: The syndicate are trying to infiltrate your station. If you let them hijack your cargo shuttle, you'll save us a headache.","Head Office")
 			else
 				priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/ai/commandreport.ogg') // CITADEL EDIT metabreak
 				for(var/obj/machinery/computer/communications/C in GLOB.machines)
@@ -41,7 +41,7 @@
 						P.update_icon()
 		if(RUSKY_PARTY)
 			if(prob(50))
-				priority_announce("Cargo: A group of angry Russians want to have a party. Can you send them your cargo shuttle then make them disappear?","CentCom Russian Outreach Program")
+				priority_announce("Cargo: A group of angry Russians want to have a party. Can you send them your cargo shuttle then make them disappear?","Head Office")
 			else
 				priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/ai/commandreport.ogg') // CITADEL EDIT metabreak
 				for(var/obj/machinery/computer/communications/C in GLOB.machines)
@@ -52,7 +52,7 @@
 						P.update_icon()
 		if(SPIDER_GIFT)
 			if(prob(50))
-				priority_announce("Cargo: The Spider Clan has sent us a mysterious gift. Can we ship it to you to see what's inside?","CentCom Diplomatic Corps")
+				priority_announce("Cargo: The Spider Clan has sent us a mysterious gift. Can we ship it to you to see what's inside?","Head Office")
 			else
 				priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/ai/commandreport.ogg') // CITADEL EDIT metabreak
 				for(var/obj/machinery/computer/communications/C in GLOB.machines)
@@ -63,7 +63,7 @@
 						P.update_icon()
 		if(DEPARTMENT_RESUPPLY)
 			if(prob(50))
-				priority_announce("Cargo: Seems we've ordered doubles of our department resupply packages this month. Can we send them to you?","CentCom Supply Department")
+				priority_announce("Cargo: Seems we've ordered doubles of our department resupply packages this month. Can we send them to you?","Head Office")
 			else
 				priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/ai/commandreport.ogg') // CITADEL EDIT metabreak
 				for(var/obj/machinery/computer/communications/C in GLOB.machines)
@@ -74,7 +74,7 @@
 						P.update_icon()
 		if(ANTIDOTE_NEEDED)
 			if(prob(50))
-				priority_announce("Cargo: Your station has been chosen for an epidemiological research project. Send us your cargo shuttle to receive your research samples.", "CentCom Research Initiatives")
+				priority_announce("Cargo: Your station has been chosen for an epidemiological research project. Send us your cargo shuttle to receive your research samples.", "Head Office")
 			else
 				priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/ai/commandreport.ogg') // CITADEL EDIT metabreak
 				for(var/obj/machinery/computer/communications/C in GLOB.machines)
@@ -85,7 +85,7 @@
 						P.update_icon()
 		if (PIZZA_DELIVERY)
 			if(prob(50))
-				priority_announce("Cargo: It looks like a neighbouring station accidentally delivered their pizza to you instead.", "CentCom Spacepizza Division")
+				priority_announce("Cargo: It looks like a neighbouring station accidentally delivered their pizza to you instead.", "Head Office")
 			else
 				priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/ai/commandreport.ogg') // CITADEL EDIT metabreak
 				for(var/obj/machinery/computer/communications/C in GLOB.machines)
@@ -96,7 +96,7 @@
 						P.update_icon()
 		if(ITS_HIP_TO)
 			if(prob(50))
-				priority_announce("Cargo: One of our freighters carrying a bee shipment has been attacked by eco-terrorists. Can you clean up the mess for us?", "CentCom Janitorial Division")
+				priority_announce("Cargo: One of our freighters carrying a bee shipment has been attacked by eco-terrorists. Can you clean up the mess for us?", "Head Office")
 			else
 				priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/ai/commandreport.ogg') // CITADEL EDIT metabreak
 				for(var/obj/machinery/computer/communications/C in GLOB.machines)
@@ -108,7 +108,7 @@
 			bonus_points = 20000 //Toxin bees can be unbeelievably lethal
 		if(MY_GOD_JC)
 			if(prob(50))
-				priority_announce("Cargo: We have discovered an active Syndicate bomb near our VIP shuttle's fuel lines. If you feel up to the task, we will pay you for defusing it.", "CentCom Security Division")
+				priority_announce("Cargo: We have discovered an active Syndicate bomb near our VIP shuttle's fuel lines. If you feel up to the task, we will pay you for defusing it.", "Head Office")
 			else
 				priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/ai/commandreport.ogg') // CITADEL EDIT metabreak
 				for(var/obj/machinery/computer/communications/C in GLOB.machines)
@@ -120,19 +120,19 @@
 			bonus_points = 45000 //If you mess up, people die and the shuttle gets turned into swiss cheese
 		if(DELTA_CRATES)
 			if(prob(50))
-				priority_announce("Cargo: We have discovered a warehouse of DELTA locked crates, we cant store any more of them at CC can you take them for us?.", "CentCom Security Division")
+				priority_announce("Cargo: We have discovered a warehouse of DELTA locked crates, we cant store any more of them at Head Office can you take them for us?.", "Head Office")
 			else
 				priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/ai/commandreport.ogg') // CITADEL EDIT metabreak
 				for(var/obj/machinery/computer/communications/C in GLOB.machines)
 					if(!(C.stat & (BROKEN|NOPOWER)) && is_station_level(C.z))
 						var/obj/item/paper/P = new(C.loc)
 						P.name = "Cargo Report"
-						P.info = "Cargo: We have discovered a warehouse of DELTA locked crates, we cant store any more of them at CC can you take them for us?."
+						P.info = "Cargo: We have discovered a warehouse of DELTA locked crates, we cant store any more of them at Head Office can you take them for us?."
 						P.update_icon()
 			bonus_points = 25000 //If you mess up, people die and the shuttle gets turned into swiss cheese
 
 /datum/round_event/shuttle_loan/proc/loan_shuttle()
-	priority_announce(thanks_msg, "Cargo shuttle commandeered by CentCom.")
+	priority_announce(thanks_msg, "Cargo shuttle commandeered by Head Office.")
 
 	dispatched = 1
 	SSshuttle.points += bonus_points
@@ -333,7 +333,7 @@
 
 /obj/item/paper/fluff/bee_objectives
 	name = "Objectives of a Bee Liberation Front Operative"
-	info = "<b>Objective #1</b>. Liberate all bees on the NT transport vessel 2416/B. <b>Success!</b>  <br><b>Objective #2</b>. Escape alive. <b>Failed.</b>"
+	info = "<b>Objective #1</b>. Liberate all bees on the transport vessel 2416/B. <b>Success!</b>  <br><b>Objective #2</b>. Escape alive. <b>Failed.</b>"
 
 /obj/machinery/syndicatebomb/shuttle_loan/Initialize()
 	. = ..()

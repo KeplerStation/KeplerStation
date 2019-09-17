@@ -35,7 +35,7 @@
 	id = "asteroid4"
 	suffix = "asteroid4.dmm"
 	name = "Asteroid 4"
-	description = "Nanotrasen Escape Pods have a 100%* success rate, and a 99%* customer satisfaction rate. \
+	description = "Station Escape Pods have a 100%* success rate, and a 99%* customer satisfaction rate. \
 	*Please note that these statistics, are taken from pods that have successfully docked with a recovery vessel."
 
 /datum/map_template/ruin/space/asteroid5
@@ -83,7 +83,7 @@
 	id = "derelict4"
 	suffix = "derelict4.dmm"
 	name = "Derelict 4"
-	description = "CentCom ferries have never crashed, will never crash, there is no current investigation into a crashed ferry, and we will not let Internal Affairs trample over high security \
+	description = "ICC ferries have never crashed, will never crash, there is no current investigation into a crashed ferry, and we will not let Internal Affairs trample over high security \
 	information in the name of this baseless witchhunt."
 
 /datum/map_template/ruin/space/derelict5
@@ -96,7 +96,7 @@
 	id = "derelict6"
 	suffix = "derelict6.dmm"
 	name = "Derelict 6"
-	description = "The hush-hush of Nanotrasen when it comes to stations seemingly vanishing off the radar is an interesting topic, theories of nuclear destruction float about while Nanotrasen \
+	description = "The hush-hush of the ICC when it comes to stations seemingly vanishing off the radar is an interesting topic, theories of nuclear destruction float about while the ICC \
 	flat-out denies said stations ever existing."
 
 /datum/map_template/ruin/space/empty_shell
@@ -214,7 +214,7 @@
 	suffix = "oldAIsat.dmm"
 	name = "Abandoned Telecommunications Satellite"
 	description = "When the inspector told the employees that they were all fired, and that their jobs \"could be done by trained lizards anyway\", they reacted badly. \
-	This event and others is the reason why Central always sends an ERT squad with their competent inspectors. Incompetent inspectors are told they can \"do it alone\" because they're \"that pro\". \
+	This event and others is the reason why Central always sends an RRT squad with their competent inspectors. Incompetent inspectors are told they can \"do it alone\" because they're \"that pro\". \
 	Incompetent inspectors believe this."
 
 /datum/map_template/ruin/space/oldteleporter
@@ -259,7 +259,7 @@
 /datum/map_template/ruin/space/whiteshipruin_box
 	id = "whiteshipruin_box"
 	suffix = "whiteshipruin_box.dmm"
-	name = "NT Medical Ship"
+	name = "HZ Medical Ship"
 	description = "An ancient ship, said to be among the first discovered derelicts near Space Station 13 that was still in working order. \
 	Aged and deprecated by time, this relic of a vessel is now broken beyond repair."
 
