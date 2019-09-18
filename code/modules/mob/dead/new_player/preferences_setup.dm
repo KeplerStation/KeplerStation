@@ -21,6 +21,7 @@
 	age = rand(AGE_MIN,AGE_MAX)
 
 /datum/preferences/proc/update_preview_icon()
+<<<<<<< HEAD
 	// Silicons only need a very basic preview since there is no customization for them.
 	if(job_engsec_high)
 		switch(job_engsec_high)
@@ -30,6 +31,24 @@
 			if(CYBORG)
 				parent.show_character_previews(image('icons/mob/robots.dmi', icon_state = "robot", dir = SOUTH))
 				return
+=======
+	// Determine what job is marked as 'High' priority, and dress them up as such.
+	var/datum/job/previewJob
+	var/highest_pref = 0
+	for(var/job in job_preferences)
+		if(job_preferences["[job]"] > highest_pref)
+			previewJob = SSjob.GetJob(job)
+			highest_pref = job_preferences["[job]"]
+
+	if(previewJob)
+		// Silicons only need a very basic preview since there is no customization for them.
+		if(istype(previewJob,/datum/job/ai))
+			parent.show_character_previews(image('icons/mob/ai.dmi', icon_state = resolve_ai_icon(preferred_ai_core_display), dir = SOUTH))
+			return
+		if(istype(previewJob,/datum/job/cyborg))
+			parent.show_character_previews(image('icons/mob/robots.dmi', icon_state = "robot", dir = SOUTH))
+			return
+>>>>>>> 2cf1e6ff8... Merge pull request #9302 from deathride58/jobcodesanitychecks
 
 	// Set up the dummy for its photoshoot
 	var/mob/living/carbon/human/dummy/mannequin = generate_or_wait_for_human_dummy(DUMMY_HUMAN_SLOT_PREFERENCES)

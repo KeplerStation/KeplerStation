@@ -116,7 +116,11 @@ SUBSYSTEM_DEF(job)
 		if(player.mind && job.title in player.mind.restricted_roles)
 			JobDebug("FOC incompatible with antagonist role, Player: [player]")
 			continue
+<<<<<<< HEAD
 		if(player.client.prefs.GetJobDepartment(job, level) & job.flag)
+=======
+		if(player.client.prefs.job_preferences["[job.title]"] == level)
+>>>>>>> 2cf1e6ff8... Merge pull request #9302 from deathride58/jobcodesanitychecks
 			JobDebug("FOC pass, Player: [player], Level:[level]")
 			candidates += player
 	return candidates
@@ -182,7 +186,7 @@ SUBSYSTEM_DEF(job)
 			if((job.current_positions >= job.total_positions) && job.total_positions != -1)
 				continue
 			var/list/candidates = FindOccupationCandidates(job, level)
-			if(!candidates.len)
+			if(!candidates?.len)
 				continue
 			var/mob/dead/new_player/candidate = pick(candidates)
 			if(AssignRole(candidate, command_position))
@@ -200,7 +204,7 @@ SUBSYSTEM_DEF(job)
 		if((job.current_positions >= job.total_positions) && job.total_positions != -1)
 			continue
 		var/list/candidates = FindOccupationCandidates(job, level)
-		if(!candidates.len)
+		if(!candidates?.len)
 			continue
 		var/mob/dead/new_player/candidate = pick(candidates)
 		AssignRole(candidate, command_position)
@@ -246,7 +250,7 @@ SUBSYSTEM_DEF(job)
 
 	initial_players_to_assign = unassigned.len
 
-	JobDebug("DO, Len: [unassigned.len]")
+	JobDebug("DO, Len: [unassigned?.len]")
 	if(unassigned.len == 0)
 		return 0
 
@@ -269,8 +273,13 @@ SUBSYSTEM_DEF(job)
 	//People who wants to be the overflow role, sure, go on.
 	JobDebug("DO, Running Overflow Check 1")
 	var/datum/job/overflow = GetJob(SSjob.overflow_role)
+<<<<<<< HEAD
 	var/list/overflow_candidates = FindOccupationCandidates(overflow, 3)
 	JobDebug("AC1, Candidates: [overflow_candidates.len]")
+=======
+	var/list/overflow_candidates = FindOccupationCandidates(overflow, JP_LOW)
+	JobDebug("AC1, Candidates: [overflow_candidates?.len]")
+>>>>>>> 2cf1e6ff8... Merge pull request #9302 from deathride58/jobcodesanitychecks
 	for(var/mob/dead/new_player/player in overflow_candidates)
 		JobDebug("AC1 pass, Player: [player]")
 		AssignRole(player, SSjob.overflow_role)
@@ -332,7 +341,11 @@ SUBSYSTEM_DEF(job)
 					continue
 
 				// If the player wants that job on this level, then try give it to him.
+<<<<<<< HEAD
 				if(player.client.prefs.GetJobDepartment(job, level) & job.flag)
+=======
+				if(player.client.prefs.job_preferences["[job.title]"] == level)
+>>>>>>> 2cf1e6ff8... Merge pull request #9302 from deathride58/jobcodesanitychecks
 					// If the job isn't filled
 					if((job.current_positions < job.spawn_positions) || job.spawn_positions == -1)
 						JobDebug("DO pass, Player: [player], Level:[level], Job:[job.title]")
@@ -502,6 +515,7 @@ SUBSYSTEM_DEF(job)
 			if(job.required_playtime_remaining(player.client))
 				young++
 				continue
+<<<<<<< HEAD
 			if(player.client.prefs.GetJobDepartment(job, 1) & job.flag)
 				high++
 			else if(player.client.prefs.GetJobDepartment(job, 2) & job.flag)
@@ -509,6 +523,17 @@ SUBSYSTEM_DEF(job)
 			else if(player.client.prefs.GetJobDepartment(job, 3) & job.flag)
 				low++
 			else never++ //not selected
+=======
+			switch(player.client.prefs.job_preferences["[job.title]"])
+				if(JP_HIGH)
+					high++
+				if(JP_MEDIUM)
+					medium++
+				if(JP_LOW)
+					low++
+				else
+					never++
+>>>>>>> 2cf1e6ff8... Merge pull request #9302 from deathride58/jobcodesanitychecks
 		SSblackbox.record_feedback("nested tally", "job_preferences", high, list("[job.title]", "high"))
 		SSblackbox.record_feedback("nested tally", "job_preferences", medium, list("[job.title]", "medium"))
 		SSblackbox.record_feedback("nested tally", "job_preferences", low, list("[job.title]", "low"))

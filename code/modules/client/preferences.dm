@@ -770,7 +770,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				var/available_in_days = job.available_in_days(user.client)
 				HTML += "<font color=red>[rank]</font></td><td><font color=red> \[IN [(available_in_days)] DAYS\]</font></td></tr>"
 				continue
+<<<<<<< HEAD
 			if((job_civilian_low & overflow.flag) && (rank != SSjob.overflow_role) && !jobban_isbanned(user, SSjob.overflow_role))
+=======
+			if((job_preferences["[SSjob.overflow_role]"] == JP_LOW) && (rank != SSjob.overflow_role) && !jobban_isbanned(user, SSjob.overflow_role))
+>>>>>>> 2cf1e6ff8... Merge pull request #9302 from deathride58/jobcodesanitychecks
 				HTML += "<font color=orange>[rank]</font></td><td></td></tr>"
 				continue
 			if((rank in GLOB.command_positions) || (rank == "AI"))//Bold head jobs
@@ -785,6 +789,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			var/prefUpperLevel = -1 // level to assign on left click
 			var/prefLowerLevel = -1 // level to assign on right click
 
+<<<<<<< HEAD
 			if(GetJobDepartment(job, 1) & job.flag)
 				prefLevelLabel = "High"
 				prefLevelColor = "slateblue"
@@ -806,11 +811,38 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				prefUpperLevel = 3
 				prefLowerLevel = 1
 
+=======
+			switch(job_preferences["[job.title]"])
+				if(JP_HIGH)
+					prefLevelLabel = "High"
+					prefLevelColor = "slateblue"
+					prefUpperLevel = 4
+					prefLowerLevel = 2
+				if(JP_MEDIUM)
+					prefLevelLabel = "Medium"
+					prefLevelColor = "green"
+					prefUpperLevel = 1
+					prefLowerLevel = 3
+				if(JP_LOW)
+					prefLevelLabel = "Low"
+					prefLevelColor = "orange"
+					prefUpperLevel = 2
+					prefLowerLevel = 4
+				else
+					prefLevelLabel = "NEVER"
+					prefLevelColor = "red"
+					prefUpperLevel = 3
+					prefLowerLevel = 1
+>>>>>>> 2cf1e6ff8... Merge pull request #9302 from deathride58/jobcodesanitychecks
 
 			HTML += "<a class='white' href='?_src_=prefs;preference=job;task=setJobLevel;level=[prefUpperLevel];text=[rank]' oncontextmenu='javascript:return setJobPrefRedirect([prefLowerLevel], \"[rank]\");'>"
 
 			if(rank == SSjob.overflow_role)//Overflow is special
+<<<<<<< HEAD
 				if(job_civilian_low & overflow.flag)
+=======
+				if(job_preferences["[SSjob.overflow_role]"] == JP_LOW)
+>>>>>>> 2cf1e6ff8... Merge pull request #9302 from deathride58/jobcodesanitychecks
 					HTML += "<font color=green>Yes</font>"
 				else
 					HTML += "<font color=red>No</font>"
@@ -893,9 +925,21 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			if (3)
 				job_medsci_low |= job.flag
 
+<<<<<<< HEAD
 		return 1
 
 	return 0
+=======
+	if (level == JP_HIGH) // to high
+		//Set all other high to medium
+		for(var/j in job_preferences)
+			if(job_preferences["[j]"] == JP_HIGH)
+				job_preferences["[j]"] = JP_MEDIUM
+				//technically break here
+
+	job_preferences["[job.title]"] = level
+	return TRUE
+>>>>>>> 2cf1e6ff8... Merge pull request #9302 from deathride58/jobcodesanitychecks
 
 /datum/preferences/proc/UpdateJobPreference(mob/user, role, desiredLvl)
 	if(!SSjob || SSjob.occupations.len <= 0)
@@ -913,8 +957,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		return
 
 	if(role == SSjob.overflow_role)
+<<<<<<< HEAD
 		if(job_civilian_low & job.flag)
 			job_civilian_low &= ~job.flag
+=======
+		if(job_preferences["[job.title]"] == JP_LOW)
+			jpval = null
+>>>>>>> 2cf1e6ff8... Merge pull request #9302 from deathride58/jobcodesanitychecks
 		else
 			job_civilian_low |= job.flag
 		SetChoices(user)
