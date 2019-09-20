@@ -200,7 +200,6 @@
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "aav" = (
-/obj/machinery/computer/cargo/request,
 /obj/machinery/status_display/ai{
 	pixel_y = 32
 	},
@@ -1100,6 +1099,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+/obj/machinery/deepfryer,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "abD" = (
