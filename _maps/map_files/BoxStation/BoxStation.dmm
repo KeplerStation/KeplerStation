@@ -38403,6 +38403,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 2
 	},
+/obj/machinery/computer/pod,
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
 "bLc" = (
@@ -57561,6 +57562,15 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /turf/open/floor/plasteel,
 /area/maintenance/disposal/incinerator)
+"rhq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/science/xenobiology)
 "rmX" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/beer,
@@ -100585,7 +100595,7 @@ bKY
 bMi
 bNo
 bIP
-bPA
+rhq
 bJN
 bRU
 bEm
