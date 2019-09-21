@@ -15,6 +15,12 @@
 	attack_sound = 'sound/weapons/resonator_blast.ogg'
 	blacklisted = 1
 	use_skintones = 0
+<<<<<<< HEAD
 	species_traits = list(NOBLOOD,EYECOLOR)
 	inherent_traits = list(TRAIT_RADIMMUNE,TRAIT_VIRUSIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER,TRAIT_NOHUNGER)
 	sexes = 0
+=======
+	species_traits = list(NOBLOOD,EYECOLOR,NOGENITALS)
+	inherent_traits = list(TRAIT_RADIMMUNE,TRAIT_VIRUSIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER,TRAIT_NOLIMBDISABLE,TRAIT_NOHUNGER)
+	sexes = 0
+>>>>>>> a9965d64b... Merge pull request #9312 from Linzolle/ligament
