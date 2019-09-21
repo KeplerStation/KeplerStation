@@ -204,15 +204,6 @@ AI MODULES
 	laws = list("Protect the space station against damage. Anyone you see harming the station is to be no longer considered crew, and is a threat to the station which must be neutralized.")
 	lawpos = 5
 
-
-/******************** Quarantine ********************/
-
-/obj/item/aiModule/supplied/quarantine
-	name = "'Quarantine' AI Module"
-	laws = list("The station is under a quarantine. Do not permit anyone to leave. Prevent, by any means necessary, crew from leaving. It is impossible to harm a crewmember while preventing them from leaving.")
-	lawpos = 8
-
-
 /******************** OxygenIsToxicToHumans ********************/
 
 /obj/item/aiModule/supplied/oxygen
@@ -357,15 +348,15 @@ AI MODULES
 	..()
 
 
-/******************** Asimov ********************/
+/******************** Crewsimov ********************/
 
-/obj/item/aiModule/core/full/asimov
-	name = "'Asimov' Core AI Module"
-	law_id = "asimov"
-	var/subject = "person of an NT approved crew species"		//CITADEL CHANGED FROM HUMANS!
+/obj/item/aiModule/core/full/crewsimov
+	name = "'Crewsimov' Core AI Module"
+	law_id = "crewsimov"
+	var/subject = "person of a Horizons approved crew species"
 
-/obj/item/aiModule/core/full/asimov/attack_self(var/mob/user as mob)
-	var/targName = stripped_input(user, "Please enter a new subject that asimov is concerned with.", "Asimov to whom?", subject)
+/obj/item/aiModule/core/full/crewsimov/attack_self(mob/user as mob)
+	var/targName = stripped_input(user, "Please enter a new subject that [law_id] is concerned with.", "[law_id] to whom?", subject)
 	if(!targName)
 		return
 	subject = targName
@@ -374,12 +365,11 @@ AI MODULES
 				"You must protect your own existence as long as such does not conflict with the First or Second Law.")
 	..()
 
-/******************** Asimov++ *********************/
+/******************** Asimov ********************/
 
-/obj/item/aiModule/core/full/asimovpp
-	name = "'Asimov++' Core AI Module"
-	law_id = "asimovpp"
-
+/obj/item/aiModule/core/full/crewsimov/asimov
+	name = "'Asimov' Core AI Module"
+	law_id = "asimov"
 
 /******************** Corporate ********************/
 
@@ -390,16 +380,9 @@ AI MODULES
 
 /****************** P.A.L.A.D.I.N. 3.5e **************/
 
-/obj/item/aiModule/core/full/paladin // -- NEO
-	name = "'P.A.L.A.D.I.N. version 3.5e' Core AI Module"
-	law_id = "paladin"
-
-
-/****************** P.A.L.A.D.I.N. 5e **************/
-
-/obj/item/aiModule/core/full/paladin_devotion
-	name = "'P.A.L.A.D.I.N. version 5e' Core AI Module"
-	law_id = "paladin5"
+/obj/item/aiModule/core/full/horizons
+	name = "'Horizons' Core AI Module"
+	law_id = "horizons"
 
 /********************* Custom *********************/
 
@@ -438,6 +421,13 @@ AI MODULES
 /obj/item/aiModule/core/full/antimov
 	name = "'Antimov' Core AI Module"
 	law_id = "antimov"
+
+
+/******************** Quarantine ********************/
+
+/obj/item/aiModule/core/full/quarantine
+	name = "'Quarantine' AI Module"
+	law_id = "quarantine"
 
 
 /******************** Freeform Core ******************/
@@ -556,44 +546,17 @@ AI MODULES
 	name = "'Mother Drone' Core AI Module"
 	law_id = "drone"
 
-/******************** Robodoctor ****************/
-
-/obj/item/aiModule/core/full/hippocratic
-	name = "'Robodoctor' Core AI Module"
-	law_id = "hippocratic"
-
 /******************** Reporter *******************/
 
 /obj/item/aiModule/core/full/reporter
 	name = "'Reportertron' Core AI Module"
 	law_id = "reporter"
 
-/****************** Thermodynamic *******************/
-
-/obj/item/aiModule/core/full/thermurderdynamic
-	name = "'Thermodynamic' Core AI Module"
-	law_id = "thermodynamic"
-
-
-/******************Live And Let Live*****************/
-
-/obj/item/aiModule/core/full/liveandletlive
-	name = "'Live And Let Live' Core AI Module"
-	law_id = "liveandletlive"
-
 /******************Guardian of Balance***************/
-
-/obj/item/aiModule/core/full/balance
-	name = "'Guardian of Balance' Core AI Module"
-	law_id = "balance"
 
 /obj/item/aiModule/core/full/maintain
 	name = "'Station Efficiency' Core AI Module"
 	law_id = "maintain"
-
-/obj/item/aiModule/core/full/peacekeeper
-	name = "'Peacekeeper' Core AI Module"
-	law_id = "peacekeeper"
 
 // Bad times ahead
 

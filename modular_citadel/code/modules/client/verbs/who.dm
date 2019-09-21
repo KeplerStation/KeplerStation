@@ -28,6 +28,8 @@
 	set category = "OOC"
 
 	var/msg = ""
+	var/a_col = "#FF0000" //Admin color
+	var/m_col = "#12A5F4" //Mentor color
 
 	var/list/Lines = list()
 	var/list/assembled = list()
@@ -36,7 +38,7 @@
 		log_admin("[key_name(usr)] checked advanced who in-round")
 
 	// KEPLER CHANGE: Make admins and mentors highlight instead of being in their own categoriess
-	Lines += "<b>Players | <font color='#FF0000'>Admins</font> | <font color='#0033CC'>Mentors</font></b>"
+	Lines += "<b>Players | <font color='[a_col]'>Admins</font> | <font color='[m_col]'>Mentors</font></b>"
 	for(var/X in sortKey(GLOB.clients))
 		var/client/C = X
 		if(!C)
@@ -45,9 +47,9 @@
 		if(C.holder && C.holder.fakekey)
 			key = C.holder.fakekey
 		if(C.holder)
-			key = "<font color='#FF0000'>[key]</font>"
+			key = "<font color='[a_col]'>[key]</font>"
 		else if(C in GLOB.mentors)
-			key = "<font color='#0033CC'>[key]</font>"
+			key = "<font color='[m_col]'>[key]</font>"
 		assembled += "\t [key][admin_mode? "[show_admin_info(C)]":""] ([round(C.avgping, 1)]ms)"
 	Lines += jointext(assembled, "\n")
 	

@@ -11962,7 +11962,7 @@
 /area/bridge)
 "aCG" = (
 /obj/structure/table,
-/obj/item/aiModule/supplied/quarantine,
+/obj/item/aiModule/core/full/quarantine,
 /obj/machinery/camera/motion{
 	c_tag = "AI Upload Port";
 	dir = 4;
@@ -12890,7 +12890,7 @@
 /area/bridge)
 "aED" = (
 /obj/structure/table,
-/obj/item/aiModule/core/full/asimov,
+/obj/item/aiModule/core/full/crewsimov/asimov,
 /obj/effect/spawner/lootdrop/aimodule_harmless,
 /obj/item/aiModule/core/freeformcore,
 /obj/machinery/door/window{
@@ -12917,6 +12917,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/item/aiModule/core/full/crewsimov,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai_upload)
 "aEE" = (
@@ -47461,8 +47462,8 @@
 /area/hydroponics/garden/monastery)
 "cgL" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/suit/holidaypriest,
-/obj/item/clothing/suit/nun,
+/obj/item/clothing/suit/chaplain/holidaypriest,
+/obj/item/clothing/suit/chaplain/nun,
 /obj/item/clothing/head/nun_hood,
 /obj/machinery/button/door{
 	id = "Cell1";
@@ -47829,8 +47830,8 @@
 /area/space/nearstation)
 "cio" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/suit/holidaypriest,
-/obj/item/clothing/suit/nun,
+/obj/item/clothing/suit/chaplain/holidaypriest,
+/obj/item/clothing/suit/chaplain/nun,
 /obj/item/clothing/head/nun_hood,
 /obj/machinery/button/door{
 	id = "Cell2";
@@ -50471,8 +50472,8 @@
 /obj/structure/closet,
 /obj/item/storage/backpack/cultpack,
 /obj/item/clothing/head/nun_hood,
-/obj/item/clothing/suit/nun,
-/obj/item/clothing/suit/holidaypriest,
+/obj/item/clothing/suit/chaplain/nun,
+/obj/item/clothing/suit/chaplain/holidaypriest,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},

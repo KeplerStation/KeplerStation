@@ -98,3 +98,6 @@
 
 /obj/item/autosurgeon/reviver
 	starting_organ = /obj/item/organ/cyberimp/chest/reviver
+	
+/obj/item/autosurgeon/anti_drop
+	starting_organ = /obj/item/organ/cyberimp/brain/anti_drop
