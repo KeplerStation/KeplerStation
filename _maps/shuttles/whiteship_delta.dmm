@@ -911,11 +911,11 @@
 /obj/item/storage/wallet/random,
 /obj/item/clothing/under/rank/centcom_officer{
 	desc = "A badge on the arm indicates that it's meant to be worn by recovery teams. This one seems dusty and clearly hasn't been cleaned in some time.";
-	name = "\improper dusty old umpsuit"
+	name = "dusty old jumpsuit"
 	},
 /obj/item/clothing/under/rank/centcom_commander{
 	desc = "A badge on the arm indicates that it's meant to be worn by recovery teams. This one seems dusty and clearly hasn't been cleaned in some time.";
-	name = "\improper dusty old jumpsuit"
+	name = "dusty old jumpsuit"
 	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{

@@ -126,6 +126,6 @@
 	icon_state = "nanotrasen"
 
 /obj/structure/sign/logo
-	name = "nanotrasen logo"
+	name = "horizons logo"
 	desc = "The Horizons corporate logo."
 	icon_state = "nanotrasen_sign1"

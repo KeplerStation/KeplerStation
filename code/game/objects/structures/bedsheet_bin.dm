@@ -214,7 +214,7 @@ LINEN BINS
 	dream_messages = list("a book", "an explosion", "lightning", "a staff", "a skeleton", "a robe", "magic")
 
 /obj/item/bedsheet/nanotrasen
-	name = "nanotrasen bedsheet"
+	name = "horizons bedsheet"
 	desc = "It has the Horizons logo on it and has an aura of duty."
 	icon_state = "sheetNT"
 	item_color = "nanotrasen"

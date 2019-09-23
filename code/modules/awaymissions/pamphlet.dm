@@ -10,7 +10,7 @@
 			winning dental plan- but that's not all the Horizons Gateway project has to offer.<br>\
 			<br>Because we care about you, we feel it is only fair to make sure you know the risks \
 			before you commit to joining the Horizons Gateway project. All away destinations have \
-			been fully scanned by an xpeditionary team, and are certified to be 100% safe. \
+			been fully scanned by an expeditionary team, and are certified to be 100% safe. \
 			We've even left a case of space beer along with the basic materials you'll need to expand \
 			our operational area and start your new life.<br><br>\
 			<b>Gateway Operation Basics</b><br>\

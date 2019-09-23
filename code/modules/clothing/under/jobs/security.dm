@@ -23,7 +23,7 @@
 
 /obj/item/clothing/under/rank/security/grey
 	name = "grey security jumpsuit"
-	desc = "A tactical relic of years past before it was discovered it's cheaper to dye the suits red instead of washing out the blood."
+	desc = "A tactical relic of years past before it was discovered that it's cheaper to dye the suits red instead of washing out the blood."
 	icon_state = "security"
 	item_state = "gy_suit"
 	item_color = "security"
@@ -60,7 +60,7 @@
 
 /obj/item/clothing/under/rank/warden/grey
 	name = "grey security suit"
-	desc = "A formal relic of years past before it was decided it's cheaper to dye the suits red instead of washing out the blood."
+	desc = "A formal relic of years past before it was discovered that it's cheaper to dye the suits red instead of washing out the blood."
 	icon_state = "warden"
 	item_state = "gy_suit"
 	item_color = "warden"

@@ -47,7 +47,7 @@
 
 /datum/game_mode/monkey/announce()
 	to_chat(world, "<B>The current game mode is - Monkey!</B>")
-	to_chat(world, "<B>One or more crewmembers have been infected with Jungle Fever! Crew: Contain the outbreak. None of the infected monkeys may escape alive to transfer. Monkeys: Ensure that your kind lives on! Rise up against your captors!</B>")
+	to_chat(world, "<B>One or more crewmembers have been infected with Jungle Fever! Crew: Contain the outbreak. None of the infected monkeys may escape alive to the transfer station. Monkeys: Ensure that your kind lives on! Rise up against your captors!</B>")
 
 /datum/game_mode/monkey/post_setup()
 	for(var/datum/mind/carriermind in carriers)

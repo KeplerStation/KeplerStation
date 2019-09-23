@@ -299,7 +299,7 @@
 
 /obj/item/book/manual/wiki/security_space_law
 	name = "Space Law"
-	desc = "A set of guidelines for keeping law and order on their space stations."
+	desc = "A set of guidelines for keeping law and order on space stations."
 	icon_state = "bookSpaceLaw"
 	author = "Horizons"
 	title = "Space Law"

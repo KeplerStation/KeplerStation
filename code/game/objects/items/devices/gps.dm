@@ -174,7 +174,7 @@ GLOBAL_LIST_EMPTY(GPS_list)
 	desc = "A positioning system helpful for rescuing trapped or injured miners, keeping one on you at all times while mining might just save your life."
 
 /obj/item/gps/internal/base
-	gpstag = "NT_AUX"
+	gpstag = "HM_AUX"
 	desc = "A homing signal from the mining base."
 
 /obj/item/gps/visible_debug

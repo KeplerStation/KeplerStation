@@ -27,7 +27,7 @@
 
 /datum/bounty/item/security/sechuds
 	name = "Sec HUDs"
-	description = "The ICC military academy has started to train officers how to use Sec HUDs to the fullest affect. Please send spare Sec HUDs so we can teach the men."
+	description = "The ICC military academy has started to train officers how to use Sec HUDs to the fullest effect. Please send spare Sec HUDs so we can teach the men."
 	reward = 3000
 	required_count = 5
 	wanted_types = list(/obj/item/clothing/glasses/hud/security)
