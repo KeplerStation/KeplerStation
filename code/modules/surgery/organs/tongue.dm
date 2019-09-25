@@ -168,7 +168,7 @@
 	icon_state = "tonguexeno"
 	say_mod = "hisses"
 	taste_sensitivity = 10 // LIZARDS ARE ALIENS CONFIRMED
-	maxHealth = "alien" //Their blood is acid, so, no, though a tongueless xeno might be funny
+	maxHealth = 100 //Their blood is acid, so, no, though a tongueless xeno might be funny
 	modifies_speech = TRUE // not really, they just hiss
 	var/static/list/languages_possible_alien = typecacheof(list(
 		/datum/language/xenocommon,
@@ -214,7 +214,7 @@
 	name = "plasma bone \"tongue\""
 	desc = "Like animated skeletons, Plasmamen vibrate their teeth in order to produce speech."
 	icon_state = "tongueplasma"
-	maxHealth = "alien"
+	maxHealth = 100
 	modifies_speech = FALSE
 
 /obj/item/organ/tongue/robot
