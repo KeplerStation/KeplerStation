@@ -12382,11 +12382,6 @@
 /area/hydroponics/garden/abandoned)
 "aBk" = (
 /obj/structure/table,
-/obj/item/seeds/poppy/lily{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/seeds/poppy/geranium,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/food/snacks/grown/wheat,
 /obj/item/reagent_containers/food/snacks/grown/corn,
@@ -12394,6 +12389,10 @@
 /obj/effect/turf_decal/bot,
 /obj/machinery/airalarm{
 	pixel_y = 23
+	},
+/obj/item/seeds/poppy/lily{
+	pixel_x = 4;
+	pixel_y = 4
 	},
 /turf/open/floor/plasteel,
 /area/hydroponics/garden/abandoned)
@@ -13031,22 +13030,16 @@
 /obj/machinery/atmospherics/pipe/simple/orange/hidden,
 /turf/closed/wall/r_wall,
 /area/engine/atmospherics_engine)
-"aCv" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/hydroponics/garden/abandoned)
 "aCw" = (
 /turf/open/floor/plasteel,
 /area/hydroponics/garden/abandoned)
 "aCx" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/hydroponics/garden/abandoned)
 "aCy" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 4
 	},
@@ -14188,7 +14181,6 @@
 /turf/open/space,
 /area/space/nearstation)
 "aEB" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/white{
 	icon_state = "2-4"
 	},
@@ -14201,7 +14193,6 @@
 /turf/open/floor/plasteel,
 /area/hydroponics/garden/abandoned)
 "aED" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
@@ -14212,11 +14203,6 @@
 /obj/structure/cable/white{
 	icon_state = "2-8"
 	},
-/turf/open/floor/plasteel,
-/area/hydroponics/garden/abandoned)
-"aEF" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel,
 /area/hydroponics/garden/abandoned)
 "aEG" = (
@@ -14875,21 +14861,21 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/white,
 /obj/machinery/power/apc{
-	dir = 2;
-	name = "Abandoned Garden APC";
 	areastring = "/area/hydroponics/garden/abandoned";
+	dir = 2;
+	name = "Maintenance Garden APC";
 	pixel_y = -26
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/hydroponics/garden/abandoned)
 "aFM" = (
-/obj/machinery/seed_extractor,
 /obj/machinery/status_display{
 	pixel_y = -32
 	},
-/obj/item/reagent_containers/glass/bucket,
 /obj/effect/turf_decal/delivery,
+/obj/machinery/hydroponics/soil,
+/obj/item/seeds/poppy/geranium,
 /turf/open/floor/plasteel,
 /area/hydroponics/garden/abandoned)
 "aFN" = (
@@ -15925,7 +15911,6 @@
 /area/engine/atmospherics_engine)
 "aHl" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/barricade/wooden,
 /turf/open/floor/plating,
 /area/hydroponics/garden/abandoned)
 "aHm" = (
@@ -15936,7 +15921,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/barricade/wooden,
 /obj/effect/turf_decal/stripes/line{
 	dir = 2
 	},
@@ -15954,7 +15938,6 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/obj/structure/barricade/wooden,
 /obj/effect/turf_decal/stripes/line{
 	dir = 2
 	},
@@ -15965,7 +15948,6 @@
 /area/hydroponics/garden/abandoned)
 "aHo" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/barricade/wooden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plating,
 /area/hydroponics/garden/abandoned)
@@ -126700,6 +126682,11 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/science/research)
+"ift" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light,
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
 "iwL" = (
 /obj/machinery/status_display{
 	pixel_x = 32
@@ -126805,6 +126792,12 @@
 /obj/item/integrated_circuit_printer,
 /turf/open/floor/plasteel/white/side,
 /area/science/circuit)
+"jpo" = (
+/obj/machinery/seed_extractor,
+/obj/item/reagent_containers/glass/bucket,
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel,
+/area/hydroponics/garden/abandoned)
 "jqM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line{
@@ -126975,6 +126968,19 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
+"kSI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/port/fore)
 "lak" = (
 /turf/open/floor/plasteel/white/side{
 	dir = 10
@@ -127124,6 +127130,12 @@
 	dir = 1
 	},
 /area/science/circuit)
+"mbz" = (
+/obj/effect/turf_decal/delivery,
+/obj/machinery/hydroponics/soil,
+/obj/item/seeds/watermelon,
+/turf/open/floor/plasteel,
+/area/hydroponics/garden/abandoned)
 "mkm" = (
 /obj/machinery/atmospherics/components/binary/valve,
 /obj/machinery/embedded_controller/radio/airlock_controller/incinerator_toxmix{
@@ -127217,6 +127229,12 @@
 /obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/chapel/office)
+"nGb" = (
+/obj/effect/turf_decal/delivery,
+/obj/machinery/hydroponics/soil,
+/obj/item/seeds/grape,
+/turf/open/floor/plasteel,
+/area/hydroponics/garden/abandoned)
 "nSh" = (
 /obj/machinery/atmospherics/pipe/simple/general/hidden,
 /turf/closed/wall/r_wall,
@@ -127396,6 +127414,14 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/research/abandoned)
+"pSV" = (
+/obj/effect/turf_decal/delivery,
+/obj/machinery/hydroponics/soil,
+/obj/item/seeds/lime{
+	pixel_x = 6
+	},
+/turf/open/floor/plasteel,
+/area/hydroponics/garden/abandoned)
 "qhc" = (
 /obj/structure/table/reinforced,
 /obj/item/integrated_electronics/analyzer,
@@ -157148,7 +157174,7 @@ alg
 ayT
 aAb
 aBg
-aCv
+aCw
 aDx
 aCw
 aFJ
@@ -157407,7 +157433,7 @@ aAb
 aBh
 aCw
 aCw
-aCv
+aCw
 aFK
 aHl
 aIH
@@ -157663,7 +157689,7 @@ aoY
 aAb
 aBi
 aCw
-aCw
+mbz
 aEB
 aFL
 aAb
@@ -157919,8 +157945,8 @@ alf
 alf
 aAb
 aBj
-aCv
 aCw
+jpo
 aEC
 aFM
 aAb
@@ -158176,12 +158202,12 @@ axK
 alg
 aAb
 aBk
-aCv
 aCw
+nGb
 aEC
 aFN
 aAb
-arA
+kSI
 aKi
 aLz
 aMQ
@@ -158948,12 +158974,12 @@ ayX
 aAb
 aBn
 aCx
-aCw
+pSV
 aCw
 aFQ
 aAb
 asQ
-arB
+ift
 aLz
 aMT
 aOs
@@ -159206,7 +159232,7 @@ aAc
 aBo
 aCy
 aDz
-aEF
+aDz
 aFR
 aHo
 aIK
@@ -159463,7 +159489,7 @@ aAb
 aBp
 aCw
 aDA
-aCv
+aCw
 aFJ
 aAb
 aIL
