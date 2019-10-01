@@ -21,6 +21,7 @@
 	var/held_index = 0 //are we a hand? if so, which one!
 	var/is_pseudopart = FALSE //For limbs that don't really exist, eg chainsaws
 	var/bone_status = BONE_FLAG_NO_BONES // Is it fine, broken, splinted, or just straight up fucking gone
+	var/bone_break_threshold = 30
 
 	var/disabled = BODYPART_NOT_DISABLED //If disabled, limb is as good as missing
 	var/body_damage_coeff = 1 //Multiplier of the limb's damage that gets applied to the mob
@@ -144,6 +145,7 @@
 //Applies brute and burn damage to the organ. Returns 1 if the damage-icon states changed at all.
 //Damage will not exceed max_damage using this proc
 //Cannot apply negative damage
+// KEPLER CHANGE: Break_modifier = force of the item attacking
 /obj/item/bodypart/proc/receive_damage(brute = 0, burn = 0, stamina = 0, updating_health = TRUE, break_modifier = 1)
 	if(owner && (owner.status_flags & GODMODE))
 		return FALSE	//godmode
@@ -161,8 +163,9 @@
 	switch(animal_origin)
 		if(ALIEN_BODYPART,LARVA_BODYPART) //aliens take double burn //nothing can burn with so much snowflake code around
 			burn *= 2
-
-	if(prob(brute*break_modifier) && ((brute_dam + burn_dam)/max_damage) > 0.3 )
+	
+	// Is the damage greater than the threshold, and if so, probability of damage + item force
+	if((brute_dam > bone_break_threshold) && prob(brute_dam + break_modifier))
 		break_bone()
 
 	var/can_inflict = max_damage - get_damage()
@@ -487,6 +490,7 @@
 	stam_damage_coeff = 1
 	max_stamina_damage = 200
 	var/obj/item/cavity_item
+	bone_break_threshold = 35 // Beefier bones
 
 /obj/item/bodypart/chest/can_dismember(obj/item/I)
 	if(!((owner.stat == DEAD) || owner.InFullCritical()))
