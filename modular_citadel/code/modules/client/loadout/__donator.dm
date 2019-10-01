@@ -441,4 +441,18 @@ datum/gear/darksabresheath
 	/obj/item/toy/plush/borgplushie
 	ckeywhitelist = list("nicholaiavenicci")
 
+<<<<<<< HEAD
 
+=======
+/datum/gear/donorberet
+	name = "Atmos Beret"
+	category = SLOT_HEAD
+	path = /obj/item/clothing/head/blueberet
+	ckeywhitelist = list("foxystalin")
+
+/datum/gear/donorgoggles
+	name = "Flight Goggles"
+	category = SLOT_HEAD
+	path = /obj/item/clothing/glasses/flight
+	ckeywhitelist = list("maxlynchy")
+>>>>>>> 35b54f9b5... Merge pull request #9376 from Citadel-Station-13/flightgoggles
