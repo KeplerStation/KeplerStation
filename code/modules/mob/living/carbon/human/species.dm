@@ -1484,8 +1484,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			H.forcesay(GLOB.hit_appends)	//forcesay checks stat already.
 	return TRUE
 
-<<<<<<< HEAD
-=======
+/* // See modular_citadel/code/modules/mob/living/carbon/human/species.dm //SMOOTH_TRUE
 /datum/species/proc/alt_spec_attack_hand(mob/living/carbon/human/M, mob/living/carbon/human/H, datum/martial_art/attacker_style)
 	if(!istype(M))
 		return TRUE
@@ -1609,8 +1608,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				else
 					append_message = "loosening their grip on [target_held_item]"
 			log_combat(user, target, "shoved", append_message)
-
->>>>>>> 657321e36... Merge pull request #9380 from Ghommie/Ghommie_cit212
+*/
 /datum/species/proc/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/H)
 	var/hit_percent = (100-(blocked+armor))/100
 	hit_percent = (hit_percent * (100-H.physiology.damage_resistance))/100
