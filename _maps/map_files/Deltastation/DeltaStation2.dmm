@@ -9284,6 +9284,7 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/bot,
 /obj/machinery/vending/wardrobe/jani_wardrobe,
 /obj/effect/turf_decal/tile/neutral{
@@ -9900,6 +9901,7 @@
 	pixel_x = 32
 	},
 /obj/item/reagent_containers/glass/bucket,
+/obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -10561,6 +10563,8 @@
 	},
 /obj/item/storage/box/lights/mixed,
 /obj/item/lightreplacer,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -11293,6 +11297,7 @@
 /turf/open/floor/plasteel,
 /area/janitor)
 "aze" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
@@ -12547,6 +12552,7 @@
 /turf/open/floor/plasteel,
 /area/maintenance/port/fore)
 "aBy" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/white{
 	icon_state = "1-8"
 	},
@@ -12591,6 +12597,7 @@
 /turf/open/floor/plasteel,
 /area/maintenance/port/fore)
 "aBB" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -126676,6 +126683,22 @@
 /obj/machinery/light,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
+"itV" = (
+/obj/structure/filingcabinet/chestdrawer,
+/obj/effect/turf_decal/tile/brown{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/brown{
+	dir = 8
+	},
+/obj/machinery/keycard_auth{
+	pixel_x = -24
+	},
+/turf/open/floor/plasteel,
+/area/quartermaster/qm)
 "iwL" = (
 /obj/machinery/status_display{
 	pixel_x = 32
@@ -127224,48 +127247,6 @@
 /obj/machinery/atmospherics/pipe/simple/general/hidden,
 /turf/closed/wall/r_wall,
 /area/maintenance/disposal/incinerator)
-<<<<<<< HEAD
-=======
-"oaP" = (
-/obj/machinery/seed_extractor,
-/obj/item/reagent_containers/glass/bucket,
-/obj/effect/turf_decal/delivery,
-/turf/open/floor/plasteel,
-/area/hydroponics/garden/abandoned{
-	name = "Maintenance Garden"
-	})
-"obe" = (
-/obj/structure/cable/white{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/disposalpipe/segment,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/neutral,
-/turf/open/floor/plasteel,
-/area/maintenance/port/fore)
-"ost" = (
-/obj/structure/filingcabinet/chestdrawer,
-/obj/effect/turf_decal/tile/brown{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/brown{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/brown{
-	dir = 8
-	},
-/obj/machinery/keycard_auth{
-	pixel_x = -25
-	},
-/turf/open/floor/plasteel,
-/area/quartermaster/qm)
->>>>>>> 89875bfe9... Merge pull request #9394 from EmeraldSundisk/deltafeex
 "owr" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -174945,7 +174926,7 @@ aaa
 aaa
 aad
 aQR
-ost
+itV
 aUq
 aVR
 aXF
