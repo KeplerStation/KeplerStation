@@ -25,7 +25,7 @@ Quartermaster
 	jobtype = /datum/job/qm
 
 	id = /obj/item/card/id/job/cargo
-	belt = /obj/item/pda/quartermaster
+	pda_slot = /obj/item/pda/quartermaster
 	ears = /obj/item/radio/headset/headset_cargo
 	uniform = /obj/item/clothing/under/rank/cargo
 	shoes = /obj/item/clothing/shoes/sneakers/brown
@@ -58,7 +58,7 @@ Cargo Technician
 	jobtype = /datum/job/cargo_tech
 
 	id = /obj/item/card/id/job/cargo
-	belt = /obj/item/pda/cargo
+	pda_slot = /obj/item/pda/cargo
 	ears = /obj/item/radio/headset/headset_cargo
 	uniform = /obj/item/clothing/under/rank/cargotech
 	l_hand = /obj/item/export_scanner
@@ -88,7 +88,7 @@ Shaft Miner
 	jobtype = /datum/job/mining
 
 	id = /obj/item/card/id/job/cargo
-	belt = /obj/item/pda/shaftminer
+	pda_slot = /obj/item/pda/shaftminer
 	ears = /obj/item/radio/headset/headset_cargo/mining
 	shoes = /obj/item/clothing/shoes/workboots/mining
 	gloves = /obj/item/clothing/gloves/color/black
@@ -168,7 +168,7 @@ Bartender
 	jobtype = /datum/job/bartender
 
 	glasses = /obj/item/clothing/glasses/sunglasses/reagent
-	belt = /obj/item/pda/bar
+	pda_slot = /obj/item/pda/bar
 	ears = /obj/item/radio/headset/headset_srv
 	uniform = /obj/item/clothing/under/rank/bartender
 	suit = /obj/item/clothing/suit/armor/vest
@@ -199,7 +199,7 @@ Cook
 	name = "Cook"
 	jobtype = /datum/job/cook
 
-	belt = /obj/item/pda/cook
+	pda_slot = /obj/item/pda/cook
 	ears = /obj/item/radio/headset/headset_srv
 	uniform = /obj/item/clothing/under/rank/chef
 	suit = /obj/item/clothing/suit/toggle/chef
@@ -255,7 +255,7 @@ Botanist
 	name = "Botanist"
 	jobtype = /datum/job/hydro
 
-	belt = /obj/item/pda/botanist
+	pda_slot = /obj/item/pda/botanist
 	ears = /obj/item/radio/headset/headset_srv
 	uniform = /obj/item/clothing/under/rank/hydroponics
 	suit = /obj/item/clothing/suit/apron
@@ -290,7 +290,7 @@ Janitor
 	name = "Janitor"
 	jobtype = /datum/job/janitor
 
-	belt = /obj/item/pda/janitor
+	pda_slot = /obj/item/pda/janitor
 	ears = /obj/item/radio/headset/headset_srv
 	uniform = /obj/item/clothing/under/rank/janitor
 	backpack_contents = list(/obj/item/modular_computer/tablet/preset/advanced=1)

@@ -76,6 +76,7 @@ There are several things that need to be remembered:
 		update_hair()
 		update_inv_w_uniform()
 		update_inv_wear_id()
+		update_inv_wear_pda() // KEPLER CHANGE: PDA Slots
 		update_inv_gloves()
 		update_inv_glasses()
 		update_inv_ears()
@@ -404,6 +405,17 @@ There are several things that need to be remembered:
 
 	apply_overlay(SUIT_LAYER)
 
+// KEPLER CHANGE: PDA Slots
+/mob/living/carbon/human/update_inv_wear_pda()
+	if(client && hud_used)
+		var/obj/screen/inventory/inv = hud_used.inv_slots[SLOT_WEAR_PDA]
+		if(inv)
+			inv.update_icon()
+
+		if(wear_pda)
+			client.screen += wear_pda
+			wear_pda.screen_loc = ui_pda
+// END KEPLER CHANGE
 
 /mob/living/carbon/human/update_inv_pockets()
 	if(client && hud_used)

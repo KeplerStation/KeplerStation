@@ -1010,10 +1010,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
-"aez" = (
-/obj/machinery/keycard_auth,
-/turf/closed/wall,
-/area/quartermaster/qm)
 "aeB" = (
 /obj/machinery/status_display,
 /turf/closed/wall,
@@ -126687,6 +126683,22 @@
 /obj/machinery/light,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
+"itV" = (
+/obj/structure/filingcabinet/chestdrawer,
+/obj/effect/turf_decal/tile/brown{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/brown{
+	dir = 8
+	},
+/obj/machinery/keycard_auth{
+	pixel_x = -24
+	},
+/turf/open/floor/plasteel,
+/area/quartermaster/qm)
 "iwL" = (
 /obj/machinery/status_display{
 	pixel_x = 32
@@ -174661,7 +174673,7 @@ aaa
 aaa
 aad
 aQQ
-aez
+aQQ
 aUp
 aVY
 aXE
@@ -174918,7 +174930,7 @@ aaa
 aaa
 aad
 aQR
-aSs
+itV
 aUq
 aVR
 aXF

@@ -7,13 +7,10 @@
 	gain_text = "<span class='danger'>You feel your vigor slowly fading away.</span>"
 	lose_text = "<span class='notice'>You feel vigorous again.</span>"
 	medical_record_text = "Patient requires regular treatment for blood loss due to low production of blood."
+	needs_blood = TRUE
 
 /datum/quirk/blooddeficiency/on_process()
-	var/mob/living/carbon/human/H = quirk_holder
-	if(NOBLOOD in H.dna.species.species_traits) //can't lose blood if your species doesn't have any
-		return
-	else
-		quirk_holder.blood_volume -= 0.275
+	quirk_holder.blood_volume -= 0.275
 
 /datum/quirk/depression
 	name = "Depression"

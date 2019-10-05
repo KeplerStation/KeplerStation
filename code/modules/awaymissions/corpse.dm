@@ -158,6 +158,7 @@
 	var/neck = -1
 	var/backpack_contents = -1
 	var/suit_store = -1
+	var/pda_slot = -1
 
 	var/hair_style
 	var/facial_hair_style
@@ -195,7 +196,7 @@
 	H.update_hair()
 	H.update_body()
 	if(outfit)
-		var/static/list/slots = list("uniform", "r_hand", "l_hand", "suit", "shoes", "gloves", "ears", "glasses", "mask", "head", "belt", "r_pocket", "l_pocket", "back", "id", "neck", "backpack_contents", "suit_store")
+		var/static/list/slots = list("uniform", "r_hand", "l_hand", "suit", "shoes", "gloves", "ears", "glasses", "mask", "head", "belt", "r_pocket", "l_pocket", "back", "id", "neck", "backpack_contents", "suit_store", "pda_slot") // KEPLER CHANGE: PDA Slots
 		for(var/slot in slots)
 			var/T = vars[slot]
 			if(!isnum(T))

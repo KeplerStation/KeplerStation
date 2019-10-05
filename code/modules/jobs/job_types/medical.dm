@@ -34,7 +34,7 @@ Chief Medical Officer
 	jobtype = /datum/job/cmo
 
 	id = /obj/item/card/id/job/cmo
-	belt = /obj/item/pda/heads/cmo
+	pda_slot = /obj/item/pda/heads/cmo
 	l_pocket = /obj/item/pinpointer/crew
 	ears = /obj/item/radio/headset/heads/cmo
 	uniform = /obj/item/clothing/under/rank/chief_medical_officer
@@ -82,7 +82,7 @@ Medical Doctor
 	jobtype = /datum/job/doctor
 
 	id = /obj/item/card/id/job/medical
-	belt = /obj/item/pda/medical
+	pda_slot = /obj/item/pda/medical
 	ears = /obj/item/radio/headset/headset_med
 	uniform = /obj/item/clothing/under/rank/medical
 	shoes = /obj/item/clothing/shoes/sneakers/white
@@ -123,7 +123,7 @@ Chemist
 
 	id = /obj/item/card/id/job/medical
 	glasses = /obj/item/clothing/glasses/science
-	belt = /obj/item/pda/chemist
+	pda_slot = /obj/item/pda/chemist
 	ears = /obj/item/radio/headset/headset_med
 	uniform = /obj/item/clothing/under/rank/chemist
 	shoes = /obj/item/clothing/shoes/sneakers/white
@@ -161,7 +161,7 @@ Geneticist
 	jobtype = /datum/job/geneticist
 
 	id = /obj/item/card/id/job/medical
-	belt = /obj/item/pda/geneticist
+	pda_slot = /obj/item/pda/geneticist
 	ears = /obj/item/radio/headset/headset_medsci
 	uniform = /obj/item/clothing/under/rank/geneticist
 	shoes = /obj/item/clothing/shoes/sneakers/white
@@ -198,7 +198,7 @@ Virologist
 	jobtype = /datum/job/virologist
 
 	id = /obj/item/card/id/job/medical
-	belt = /obj/item/pda/viro
+	pda_slot = /obj/item/pda/viro
 	ears = /obj/item/radio/headset/headset_med
 	uniform = /obj/item/clothing/under/rank/virologist
 	mask = /obj/item/clothing/mask/surgical

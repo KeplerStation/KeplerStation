@@ -249,7 +249,7 @@
 
 	if(!slot_priority)
 		slot_priority = list( \
-			SLOT_BACK, SLOT_WEAR_ID,\
+			SLOT_BACK, SLOT_WEAR_PDA, SLOT_WEAR_ID,\
 			SLOT_W_UNIFORM, SLOT_WEAR_SUIT,\
 			SLOT_WEAR_MASK, SLOT_HEAD, SLOT_NECK,\
 			SLOT_SHOES, SLOT_GLOVES,\
@@ -257,7 +257,7 @@
 			SLOT_BELT, SLOT_S_STORE,\
 			SLOT_L_STORE, SLOT_R_STORE,\
 			SLOT_GENERC_DEXTROUS_STORAGE\
-		)
+		)  // KEPLER CHANGE L252: PDA Slots
 
 	for(var/slot in slot_priority)
 		if(equip_to_slot_if_possible(W, slot, 0, 1, 1)) //qdel_on_fail = 0; disable_warning = 1; redraw_mob = 1

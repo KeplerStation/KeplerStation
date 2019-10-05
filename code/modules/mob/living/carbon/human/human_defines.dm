@@ -37,6 +37,7 @@
 	var/obj/item/r_store = null
 	var/obj/item/l_store = null
 	var/obj/item/s_store = null
+	var/obj/item/wear_pda = null // KEPLER CHANGE: PDA Slots
 
 	var/special_voice = "" // For changing our voice. Used by a symptom.
 
@@ -54,3 +55,4 @@
 	var/static/list/can_ride_typecache = typecacheof(list(/mob/living/carbon/human, /mob/living/simple_animal/slime, /mob/living/simple_animal/parrot))
 	var/lastpuke = 0
 	var/last_fire_update
+

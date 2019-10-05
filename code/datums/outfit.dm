@@ -16,6 +16,7 @@
 	var/id = null
 	var/l_pocket = null
 	var/r_pocket = null
+	var/pda_slot = null // KEPLER CHANGE: PDA Slot
 	var/suit_store = null
 	var/r_hand = null
 	var/l_hand = null
@@ -63,6 +64,8 @@
 		H.equip_to_slot_or_del(new glasses(H),SLOT_GLASSES)
 	if(id)
 		H.equip_to_slot_or_del(new id(H),SLOT_WEAR_ID)
+	if(pda_slot) // KEPLER CHANGE: PDA Slots
+		H.equip_to_slot_or_del(new pda_slot(H),SLOT_WEAR_PDA)	
 	if(suit_store)
 		H.equip_to_slot_or_del(new suit_store(H),SLOT_S_STORE)
 

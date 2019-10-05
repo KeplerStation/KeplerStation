@@ -371,6 +371,8 @@
 		items += wear_suit
 	if(w_uniform)
 		items += w_uniform
+	if(wear_pda) // KEPLER CHANGE: PDA Slots
+		items += wear_pda
 	if(include_pockets)
 		if(l_store)
 			items += l_store

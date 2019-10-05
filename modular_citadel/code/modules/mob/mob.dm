@@ -2,15 +2,15 @@
 	return
 
 /mob/say_mod(input, message_mode)
-	var/customsayverb = findtext(input, "*")
+	var/customsayverb = findtext(input, "!", 1, 2) //KEPLER EDIT: makes starting Say with '!' output everything after it as emote, instead of the weird '*'
 	if(customsayverb)
-		return lowertext(copytext(input, 1, customsayverb))
+		return lowertext(copytext(input, customsayverb+1))
 	. = ..()
 
 /atom/movable/proc/attach_spans(input, list/spans)
-	var/customsayverb = findtext(input, "*")
+	var/customsayverb = findtext(input, "!", 1, 2)
 	if(customsayverb)
-		input = capitalize(copytext(input, customsayverb+1))
+		return //END KEPLER EDIT
 	if(input)
 		return "[message_spans_start(spans)][input]</span>"
 	else

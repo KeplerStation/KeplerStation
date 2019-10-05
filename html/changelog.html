@@ -55,12 +55,62 @@
 		
 		-->
 		<div class="commit sansserif">
+			<h2 class="date">04 October 2019</h2>
+			<h3 class="author">KeplerStation-Bot updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">removed reflect from divine lightblade</li>
+				<li class="bugfix">Readjusts positioning of Delta's QM keycard device</li>
+				<li class="bugfix">Cleaned up a few spots I missed in #9356, particularly around the janitor's office</li>
+			</ul>
+
+			<h2 class="date">03 October 2019</h2>
+			<h3 class="author">Alonefromhell updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Species like plasmaman and slimepeople can no longer choose Acute Blood Deficiency for free quirk points.</li>
+			</ul>
+
+			<h2 class="date">02 October 2019</h2>
+			<h3 class="author">Ghommie (original PR by 81Denton, kriskog and nemvar) updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="spellcheck">Sleepers now show a message if players try to unscrew the maintenance hatch while they're occupied or open. Fixed typos in sleeper/organ harvester messages.</li>
+				<li class="tweak">Sleepers and dna scanners can now be pried open with crowbars.</li>
+				<li class="tweak">You can open and close sleepers and dna scanners by alt-clicking them.</li>
+				<li class="bugfix">The scanner's hatch now must be closed (on top of being unoccupied), just like sleepers, before being screwdriverable. This fixes a tricky door stuck issue with the machine.</li>
+			</ul>
+			<h3 class="author">KeplerStation-Bot updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Beebal and Honeybalm plants</li>
+				<li class="bugfix">Fixed people being shovable hrough windows, windoors and the such.</li>
+				<li class="rscadd">You can now shove people into disposal bins.</li>
+				<li class="refactor">refactored altdisarm(), ergo the "shoving people around" proc.</li>
+			</ul>
+
+			<h2 class="date">01 October 2019</h2>
+			<h3 class="author">Alonefromhell updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">using '!' at the start of Say now emotes everything after it, instead of '*'.</li>
+			</ul>
+
+			<h2 class="date">30 September 2019</h2>
+			<h3 class="author">Alonefromhell updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Start Round admin verb now has a confirmation box</li>
+			</ul>
+
 			<h2 class="date">28 September 2019</h2>
+			<h3 class="author">AffectedArc07 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Added PDA Slots</li>
+			</ul>
 			<h3 class="author">Bhijn updated:</h3>
 			<ul class="changes bgimages16">
 				<li class="balance">The point production mode of radiation collectors has been reverted to the original behavior of using all of the stored power every process cycle instead of just 4% of it</li>
 				<li class="tweak">Radiation collectors now display the amount of power/research points they're producing per minute rather than per process cycle, which should hopefully clear up a lot of confusion.</li>
 				<li class="tweak">Radiation collectors also display what's happening to the gas within them, which should make it a lot more obvious as to how you get tritium.</li>
+			</ul>
+			<h3 class="author">EldritchSigma updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Flyperson transformation on teleport has been changed to a probability of zero.</li>
 			</ul>
 			<h3 class="author">Fermis updated:</h3>
 			<ul class="changes bgimages16">
@@ -109,6 +159,9 @@
 				<li class="bugfix">narsie no longer asks for consent</li>
 				<li class="tweak">AEGs brought more in line with current radiation system. Try not to get EMP'd.</li>
 				<li class="balance">Engivend RCDs now vend upgraded RCDs</li>
+				<li class="rscadd">can now carry people on your back by aggressive grabbing them while they are laying down and then dragging their sprite onto yours.</li>
+				<li class="tweak">dragging people who are prone is now much slower, and carrying them will allow you to move faster at the cost of taking 5 seconds to lift them up onto your back.</li>
+				<li class="tweak">pacifists can now aggressive grab (cannot table slam people though)</li>
 			</ul>
 
 			<h2 class="date">27 September 2019</h2>
@@ -689,100 +742,6 @@
 			<h3 class="author">AffectedArc07 updated:</h3>
 			<ul class="changes bgimages16">
 				<li class="bugfix">All slimes can squish now</li>
-			</ul>
-
-			<h2 class="date">03 August 2019</h2>
-			<h3 class="author">AffectedArc07 updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">Fixes the log parser. Again.</li>
-				<li class="bugfix">TOS procs no longer runtime when youre not using an SQL backend</li>
-			</ul>
-			<h3 class="author">Chayse updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="tweak">Changed the Warden's compact combat shotgun to instead be a regular combat shotgun with a foldable stock and penalties for being folded.</li>
-			</ul>
-			<h3 class="author">KeplerStation-Bot updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="rscadd">Emitter gun</li>
-				<li class="tweak">the oxyloss fullscreen overlays now also take in consideration 1/5 of the user stamina loss.</li>
-			</ul>
-
-			<h2 class="date">02 August 2019</h2>
-			<h3 class="author">AffectedArc07 updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="code_imp">Fixes a LOT of code edge cases</li>
-			</ul>
-			<h3 class="author">Alonefromhell updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">Chat colors for dark mode should work now, and look good.</li>
-				<li class="tweak">[Omega] Trash bin in robotics has moved slightly.</li>
-				<li class="bugfix">[Omega] Double door between robotics and toxins has been fixed.</li>
-				<li class="bugfix">[Omega] Window shutters in AI Sat should work now.</li>
-			</ul>
-			<h3 class="author">BurgerBB updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="rscadd">The alert level is displayed at the job selection screen.</li>
-			</ul>
-			<h3 class="author">CornMyCob updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="tweak">Green and blue alert shuttles now take just 10 minutes to arrive.</li>
-			</ul>
-			<h3 class="author">KeplerStation-Bot updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="rscadd">regenerative materia to hallucination sting</li>
-				<li class="rscadd">mindbreaker toxin as an actual chemical to hallucination sting</li>
-				<li class="bugfix">QM rooms not getting Key Aunths</li>
-			</ul>
-			<h3 class="author">Toriate updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="rscadd">RPD now has inhands</li>
-				<li class="imageadd">New sprites for RCDs and RPDs, inhands included</li>
-			</ul>
-
-			<h2 class="date">29 July 2019</h2>
-			<h3 class="author">Ghommie (original PR by Skoglol) updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">Mining bags will no longer drop ore into backpack.</li>
-				<li class="bugfix">Mining bags in backpack no longer interferes with other mining bags.</li>
-				<li class="bugfix">Fixes some storage size circumventions.</li>
-			</ul>
-			<h3 class="author">KeplerStation-Bot updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">Fixes CHECK_BITFIELD macro.</li>
-				<li class="tweak">slime people now enjoy eating toxic food and it will not disgust them</li>
-				<li class="bugfix">combat pushes will now properly stop targets from using firearms, and will disarm the firearm if performed a second time, and also slow down people by 15%, and won't push people on tables blocked by shutters or other dense object anymore.</li>
-				<li class="imageadd">RCL now show what color is currently in use</li>
-				<li class="bugfix">ports a fix</li>
-				<li class="bugfix">Fixed blood chiller's inhand</li>
-				<li class="balance">rebalanced steal goals restrictions</li>
-				<li class="spellcheck">fixed a few misleading goals</li>
-				<li class="bugfix">suit storage nulling anti magic item protection</li>
-				<li class="bugfix">Fixes hypovials being unable to transfer out liquids or be refilled by large dispensers like water tanks.</li>
-				<li class="bugfix">Fixes chem-masters machineries not dispensing newly made pills inside loaded in pill bottles.</li>
-				<li class="bugfix">hos trenchcloak now properly has a sprite on digi characters</li>
-				<li class="bugfix">Not my work not my credit</li>
-				<li class="tweak">Altered the icons for inventory backplates. Sleek! Stylish! New!</li>
-				<li class="bugfix">Fixes Pubby's disposal conveyor belts and lack of a second lawyer spawner.</li>
-				<li class="admin">Bugtesting zone upgrades for easy bug/game testing</li>
-			</ul>
-			<h3 class="author">Sishen1542, original by @ zxaber updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="balance">Utility mechs no longer automatically get beacons.</li>
-				<li class="balance">Tracking beacons no longer delete themselves when EMPing a mech, and instead have a ten-second cooldown in-between EMPs. They also now do heavy EMP damage rather than light.</li>
-				<li class="balance">Mechs that take EMP damage lose the use of their weapons and equipment temporarily. Movement and abilities are not effected.</li>
-				<li class="balance">Mechs taking EMP damage no longer roll for a random malfunction.</li>
-			</ul>
-			<h3 class="author">Yakumo Chen updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="balance">Made stealth implant boxes flimsier</li>
-			</ul>
-
-			<h2 class="date">28 July 2019</h2>
-			<h3 class="author">AffectedArc07 updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">PDA will now only show cartridge functions if your cartridge has functions</li>
-				<li class="bugfix">Slimes can squish now</li>
-				<li class="bugfix">Humans can no longer use IPC emotes</li>
 			</ul>
 		</div>
 

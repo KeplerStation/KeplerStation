@@ -1003,6 +1003,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			if(initial(T.mood_quirk) && CONFIG_GET(flag/disable_human_mood))
 				lock_reason = "Mood is disabled."
 				quirk_conflict = TRUE
+			if(initial(T.needs_blood))
+				if(NOBLOOD in pref_species.species_traits)
+					lock_reason = "Your species has no blood."
+					quirk_conflict = TRUE
+				if(pref_species.exotic_blood)
+					lock_reason = "Your species does not have normal blood."
+					quirk_conflict = TRUE
 			if(has_quirk)
 				if(quirk_conflict)
 					all_quirks -= quirk_name
