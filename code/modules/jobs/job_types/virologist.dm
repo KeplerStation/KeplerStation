@@ -22,7 +22,8 @@
 	name = "Virologist"
 	jobtype = /datum/job/virologist
 
-	belt = /obj/item/pda/viro
+	id = /obj/item/card/id/job/medical
+	pda_slot = /obj/item/pda/viro
 	ears = /obj/item/radio/headset/headset_med
 	uniform = /obj/item/clothing/under/rank/virologist
 	mask = /obj/item/clothing/mask/surgical

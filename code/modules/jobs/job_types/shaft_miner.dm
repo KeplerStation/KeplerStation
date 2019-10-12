@@ -22,7 +22,8 @@
 	name = "Shaft Miner (Lavaland)"
 	jobtype = /datum/job/mining
 
-	belt = /obj/item/pda/shaftminer
+	id = /obj/item/card/id/job/cargo
+	pda_slot = /obj/item/pda/shaftminer
 	ears = /obj/item/radio/headset/headset_cargo/mining
 	shoes = /obj/item/clothing/shoes/workboots/mining
 	gloves = /obj/item/clothing/gloves/color/black

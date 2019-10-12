@@ -30,7 +30,7 @@
 	name = "Quartermaster"
 	jobtype = /datum/job/qm
 
-	belt = /obj/item/pda/quartermaster
+	pda_slot = /obj/item/pda/quartermaster
 	ears = /obj/item/radio/headset/headset_cargo
 	uniform = /obj/item/clothing/under/rank/cargo
 	shoes = /obj/item/clothing/shoes/sneakers/brown

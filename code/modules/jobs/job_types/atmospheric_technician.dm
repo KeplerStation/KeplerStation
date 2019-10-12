@@ -22,8 +22,9 @@
 	name = "Atmospheric Technician"
 	jobtype = /datum/job/atmos
 
+	id = /obj/item/card/id/job/engineering
 	belt = /obj/item/storage/belt/utility/atmostech
-	l_pocket = /obj/item/pda/atmos
+	pda_slot = /obj/item/pda/atmos
 	ears = /obj/item/radio/headset/headset_eng
 	uniform = /obj/item/clothing/under/rank/atmospheric_technician
 	r_pocket = /obj/item/analyzer

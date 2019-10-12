@@ -27,7 +27,8 @@
 	name = "Detective"
 	jobtype = /datum/job/detective
 
-	belt = /obj/item/pda/detective
+	id = /obj/item/card/id/job/sec
+	pda_slot = /obj/item/pda/detective
 	ears = /obj/item/radio/headset/headset_sec/alt
 	uniform = /obj/item/clothing/under/rank/det
 	neck = /obj/item/clothing/neck/tie/black

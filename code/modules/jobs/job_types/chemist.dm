@@ -22,8 +22,9 @@
 	name = "Chemist"
 	jobtype = /datum/job/chemist
 
+	id = /obj/item/card/id/job/medical
 	glasses = /obj/item/clothing/glasses/science
-	belt = /obj/item/pda/chemist
+	pda_slot = /obj/item/pda/chemist
 	ears = /obj/item/radio/headset/headset_med
 	uniform = /obj/item/clothing/under/rank/chemist
 	shoes = /obj/item/clothing/shoes/sneakers/white

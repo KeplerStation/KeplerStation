@@ -34,9 +34,9 @@
 	name = "Chief Engineer"
 	jobtype = /datum/job/chief_engineer
 
-	id = /obj/item/card/id/silver
+	id = /obj/item/card/id/job/ce
 	belt = /obj/item/storage/belt/utility/chief/full
-	l_pocket = /obj/item/pda/heads/ce
+	pda_slot = /obj/item/pda/heads/ce
 	ears = /obj/item/radio/headset/heads/ce
 	uniform = /obj/item/clothing/under/rank/chief_engineer
 	shoes = /obj/item/clothing/shoes/sneakers/brown
