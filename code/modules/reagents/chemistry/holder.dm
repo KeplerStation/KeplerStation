@@ -502,7 +502,7 @@
 					return 0
 
 				for(var/B in cached_required_reagents) //
-					multiplier = min(multiplier, round((get_reagent_amount(B) / cached_required_reagents[B]), CHEMICAL_QUANTISATION_LEVEL))
+					multiplier = min(multiplier, round(get_reagent_amount(B) / cached_required_reagents[B]))
 
 				for(var/B in cached_required_reagents)
 					remove_reagent(B, (multiplier * cached_required_reagents[B]), safety = 1, ignore_pH = TRUE)
