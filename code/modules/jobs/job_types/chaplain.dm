@@ -113,7 +113,7 @@
 	name = "Chaplain"
 	jobtype = /datum/job/chaplain
 
-	belt = /obj/item/pda/chaplain
+	pda_slot = /obj/item/pda/chaplain
 	ears = /obj/item/radio/headset/headset_srv
 	uniform = /obj/item/clothing/under/rank/chaplain
 	backpack_contents = list(/obj/item/camera/spooky = 1)
