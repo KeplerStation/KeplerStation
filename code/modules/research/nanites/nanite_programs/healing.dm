@@ -72,9 +72,17 @@
 /datum/nanite_program/brain_heal/check_conditions()
 	if(iscarbon(host_mob))
 		var/mob/living/carbon/C = host_mob
+<<<<<<< HEAD
 		if(length(C.get_traumas()))
 			return ..()
 	if(host_mob.getBrainLoss())
+=======
+		for(var/X in C.get_traumas())
+			var/datum/brain_trauma/BT = X
+			if(BT.resilience <= TRAUMA_RESILIENCE_BASIC)
+				return ..()
+	if(host_mob.getOrganLoss(ORGAN_SLOT_BRAIN))
+>>>>>>> 064e6980f... Merge pull request #9474 from Putnam3145/fix-nanites
 		return ..()
 	return FALSE
 
@@ -193,9 +201,17 @@
 /datum/nanite_program/brain_heal_advanced/check_conditions()
 	if(iscarbon(host_mob))
 		var/mob/living/carbon/C = host_mob
+<<<<<<< HEAD
 		if(length(C.get_traumas()))
 			return ..()
 	if(host_mob.getBrainLoss())
+=======
+		for(var/X in C.get_traumas())
+			var/datum/brain_trauma/BT = X
+			if(BT.resilience <= TRAUMA_RESILIENCE_LOBOTOMY)
+				return ..()
+	if(host_mob.getOrganLoss(ORGAN_SLOT_BRAIN))
+>>>>>>> 064e6980f... Merge pull request #9474 from Putnam3145/fix-nanites
 		return ..()
 	return FALSE
 	
