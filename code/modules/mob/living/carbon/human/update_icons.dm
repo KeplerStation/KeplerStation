@@ -390,8 +390,9 @@ There are several things that need to be remembered:
 				client.screen += wear_suit
 		update_observer_view(wear_suit,1)
 
-		if(!S.force_alternate_icon)
-			S.alternate_worn_icon = 'modular_citadel/icons/mob/suit_digi.dmi'
+		if(DIGITIGRADE in dna.species.species_traits)
+			if(!S.force_alternate_icon)
+				S.alternate_worn_icon = 'modular_citadel/icons/mob/suit_digi.dmi'
 
 		overlays_standing[SUIT_LAYER] = S.build_worn_icon(state = wear_suit.icon_state, default_layer = SUIT_LAYER, default_icon_file = ((wear_suit.alternate_worn_icon) ? S.alternate_worn_icon : 'icons/mob/suit.dmi'))
 		var/mutable_appearance/suit_overlay = overlays_standing[SUIT_LAYER]
