@@ -228,11 +228,8 @@
 #include "code\controllers\subsystem\atoms.dm"
 #include "code\controllers\subsystem\augury.dm"
 #include "code\controllers\subsystem\blackbox.dm"
-<<<<<<< HEAD
 #include "code\controllers\subsystem\chat_prompts.dm"
-=======
 #include "code\controllers\subsystem\chat.dm"
->>>>>>> 3cd99dff1... Merge pull request #9438 from Ghommie/Ghommie-cit222
 #include "code\controllers\subsystem\communications.dm"
 #include "code\controllers\subsystem\dbcore.dm"
 #include "code\controllers\subsystem\dcs.dm"
