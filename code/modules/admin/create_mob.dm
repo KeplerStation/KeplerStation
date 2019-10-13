@@ -31,7 +31,13 @@
 	H.dna.features["frills"] = pick(GLOB.frills_list)
 	H.dna.features["spines"] = pick(GLOB.spines_list)
 	H.dna.features["body_markings"] = pick(GLOB.body_markings_list)
+<<<<<<< HEAD
 	H.dna.features["moth_wings"] = pick(GLOB.moth_wings_list)
+=======
+	H.dna.features["insect_wings"] = pick(GLOB.insect_wings_list)
+	H.dna.features["deco_wings"] = pick(GLOB.deco_wings_list)
+	H.dna.features["insect_fluff"] = pick(GLOB.insect_fluffs_list)
+>>>>>>> 48e4187ce... Merge pull request #9461 from r4d6/master
 
 	H.update_body()
 	H.update_hair()
