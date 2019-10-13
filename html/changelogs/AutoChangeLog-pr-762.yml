@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - bugfix: "neural nanites only work/drain if you have brain damage or traumas the nanites can fix"
