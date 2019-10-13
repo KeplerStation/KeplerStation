@@ -489,4 +489,9 @@ GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi', PDA_S
 #define VOMIT_TOXIC 1
 #define VOMIT_PURPLE 2
 
+<<<<<<< HEAD
 #define CRYOMOBS 'icons/obj/cryo_mobs.dmi'
+=======
+//Misc text define. Does 4 spaces. Used as a makeshift tabulator.
+#define FOURSPACES "&nbsp;&nbsp;&nbsp;&nbsp;"
+>>>>>>> 3cd99dff1... Merge pull request #9438 from Ghommie/Ghommie-cit222
