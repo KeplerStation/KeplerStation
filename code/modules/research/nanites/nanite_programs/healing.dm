@@ -72,11 +72,11 @@
 /datum/nanite_program/brain_heal/check_conditions()
 	if(iscarbon(host_mob))
 		var/mob/living/carbon/C = host_mob
-	if(host_mob.getBrainLoss())
 		for(var/X in C.get_traumas())
 			var/datum/brain_trauma/BT = X
 			if(BT.resilience <= TRAUMA_RESILIENCE_BASIC)
 				return ..()
+	if(host_mob.getBrainLoss())
 		return ..()
 	return FALSE
 
@@ -195,11 +195,11 @@
 /datum/nanite_program/brain_heal_advanced/check_conditions()
 	if(iscarbon(host_mob))
 		var/mob/living/carbon/C = host_mob
-	if(host_mob.getBrainLoss())
 		for(var/X in C.get_traumas())
 			var/datum/brain_trauma/BT = X
 			if(BT.resilience <= TRAUMA_RESILIENCE_LOBOTOMY)
 				return ..()
+	if(host_mob.getBrainLoss())
 		return ..()
 	return FALSE
 	
