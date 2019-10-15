@@ -22,7 +22,8 @@
 	name = "Geneticist"
 	jobtype = /datum/job/geneticist
 
-	belt = /obj/item/pda/geneticist
+	id = /obj/item/card/id/job/medical
+	pda_slot = /obj/item/pda/geneticist
 	ears = /obj/item/radio/headset/headset_medsci
 	uniform = /obj/item/clothing/under/rank/geneticist
 	shoes = /obj/item/clothing/shoes/sneakers/white

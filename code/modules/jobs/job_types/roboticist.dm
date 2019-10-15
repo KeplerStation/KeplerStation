@@ -22,8 +22,9 @@
 	name = "Roboticist"
 	jobtype = /datum/job/roboticist
 
+	id = /obj/item/card/id/job/science
 	belt = /obj/item/storage/belt/utility/full
-	l_pocket = /obj/item/pda/roboticist
+	pda_slot = /obj/item/pda/roboticist
 	ears = /obj/item/radio/headset/headset_sci
 	uniform = /obj/item/clothing/under/rank/roboticist
 	suit = /obj/item/clothing/suit/toggle/labcoat

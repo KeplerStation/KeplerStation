@@ -19,7 +19,7 @@
 	name = "Botanist"
 	jobtype = /datum/job/hydro
 
-	belt = /obj/item/pda/botanist
+	pda_slot = /obj/item/pda/botanist
 	ears = /obj/item/radio/headset/headset_srv
 	uniform = /obj/item/clothing/under/rank/hydroponics
 	suit = /obj/item/clothing/suit/apron

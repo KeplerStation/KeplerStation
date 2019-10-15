@@ -21,7 +21,7 @@
 	jobtype = /datum/job/curator
 
 	shoes = /obj/item/clothing/shoes/laceup
-	belt = /obj/item/pda/curator
+	pda_slot = /obj/item/pda/curator
 	ears = /obj/item/radio/headset/headset_srv
 	uniform = /obj/item/clothing/under/rank/curator
 	l_hand = /obj/item/storage/bag/books
