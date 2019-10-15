@@ -442,3 +442,11 @@ datum/gear/darksabresheath
 	ckeywhitelist = list("nicholaiavenicci")
 
 
+<<<<<<< HEAD
+=======
+/datum/gear/donorgoggles
+	name = "Flight Goggles"
+	category = SLOT_HEAD
+	path = /obj/item/clothing/head/flight
+	ckeywhitelist = list("maxlynchy")
+>>>>>>> 986de0969... Merge pull request #9490 from Citadel-Station-13/headswap
