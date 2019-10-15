@@ -1,0 +1,4 @@
+author: "Alonefromhell"
+delete-after: True
+changes: 
+  - bugfix: "Span tags should no longer show up in Head of staff cryo alerts"
