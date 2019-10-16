@@ -148,3 +148,35 @@
 		user.nextsoundemote = world.time + 7
 		playsound(user, 'modular_citadel/sound/voice/mothsqueak.ogg', 50, 1, -1)
 	. = ..()
+<<<<<<< HEAD
+=======
+
+/datum/emote/living/merp
+	key = "merp"
+	key_third_person = "merps"
+	message = "merps!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/merp/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		playsound(user, 'modular_citadel/sound/voice/merp.ogg', 50, 1, -1)
+	. = ..()
+
+/datum/emote/living/bark
+	key = "bark"
+	key_third_person = "barks"
+	message = "barks!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/bark/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		var/sound = pick('modular_citadel/sound/voice/bark1.ogg', 'modular_citadel/sound/voice/bark2.ogg')
+		playsound(user, sound, 50, 1, -1)
+	. = ..()
+>>>>>>> e8649e5c3... Merge pull request #9506 from izzyinbox/bark
