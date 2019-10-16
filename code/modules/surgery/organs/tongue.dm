@@ -24,6 +24,8 @@
 		/datum/language/aphasia,
 		/datum/language/slime,
 	))
+	healing_factor = STANDARD_ORGAN_HEALING*5 //Fast!!
+	decay_factor = STANDARD_ORGAN_DECAY/2
 
 /obj/item/organ/tongue/Initialize(mapload)
 	. = ..()
@@ -201,6 +203,19 @@
 	. = ..()
 	phomeme_type = pick(phomeme_types)
 
+<<<<<<< HEAD
+=======
+/obj/item/organ/tongue/bone/applyOrganDamage(var/d, var/maximum = maxHealth)
+	if(d < 0)
+		return
+	if(!owner)
+		return
+	var/target = owner.get_bodypart(BODY_ZONE_HEAD)
+	owner.apply_damage(d, BURN, target)
+	to_chat(owner, "<span class='userdanger'>You feel your skull burning! Oof, your bones!</span>")
+	return
+
+>>>>>>> 994bfddc1... Merge pull request #9477 from Thalpy/tgOrganFixes
 /obj/item/organ/tongue/bone/handle_speech(datum/source, list/speech_args)
 	if (chattering)
 		chatter(speech_args[SPEECH_MESSAGE], phomeme_type, source)

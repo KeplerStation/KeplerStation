@@ -52,13 +52,19 @@
 		switch(from.pH)
 			if(11.5 to INFINITY)
 				to_chat(src, "<span class='warning'>You taste a strong alkaline flavour!</span>")
+<<<<<<< HEAD
 				T.adjustTongueLoss(src, 1)
+=======
+>>>>>>> 994bfddc1... Merge pull request #9477 from Thalpy/tgOrganFixes
 			if(8.5 to 11.5)
 				to_chat(src, "<span class='notice'>You taste a sort of soapy tone in the mixture.</span>")
 			if(2.5 to 5.5)
 				to_chat(src, "<span class='notice'>You taste a sort of acid tone in the mixture.</span>")
 			if(-INFINITY to 2.5)
 				to_chat(src, "<span class='warning'>You taste a strong acidic flavour!</span>")
+<<<<<<< HEAD
 				T.adjustTongueLoss(src, 1)
+=======
+>>>>>>> 994bfddc1... Merge pull request #9477 from Thalpy/tgOrganFixes
 
 #undef DEFAULT_TASTE_SENSITIVITY

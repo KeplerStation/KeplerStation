@@ -303,7 +303,11 @@ GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi', PDA_S
 #define MAP_MAXZ 6
 
 // Defib stats
+<<<<<<< HEAD
 #define DEFIB_TIME_LIMIT 120
+=======
+#define DEFIB_TIME_LIMIT 1500
+>>>>>>> 994bfddc1... Merge pull request #9477 from Thalpy/tgOrganFixes
 #define DEFIB_TIME_LOSS 60
 
 // Diagonal movement

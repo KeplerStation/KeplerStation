@@ -8,6 +8,24 @@
 	gender = PLURAL
 	w_class = WEIGHT_CLASS_NORMAL
 
+<<<<<<< HEAD
+=======
+	var/failed = FALSE
+	var/operated = FALSE	//whether we can still have our damages fixed through surgery
+
+	//health
+	maxHealth = 3 * STANDARD_ORGAN_THRESHOLD
+
+	healing_factor = STANDARD_ORGAN_HEALING
+	decay_factor = STANDARD_ORGAN_DECAY
+	high_threshold = 0.6 * LUNGS_MAX_HEALTH	//threshold at 180
+	low_threshold = 0.3 * LUNGS_MAX_HEALTH	//threshold at 90
+
+	high_threshold_passed = "<span class='warning'>You feel some sort of constriction around your chest as your breathing becomes shallow and rapid.</span>"
+	now_fixed = "<span class='warning'>Your lungs seem to once again be able to hold air.</span>"
+	high_threshold_cleared = "<span class='info'>The constriction around your chest loosens as your breathing calms down.</span>"
+
+>>>>>>> 994bfddc1... Merge pull request #9477 from Thalpy/tgOrganFixes
 	//Breath damage
 
 	var/safe_oxygen_min = 16 // Minimum safe partial pressure of O2, in kPa

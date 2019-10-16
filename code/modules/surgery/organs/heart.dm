@@ -4,6 +4,18 @@
 	icon_state = "heart-on"
 	zone = BODY_ZONE_CHEST
 	slot = ORGAN_SLOT_HEART
+<<<<<<< HEAD
+=======
+
+	healing_factor = STANDARD_ORGAN_HEALING
+	decay_factor = 3 * STANDARD_ORGAN_DECAY		//designed to fail about 5 minutes after death
+
+	low_threshold_passed = "<span class='info'>Prickles of pain appear then die out from within your chest...</span>"
+	high_threshold_passed = "<span class='warning'>Something inside your chest hurts, and the pain isn't subsiding. You notice yourself breathing far faster than before.</span>"
+	now_fixed = "<span class='info'>Your heart begins to beat again.</span>"
+	high_threshold_cleared = "<span class='info'>The pain in your chest has died down, and your breathing becomes more relaxed.</span>"
+
+>>>>>>> 994bfddc1... Merge pull request #9477 from Thalpy/tgOrganFixes
 	// Heart attack code is in code/modules/mob/living/carbon/human/life.dm
 	var/beating = 1
 	var/icon_base = "heart"
@@ -49,6 +61,7 @@
 	return S
 
 /obj/item/organ/heart/on_life()
+	..()
 	if(owner.client && beating)
 		var/sound/slowbeat = sound('sound/health/slowbeat.ogg', repeat = TRUE)
 		var/sound/fastbeat = sound('sound/health/fastbeat.ogg', repeat = TRUE)

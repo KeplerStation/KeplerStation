@@ -17,9 +17,10 @@
 	if(starting_organ)
 		insert_organ(new starting_organ(src))
 
-/obj/item/autosurgeon/proc/insert_organ(var/obj/item/I)
+/obj/item/autosurgeon/proc/insert_organ(var/obj/item/organ/I)
 	storedorgan = I
 	I.forceMove(src)
+	I.organ_flags |= ORGAN_FROZEN //Stops decay
 	name = "[initial(name)] ([storedorgan.name])"
 
 /obj/item/autosurgeon/attack_self(mob/user)//when the object it used...
@@ -101,3 +102,31 @@
 	
 /obj/item/autosurgeon/anti_drop
 	starting_organ = /obj/item/organ/cyberimp/brain/anti_drop
+<<<<<<< HEAD
+=======
+
+/obj/item/autosurgeon/penis
+	desc = "A single use autosurgeon that contains a penis. A screwdriver can be used to remove it, but implants can't be placed back in."
+	uses = 1
+	starting_organ = /obj/item/organ/genital/penis
+
+/obj/item/autosurgeon/testicles
+	desc = "A single use autosurgeon that contains a set of testicles. A screwdriver can be used to remove it, but implants can't be placed back in."
+	uses = 1
+	starting_organ = /obj/item/organ/genital/testicles
+
+/obj/item/autosurgeon/vagina
+	desc = "A single use autosurgeon that contains a vagina. A screwdriver can be used to remove it, but implants can't be placed back in."
+	uses = 1
+	starting_organ = /obj/item/organ/genital/vagina
+
+/obj/item/autosurgeon/breasts
+	desc = "A single use autosurgeon that contains a set of breasts. A screwdriver can be used to remove it, but implants can't be placed back in."
+	uses = 1
+	starting_organ = /obj/item/organ/genital/breasts
+
+/obj/item/autosurgeon/womb
+	desc = "A single use autosurgeon that contains a womb. A screwdriver can be used to remove it, but implants can't be placed back in."
+	uses = 1
+	starting_organ = /obj/item/organ/genital/womb
+>>>>>>> 994bfddc1... Merge pull request #9477 from Thalpy/tgOrganFixes

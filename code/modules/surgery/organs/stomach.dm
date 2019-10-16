@@ -9,7 +9,36 @@
 	var/disgust_metabolism = 1
 
 /obj/item/organ/stomach/on_life()
+<<<<<<< HEAD
 	var/mob/living/carbon/human/H = owner
+=======
+	..()
+	var/datum/reagent/consumable/nutriment/Nutri
+	if(ishuman(owner))
+		var/mob/living/carbon/human/H = owner
+		if(!(organ_flags & ORGAN_FAILING))
+			H.dna.species.handle_digestion(H)
+		handle_disgust(H)
+		Nutri = locate(/datum/reagent/consumable/nutriment) in H.reagents.reagent_list
+
+		if(Nutri)
+			if(prob((damage/40) * Nutri.volume * Nutri.volume))
+				H.vomit(damage)
+				to_chat(H, "<span class='warning'>Your stomach reels in pain as you're incapable of holding down all that food!</span>")
+
+		else if(Nutri && damage > high_threshold)
+			if(prob((damage/10) * Nutri.volume * Nutri.volume))
+				H.vomit(damage)
+				to_chat(H, "<span class='warning'>Your stomach reels in pain as you're incapable of holding down all that food!</span>")
+
+
+	else if(iscarbon(owner))
+		var/mob/living/carbon/C = owner
+		Nutri = locate(/datum/reagent/consumable/nutriment) in C.reagents.reagent_list
+
+	if(damage < low_threshold)
+		return
+>>>>>>> 994bfddc1... Merge pull request #9477 from Thalpy/tgOrganFixes
 
 	if(istype(H))
 		H.dna.species.handle_digestion(H)

@@ -9,6 +9,16 @@
 	slot = ORGAN_SLOT_BRAIN
 	vital = TRUE
 	attack_verb = list("attacked", "slapped", "whacked")
+<<<<<<< HEAD
+=======
+	///The brain's organ variables are significantly more different than the other organs, with half the decay rate for balance reasons, and twice the maxHealth
+	decay_factor = STANDARD_ORGAN_DECAY	/ 4		//30 minutes of decaying to result in a fully damaged brain, since a fast decay rate would be unfun gameplay-wise
+	healing_factor = STANDARD_ORGAN_HEALING / 2
+
+	maxHealth	= BRAIN_DAMAGE_DEATH
+	low_threshold = 45
+	high_threshold = 120
+>>>>>>> 994bfddc1... Merge pull request #9477 from Thalpy/tgOrganFixes
 	var/mob/living/brain/brainmob = null
 	var/damaged_brain = FALSE //whether the brain organ is damaged.
 	var/decoy_override = FALSE	//I apologize to the security players, and myself, who abused this, but this is going to go.
@@ -165,6 +175,59 @@
 		else if(adjusted_amount <= -DAMAGE_PRECISION)
 			obj_integrity = min(max_integrity, obj_integrity-adjusted_amount)
 	. = adjusted_amount
+<<<<<<< HEAD
+=======
+*/
+
+/obj/item/organ/brain/on_life()
+	if(damage >= BRAIN_DAMAGE_DEATH) //rip
+		to_chat(owner, "<span class='userdanger'>The last spark of life in your brain fizzles out...</span>")
+		owner.death()
+		brain_death = TRUE
+		return
+	..()
+
+/obj/item/organ/brain/on_death()
+	if(damage <= BRAIN_DAMAGE_DEATH) //rip
+		brain_death = FALSE
+	..()
+
+
+/obj/item/organ/brain/applyOrganDamage(var/d, var/maximum = maxHealth)
+	..()
+
+
+/obj/item/organ/brain/check_damage_thresholds(mob/M)
+	. = ..()
+	//if we're not more injured than before, return without gambling for a trauma
+	if(damage <= prev_damage)
+		return
+	damage_delta = damage - prev_damage
+	if(damage > BRAIN_DAMAGE_MILD)
+		if(prob(damage_delta * (1 + max(0, (damage - BRAIN_DAMAGE_MILD)/100)))) //Base chance is the hit damage; for every point of damage past the threshold the chance is increased by 1% //learn how to do your bloody math properly goddamnit
+			gain_trauma_type(BRAIN_TRAUMA_MILD)
+	if(damage > BRAIN_DAMAGE_SEVERE)
+		if(prob(damage_delta * (1 + max(0, (damage - BRAIN_DAMAGE_SEVERE)/100)))) //Base chance is the hit damage; for every point of damage past the threshold the chance is increased by 1%
+			if(prob(20))
+				gain_trauma_type(BRAIN_TRAUMA_SPECIAL)
+			else
+				gain_trauma_type(BRAIN_TRAUMA_SEVERE)
+
+	if (owner)
+		if(owner.stat < UNCONSCIOUS) //conscious or soft-crit
+			var/brain_message
+			if(prev_damage < BRAIN_DAMAGE_MILD && damage >= BRAIN_DAMAGE_MILD)
+				brain_message = "<span class='warning'>You feel lightheaded.</span>"
+			else if(prev_damage < BRAIN_DAMAGE_SEVERE && damage >= BRAIN_DAMAGE_SEVERE)
+				brain_message = "<span class='warning'>You feel less in control of your thoughts.</span>"
+			else if(prev_damage < (BRAIN_DAMAGE_DEATH - 20) && damage >= (BRAIN_DAMAGE_DEATH - 20))
+				brain_message = "<span class='warning'>You can feel your mind flickering on and off...</span>"
+
+			if(.)
+				. += "\n[brain_message]"
+			else
+				return brain_message
+>>>>>>> 994bfddc1... Merge pull request #9477 from Thalpy/tgOrganFixes
 
 /obj/item/organ/brain/Destroy() //copypasted from MMIs.
 	if(brainmob)

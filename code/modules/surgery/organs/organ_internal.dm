@@ -26,6 +26,9 @@
 		else
 			qdel(replaced)
 
+	//Hopefully this doesn't cause problems
+	organ_flags &= ~ORGAN_FROZEN
+
 	owner = M
 	M.internal_organs |= src
 	M.internal_organs_slot[slot] = src
@@ -47,10 +50,10 @@
 		var/datum/action/A = X
 		A.Remove(M)
 
-
 /obj/item/organ/proc/on_find(mob/living/finder)
 	return
 
+<<<<<<< HEAD
 /obj/item/organ/proc/on_life()
 	return
 
@@ -58,6 +61,94 @@
 	..()
 	if(status == ORGAN_ROBOTIC && crit_fail)
 		to_chat(user, "<span class='warning'>[src] seems to be broken!</span>")
+=======
+/obj/item/organ/process()	//runs decay when outside of a person AND ONLY WHEN OUTSIDE (i.e. long obj).
+	on_death() //Kinda hate doing it like this, but I really don't want to call process directly.
+
+//Sources; life.dm process_organs
+/obj/item/organ/proc/on_death() //Runs when outside AND inside.
+	decay()
+
+//Applys the slow damage over time decay
+/obj/item/organ/proc/decay()
+	if(!can_decay())
+		STOP_PROCESSING(SSobj, src)
+		return
+	is_cold()
+	if(organ_flags & ORGAN_FROZEN)
+		return
+	applyOrganDamage(maxHealth * decay_factor)
+
+/obj/item/organ/proc/can_decay()
+	if(CHECK_BITFIELD(organ_flags, ORGAN_NO_SPOIL | ORGAN_SYNTHETIC | ORGAN_FAILING))
+		return FALSE
+	return TRUE
+
+//Checks to see if the organ is frozen from temperature
+/obj/item/organ/proc/is_cold()
+	var/freezing_objects = list(/obj/structure/closet/crate/freezer, /obj/structure/closet/secure_closet/freezer, /obj/structure/bodycontainer, /obj/item/autosurgeon)
+	if(istype(loc, /obj/))//Freezer of some kind, I hope.
+		if(is_type_in_list(loc, freezing_objects))
+			if(!(organ_flags & ORGAN_FROZEN))//Incase someone puts them in when cold, but they warm up inside of the thing. (i.e. they have the flag, the thing turns it off, this rights it.)
+				organ_flags |= ORGAN_FROZEN
+			return TRUE
+		return
+
+	var/local_temp
+	if(istype(loc, /turf/))//Only concern is adding an organ to a freezer when the area around it is cold.
+		var/turf/T = loc
+		var/datum/gas_mixture/enviro = T.return_air()
+		local_temp = enviro.temperature
+
+	else if(istype(loc, /mob/) && !owner)
+		var/mob/M = loc
+		if(is_type_in_list(M.loc, freezing_objects))
+			if(!(organ_flags & ORGAN_FROZEN))
+				organ_flags |= ORGAN_FROZEN
+			return TRUE
+		var/turf/T = M.loc
+		var/datum/gas_mixture/enviro = T.return_air()
+		local_temp = enviro.temperature
+
+	if(owner)
+		//Don't interfere with bodies frozen by structures.
+		if(is_type_in_list(owner.loc, freezing_objects))
+			if(!(organ_flags & ORGAN_FROZEN))
+				organ_flags |= ORGAN_FROZEN
+			return TRUE
+		local_temp = owner.bodytemperature
+
+	if(!local_temp)//Shouldn't happen but in case
+		return
+	if(local_temp < 154)//I have a pretty shaky citation that states -120 allows indefinite cyrostorage
+		organ_flags |= ORGAN_FROZEN
+		return TRUE
+	organ_flags &= ~ORGAN_FROZEN
+	return FALSE
+
+/obj/item/organ/proc/on_life()	//repair organ damage if the organ is not failing
+	if(organ_flags & ORGAN_FAILING)
+		return
+	if(is_cold())
+		return
+	///Damage decrements by a percent of its maxhealth
+	var/healing_amount = -(maxHealth * healing_factor)
+	///Damage decrements again by a percent of its maxhealth, up to a total of 4 extra times depending on the owner's health
+	healing_amount -= owner.satiety > 0 ? 4 * healing_factor * owner.satiety / MAX_SATIETY : 0
+	applyOrganDamage(healing_amount) //to FERMI_TWEAK
+	//Make it so each threshold is stuck.
+
+/obj/item/organ/examine(mob/user)
+	. = ..()
+	if(organ_flags & ORGAN_FAILING)
+		if(status == ORGAN_ROBOTIC)
+			. += "<span class='warning'>[src] seems to be broken!</span>"
+			return
+		. += "<span class='warning'>[src] has decayed for too long, and has turned a sickly color! It doesn't look like it will work anymore!</span>"
+		return
+	if(damage > high_threshold)
+		. += "<span class='warning'>[src] is starting to look discolored.</span>"
+>>>>>>> 994bfddc1... Merge pull request #9477 from Thalpy/tgOrganFixes
 
 
 /obj/item/organ/proc/prepare_eat()
@@ -100,6 +191,62 @@
 /obj/item/organ/item_action_slot_check(slot,mob/user)
 	return //so we don't grant the organ's action to mobs who pick up the organ.
 
+<<<<<<< HEAD
+=======
+///Adjusts an organ's damage by the amount "d", up to a maximum amount, which is by default max damage
+/obj/item/organ/proc/applyOrganDamage(var/d, var/maximum = maxHealth)	//use for damaging effects
+	if(!d) //Micro-optimization.
+		return
+	if(maximum < damage)
+		return
+	damage = CLAMP(damage + d, 0, maximum)
+	var/mess = check_damage_thresholds(owner)
+	prev_damage = damage
+	if(mess && owner)
+		to_chat(owner, mess)
+
+///SETS an organ's damage to the amount "d", and in doing so clears or sets the failing flag, good for when you have an effect that should fix an organ if broken
+/obj/item/organ/proc/setOrganDamage(var/d)	//use mostly for admin heals
+	applyOrganDamage(d - damage)
+
+/** check_damage_thresholds
+  * input: M (a mob, the owner of the organ we call the proc on)
+  * output: returns a message should get displayed.
+  * description: By checking our current damage against our previous damage, we can decide whether we've passed an organ threshold.
+  *				 If we have, send the corresponding threshold message to the owner, if such a message exists.
+  */
+/obj/item/organ/proc/check_damage_thresholds(var/M)
+	if(damage == prev_damage)
+		return
+	var/delta = damage - prev_damage
+	if(delta > 0)
+		if(damage >= maxHealth)
+			organ_flags |= ORGAN_FAILING
+			return now_failing
+		if(damage > high_threshold && prev_damage <= high_threshold)
+			return high_threshold_passed
+		if(damage > low_threshold && prev_damage <= low_threshold)
+			return low_threshold_passed
+	else
+		organ_flags &= ~ORGAN_FAILING
+		if(!owner)//Processing is stopped when the organ is dead and outside of someone. This hopefully should restart it if a removed organ is repaired outside of a body.
+			START_PROCESSING(SSobj, src)
+		if(prev_damage > low_threshold && damage <= low_threshold)
+			return low_threshold_cleared
+		if(prev_damage > high_threshold && damage <= high_threshold)
+			return high_threshold_cleared
+		if(prev_damage == maxHealth)
+			return now_fixed
+
+//Runs some code on the organ when damage is taken/healed
+/obj/item/organ/proc/onDamage(var/d, var/maximum = maxHealth)
+	return
+
+//Runs some code on the organ when damage is taken/healed
+/obj/item/organ/proc/onSetDamage(var/d, var/maximum = maxHealth)
+	return
+
+>>>>>>> 994bfddc1... Merge pull request #9477 from Thalpy/tgOrganFixes
 //Looking for brains?
 //Try code/modules/mob/living/carbon/brain/brain_item.dm
 
