@@ -126990,6 +126990,7 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
+<<<<<<< HEAD
 "kSI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral{
@@ -127003,6 +127004,12 @@
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/port/fore)
+=======
+"kZu" = (
+/obj/effect/landmark/barthpot,
+/turf/open/floor/wood,
+/area/library)
+>>>>>>> 7187da9e7... Merge pull request #9456 from Thalpy/Spookytime
 "lak" = (
 /turf/open/floor/plasteel/white/side{
 	dir = 10
@@ -160329,7 +160336,7 @@ caG
 chU
 cjt
 ckR
-cmt
+kZu
 cnR
 cpv
 cqQ
