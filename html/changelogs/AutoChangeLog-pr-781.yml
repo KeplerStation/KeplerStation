@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - rscadd: "Added blindfolds to the Loadout list"
