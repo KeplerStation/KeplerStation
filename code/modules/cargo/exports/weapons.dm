@@ -135,7 +135,7 @@
 
 /datum/export/weapon/xraygun
 	cost = 300 //Wall hacks
-	unit_name = "x ray gun"
+	unit_name = "xray gun"
 	export_types = list(/obj/item/gun/energy/xray)
 
 /datum/export/weapon/ioncarbine
@@ -215,7 +215,7 @@
 
 /datum/export/weapon/rocketlauncher
 	cost = 1000
-	unit_name = "rocketlauncher"
+	unit_name = "rocket launcher"
 	export_types = list(/obj/item/gun/ballistic/rocketlauncher)
 
 /datum/export/weapon/antitank
@@ -260,12 +260,12 @@
 
 /datum/export/weapon/gloves
 	cost = 90
-	unit_name = "star struck gloves"
+	unit_name = "starstruck gloves"
 	export_types = list(/obj/item/clothing/gloves/rapid)
 
 /datum/export/weapon/l6
 	cost = 500
-	unit_name = "law 6 saw"
+	unit_name = "l6 saw"
 	export_types = list(/obj/item/gun/ballistic/automatic/l6_saw)
 
 /datum/export/weapon/m90
@@ -312,7 +312,7 @@
 
 /datum/export/weapon/l6sawammo
 	cost = 60
-	unit_name = "law 6 saw ammo box"
+	unit_name = "l6 saw ammo box"
 	export_types = list(/obj/item/ammo_box/magazine/mm195x129)
 	include_subtypes = TRUE
 
