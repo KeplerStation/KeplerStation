@@ -57911,6 +57911,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/machinery/body_scanner,
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
 "cif" = (
@@ -83400,6 +83401,10 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
+"hYQ" = (
+/obj/machinery/smartfridge/organ,
+/turf/closed/wall,
+/area/medical/surgery)
 "ioI" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -104183,7 +104188,7 @@ cia
 cia
 cia
 cpX
-cia
+hYQ
 cia
 cia
 ceu

@@ -687,7 +687,7 @@
 					STOP_PROCESSING(SSprocessing, src)
 					return
 
-	C.FermiCreate(src)//proc that calls when step is done
+	C.FermiCreate(src, addChemAmmount, purity)//proc that calls when step is done
 
 	//Apply pH changes and thermal output of reaction to beaker
 	chem_temp = round(cached_temp + (C.ThermicConstant * addChemAmmount))
