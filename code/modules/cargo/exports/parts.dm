@@ -49,17 +49,17 @@
 
 /datum/export/t2
 	cost = 2
-	unit_name = "upgraded stock part"
+	unit_name = "advanced stock part"
 	export_types = list(/obj/item/stock_parts/capacitor/adv, /obj/item/stock_parts/scanning_module/adv, /obj/item/stock_parts/manipulator/nano, /obj/item/stock_parts/micro_laser/high, /obj/item/stock_parts/matter_bin/adv)
 
 /datum/export/t3
 	cost = 3
-	unit_name = "advanced stock part"
+	unit_name = "super stock part"
 	export_types = list(/obj/item/stock_parts/capacitor/super, /obj/item/stock_parts/scanning_module/phasic, /obj/item/stock_parts/manipulator/pico, /obj/item/stock_parts/micro_laser/ultra, /obj/item/stock_parts/matter_bin/super)
 
 /datum/export/t4
 	cost = 4
-	unit_name = "blue space stock part"
+	unit_name = "bluespace stock part"
 	export_types = list(/obj/item/stock_parts/capacitor/quadratic, /obj/item/stock_parts/scanning_module/triphasic, /obj/item/stock_parts/manipulator/femto, /obj/item/stock_parts/micro_laser/quadultra, /obj/item/stock_parts/matter_bin/bluespace)
 
 //Cells
