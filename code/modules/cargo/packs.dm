@@ -35,6 +35,7 @@
 			A.flags_1 |= ADMIN_SPAWNED_1
 	else
 		for(var/item in contains)
+<<<<<<< HEAD
 			new item(C)
 
 // If you add something to this list, please group it by type and sort it alphabetically instead of just jamming it in like an animal
@@ -2816,3 +2817,6 @@
 					/obj/item/toner)
 	crate_name = "toner crate"
 
+=======
+			new item(C)
+>>>>>>> d2497a8ba... Merge pull request #9211 from Trilbyspaceclone/Cargo_rebalance
