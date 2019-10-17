@@ -762,7 +762,7 @@ datum/export/gear/glasses //glasses are not worth selling
 
 /datum/export/gear/cloaksmining
 	cost = 90
-	unit_name = "lava land cloak"
+	unit_name = "lavaland cloak"
 	export_types = list(/obj/item/clothing/suit/hooded/cloak/goliath)
 	include_subtypes = TRUE
 
