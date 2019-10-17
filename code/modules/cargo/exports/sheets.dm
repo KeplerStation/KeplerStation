@@ -132,7 +132,7 @@
 /datum/export/stack/bronze
 	unit_name = "tiles"
 	cost = 5
-	message = "of brozne"
+	message = "of bronze"
 	export_types = list(/obj/item/stack/tile/bronze)
 
 /datum/export/stack/brass
