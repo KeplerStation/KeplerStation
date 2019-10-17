@@ -238,7 +238,7 @@
 
 /datum/export/gear/syndamagboots
 	cost = 250
-	unit_name = "blood redmagboots"
+	unit_name = "blood-red magboots"
 	export_types = list(/obj/item/clothing/shoes/magboots/syndie)
 
 /datum/export/gear/combatboots
@@ -523,13 +523,13 @@ datum/export/gear/glasses //glasses are not worth selling
 
 /datum/export/gear/scigoggles
 	cost = 8
-	unit_name = "chem giggles"
+	unit_name = "chem goggles"
 	export_types = list(/obj/item/clothing/glasses/science)
 	include_subtypes = TRUE
 
 /datum/export/gear/nvgoggles
 	cost = 20
-	unit_name = "night vison giggles"
+	unit_name = "night vison goggles"
 	export_types = list(/obj/item/clothing/glasses/night)
 	include_subtypes = TRUE
 
@@ -557,7 +557,7 @@ datum/export/gear/glasses //glasses are not worth selling
 
 /datum/export/gear/thermals
 	cost = 30
-	unit_name = "heat seeing goggles"
+	unit_name = "thermal goggles"
 	export_types = list(/obj/item/clothing/glasses/thermal, /obj/item/clothing/glasses/hud/toggle/thermal)
 	include_subtypes = TRUE
 
@@ -600,7 +600,7 @@ datum/export/gear/glasses //glasses are not worth selling
 
 /datum/export/gear/jumpsuit_addon
 	cost = 12 //Few and rare as well as quick drop off of vaule
-	unit_name = "jumpsuit add on"
+	unit_name = "jumpsuit addon"
 	k_elasticity = 1/10
 	export_types = list(/obj/item/clothing/accessory)
 	include_subtypes = TRUE
@@ -774,7 +774,7 @@ datum/export/gear/glasses //glasses are not worth selling
 
 /datum/export/gear/wintercoats
 	cost = 25
-	unit_name = "wintercoats"
+	unit_name = "winter coats"
 	export_types = list(/obj/item/clothing/suit/hooded/wintercoat)
 	include_subtypes = TRUE
 
