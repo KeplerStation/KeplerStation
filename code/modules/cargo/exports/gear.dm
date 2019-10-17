@@ -594,8 +594,8 @@ datum/export/gear/glasses //glasses are not worth selling
 	unit_name = "armored_jumpsuit"
 	k_elasticity = 1/90 //These will be what sells
 	export_types = list(/obj/item/clothing/under/durathread, /obj/item/clothing/under/rank/security, /obj/item/clothing/under/plasmaman, /obj/item/clothing/under/syndicate, \
-						/obj/item/clothing/under/rank/det, /obj/item/clothing/under/rank/head_of_security, /obj/item/clothing/under/rank/security/spacepol)
-	exclude_types = list(/obj/item/clothing/under/syndicate/tacticool, /obj/item/clothing/under/syndicate/tacticool/skirt)
+						/obj/item/clothing/under/rank/det, /obj/item/clothing/under/rank/head_of_security)
+	exclude_types = list(/obj/item/clothing/under/syndicate/tacticool)
 	include_subtypes = TRUE
 
 /datum/export/gear/jumpsuit_addon
