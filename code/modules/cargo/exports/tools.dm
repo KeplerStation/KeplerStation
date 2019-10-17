@@ -60,7 +60,7 @@
 
 /datum/export/lightreplacer
 	cost = 20
-	unit_name = "lightreplacer"
+	unit_name = "light replacer"
 	export_types = list(/obj/item/lightreplacer)
 
 // Basic tools
@@ -190,7 +190,7 @@
 
 /datum/export/bsrped
 	cost = 200
-	unit_name = "blue space part exchange device"
+	unit_name = "bluespace rapid part exchange device"
 	export_types = list(/obj/item/storage/part_replacer/bluespace)
 
 /datum/export/singulo //failsafe in case someone decides to ship a live singularity to CentCom without the corresponding bounty
