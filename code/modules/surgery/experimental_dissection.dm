@@ -109,5 +109,3 @@
 	value_multiplier = 10
 	requires_tech = TRUE
 	replaced_by = null
-
-#undef EXPDIS_FAIL_MSG
