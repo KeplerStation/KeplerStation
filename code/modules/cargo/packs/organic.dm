@@ -131,7 +131,7 @@
 	crate_type = /obj/structure/closet/crate/secure
 
 /datum/supply_pack/organic/hunting
-	name = "Huntting gear"
+	name = "Hunting gear"
 	desc = "Even in space, we can fine prey to hunt, this crate contains everthing a fine hunter needs to have a sporting time. This crate needs armory access to open. A true huntter only needs a fine bottle of cognac, a nice coat, some good o' cigars, and of cource a huntting shotgun. "
 	cost = 3500
 	contraband = TRUE
