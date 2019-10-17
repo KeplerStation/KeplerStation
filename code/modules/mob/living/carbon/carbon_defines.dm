@@ -15,6 +15,7 @@
 	var/obj/item/restraints/legcuffed //Same as handcuffs but for legs. Bear traps use this.
 
 	var/disgust = 0
+	var/has_bones = FALSE // Do we have breakable bones
 
 //inventory slots
 	var/obj/item/back = null

@@ -5,6 +5,7 @@
 	item_color = "r"
 	var/max_slot_stacking = 4
 	var/obj/item/storage/bluespace_pocket/pocket
+	shows_up_on_scanners = FALSE
 
 /obj/item/implant/storage/activate()
 	. = ..()
