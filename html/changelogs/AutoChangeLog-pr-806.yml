@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - bugfix: "advanced surgery tools can't perform lobectomy or coronary bypass"
