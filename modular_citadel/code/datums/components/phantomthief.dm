@@ -24,7 +24,7 @@
 
 /datum/component/phantomthief/proc/handlefilterstuff(mob/user, combatmodestate)
 	if(istype(user))
-		var/thefilter = filter(type = "drop_shadow", x = filter_x, y = filter_y, size = filter_size, border = filter_border, color = filter_color)
+		var/thefilter = filter(type = "drop_shadow", x = filter_x, y = filter_y, size = filter_size, color = filter_color)
 		if(!combatmodestate)
 			user.filters -= thefilter
 		else
@@ -32,7 +32,7 @@
 
 /datum/component/phantomthief/proc/stripdesiredfilter(mob/user)
 	if(istype(user))
-		var/thefilter = filter(type = "drop_shadow", x = filter_x, y = filter_y, size = filter_size, border = filter_border, color = filter_color)
+		var/thefilter = filter(type = "drop_shadow", x = filter_x, y = filter_y, size = filter_size, color = filter_color)
 		user.filters -= thefilter
 
 /datum/component/phantomthief/proc/OnEquipped(mob/user, slot)
