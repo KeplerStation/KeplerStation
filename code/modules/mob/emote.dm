@@ -82,6 +82,13 @@
 	key_third_person = "boops"
 	message = "boops."
 
+/datum/emote/sound/silicon/beep
+	key = "beep"
+	key_third_person = "beeps"
+	message = "beeps."
+	message_param = "beeps at %t."
+	sound = 'sound/machines/twobeep.ogg'
+
 /datum/emote/sound/silicon/buzz
 	key = "buzz"
 	key_third_person = "buzzes"
@@ -723,14 +730,6 @@
 
 	to_chat(user, message)
 
-/datum/emote/sound/beep
-	key = "beep"
-	key_third_person = "beeps"
-	message = "beeps."
-	message_param = "beeps at %t."
-	sound = 'sound/machines/twobeep.ogg'
-	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
-
 /datum/emote/living/circle
 	key = "circle"
 	key_third_person = "circles"
@@ -1056,6 +1055,13 @@ IPC
 	mob_type_allowed_typecache = list(/mob/living/carbon/human)
 	emote_type = EMOTE_AUDIBLE
 	restricted_species = list(SPECIES_ID_IPC) // For when we implement IPC
+
+/datum/emote/sound/ipc/beep
+	key = "beep"
+	key_third_person = "beeps"
+	message = "beeps."
+	message_param = "beeps at %t."
+	sound = 'sound/machines/twobeep.ogg'
 
 /datum/emote/sound/ipc/buzz
 	key = "buzz"
