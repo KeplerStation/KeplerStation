@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+=======
+/mob/living/silicon/robot/modules/medihound
+	set_module = /obj/item/robot_module/medihound
+
+/mob/living/silicon/robot/modules/k9
+	set_module = /obj/item/robot_module/k9
+
+/mob/living/silicon/robot/modules/scrubpup
+	set_module = /obj/item/robot_module/scrubpup
+
+/mob/living/silicon/robot/modules/borgi
+	set_module = /obj/item/robot_module/borgi
+
+/mob/living/silicon/robot/proc/get_cit_modules()
+	var/list/modulelist = list()
+	modulelist["MediHound"] = /obj/item/robot_module/medihound
+	if(BORG_SEC_AVAILABLE)
+		modulelist["Security K-9"] = /obj/item/robot_module/k9
+	modulelist["Scrub Puppy"] = /obj/item/robot_module/scrubpup
+	modulelist["Borgi"] = /obj/item/robot_module/borgi
+	return modulelist
+
+>>>>>>> 9e6341391... Merge pull request #9466 from deathride58/yawnborgs
 /obj/item/robot_module
 	var/icon/cyborg_icon_override
 	var/has_snowflake_deadsprite
