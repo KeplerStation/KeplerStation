@@ -200,6 +200,7 @@
 	organ_flags = ORGAN_NO_SPOIL
 	attack_verb = list("bitten", "chattered", "chomped", "enamelled", "boned")
 	taste_sensitivity = 101 // skeletons cannot taste anything
+	maxHealth = "bone" //Take burn damage instead
 	modifies_speech = TRUE
 	var/chattering = FALSE
 	var/phomeme_type = "sans"
