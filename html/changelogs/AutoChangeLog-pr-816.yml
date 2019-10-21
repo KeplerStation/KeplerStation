@@ -1,0 +1,4 @@
+author: "Alonefromhell"
+delete-after: True
+changes: 
+  - code_imp: "Reverted a hotfix (PR #797)"
