@@ -6,6 +6,11 @@
 	say_mod = "chirps"
 	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR,NOBLOOD,NO_BONES)
 	mutantlungs = /obj/item/organ/lungs/slime
+<<<<<<< HEAD
+=======
+	mutant_bodyparts = list("mam_tail", "mam_ears", "mam_snouts", "taur", "deco_wings") //CIT CHANGE
+	default_features = list("mcolor" = "FFF", "mam_tail" = "None", "mam_ears" = "None", "mam_snouts" = "None", "taur" = "None", "deco_wings" = "None") //CIT CHANGE
+>>>>>>> 671fdf32c... Merge pull request #9520 from r4d6/master
 	inherent_traits = list(TRAIT_TOXINLOVER)
 	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/slime
 	exotic_blood = "slimejelly"

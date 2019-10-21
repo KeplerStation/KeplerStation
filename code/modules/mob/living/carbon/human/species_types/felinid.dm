@@ -4,8 +4,13 @@
 	id = "felinid"
 	limbs_id = "human"
 
+<<<<<<< HEAD
 	mutant_bodyparts = list("ears", "tail_human")
 	default_features = list("mcolor" = "FFF", "tail_human" = "Cat", "ears" = "Cat", "wings" = "None")
+=======
+	mutant_bodyparts = list("mam_ears", "mam_tail", "deco_wings")
+	default_features = list("mcolor" = "FFF", "mam_tail" = "Cat", "mam_ears" = "Cat", "wings" = "None", "deco_wings" = "None")
+>>>>>>> 671fdf32c... Merge pull request #9520 from r4d6/master
 
 	mutantears = /obj/item/organ/ears/cat
 	mutanttail = /obj/item/organ/tail/cat
