@@ -4,7 +4,11 @@
 	id = "lizard"
 	say_mod = "hisses"
 	default_color = "00FF00"
+<<<<<<< HEAD
 	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR,LIPS)
+=======
+	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR,LIPS,HORNCOLOR,WINGCOLOR)
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID, MOB_REPTILE)
 	mutant_bodyparts = list("tail_lizard", "snout", "spines", "horns", "frills", "body_markings", "legs")
 	mutanttongue = /obj/item/organ/tongue/lizard

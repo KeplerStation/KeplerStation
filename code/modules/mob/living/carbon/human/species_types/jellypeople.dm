@@ -4,7 +4,11 @@
 	id = "jelly"
 	default_color = "00FF90"
 	say_mod = "chirps"
+<<<<<<< HEAD
 	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR,NOBLOOD,NO_BONES)
+=======
+	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR,NOBLOOD,WINGCOLOR)
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 	mutantlungs = /obj/item/organ/lungs/slime
 	inherent_traits = list(TRAIT_TOXINLOVER)
 	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/slime

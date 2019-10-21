@@ -17,6 +17,13 @@
 	//Eye colour
 	var/eye_color = "000"
 
+<<<<<<< HEAD
+=======
+	var/horn_color = "85615a"	//specific horn colors, because why not?
+
+	var/wing_color = "fff"		//wings too
+
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 	var/skin_tone = "caucasian1"	//Skin tone
 
 	var/lip_style = null	//no lipstick by default- arguably misleading, as it could be used for general makeup

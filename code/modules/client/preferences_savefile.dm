@@ -289,7 +289,14 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(!S["features["mcolor"]"] || S["features["mcolor"]"] == "#000")
 		WRITE_FILE(S["features["mcolor"]"]	, "#FFF")
 
+	if(!S["features["horn_color"]"] || S["features["horn_color"]"] == "#000")
+		WRITE_FILE(S["features["horn_color"]"]	, "#85615a")
+
+	if(!S["features["wing_color"]"] || S["features["wing_color"]"] == "#000")
+		WRITE_FILE(S["features["wing_color"]"]	, "#FFF")
+
 	//Character
+<<<<<<< HEAD
 	S["real_name"]			>> real_name
 	S["name_is_always_random"] >> be_random_name
 	S["body_is_always_random"] >> be_random_body
@@ -306,6 +313,32 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["socks"]				>> socks
 	S["backbag"]			>> backbag
 	S["uplink_loc"]			>> uplink_spawn_loc
+=======
+	S["real_name"]				>> real_name
+	S["nameless"]				>> nameless
+	S["custom_species"]			>> custom_species
+	S["name_is_always_random"]	>> be_random_name
+	S["body_is_always_random"]	>> be_random_body
+	S["gender"]					>> gender
+	S["age"]					>> age
+	S["hair_color"]				>> hair_color
+	S["facial_hair_color"]		>> facial_hair_color
+	S["eye_color"]				>> eye_color
+	S["skin_tone"]				>> skin_tone
+	S["hair_style_name"]		>> hair_style
+	S["facial_style_name"]		>> facial_hair_style
+	S["underwear"]				>> underwear
+	S["undie_color"]			>> undie_color
+	S["undershirt"]				>> undershirt
+	S["shirt_color"]			>> shirt_color
+	S["socks"]					>> socks
+	S["socks_color"]			>> socks_color
+	S["horn_color"]				>> horn_color
+	S["wing_color"]				>> wing_color
+	S["backbag"]				>> backbag
+	S["jumpsuit_style"]			>> jumpsuit_style
+	S["uplink_loc"]				>> uplink_spawn_loc
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 	S["feature_mcolor"]					>> features["mcolor"]
 	S["feature_lizard_tail"]			>> features["tail_lizard"]
 	S["feature_lizard_snout"]			>> features["snout"]
@@ -368,6 +401,16 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(!features["mcolor"] || features["mcolor"] == "#000")
 		features["mcolor"] = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F")
 
+<<<<<<< HEAD
+=======
+	if(!features["horn_color"] || features["horn_color"] == "#000")
+		features["horn_color"] = "85615a"
+
+	if(!features["wing_color"] || features["wing_color"] == "#000")
+		features["wing_color"] = "FFFFFF"
+
+	nameless		= sanitize_integer(nameless, 0, 1, initial(nameless))
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 	be_random_name	= sanitize_integer(be_random_name, 0, 1, initial(be_random_name))
 	be_random_body	= sanitize_integer(be_random_body, 0, 1, initial(be_random_body))
 
@@ -379,6 +422,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	else
 		hair_style			= sanitize_inlist(hair_style, GLOB.hair_styles_female_list)
 		facial_hair_style			= sanitize_inlist(facial_hair_style, GLOB.facial_hair_styles_female_list)
+<<<<<<< HEAD
 		underwear		= sanitize_inlist(underwear, GLOB.underwear_f)
 		undershirt		= sanitize_inlist(undershirt, GLOB.undershirt_f)
 	socks			= sanitize_inlist(socks, GLOB.socks_list)
@@ -400,6 +444,37 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["body_markings"] 	= sanitize_inlist(features["body_markings"], GLOB.body_markings_list)
 	features["feature_lizard_legs"]	= sanitize_inlist(features["legs"], GLOB.legs_list)
 	features["moth_wings"] 	= sanitize_inlist(features["moth_wings"], GLOB.moth_wings_list)
+=======
+	underwear						= sanitize_inlist(underwear, GLOB.underwear_list)
+	undie_color						= sanitize_hexcolor(undie_color, 3, FALSE, initial(undie_color))
+	undershirt						= sanitize_inlist(undershirt, GLOB.undershirt_list)
+	shirt_color						= sanitize_hexcolor(shirt_color, 3, FALSE, initial(shirt_color))
+	socks							= sanitize_inlist(socks, GLOB.socks_list)
+	socks_color						= sanitize_hexcolor(socks_color, 3, FALSE, initial(socks_color))
+	age								= sanitize_integer(age, AGE_MIN, AGE_MAX, initial(age))
+	hair_color						= sanitize_hexcolor(hair_color, 3, 0)
+	facial_hair_color				= sanitize_hexcolor(facial_hair_color, 3, 0)
+	eye_color						= sanitize_hexcolor(eye_color, 3, 0)
+	skin_tone						= sanitize_inlist(skin_tone, GLOB.skin_tones)
+	horn_color						= sanitize_hexcolor(horn_color, 3, FALSE)
+	wing_color						= sanitize_hexcolor(wing_color, 3, FALSE, "#FFFFFF")
+	backbag							= sanitize_inlist(backbag, GLOB.backbaglist, initial(backbag))
+	jumpsuit_style					= sanitize_inlist(jumpsuit_style, GLOB.jumpsuitlist, initial(jumpsuit_style))
+	uplink_spawn_loc				= sanitize_inlist(uplink_spawn_loc, GLOB.uplink_spawn_loc_list, initial(uplink_spawn_loc))
+	features["mcolor"]				= sanitize_hexcolor(features["mcolor"], 3, 0)
+	features["tail_lizard"]			= sanitize_inlist(features["tail_lizard"], GLOB.tails_list_lizard)
+	features["tail_human"]			= sanitize_inlist(features["tail_human"], GLOB.tails_list_human)
+	features["snout"]				= sanitize_inlist(features["snout"], GLOB.snouts_list)
+	features["horns"]				= sanitize_inlist(features["horns"], GLOB.horns_list)
+	features["ears"]				= sanitize_inlist(features["ears"], GLOB.ears_list)
+	features["frills"]				= sanitize_inlist(features["frills"], GLOB.frills_list)
+	features["spines"]				= sanitize_inlist(features["spines"], GLOB.spines_list)
+	features["body_markings"]		= sanitize_inlist(features["body_markings"], GLOB.body_markings_list)
+	features["feature_lizard_legs"]	= sanitize_inlist(features["legs"], GLOB.legs_list)
+	features["insect_wings"] 		= sanitize_inlist(features["insect_wings"], GLOB.insect_wings_list)
+	features["deco_wings"] 			= sanitize_inlist(features["deco_wings"], GLOB.deco_wings_list, "None")
+	features["insect_fluff"]		= sanitize_inlist(features["insect_fluff"], GLOB.insect_fluffs_list)
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 
 	joblessrole	= sanitize_integer(joblessrole, 1, 3, initial(joblessrole))
 	//Validate job prefs
@@ -432,6 +507,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["version"]			, SAVEFILE_VERSION_MAX)	//load_character will sanitize any bad data, so assume up-to-date.)
 
 	//Character
+<<<<<<< HEAD
 	WRITE_FILE(S["real_name"]			, real_name)
 	WRITE_FILE(S["name_is_always_random"] , be_random_name)
 	WRITE_FILE(S["body_is_always_random"] , be_random_body)
@@ -449,6 +525,33 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["backbag"]			, backbag)
 	WRITE_FILE(S["uplink_loc"]			, uplink_spawn_loc)
 	WRITE_FILE(S["species"]			, pref_species.id)
+=======
+	WRITE_FILE(S["real_name"]				, real_name)
+	WRITE_FILE(S["nameless"]				, nameless)
+	WRITE_FILE(S["custom_species"]			, custom_species)
+	WRITE_FILE(S["name_is_always_random"]	, be_random_name)
+	WRITE_FILE(S["body_is_always_random"]	, be_random_body)
+	WRITE_FILE(S["gender"]					, gender)
+	WRITE_FILE(S["age"]						, age)
+	WRITE_FILE(S["hair_color"]				, hair_color)
+	WRITE_FILE(S["facial_hair_color"]		, facial_hair_color)
+	WRITE_FILE(S["eye_color"]				, eye_color)
+	WRITE_FILE(S["skin_tone"]				, skin_tone)
+	WRITE_FILE(S["hair_style_name"]			, hair_style)
+	WRITE_FILE(S["facial_style_name"]		, facial_hair_style)
+	WRITE_FILE(S["underwear"]				, underwear)
+	WRITE_FILE(S["undie_color"]				, undie_color)
+	WRITE_FILE(S["undershirt"]				, undershirt)
+	WRITE_FILE(S["shirt_color"]				, shirt_color)
+	WRITE_FILE(S["socks"]					, socks)
+	WRITE_FILE(S["socks_color"]				, socks_color)
+	WRITE_FILE(S["horn_color"]				, horn_color)
+	WRITE_FILE(S["wing_color"]				, wing_color)
+	WRITE_FILE(S["backbag"]					, backbag)
+	WRITE_FILE(S["jumpsuit_style"]			, jumpsuit_style)
+	WRITE_FILE(S["uplink_loc"]				, uplink_spawn_loc)
+	WRITE_FILE(S["species"]					, pref_species.id)
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 	WRITE_FILE(S["feature_mcolor"]					, features["mcolor"])
 	WRITE_FILE(S["feature_lizard_tail"]			, features["tail_lizard"])
 	WRITE_FILE(S["feature_human_tail"]				, features["tail_human"])

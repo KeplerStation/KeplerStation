@@ -78,6 +78,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/facial_hair_color = "000"		//Facial hair color
 	var/skin_tone = "caucasian1"		//Skin color
 	var/eye_color = "000"				//Eye color
+<<<<<<< HEAD
+=======
+	var/horn_color = "85615a"			//Horn color
+	var/wing_color = "fff"				//Wing color
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 	var/datum/species/pref_species = new /datum/species/human()	//Mutant race
 	var/list/features = list("mcolor" = "FFF",
 		"tail_lizard" = "Smooth",
@@ -427,13 +432,36 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "</td>"
 					mutant_category = 0
 
+<<<<<<< HEAD
 			if("moth_wings" in pref_species.default_features)
+=======
+				dat += "<h3>Decorative wings</h3>"
+
+				dat += "<a style='display:block;width:100px' href='?_src_=prefs;preference=deco_wings;task=input'>[features["deco_wings"]]</a>"
+				dat += "<span style='border:1px solid #161616; background-color: #[wing_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=wings_color;task=input'>Change</a><BR>"
+
+			if("insect_wings" in pref_species.default_features)
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 				if(!mutant_category)
 					dat += APPEARANCE_CATEGORY_COLUMN
 
 				dat += "<h3>Moth wings</h3>"
 
+<<<<<<< HEAD
 				dat += "<a href='?_src_=prefs;preference=moth_wings;task=input'>[features["moth_wings"]]</a><BR>"
+=======
+				dat += "<a style='display:block;width:100px' href='?_src_=prefs;preference=insect_wings;task=input'>[features["insect_wings"]]</a>"
+				dat += "<span style='border:1px solid #161616; background-color: #[wing_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=wings_color;task=input'>Change</a><BR>"
+				mutant_category++
+				if(mutant_category >= MAX_MUTANT_ROWS)
+					dat += "</td>"
+					mutant_category = 0
+			if("insect_fluff" in pref_species.default_features)
+				if(!mutant_category)
+					dat += APPEARANCE_CATEGORY_COLUMN
+
+				dat += "<h3>Insect Fluff</h3>"
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 
 				mutant_category++
 				if(mutant_category >= MAX_MUTANT_ROWS)
@@ -1300,17 +1328,35 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(new_horns)
 						features["horns"] = new_horns
 
+<<<<<<< HEAD
 				if("ears")
 					var/new_ears
 					new_ears = input(user, "Choose your character's ears:", "Character Preference") as null|anything in GLOB.ears_list
 					if(new_ears)
 						features["ears"] = new_ears
+=======
+				if("horns_color")
+					var/new_horn_color = input(user, "Choose your character's horn colour:", "Character Preference","#"+horn_color) as color|null
+					if(new_horn_color)
+						if (new_horn_color == "#000000")
+							horn_color = "#85615A"
+						else
+							horn_color = sanitize_hexcolor(new_horn_color)
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 
 				if("wings")
 					var/new_wings
 					new_wings = input(user, "Choose your character's wings:", "Character Preference") as null|anything in GLOB.r_wings_list
 					if(new_wings)
 						features["wings"] = new_wings
+
+				if("wings_color")
+					var/new_wing_color = input(user, "Choose your character's wing colour:", "Character Preference","#"+wing_color) as color|null
+					if(new_wing_color)
+						if (new_wing_color == "#000000")
+							wing_color = "#FFFFFF"
+						else
+							wing_color = sanitize_hexcolor(new_wing_color)
 
 				if("frills")
 					var/new_frills
@@ -1335,12 +1381,34 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					new_legs = input(user, "Choose your character's legs:", "Character Preference") as null|anything in GLOB.legs_list
 					if(new_legs)
 						features["legs"] = new_legs
+<<<<<<< HEAD
 
 				if("moth_wings")
 					var/new_moth_wings
 					new_moth_wings = input(user, "Choose your character's wings:", "Character Preference") as null|anything in GLOB.moth_wings_list
 					if(new_moth_wings)
 						features["moth_wings"] = new_moth_wings
+=======
+						update_preview_icon()
+
+				if("insect_wings")
+					var/new_insect_wings
+					new_insect_wings = input(user, "Choose your character's wings:", "Character Preference") as null|anything in GLOB.insect_wings_list
+					if(new_insect_wings)
+						features["insect_wings"] = new_insect_wings
+
+				if("deco_wings")
+					var/new_deco_wings
+					new_deco_wings = input(user, "Choose your character's wings:", "Character Preference") as null|anything in GLOB.deco_wings_list
+					if(new_deco_wings)
+						features["deco_wings"] = new_deco_wings
+
+				if("insect_fluffs")
+					var/new_insect_fluff
+					new_insect_fluff = input(user, "Choose your character's wings:", "Character Preference") as null|anything in GLOB.insect_fluffs_list
+					if(new_insect_fluff)
+						features["insect_fluff"] = new_insect_fluff
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 
 				if("s_tone")
 					var/new_s_tone = input(user, "Choose your character's skin-tone:", "Character Preference")  as null|anything in GLOB.skin_tones
@@ -1607,6 +1675,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		organ_eyes.old_eye_color = eye_color
 	character.hair_color = hair_color
 	character.facial_hair_color = facial_hair_color
+<<<<<<< HEAD
+=======
+	character.horn_color = horn_color
+	character.wing_color = wing_color
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 
 	character.skin_tone = skin_tone
 	character.hair_style = hair_style

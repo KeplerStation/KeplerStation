@@ -34,8 +34,14 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 	var/hair_color	// this allows races to have specific hair colors... if null, it uses the H's hair/facial hair colors. if "mutcolor", it uses the H's mutant_color
 	var/hair_alpha = 255	// the alpha used by the hair. 255 is completely solid, 0 is transparent.
+<<<<<<< HEAD
 	
 	var/body_alpha = 255
+=======
+
+	var/horn_color	//specific horn colors, because why not?
+	var/wing_color
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 
 	var/use_skintones = 0	// does it use skintones or not? (spoiler alert this is only used by humans)
 	var/exotic_blood = ""	// If your race wants to bleed something other than bog standard blood, change this to reagent id.
@@ -704,6 +710,13 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 							accessory_overlay.color = "#[H.facial_hair_color]"
 						if(EYECOLOR)
 							accessory_overlay.color = "#[H.eye_color]"
+<<<<<<< HEAD
+=======
+						if(HORNCOLOR)
+							accessory_overlay.color = "#[H.horn_color]"
+						if(WINGCOLOR)
+							accessory_overlay.color = "#[H.wing_color]"
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 				else
 					accessory_overlay.color = forced_colour
 			standing += accessory_overlay
@@ -724,6 +737,98 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 				standing += inner_accessory_overlay
 
+<<<<<<< HEAD
+=======
+			if(S.extra) //apply the extra overlay, if there is one
+				var/mutable_appearance/extra_accessory_overlay = mutable_appearance(S.icon, layer = -layer)
+				if(S.gender_specific)
+					extra_accessory_overlay.icon_state = "[g]_[bodypart]_extra_[S.icon_state]_[layertext]"
+				else
+					extra_accessory_overlay.icon_state = "m_[bodypart]_extra_[S.icon_state]_[layertext]"
+				if(S.center)
+					extra_accessory_overlay = center_image(extra_accessory_overlay, S.dimension_x, S.dimension_y)
+
+
+				switch(S.extra_color_src) //change the color of the extra overlay
+					if(MUTCOLORS)
+						if(fixed_mut_color)
+							extra_accessory_overlay.color = "#[fixed_mut_color]"
+						else
+							extra_accessory_overlay.color = "#[H.dna.features["mcolor"]]"
+					if(MUTCOLORS2)
+						if(fixed_mut_color2)
+							extra_accessory_overlay.color = "#[fixed_mut_color2]"
+						else
+							extra_accessory_overlay.color = "#[H.dna.features["mcolor2"]]"
+					if(MUTCOLORS3)
+						if(fixed_mut_color3)
+							extra_accessory_overlay.color = "#[fixed_mut_color3]"
+						else
+							extra_accessory_overlay.color = "#[H.dna.features["mcolor3"]]"
+					if(HAIR)
+						if(hair_color == "mutcolor")
+							extra_accessory_overlay.color = "#[H.dna.features["mcolor3"]]"
+						else
+							extra_accessory_overlay.color = "#[H.hair_color]"
+					if(FACEHAIR)
+						extra_accessory_overlay.color = "#[H.facial_hair_color]"
+					if(EYECOLOR)
+						extra_accessory_overlay.color = "#[H.eye_color]"
+
+					if(HORNCOLOR)
+						extra_accessory_overlay.color = "#[H.horn_color]"
+					if(WINGCOLOR)
+						extra_accessory_overlay.color = "#[H.wing_color]"
+
+				if(OFFSET_MUTPARTS in H.dna.species.offset_features)
+					extra_accessory_overlay.pixel_x += H.dna.species.offset_features[OFFSET_MUTPARTS][1]
+					extra_accessory_overlay.pixel_y += H.dna.species.offset_features[OFFSET_MUTPARTS][2]
+
+				standing += extra_accessory_overlay
+
+			if(S.extra2) //apply the extra overlay, if there is one
+				var/mutable_appearance/extra2_accessory_overlay = mutable_appearance(S.icon, layer = -layer)
+				if(S.gender_specific)
+					extra2_accessory_overlay.icon_state = "[g]_[bodypart]_extra2_[S.icon_state]_[layertext]"
+				else
+					extra2_accessory_overlay.icon_state = "m_[bodypart]_extra2_[S.icon_state]_[layertext]"
+				if(S.center)
+					extra2_accessory_overlay = center_image(extra2_accessory_overlay, S.dimension_x, S.dimension_y)
+
+				switch(S.extra2_color_src) //change the color of the extra overlay
+					if(MUTCOLORS)
+						if(fixed_mut_color)
+							extra2_accessory_overlay.color = "#[fixed_mut_color]"
+						else
+							extra2_accessory_overlay.color = "#[H.dna.features["mcolor"]]"
+					if(MUTCOLORS2)
+						if(fixed_mut_color2)
+							extra2_accessory_overlay.color = "#[fixed_mut_color2]"
+						else
+							extra2_accessory_overlay.color = "#[H.dna.features["mcolor2"]]"
+					if(MUTCOLORS3)
+						if(fixed_mut_color3)
+							extra2_accessory_overlay.color = "#[fixed_mut_color3]"
+						else
+							extra2_accessory_overlay.color = "#[H.dna.features["mcolor3"]]"
+					if(HAIR)
+						if(hair_color == "mutcolor3")
+							extra2_accessory_overlay.color = "#[H.dna.features["mcolor"]]"
+						else
+							extra2_accessory_overlay.color = "#[H.hair_color]"
+					if(HORNCOLOR)
+						extra2_accessory_overlay.color = "#[H.horn_color]"
+					if(WINGCOLOR)
+						extra2_accessory_overlay.color = "#[H.wing_color]"
+
+				if(OFFSET_MUTPARTS in H.dna.species.offset_features)
+					extra2_accessory_overlay.pixel_x += H.dna.species.offset_features[OFFSET_MUTPARTS][1]
+					extra2_accessory_overlay.pixel_y += H.dna.species.offset_features[OFFSET_MUTPARTS][2]
+
+				standing += extra2_accessory_overlay
+
+
+>>>>>>> 8090d58ba... Merge pull request #9524 from Linzolle/wingcolors
 		H.overlays_standing[layer] = standing.Copy()
 		standing = list()
 
