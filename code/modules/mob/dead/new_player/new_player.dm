@@ -510,10 +510,8 @@
 		var/cat_color = "fff" //random default
 		if(SSjob.name_occupations && SSjob.name_occupations[category[1]])
 			cat_color = SSjob.name_occupations[category[1]].selection_color //use the color of the first job in the category (the department head) as the category color
-		else if(SSjob.occupations && SSjob.occupations[category[1]])
-			cat_color = SSjob.occupations[category[1]].selection_color
 		else
-			continue //omegastation
+			cat_color = SSjob.occupations[category[1]].selection_color
 		dat += "<fieldset style='width: 185px; border: 2px solid [cat_color]; display: inline'>"
 		dat += "<legend align='center' style='color: [cat_color]'>[SSjob.name_occupations[category[1]].exp_type_department]</legend>"
 
