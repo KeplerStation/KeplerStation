@@ -1,5 +1,0 @@
-author: "Alonefromhell"
-delete-after: True
-changes: 
-  - bugfix: "Fixed PDA's not spawning for some jobs"
-  - bugfix: "Fixed ID Access missing for some jobs"

@@ -1,4 +1,0 @@
-author: "Alonefromhell"
-delete-after: True
-changes: 
-  - bugfix: "Plasmaman tongue is now the correct type, and no longer causes constant runtimes."
