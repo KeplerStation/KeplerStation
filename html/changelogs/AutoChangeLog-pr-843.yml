@@ -1,5 +1,0 @@
-author: "Alonefromhell"
-delete-after: True
-changes: 
-  - bugfix: "Fixed icons missing."
-  - imageadd: "Missing icons are now not missing."
