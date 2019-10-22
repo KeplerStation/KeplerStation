@@ -37,7 +37,14 @@
 		if(damaged_clothes)
 			. += mutable_appearance('icons/effects/item_damage.dmi', "damaged[blood_overlay_type]")
 		IF_HAS_BLOOD_DNA(src)
+<<<<<<< HEAD
 			. += mutable_appearance('icons/effects/blood.dmi', "[blood_overlay_type]blood")
+=======
+			if(tauric)
+				. += mutable_appearance('modular_citadel/icons/mob/64x32_effects.dmi', "[blood_overlay_type]blood")
+			else
+				. += mutable_appearance('icons/effects/blood.dmi', "[blood_overlay_type]blood")
+>>>>>>> 30eafc305... Merge pull request #9246 from Linzolle/taur
 		var/mob/living/carbon/human/M = loc
 		if(ishuman(M) && M.w_uniform)
 			var/obj/item/clothing/under/U = M.w_uniform
