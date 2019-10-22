@@ -1,0 +1,5 @@
+author: "CoolCatIsFeelingGroovy"
+delete-after: True
+changes: 
+  - rscadd: "Added a stack of 50 metal and glass to cargo on Meta and Box."
+  - rscadd: "Added loot to warehouse crates on Box."
