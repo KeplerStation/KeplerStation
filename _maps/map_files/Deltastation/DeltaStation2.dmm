@@ -127551,8 +127551,6 @@
 	dir = 10
 	},
 /area/science/misc_lab)
-<<<<<<< HEAD
-=======
 "tOQ" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -127574,7 +127572,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/chapel/office)
->>>>>>> afc034d21... Merge pull request #9560 from BlackMajor/Yeet
 "tRT" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
