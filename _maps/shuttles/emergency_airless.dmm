@@ -39,9 +39,6 @@
 	preferred_direction = 2;
 	width = 30
 	},
-<<<<<<< HEAD
-/turf/open/floor/plating/airless,
-=======
 /obj/machinery/door/airlock,
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
@@ -51,7 +48,6 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
->>>>>>> eb8f7de3c... Merge pull request #9583 from BlackMajor/Yeet
 /area/shuttle/escape)
 "K" = (
 /obj/machinery/door/airlock,
@@ -63,27 +59,6 @@
 a
 c
 e
-<<<<<<< HEAD
-f
-f
-f
-f
-f
-f
-f
-f
-g
-f
-f
-f
-f
-f
-f
-f
-f
-f
-f
-=======
 e
 e
 e
@@ -103,7 +78,6 @@ e
 K
 e
 e
->>>>>>> eb8f7de3c... Merge pull request #9583 from BlackMajor/Yeet
 e
 e
 a

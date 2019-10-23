@@ -247,14 +247,9 @@
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "aL" = (
-<<<<<<< HEAD
-/obj/structure/table/reinforced,
-/turf/open/floor/mineral/titanium,
-=======
 /obj/structure/table,
 /obj/item/storage/backpack/duffelbag/med/surgery,
 /turf/open/floor/mineral/titanium/white,
->>>>>>> eb8f7de3c... Merge pull request #9583 from BlackMajor/Yeet
 /area/shuttle/escape)
 "aM" = (
 /obj/machinery/chem_dispenser,
@@ -771,15 +766,9 @@ aw
 aw
 ab
 aG
-<<<<<<< HEAD
-aM
-aQ
-aR
-=======
 aK
 cF
 aL
->>>>>>> eb8f7de3c... Merge pull request #9583 from BlackMajor/Yeet
 aT
 as
 MK
