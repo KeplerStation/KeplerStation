@@ -3,7 +3,7 @@
 /////////////////
 
 /datum/crafting_recipe/showercurtain
-	name = "Shower Curtains"
+	name = "Shower Curtain"
 	reqs = 	list(/obj/item/stack/sheet/cloth = 2, 
 				 /obj/item/stack/sheet/plastic = 2,
 				 /obj/item/stack/rods = 1)

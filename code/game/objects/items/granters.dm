@@ -434,11 +434,11 @@
 
 /obj/item/book/granter/crafting_recipe/threads //Durathread crafting book
 	name = "Credible Threads"
-	desc = "A simple book about sewing and usefull clothing crafting with cloth and durathreads."
+	desc = "A simple book about sewing and useful clothing crafting with cloth and durathreads."
 	crafting_recipe_types = list(/datum/crafting_recipe/durathread_duffelbag, /datum/crafting_recipe/durathread_toolbelt, /datum/crafting_recipe/durathread_bandolier, /datum/crafting_recipe/durathread_helmet, /datum/crafting_recipe/durathread_vest)
 	icon_state = "tailers_art1"
 	oneuse = FALSE
-	remarks = list("Durathread is cloth thats also fire-resistant?", "Strong threads that can be used with leather for some light weight storage!", "The cloth can withstand a beating it said but not that much...")
+	remarks = list("Durathread is cloth that is also fire-resistant?", "Strong threads that can be used with leather for some lightweight storage!")
 
 /obj/item/book/granter/crafting_recipe/cooking_sweets_101 //We start at 101 for 103 and 105
 	name = "Cooking Desserts 101"

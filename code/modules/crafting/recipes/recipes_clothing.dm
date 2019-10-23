@@ -96,7 +96,7 @@
 	category = CAT_CLOTHING
 
 /datum/crafting_recipe/briefcase
-	name = "Hand made Briefcase"
+	name = "Handmade Briefcase"
 	result = /obj/item/storage/briefcase/crafted
 	time = 35
 	tools = list(TOOL_WIRECUTTER)
