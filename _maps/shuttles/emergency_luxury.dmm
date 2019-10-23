@@ -13,24 +13,35 @@
 /area/shuttle/escape/luxury)
 "ad" = (
 /obj/machinery/door/airlock/gold,
+<<<<<<< HEAD
 /obj/effect/forcefield/luxury_shuttle{
 	name = "Ticket Booth"
 	},
 /turf/open/floor/mineral/gold,
+=======
+/obj/structure/fans/tiny,
+/turf/open/floor/carpet/red,
+>>>>>>> eb8f7de3c... Merge pull request #9583 from BlackMajor/Yeet
 /area/shuttle/escape/luxury)
 "ae" = (
 /obj/docking_port/mobile/emergency{
 	dir = 2;
 	dwidth = 5;
 	height = 14;
+	movement_force = list("KNOCKDOWN" = 3, "THROW" = 0);
 	name = "Luxury emergency shuttle";
 	width = 25
 	},
 /obj/machinery/door/airlock/gold,
+<<<<<<< HEAD
 /obj/effect/forcefield/luxury_shuttle{
 	name = "Ticket Booth"
 	},
 /turf/open/floor/mineral/gold,
+=======
+/obj/structure/fans/tiny,
+/turf/open/floor/carpet/red,
+>>>>>>> eb8f7de3c... Merge pull request #9583 from BlackMajor/Yeet
 /area/shuttle/escape/luxury)
 "af" = (
 /turf/open/floor/wood{
@@ -51,7 +62,16 @@
 	},
 /area/shuttle/escape/luxury)
 "aj" = (
+<<<<<<< HEAD
 /turf/open/floor/mineral/gold,
+=======
+/obj/machinery/door/airlock/gold/glass{
+	name = "shuttle brig";
+	req_access_txt = "2"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/mineral/plastitanium/red/brig,
+>>>>>>> eb8f7de3c... Merge pull request #9583 from BlackMajor/Yeet
 /area/shuttle/escape/luxury)
 "ak" = (
 /obj/item/twohanded/required/kirbyplants{
@@ -328,6 +348,107 @@
 /turf/open/floor/mineral/gold,
 /area/shuttle/escape/luxury)
 "bk" = (
+<<<<<<< HEAD
+=======
+/obj/item/twohanded/required/kirbyplants{
+	icon_state = "plant-10"
+	},
+/turf/open/floor/carpet/royalblue,
+/area/shuttle/escape/luxury)
+"bl" = (
+/obj/item/twohanded/required/kirbyplants{
+	icon_state = "plant-21";
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/machinery/light,
+/turf/open/floor/wood,
+/area/shuttle/escape/luxury)
+"bm" = (
+/obj/structure/chair/comfy,
+/turf/open/floor/carpet/red,
+/area/shuttle/escape/luxury)
+"bn" = (
+/obj/structure/table/wood/fancy,
+/obj/item/reagent_containers/food/drinks/bottle/wine,
+/turf/open/floor/carpet/red,
+/area/shuttle/escape/luxury)
+"bo" = (
+/obj/structure/chair/comfy{
+	dir = 1
+	},
+/turf/open/floor/carpet/red,
+/area/shuttle/escape/luxury)
+"bp" = (
+/obj/item/toy/cards/deck/cas/black,
+/obj/structure/table/wood/fancy,
+/turf/open/floor/carpet/red,
+/area/shuttle/escape/luxury)
+"bq" = (
+/obj/structure/table/wood/fancy,
+/obj/item/toy/cards/deck/cas,
+/turf/open/floor/carpet/red,
+/area/shuttle/escape/luxury)
+"br" = (
+/obj/structure/table/wood/fancy,
+/obj/item/reagent_containers/food/drinks/bottle/whiskey,
+/turf/open/floor/carpet/red,
+/area/shuttle/escape/luxury)
+"bs" = (
+/obj/structure/table/wood/fancy,
+/obj/item/reagent_containers/food/drinks/bottle/grappa,
+/turf/open/floor/carpet/red,
+/area/shuttle/escape/luxury)
+"bt" = (
+/obj/structure/table/optable,
+/turf/open/floor/carpet/red,
+/area/shuttle/escape/luxury)
+"bu" = (
+/obj/machinery/door/airlock/gold/glass,
+/turf/open/floor/carpet/red,
+/area/shuttle/escape/luxury)
+"bv" = (
+/obj/structure/table/plasmaglass,
+/obj/item/storage/firstaid/brute,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/toxin,
+/turf/open/floor/carpet/red,
+/area/shuttle/escape/luxury)
+"bw" = (
+/obj/structure/table/plasmaglass,
+/obj/item/storage/backpack/duffelbag/med/surgery,
+/turf/open/floor/carpet/red,
+/area/shuttle/escape/luxury)
+"bx" = (
+/obj/machinery/door/airlock/gold,
+/turf/open/floor/plasteel/white,
+/area/shuttle/escape/luxury)
+"by" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
+/area/shuttle/escape/luxury)
+"bz" = (
+/obj/machinery/shower{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
+/area/shuttle/escape/luxury)
+"bA" = (
+/obj/structure/bed,
+/turf/open/floor/wood,
+/area/shuttle/escape/luxury)
+"bC" = (
+/obj/machinery/vending/coffee,
+/turf/open/floor/carpet/red,
+/area/shuttle/escape/luxury)
+"bD" = (
+/obj/machinery/vending/boozeomat/all_access,
+/turf/open/floor/carpet/red,
+/area/shuttle/escape/luxury)
+"bE" = (
+>>>>>>> eb8f7de3c... Merge pull request #9583 from BlackMajor/Yeet
 /obj/machinery/light{
 	dir = 4
 	},
@@ -350,6 +471,13 @@
 	},
 /obj/machinery/light,
 /turf/open/floor/mineral/gold,
+/area/shuttle/escape/luxury)
+"Uj" = (
+/obj/machinery/door/airlock/gold/glass{
+	name = "shuttle brig";
+	req_access_txt = "2"
+	},
+/turf/open/floor/mineral/plastitanium/red/brig,
 /area/shuttle/escape/luxury)
 
 (1,1,1) = {"
@@ -705,6 +833,7 @@ aj
 ab
 "}
 (23,1,1) = {"
+<<<<<<< HEAD
 ab
 aj
 bi
@@ -719,6 +848,22 @@ aj
 aj
 aj
 ab
+=======
+ac
+bH
+al
+al
+Uj
+af
+af
+ac
+aY
+aY
+aY
+aY
+bI
+ac
+>>>>>>> eb8f7de3c... Merge pull request #9583 from BlackMajor/Yeet
 "}
 (24,1,1) = {"
 ab
