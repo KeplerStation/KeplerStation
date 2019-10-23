@@ -2,6 +2,13 @@
 "aa" = (
 /turf/template_noop,
 /area/template_noop)
+"ab" = (
+/obj/machinery/door/airlock/titanium{
+	name = "Emergency Shuttle Airlock"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/mineral/titanium/blue,
+/area/shuttle/escape)
 "ac" = (
 /obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
@@ -9,17 +16,7 @@
 "ad" = (
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
-"af" = (
-/obj/machinery/door/airlock/titanium{
-	name = "Emergency Shuttle Airlock"
-	},
-/turf/open/floor/mineral/titanium/blue,
-/area/shuttle/escape)
-"ag" = (
-/obj/structure/sign/warning/nosmoking,
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/escape)
-"ah" = (
+"ae" = (
 /obj/machinery/door/airlock/titanium{
 	name = "Emergency Shuttle Airlock"
 	},
@@ -30,7 +27,20 @@
 	name = "Meta emergency shuttle";
 	width = 25
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium/blue,
+/area/shuttle/escape)
+"af" = (
+/obj/machinery/door/airlock/external{
+	name = "Emergency Recovery Airlock"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel,
+/area/shuttle/escape)
+"ag" = (
+/obj/structure/sign/warning/nosmoking,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "al" = (
 /obj/structure/table,
@@ -925,7 +935,7 @@ be
 cc
 be
 be
-bf
+af
 "}
 (6,1,1) = {"
 ac
@@ -941,7 +951,7 @@ bf
 bT
 be
 be
-bf
+af
 "}
 (7,1,1) = {"
 ac
@@ -1024,7 +1034,7 @@ bF
 ac
 "}
 (12,1,1) = {"
-af
+ab
 LY
 LY
 aE
@@ -1056,7 +1066,7 @@ ad
 ad
 "}
 (14,1,1) = {"
-af
+ab
 LY
 LY
 aE
@@ -1152,7 +1162,7 @@ bM
 ad
 "}
 (20,1,1) = {"
-ah
+ae
 LY
 LY
 aE
@@ -1184,7 +1194,7 @@ bO
 ac
 "}
 (22,1,1) = {"
-af
+ab
 LY
 LY
 LY
