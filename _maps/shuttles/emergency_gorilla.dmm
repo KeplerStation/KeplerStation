@@ -330,7 +330,6 @@
 /turf/open/floor/plasteel/shuttle,
 /area/shuttle/escape)
 "bn" = (
-/obj/structure/reagent_dispensers/keg/semen,
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "bo" = (
