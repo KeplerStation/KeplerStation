@@ -254,14 +254,32 @@
 	if(article)
 		. = "[article] [src]"
 		override[EXAMINE_POSITION_ARTICLE] = article
+<<<<<<< HEAD
+=======
+
+	var/should_override = FALSE
+
+>>>>>>> dbbadde13... Merge pull request #9595 from deathride58/examinestringfix
 	if(SEND_SIGNAL(src, COMSIG_ATOM_GET_EXAMINE_NAME, user, override) & COMPONENT_EXNAME_CHANGED)
+		should_override = TRUE
+
+	
+	if(blood_DNA && !istype(src, /obj/effect/decal))
+		override[EXAMINE_POSITION_BEFORE] = " blood-stained "
+		should_override = TRUE
+
+	if(should_override)
 		. = override.Join("")
 
 /atom/proc/get_examine_string(mob/user, thats = FALSE)
 	. = "[icon2html(src, user)] [thats? "That's ":""][get_examine_name(user)]"
 
 /atom/proc/examine(mob/user)
+<<<<<<< HEAD
 	to_chat(user, get_examine_string(user, TRUE))
+=======
+	to_chat(user, "[get_examine_string(user, TRUE)].")
+>>>>>>> dbbadde13... Merge pull request #9595 from deathride58/examinestringfix
 
 	if(desc)
 		to_chat(user, desc)
