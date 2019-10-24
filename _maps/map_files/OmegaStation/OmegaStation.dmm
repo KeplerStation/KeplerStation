@@ -30070,7 +30070,11 @@
 /area/medical/medbay/zone3)
 "bbs" = (
 /obj/effect/turf_decal/tile/blue,
+<<<<<<< HEAD
 /obj/machinery/body_scanner,
+=======
+/obj/machinery/bloodbankgen,
+>>>>>>> f85f110ba... Merge pull request #9047 from Poojawa/syntheticbloods
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/zone3)
 "bbt" = (
@@ -43097,6 +43101,23 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+<<<<<<< HEAD
+=======
+"vsf" = (
+/obj/effect/decal/cleanable/blood/gibs/xeno,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/science/xenobiology)
+>>>>>>> f85f110ba... Merge pull request #9047 from Poojawa/syntheticbloods
 "vsL" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4

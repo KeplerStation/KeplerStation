@@ -31874,7 +31874,11 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/body_scanner,
+=======
+/obj/machinery/bloodbankgen,
+>>>>>>> f85f110ba... Merge pull request #9047 from Poojawa/syntheticbloods
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
 "bwG" = (
