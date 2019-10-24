@@ -173,6 +173,27 @@
 /obj/effect/landmark/xeno_spawn,
 /turf/open/space,
 /area/solar/starboard/fore)
+"aav" = (
+/obj/item/storage/pod{
+	pixel_x = 32;
+	pixel_y = 32
+	},
+/obj/machinery/airalarm{
+	pixel_y = 23
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/machinery/bloodbankgen,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
+"aaw" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/machinery/body_scanner,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
 "aaE" = (
 /obj/structure/lattice/catwalk,
 /turf/open/space,
@@ -88752,20 +88773,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
-"cSR" = (
-/obj/item/twohanded/required/kirbyplants/random,
-/obj/item/storage/pod{
-	pixel_x = 32;
-	pixel_y = 32
-	},
-/obj/machinery/airalarm{
-	pixel_y = 23
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
 "cSS" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -92911,17 +92918,6 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
-"cZK" = (
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-<<<<<<< HEAD
-/obj/machinery/body_scanner,
-=======
-/obj/machinery/bloodbankgen,
->>>>>>> f85f110ba... Merge pull request #9047 from Poojawa/syntheticbloods
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "cZL" = (
@@ -127555,27 +127551,6 @@
 	dir = 10
 	},
 /area/science/misc_lab)
-"tOQ" = (
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/machinery/computer/pod/old{
-	density = 0;
-	icon = 'icons/obj/airlock_machines.dmi';
-	icon_state = "airlock_control_standby";
-	id = "chapelgun";
-	name = "Mass Driver Controller";
-	pixel_x = -24
-	},
-/turf/open/floor/plasteel/dark,
-/area/chapel/office)
 "tRT" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -173743,7 +173718,7 @@ cMg
 cHW
 cHW
 cPy
-cSR
+aav
 cPv
 cPv
 cXX
@@ -175289,7 +175264,7 @@ cSW
 cUO
 cWy
 cRe
-cZK
+aaw
 dbu
 ddg
 deF
