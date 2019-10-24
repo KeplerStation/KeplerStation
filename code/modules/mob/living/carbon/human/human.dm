@@ -1099,17 +1099,5 @@
 /mob/living/carbon/human/species/zombie/krokodil_addict
 	race = /datum/species/krokodil_addict
 
-/mob/living/carbon/human/species/mammal
-	race = /datum/species/mammal
-
-/mob/living/carbon/human/species/insect
-	race = /datum/species/insect
-
-/mob/living/carbon/human/species/xeno
-	race = /datum/species/xeno
-
-/mob/living/carbon/human/species/ipc
-	race = /datum/species/ipc
-
 /mob/living/carbon/human/species/roundstartslime
 	race = /datum/species/jelly/roundstartslime

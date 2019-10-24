@@ -717,31 +717,6 @@
 	race = /datum/species/android
 	mutationtext = "<span class='danger'>The pain subsides. You feel... artificial.</span>"
 
-//Citadel Races
-/datum/reagent/mutationtoxin/mammal
-	name = "Mammal Mutation Toxin"
-	id = "mammalmutationtoxin"
-	description = "A glowing toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/mammal
-	mutationtext = "<span class='danger'>The pain subsides. You feel... fluffier.</span>"
-
-/datum/reagent/mutationtoxin/insect
-	name = "Insect Mutation Toxin"
-	id = "insectmutationtoxin"
-	description = "A glowing toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/insect
-	mutationtext = "<span class='danger'>The pain subsides. You feel... attracted to dark, moist areas.</span>"
-
-/datum/reagent/mutationtoxin/xenoperson
-	name = "Xeno-Hybrid Mutation Toxin"
-	id = "xenopersonmutationtoxin"
-	description = "A glowing toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/xeno
-	mutationtext = "<span class='danger'>The pain subsides. You feel... oddly longing for the Queen.</span>" //sadly, not the British one.
-
 //BLACKLISTED RACES
 /datum/reagent/mutationtoxin/skeleton
 	name = "Skeleton Mutation Toxin"

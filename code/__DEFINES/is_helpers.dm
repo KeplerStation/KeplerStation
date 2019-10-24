@@ -60,15 +60,6 @@
 #define ishumanbasic(A) (is_species(A, /datum/species/human))
 #define iscatperson(A) (ishumanbasic(A) && istype(A.dna.species, /datum/species/human/felinid) )
 
-// Citadel specific species
-#define isipcperson(A) (is_species(A, /datum/species/ipc))
-#define ismammal(A) (is_species(A, /datum/species/mammal))
-#define isavian(A) (is_species(A, /datum/species/avian))
-#define isaquatic(A) (is_species(A, /datum/species/aquatic))
-#define isinsect(A) (is_species(A, /datum/species/insect))
-#define isxenoperson(A) (is_species(A, /datum/species/xeno))
-#define isstartjelly(A) (is_species(A, /datum/species/jelly/roundstartslime))
-
 //more carbon mobs
 #define ismonkey(A) (istype(A, /mob/living/carbon/monkey))
 

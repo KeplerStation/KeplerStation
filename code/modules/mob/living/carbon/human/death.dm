@@ -11,18 +11,6 @@
 		else
 			new /obj/effect/gibspawner/slime/bodypartless(drop_location(), dna, get_static_viruses())
 
-	if(isipcperson(src))
-		if(with_bodyparts)
-			new /obj/effect/gibspawner/ipc(drop_location(), dna, get_static_viruses())
-		else
-			new /obj/effect/gibspawner/ipc/bodypartless(drop_location(), dna, get_static_viruses())
-
-	if(isxenoperson(src))
-		if(with_bodyparts)
-			new /obj/effect/gibspawner/xeno/xenoperson(drop_location(), dna, get_static_viruses())
-		else
-			new /obj/effect/gibspawner/xeno/xenoperson/bodypartless(drop_location(), dna, get_static_viruses())
-
 	if(islizard(src))
 		if(with_bodyparts)
 			new /obj/effect/gibspawner/lizard(drop_location(), dna, get_static_viruses())
