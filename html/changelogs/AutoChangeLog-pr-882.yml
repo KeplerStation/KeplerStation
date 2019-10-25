@@ -1,4 +1,0 @@
-author: "AffectedArc07"
-delete-after: True
-changes: 
-  - tweak: "Round time no longer includes the time spent in lobby"
