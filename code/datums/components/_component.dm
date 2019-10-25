@@ -281,12 +281,6 @@
 	if(target.parent)
 		target.RemoveComponent()
 	target.parent = src
-<<<<<<< HEAD
-	if(target.PostTransfer() == COMPONENT_INCOMPATIBLE)
-		var/c_type = target.type
-		qdel(target)
-		CRASH("Incompatible [c_type] transfer attempt to a [type]!")
-=======
 	var/result = target.PostTransfer()
 	switch(result)
 		if(COMPONENT_INCOMPATIBLE)
@@ -294,7 +288,6 @@
 			qdel(target)
 			CRASH("Incompatible [c_type] transfer attempt to a [type]!")
 
->>>>>>> 2ae111eaf... Merge pull request #9587 from Ghommie/Ghommie-cit258
 	if(target == AddComponent(target))
 		target._JoinParent()
 
