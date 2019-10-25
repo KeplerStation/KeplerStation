@@ -23,7 +23,7 @@
 
 /datum/component/wearertargeting/phantomthief/proc/handlefilterstuff(datum/source, mob/user, combatmodestate)
 	if(istype(user))
-		var/thefilter = filter(type = "drop_shadow", x = filter_x, y = filter_y, size = filter_size, border = filter_border, color = filter_color)
+		var/thefilter = filter(type = "drop_shadow", x = filter_x, y = filter_y, size = filter_size, color = filter_color)
 		if(!combatmodestate)
 			user.filters -= thefilter
 		else
@@ -31,7 +31,7 @@
 
 /datum/component/wearertargeting/phantomthief/proc/stripdesiredfilter(mob/user)
 	if(istype(user))
-		var/thefilter = filter(type = "drop_shadow", x = filter_x, y = filter_y, size = filter_size, border = filter_border, color = filter_color)
+		var/thefilter = filter(type = "drop_shadow", x = filter_x, y = filter_y, size = filter_size, color = filter_color)
 		user.filters -= thefilter
 
 /datum/component/wearertargeting/phantomthief/on_drop(datum/source, mob/user)
