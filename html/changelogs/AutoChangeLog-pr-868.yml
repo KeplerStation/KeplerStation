@@ -1,4 +1,0 @@
-author: "KeplerStation-Bot"
-delete-after: True
-changes: 
-  - bugfix: "Fixes temporary transformation sting triggering heart attacks on heartless humans."
