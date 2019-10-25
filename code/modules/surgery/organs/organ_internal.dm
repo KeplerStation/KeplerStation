@@ -137,6 +137,8 @@
 		return
 	if(is_cold())
 		return
+	if(maxHealth == "bone")
+		return
 	///Damage decrements by a percent of its maxhealth
 	var/healing_amount = -(maxHealth * healing_factor)
 	///Damage decrements again by a percent of its maxhealth, up to a total of 4 extra times depending on the owner's health
