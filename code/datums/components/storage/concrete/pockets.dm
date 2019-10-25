@@ -40,7 +40,7 @@
 		/obj/item/scalpel, /obj/item/reagent_containers/syringe, /obj/item/dnainjector,
 		/obj/item/reagent_containers/hypospray/medipen, /obj/item/reagent_containers/dropper,
 		/obj/item/implanter, /obj/item/screwdriver, /obj/item/weldingtool/mini,
-		/obj/item/firing_pin, /obj/item/gun/ballistic/automatic/pistol/mag
+		/obj/item/firing_pin, /obj/item/gun/ballistic/automatic/pistol
 		))
 
 /datum/component/storage/concrete/pockets/shoes/clown/Initialize()
@@ -51,7 +51,7 @@
 		/obj/item/scalpel, /obj/item/reagent_containers/syringe, /obj/item/dnainjector,
 		/obj/item/reagent_containers/hypospray/medipen, /obj/item/reagent_containers/dropper,
 		/obj/item/implanter, /obj/item/screwdriver, /obj/item/weldingtool/mini,
-		/obj/item/firing_pin, /obj/item/bikehorn))
+		/obj/item/firing_pin, /obj/item/bikehorn, /obj/item/gun/ballistic/automatic/pistol))
 
 /datum/component/storage/concrete/pockets/pocketprotector
 	max_items = 3
