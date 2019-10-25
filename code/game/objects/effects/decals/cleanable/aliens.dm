@@ -25,13 +25,25 @@
 	random_icon_states = list("xgib1", "xgib2", "xgib3", "xgib4", "xgib5", "xgib6")
 	mergeable_decal = FALSE
 
+<<<<<<< HEAD
 /obj/effect/decal/cleanable/xenoblood/xgibs/proc/streak(list/directions)
 	set waitfor = 0
+=======
+/obj/effect/decal/cleanable/blood/gibs/xeno/streak(list/directions)
+	set waitfor = FALSE
+	var/list/diseases = list()
+	SEND_SIGNAL(src, COMSIG_GIBS_STREAK, directions, diseases)
+>>>>>>> f9120ed9e... Merge pull request #9589 from Ghommie/Ghommie-cit259
 	var/direction = pick(directions)
-	for(var/i = 0, i < pick(1, 200; 2, 150; 3, 50), i++)
+	for(var/i in 0 to pick(0, 200; 1, 150; 2, 50))
 		sleep(2)
 		if(i > 0)
+<<<<<<< HEAD
 			new /obj/effect/decal/cleanable/xenoblood/xsplatter(loc)
+=======
+			var/obj/effect/decal/cleanable/blood/splatter/xeno/splat = new /obj/effect/decal/cleanable/blood/splatter/xeno(loc, diseases)
+			splat.transfer_blood_dna(blood_DNA, diseases)
+>>>>>>> f9120ed9e... Merge pull request #9589 from Ghommie/Ghommie-cit259
 		if(!step_to(src, get_step(src, direction), 0))
 			break
 

@@ -170,7 +170,7 @@
 
 /obj/item/storage/firstaid/tactical/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/storage/firstaid/tactical/PopulateContents()
@@ -200,7 +200,7 @@
 
 /obj/item/storage/pill_bottle/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.allow_quick_gather = TRUE
 	STR.click_gather = TRUE
 	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/pill, /obj/item/dice))
@@ -330,6 +330,24 @@
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_containers/pill/mutarad(src)
 
+<<<<<<< HEAD
+=======
+/obj/item/storage/pill_bottle/penis_enlargement
+	name = "penis enlargement pills"
+	desc = "You want penis enlargement pills?"
+
+/obj/item/storage/pill_bottle/penis_enlargement/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/reagent_containers/pill/penis_enlargement(src)
+
+/obj/item/storage/pill_bottle/breast_enlargement
+	name = "breast enlargement pills"
+	desc = "Made by Fermichem - They have a woman with breasts larger than she is on them. The warming states not to take more than 10u at a time."
+
+/obj/item/storage/pill_bottle/breast_enlargement/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/reagent_containers/pill/breast_enlargement(src)
+>>>>>>> f9120ed9e... Merge pull request #9589 from Ghommie/Ghommie-cit259
 
 /////////////
 //Organ Box//
@@ -348,7 +366,7 @@
 
 /obj/item/storage/belt/organbox/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 16
 	STR.max_w_class = WEIGHT_CLASS_BULKY
 	STR.max_combined_w_class = 20
