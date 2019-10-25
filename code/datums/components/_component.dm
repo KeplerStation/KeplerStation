@@ -2,7 +2,11 @@
 	var/dupe_mode = COMPONENT_DUPE_HIGHLANDER
 	var/dupe_type
 	var/datum/parent
-
+	//only set to true if you are able to properly transfer this component
+	//At a minimum RegisterWithParent and UnregisterFromParent should be used
+	//Make sure you also implement PostTransfer for any post transfer handling
+	var/can_transfer = FALSE
+	
 /datum/component/New(datum/P, ...)
 	parent = P
 	var/list/arguments = args.Copy(2)
