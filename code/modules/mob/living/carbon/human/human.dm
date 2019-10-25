@@ -31,7 +31,11 @@
 	if(CONFIG_GET(flag/disable_stambuffer))
 		togglesprint()
 
+<<<<<<< HEAD
 	AddComponent(/datum/component/redirect, list(COMSIG_COMPONENT_CLEAN_ACT = CALLBACK(src, .proc/clean_blood)))
+=======
+	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, /mob/living/carbon/human/clean_blood)
+>>>>>>> 2ae111eaf... Merge pull request #9587 from Ghommie/Ghommie-cit258
 
 
 /mob/living/carbon/human/ComponentInitialize()

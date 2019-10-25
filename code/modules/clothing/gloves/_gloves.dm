@@ -14,7 +14,11 @@
 
 /obj/item/clothing/gloves/ComponentInitialize()
 	. = ..()
+<<<<<<< HEAD
 	AddComponent(/datum/component/redirect, list(COMSIG_COMPONENT_CLEAN_ACT = CALLBACK(src, .proc/clean_blood)))
+=======
+	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, /obj/item/clothing/gloves/clean_blood)
+>>>>>>> 2ae111eaf... Merge pull request #9587 from Ghommie/Ghommie-cit258
 
 /obj/item/clothing/gloves/proc/clean_blood(datum/source, strength)
 	if(strength < CLEAN_STRENGTH_BLOOD)
