@@ -3086,12 +3086,15 @@
 #include "modular_citadel\code\modules\reagents\reagent container\hypovial.dm"
 #include "modular_citadel\code\modules\recycling\disposal\bin.dm"
 #include "modular_citadel\code\modules\research\designs\autoylathe_designs.dm"
+<<<<<<< HEAD
 #include "modular_citadel\code\modules\research\designs\machine_designs.dm"
 #include "modular_citadel\code\modules\research\designs\weapon_designs.dm"
 #include "modular_citadel\code\modules\research\designs\xenobio_designs.dm"
 #include "modular_citadel\code\modules\research\designs\weapon_designs\weapon_designs.dm"
 #include "modular_citadel\code\modules\research\techweb\_techweb.dm"
 #include "modular_citadel\code\modules\research\xenobiology\xenobio_camera.dm"
+=======
+>>>>>>> 8b22c9547... Merge pull request #9606 from Ghommie/Ghommie-cit270
 #include "modular_citadel\code\modules\vehicles\secway.dm"
 #include "modular_kepler\code\game\machinery\body_scanner.dm"
 #include "modular_kepler\code\game\objects\ids.dm"
