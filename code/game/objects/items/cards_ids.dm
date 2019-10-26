@@ -111,10 +111,6 @@
 		user.visible_message("<span class='warning'>[src] fizzles and sparks. It seems like it's out of charges.</span>")
 		playsound(src, 'sound/effects/light_flicker.ogg', 100, 1)
 
-/obj/item/card/emag/examine(mob/user)
-	. = ..()
-	to_chat(user, "<span class='notice'>It has <b>[uses ? uses : "no"]</b> charges left.</span>")
-
 /obj/item/card/emag/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/emagrecharge))
 		var/obj/item/emagrecharge/ER = W
