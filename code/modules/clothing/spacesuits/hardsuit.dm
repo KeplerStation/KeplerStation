@@ -918,7 +918,6 @@
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/storage/bag/ore, /obj/item/pickaxe)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/lavaknight
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	tauric = TRUE		//Citadel Add for tauric hardsuits
 
 	var/energy_color = "#35FFF0"
 
@@ -942,12 +941,7 @@
 	. = ..()
 	if(!isinhands)
 		var/mutable_appearance/energy_overlay
-		if(taurmode == SNEK_TAURIC)
-			energy_overlay = mutable_appearance('modular_citadel/icons/mob/taur_naga.dmi', "knight_cydonia_overlay", ABOVE_LIGHTING_LAYER)
-		else if(taurmode == PAW_TAURIC)
-			energy_overlay = mutable_appearance('modular_citadel/icons/mob/taur_canine.dmi', "knight_cydonia_overlay", ABOVE_LIGHTING_LAYER)
-		else
-			energy_overlay = mutable_appearance(icon_file, "knight_cydonia_overlay", ABOVE_LIGHTING_LAYER)
+		energy_overlay = mutable_appearance(icon_file, "knight_cydonia_overlay", ABOVE_LIGHTING_LAYER)
 
 		energy_overlay.plane = ABOVE_LIGHTING_LAYER
 		energy_overlay.color = energy_color
