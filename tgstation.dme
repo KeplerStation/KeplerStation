@@ -2962,7 +2962,6 @@
 #include "modular_citadel\code\game\objects\items\devices\aicard.dm"
 #include "modular_citadel\code\game\objects\items\devices\radio\encryptionkey.dm"
 #include "modular_citadel\code\game\objects\items\devices\radio\headset.dm"
-#include "modular_citadel\code\game\objects\items\melee\eutactic_blades.dm"
 #include "modular_citadel\code\game\objects\items\storage\firstaid.dm"
 #include "modular_citadel\code\game\objects\structures\tables_racks.dm"
 #include "modular_citadel\code\game\objects\structures\beds_chairs\chair.dm"
