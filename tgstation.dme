@@ -2974,21 +2974,6 @@
 #include "modular_citadel\code\modules\admin\holder2.dm"
 #include "modular_citadel\code\modules\admin\secrets.dm"
 #include "modular_citadel\code\modules\admin\topic.dm"
-<<<<<<< HEAD
-#include "modular_citadel\code\modules\awaymissions\citadel_ghostrole_spawners.dm"
-=======
-#include "modular_citadel\code\modules\arousal\arousal.dm"
-#include "modular_citadel\code\modules\arousal\organs\breasts.dm"
-#include "modular_citadel\code\modules\arousal\organs\eggsack.dm"
-#include "modular_citadel\code\modules\arousal\organs\genitals.dm"
-#include "modular_citadel\code\modules\arousal\organs\genitals_sprite_accessories.dm"
-#include "modular_citadel\code\modules\arousal\organs\ovipositor.dm"
-#include "modular_citadel\code\modules\arousal\organs\penis.dm"
-#include "modular_citadel\code\modules\arousal\organs\testicles.dm"
-#include "modular_citadel\code\modules\arousal\organs\vagina.dm"
-#include "modular_citadel\code\modules\arousal\organs\womb.dm"
-#include "modular_citadel\code\modules\arousal\toys\dildos.dm"
->>>>>>> 49e52eee0... Merge pull request #9603 from Ghommie/Ghommie-cit267
 #include "modular_citadel\code\modules\cargo\console.dm"
 #include "modular_citadel\code\modules\client\client_defines.dm"
 #include "modular_citadel\code\modules\client\client_procs.dm"
