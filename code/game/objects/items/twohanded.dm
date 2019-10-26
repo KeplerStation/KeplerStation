@@ -537,8 +537,6 @@
 		var/mob/M = loc
 		M.update_inv_hands()
 
-	clean_blood()
-
 /obj/item/twohanded/dualsaber/hypereutactic/AltClick(mob/living/user)
 	if(!user.canUseTopic(src, BE_CLOSE, FALSE) || hacked)
 		return
