@@ -1,6 +1,3 @@
-/obj/item/card/emag
-	var/uses = INFINITY // So playmin is still available
-
 // Job ID Card Sprite s
 /obj/item/card/id
 	icon = 'modular_kepler/icons/obj/card.dmi'
