@@ -2557,6 +2557,7 @@
 #include "code\modules\reagents\reagent_containers\dropper.dm"
 #include "code\modules\reagents\reagent_containers\glass.dm"
 #include "code\modules\reagents\reagent_containers\hypospray.dm"
+#include "code\modules\reagents\reagent_containers\hypovial.dm"
 #include "code\modules\reagents\reagent_containers\medspray.dm"
 #include "code\modules\reagents\reagent_containers\patch.dm"
 #include "code\modules\reagents\reagent_containers\pill.dm"
@@ -3077,9 +3078,13 @@
 #include "modular_citadel\code\modules\reagents\chemistry\recipes\fermi.dm"
 #include "modular_citadel\code\modules\reagents\objects\clothes.dm"
 #include "modular_citadel\code\modules\reagents\objects\items.dm"
+<<<<<<< HEAD
 #include "modular_citadel\code\modules\reagents\reagent container\cit_kegs.dm"
 #include "modular_citadel\code\modules\reagents\reagent container\hypospraymkii.dm"
 #include "modular_citadel\code\modules\reagents\reagent container\hypovial.dm"
+=======
+#include "modular_citadel\code\modules\reagents\reagents\cit_reagents.dm"
+>>>>>>> 309cf531a... Merge pull request #9627 from Ghommie/Ghommie-cit279
 #include "modular_citadel\code\modules\recycling\disposal\bin.dm"
 #include "modular_citadel\code\modules\research\designs\autoylathe_designs.dm"
 #include "modular_citadel\code\modules\research\designs\machine_designs.dm"
