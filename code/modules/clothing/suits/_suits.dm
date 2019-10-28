@@ -36,8 +36,16 @@
 	if(!isinhands)
 		if(damaged_clothes)
 			. += mutable_appearance('icons/effects/item_damage.dmi', "damaged[blood_overlay_type]")
+<<<<<<< HEAD
 		IF_HAS_BLOOD_DNA(src)
 			. += mutable_appearance('icons/effects/blood.dmi', "[blood_overlay_type]blood")
+=======
+		if(blood_DNA)
+			if(tauric && taurmode >= SNEK_TAURIC)
+				. += mutable_appearance('modular_citadel/icons/mob/64x32_effects.dmi', "[blood_overlay_type]blood", color = blood_DNA_to_color())
+			else
+				. += mutable_appearance('icons/effects/blood.dmi', "[blood_overlay_type]blood", color = blood_DNA_to_color())
+>>>>>>> 329f86cea0... Merge pull request #9612 from Linzolle/blood-overlay-again
 		var/mob/living/carbon/human/M = loc
 		if(ishuman(M) && M.w_uniform)
 			var/obj/item/clothing/under/U = M.w_uniform
