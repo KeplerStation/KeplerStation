@@ -1773,6 +1773,14 @@ datum/uplink_item/stealthy_weapons/taeclowndo_shoes
 	surplus = 20
 	restricted_roles = list("Janitor")
 
+/datum/uplink_item/role_restricted/oldtoolboxclean
+	name = "Ancient Toolbox"
+	desc = "An iconic toolbox design notorious with Assistants everywhere, this design was especially made to become more robust the more telecrystals it has inside it! Tools and insulated gloves included."
+	item = /obj/item/storage/toolbox/mechanical/old/clean
+	cost = 2
+	restricted_roles = list("Assistant")
+	surplus = 0
+
 /datum/uplink_item/role_restricted/goldenbox
 	name = "Gold Toolbox"
 	desc = "A gold planted plastitanium toolbox loaded with tools. Comes with a set of AI detection multi-tool and a pare of combat gloves."
