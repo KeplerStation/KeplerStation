@@ -442,3 +442,17 @@ datum/gear/darksabresheath
 	ckeywhitelist = list("nicholaiavenicci")
 
 
+<<<<<<< HEAD
+=======
+/datum/gear/donorgoggles
+	name = "Flight Goggles"
+	category = SLOT_HEAD
+	path = /obj/item/clothing/head/flight
+	ckeywhitelist = list("maxlynchy")
+
+/datum/gear/onionneck
+	name = "Onion Necklace"
+	category = SLOT_NECK
+	path = /obj/item/clothing/neck/necklace/onion
+	ckeywhitelist = list("cdrcross")
+>>>>>>> 2c017b1f86... Merge pull request #9633 from Citadel-Station-13/onionneck
