@@ -89,3 +89,11 @@
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_ENGINEERING
 	build_path = /obj/item/circuitboard/machine/clonescanner
 	category = list("Medical Machinery")
+
+/datum/design/board/bscanner
+	name = "Machine Design (Body Scanner Board)"
+	desc = "The circuit board for a body scanner."
+	id = "bscanner"
+	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_ENGINEERING
+	build_path = /obj/item/circuitboard/machine/body_scanner
+	category = list("Medical Machinery")

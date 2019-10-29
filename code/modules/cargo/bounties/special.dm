@@ -1,14 +1,14 @@
 /datum/bounty/item/alien_organs
 	name = "Alien Organs"
 	description = "The ICC is interested in studying Xenomorph biology. Ship a set of organs to be thoroughly compensated."
-	reward = 25000
+	reward = 13500
 	required_count = 3
 	wanted_types = list(/obj/item/organ/brain/alien, /obj/item/organ/alien, /obj/item/organ/body_egg/alien_embryo)
 
 /datum/bounty/item/syndicate_documents
 	name = "Syndicate Documents"
 	description = "Intel regarding the syndicate is highly prized at Head Office. If you find syndicate documents, ship them. You could save lives."
-	reward = 15000
+	reward = 10000
 	wanted_types = list(/obj/item/documents/syndicate, /obj/item/documents/photocopy)
 
 /datum/bounty/item/syndicate_documents/applies_to(obj/O)
@@ -22,14 +22,14 @@
 /datum/bounty/item/adamantine
 	name = "Adamantine"
 	description = "The ICC's anomalous materials division is in desparate need for Adamantine. Send them a large shipment and we'll make it worth your while."
-	reward = 35000
+	reward = 15000
 	required_count = 10
 	wanted_types = list(/obj/item/stack/sheet/mineral/adamantine)
 
 /datum/bounty/more_bounties
 	name = "More Bounties"
 	description = "Complete enough bounties and Head Office will issue new ones!"
-	reward = 3 // number of bounties
+	reward = 8 // number of bounties
 	var/required_bounties = 5
 
 /datum/bounty/more_bounties/can_claim()

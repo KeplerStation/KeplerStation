@@ -589,6 +589,8 @@
 	set category = "Server"
 	set desc="Start the round RIGHT NOW"
 	set name="Start Now"
+	if(alert(usr, "Are you sure you want to start the round right now?", "Confirm", "Yes", "No") == "No")
+		return
 	if(SSticker.current_state == GAME_STATE_PREGAME || SSticker.current_state == GAME_STATE_STARTUP)
 		SSticker.start_immediately = TRUE
 		log_admin("[usr.key] has started the game.")

@@ -138,6 +138,14 @@
 					msg += " and [t_his] soul has departed"
 		msg += "...</span>\n"
 
+	// Kepler change: Show splints on examine
+	var/list/splinted_stuff = list()
+	for(var/obj/item/bodypart/B in bodyparts)
+		if(B.bone_status == BONE_FLAG_SPLINTED)
+			splinted_stuff += B.name
+	if(splinted_stuff.len)
+		msg += "<span class='warning'><B>[t_His] [english_list(splinted_stuff)] [splinted_stuff.len > 1 ? "are" : "is"] splinted!</B></span>\n"
+
 	if(get_bodypart(BODY_ZONE_HEAD) && !getorgan(/obj/item/organ/brain))
 		msg += "<span class='deadsay'>It appears that [t_his] brain is missing...</span>\n"
 
@@ -162,7 +170,7 @@
 			damage_text = "limp and lifeless"
 		else
 			var/more_brute = BP.brute_dam >= BP.burn_dam
-			damage_text = more_brute ? "broken and mangled" : "burnt and blistered"
+			damage_text = more_brute ? "bruised and mangled" : "burnt and blistered"
 		msg += "<B>[capitalize(t_his)] [BP.name] is [damage_text]!</B>\n"
 
 	//stores missing limbs
@@ -318,6 +326,8 @@
 
 		if(digitalcamo)
 			msg += "[t_He] [t_is] moving [t_his] body in an unnatural and blatantly inhuman manner.\n"
+
+	msg += common_trait_examine()
 
 	var/traitstring = get_trait_string()
 	if(ishuman(user))

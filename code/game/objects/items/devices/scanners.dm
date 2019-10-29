@@ -135,7 +135,7 @@ SLIME SCANNER
 		var/mob/living/carbon/human/H = M
 		if(H.undergoing_cardiac_arrest() && H.stat != DEAD)
 			to_chat(user, "<span class='danger'>Subject suffering from heart attack: Apply defibrillation or other electric shock immediately!</span>")
-		if(H.undergoing_liver_failure() && H.stat != DEAD)
+		if(H.undergoing_liver_failure() && H.stat != DEAD) //might be depreciated BUG_PROBABLE_CAUSE
 			to_chat(user, "<span class='danger'>Subject is suffering from liver failure: Apply Corazone and begin a liver transplant immediately!</span>")
 
 	var/msg = "<span class='info'>*---------*\nAnalyzing results for [M]:\n\tOverall status: [mob_status]\n"
@@ -157,35 +157,10 @@ SLIME SCANNER
 		msg += "\t<span class='alert'>Subject appears to have [M.getCloneLoss() > 30 ? "Severe" : "Minor"] cellular damage.</span>\n"
 		if(advanced)
 			msg += "\t<span class='info'>Cellular Damage Level: [M.getCloneLoss()].</span>\n"
-	if (M.getBrainLoss() >= 200 || !M.getorgan(/obj/item/organ/brain))
-		msg += "\t<span class='alert'>Subject's brain function is non-existent.</span>\n"
-	else if (M.getBrainLoss() >= 120)
-		msg += "\t<span class='alert'>Severe brain damage detected. Subject likely to have mental traumas.</span>\n"
-	else if (M.getBrainLoss() >= 45)
-		msg += "\t<span class='alert'>Brain damage detected.</span>\n"
-	if(ishuman(M) && advanced) // Should I make this not advanced?
-		var/mob/living/carbon/human/H = M
-		var/obj/item/organ/liver/L = H.getorganslot("liver")
-		if(L)
-			if(L.swelling > 20)
-				msg += "\t<span class='danger'>Subject is suffering from an enlarged liver.</span>\n" //i.e. shrink their liver or give them a transplant.
-		else
-			msg += "\t<span class='danger'>Subject's liver is missing.</span>\n"
-		var/obj/item/organ/tongue/T = H.getorganslot("tongue")
-		if(T)
-			if(T.damage > 40)
-				msg += "\t<span class='danger'>Subject is suffering from severe burn tissue on their tongue.</span>\n" //i.e. their tongue is shot
-			if(T.name == "fluffy tongue")
-				msg += "\t<span class='danger'>Subject is suffering from a fluffified tongue. Suggested cure: Yamerol or a tongue transplant.</span>\n"
-		else
-			msg += "\t<span class='danger'>Subject's tongue is missing.</span>\n"
-		var/obj/item/organ/lungs/Lung = H.getorganslot("lungs")
-		if(Lung)
-			if(Lung.damage > 150)
-				msg += "\t<span class='danger'>Subject is suffering from acute emphysema leading to trouble breathing.</span>\n" //i.e. Their lungs are shot
-		else
-			msg += "\t<span class='danger'>Subject's lungs have collapsed from trauma!</span>\n"
-		
+	if (!M.getorgan(/obj/item/organ/brain))
+		to_chat(user, "\t<span class='alert'>Subject lacks a brain.</span>") //Unsure how this won't proc for 50% of the cit playerbase (This is a joke everyone on cit a cute.)
+
+	if(iscarbon(M))
 		var/mob/living/carbon/C = M
 		if(LAZYLEN(C.get_traumas()))
 			var/list/trauma_text = list()
@@ -204,11 +179,10 @@ SLIME SCANNER
 		if(C.roundstart_quirks.len)
 			msg += "\t<span class='info'>Subject has the following physiological traits: [C.get_trait_string()].</span>\n"
 	if(advanced)
-		msg += "\t<span class='info'>Brain Activity Level: [(200 - M.getBrainLoss())/2]%.</span>\n"
+		msg += "\t<span class='info'>Brain Activity Level: [(200 - M.getOrganLoss(ORGAN_SLOT_BRAIN))/2]%.</span>\n"
 	if(M.radiation)
 		msg += "\t<span class='alert'>Subject is irradiated.</span>\n"
-		if(advanced)
-			msg += "\t<span class='info'>Radiation Level: [M.radiation]%.</span>\n"
+		msg += "\t<span class='info'>Radiation Level: [M.radiation] rad</span>\n"
 
 	if(advanced && M.hallucinating())
 		msg += "\t<span class='info'>Subject is hallucinating.</span>\n"
@@ -220,62 +194,6 @@ SLIME SCANNER
 		else
 			msg += "\t<span class='notice'>Subject appears to be astrally projecting.</span>\n"
 
-	//Eyes and ears
-	if(advanced)
-		if(iscarbon(M))
-			var/mob/living/carbon/C = M
-			var/obj/item/organ/ears/ears = C.getorganslot(ORGAN_SLOT_EARS)
-			msg += "\t<span class='info'><b>==EAR STATUS==</b></span>\n"
-			if(istype(ears))
-				var/healthy = TRUE
-				if(HAS_TRAIT_FROM(C, TRAIT_DEAF, GENETIC_MUTATION))
-					healthy = FALSE
-					msg += "\t<span class='alert'>Subject is genetically deaf.</span>\n"
-				else if(HAS_TRAIT(C, TRAIT_DEAF))
-					healthy = FALSE
-					msg += "\t<span class='alert'>Subject is deaf.</span>\n"
-				else
-					if(ears.ear_damage)
-						msg += "\t<span class='alert'>Subject has [ears.ear_damage > UNHEALING_EAR_DAMAGE? "permanent ": "temporary "]hearing damage.</span>\n"
-						healthy = FALSE
-					if(ears.deaf)
-						msg += "\t<span class='alert'>Subject is [ears.ear_damage > UNHEALING_EAR_DAMAGE ? "permanently ": "temporarily "] deaf.</span>\n"
-						healthy = FALSE
-				if(healthy)
-					msg += "\t<span class='info'>Healthy.</span>\n"
-			else
-				msg += "\t<span class='alert'>Subject does not have ears.</span>\n"
-			var/obj/item/organ/eyes/eyes = C.getorganslot(ORGAN_SLOT_EYES)
-			msg += "\t<span class='info'><b>==EYE STATUS==</b></span>\n"
-			if(istype(eyes))
-				var/healthy = TRUE
-				if(HAS_TRAIT(C, TRAIT_BLIND))
-					msg += "\t<span class='alert'>Subject is blind.</span>\n"
-					healthy = FALSE
-				if(HAS_TRAIT(C, TRAIT_NEARSIGHT))
-					msg += "\t<span class='alert'>Subject is nearsighted.</span>\n"
-					healthy = FALSE
-				if(eyes.eye_damage > 30)
-					msg += "\t<span class='alert'>Subject has severe eye damage.</span>\n"
-					healthy = FALSE
-				else if(eyes.eye_damage > 20)
-					msg += "\t<span class='alert'>Subject has significant eye damage.</span>\n"
-					healthy = FALSE
-				else if(eyes.eye_damage)
-					msg += "\t<span class='alert'>Subject has minor eye damage.</span>\n"
-					healthy = FALSE
-				if(healthy)
-					msg += "\t<span class='info'>Healthy.</span>\n"
-			else
-				msg += "\t<span class='alert'>Subject does not have eyes.</span>\n"
-
-
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		var/ldamage = H.return_liver_damage()
-		if(ldamage > 10)
-			msg += "\t<span class='alert'>[ldamage > 45 ? "Severe" : "Minor"] liver damage detected.</span>\n"
-
 	// Body part damage report
 	if(iscarbon(M) && mode == 1)
 		var/mob/living/carbon/C = M
@@ -285,6 +203,12 @@ SLIME SCANNER
 			for(var/obj/item/bodypart/org in damaged)
 				msg += "\t\t<span class='info'>[capitalize(org.name)]: [(org.brute_dam > 0) ? "<font color='red'>[org.brute_dam]</font></span>" : "<font color='red'>0</font>"]-[(org.burn_dam > 0) ? "<font color='#FF8000'>[org.burn_dam]</font>" : "<font color='#FF8000'>0</font>"]\n"
 
+		var/list/broken_stuff = list()
+		for(var/obj/item/bodypart/B in C.bodyparts)
+			if(B.bone_status == BONE_FLAG_BROKEN)
+				broken_stuff += B
+		if(broken_stuff.len)
+			msg += "\t<span class='alert'>Bone fractures detected. Advanced scanner required for location.</span>\n"
 
 	// Species and body temperature
 	if(ishuman(M))
@@ -373,7 +297,7 @@ SLIME SCANNER
 			if(M.reagents.reagent_list.len)
 				var/list/datum/reagent/reagents = list()
 				for(var/datum/reagent/R in M.reagents.reagent_list)
-					if(R.invisible)
+					if(R.chemical_flags & REAGENT_INVISIBLE)
 						continue
 					reagents += R
 
@@ -392,6 +316,21 @@ SLIME SCANNER
 					msg += "<span class='danger'>[R.name]</span>\n"
 			else
 				msg += "<span class='notice'>Subject is not addicted to any reagents.</span>\n"
+
+			if(M.reagents.has_reagent("fermiTox"))
+				var/datum/reagent/fermiTox = M.reagents.has_reagent("fermiTox")
+				switch(fermiTox.volume)
+					if(5 to 10)
+						msg += "<span class='notice'>Subject contains a low amount of toxic isomers.</span>\n"
+					if(10 to 25)
+						msg += "<span class='danger'>Subject contains toxic isomers.</span>\n"
+					if(25 to 50)
+						msg += "<span class='danger'>Subject contains a substantial amount of toxic isomers.</span>\n"
+					if(50 to 95)
+						msg += "<span class='danger'>Subject contains a high amount of toxic isomers.</span>\n"
+					if(95 to INFINITY)
+						msg += "<span class='danger'>Subject contains a extremely dangerous amount of toxic isomers.</span>\n"
+
 			msg += "*---------*</span>"
 			to_chat(user, msg)
 

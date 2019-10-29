@@ -34,6 +34,13 @@
 	addtimer(CALLBACK(src, .proc/gc, TRUE), 1)		//GC after initialization.
 	last_process = world.time
 
+/datum/component/wet_floor/RegisterWithParent()
+	RegisterSignal(parent, COMSIG_TURF_IS_WET, .proc/is_wet)
+	RegisterSignal(parent, COMSIG_TURF_MAKE_DRY, .proc/dry)
+
+/datum/component/wet_floor/UnregisterFromParent()
+	UnregisterSignal(parent, list(COMSIG_TURF_IS_WET, COMSIG_TURF_MAKE_DRY))
+
 /datum/component/wet_floor/Destroy()
 	STOP_PROCESSING(SSwet_floors, src)
 	var/turf/T = parent

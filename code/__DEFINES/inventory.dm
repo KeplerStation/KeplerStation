@@ -29,6 +29,7 @@
 #define ITEM_SLOT_DENYPOCKET	(1<<12) // this is to deny items with a w_class of WEIGHT_CLASS_SMALL or WEIGHT_CLASS_TINY to fit in pockets.
 #define ITEM_SLOT_NECK			(1<<13)
 #define ITEM_SLOT_SUITSTORE		(1<<14)
+#define ITEM_SLOT_PDA			(1<<15)
 
 //SLOTS
 #define SLOT_BACK			1
@@ -52,9 +53,10 @@
 #define SLOT_IN_BACKPACK	18
 #define SLOT_LEGCUFFED		19
 #define SLOT_GENERC_DEXTROUS_STORAGE	20
+#define SLOT_WEAR_PDA		21
 
 
-#define SLOTS_AMT			20 // Keep this up to date!
+#define SLOTS_AMT			21 // Keep this up to date!
 
 //I hate that this has to exist
 /proc/slotdefine2slotbit(slotdefine) //Keep this up to date with the value of SLOT BITMASKS and SLOTS (the two define sections above)
