@@ -1,5 +1,6 @@
 // simple is_type and similar inline helpers
 
+<<<<<<< HEAD
 #if DM_VERSION < 513
 #define islist(L) (istype(L, /list))
 #endif
@@ -12,6 +13,10 @@
 #define ismovableatom(A) ismovable(A)
 #endif
 
+=======
+#define in_range(source, user) (get_dist(source, user) <= 1 && (get_step(source, 0)?:z) == (get_step(user, 0)?:z))
+
+>>>>>>> 624d562995... Merge pull request #9637 from Citadel-Station-13/byond_513
 #define isatom(A) (isloc(A))
 
 #define isweakref(D) (istype(D, /datum/weakref))

@@ -451,6 +451,7 @@ Turf and target are separate in case you want to teleport some distance from a t
 	var/y = min(world.maxy, max(1, A.y + dy))
 	return locate(x,y,A.z)
 
+<<<<<<< HEAD
 #if DM_VERSION > 513
 #warn 513 is definitely stable now, remove this
 #endif
@@ -459,6 +460,8 @@ Turf and target are separate in case you want to teleport some distance from a t
 	var/y=arcsin(x/sqrt(1+x*x))
 	return y
 #endif
+=======
+>>>>>>> 624d562995... Merge pull request #9637 from Citadel-Station-13/byond_513
 /*
 	Gets all contents of contents and returns them all in a list.
 */
