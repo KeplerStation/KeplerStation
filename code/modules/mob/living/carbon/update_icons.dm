@@ -189,7 +189,7 @@
 		var/mutable_appearance/legcuffs = mutable_appearance('icons/mob/restraints.dmi', legcuffed.item_state, -LEGCUFF_LAYER)
 		legcuffs.color = legcuffed.color
 
-		overlays_standing[HANDCUFF_LAYER] = legcuffs
+		overlays_standing[LEGCUFF_LAYER] = legcuffs
 		apply_overlay(LEGCUFF_LAYER)
 		throw_alert("legcuffed", /obj/screen/alert/restrained/legcuffed, new_master = legcuffed)
 
@@ -303,3 +303,14 @@
 		overlays_standing[BODYPARTS_LAYER] = limb_icon_cache[icon_render_key]
 		apply_overlay(BODYPARTS_LAYER)
 	update_damage_overlays()
+
+/mob/living/carbon/proc/update_inv_splints()
+	remove_overlay(SPLINT_LAYER)
+	var/list/standing = list()
+	for(var/obj/item/bodypart/B in bodyparts)
+		if(B.bone_status == BONE_FLAG_SPLINTED)
+			var/mutable_appearance/some_overlay_thing = mutable_appearance('modular_kepler/icons/mob/splints.dmi', B.body_zone, SPLINT_LAYER)
+			standing += some_overlay_thing
+
+ 	overlays_standing[SPLINT_LAYER] = standing
+	apply_overlay(SPLINT_LAYER)

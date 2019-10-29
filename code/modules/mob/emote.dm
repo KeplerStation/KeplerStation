@@ -82,6 +82,13 @@
 	key_third_person = "boops"
 	message = "boops."
 
+/datum/emote/sound/silicon/beep
+	key = "beep"
+	key_third_person = "beeps"
+	message = "beeps."
+	message_param = "beeps at %t."
+	sound = 'sound/machines/twobeep.ogg'
+
 /datum/emote/sound/silicon/buzz
 	key = "buzz"
 	key_third_person = "buzzes"
@@ -498,7 +505,7 @@
 				H.Knockdown(20)
 			else
 				message_param = "<span class='userdanger'>bumps [user.p_their()] head on the ground</span> trying to motion towards %t."
-				H.adjustBrainLoss(5)
+				H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5)
 	..()
 
 /datum/emote/living/pout
@@ -722,14 +729,6 @@
 	message = jointext(message, "")
 
 	to_chat(user, message)
-
-/datum/emote/sound/beep
-	key = "beep"
-	key_third_person = "beeps"
-	message = "beeps."
-	message_param = "beeps at %t."
-	sound = 'sound/machines/twobeep.ogg'
-	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
 
 /datum/emote/living/circle
 	key = "circle"
@@ -1056,6 +1055,13 @@ IPC
 	mob_type_allowed_typecache = list(/mob/living/carbon/human)
 	emote_type = EMOTE_AUDIBLE
 	restricted_species = list(SPECIES_ID_IPC) // For when we implement IPC
+
+/datum/emote/sound/ipc/beep
+	key = "beep"
+	key_third_person = "beeps"
+	message = "beeps."
+	message_param = "beeps at %t."
+	sound = 'sound/machines/twobeep.ogg'
 
 /datum/emote/sound/ipc/buzz
 	key = "buzz"

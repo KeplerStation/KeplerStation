@@ -18,6 +18,8 @@
 			return belt
 		if(SLOT_WEAR_ID)
 			return wear_id
+		if(SLOT_WEAR_PDA) // KEPLER CHANGE: PDA Slots
+			return wear_pda
 		if(SLOT_EARS)
 			return ears
 		if(SLOT_GLASSES)
@@ -91,6 +93,9 @@
 			wear_id = I
 			sec_hud_set_ID()
 			update_inv_wear_id()
+		if(SLOT_WEAR_PDA) // KEPLER CHANGE: PDA Slots
+			wear_pda = I
+			update_inv_wear_pda()
 		if(SLOT_EARS)
 			ears = I
 			update_inv_ears()
@@ -171,6 +176,8 @@
 				dropItemToGround(wear_id)
 			if(belt && !CHECK_BITFIELD(belt.item_flags, NO_UNIFORM_REQUIRED))
 				dropItemToGround(belt)
+			if(wear_pda) // KEPLER CHANGE: PDA Slots
+				dropItemToGround(wear_pda)
 		w_uniform = null
 		update_suit_sensors()
 		if(!QDELETED(src))
@@ -223,6 +230,10 @@
 		s_store = null
 		if(!QDELETED(src))
 			update_inv_s_store()
+	else if(I == wear_pda) // KEPLER CHANGE: PDA Slots
+		wear_pda = null
+		if(!QDELETED(src))
+			update_inv_wear_pda()
 
 /mob/living/carbon/human/wear_mask_update(obj/item/clothing/C, toggle_off = 1)
 	if((C.flags_inv & (HIDEHAIR|HIDEFACIALHAIR)) || (initial(C.flags_inv) & (HIDEHAIR|HIDEFACIALHAIR)))

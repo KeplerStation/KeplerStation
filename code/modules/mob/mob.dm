@@ -249,7 +249,7 @@
 
 	if(!slot_priority)
 		slot_priority = list( \
-			SLOT_BACK, SLOT_WEAR_ID,\
+			SLOT_BACK, SLOT_WEAR_PDA, SLOT_WEAR_ID,\
 			SLOT_W_UNIFORM, SLOT_WEAR_SUIT,\
 			SLOT_WEAR_MASK, SLOT_HEAD, SLOT_NECK,\
 			SLOT_SHOES, SLOT_GLOVES,\
@@ -257,7 +257,7 @@
 			SLOT_BELT, SLOT_S_STORE,\
 			SLOT_L_STORE, SLOT_R_STORE,\
 			SLOT_GENERC_DEXTROUS_STORAGE\
-		)
+		)  // KEPLER CHANGE L252: PDA Slots
 
 	for(var/slot in slot_priority)
 		if(equip_to_slot_if_possible(W, slot, 0, 1, 1)) //qdel_on_fail = 0; disable_warning = 1; redraw_mob = 1
@@ -443,7 +443,13 @@
 //	M.Login()	//wat
 	return
 
-
+/mob/proc/transfer_ckey(mob/new_mob, send_signal = TRUE)
+	if(!ckey)
+		return FALSE
+	if(send_signal)
+		SEND_SIGNAL(src, COMSIG_MOB_KEY_CHANGE, new_mob, src)
+	new_mob.ckey = ckey
+	return TRUE
 
 /mob/verb/cancel_camera()
 	set name = "Cancel Camera View"
@@ -533,7 +539,12 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 		return
 	if(isAI(M))
 		return
-	show_inv(usr)
+
+/mob/MouseDrop_T(atom/dropping, atom/user)
+	. = ..()
+	if(ismob(dropping) && dropping != user)
+		var/mob/M = dropping
+		M.show_inv(user)
 
 /mob/proc/is_muzzled()
 	return 0
@@ -550,8 +561,9 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 			stat(null, "Next Map: [cached.map_name]")
 		stat(null, "Round ID: [GLOB.round_id ? GLOB.round_id : "NULL"]")
 		stat(null, "Server Time: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]")
-		stat(null, "Round Time: [WORLDTIME2TEXT("hh:mm:ss")]")
-		stat(null, "Station Time: [STATION_TIME_TIMESTAMP("hh:mm:ss")]")
+		if(SSticker.current_state == (GAME_STATE_PLAYING || GAME_STATE_FINISHED))
+			stat(null, "Round Time: [time2text((world.time - SSticker.round_start_time), "hh:mm:ss")]") // KEPLER CHANGE: Make round time just an offset and not include lobby time
+			stat(null, "Station Time: [STATION_TIME_TIMESTAMP("hh:mm:ss")]")
 		stat(null, "Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
 		if(SSshuttle.emergency)
 			var/ETA = SSshuttle.emergency.getModeStr()
@@ -803,6 +815,9 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 //Can the mob use Topic to interact with machines
 /mob/proc/canUseTopic(atom/movable/M, be_close=FALSE, no_dextery=FALSE, no_tk=FALSE)
 	return
+
+/mob/proc/canUseStorage()
+	return FALSE
 
 /mob/proc/faction_check_mob(mob/target, exact_match)
 	if(exact_match) //if we need an exact match, we need to do some bullfuckery.

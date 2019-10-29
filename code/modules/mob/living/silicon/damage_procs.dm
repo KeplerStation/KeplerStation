@@ -1,5 +1,5 @@
 
-/mob/living/silicon/apply_damage(damage = 0,damagetype = BRUTE, def_zone = null, blocked = FALSE)
+/mob/living/silicon/apply_damage(damage = 0,damagetype = BRUTE, def_zone = null, blocked = FALSE, break_modifier = 1)
 	var/hit_percent = (100-blocked)/100
 	if(!damage || (hit_percent <= 0))
 		return 0
@@ -35,8 +35,8 @@
 /mob/living/silicon/setStaminaLoss(amount, updating_stamina = 1)
 	return FALSE
 
-/mob/living/silicon/adjustBrainLoss(amount)
+/mob/living/silicon/adjustOrganLoss(slot, amount, maximum = 500)
 	return FALSE
 
-/mob/living/silicon/setBrainLoss(amount)
+/mob/living/silicon/setOrganLoss(slot, amount)
 	return FALSE

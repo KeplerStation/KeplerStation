@@ -241,9 +241,9 @@
 		var/sanitized_text = sanitize(text)
 		A.say(sanitized_text)
 		if (assembly)
-			log_say("[assembly] [REF(assembly)] : [sanitized_text]")
+			log_game("[assembly] [REF(assembly)] SAY: [sanitized_text]")
 		else
-			log_say("[name] ([type]) : [sanitized_text]")
+			log_game("[name] ([type]) SAY: [sanitized_text]")
 
 /obj/item/integrated_circuit/output/video_camera
 	name = "video camera circuit"

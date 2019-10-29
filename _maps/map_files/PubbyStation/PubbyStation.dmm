@@ -2,6 +2,33 @@
 "aaa" = (
 /turf/open/space/basic,
 /area/space)
+"aab" = (
+/obj/machinery/newscaster{
+	pixel_x = 32
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/structure/bedsheetbin/color,
+/turf/open/floor/plasteel/cafeteria,
+/area/crew_quarters/dorms)
+"aac" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
+	},
+/obj/structure/table,
+/obj/structure/bedsheetbin/towel,
+/turf/open/floor/plasteel/freezer,
+/area/crew_quarters/toilet/restrooms)
 "aad" = (
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plating{
@@ -7245,22 +7272,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /obj/structure/cable{
 	icon_state = "4-8"
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/turf/open/floor/plasteel/cafeteria,
-/area/crew_quarters/dorms)
-"asg" = (
-/obj/structure/bedsheetbin,
-/obj/machinery/newscaster{
-	pixel_x = 32
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -14876,15 +14887,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
-	},
-/turf/open/floor/plasteel/freezer,
-/area/crew_quarters/toilet/restrooms)
-"aJo" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 9
 	},
 /turf/open/floor/plasteel/freezer,
 /area/crew_quarters/toilet/restrooms)
@@ -24135,8 +24137,7 @@
 	dir = 8
 	},
 /obj/machinery/keycard_auth{
-	pixel_x = -23;
-	pixel_y = 0
+	pixel_x = -23
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/qm)
@@ -24476,22 +24477,20 @@
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/mechbay)
 "bfB" = (
-/obj/structure/table,
 /obj/machinery/requests_console{
 	department = "Cargo Bay";
 	departmentType = 2;
 	pixel_x = -30
 	},
-/obj/item/paper_bin{
-	layer = 2.9
-	},
-/obj/item/pen,
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
+	},
+/obj/machinery/computer/card/minor/qm{
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/qm)
@@ -27565,6 +27564,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/mapping_helpers/airlock/unres,
 /turf/open/floor/plasteel/freezer,
 /area/storage/emergency/port)
 "bnx" = (
@@ -29313,6 +29313,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/mapping_helpers/airlock/unres{
+	dir = 8
+	},
 /turf/open/floor/plasteel/white,
 /area/medical/genetics)
 "brb" = (
@@ -30152,6 +30155,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/effect/mapping_helpers/airlock/unres,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "bsI" = (
@@ -30163,6 +30167,7 @@
 	name = "Medbay"
 	},
 /obj/effect/turf_decal/tile/blue,
+/obj/effect/mapping_helpers/airlock/unres,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "bsJ" = (
@@ -31865,14 +31870,11 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/item/twohanded/required/kirbyplants{
-	icon_state = "plant-21";
-	pixel_y = 3
-	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/machinery/body_scanner,
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
 "bwG" = (
@@ -54385,6 +54387,10 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/cargo)
+"ggg" = (
+/mob/living/simple_animal/hostile/retaliate/goose,
+/turf/open/floor/wood,
+/area/maintenance/department/crew_quarters/dorms)
 "gih" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 4
@@ -62033,6 +62039,10 @@
 /obj/structure/sign/warning/biohazard,
 /turf/closed/wall/r_wall,
 /area/science/xenobiology)
+"xKM" = (
+/obj/machinery/smartfridge/organ,
+/turf/closed/wall,
+/area/medical/surgery)
 "xLi" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -62084,6 +62094,7 @@
 	name = "Port Emergency Storage";
 	req_access_txt = "0"
 	},
+/obj/effect/mapping_helpers/airlock/unres,
 /turf/open/floor/plasteel/freezer,
 /area/storage/emergency/port)
 "xSX" = (
@@ -92147,7 +92158,7 @@ bFU
 bFU
 bIn
 bJt
-bFU
+xKM
 bFU
 bFU
 bFU
@@ -99265,7 +99276,7 @@ cBk
 jhD
 cBo
 alQ
-alb
+ggg
 cBw
 alb
 aiS
@@ -100820,7 +100831,7 @@ aiT
 aiS
 apX
 cod
-asg
+aab
 atj
 apX
 avi
@@ -102379,7 +102390,7 @@ aFH
 aGG
 aHo
 aIk
-aJo
+aac
 aGF
 aEd
 aMr

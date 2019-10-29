@@ -8,9 +8,29 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/name	// this is the fluff name. these will be left generic (such as 'Lizardperson' for the lizard race) so servers can change them to whatever
 	var/default_color = "#FFF"	// if alien colors are disabled, this is the color that will be used by that race
 
-	var/sexes = 1		// whether or not the race has sexual characteristics. at the moment this is only 0 for skeletons and shadows
+	var/sexes = 1 // whether or not the race has sexual characteristics. at the moment this is only 0 for skeletons and shadows
 
-	var/list/offset_features = list(OFFSET_UNIFORM = list(0,0), OFFSET_ID = list(0,0), OFFSET_GLOVES = list(0,0), OFFSET_GLASSES = list(0,0), OFFSET_EARS = list(0,0), OFFSET_SHOES = list(0,0), OFFSET_S_STORE = list(0,0), OFFSET_FACEMASK = list(0,0), OFFSET_HEAD = list(0,0), OFFSET_FACE = list(0,0), OFFSET_BELT = list(0,0), OFFSET_BACK = list(0,0), OFFSET_SUIT = list(0,0), OFFSET_NECK = list(0,0))
+	//Species Icon Drawing Offsets - Pixel X, Pixel Y, Aka X = Horizontal and Y = Vertical, from bottom left corner
+	var/list/offset_features = list(
+		OFFSET_UNIFORM = list(0,0), 
+		OFFSET_ID = list(0,0), 
+		OFFSET_GLOVES = list(0,0), 
+		OFFSET_GLASSES = list(0,0), 
+		OFFSET_EARS = list(0,0), 
+		OFFSET_SHOES = list(0,0), 
+		OFFSET_S_STORE = list(0,0), 
+		OFFSET_FACEMASK = list(0,0), 
+		OFFSET_HEAD = list(0,0), 
+		OFFSET_EYES = list(0,0), 
+		OFFSET_LIPS = list(0,0), 
+		OFFSET_BELT = list(0,0), 
+		OFFSET_BACK = list(0,0), 
+		OFFSET_HAIR = list(0,0),
+		OFFSET_FHAIR = list(0,0),
+		OFFSET_SUIT = list(0,0),
+		OFFSET_NECK = list(0,0),
+		OFFSET_MUTPARTS = list(0,0)
+		)
 
 	var/hair_color	// this allows races to have specific hair colors... if null, it uses the H's hair/facial hair colors. if "mutcolor", it uses the H's mutant_color
 	var/hair_alpha = 255	// the alpha used by the hair. 255 is completely solid, 0 is transparent.
@@ -130,8 +150,6 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 //Please override this locally if you want to define when what species qualifies for what rank if human authority is enforced.
 /datum/species/proc/qualifies_for_rank(rank, list/features)
-	if(rank in GLOB.command_positions)
-		return 0
 	return 1
 
 //Will regenerate missing organs
@@ -376,6 +394,10 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 			facial_overlay.alpha = hair_alpha
 
+			if(OFFSET_FHAIR in H.dna.species.offset_features)
+				facial_overlay.pixel_x += H.dna.species.offset_features[OFFSET_FHAIR][1] 
+				facial_overlay.pixel_y += H.dna.species.offset_features[OFFSET_FHAIR][2] 
+
 			standing += facial_overlay
 
 	if(H.head)
@@ -433,9 +455,11 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				else
 					hair_overlay.color = forced_colour
 				hair_overlay.alpha = hair_alpha
-				if(OFFSET_FACE in H.dna.species.offset_features)
-					hair_overlay.pixel_x += H.dna.species.offset_features[OFFSET_FACE][1]
-					hair_overlay.pixel_y += H.dna.species.offset_features[OFFSET_FACE][2]
+
+				if(OFFSET_HAIR in H.dna.species.offset_features)
+					hair_overlay.pixel_x += H.dna.species.offset_features[OFFSET_HAIR][1]
+					hair_overlay.pixel_y += H.dna.species.offset_features[OFFSET_HAIR][2]
+
 		if(hair_overlay.icon)
 			standing += hair_overlay
 
@@ -456,9 +480,11 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(H.lip_style && (LIPS in species_traits))
 			var/mutable_appearance/lip_overlay = mutable_appearance('icons/mob/human_face.dmi', "lips_[H.lip_style]", -BODY_LAYER)
 			lip_overlay.color = H.lip_color
-			if(OFFSET_FACE in H.dna.species.offset_features)
-				lip_overlay.pixel_x += H.dna.species.offset_features[OFFSET_FACE][1]
-				lip_overlay.pixel_y += H.dna.species.offset_features[OFFSET_FACE][2]
+
+			if(OFFSET_LIPS in H.dna.species.offset_features)
+				lip_overlay.pixel_x += H.dna.species.offset_features[OFFSET_LIPS][1]
+				lip_overlay.pixel_y += H.dna.species.offset_features[OFFSET_LIPS][2]
+
 			standing += lip_overlay
 
 		// eyes
@@ -471,9 +497,11 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				eye_overlay = mutable_appearance('icons/mob/human_face.dmi', "eyes", -BODY_LAYER)
 			if((EYECOLOR in species_traits) && has_eyes)
 				eye_overlay.color = "#" + H.eye_color
-			if(OFFSET_FACE in H.dna.species.offset_features)
-				eye_overlay.pixel_x += H.dna.species.offset_features[OFFSET_FACE][1]
-				eye_overlay.pixel_y += H.dna.species.offset_features[OFFSET_FACE][2]
+
+			if(OFFSET_EYES in H.dna.species.offset_features)
+				eye_overlay.pixel_x += H.dna.species.offset_features[OFFSET_EYES][1]
+				eye_overlay.pixel_y += H.dna.species.offset_features[OFFSET_EYES][2]
+
 			standing += eye_overlay
 
 	//Underwear, Undershirts & Socks
@@ -690,6 +718,10 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				if(S.center)
 					inner_accessory_overlay = center_image(inner_accessory_overlay, S.dimension_x, S.dimension_y)
 
+				if(OFFSET_MUTPARTS in H.dna.species.offset_features)
+					inner_accessory_overlay.pixel_x += H.dna.species.offset_features[OFFSET_MUTPARTS][1] 
+					inner_accessory_overlay.pixel_y += H.dna.species.offset_features[OFFSET_MUTPARTS][2]
+
 				standing += inner_accessory_overlay
 
 		H.overlays_standing[layer] = standing.Copy()
@@ -841,6 +873,20 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			if( !(I.slot_flags & ITEM_SLOT_ID) )
 				return FALSE
 			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+		// KEPLER CHANGE: PDA Slots
+		if(SLOT_WEAR_PDA)
+			if(H.wear_pda)
+				return FALSE
+			if(!CHECK_BITFIELD(I.item_flags, NO_UNIFORM_REQUIRED))
+				var/obj/item/bodypart/O = H.get_bodypart(BODY_ZONE_CHEST)
+				if(!H.w_uniform && !nojumpsuit && (!O || O.status != BODYPART_ROBOTIC))
+					if(!disable_warning)
+						to_chat(H, "<span class='warning'>You need a jumpsuit before you can attach this [I.name]!</span>")
+					return FALSE
+			if( !(I.slot_flags & ITEM_SLOT_PDA) )
+				return FALSE
+			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+		// END KEPLER CHANGES
 		if(SLOT_L_STORE)
 			if(HAS_TRAIT(I, TRAIT_NODROP)) //Pockets aren't visible, so you can't move TRAIT_NODROP items into them.
 				return FALSE
@@ -967,9 +1013,14 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(mood && mood.sanity > SANITY_DISTURBED)
 			hunger_rate *= max(0.5, 1 - 0.002 * mood.sanity) //0.85 to 0.75
 
-		if(H.satiety > 0)
+		// Whether we cap off our satiety or move it towards 0
+		if(H.satiety > MAX_SATIETY)
+			H.satiety = MAX_SATIETY
+		else if(H.satiety > 0)
 			H.satiety--
-		if(H.satiety < 0)
+		else if(H.satiety < -MAX_SATIETY)
+			H.satiety = -MAX_SATIETY
+		else if(H.satiety < 0)
 			H.satiety++
 			if(prob(round(-H.satiety/40)))
 				H.Jitter(5)
@@ -1085,9 +1136,9 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(!istype(J) && istype(C))
 			J = C.jetpack
 		if(istype(J) && J.full_speed && J.allow_thrust(0.01, H))	//Prevents stacking
-			. -= 2
+			. -= 0.4
 		else if(istype(T) && T.allow_thrust(0.01, H))
-			. -= 2
+			. -= 0.4
 
 	if(!ignoreslow && gravity)
 		if(H.wear_suit)
@@ -1421,7 +1472,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			if(BODY_ZONE_HEAD)
 				if(!I.is_sharp() && armor_block < 50)
 					if(prob(I.force))
-						H.adjustBrainLoss(20)
+						H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
 						if(H.stat == CONSCIOUS)
 							H.visible_message("<span class='danger'>[H] has been knocked senseless!</span>", \
 											"<span class='userdanger'>[H] has been knocked senseless!</span>")
@@ -1430,7 +1481,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 						if(prob(10))
 							H.gain_trauma(/datum/brain_trauma/mild/concussion)
 					else
-						H.adjustBrainLoss(I.force * 0.2)
+						H.adjustOrganLoss(ORGAN_SLOT_BRAIN, I.force * 0.2)
 
 					if(H.stat == CONSCIOUS && H != user && prob(I.force + ((100 - H.health) * 0.5))) // rev deconversion through blunt trauma.
 						var/datum/antagonist/rev/rev = H.mind.has_antag_datum(/datum/antagonist/rev)
@@ -1470,7 +1521,132 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			H.forcesay(GLOB.hit_appends)	//forcesay checks stat already.
 	return TRUE
 
-/datum/species/proc/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/H)
+/* // See modular_citadel/code/modules/mob/living/carbon/human/species.dm //SMOOTH_TRUE
+/datum/species/proc/alt_spec_attack_hand(mob/living/carbon/human/M, mob/living/carbon/human/H, datum/martial_art/attacker_style)
+	if(!istype(M))
+		return TRUE
+	CHECK_DNA_AND_SPECIES(M)
+	CHECK_DNA_AND_SPECIES(H)
+
+	if(!istype(M)) //sanity check for drones.
+		return TRUE
+	if(M.mind)
+		attacker_style = M.mind.martial_art
+	if((M != H) && M.a_intent != INTENT_HELP && H.check_shields(M, 0, M.name, attack_type = UNARMED_ATTACK))
+		log_combat(M, H, "attempted to touch")
+		H.visible_message("<span class='warning'>[M] attempted to touch [H]!</span>")
+		return TRUE
+	switch(M.a_intent)
+		if(INTENT_HELP)
+			if(M == H)
+				althelp(M, H, attacker_style)
+				return TRUE
+			return FALSE
+		if(INTENT_DISARM)
+			altdisarm(M, H, attacker_style)
+			return TRUE
+	return FALSE
+
+/datum/species/proc/althelp(mob/living/carbon/human/user, mob/living/carbon/human/target, datum/martial_art/attacker_style)
+	if(user == target && istype(user))
+		if(user.getStaminaLoss() >= STAMINA_SOFTCRIT)
+			to_chat(user, "<span class='warning'>You're too exhausted for that.</span>")
+			return
+		if(!user.resting)
+			to_chat(user, "<span class='notice'>You can only force yourself up if you're on the ground.</span>")
+			return
+		user.visible_message("<span class='notice'>[user] forces [p_them()]self up to [p_their()] feet!</span>", "<span class='notice'>You force yourself up to your feet!</span>")
+		user.resting = 0
+		user.update_canmove()
+		user.adjustStaminaLossBuffered(user.stambuffer) //Rewards good stamina management by making it easier to instantly get up from resting
+		playsound(user, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
+
+/datum/species/proc/altdisarm(mob/living/carbon/human/user, mob/living/carbon/human/target, datum/martial_art/attacker_style)
+	if(user.getStaminaLoss() >= STAMINA_SOFTCRIT)
+		to_chat(user, "<span class='warning'>You're too exhausted.</span>")
+		return FALSE
+	if(target.check_block())
+		target.visible_message("<span class='warning'>[target] blocks [user]'s shoving attempt!</span>")
+		return FALSE
+	if(attacker_style && attacker_style.disarm_act(user,target))
+		return TRUE
+	if(user.resting)
+		return FALSE
+	else
+		if(user == target)
+			return
+		user.do_attack_animation(target, ATTACK_EFFECT_DISARM)
+		user.adjustStaminaLossBuffered(4)
+		playsound(target, 'sound/weapons/thudswoosh.ogg', 50, TRUE, -1)
+
+		if(target.w_uniform)
+			target.w_uniform.add_fingerprint(user)
+		SEND_SIGNAL(target, COMSIG_HUMAN_DISARM_HIT, user, user.zone_selected)
+
+		if(!target.resting)
+			target.adjustStaminaLoss(5)
+
+		if(target.is_shove_knockdown_blocked())
+			return
+
+		var/turf/target_oldturf = target.loc
+		var/shove_dir = get_dir(user.loc, target_oldturf)
+		var/turf/target_shove_turf = get_step(target.loc, shove_dir)
+		var/mob/living/carbon/human/target_collateral_human
+		var/shove_blocked = FALSE //Used to check if a shove is blocked so that if it is knockdown logic can be applied
+
+		//Thank you based whoneedsspace
+		target_collateral_human = locate(/mob/living/carbon/human) in target_shove_turf.contents
+		if(target_collateral_human && !target_collateral_human.resting)
+			shove_blocked = TRUE
+		else
+			target_collateral_human = null
+			target.Move(target_shove_turf, shove_dir)
+			if(get_turf(target) == target_oldturf)
+				shove_blocked = TRUE
+
+		if(shove_blocked && !target.buckled)
+			var/directional_blocked = !target.Adjacent(target_shove_turf)
+			var/targetatrest = target.resting
+			if((directional_blocked || !(target_collateral_human || target_shove_turf.shove_act(target, user))) && !targetatrest)
+				target.Knockdown(SHOVE_KNOCKDOWN_SOLID)
+				user.visible_message("<span class='danger'>[user.name] shoves [target.name], knocking them down!</span>",
+					"<span class='danger'>You shove [target.name], knocking them down!</span>", null, COMBAT_MESSAGE_RANGE)
+				log_combat(user, target, "shoved", "knocking them down")
+			else if(target_collateral_human && !targetatrest)
+				target.Knockdown(SHOVE_KNOCKDOWN_HUMAN)
+				target_collateral_human.Knockdown(SHOVE_KNOCKDOWN_COLLATERAL)
+				user.visible_message("<span class='danger'>[user.name] shoves [target.name] into [target_collateral_human.name]!</span>",
+					"<span class='danger'>You shove [target.name] into [target_collateral_human.name]!</span>", null, COMBAT_MESSAGE_RANGE)
+				log_combat(user, target, "shoved", "into [target_collateral_human.name]")
+
+		else
+			user.visible_message("<span class='danger'>[user.name] shoves [target.name]!</span>",
+				"<span class='danger'>You shove [target.name]!</span>", null, COMBAT_MESSAGE_RANGE)
+			var/target_held_item = target.get_active_held_item()
+			var/knocked_item = FALSE
+			if(!is_type_in_typecache(target_held_item, GLOB.shove_disarming_types))
+				target_held_item = null
+			if(!target.has_movespeed_modifier(SHOVE_SLOWDOWN_ID))
+				target.add_movespeed_modifier(SHOVE_SLOWDOWN_ID, multiplicative_slowdown = SHOVE_SLOWDOWN_STRENGTH)
+				if(target_held_item)
+					target.visible_message("<span class='danger'>[target.name]'s grip on \the [target_held_item] loosens!</span>",
+						"<span class='danger'>Your grip on \the [target_held_item] loosens!</span>", null, COMBAT_MESSAGE_RANGE)
+				addtimer(CALLBACK(target, /mob/living/carbon/human/proc/clear_shove_slowdown), SHOVE_SLOWDOWN_LENGTH)
+			else if(target_held_item)
+				target.dropItemToGround(target_held_item)
+				knocked_item = TRUE
+				target.visible_message("<span class='danger'>[target.name] drops \the [target_held_item]!!</span>",
+					"<span class='danger'>You drop \the [target_held_item]!!</span>", null, COMBAT_MESSAGE_RANGE)
+			var/append_message = ""
+			if(target_held_item)
+				if(knocked_item)
+					append_message = "causing them to drop [target_held_item]"
+				else
+					append_message = "loosening their grip on [target_held_item]"
+			log_combat(user, target, "shoved", append_message)
+*/
+/datum/species/proc/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/H, break_modifier = 1)
 	var/hit_percent = (100-(blocked+armor))/100
 	hit_percent = (hit_percent * (100-H.physiology.damage_resistance))/100
 	if(hit_percent <= 0)
@@ -1496,14 +1672,14 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(BRUTE)
 			H.damageoverlaytemp = 20
 			if(BP)
-				if(damage > 0 ? BP.receive_damage(damage * hit_percent * brutemod * H.physiology.brute_mod, 0) : BP.heal_damage(abs(damage * hit_percent * brutemod * H.physiology.brute_mod), 0))
+				if(damage > 0 ? BP.receive_damage(damage * hit_percent * brutemod * H.physiology.brute_mod, 0, break_modifier = break_modifier) : BP.heal_damage(abs(damage * hit_percent * brutemod * H.physiology.brute_mod), 0))
 					H.update_damage_overlays()
 			else//no bodypart, we deal damage with a more general method.
 				H.adjustBruteLoss(damage * hit_percent * brutemod * H.physiology.brute_mod)
 		if(BURN)
 			H.damageoverlaytemp = 20
 			if(BP)
-				if(damage > 0 ? BP.receive_damage(0, damage * hit_percent * burnmod * H.physiology.burn_mod) : BP.heal_damage(0, abs(damage * hit_percent * burnmod * H.physiology.burn_mod)))
+				if(damage > 0 ? BP.receive_damage(0, damage * hit_percent * burnmod * H.physiology.burn_mod, break_modifier = break_modifier) : BP.heal_damage(0, abs(damage * hit_percent * burnmod * H.physiology.burn_mod)))
 					H.update_damage_overlays()
 			else
 				H.adjustFireLoss(damage * hit_percent * burnmod * H.physiology.burn_mod)
@@ -1520,7 +1696,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			else
 				H.adjustStaminaLoss(damage * hit_percent * H.physiology.stamina_mod)
 		if(BRAIN)
-			H.adjustBrainLoss(damage * hit_percent * H.physiology.brain_mod)
+			H.adjustOrganLoss(ORGAN_SLOT_BRAIN, (damage * hit_percent * H.physiology.brain_mod))
 	return 1
 
 /datum/species/proc/on_hit(obj/item/projectile/P, mob/living/carbon/human/H)
