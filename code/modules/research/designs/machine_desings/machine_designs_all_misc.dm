@@ -99,7 +99,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_ALL
 	category = list ("Medical Machinery")
 
-	/datum/design/board/autoylathe
+/datum/design/board/autoylathe
 	name = "Machine Design (Autoylathe)"
 	desc = "The circuit board for an autoylathe."
 	id = "autoylathe"
