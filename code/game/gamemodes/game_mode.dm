@@ -258,7 +258,7 @@
 
 /datum/game_mode/proc/send_intercept()
 	if(flipseclevel && !(config_tag == "extended"))//CIT CHANGE - lets the security level be flipped roundstart
-		priority_announce("Thanks to the tireless efforts of our security and intelligence divisions, there are currently no credible threats to [station_name()]. All station construction projects have been authorized. Have a secure shift!", "Security Report", 'sound/ai/commandreport.ogg')
+		priority_announce("Thanks to the tireless efforts of our security and intelligence divisions, there are currently no credible threats to [station_name()]. All station construction projects have been authorized. Have a secure shift!", "Security Report", "commandreport")
 		return
 	var/intercepttext = "<b><i>Head Office Status Summary</i></b><hr>"
 	intercepttext += "<b>Company intelligence has intercepted and partially decoded a transmission with vital information regarding hostile corporate movements. The following report outlines the most \
@@ -287,8 +287,13 @@
 			G.on_report()
 			intercepttext += G.get_report()
 
+<<<<<<< HEAD
 	print_command_report(intercepttext, "Head Office Status Summary", announce=FALSE)
 	priority_announce("A summary has been copied and printed to all communications consoles.", "Enemy communication intercepted. Security level elevated.", 'sound/ai/intercept.ogg')
+=======
+	print_command_report(intercepttext, "Central Command Status Summary", announce=FALSE)
+	priority_announce("A summary has been copied and printed to all communications consoles.", "Enemy communication intercepted. Security level elevated.", "intercept")
+>>>>>>> 6dc6159f4a... Merge pull request #9578 from deathride58/mapsubsystemimprovements
 	if(GLOB.security_level < SEC_LEVEL_BLUE)
 		set_security_level(SEC_LEVEL_BLUE)
 

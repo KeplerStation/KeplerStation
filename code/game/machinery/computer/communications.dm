@@ -334,8 +334,13 @@
 					return
 				Nuke_request(input, usr)
 				to_chat(usr, "<span class='notice'>Request sent.</span>")
+<<<<<<< HEAD
 				usr.log_message("has requested the nuclear codes from the Board of Directors", LOG_SAY)
 				priority_announce("The codes for the on-station nuclear self-destruct have been requested by [usr]. Confirmation or denial of this request will be sent shortly.", "Nuclear Self Destruct Codes Requested",'sound/ai/commandreport.ogg')
+=======
+				usr.log_message("has requested the nuclear codes from CentCom", LOG_SAY)
+				priority_announce("The codes for the on-station nuclear self-destruct have been requested by [usr]. Confirmation or denial of this request will be sent shortly.", "Nuclear Self Destruct Codes Requested","commandreport")
+>>>>>>> 6dc6159f4a... Merge pull request #9578 from deathride58/mapsubsystemimprovements
 				CM.lastTimeUsed = world.time
 
 
