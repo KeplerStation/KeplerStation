@@ -13,12 +13,8 @@
 
 /obj/machinery/washing_machine/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/redirect, list(COMSIG_COMPONENT_CLEAN_ACT = CALLBACK(src, .proc/clean_blood)))
-
-/obj/machinery/washing_machine/examine(mob/user)
-	..()
-	to_chat(user, "<span class='notice'>Alt-click it to start a wash cycle.</span>")
-
+	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, .proc/clean_blood)
+	
 /obj/machinery/washing_machine/AltClick(mob/user)
 	if(!user.canUseTopic(src))
 		return
