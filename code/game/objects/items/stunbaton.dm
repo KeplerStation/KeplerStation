@@ -1,4 +1,5 @@
 #define STUNBATON_CHARGE_LENIENCY 0.3
+#define STUNBATON_DEPLETION_RATE 0.006
 
 /obj/item/melee/baton
 	name = "stunbaton"
@@ -76,7 +77,7 @@
 	update_icon()
 
 /obj/item/melee/baton/process()
-	deductcharge(hitcost * 0.004, FALSE, FALSE)
+	deductcharge(round(hitcost * STUNBATON_DEPLETION_RATE), FALSE, FALSE)
 
 /obj/item/melee/baton/update_icon()
 	if(status)
@@ -251,3 +252,7 @@
 	. = ..()
 
 #undef STUNBATON_CHARGE_LENIENCY
+<<<<<<< HEAD
+=======
+#undef STUNBATON_DEPLETION_RATE
+>>>>>>> be752c1fb0... Merge pull request #9531 from Ghommie/Ghommie-cit246
