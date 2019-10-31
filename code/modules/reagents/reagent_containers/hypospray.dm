@@ -196,8 +196,6 @@
 	volume = 250
 	list_reagents = list("holywater" = 150, "tiresolution" = 50, "dizzysolution" = 50)
 	amount_per_transfer_from_this = 50
-<<<<<<< HEAD
-=======
 
 #define HYPO_SPRAY 0
 #define HYPO_INJECT 1
@@ -513,4 +511,3 @@
 #undef COMBAT_WAIT_INJECT
 #undef COMBAT_SELF_SPRAY
 #undef COMBAT_SELF_INJECT
->>>>>>> 5ed6de4e26... Merge pull request #9639 from Ghommie/Ghommie-cit283
