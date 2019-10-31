@@ -38,9 +38,6 @@
 /obj/item/card/id/job/nt
 	icon_state = "nanotrasen"
 
-/obj/item/card/id/job/nt
-	icon_state = "nanotrasen"
-
 // Misc IDs
 /obj/item/card/id/admin
 	name = "admin ID card"
