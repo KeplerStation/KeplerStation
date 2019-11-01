@@ -477,11 +477,6 @@
 
 	return final_rgb
 
-/atom/proc/clean_blood()
-	if(islist(blood_DNA))
-		blood_DNA = null
-		return TRUE
-
 /atom/proc/wash_cream()
 	return TRUE
 

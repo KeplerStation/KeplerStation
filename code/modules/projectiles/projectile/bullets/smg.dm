@@ -24,7 +24,6 @@
 		else if(isitem(A))
 			var/obj/item/cleaned_item = A
 			SEND_SIGNAL(cleaned_item, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
-			cleaned_item.clean_blood()
 			if(ismob(cleaned_item.loc))
 				var/mob/M = cleaned_item.loc
 				M.regenerate_icons()
