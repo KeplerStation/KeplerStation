@@ -776,19 +776,11 @@
 /turf/open/floor/plasteel,
 /area/security/prison)
 "abL" = (
-/obj/structure/chair/stool,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/machinery/button/door{
-	id = "permabolt2";
-	name = "Cell Bolt Control";
-	normaldoorcontrol = 1;
-	pixel_y = 25;
-	specialfunctions = 4
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
@@ -944,16 +936,10 @@
 /turf/open/floor/plasteel,
 /area/security/prison)
 "acf" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "permacell2";
-	name = "cell blast door"
-	},
-/obj/machinery/door/airlock/public/glass{
-	id_tag = "permabolt2";
-	name = "Cell 2"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/machinery/door/poddoor{
+	id = "turnstile_blast"
+	},
 /turf/open/floor/plasteel,
 /area/security/prison)
 "acg" = (
@@ -1137,17 +1123,11 @@
 /turf/open/floor/plasteel,
 /area/security/prison)
 "acE" = (
-/obj/structure/bed,
 /obj/machinery/camera{
-	c_tag = "Prison Cell 2";
-	network = list("ss13","prison")
-	},
-/obj/item/radio/intercom{
-	desc = "Talk through this. It looks like it has been modified to not broadcast.";
-	dir = 2;
-	name = "Prison Intercom (General)";
-	pixel_y = 24;
-	prison_radio = 1
+	c_tag = "Prison Turnstiles";
+	dir = 4;
+	network = list("ss13","prison");
+	start_active = 1
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
@@ -1357,12 +1337,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
-"adb" = (
-/obj/structure/table,
-/obj/item/paper,
-/obj/item/pen,
-/turf/open/floor/plasteel,
-/area/security/prison)
 "adc" = (
 /obj/machinery/flasher{
 	id = "PCell 1";
@@ -1376,7 +1350,7 @@
 "add" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /obj/machinery/flasher{
-	id = "PCell 2";
+	id = "turnstile_flash";
 	pixel_x = -28
 	},
 /turf/open/floor/plasteel,
@@ -1667,17 +1641,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
-"adI" = (
-/obj/machinery/door/airlock/security/glass{
-	name = "Long-Term Cell 2";
-	req_access_txt = "2"
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 1
-	},
-/turf/open/floor/plasteel,
-/area/security/prison)
 "adJ" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Long-Term Cell 1";
@@ -1913,6 +1876,10 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/structure/table,
+/obj/item/assembly/signaler,
+/obj/item/electropack,
+/obj/item/clothing/suit/straight_jacket,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aei" = (
@@ -1951,18 +1918,6 @@
 /turf/open/floor/plasteel,
 /area/security/prison)
 "ael" = (
-/obj/machinery/button/door{
-	id = "permacell2";
-	name = "Cell 2 Lockdown";
-	pixel_x = -4;
-	pixel_y = 25;
-	req_access_txt = "2"
-	},
-/obj/machinery/button/flasher{
-	id = "PCell 2";
-	pixel_x = 6;
-	pixel_y = 24
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -1976,9 +1931,6 @@
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aen" = (
-/obj/machinery/computer/security/telescreen/prison{
-	pixel_y = 30
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -1992,6 +1944,18 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/machinery/button/door{
+	id = "turnstile_blast";
+	name = "Turnstile Blast Shutters";
+	pixel_x = -4;
+	pixel_y = 25;
+	req_access_txt = "2"
+	},
+/obj/machinery/button/flasher{
+	id = "turnstile_flash";
+	pixel_x = 6;
+	pixel_y = 24
+	},
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aeo" = (
@@ -2000,6 +1964,9 @@
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 1
+	},
+/obj/machinery/computer/security/telescreen/prison{
+	pixel_y = 30
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
@@ -2683,41 +2650,26 @@
 /turf/open/floor/plasteel,
 /area/security/prison)
 "afD" = (
-/obj/structure/table,
-/obj/item/electropack,
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet/genpop,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "afE" = (
 /obj/machinery/light/small,
 /turf/open/floor/plating,
 /area/hallway/secondary/exit)
-"afF" = (
-/obj/structure/table,
-/obj/item/assembly/signaler,
-/obj/item/clothing/suit/straight_jacket,
-/obj/effect/turf_decal/tile/red,
-/obj/effect/turf_decal/tile/red{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/security/prison)
 "afG" = (
-/obj/structure/table,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/item/storage/box/hug,
-/obj/item/razor{
-	pixel_x = -6
-	},
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet/genpop,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "afH" = (
@@ -57330,6 +57282,13 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
+"kfC" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/turnstile{
+	req_access_txt = "69"
+	},
+/turf/open/floor/plasteel,
+/area/security/prison)
 "khb" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
@@ -57653,6 +57612,25 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
+"rGG" = (
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/structure/table,
+/obj/item/storage/box/hug,
+/obj/item/razor{
+	pixel_x = -6
+	},
+/turf/open/floor/plasteel,
+/area/security/prison)
+"rKA" = (
+/obj/machinery/turnstile{
+	dir = 1;
+	req_access_txt = "70"
+	},
+/turf/open/floor/plasteel,
+/area/security/prison)
 "rKP" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
@@ -57721,6 +57699,12 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
+"sMG" = (
+/obj/machinery/turnstile{
+	req_access_txt = "69"
+	},
+/turf/open/floor/plasteel,
+/area/security/prison)
 "sOs" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -83661,7 +83645,7 @@ acd
 acd
 aek
 aeU
-afI
+rGG
 acd
 agI
 ahq
@@ -83912,10 +83896,10 @@ aat
 adO
 aat
 aei
-acd
+sMG
 acE
 add
-adF
+kfC
 aej
 aeQ
 afD
@@ -84172,7 +84156,7 @@ abB
 acf
 abM
 acG
-adI
+acf
 aem
 aeO
 afG
@@ -84426,13 +84410,13 @@ aaN
 aaV
 aat
 aat
-acd
+rKA
 abL
-adb
-acd
+aat
+rKA
 ael
 aeO
-afF
+afD
 agj
 agj
 agj
@@ -84689,7 +84673,7 @@ acd
 acd
 aen
 aeO
-afH
+afD
 agj
 agM
 ahu
