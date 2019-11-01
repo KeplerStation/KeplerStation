@@ -1,0 +1,4 @@
+author: "CoolCatIsFeelingGroovy"
+delete-after: True
+changes: 
+  - rscadd: "Added the ancient toolbox, an assistant only traitor item that does increased damage based on the amount of telecrystals it contains."
