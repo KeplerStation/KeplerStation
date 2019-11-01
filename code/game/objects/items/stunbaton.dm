@@ -252,7 +252,4 @@
 	. = ..()
 
 #undef STUNBATON_CHARGE_LENIENCY
-<<<<<<< HEAD
-=======
 #undef STUNBATON_DEPLETION_RATE
->>>>>>> be752c1fb0... Merge pull request #9531 from Ghommie/Ghommie-cit246
