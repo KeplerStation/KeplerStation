@@ -1,4 +1,0 @@
-author: "KeplerStation-Bot"
-delete-after: True
-changes: 
-  - bugfix: "Nuke ops / adminbus combat mechs will no longer spawn with tracking beacons."

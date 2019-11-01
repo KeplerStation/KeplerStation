@@ -1,4 +1,0 @@
-author: "KeplerStation-Bot"
-delete-after: True
-changes: 
-  - bugfix: "Miner borgs can again have installed PKA mods."
