@@ -28,14 +28,10 @@
 #define ITEM_SLOT_POCKET		(1<<11) // this is to allow items with a w_class of WEIGHT_CLASS_NORMAL or WEIGHT_CLASS_BULKY to fit in pockets.
 #define ITEM_SLOT_DENYPOCKET	(1<<12) // this is to deny items with a w_class of WEIGHT_CLASS_SMALL or WEIGHT_CLASS_TINY to fit in pockets.
 #define ITEM_SLOT_NECK			(1<<13)
-<<<<<<< HEAD
-#define ITEM_SLOT_SUITSTORE		(1<<14)
-#define ITEM_SLOT_PDA			(1<<15)
-=======
 #define ITEM_SLOT_HANDS			(1<<14)
 #define ITEM_SLOT_BACKPACK		(1<<15)
 #define ITEM_SLOT_SUITSTORE		(1<<16)
->>>>>>> 0064529362... Merge pull request #9610 from Ghommie/Ghommie-cit273
+#define ITEM_SLOT_PDA			(1<<17)
 
 //SLOTS
 #define SLOT_BACK			1
