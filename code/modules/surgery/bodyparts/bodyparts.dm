@@ -472,13 +472,6 @@
 				for(var/a in aux)
 					var/image/I = a
 					I.color = "#[draw_color]"
-				if(!isnull(aux_marking))
-					for(var/a in auxmarking)
-						var/image/I = a
-						if(species_id == "husk")
-							I.color = "#141414"
-						else
-							I.color = list(markings_color)
 
 /obj/item/bodypart/deconstruct(disassembled = TRUE)
 	drop_organs()
