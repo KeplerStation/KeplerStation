@@ -55,6 +55,82 @@
 		
 		-->
 		<div class="commit sansserif">
+			<h2 class="date">01 November 2019</h2>
+			<h3 class="author">Bhijn updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Jukeboxes now have 6 audio channels available to them, up from the previous accidental 2 and previously intended 5 channels.</li>
+				<li class="bugfix">Jukeboxes now work again on clients running versions higher than 512.1459.</li>
+				<li class="bugfix">People will no longer have their ears consumed by an eldritch god if multiple jukeboxes are active and the first jukebox in the jukebox list stops playing, then tries to play again</li>
+				<li class="tweak">Instead of the debug text for invalid jukebox behavior being printed to world, the debug text is now restricted to the runtime panel.</li>
+				<li class="tweak">The disabler cooler upgrade now applies to all energy-based firearms for borgs</li>
+				<li class="balance">Borg flashes regained their ability to cause knockdown. This can be toggled via server config.</li>
+				<li class="server">The WEAKEN_SECBORG config option will make secborgs spawn with a standard disabler.</li>
+				<li class="server">The DISABLE_BORG_FLASH_KNOCKDOWN will disable the ability for borg flashes to knockdown.</li>
+				<li class="balance">Vampires can now only ventcrawl in bat form if their blood level is below the bad blood volume (224 blood total)</li>
+				<li class="balance">Vampires now only take 5 burn per mob life cycle while within chapel areas, down from the original 20 burn per life cycle.</li>
+			</ul>
+			<h3 class="author">Ghommie (original PRs by XDTM, 4dplanner, nemvar and, yes, myself) updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="code_imp">Merged tinfoil hat kind of protection into the anti_magic component.</li>
+				<li class="rscadd">Tinfoil hats can also be warped up from excessive dampening of mindray/though control/psicotronic anomalies, or by simply being microwaved in an oven, and become useless.</li>
+				<li class="rscadd">Immortality Talisman and Paranormal Hardsuit helmets now come with tinfoil protection too (minus the paranoia and limited charges).</li>
+				<li class="balance">Genetics/Slime/Alien Telepathy and Slime Link are now stopped by tinfoil protection.</li>
+			</ul>
+			<h3 class="author">Ghommie (original PRs by ninjanomnom, coiax, yoyobatty) updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Fixed slaughter demons not getting a speed boost when exiting a pool of blood. Fixed slaughter demon giblets not being visible.</li>
+			</ul>
+			<h3 class="author">JTGSZ updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Can flip pipes once more.</li>
+			</ul>
+			<h3 class="author">KeplerStation-Bot updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="imageadd">Updated gang dominator sprites.</li>
+				<li class="code_imp">BYOND 513 preliminary support added.</li>
+				<li class="balance">Trashbags now only allow accessing the first 3 items. 5 for bluespace ones. experimental: Storage now allows for limiting of random access</li>
+				<li class="bugfix">Miner borgs can again have installed PKA mods.</li>
+				<li class="tweak">lowered the arcade's random plush / other prizes ratio from 1 : 2.5 circa to 1 : 5. Dehydratated carps and the awakened plush can not be achieved this way anymore.</li>
+				<li class="imageadd">Arcade machine directional sprites.</li>
+				<li class="bugfix">Nuke ops / adminbus combat mechs will no longer spawn with tracking beacons.</li>
+				<li class="bugfix">Fixed invisible blackberry n strawberry chocolate cake slices.</li>
+				<li class="imageadd">Resprited wooden and critter crates.</li>
+				<li class="imageadd">Added armrests overlays to sofas and tweaked their sprites a little.</li>
+				<li class="imageadd">Beautified and stylized the cyborg HUD sprites, animated and cleaned up some of the old, modernized APC hacking and Doomsday sprites,</li>
+				<li class="tweak">moved cyborg language select above the radio icon, instead of above the picture icon.</li>
+				<li class="balance">Rebalanced cult robes to have more blast resistance</li>
+				<li class="bugfix">Teleprods work on non-carbons mobs now.</li>
+				<li class="bugfix">Plasmaman tongues no longer have a maxHealth of "alien", and no longer cause the organ's on_life to always runtime.</li>
+				<li class="bugfix">Shooting a simplemob no longer causes runtimes prior to the blood effect being created.</li>
+				<li class="bugfix">Removing a filter from an object that lacks filters no longer causes runtimes.</li>
+				<li class="rscadd">There is now a 1% chance for the station's announcer to be the medibot voice instead of the classic TG announcer.</li>
+				<li class="rscadd">The map config system has been expanded to allow mappers to specify the map type, announcer voice, ingame year, and how often a given map can be voted at roundend.</li>
+				<li class="bugfix">The map vote system now takes into account map playercount limits properly.</li>
+				<li class="balance">Increased stunbatons power cell depletion rate when left on by 50%.</li>
+				<li class="balance">rebalance melee stamloss</li>
+			</ul>
+			<h3 class="author">Poojawa updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Active NPC priority set much higher priority for the MC, with the intent on making NPC combat more interesting</li>
+			</ul>
+
+			<h2 class="date">31 October 2019</h2>
+			<h3 class="author">Ghommie (original PR by cacogen) updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">The font size of all text in the chat window now scales</li>
+				<li class="tweak">High volume (megaphone/head of staff headset) is a slightly smaller</li>
+				<li class="tweak">Admins have slightly larger OOC text</li>
+			</ul>
+			<h3 class="author">KeplerStation-Bot updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">fixing cydonian armor a bit.</li>
+				<li class="bugfix">Cyborgs can now use camera consoles on the edge of their widescreen. These consoles are also TK friendly now.</li>
+			</ul>
+			<h3 class="author">Poojawa updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Clarified access descriptions of some jobs</li>
+			</ul>
+
 			<h2 class="date">28 October 2019</h2>
 			<h3 class="author">KeplerStation-Bot updated:</h3>
 			<ul class="changes bgimages16">
@@ -893,14 +969,6 @@
 			<h3 class="author">Toriate updated:</h3>
 			<ul class="changes bgimages16">
 				<li class="imageadd">Updated the sprites of all the regular crates</li>
-			</ul>
-
-			<h2 class="date">28 August 2019</h2>
-			<h3 class="author">KeplerStation-Bot updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">Fixes emags wasting charges on un-emaggable & co stuff.</li>
-				<li class="rscadd">added pharaoh gear to chaplain vendor</li>
-				<li class="spellcheck">fixed typos in pharaoh items</li>
 			</ul>
 		</div>
 

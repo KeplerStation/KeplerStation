@@ -14,6 +14,8 @@
 /datum/station_goal/proc/send_report()
 	priority_announce("Priority Horizons directive received. Project \"[name]\" details inbound.", "Incoming Priority Message", 'sound/ai/commandreport.ogg')
 	print_command_report(get_report(),"Head Office Directive [pick(GLOB.phonetic_alphabet)] \Roman[rand(1,50)]", announce=FALSE)
+	priority_announce("Priority Horizons directive received. Project \"[name]\" details inbound.", "Incoming Priority Message", "commandreport")
+	print_command_report(get_report(),"Head Office Directive [pick(GLOB.phonetic_alphabet)] \Roman[rand(1,50)]", announce=FALSE)
 	on_report()
 
 /datum/station_goal/proc/on_report()
