@@ -128,13 +128,8 @@
 	var/on = FALSE
 	var/datum/effect_system/trail_follow/ion/ion_trail
 
-<<<<<<< HEAD
 /obj/item/organ/cyberimp/chest/thrusters/Insert(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
-	..()
-=======
-/obj/item/organ/cyberimp/chest/thrusters/Insert(mob/living/carbon/M, special = 0)
 	. = ..()
->>>>>>> ae4aee794e... Merge pull request #9592 from Ghommie/Ghommie-cit262
 	if(!ion_trail)
 		ion_trail = new
 	ion_trail.set_up(M)
