@@ -411,14 +411,8 @@
 				. += image('icons/mob/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_0[burnstate]", -DAMAGE_LAYER, image_dir)
 
 	var/image/limb = image(layer = -BODYPARTS_LAYER, dir = image_dir)
-<<<<<<< HEAD
-	var/image/aux
-=======
 	var/list/aux = list()
-	var/image/marking
-	var/list/auxmarking = list()
 
->>>>>>> e6046d62d6... Merge pull request #9528 from Ghommie/Ghommie-cit244
 	. += limb
 
 	if(animal_origin)
@@ -453,29 +447,6 @@
 				limb.icon_state = "[species_id]_[body_zone]_[icon_gender]"
 			else
 				limb.icon_state = "[species_id]_[body_zone]"
-<<<<<<< HEAD
-		if(aux_zone)
-			aux = image(limb.icon, "[species_id]_[aux_zone]", -aux_layer, image_dir)
-=======
-
-		// Body markings
-		if(!isnull(body_markings))
-			if(species_id == "husk")
-				marking = image('modular_citadel/icons/mob/markings_notmammals.dmi', "husk_[body_zone]", -MARKING_LAYER, image_dir)
-			else if(species_id == "husk" && use_digitigrade)
-				marking = image('modular_citadel/icons/mob/markings_notmammals.dmi', "husk_[digitigrade_type]_[use_digitigrade]_[body_zone]", -MARKING_LAYER, image_dir)
-
-			else if(!use_digitigrade)
-				if(body_zone == BODY_ZONE_CHEST)
-					marking = image(body_markings_icon, "[body_markings]_[body_zone]_[icon_gender]", -MARKING_LAYER, image_dir)
-				else
-					marking = image(body_markings_icon, "[body_markings]_[body_zone]", -MARKING_LAYER, image_dir)
-			else
-				marking = image(body_markings_icon, "[body_markings]_[digitigrade_type]_[use_digitigrade]_[body_zone]", -MARKING_LAYER, image_dir)
-
-			. += marking
-
-		// Citadel End
 
 		if(aux_icons)
 			for(var/I in aux_icons)
@@ -486,7 +457,6 @@
 						auxmarking += image('modular_citadel/icons/mob/markings_notmammals.dmi', "husk_[I]", -aux_layer, image_dir)
 					else
 						auxmarking += image(body_markings_icon, "[body_markings]_[I]", -aux_layer, image_dir)
->>>>>>> e6046d62d6... Merge pull request #9528 from Ghommie/Ghommie-cit244
 			. += aux
 
 	else
@@ -495,39 +465,6 @@
 			limb.icon_state = "[body_zone]_[icon_gender]"
 		else
 			limb.icon_state = "[body_zone]"
-<<<<<<< HEAD
-		if(aux_zone)
-			aux = image(limb.icon, "[aux_zone]", -aux_layer, image_dir)
-			. += aux
-=======
-
-		if(aux_icons)
-			for(var/I in aux_icons)
-				var/aux_layer = aux_icons[I]
-				aux += image(limb.icon, "[I]", -aux_layer, image_dir)
-				if(!isnull(aux_marking))
-					if(species_id == "husk")
-						auxmarking += image('modular_citadel/icons/mob/markings_notmammals.dmi', "husk_[I]", -aux_layer, image_dir)
-					else
-						auxmarking += image(body_markings_icon, "[body_markings]_[I]", -aux_layer, image_dir)
-			. += auxmarking
-			. += aux
-
-		if(!isnull(body_markings))
-			if(species_id == "husk")
-				marking = image('modular_citadel/icons/mob/markings_notmammals.dmi', "husk_[body_zone]", -MARKING_LAYER, image_dir)
-			else if(species_id == "husk" && use_digitigrade)
-				marking = image('modular_citadel/icons/mob/markings_notmammals.dmi', "husk_digitigrade_[use_digitigrade]_[body_zone]", -MARKING_LAYER, image_dir)
-
-			else if(!use_digitigrade)
-				if(body_zone == BODY_ZONE_CHEST)
-					marking = image(body_markings_icon, "[body_markings]_[body_zone]_[icon_gender]", -MARKING_LAYER, image_dir)
-				else
-					marking = image(body_markings_icon, "[body_markings]_[body_zone]", -MARKING_LAYER, image_dir)
-			else
-				marking = image(body_markings_icon, "[body_markings]_[digitigrade_type]_[use_digitigrade]_[body_zone]", -MARKING_LAYER, image_dir)
-			. += marking
->>>>>>> e6046d62d6... Merge pull request #9528 from Ghommie/Ghommie-cit244
 		return
 
 
@@ -535,14 +472,7 @@
 		var/draw_color = mutation_color || species_color || (skin_tone && skintone2hex(skin_tone))
 		if(draw_color)
 			limb.color = "#[draw_color]"
-<<<<<<< HEAD
-			if(aux_zone)
-				aux.color = "#[draw_color]"
-				if(bodypart_alpha)
-					aux.alpha = bodypart_alpha
-		if(bodypart_alpha)
-			limb.alpha = bodypart_alpha
-=======
+
 			if(aux_icons)
 				for(var/a in aux)
 					var/image/I = a
@@ -554,14 +484,6 @@
 							I.color = "#141414"
 						else
 							I.color = list(markings_color)
-
-			if(!isnull(body_markings))
-				if(species_id == "husk")
-					marking.color = "#141414"
-				else
-					marking.color = list(markings_color)
-
->>>>>>> e6046d62d6... Merge pull request #9528 from Ghommie/Ghommie-cit244
 
 /obj/item/bodypart/deconstruct(disassembled = TRUE)
 	drop_organs()
