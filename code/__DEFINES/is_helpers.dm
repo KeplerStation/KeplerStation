@@ -1,10 +1,6 @@
 // simple is_type and similar inline helpers
 
-#define islist(L) (istype(L, /list))
-
 #define in_range(source, user) (get_dist(source, user) <= 1 && (get_step(source, 0)?:z) == (get_step(user, 0)?:z))
-
-#define ismovableatom(A) (istype(A, /atom/movable))
 
 #define isatom(A) (isloc(A))
 
@@ -174,8 +170,6 @@ GLOBAL_LIST_INIT(heavyfootmob, typecacheof(list(
 #define isovermind(A) (istype(A, /mob/camera/blob))
 
 #define iscameramob(A) (istype(A, /mob/camera))
-
-#define isaicamera(A) (istype(A, /mob/camera/aiEye))
 
 #define iseminence(A) (istype(A, /mob/camera/eminence))
 

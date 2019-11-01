@@ -1,6 +1,3 @@
-/obj/item/card/emag
-	var/uses = INFINITY // So playmin is still available
-
 // Job ID Card Sprite s
 /obj/item/card/id
 	icon = 'modular_kepler/icons/obj/card.dmi'
@@ -37,9 +34,6 @@
 
 /obj/item/card/id/job/sec
 	icon_state = "security"
-
-/obj/item/card/id/job/nt
-	icon_state = "nanotrasen"
 
 /obj/item/card/id/job/nt
 	icon_state = "nanotrasen"

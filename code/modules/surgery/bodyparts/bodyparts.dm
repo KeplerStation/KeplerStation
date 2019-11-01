@@ -13,8 +13,7 @@
 	var/needs_processing = FALSE
 
 	var/body_zone //BODY_ZONE_CHEST, BODY_ZONE_L_ARM, etc , used for def_zone
-	var/aux_zone // used for hands
-	var/aux_layer
+	var/list/aux_icons // associative list, currently used for hands
 	var/body_part = null //bitflag used to check which clothes cover this bodypart
 	var/use_digitigrade = NOT_DIGITIGRADE //Used for alternate legs, useless elsewhere
 	var/list/embedded_objects = list()
@@ -412,7 +411,8 @@
 				. += image('icons/mob/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_0[burnstate]", -DAMAGE_LAYER, image_dir)
 
 	var/image/limb = image(layer = -BODYPARTS_LAYER, dir = image_dir)
-	var/image/aux
+	var/list/aux = list()
+
 	. += limb
 
 	if(animal_origin)
@@ -447,8 +447,11 @@
 				limb.icon_state = "[species_id]_[body_zone]_[icon_gender]"
 			else
 				limb.icon_state = "[species_id]_[body_zone]"
-		if(aux_zone)
-			aux = image(limb.icon, "[species_id]_[aux_zone]", -aux_layer, image_dir)
+
+		if(aux_icons)
+			for(var/I in aux_icons)
+				var/aux_layer = aux_icons[I]
+				aux += image(limb.icon, "[species_id]_[I]", -aux_layer, image_dir)
 			. += aux
 
 	else
@@ -457,9 +460,6 @@
 			limb.icon_state = "[body_zone]_[icon_gender]"
 		else
 			limb.icon_state = "[body_zone]"
-		if(aux_zone)
-			aux = image(limb.icon, "[aux_zone]", -aux_layer, image_dir)
-			. += aux
 		return
 
 
@@ -467,12 +467,11 @@
 		var/draw_color = mutation_color || species_color || (skin_tone && skintone2hex(skin_tone))
 		if(draw_color)
 			limb.color = "#[draw_color]"
-			if(aux_zone)
-				aux.color = "#[draw_color]"
-				if(bodypart_alpha)
-					aux.alpha = bodypart_alpha
-		if(bodypart_alpha)
-			limb.alpha = bodypart_alpha
+
+			if(aux_icons)
+				for(var/a in aux)
+					var/image/I = a
+					I.color = "#[draw_color]"
 
 /obj/item/bodypart/deconstruct(disassembled = TRUE)
 	drop_organs()
@@ -544,8 +543,7 @@
 	max_stamina_damage = 50
 	body_zone = BODY_ZONE_L_ARM
 	body_part = ARM_LEFT
-	aux_zone = BODY_ZONE_PRECISE_L_HAND
-	aux_layer = HANDS_PART_LAYER
+	aux_icons = list(BODY_ZONE_PRECISE_L_HAND = HANDS_PART_LAYER, "l_hand_behind" = BODY_BEHIND_LAYER)
 	body_damage_coeff = 0.75
 	held_index = 1
 	px_x = -6
@@ -608,8 +606,7 @@
 	max_damage = 50
 	body_zone = BODY_ZONE_R_ARM
 	body_part = ARM_RIGHT
-	aux_zone = BODY_ZONE_PRECISE_R_HAND
-	aux_layer = HANDS_PART_LAYER
+	aux_icons = list(BODY_ZONE_PRECISE_R_HAND = HANDS_PART_LAYER, "r_hand_behind" = BODY_BEHIND_LAYER)
 	body_damage_coeff = 0.75
 	held_index = 2
 	px_x = 6

@@ -49,6 +49,8 @@
 	STR.max_combined_w_class = 30
 	STR.max_items = 30
 	STR.cant_hold = typecacheof(list(/obj/item/disk/nuclear))
+	STR.limited_random_access = TRUE
+	STR.limited_random_access_stack_position = 3
 
 /obj/item/storage/bag/trash/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] puts [src] over [user.p_their()] head and starts chomping at the insides! Disgusting!</span>")
@@ -88,6 +90,7 @@
 	GET_COMPONENT(STR, /datum/component/storage)
 	STR.max_combined_w_class = 60
 	STR.max_items = 60
+	STR.limited_random_access_stack_position = 5
 
 /obj/item/storage/bag/trash/bluespace/cyborg
 	insertable = FALSE
@@ -105,7 +108,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	component_type = /datum/component/storage/concrete/stack
 	var/spam_protection = FALSE //If this is TRUE, the holder won't receive any messages when they fail to pick up ore through crossing it
-	var/datum/component/mobhook
+	var/mob/listeningTo
 	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 /obj/item/storage/bag/ore/ComponentInitialize()
@@ -118,15 +121,17 @@
 
 /obj/item/storage/bag/ore/equipped(mob/user)
 	. = ..()
-	if (mobhook && mobhook.parent != user)
-		QDEL_NULL(mobhook)
-	if (!mobhook)
-		mobhook = user.AddComponent(/datum/component/redirect, list(COMSIG_MOVABLE_MOVED = CALLBACK(src, .proc/Pickup_ores)))
+	if(listeningTo == user)
+		return
+	if(listeningTo)
+		UnregisterSignal(listeningTo, COMSIG_MOVABLE_MOVED)
+	RegisterSignal(user, COMSIG_MOVABLE_MOVED, .proc/Pickup_ores)
+	listeningTo = user
 
 /obj/item/storage/bag/ore/dropped()
 	. = ..()
-	if (mobhook)
-		QDEL_NULL(mobhook)
+	UnregisterSignal(listeningTo, COMSIG_MOVABLE_MOVED)
+	listeningTo = null
 
 /obj/item/storage/bag/ore/proc/Pickup_ores(mob/living/user)
 	var/show_message = FALSE

@@ -33,22 +33,17 @@
 			if(cleaned_human.lying)
 				if(cleaned_human.head)
 					SEND_SIGNAL(cleaned_human.head, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
-					cleaned_human.head.clean_blood()
 					cleaned_human.update_inv_head()
 				if(cleaned_human.wear_suit)
 					SEND_SIGNAL(cleaned_human.wear_suit, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
-					cleaned_human.wear_suit.clean_blood()
 					cleaned_human.update_inv_wear_suit()
 				else if(cleaned_human.w_uniform)
 					SEND_SIGNAL(cleaned_human.w_uniform, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
-					cleaned_human.w_uniform.clean_blood()
 					cleaned_human.update_inv_w_uniform()
 				if(cleaned_human.shoes)
 					SEND_SIGNAL(cleaned_human.shoes, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
-					cleaned_human.shoes.clean_blood()
 					cleaned_human.update_inv_shoes()
 				SEND_SIGNAL(cleaned_human, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
-				cleaned_human.clean_blood()
 				cleaned_human.wash_cream()
 				cleaned_human.regenerate_icons()
 
@@ -56,14 +51,14 @@
 
 /obj/item/projectile/bullet/c46x30mm
 	name = "4.6x30mm bullet"
-	damage = 20
+	damage = 15
 
 /obj/item/projectile/bullet/c46x30mm_ap
 	name = "4.6x30mm armor-piercing bullet"
-	damage = 15
+	damage = 12.5
 	armour_penetration = 40
 
 /obj/item/projectile/bullet/incendiary/c46x30mm
 	name = "4.6x30mm incendiary bullet"
-	damage = 10
+	damage = 7.5
 	fire_stacks = 1

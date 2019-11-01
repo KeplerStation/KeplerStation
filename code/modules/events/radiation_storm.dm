@@ -13,7 +13,7 @@
 
 /datum/round_event/radiation_storm/announce(fake)
 	// I know this has no fake triggers, but I removed fake events
-	priority_announce("High levels of radiation detected near the station. Maintenance is best shielded from radiation.", "Anomaly Alert", 'sound/ai/radiation.ogg')
+	priority_announce("High levels of radiation detected near the station. Maintenance is best shielded from radiation.", "Anomaly Alert", "radiation")
 	make_maint_all_access()
 	//sound not longer matches the text, but an audible warning is probably good
 
