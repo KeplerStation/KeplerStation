@@ -312,24 +312,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		for(var/datum/disease/A in C.diseases)
 			A.cure(FALSE)
 
-<<<<<<< HEAD
-=======
-//CITADEL EDIT
-	if(NOAROUSAL in species_traits)
-		C.canbearoused = FALSE
-	else
-		if(C.client)
-			C.canbearoused = C.client.prefs.arousable
-	if(ishuman(C))
-		var/mob/living/carbon/human/H = C
-		if(NOGENITALS in H.dna.species.species_traits)
-			H.give_genitals(TRUE) //call the clean up proc to delete anything on the mob then return.
-		if("meat_type" in default_features) //I can't believe it's come to the meat
-			H.type_of_meat = GLOB.meat_types[H.dna.features["meat_type"]]
-
 	C.add_movespeed_modifier(MOVESPEED_ID_SPECIES, TRUE, 100, override=TRUE, multiplicative_slowdown=speedmod, movetypes=(~FLYING))
 
->>>>>>> ae4aee794e... Merge pull request #9592 from Ghommie/Ghommie-cit262
 	SEND_SIGNAL(C, COMSIG_SPECIES_GAIN, src, old_species)
 
 /datum/species/proc/on_species_loss(mob/living/carbon/human/C, datum/species/new_species, pref_load)
@@ -340,16 +324,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	for(var/X in inherent_traits)
 		REMOVE_TRAIT(C, X, SPECIES_TRAIT)
 
-<<<<<<< HEAD
-=======
 	C.remove_movespeed_modifier(MOVESPEED_ID_SPECIES)
 
-	if("meat_type" in default_features)
-		C.type_of_meat = GLOB.meat_types[C.dna.features["meat_type"]]
-	else
-		C.type_of_meat = initial(meat)
-
->>>>>>> ae4aee794e... Merge pull request #9592 from Ghommie/Ghommie-cit262
 	SEND_SIGNAL(C, COMSIG_SPECIES_LOSS, src)
 
 /datum/species/proc/handle_hair(mob/living/carbon/human/H, forced_colour)
