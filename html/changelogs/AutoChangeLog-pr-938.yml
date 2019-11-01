@@ -1,7 +1,0 @@
-author: "Bhijn"
-delete-after: True
-changes: 
-  - tweak: "The disabler cooler upgrade now applies to all energy-based firearms for borgs"
-  - balance: "Borg flashes regained their ability to cause knockdown. This can be toggled via server config."
-  - server: "The WEAKEN_SECBORG config option will make secborgs spawn with a standard disabler."
-  - server: "The DISABLE_BORG_FLASH_KNOCKDOWN will disable the ability for borg flashes to knockdown."
