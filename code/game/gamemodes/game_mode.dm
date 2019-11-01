@@ -287,13 +287,8 @@
 			G.on_report()
 			intercepttext += G.get_report()
 
-<<<<<<< HEAD
 	print_command_report(intercepttext, "Head Office Status Summary", announce=FALSE)
-	priority_announce("A summary has been copied and printed to all communications consoles.", "Enemy communication intercepted. Security level elevated.", 'sound/ai/intercept.ogg')
-=======
-	print_command_report(intercepttext, "Central Command Status Summary", announce=FALSE)
 	priority_announce("A summary has been copied and printed to all communications consoles.", "Enemy communication intercepted. Security level elevated.", "intercept")
->>>>>>> 6dc6159f4a... Merge pull request #9578 from deathride58/mapsubsystemimprovements
 	if(GLOB.security_level < SEC_LEVEL_BLUE)
 		set_security_level(SEC_LEVEL_BLUE)
 
