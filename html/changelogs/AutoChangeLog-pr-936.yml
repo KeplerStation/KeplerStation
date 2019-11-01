@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - imageadd: "Added armrests overlays to sofas and tweaked their sprites a little."
