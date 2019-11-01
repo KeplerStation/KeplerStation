@@ -312,6 +312,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		for(var/datum/disease/A in C.diseases)
 			A.cure(FALSE)
 
+	C.add_movespeed_modifier(MOVESPEED_ID_SPECIES, TRUE, 100, override=TRUE, multiplicative_slowdown=speedmod, movetypes=(~FLYING))
+
 	SEND_SIGNAL(C, COMSIG_SPECIES_GAIN, src, old_species)
 
 /datum/species/proc/on_species_loss(mob/living/carbon/human/C, datum/species/new_species, pref_load)
@@ -321,6 +323,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		C.Digitigrade_Leg_Swap(TRUE)
 	for(var/X in inherent_traits)
 		REMOVE_TRAIT(C, X, SPECIES_TRAIT)
+
+	C.remove_movespeed_modifier(MOVESPEED_ID_SPECIES)
 
 	SEND_SIGNAL(C, COMSIG_SPECIES_LOSS, src)
 
@@ -1108,39 +1112,16 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 /datum/species/proc/movement_delay(mob/living/carbon/human/H)
 	. = 0	//We start at 0.
 	var/flight = 0	//Check for flight and flying items
-	var/ignoreslow = 0
 	var/gravity = 0
 	if(H.movement_type & FLYING)
 		flight = 1
 
 	gravity = H.has_gravity()
 
-	if(gravity && !flight)	//Check for chemicals and innate speedups and slowdowns if we're on the ground
-		if(HAS_TRAIT(H, TRAIT_GOTTAGOFAST))
-			. -= 1
-		if(HAS_TRAIT(H, TRAIT_GOTTAGOREALLYFAST))
-			. -= 2
-		. += speedmod
-		. += H.physiology.speed_mod
-
 	if (H.m_intent == MOVE_INTENT_WALK && HAS_TRAIT(H, TRAIT_SPEEDY_STEP))
 		. -= 1.5
 
-	if(HAS_TRAIT(H, TRAIT_IGNORESLOWDOWN))
-		ignoreslow = 1
-
-	if(!gravity)
-		var/obj/item/tank/jetpack/J = H.back
-		var/obj/item/clothing/suit/space/hardsuit/C = H.wear_suit
-		var/obj/item/organ/cyberimp/chest/thrusters/T = H.getorganslot(ORGAN_SLOT_THRUSTERS)
-		if(!istype(J) && istype(C))
-			J = C.jetpack
-		if(istype(J) && J.full_speed && J.allow_thrust(0.01, H))	//Prevents stacking
-			. -= 0.4
-		else if(istype(T) && T.allow_thrust(0.01, H))
-			. -= 0.4
-
-	if(!ignoreslow && gravity)
+	if(!HAS_TRAIT(H, TRAIT_IGNORESLOWDOWN) && gravity)
 		if(H.wear_suit)
 			. += H.wear_suit.slowdown
 		if(H.shoes)
@@ -1627,8 +1608,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			var/knocked_item = FALSE
 			if(!is_type_in_typecache(target_held_item, GLOB.shove_disarming_types))
 				target_held_item = null
-			if(!target.has_movespeed_modifier(SHOVE_SLOWDOWN_ID))
-				target.add_movespeed_modifier(SHOVE_SLOWDOWN_ID, multiplicative_slowdown = SHOVE_SLOWDOWN_STRENGTH)
+			if(!target.has_movespeed_modifier(MOVESPEED_ID_SHOVE))
+				target.add_movespeed_modifier(MOVESPEED_ID_SHOVE, multiplicative_slowdown = SHOVE_SLOWDOWN_STRENGTH)
 				if(target_held_item)
 					target.visible_message("<span class='danger'>[target.name]'s grip on \the [target_held_item] loosens!</span>",
 						"<span class='danger'>Your grip on \the [target_held_item] loosens!</span>", null, COMBAT_MESSAGE_RANGE)
