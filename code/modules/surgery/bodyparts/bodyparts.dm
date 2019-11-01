@@ -452,11 +452,6 @@
 			for(var/I in aux_icons)
 				var/aux_layer = aux_icons[I]
 				aux += image(limb.icon, "[species_id]_[I]", -aux_layer, image_dir)
-				if(!isnull(aux_marking))
-					if(species_id == "husk")
-						auxmarking += image('modular_citadel/icons/mob/markings_notmammals.dmi', "husk_[I]", -aux_layer, image_dir)
-					else
-						auxmarking += image(body_markings_icon, "[body_markings]_[I]", -aux_layer, image_dir)
 			. += aux
 
 	else
