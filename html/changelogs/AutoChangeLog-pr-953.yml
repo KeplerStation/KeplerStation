@@ -1,4 +1,0 @@
-author: "KeplerStation-Bot"
-delete-after: True
-changes: 
-  - tweak: "Made the clone scanner lock while it's scanning."
