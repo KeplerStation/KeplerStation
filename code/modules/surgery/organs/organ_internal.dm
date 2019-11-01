@@ -28,7 +28,7 @@
 
 /obj/item/organ/proc/Insert(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
 	if(!iscarbon(M) || owner == M)
-		return
+		return FALSE
 
 	var/obj/item/organ/replaced = M.getorganslot(slot)
 	if(replaced)
@@ -50,6 +50,8 @@
 		A.Grant(M)
 	STOP_PROCESSING(SSobj, src)
 
+	return TRUE
+
 //Special is for instant replacement like autosurgeons
 /obj/item/organ/proc/Remove(mob/living/carbon/M, special = FALSE)
 	owner = null
@@ -64,6 +66,10 @@
 		A.Remove(M)
 	START_PROCESSING(SSobj, src)
 
+<<<<<<< HEAD
+=======
+	return TRUE
+>>>>>>> d9c38d0589... Merge pull request #8948 from Ghommie/Ghommie-cit156
 
 /obj/item/organ/proc/on_find(mob/living/finder)
 	return

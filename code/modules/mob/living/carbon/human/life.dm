@@ -18,7 +18,7 @@
 #define THERMAL_PROTECTION_HAND_LEFT	0.025
 #define THERMAL_PROTECTION_HAND_RIGHT	0.025
 
-/mob/living/carbon/human/Life()
+/mob/living/carbon/human/Life(seconds, times_fired)
 	set invisibility = 0
 	if (notransform)
 		return
@@ -40,9 +40,14 @@
 		handle_embedded_objects()
 
 	if(stat != DEAD)
+<<<<<<< HEAD
 		// Kepler change, handle our bones being broken. Also why the fuck are all these seperate IF statements. smh.
 		handle_fractures()
 
+=======
+		//process your dick energy
+		handle_arousal(times_fired)
+>>>>>>> d9c38d0589... Merge pull request #8948 from Ghommie/Ghommie-cit156
 
 	//Update our name based on whether our face is obscured/disfigured
 	name = get_visible_name()

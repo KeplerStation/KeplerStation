@@ -89,9 +89,75 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		"frills" = "None",
 		"spines" = "None",
 		"body_markings" = "None",
+<<<<<<< HEAD
 		"legs" = "Normal Legs",
 		"moth_wings" = "Plain",
 		"flavor_text" = ""
+=======
+		"legs" = "Plantigrade",
+		"insect_wings" = "Plain",
+		"insect_fluff" = "None",
+		"mcolor2" = "FFF",
+		"mcolor3" = "FFF",
+		"mam_body_markings" = "Plain",
+		"mam_ears" = "None",
+		"mam_snouts" = "None",
+		"mam_tail" = "None",
+		"mam_tail_animated" = "None",
+		"xenodorsal" = "Standard",
+		"xenohead" = "Standard",
+		"xenotail" = "Xenomorph Tail",
+		"taur" = "None",
+		"genitals_use_skintone" = FALSE,
+		"has_cock" = FALSE,
+		"cock_shape" = "Human",
+		"cock_length" = 6,
+		"cock_girth_ratio" = COCK_GIRTH_RATIO_DEF,
+		"cock_color" = "fff",
+		"has_sheath" = FALSE,
+		"sheath_color" = "fff",
+		"has_balls" = FALSE,
+		"balls_internal" = FALSE,
+		"balls_color" = "fff",
+		"balls_amount" = 2,
+		"balls_sack_size" = BALLS_SACK_SIZE_DEF,
+		"balls_shape" = "Single",
+		"balls_size" = BALLS_SIZE_DEF,
+		"balls_cum_rate" = CUM_RATE,
+		"balls_cum_mult" = CUM_RATE_MULT,
+		"balls_efficiency" = CUM_EFFICIENCY,
+		"balls_fluid" = "semen",
+		"has_ovi" = FALSE,
+		"ovi_shape" = "knotted",
+		"ovi_length" = 6,
+		"ovi_color" = "fff",
+		"has_eggsack" = FALSE,
+		"eggsack_internal" = TRUE,
+		"eggsack_color" = "fff",
+		"eggsack_size" = BALLS_SACK_SIZE_DEF,
+		"eggsack_egg_color" = "fff",
+		"eggsack_egg_size" = EGG_GIRTH_DEF,
+		"has_breasts" = FALSE,
+		"breasts_color" = "fff",
+		"breasts_size" = "C",
+		"breasts_shape" = "Pair",
+		"breasts_fluid" = "milk",
+		"breasts_producing" = FALSE,
+		"has_vag" = FALSE,
+		"vag_shape" = "Human",
+		"vag_color" = "fff",
+		"vag_clits" = 1,
+		"vag_clit_diam" = 0.25,
+		"has_womb" = FALSE,
+		"womb_cum_rate" = CUM_RATE,
+		"womb_cum_mult" = CUM_RATE_MULT,
+		"womb_efficiency" = CUM_EFFICIENCY,
+		"womb_fluid" = "femcum",
+		"ipc_screen" = "Sunburst",
+		"ipc_antenna" = "None",
+		"flavor_text" = "",
+		"meat_type" = "Mammalian"
+>>>>>>> d9c38d0589... Merge pull request #8948 from Ghommie/Ghommie-cit156
 		)
 
 	var/list/custom_names = list()
@@ -536,6 +602,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			dat +="<td width='300px' height='300px' valign='top'>"
 			dat += "<h2>Citadel Preferences</h2>" //Because fuck me if preferences can't be fucking modularized and expected to update in a reasonable timeframe.
+<<<<<<< HEAD
+=======
+			dat += "<b>Arousal:</b><a href='?_src_=prefs;preference=arousable'>[arousable == TRUE ? "Enabled" : "Disabled"]</a><BR>"
+			dat += "<b>Voracious MediHound sleepers:</b> <a href='?_src_=prefs;preference=hound_sleeper'>[(cit_toggles & MEDIHOUND_SLEEPER) ? "Yes" : "No"]</a><br>"
+			dat += "<b>Hear Vore Sounds:</b> <a href='?_src_=prefs;preference=toggleeatingnoise'>[(cit_toggles & EATING_NOISES) ? "Yes" : "No"]</a><br>"
+			dat += "<b>Hear Vore Digestion Sounds:</b> <a href='?_src_=prefs;preference=toggledigestionnoise'>[(cit_toggles & DIGESTION_NOISES) ? "Yes" : "No"]</a><br>"
+			dat += "<b>Lewdchem:</b><a href='?_src_=prefs;preference=lewdchem'>[lewdchem == TRUE ? "Enabled" : "Disabled"]</a><BR>"
+>>>>>>> d9c38d0589... Merge pull request #8948 from Ghommie/Ghommie-cit156
 			dat += "<b>Widescreen:</b> <a href='?_src_=prefs;preference=widescreenpref'>[widescreenpref ? "Enabled ([CONFIG_GET(string/default_view)])" : "Disabled (15x15)"]</a><br>"
 			dat += "<b>Auto stand:</b> <a href='?_src_=prefs;preference=autostand'>[autostand ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Screen Shake:</b> <a href='?_src_=prefs;preference=screenshake'>[(screenshake==100) ? "Full" : ((screenshake==0) ? "None" : "[screenshake]")]</a><br>"
@@ -1412,6 +1486,41 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		else
 			switch(href_list["preference"])
 				//CITADEL PREFERENCES EDIT - I can't figure out how to modularize these, so they have to go here. :c -Pooj
+<<<<<<< HEAD
+=======
+				if("genital_colour")
+					features["genitals_use_skintone"] = !features["genitals_use_skintone"]
+				if("arousable")
+					arousable = !arousable
+				if("lewdchem")
+					lewdchem = !lewdchem
+				if("has_cock")
+					features["has_cock"] = !features["has_cock"]
+					if(features["has_cock"] == FALSE)
+						features["has_balls"] = FALSE
+				if("has_balls")
+					features["has_balls"] = !features["has_balls"]
+				if("has_ovi")
+					features["has_ovi"] = !features["has_ovi"]
+				if("has_eggsack")
+					features["has_eggsack"] = !features["has_eggsack"]
+				if("balls_internal")
+					features["balls_internal"] = !features["balls_internal"]
+				if("eggsack_internal")
+					features["eggsack_internal"] = !features["eggsack_internal"]
+				if("has_breasts")
+					features["has_breasts"] = !features["has_breasts"]
+					if(features["has_breasts"] == FALSE)
+						features["breasts_producing"] = FALSE
+				if("breasts_producing")
+					features["breasts_producing"] = !features["breasts_producing"]
+				if("has_vag")
+					features["has_vag"] = !features["has_vag"]
+					if(features["has_vag"] == FALSE)
+						features["has_womb"] = FALSE
+				if("has_womb")
+					features["has_womb"] = !features["has_womb"]
+>>>>>>> d9c38d0589... Merge pull request #8948 from Ghommie/Ghommie-cit156
 				if("widescreenpref")
 					widescreenpref = !widescreenpref
 					user.client.change_view(CONFIG_GET(string/default_view))

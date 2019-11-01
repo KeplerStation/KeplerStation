@@ -5,7 +5,11 @@
 //	You do not need to raise this if you are adding new values that have sane defaults.
 //	Only raise this value when changing the meaning/format/name/layout of an existing value
 //	where you would want the updater procs below to run
+<<<<<<< HEAD
 #define SAVEFILE_VERSION_MAX	22
+=======
+#define SAVEFILE_VERSION_MAX	24
+>>>>>>> d9c38d0589... Merge pull request #8948 from Ghommie/Ghommie-cit156
 
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
@@ -98,6 +102,12 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 						new_value = JP_LOW
 			if(new_value)
 				job_preferences["[initial(J.title)]"] = new_value
+
+	if(current_version < 24 && S["feature_exhibitionist"])
+		var/datum/quirk/exhibitionism/E
+		var/quirk_name = initial(E.name)
+		neutral_quirks += quirk_name
+		all_quirks += quirk_name
 
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
 	if(!ckey)

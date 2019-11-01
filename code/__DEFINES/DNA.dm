@@ -123,6 +123,15 @@
 #define ORGAN_SLOT_BRAIN_ANTIDROP "brain_antidrop"
 #define ORGAN_SLOT_BRAIN_ANTISTUN "brain_antistun"
 #define ORGAN_SLOT_TAIL "tail"
+<<<<<<< HEAD
+=======
+#define ORGAN_SLOT_PENIS "penis"
+#define ORGAN_SLOT_WOMB "womb"
+#define ORGAN_SLOT_VAGINA "vagina"
+#define ORGAN_SLOT_TESTICLES "testicles"
+#define ORGAN_SLOT_BREASTS "breasts"
+
+>>>>>>> d9c38d0589... Merge pull request #8948 from Ghommie/Ghommie-cit156
 
 ////organ defines
 #define STANDARD_ORGAN_THRESHOLD 	100
