@@ -13,7 +13,7 @@
 
 /obj/effect/decal/cleanable/robot_debris/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()
-	reagents.add_reagent("liquidoilgibs", 5)
+	reagents.add_reagent("oil", 5)
 
 /obj/effect/decal/cleanable/robot_debris/proc/streak(list/directions)
 	set waitfor = 0
@@ -54,7 +54,6 @@
 /obj/effect/decal/cleanable/oil/Initialize()
 	. = ..()
 	reagents.add_reagent("oil", 30)
-	reagents.add_reagent("liquidoilgibs", 5)
 
 /obj/effect/decal/cleanable/oil/streak
 	random_icon_states = list("streak1", "streak2", "streak3", "streak4", "streak5")

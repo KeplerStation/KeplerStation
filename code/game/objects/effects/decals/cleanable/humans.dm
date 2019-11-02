@@ -161,34 +161,4 @@
 	desc = "They look like tracks left by a bare foot."
 	icon_state = FOOTPRINT_FOOT
 	print_state = FOOTPRINT_FOOT
-
-/obj/effect/decal/cleanable/blood/footprints/tracks/snake
-	name = "tracks"
-	desc = "They look like tracks left by a giant snake."
-	icon_state = FOOTPRINT_SNAKE
-	print_state = FOOTPRINT_SNAKE
-
-/obj/effect/decal/cleanable/blood/footprints/tracks/paw
-	name = "footprints"
-	desc = "They look like tracks left by paws."
-	icon_state = FOOTPRINT_PAW
-	print_state = FOOTPRINT_PAW
-
-/obj/effect/decal/cleanable/blood/footprints/tracks/claw
-	name = "footprints"
-	desc = "They look like tracks left by claws."
-	icon_state = FOOTPRINT_CLAW
-	print_state = FOOTPRINT_CLAW
-
-/obj/effect/decal/cleanable/blood/footprints/tracks/wheels
-	name = "tracks"
-	desc = "They look like tracks left by wheels."
-	gender = PLURAL
-	icon_state = FOOTPRINT_WHEEL
-	print_state = FOOTPRINT_WHEEL
-
-/obj/effect/decal/cleanable/blood/footprints/tracks/body
-	name = "trails"
-	desc = "A trail left by something being dragged."
-	icon_state = FOOTPRINT_DRAG
-	print_state = FOOTPRINT_DRAG */
+*/

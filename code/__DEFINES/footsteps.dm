@@ -17,12 +17,6 @@
 
 #define FOOTPRINT_SHOE	"shoe"
 #define FOOTPRINT_FOOT	"foot"
-#define FOOTPRINT_PAW	"paw"
-#define FOOTPRINT_CLAW	"claw"
-#define FOOTPRINT_WHEEL	"wheels"
-#define FOOTPRINT_TRAIL	"trails_"
-#define FOOTPRINT_SNAKE	"snake"
-#define FOOTPRINT_DRAG	"drag"
 
 /*
 

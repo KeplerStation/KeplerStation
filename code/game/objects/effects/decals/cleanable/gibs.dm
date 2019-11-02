@@ -147,12 +147,6 @@
 /obj/effect/decal/cleanable/blood/gibs/human/lizard/core
 	random_icon_states = list("gibmid1", "gibmid2", "gibmid3")
 
-// Slime Gibs
-/obj/effect/decal/cleanable/blood/gibs/slime
-	desc = "They look gooey and gruesome."
-	gibs_reagent_id = "liquidslimegibs"
-	gibs_bloodtype = "GEL"
-
 /obj/effect/decal/cleanable/blood/gibs/slime/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()
 	update_icon()
@@ -200,7 +194,7 @@
 /obj/effect/decal/cleanable/blood/gibs/ipc
 	desc = "They look sharp yet oozing."
 	body_colors = "00ff00"
-	gibs_reagent_id = "liquidoilgibs"
+	gibs_reagent_id = "oil"
 	gibs_bloodtype = "HF"
 
 /obj/effect/decal/cleanable/blood/gibs/ipc/Initialize(mapload, list/datum/disease/diseases)

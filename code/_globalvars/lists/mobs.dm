@@ -59,26 +59,6 @@ GLOBAL_LIST_EMPTY(latejoiners) //CIT CHANGE - All latejoining people, for traito
 		var/mob/M = i
 		M.update_config_movespeed()
 
-GLOBAL_LIST_INIT(noodle_taurs, list(
-		"Naga",
-		"Tentacle"
-		))
-
-GLOBAL_LIST_INIT(paw_taurs, list(
-		"Fox",
-		"Wolf",
-		"Otie",
-		"Drake",
-		"Lab",
-		"Shepherd",
-		"Husky",
-		"Eevee",
-		"Panther",
-		"Horse",
-		"Cow",
-		"Tiger"
-		))
-
 	//blood types
 GLOBAL_LIST_INIT(regular_bloods,list(
 		"O-",
@@ -105,16 +85,13 @@ GLOBAL_LIST_INIT(all_types_bloods,list(
 		"HF",
 		"L",
 		"U",
-		"GEL",
 		"BUG"
 		))
 
 GLOBAL_LIST_INIT(blood_types, list(
-		"blood",
-		"jellyblood"
+		"blood"
 		))
 
 GLOBAL_LIST_INIT(blood_id_types, list(
-		"blood" = /datum/reagent/blood,
+		"blood" = /datum/reagent/blood
 		))
-

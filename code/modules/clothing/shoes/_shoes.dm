@@ -23,7 +23,7 @@
 
 /obj/item/clothing/shoes/ComponentInitialize()
 	. = ..()
-	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, .proc/clean_blood)
+	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, .proc/clean_blood2)
 
 /obj/item/clothing/shoes/suicide_act(mob/living/carbon/user)
 	if(rand(2)>1)
@@ -102,7 +102,8 @@
 		var/mob/M = loc
 		M.update_inv_shoes()
 
-/obj/item/clothing/shoes/proc/clean_blood(datum/source, strength)
+/obj/item/clothing/shoes/proc/clean_blood2(datum/source, strength)
+	clean_blood()
 	bloody_shoes = list(BLOOD_STATE_BLOOD = 0, BLOOD_STATE_OIL = 0, BLOOD_STATE_NOT_BLOODY = 0)
 	blood_state = BLOOD_STATE_NOT_BLOODY
 	if(ismob(loc))

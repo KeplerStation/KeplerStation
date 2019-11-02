@@ -349,6 +349,7 @@
 		icon_state = "dualsaber0"
 
 	SEND_SIGNAL(src, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
+	clean_blood()
 
 /obj/item/twohanded/dualsaber/attack(mob/target, mob/living/carbon/human/user)
 	if(user.has_dna())
@@ -537,6 +538,8 @@
 	if(ismob(loc))
 		var/mob/M = loc
 		M.update_inv_hands()
+
+	clean_blood()
 
 /obj/item/twohanded/dualsaber/hypereutactic/AltClick(mob/living/user)
 	if(!user.canUseTopic(src, BE_CLOSE, FALSE) || hacked)

@@ -17,7 +17,7 @@
 
 /obj/machinery/washing_machine/ComponentInitialize()
 	. = ..()
-	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, .proc/clean_blood)
+	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, .proc/clean_blood2)
 
 /obj/machinery/washing_machine/AltClick(mob/user)
 	if(!user.canUseTopic(src))
@@ -59,7 +59,8 @@
 		M.Translate(rand(-3, 3), rand(-1, 3))
 		animate(src, transform=M, time=2)
 
-/obj/machinery/washing_machine/proc/clean_blood()
+/obj/machinery/washing_machine/proc/clean_blood2()
+	clean_blood()
 	if(!busy)
 		bloody_mess = FALSE
 		update_icon()
