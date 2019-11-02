@@ -25,7 +25,8 @@
 	if(B.pulledby && ismob(B.pulledby))
 		if(ishuman(B.pulledby))
 			var/mob/living/carbon/human/P = B.pulledby
-			if(findtext(P.get_idcard().name, "Prisoner"))
+			var/obj/item/card/id/card = P.get_idcard()
+			if(findtext(card.name, "Prisoner"))
 				return allowed(B)
 		return allowed(B.pulledby) | allowed(B)
 	else
