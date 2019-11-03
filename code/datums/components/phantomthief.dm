@@ -29,15 +29,10 @@
 			user.filters += thefilter
 
 /datum/component/wearertargeting/phantomthief/proc/stripdesiredfilter(mob/user)
-	if(istype(user))
-		var/thefilter = filter(type = "drop_shadow", x = filter_x, y = filter_y, size = filter_size, color = filter_color)
-		user.filters -= thefilter
-=======
 	if(!combatmodestate)
 		user.remove_filter("phantomthief")
 	else
 		user.add_filter("phantomthief", 4, list(type = "drop_shadow", x = filter_x, y = filter_y, size = filter_size, color = filter_color))
->>>>>>> 906c58d339... Merge pull request #9672 from Ghommie/Ghommie-cit299
 
 /datum/component/wearertargeting/phantomthief/on_drop(datum/source, mob/user)
 	. = ..()
