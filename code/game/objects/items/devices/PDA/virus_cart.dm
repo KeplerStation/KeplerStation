@@ -65,18 +65,8 @@
 		charges--
 		var/difficulty = 0
 		if(target.cartridge)
-<<<<<<< HEAD
-			difficulty += BitCount(target.cartridge.access&(CART_MEDICAL | CART_SECURITY | CART_ENGINE | CART_CLOWN | CART_JANITOR))
-			difficulty += 2
-		GET_COMPONENT_FROM(hidden_uplink, /datum/component/uplink, target)
-=======
 			difficulty += BitCount(target.cartridge.access&(CART_MEDICAL | CART_SECURITY | CART_ENGINE | CART_CLOWN | CART_JANITOR | CART_MANIFEST))
-			if(target.cartridge.access & CART_MANIFEST)
-				difficulty++ //if cartridge has manifest access it has extra snowflake difficulty
-			else
-				difficulty += 2
 		var/datum/component/uplink/hidden_uplink = target.GetComponent(/datum/component/uplink)
->>>>>>> f9120ed9e... Merge pull request #9589 from Ghommie/Ghommie-cit259
 		if(!target.detonatable || prob(difficulty * 15) || (hidden_uplink))
 			U.show_message("<span class='danger'>An error flashes on your [src].</span>", 1)
 		else
