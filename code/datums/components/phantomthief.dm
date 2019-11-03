@@ -27,12 +27,6 @@
 		else
 			user.filters += thefilter
 
-/datum/component/wearertargeting/phantomthief/proc/stripdesiredfilter(mob/user)
-	if(!combatmodestate)
-		user.remove_filter("phantomthief")
-	else
-		user.add_filter("phantomthief", 4, list(type = "drop_shadow", x = filter_x, y = filter_y, size = filter_size, color = filter_color))
-
 /datum/component/wearertargeting/phantomthief/on_drop(datum/source, mob/user)
 	. = ..()
 	user.remove_filter("phantomthief")
