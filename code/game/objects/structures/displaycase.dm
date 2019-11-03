@@ -94,8 +94,9 @@
 		I = icon('icons/obj/stationobjs.dmi',"glassboxb0")
 	if(showpiece)
 		var/icon/S = getFlatIcon(showpiece)
-		S.Scale(17,17)
-		I.Blend(S,ICON_UNDERLAY,8,8)
+		if(S)
+			S.Scale(17,17)
+			I.Blend(S,ICON_UNDERLAY,8,8)
 	src.icon = I
 	return
 

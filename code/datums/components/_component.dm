@@ -6,7 +6,7 @@
 	//At a minimum RegisterWithParent and UnregisterFromParent should be used
 	//Make sure you also implement PostTransfer for any post transfer handling
 	var/can_transfer = FALSE
-	
+
 /datum/component/New(datum/P, ...)
 	parent = P
 	var/list/arguments = args.Copy(2)
@@ -155,7 +155,7 @@
 	return
 
 /datum/component/proc/PostTransfer()
-	return
+	return COMPONENT_INCOMPATIBLE //Do not support transfer by default as you must properly support it
 
 /datum/component/proc/_GetInverseTypeList(our_type = type)
 	//we can do this one simple trick
@@ -184,8 +184,8 @@
 
 // The type arg is casted so initial works, you shouldn't be passing a real instance into this
 /datum/proc/GetComponent(datum/component/c_type)
-	if(initial(c_type.dupe_mode) == COMPONENT_DUPE_ALLOWED)
-		stack_trace("GetComponent was called to get a component of which multiple copies could be on an object. This can easily break and should be changed. Type: \[[c_type]\]")
+	//if(initial(c_type.dupe_mode) == COMPONENT_DUPE_ALLOWED)
+	//	stack_trace("GetComponent was called to get a component of which multiple copies could be on an object. This can easily break and should be changed. Type: \[[c_type]\]")
 	var/list/dc = datum_components
 	if(!dc)
 		return null
@@ -301,10 +301,13 @@
 		return
 	var/comps = dc[/datum/component]
 	if(islist(comps))
-		for(var/I in comps)
-			target.TakeComponent(I)
+		for(var/datum/component/I in comps)
+			if(I.can_transfer)
+				target.TakeComponent(I)
 	else
-		target.TakeComponent(comps)
+		var/datum/component/C = comps
+		if(C.can_transfer)
+			target.TakeComponent(comps)
 
 /datum/component/ui_host()
 	return parent

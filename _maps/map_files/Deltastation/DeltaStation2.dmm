@@ -88817,7 +88817,6 @@
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "cSR" = (
-/obj/item/twohanded/required/kirbyplants/random,
 /obj/item/storage/pod{
 	pixel_x = 32;
 	pixel_y = 32
@@ -88828,6 +88827,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/machinery/bloodbankgen,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "cSS" = (
@@ -89197,7 +89197,7 @@
 /area/maintenance/port)
 "cTz" = (
 /obj/effect/decal/remains/xeno,
-/obj/effect/decal/cleanable/xenoblood,
+/obj/effect/decal/cleanable/blood/xeno,
 /turf/open/floor/circuit/green,
 /area/science/xenobiology)
 "cTA" = (
@@ -127615,27 +127615,6 @@
 	dir = 10
 	},
 /area/science/misc_lab)
-"tOQ" = (
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/machinery/computer/pod/old{
-	density = 0;
-	icon = 'icons/obj/airlock_machines.dmi';
-	icon_state = "airlock_control_standby";
-	id = "chapelgun";
-	name = "Mass Driver Controller";
-	pixel_x = -24
-	},
-/turf/open/floor/plasteel/dark,
-/area/chapel/office)
 "tRT" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
