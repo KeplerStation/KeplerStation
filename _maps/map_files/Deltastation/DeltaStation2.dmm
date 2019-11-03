@@ -174,26 +174,87 @@
 /turf/open/space,
 /area/solar/starboard/fore)
 "aav" = (
-/obj/item/storage/pod{
-	pixel_x = 32;
-	pixel_y = 32
-	},
-/obj/machinery/airalarm{
-	pixel_y = 23
-	},
-/obj/effect/turf_decal/tile/blue{
+/obj/effect/decal/cleanable/cobweb,
+/obj/machinery/computer/arcade{
+	icon_state = "arcade";
 	dir = 4
 	},
-/obj/machinery/bloodbankgen,
-/turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
 "aaw" = (
-/obj/effect/turf_decal/tile/blue{
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/machinery/body_scanner,
-/turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/computer/arcade{
+	icon_state = "arcade";
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/maintenance/starboard/fore)
+"aax" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/computer/arcade{
+	icon_state = "arcade";
+	dir = 1
+	},
+/turf/open/floor/plasteel/dark,
+/area/maintenance/starboard/fore)
+"aay" = (
+/obj/machinery/computer/arcade{
+	icon_state = "arcade";
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
+"aaz" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/computer/arcade{
+	icon_state = "arcade";
+	dir = 1
+	},
+/turf/open/floor/plasteel/dark,
+/area/maintenance/starboard/fore)
+"aaA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/computer/arcade{
+	icon_state = "arcade";
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
+"aaB" = (
+/obj/machinery/computer/arcade{
+	icon_state = "arcade";
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/security/prison)
 "aaE" = (
 /obj/structure/lattice/catwalk,
 /turf/open/space,
@@ -4580,11 +4641,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/starboard/fore)
-"anz" = (
-/obj/machinery/computer/arcade,
-/obj/effect/decal/cleanable/cobweb,
-/turf/open/floor/plating,
-/area/maintenance/starboard/fore)
 "anA" = (
 /obj/structure/cable/white{
 	icon_state = "0-2"
@@ -7139,10 +7195,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
-"arX" = (
-/obj/machinery/computer/arcade,
-/turf/open/floor/plating,
-/area/maintenance/starboard/fore)
 "arY" = (
 /obj/structure/table/wood,
 /obj/item/toy/talking/codex_gigas,
@@ -7172,11 +7224,6 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/maintenance/starboard/fore)
-"asa" = (
-/obj/machinery/computer/arcade,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
 /area/maintenance/starboard/fore)
 "asb" = (
 /obj/machinery/airalarm{
@@ -21911,10 +21958,6 @@
 /area/security/prison)
 "aRh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plating,
-/area/security/prison)
-"aRi" = (
-/obj/machinery/computer/arcade,
 /turf/open/floor/plating,
 /area/security/prison)
 "aRj" = (
@@ -88773,6 +88816,20 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
+"cSR" = (
+/obj/item/storage/pod{
+	pixel_x = 32;
+	pixel_y = 32
+	},
+/obj/machinery/airalarm{
+	pixel_y = 23
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/machinery/bloodbankgen,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
 "cSS" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -92918,6 +92975,13 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
+"cZK" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/machinery/body_scanner,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "cZL" = (
@@ -170294,7 +170358,7 @@ aox
 apu
 aqy
 arb
-aoy
+aax
 aig
 auA
 avU
@@ -170551,7 +170615,7 @@ aoy
 apv
 aqz
 apu
-arX
+aay
 aig
 auB
 avU
@@ -171060,8 +171124,8 @@ aiC
 akU
 alI
 amE
-anz
-aox
+aav
+aaw
 apw
 aqA
 apy
@@ -171579,7 +171643,7 @@ aiC
 apy
 apy
 apu
-aox
+aaz
 atw
 auD
 avW
@@ -171836,7 +171900,7 @@ aoB
 apz
 apw
 apv
-asa
+aaA
 atw
 auE
 avW
@@ -173718,7 +173782,7 @@ cMg
 cHW
 cHW
 cPy
-aav
+cSR
 cPv
 cPv
 cXX
@@ -175264,7 +175328,7 @@ cSW
 cUO
 cWy
 cRe
-aaw
+cZK
 dbu
 ddg
 deF
@@ -182392,7 +182456,7 @@ aFn
 aMn
 aNI
 aPr
-aRi
+aaB
 aKV
 aUC
 aWk
