@@ -20,7 +20,6 @@
 	valid_slots = _valid_slots
 
 /datum/component/wearertargeting/phantomthief/proc/handlefilterstuff(datum/source, mob/user, combatmodestate)
-<<<<<<< HEAD
 	if(istype(user))
 		var/thefilter = filter(type = "drop_shadow", x = filter_x, y = filter_y, size = filter_size, color = filter_color)
 		if(!combatmodestate)
