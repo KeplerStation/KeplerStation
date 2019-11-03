@@ -4,11 +4,11 @@
 	id = "jelly"
 	default_color = "00FF90"
 	say_mod = "chirps"
-	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR,NOBLOOD,NO_BONES)
+	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR,NO_BONES,NOBLOOD)
 	mutantlungs = /obj/item/organ/lungs/slime
+	mutant_heart = /obj/item/organ/heart/slime
 	inherent_traits = list(TRAIT_TOXINLOVER)
 	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/slime
-	exotic_blood = "slimejelly"
 	damage_overlay_type = ""
 	var/datum/action/innate/regenerate_limbs/regenerate_limbs
 	var/datum/action/innate/slime_change/slime_change	//CIT CHANGE

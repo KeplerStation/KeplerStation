@@ -43295,6 +43295,11 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/aft)
+"whp" = (
+/obj/effect/turf_decal/tile/blue,
+/obj/machinery/bloodbankgen,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/zone3)
 "wkG" = (
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/airless,
@@ -83409,7 +83414,7 @@ aXX
 aYQ
 aZM
 baD
-bbr
+whp
 aWK
 bda
 bdX
