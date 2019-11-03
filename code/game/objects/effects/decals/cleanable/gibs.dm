@@ -148,8 +148,7 @@
 // Slime Gibs
 /obj/effect/decal/cleanable/blood/gibs/slime
 	desc = "They look gooey and gruesome."
-	gibs_reagent_id = "liquidslimegibs"
-	gibs_bloodtype = "GEL"
+	gibs_reagent_id = "water"
 
 /obj/effect/decal/cleanable/blood/gibs/slime/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()
@@ -198,7 +197,7 @@
 /obj/effect/decal/cleanable/blood/gibs/ipc
 	desc = "They look sharp yet oozing."
 	body_colors = "00ff00"
-	gibs_reagent_id = "liquidoilgibs"
+	gibs_reagent_id = "oil"
 	gibs_bloodtype = "HF"
 
 /obj/effect/decal/cleanable/blood/gibs/ipc/Initialize(mapload, list/datum/disease/diseases)

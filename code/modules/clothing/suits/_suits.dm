@@ -12,11 +12,6 @@
 
 	var/adjusted = NORMAL_STYLE
 	mutantrace_variation = MUTANTRACE_VARIATION
-<<<<<<< HEAD
-=======
-	var/tauric = FALSE		//Citadel Add for tauric hardsuits
-	var/taurmode = NOT_TAURIC
->>>>>>> f9120ed9e... Merge pull request #9589 from Ghommie/Ghommie-cit259
 	var/dimension_x = 32
 	var/dimension_y = 32
 	var/center = FALSE	//Should we center the sprite?
@@ -33,25 +28,6 @@
 			else if(adjusted == ALT_STYLE)
 				adjusted = NORMAL_STYLE
 
-<<<<<<< HEAD
-=======
-		if(("taur" in H.dna.species.mutant_bodyparts) && (H.dna.features["taur"] != "None"))
-			if(H.dna.features["taur"] in GLOB.noodle_taurs)
-				taurmode = SNEK_TAURIC
-				if(tauric == TRUE)
-					center = TRUE
-					dimension_x = 64
-			else if(H.dna.features["taur"] in GLOB.paw_taurs)
-				taurmode = PAW_TAURIC
-				if(tauric == TRUE)
-					center = TRUE
-					dimension_x = 64
-		else
-			taurmode = NOT_TAURIC
-			if(tauric == TRUE)
-				center = FALSE
-				dimension_x = 32
->>>>>>> f9120ed9e... Merge pull request #9589 from Ghommie/Ghommie-cit259
 		H.update_inv_wear_suit()
 
 
@@ -60,16 +36,8 @@
 	if(!isinhands)
 		if(damaged_clothes)
 			. += mutable_appearance('icons/effects/item_damage.dmi', "damaged[blood_overlay_type]")
-<<<<<<< HEAD
-		IF_HAS_BLOOD_DNA(src)
-			. += mutable_appearance('icons/effects/blood.dmi', "[blood_overlay_type]blood")
-=======
 		if(blood_DNA)
-			if(tauric)
-				. += mutable_appearance('modular_citadel/icons/mob/64x32_effects.dmi', "[blood_overlay_type]blood", color = blood_DNA_to_color())
-			else
 				. += mutable_appearance('icons/effects/blood.dmi', "[blood_overlay_type]blood", color = blood_DNA_to_color())
->>>>>>> f9120ed9e... Merge pull request #9589 from Ghommie/Ghommie-cit259
 		var/mob/living/carbon/human/M = loc
 		if(ishuman(M) && M.w_uniform)
 			var/obj/item/clothing/under/U = M.w_uniform

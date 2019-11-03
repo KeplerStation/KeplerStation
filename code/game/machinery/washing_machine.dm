@@ -11,13 +11,13 @@
 	var/obj/item/color_source
 	var/max_wash_capacity = 5
 
-/obj/machinery/washing_machine/ComponentInitialize()
-	. = ..()
-	AddComponent(/datum/component/redirect, list(COMSIG_COMPONENT_CLEAN_ACT = CALLBACK(src, .proc/clean_blood)))
-
 /obj/machinery/washing_machine/examine(mob/user)
 	..()
 	to_chat(user, "<span class='notice'>Alt-click it to start a wash cycle.</span>")
+
+/obj/machinery/washing_machine/ComponentInitialize()
+	. = ..()
+	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, .proc/clean_blood2)
 
 /obj/machinery/washing_machine/AltClick(mob/user)
 	if(!user.canUseTopic(src))
@@ -59,7 +59,8 @@
 		M.Translate(rand(-3, 3), rand(-1, 3))
 		animate(src, transform=M, time=2)
 
-/obj/machinery/washing_machine/proc/clean_blood()
+/obj/machinery/washing_machine/proc/clean_blood2()
+	clean_blood()
 	if(!busy)
 		bloody_mess = FALSE
 		update_icon()
@@ -67,7 +68,7 @@
 /obj/machinery/washing_machine/proc/wash_cycle()
 	for(var/X in contents)
 		var/atom/movable/AM = X
-		SEND_SIGNAL(AM, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_STRENGTH_BLOOD)
+		SEND_SIGNAL(AM, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
 		AM.machine_wash(src)
 
 	busy = FALSE

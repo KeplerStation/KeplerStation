@@ -13,7 +13,7 @@
 
 /obj/item/implant/storage/removed(source, silent = FALSE, special = 0)
 	if(!special)
-		qdel(pocket)
+		QDEL_NULL(pocket)
 	else
 		pocket?.moveToNullspace()
 	return ..()
@@ -30,7 +30,7 @@
 			return FALSE
 	. = ..()
 	if(.)
-		if(pocket)
+		if(!QDELETED(pocket))
 			pocket.forceMove(target)
 		else
 			pocket = new(target)
@@ -42,7 +42,6 @@
 	desc = "A tiny yet spacious pocket, usually found implanted inside sneaky syndicate agents and nowhere else."
 	component_type = /datum/component/storage/concrete/implant
 	resistance_flags = INDESTRUCTIBLE //A bomb!
-	item_flags = DROPDEL
 
 /obj/item/implanter/storage
 	name = "implanter (storage)"

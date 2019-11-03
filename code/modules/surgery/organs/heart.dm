@@ -57,7 +57,7 @@
 
 /obj/item/organ/heart/prepare_eat()
 	var/obj/S = ..()
-	S.icon_state = "heart-off"
+	S.icon_state = "[icon_base]-off"
 	return S
 
 /obj/item/organ/heart/on_life()
@@ -89,6 +89,12 @@
 			owner.visible_message("<span class='userdanger'>[owner] clutches at [owner.p_their()] chest as if [owner.p_their()] heart is stopping!</span>")
 		owner.set_heartattack(TRUE)
 		failed = TRUE
+
+obj/item/organ/heart/slime
+	name = "slime heart"
+	desc = "It seems we've gotten to the slimy core of the matter."
+	icon_state = "heart-s-on"
+	icon_base = "heart-s"
 
 /obj/item/organ/heart/cursed
 	name = "cursed heart"
@@ -208,8 +214,6 @@ obj/item/organ/heart/cybernetic/upgraded/on_life()
 /obj/item/organ/heart/cybernetic/upgraded/proc/used_dose()
 	addtimer(VARSET_CALLBACK(src, dose_available, TRUE), 5 MINUTES)
 	ramount = 0
-
-
 
 /obj/item/organ/heart/freedom
 	name = "heart of freedom"

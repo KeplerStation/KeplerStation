@@ -23,6 +23,11 @@
 
 /obj/machinery/turnstile/proc/allowed_access(var/mob/B)
 	if(B.pulledby && ismob(B.pulledby))
+		if(ishuman(B.pulledby))
+			var/mob/living/carbon/human/P = B.pulledby
+			var/obj/item/card/id/card = P.get_idcard()
+			if(findtext(card.name, "Prisoner"))
+				return allowed(B)
 		return allowed(B.pulledby) | allowed(B)
 	else
 		return allowed(B)
