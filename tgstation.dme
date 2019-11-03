@@ -357,11 +357,8 @@
 #include "code\datums\components\empprotection.dm"
 #include "code\datums\components\footstep.dm"
 #include "code\datums\components\forced_gravity.dm"
-<<<<<<< HEAD
 #include "code\datums\components\forensics.dm"
-=======
 #include "code\datums\components\igniter.dm"
->>>>>>> 3a2ce8c5ce... Merge pull request #9679 from Ghommie/Ghommie-cit302
 #include "code\datums\components\infective.dm"
 #include "code\datums\components\jousting.dm"
 #include "code\datums\components\knockback.dm"
@@ -395,14 +392,11 @@
 #include "code\datums\components\virtual_reality.dm"
 #include "code\datums\components\wearertargeting.dm"
 #include "code\datums\components\wet_floor.dm"
-<<<<<<< HEAD
 #include "code\datums\components\decals\blood.dm"
-=======
 #include "code\datums\components\fantasy\_fantasy.dm"
 #include "code\datums\components\fantasy\affix.dm"
 #include "code\datums\components\fantasy\prefixes.dm"
 #include "code\datums\components\fantasy\suffixes.dm"
->>>>>>> 3a2ce8c5ce... Merge pull request #9679 from Ghommie/Ghommie-cit302
 #include "code\datums\components\storage\storage.dm"
 #include "code\datums\components\storage\concrete\_concrete.dm"
 #include "code\datums\components\storage\concrete\bag_of_holding.dm"
