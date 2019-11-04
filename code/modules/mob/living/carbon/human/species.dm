@@ -1748,16 +1748,16 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				H.adjust_bodytemperature((thermal_protection+1)*natural + min(thermal_protection * (loc_temp - H.bodytemperature) / BODYTEMP_HEAT_DIVISOR, BODYTEMP_HEATING_MAX))
 			else //we're sweating, insulation hinders out ability to reduce heat - but will reduce the amount of heat we get from the environment
 				H.adjust_bodytemperature(natural*(1/(thermal_protection+1)) + min(thermal_protection * (loc_temp - H.bodytemperature) / BODYTEMP_HEAT_DIVISOR, BODYTEMP_HEATING_MAX))
-		switch((loc_temp - H.bodytemperature)*thermal_protection)
-			if(-INFINITY to -50)
+		switch(H.bodytemperature)
+			if(-INFINITY to 120)
 				H.throw_alert("temp", /obj/screen/alert/cold, 3)
-			if(-50 to -35)
+			if(120 to 200)
 				H.throw_alert("temp", /obj/screen/alert/cold, 2)
-			if(-35 to -20)
+			if(200 to BODYTEMP_COLD_DAMAGE_LIMIT)
 				H.throw_alert("temp", /obj/screen/alert/cold, 1)
-			if(-20 to 0) //This is the sweet spot where air is considered normal
+			if(BODYTEMP_COLD_DAMAGE_LIMIT to BODYTEMP_HEAT_DAMAGE_LIMIT) //This is the sweet spot where air is considered normal
 				H.clear_alert("temp")
-			if(0 to 15) //When the air around you matches your body's temperature, you'll start to feel warm.
+			if(BODYTEMP_HEAT_DAMAGE_LIMIT to 15) //When the air around you matches your body's temperature, you'll start to feel warm.
 				H.throw_alert("temp", /obj/screen/alert/hot, 1)
 			if(15 to 30)
 				H.throw_alert("temp", /obj/screen/alert/hot, 2)
@@ -1778,6 +1778,14 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		else
 			firemodifier = min(firemodifier, 0)
 			burn_damage = max(log(2-firemodifier,(H.bodytemperature-BODYTEMP_NORMAL))-5,0) // this can go below 5 at log 2.5
+		if (burn_damage)
+			switch(burn_damage)
+				if(0 to 2)
+					H.throw_alert("temp", /obj/screen/alert/hot, 1)
+				if(2 to 4)
+					H.throw_alert("temp", /obj/screen/alert/hot, 2)
+				else
+					H.throw_alert("temp", /obj/screen/alert/hot, 3)
 		burn_damage = burn_damage * heatmod * H.physiology.heat_mod
 		if (H.stat < UNCONSCIOUS && (prob(burn_damage) * 10) / 4) //40% for level 3 damage on humans
 			H.emote("scream")
@@ -1788,13 +1796,17 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "cold", /datum/mood_event/cold)
 		switch(H.bodytemperature)
 			if(200 to BODYTEMP_COLD_DAMAGE_LIMIT)
+				H.throw_alert("temp", /obj/screen/alert/cold, 1)
 				H.apply_damage(COLD_DAMAGE_LEVEL_1*coldmod*H.physiology.cold_mod, BURN)
 			if(120 to 200)
+				H.throw_alert("temp", /obj/screen/alert/cold, 2)
 				H.apply_damage(COLD_DAMAGE_LEVEL_2*coldmod*H.physiology.cold_mod, BURN)
 			else
+				H.throw_alert("temp", /obj/screen/alert/cold, 3)
 				H.apply_damage(COLD_DAMAGE_LEVEL_3*coldmod*H.physiology.cold_mod, BURN)
 
 	else
+		H.clear_alert("temp")
 		SEND_SIGNAL(H, COMSIG_CLEAR_MOOD_EVENT, "cold")
 		SEND_SIGNAL(H, COMSIG_CLEAR_MOOD_EVENT, "hot")
 
