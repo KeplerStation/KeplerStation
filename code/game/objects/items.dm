@@ -97,9 +97,6 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	// non-clothing items
 	var/datum/dog_fashion/dog_fashion = null
 
-	var/datum/rpg_loot/rpg_loot = null
-
-
 	//Tooltip vars
 	var/force_string //string form of an item's force. Edit this var only to set a custom force string
 	var/last_force_string_check = 0
@@ -110,7 +107,6 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	//Grinder vars
 	var/list/grind_results //A reagent list containing the reagents this item produces when ground up in a grinder - this can be an empty list to allow for reagent transferring only
 	var/list/juice_results //A reagent list containing blah blah... but when JUICED in a grinder!
-
 
 /obj/item/Initialize()
 
@@ -125,7 +121,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	actions_types = null
 
 	if(GLOB.rpg_loot_items)
-		rpg_loot = new(src)
+		AddComponent(/datum/component/fantasy)
 
 	if(force_string)
 		item_flags |= FORCE_STRING_OVERRIDE
@@ -150,7 +146,6 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		m.temporarilyRemoveItemFromInventory(src, TRUE)
 	for(var/X in actions)
 		qdel(X)
-	QDEL_NULL(rpg_loot)
 	return ..()
 
 /obj/item/proc/check_allowed_items(atom/target, not_inside, target_self)
@@ -536,6 +531,12 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		if (prob(eyes.damage - 10 + 1))
 			M.become_blind(EYE_DAMAGE)
 			to_chat(M, "<span class='danger'>You go blind!</span>")
+
+/obj/item/clean_blood()
+	. = ..()
+	if(.)
+		if(blood_splatter_icon)
+			cut_overlay(blood_splatter_icon)
 
 /obj/item/singularity_pull(S, current_size)
 	..()

@@ -58,3 +58,40 @@ GLOBAL_LIST_EMPTY(latejoiners) //CIT CHANGE - All latejoining people, for traito
 	for(var/i in GLOB.mob_list)
 		var/mob/M = i
 		M.update_config_movespeed()
+
+	//blood types
+GLOBAL_LIST_INIT(regular_bloods,list(
+		"O-",
+		"O+",
+		"A-",
+		"A+",
+		"B-",
+		"B+",
+		"AB-",
+		"AB+"
+		))
+
+GLOBAL_LIST_INIT(all_types_bloods,list(
+		"O-",
+		"O+",
+		"A-",
+		"A+",
+		"B-",
+		"B+",
+		"AB-",
+		"AB+",
+		"SY",
+		"X*",
+		"HF",
+		"L",
+		"U",
+		"BUG"
+		))
+
+GLOBAL_LIST_INIT(blood_types, list(
+		"blood"
+		))
+
+GLOBAL_LIST_INIT(blood_id_types, list(
+		"blood" = /datum/reagent/blood
+		))

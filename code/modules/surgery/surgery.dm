@@ -92,7 +92,7 @@
 			return TRUE
 		if(iscyborg(user) && user.a_intent != INTENT_HARM) //to save asimov borgs a LOT of heartache
 			return TRUE
-		if(tool.item_flags & SURGICAL_TOOL) //Just because you used the wrong tool it doesn't mean you meant to whack the patient with it
+		if(tool && tool.item_flags & SURGICAL_TOOL) //Just because you used the wrong tool it doesn't mean you meant to whack the patient with it
 			to_chat(user, "<span class='warning'>This step requires a different tool!</span>")
 			return TRUE
 
@@ -169,4 +169,3 @@
 
 //RESOLVED ISSUES //"Todo" jobs that have been completed
 //combine hands/feet into the arms - Hands/feet were removed - RR
-//surgeries (not steps) that can be initiated on any body part (corresponding with damage locations) - Call this one done, see possible_locs var - c0

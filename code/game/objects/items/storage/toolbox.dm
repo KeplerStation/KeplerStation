@@ -35,6 +35,8 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 /obj/item/storage/toolbox/update_icon()
 	..()
 	cut_overlays()
+	if(blood_DNA && blood_DNA.len)
+		add_blood_overlay()
 	if(has_latches)
 		var/icon/I = icon('icons/obj/storage.dmi', latches)
 		add_overlay(I)
@@ -93,6 +95,39 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 
 /obj/item/storage/toolbox/mechanical/old/heirloom/PopulateContents()
 	return
+
+/obj/item/storage/toolbox/mechanical/old/clean //kepler
+	name = "toolbox"
+	desc = "An old, blue toolbox, it looks robust."
+	icon = 'modular_kepler/icons/obj/storage/oldtoolboxclean.dmi'
+	icon_state = "oldtoolboxclean"
+	item_state = "toolbox_blue"
+	has_latches = FALSE
+	force = 19
+	throwforce = 22
+
+/obj/item/storage/toolbox/mechanical/old/clean/proc/calc_damage() //kepler
+	var/power = 0
+	for (var/obj/item/stack/telecrystal/TC in GetAllContents())
+		power += TC.amount
+	force = 19 + power
+	throwforce = 22 + power
+
+/obj/item/storage/toolbox/mechanical/old/clean/attack(mob/target, mob/living/user) //kepler
+	calc_damage()
+	..()
+
+/obj/item/storage/toolbox/mechanical/old/clean/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum) //kepler
+	calc_damage()
+	..()
+
+/obj/item/storage/toolbox/mechanical/old/clean/PopulateContents() //kepler
+	new /obj/item/screwdriver(src)
+	new /obj/item/wrench(src)
+	new /obj/item/weldingtool(src)
+	new /obj/item/crowbar(src)
+	new /obj/item/wirecutters(src)
+	new /obj/item/multitool(src)
 
 /obj/item/storage/toolbox/electrical
 	name = "electrical toolbox"

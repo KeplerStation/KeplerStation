@@ -318,7 +318,10 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 /datum/species/proc/on_species_loss(mob/living/carbon/human/C, datum/species/new_species, pref_load)
 	if(C.dna.species.exotic_bloodtype)
-		C.dna.blood_type = random_blood_type()
+		if(!new_species.exotic_bloodtype)
+			C.dna.blood_type = random_blood_type()
+		else
+			C.dna.blood_type = new_species.exotic_bloodtype
 	if(DIGITIGRADE in species_traits)
 		C.Digitigrade_Leg_Swap(TRUE)
 	for(var/X in inherent_traits)
@@ -746,6 +749,16 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(BODY_FRONT_LAYER)
 			return "FRONT"
 
+/* TODO: Snowflake trail marks
+// Impliments different trails for species depending on if they're wearing shoes.
+/datum/species/proc/get_move_trail(var/mob/living/carbon/human/H)
+	if(H.lying)
+		return /obj/effect/decal/cleanable/blood/footprints/tracks/body
+	if(H.shoes || (H.wear_suit && (H.wear_suit.body_parts_covered & FEET)))
+		var/obj/item/clothing/shoes/shoes = (H.wear_suit && (H.wear_suit.body_parts_covered & FEET)) ? H.wear_suit : H.shoes // suits take priority over shoes
+		return shoes.move_trail
+	else
+		return move_trail */
 
 /datum/species/proc/spec_life(mob/living/carbon/human/H)
 	if(HAS_TRAIT(H, TRAIT_NOBREATH))
@@ -1627,10 +1640,10 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 					append_message = "loosening their grip on [target_held_item]"
 			log_combat(user, target, "shoved", append_message)
 */
-/datum/species/proc/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/H, break_modifier = 1)
+/datum/species/proc/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/H, forced = FALSE, break_modifier = 1)
 	var/hit_percent = (100-(blocked+armor))/100
 	hit_percent = (hit_percent * (100-H.physiology.damage_resistance))/100
-	if(hit_percent <= 0)
+	if(!forced && hit_percent <= 0)
 		return 0
 
 	var/obj/item/bodypart/BP = null
@@ -1652,32 +1665,39 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	switch(damagetype)
 		if(BRUTE)
 			H.damageoverlaytemp = 20
+			var/damage_amount = forced ? damage : damage * hit_percent * brutemod * H.physiology.brute_mod
 			if(BP)
-				if(damage > 0 ? BP.receive_damage(damage * hit_percent * brutemod * H.physiology.brute_mod, 0, break_modifier = break_modifier) : BP.heal_damage(abs(damage * hit_percent * brutemod * H.physiology.brute_mod), 0))
+				if(damage > 0 ? BP.receive_damage(damage_amount, 0, break_modifier = break_modifier) : BP.heal_damage(abs(damage_amount), 0))
 					H.update_damage_overlays()
 			else//no bodypart, we deal damage with a more general method.
-				H.adjustBruteLoss(damage * hit_percent * brutemod * H.physiology.brute_mod)
+				H.adjustBruteLoss(damage_amount)
 		if(BURN)
 			H.damageoverlaytemp = 20
+			var/damage_amount = forced ? damage : damage * hit_percent * burnmod * H.physiology.burn_mod
 			if(BP)
-				if(damage > 0 ? BP.receive_damage(0, damage * hit_percent * burnmod * H.physiology.burn_mod, break_modifier = break_modifier) : BP.heal_damage(0, abs(damage * hit_percent * burnmod * H.physiology.burn_mod)))
+				if(damage > 0 ? BP.receive_damage(0, damage_amount, break_modifier = break_modifier) : BP.heal_damage(0, abs(damage_amount)))
 					H.update_damage_overlays()
 			else
-				H.adjustFireLoss(damage * hit_percent * burnmod * H.physiology.burn_mod)
+				H.adjustFireLoss(damage_amount)
 		if(TOX)
-			H.adjustToxLoss(damage * hit_percent * H.physiology.tox_mod)
+			var/damage_amount = forced ? damage : damage * hit_percent * H.physiology.tox_mod
+			H.adjustToxLoss(damage_amount)
 		if(OXY)
-			H.adjustOxyLoss(damage * hit_percent * H.physiology.oxy_mod)
+			var/damage_amount = forced ? damage : damage * hit_percent * H.physiology.oxy_mod
+			H.adjustOxyLoss(damage_amount)
 		if(CLONE)
-			H.adjustCloneLoss(damage * hit_percent * H.physiology.clone_mod)
+			var/damage_amount = forced ? damage : damage * hit_percent * H.physiology.clone_mod
+			H.adjustCloneLoss(damage_amount)
 		if(STAMINA)
+			var/damage_amount = forced ? damage : damage * hit_percent * H.physiology.stamina_mod
 			if(BP)
-				if(damage > 0 ? BP.receive_damage(0, 0, damage * hit_percent * H.physiology.stamina_mod) : BP.heal_damage(0, 0, abs(damage * hit_percent * H.physiology.stamina_mod), only_robotic = FALSE, only_organic = FALSE))
+				if(damage > 0 ? BP.receive_damage(0, 0, damage_amount) : BP.heal_damage(0, 0, abs(damage_amount), only_robotic = FALSE, only_organic = FALSE))
 					H.update_stamina()
 			else
-				H.adjustStaminaLoss(damage * hit_percent * H.physiology.stamina_mod)
+				H.adjustStaminaLoss(damage_amount)
 		if(BRAIN)
-			H.adjustOrganLoss(ORGAN_SLOT_BRAIN, (damage * hit_percent * H.physiology.brain_mod))
+			var/damage_amount = forced ? damage : damage * hit_percent * H.physiology.brain_mod
+			H.adjustOrganLoss(ORGAN_SLOT_BRAIN, damage_amount)
 	return 1
 
 /datum/species/proc/on_hit(obj/item/projectile/P, mob/living/carbon/human/H)
@@ -1728,16 +1748,16 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				H.adjust_bodytemperature((thermal_protection+1)*natural + min(thermal_protection * (loc_temp - H.bodytemperature) / BODYTEMP_HEAT_DIVISOR, BODYTEMP_HEATING_MAX))
 			else //we're sweating, insulation hinders out ability to reduce heat - but will reduce the amount of heat we get from the environment
 				H.adjust_bodytemperature(natural*(1/(thermal_protection+1)) + min(thermal_protection * (loc_temp - H.bodytemperature) / BODYTEMP_HEAT_DIVISOR, BODYTEMP_HEATING_MAX))
-		switch((loc_temp - H.bodytemperature)*thermal_protection)
-			if(-INFINITY to -50)
+		switch(H.bodytemperature)
+			if(-INFINITY to 120)
 				H.throw_alert("temp", /obj/screen/alert/cold, 3)
-			if(-50 to -35)
+			if(120 to 200)
 				H.throw_alert("temp", /obj/screen/alert/cold, 2)
-			if(-35 to -20)
+			if(200 to BODYTEMP_COLD_DAMAGE_LIMIT)
 				H.throw_alert("temp", /obj/screen/alert/cold, 1)
-			if(-20 to 0) //This is the sweet spot where air is considered normal
+			if(BODYTEMP_COLD_DAMAGE_LIMIT to BODYTEMP_HEAT_DAMAGE_LIMIT) //This is the sweet spot where air is considered normal
 				H.clear_alert("temp")
-			if(0 to 15) //When the air around you matches your body's temperature, you'll start to feel warm.
+			if(BODYTEMP_HEAT_DAMAGE_LIMIT to 15) //When the air around you matches your body's temperature, you'll start to feel warm.
 				H.throw_alert("temp", /obj/screen/alert/hot, 1)
 			if(15 to 30)
 				H.throw_alert("temp", /obj/screen/alert/hot, 2)
@@ -1758,6 +1778,14 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		else
 			firemodifier = min(firemodifier, 0)
 			burn_damage = max(log(2-firemodifier,(H.bodytemperature-BODYTEMP_NORMAL))-5,0) // this can go below 5 at log 2.5
+		if (burn_damage)
+			switch(burn_damage)
+				if(0 to 2)
+					H.throw_alert("temp", /obj/screen/alert/hot, 1)
+				if(2 to 4)
+					H.throw_alert("temp", /obj/screen/alert/hot, 2)
+				else
+					H.throw_alert("temp", /obj/screen/alert/hot, 3)
 		burn_damage = burn_damage * heatmod * H.physiology.heat_mod
 		if (H.stat < UNCONSCIOUS && (prob(burn_damage) * 10) / 4) //40% for level 3 damage on humans
 			H.emote("scream")
@@ -1768,13 +1796,17 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "cold", /datum/mood_event/cold)
 		switch(H.bodytemperature)
 			if(200 to BODYTEMP_COLD_DAMAGE_LIMIT)
+				H.throw_alert("temp", /obj/screen/alert/cold, 1)
 				H.apply_damage(COLD_DAMAGE_LEVEL_1*coldmod*H.physiology.cold_mod, BURN)
 			if(120 to 200)
+				H.throw_alert("temp", /obj/screen/alert/cold, 2)
 				H.apply_damage(COLD_DAMAGE_LEVEL_2*coldmod*H.physiology.cold_mod, BURN)
 			else
+				H.throw_alert("temp", /obj/screen/alert/cold, 3)
 				H.apply_damage(COLD_DAMAGE_LEVEL_3*coldmod*H.physiology.cold_mod, BURN)
 
 	else
+		H.clear_alert("temp")
 		SEND_SIGNAL(H, COMSIG_CLEAR_MOOD_EVENT, "cold")
 		SEND_SIGNAL(H, COMSIG_CLEAR_MOOD_EVENT, "hot")
 
