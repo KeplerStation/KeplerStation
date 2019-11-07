@@ -146,7 +146,7 @@
 				return
 			else
 				SSshuttle.shuttle_loan.loan_shuttle()
-				say("The supply shuttle has been loaned to CentCom.")
+				say("The supply shuttle has been loaned to Head Office.")
 				. = TRUE
 		if("add")
 			var/id = text2path(params["id"])

@@ -301,7 +301,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 
 			var/accesses = ""
 			if(istype(src, /obj/machinery/computer/card/centcom))
-				accesses += "<h5>Central Command:</h5>"
+				accesses += "<h5>Head Office:</h5>"
 				for(var/A in get_all_centcom_access())
 					if(A in modify.access)
 						accesses += "<a href='?src=[REF(src)];choice=access;access_target=[A];allowed=0'><font color=\"red\">[replacetext(get_centcom_access_desc(A), " ", "&nbsp")]</font></a> "
@@ -592,7 +592,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 			head_subordinates += job.title
 
 /obj/machinery/computer/card/centcom
-	name = "\improper CentCom identification console"
+	name = "\improper Head Office identification console"
 	circuit = /obj/item/circuitboard/computer/card/centcom
 	req_access = list(ACCESS_CENT_CAPTAIN)
 

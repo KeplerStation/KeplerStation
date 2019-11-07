@@ -52,7 +52,7 @@
 	build_path = /obj/machinery/computer/card
 
 /obj/item/circuitboard/computer/card/centcom
-	name = "CentCom ID Console (Computer Board)"
+	name = "Head Office ID Console (Computer Board)"
 	build_path = /obj/machinery/computer/card/centcom
 
 /obj/item/circuitboard/computer/card/minor
@@ -250,7 +250,7 @@
 	build_path = /obj/machinery/computer/cargo/request
 
 /obj/item/circuitboard/computer/bounty
-	name = "Nanotrasen Bounty Console (Computer Board)"
+	name = "Horizons Bounty Console (Computer Board)"
 	build_path = /obj/machinery/computer/bounty
 
 /obj/item/circuitboard/computer/operating

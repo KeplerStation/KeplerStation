@@ -169,4 +169,3 @@
 
 //RESOLVED ISSUES //"Todo" jobs that have been completed
 //combine hands/feet into the arms - Hands/feet were removed - RR
-//surgeries (not steps) that can be initiated on any body part (corresponding with damage locations) - Call this one done, see possible_locs var - c0

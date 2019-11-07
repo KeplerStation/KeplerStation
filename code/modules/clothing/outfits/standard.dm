@@ -200,7 +200,7 @@
 	W.update_label(H.real_name)
 
 /datum/outfit/centcom_commander
-	name = "CentCom Commander"
+	name = "Director"
 
 	uniform = /obj/item/clothing/under/rank/centcom_commander
 	suit = /obj/item/clothing/suit/armor/bulletproof
@@ -223,8 +223,8 @@
 	var/obj/item/card/id/W = H.wear_id
 	W.icon_state = "centcom"
 	W.access = get_all_accesses()
-	W.access += get_centcom_access("CentCom Commander")
-	W.assignment = "CentCom Commander"
+	W.access += get_centcom_access("Director")
+	W.assignment = "Director"
 	W.registered_name = H.real_name
 	W.update_label()
 

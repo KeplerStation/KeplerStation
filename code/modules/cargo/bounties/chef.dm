@@ -1,12 +1,12 @@
 /datum/bounty/item/chef/birthday_cake
 	name = "Birthday Cake"
-	description = "Nanotrasen's birthday is coming up! Ship them a birthday cake to celebrate!"
+	description = "Horizons' birthday is coming up! Ship them a birthday cake to celebrate!"
 	reward = 1000
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/store/cake/birthday, /obj/item/reagent_containers/food/snacks/cakeslice/birthday)
 
 /datum/bounty/item/chef/soup
 	name = "Soup"
-	description = "To quell the homeless uprising, Nanotrasen will be serving soup to all underpaid workers. Ship any type of soup."
+	description = "To quell the homeless uprising, the ICC will be serving soup to all underpaid workers. Ship any type of soup."
 	reward = 700
 	required_count = 3
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/soup)
@@ -20,7 +20,7 @@
 
 /datum/bounty/item/chef/onionrings
 	name = "Onion Rings"
-	description = "Nanotrasen is remembering Saturn day. Ship onion rings to show the station's support."
+	description = "Horizons is remembering Saturn day. Ship onion rings to show the station's support."
 	reward = 800
 	required_count = 3
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/onionrings)
@@ -40,13 +40,13 @@
 
 /datum/bounty/item/chef/pie
 	name = "Pie"
-	description = "3.14159? No! CentCom management wants edible pie! Ship a whole one."
+	description = "3.14159? No! Head Office wants edible pie! Ship a whole one."
 	reward = 3142
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/pie)
 
 /datum/bounty/item/chef/salad
 	name = "Salad or Rice Bowls"
-	description = "CentCom management is going on a health binge. Your order is to ship salad or rice bowls."
+	description = "Head Office is going on a health binge. Your order is to ship salad or rice bowls."
 	reward = 1200
 	required_count = 3
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/salad)
@@ -66,58 +66,58 @@
 
 /datum/bounty/item/chef/poppypretzel
 	name = "Poppy Pretzel"
-	description = "Central Command needs a reason to fire their HR head. Send over a poppy pretzel to force a failed drug test."
+	description = "Head Office needs a reason to fire their HR head. Send over a poppy pretzel to force a failed drug test."
 	reward = 3000
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/poppypretzel)
 
 /datum/bounty/item/chef/cubancarp
 	name = "Cuban Carp"
-	description = "To celebrate the birth of Castro XXVII, ship one cuban carp to CentCom."
+	description = "To celebrate the birth of Castro XXVII, ship one cuban carp to Head Office."
 	reward = 3000
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/cubancarp)
 
 /datum/bounty/item/chef/hotdog
 	name = "Hot Dog"
-	description = "Nanotrasen is conducting taste tests to determine the best hot dog recipe. Ship your station's version to participate."
+	description = "Head Office is conducting taste tests to determine the best hot dog recipe. Ship your station's version to participate."
 	reward = 4000
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/hotdog)
 
 /datum/bounty/item/chef/eggplantparm
 	name = "Eggplant Parmigianas"
-	description = "A famous singer will be arriving at CentCom, and their contract demands that they only be served Eggplant Parmigiana. Ship some, please!"
+	description = "A famous singer will be arriving at Head Office, and their contract demands that they only be served Eggplant Parmigiana. Ship some, please!"
 	reward = 2500
 	required_count = 3
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/eggplantparm)
 
 /datum/bounty/item/chef/muffin
 	name = "Muffins"
-	description = "The Muffin Man is visiting CentCom, but he's forgotten his muffins! Your order is to rectify this."
+	description = "The Muffin Man is visiting Head Office, but he's forgotten his muffins! Your order is to rectify this."
 	reward = 3000
 	required_count = 3
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/muffin)
 
 /datum/bounty/item/chef/chawanmushi
 	name = "Chawanmushi"
-	description = "Nanotrasen wants to improve relations with its sister company, Japanotrasen. Ship Chawanmushi immediately."
+	description = "Head Office wants to improve relations with a local cat. Ship Chawanmushi immediately."
 	reward = 5000
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/chawanmushi)
 
 /datum/bounty/item/chef/kebab
 	name = "Kebabs"
-	description = "Remove all kebab from station you are best food. Ship to CentCom to remove from the premises."
+	description = "Remove all kebab from station you are best food. Ship to Head Office to remove from the premises."
 	reward = 1500
 	required_count = 3
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/kebab)
 
 /datum/bounty/item/chef/soylentgreen
 	name = "Soylent Green"
-	description = "CentCom has heard wonderful things about the product 'Soylent Green', and would love to try some. If you endulge them, expect a pleasant bonus."
+	description = "The ICC has heard wonderful things about the product 'Soylent Green', and would love to try some. If you endulge them, expect a pleasant bonus."
 	reward = 4000
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/soylentgreen)
 
 /datum/bounty/item/chef/pancakes
 	name = "Pancakes"
-	description = "Here at Nanotrasen we consider employees to be family. And you know what families love? Pancakes. Ship a baker's dozen."
+	description = "Here at Horizons we consider employees to be family. And you know what families love? Pancakes. Ship a baker's dozen."
 	reward = 4000
 	required_count = 13
 	wanted_types = list(/datum/crafting_recipe/food/pancakes)

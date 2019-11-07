@@ -30,7 +30,7 @@
 	id = "whiteship";
 	launch_status = 0;
 	movement_force = list("KNOCKDOWN" = 0, "THROW" = 0);
-	name = "NT Frigate";
+	name = "ICC Frigate";
 	port_direction = 8;
 	preferred_direction = 4;
 	width = 27
@@ -910,12 +910,12 @@
 	},
 /obj/item/storage/wallet/random,
 /obj/item/clothing/under/rank/centcom_officer{
-	desc = "A badge on the arm indicates that it's meant to be worn by CentCom recovery teams. This one seems dusty and clearly hasn't been cleaned in some time.";
-	name = "\improper dusty old CentCom jumpsuit"
+	desc = "A badge on the arm indicates that it's meant to be worn by recovery teams. This one seems dusty and clearly hasn't been cleaned in some time.";
+	name = "dusty old jumpsuit"
 	},
 /obj/item/clothing/under/rank/centcom_commander{
-	desc = "A badge on the arm indicates that it's meant to be worn by CentCom recovery teams. This one seems dusty and clearly hasn't been cleaned in some time.";
-	name = "\improper dusty old CentCom jumpsuit"
+	desc = "A badge on the arm indicates that it's meant to be worn by recovery teams. This one seems dusty and clearly hasn't been cleaned in some time.";
+	name = "dusty old jumpsuit"
 	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{

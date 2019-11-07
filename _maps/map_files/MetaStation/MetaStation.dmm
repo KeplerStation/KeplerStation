@@ -2187,7 +2187,7 @@
 	dir = 5
 	},
 /obj/structure/sign/warning/securearea{
-	desc = "A warning sign which reads 'WARNING: Do Not Enter When Red Light Shows', detailing the penalties that any Nanotrasen employee or silicon will suffer if violating this rule.";
+	desc = "A warning sign which reads 'WARNING: Do Not Enter When Red Light Shows', detailing the penalties that any employee or silicon will suffer if violating this rule.";
 	name = "WARNING: Do Not Enter When Red Light Shows";
 	pixel_y = 32
 	},
@@ -3167,7 +3167,7 @@
 /area/crew_quarters/heads/hos)
 "agj" = (
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to the Board of Directors. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -3670,7 +3670,7 @@
 "aha" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /mob/living/simple_animal/hostile/retaliate/bat{
-	desc = "A fierce companion for any person of power, this spider has been carefully trained by Nanotrasen specialists. Its beady, staring eyes send shivers down your spine.";
+	desc = "A fierce companion for any person of power, this spider has been carefully trained by specialists. Its beady, staring eyes send shivers down your spine.";
 	emote_hear = list("chitters");
 	faction = list("spiders");
 	harm_intent_damage = 3;
@@ -9308,7 +9308,7 @@
 /area/security/main)
 "arx" = (
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to the Board of Directors. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -47077,7 +47077,7 @@
 "bNe" = (
 /obj/structure/table/wood,
 /obj/item/phone{
-	desc = "Supposedly a direct line to Nanotrasen Central Command. It's not even plugged in.";
+	desc = "Supposedly a direct line to the Board of Directors. It's not even plugged in.";
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -47824,7 +47824,7 @@
 "bOF" = (
 /obj/machinery/power/apc/highcap/five_k{
 	dir = 4;
-	name = "Nanotrasen Corporate Showroom APC";
+	name = "Corporate Showroom APC";
 	areastring = "/area/bridge/showroom/corporate";
 	pixel_x = 28
 	},
@@ -48578,7 +48578,7 @@
 /obj/structure/table/wood,
 /obj/item/toy/plush/carpplushie{
 	color = "red";
-	name = "Nanotrasen wildlife department space carp plushie"
+	name = "space carp plushie"
 	},
 /turf/open/floor/carpet,
 /area/bridge/showroom/corporate)
@@ -49067,8 +49067,8 @@
 "bRx" = (
 /obj/structure/table/wood,
 /obj/item/storage/secure/briefcase{
-	desc = "A large briefcase with a digital locking system, and the Nanotrasen logo emblazoned on the sides.";
-	name = "Nanotrasen-brand secure briefcase exhibit";
+	desc = "A large briefcase with a digital locking system.";
+	name = "secure briefcase exhibit";
 	pixel_y = 2
 	},
 /turf/open/floor/carpet,
@@ -49090,9 +49090,9 @@
 	icon_state = "2-4"
 	},
 /obj/item/toy/beach_ball{
-	desc = "The simple beach ball is one of Nanotrasen's most popular products. 'Why do we make beach balls? Because we can! (TM)' - Nanotrasen";
+	desc = "The simple beach ball is a popular consumer product.";
 	item_state = "beachball";
-	name = "Nanotrasen-brand beach ball";
+	name = "beach ball";
 	pixel_y = 7
 	},
 /obj/structure/table/wood,
@@ -49179,7 +49179,7 @@
 	},
 /obj/structure/table/wood,
 /obj/item/toy/talking/AI{
-	name = "Nanotrasen-brand toy AI";
+	name = "toy AI";
 	pixel_y = 6
 	},
 /turf/open/floor/carpet,
@@ -55444,7 +55444,7 @@
 	},
 /mob/living/simple_animal/bot/medbot{
 	auto_patrol = 1;
-	desc = "A little medical robot, officially part of the Nanotrasen medical inspectorate. He looks somewhat underwhelmed.";
+	desc = "A little medical robot with a sassy attitude. He looks somewhat underwhelmed.";
 	name = "Inspector Johnson"
 	},
 /turf/open/floor/plasteel/white,
@@ -81262,8 +81262,8 @@
 /obj/item/poster/random_official,
 /obj/item/poster/random_official,
 /obj/item/paicard{
-	desc = "A real Nanotrasen success, these personal AIs provide all of the companionship of an AI without any law related red-tape.";
-	name = "Nanotrasen-brand personal AI device exhibit"
+	desc = "These personal AIs provide all of the companionship of an AI without any law related red-tape.";
+	name = "personal AI device exhibit"
 	},
 /turf/open/floor/carpet,
 /area/bridge/showroom/corporate)

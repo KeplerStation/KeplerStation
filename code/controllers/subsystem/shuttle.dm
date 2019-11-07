@@ -190,7 +190,7 @@ SUBSYSTEM_DEF(shuttle)
 
 	switch(emergency.mode)
 		if(SHUTTLE_RECALL)
-			to_chat(user, "The emergency shuttle may not be called while returning to CentCom.")
+			to_chat(user, "The emergency shuttle may not be called while returning to the transfer station.")
 			return
 		if(SHUTTLE_CALL)
 			to_chat(user, "The emergency shuttle is already on its way.")
@@ -205,7 +205,7 @@ SUBSYSTEM_DEF(shuttle)
 			to_chat(user, "The emergency shuttle is moving away to a safe distance.")
 			return
 		if(SHUTTLE_STRANDED)
-			to_chat(user, "The emergency shuttle has been disabled by CentCom.")
+			to_chat(user, "The emergency shuttle has been disabled by Head Office.")
 			return
 
 	call_reason = trim(html_encode(call_reason))
@@ -247,7 +247,7 @@ SUBSYSTEM_DEF(shuttle)
 
 	if(!admiral_message)
 		admiral_message = pick(GLOB.admiral_messages)
-	var/intercepttext = "<font size = 3><b>Nanotrasen Update</b>: Request For Shuttle.</font><hr>\
+	var/intercepttext = "<font size = 3><b>Horizons Update</b>: Request For Shuttle.</font><hr>\
 						To whom it may concern:<br><br>\
 						We have taken note of the situation upon [station_name()] and have come to the \
 						conclusion that it does not warrant the abandonment of the station.<br>\
@@ -255,8 +255,8 @@ SUBSYSTEM_DEF(shuttle)
 						line with us and explain the nature of your crisis.<br><br>\
 						<i>This message has been automatically generated based upon readings from long \
 						range diagnostic tools. To assure the quality of your request every finalized report \
-						is reviewed by an on-call rear admiral.<br>\
-						<b>Rear Admiral's Notes:</b> \
+						is reviewed by an on-call administrator.<br>\
+						<b>Director's Notes:</b> \
 						[admiral_message]"
 	print_command_report(intercepttext, announce = TRUE)
 

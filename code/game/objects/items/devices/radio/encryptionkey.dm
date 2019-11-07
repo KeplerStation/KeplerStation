@@ -115,7 +115,7 @@
 	channels = list(RADIO_CHANNEL_SERVICE = 1)
 
 /obj/item/encryptionkey/headset_cent
-	name = "\improper CentCom radio encryption key"
+	name = "\improper corporate radio encryption key"
 	icon_state = "cent_cypherkey"
 	independent = TRUE
 	channels = list(RADIO_CHANNEL_CENTCOM = 1)

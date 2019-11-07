@@ -1,7 +1,7 @@
 
 
 /obj/item/clothing/head/centhat
-	name = "\improper CentCom hat"
+	name = "\improper official hat"
 	icon_state = "centcom"
 	desc = "It's good to be emperor."
 	item_state = "that"
