@@ -211,3 +211,10 @@ tools/MapAtmosFixer/MapAtmosFixer/bin/*
 #extra map stuff
 /_maps/**/backup/
 /_maps/templates.dm
+
+# KEPLER CHANGES
+/tools/dmitool/bin/
+/tools/dmitool/.gradle/
+/tools/dmitool/.settings/
+/tools/dmitool/.classpath
+/tools/dmitool/.project
