@@ -3091,6 +3091,7 @@
 #include "modular_citadel\code\modules\recycling\disposal\bin.dm"
 #include "modular_citadel\code\modules\research\designs\autoylathe_designs.dm"
 #include "modular_citadel\code\modules\vehicles\secway.dm"
+#include "modular_kepler\code\controllers\subsystem\mapping.dm"
 #include "modular_kepler\code\game\machinery\body_scanner.dm"
 #include "modular_kepler\code\game\objects\ids.dm"
 #include "modular_kepler\code\game\objects\items\cards_ids.dm"
@@ -3101,5 +3102,6 @@
 #include "modular_kepler\code\modules\oracle_ui\hookup_procs.dm"
 #include "modular_kepler\code\modules\oracle_ui\oracle_ui.dm"
 #include "modular_kepler\code\modules\oracle_ui\themed.dm"
+#include "modular_kepler\code\modules\vr\vr_levels.dm"
 #include "modular_kepler\interface\skin.dmf"
 // END_INCLUDE
