@@ -862,7 +862,7 @@
 /obj/item/clothing/head/helmet/space/hardsuit/lavaknight
 	name = "cydonian helmet"
 	desc = "A helmet designed with both form and function in mind, it protects the user against physical trauma and hazardous conditions while also having polychromic light strips."
-	icon_state = "knight_cydonia"
+	icon_state = "knight_yellow" // KEPLER CHANGE: Fixes knight sprites
 	item_state = "knight_yellow"
 	item_color = null
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
@@ -893,6 +893,7 @@
 		var/datum/action/A = X
 		A.UpdateButtonIcon()
 
+/* KEPLER CHANGE: Remove this overlay, it doesnt actually exist
 /obj/item/clothing/head/helmet/space/hardsuit/lavaknight/update_icon()
 	var/mutable_appearance/helm_overlay = mutable_appearance(icon, "knight_cydonia_overlay")
 
@@ -910,12 +911,13 @@
 		energy_overlay.plane = ABOVE_LIGHTING_LAYER
 		energy_overlay.color = energy_color
 		. += energy_overlay
+*/
 
 /obj/item/clothing/suit/space/hardsuit/lavaknight
-	icon_state = "knight_cydonia"
+	icon_state = "knight_yellow" // KEPLER CHANGE: Fixes knight sprites
 	name = "cydonian armor"
 	desc = "A suit designed with both form and function in mind, it protects the user against physical trauma and hazardous conditions while also having polychromic light strips."
-	item_state = "swat_suit"
+	item_state = "knight_yellow" // KEPLER CHANGE: Fixes knight sprites
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF | LAVA_PROOF
 	armor = list(melee = 50, bullet = 10, laser = 10, energy = 10, bomb = 50, bio = 100, rad = 50, fire = 100, acid = 100)
@@ -931,6 +933,7 @@
 	set_light(1)
 	update_icon()
 
+/* KEPLER CHANGE: Remove this overlay, it doesnt actually exist
 /obj/item/clothing/suit/space/hardsuit/lavaknight/update_icon()
 	var/mutable_appearance/suit_overlay = mutable_appearance(icon, "knight_cydonia_overlay")
 
@@ -978,3 +981,4 @@
 /obj/item/clothing/suit/space/hardsuit/lavaknight/examine(mob/user)
 	..()
 	to_chat(user, "<span class='notice'>Alt-click to recolor it.</span>")
+*/
