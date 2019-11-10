@@ -203,12 +203,68 @@ SLIME SCANNER
 			for(var/obj/item/bodypart/org in damaged)
 				msg += "\t\t<span class='info'>[capitalize(org.name)]: [(org.brute_dam > 0) ? "<font color='red'>[org.brute_dam]</font></span>" : "<font color='red'>0</font>"]-[(org.burn_dam > 0) ? "<font color='#FF8000'>[org.burn_dam]</font>" : "<font color='#FF8000'>0</font>"]\n"
 
+<<<<<<< HEAD
 		var/list/broken_stuff = list()
 		for(var/obj/item/bodypart/B in C.bodyparts)
 			if(B.bone_status == BONE_FLAG_BROKEN)
 				broken_stuff += B
 		if(broken_stuff.len)
 			msg += "\t<span class='alert'>Bone fractures detected. Advanced scanner required for location.</span>\n"
+=======
+	//Organ damages report
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		var/minor_damage
+		var/major_damage
+		var/max_damage
+		var/report_organs = FALSE
+
+		//Piece together the lists to be reported
+		for(var/O in H.internal_organs)
+			var/obj/item/organ/organ = O
+			if(organ.organ_flags & ORGAN_FAILING)
+				report_organs = TRUE	//if we report one organ, we report all organs, even if the lists are empty, just for consistency
+				if(max_damage)
+					max_damage += ", "	//prelude the organ if we've already reported an organ
+					max_damage += organ.name	//this just slaps the organ name into the string of text
+				else
+					max_damage = "\t<span class='alert'>Non-Functional Organs: "	//our initial statement
+					max_damage += organ.name
+			else if(organ.damage > organ.high_threshold)
+				report_organs = TRUE
+				if(major_damage)
+					major_damage += ", "
+					major_damage += organ.name
+				else
+					major_damage = "\t<span class='info'>Severely Damaged Organs: "
+					major_damage += organ.name
+			else if(organ.damage > organ.low_threshold)
+				report_organs = TRUE
+				if(minor_damage)
+					minor_damage += ", "
+					minor_damage += organ.name
+				else
+					minor_damage = "\t<span class='info'>Mildly Damaged Organs: "
+					minor_damage += organ.name
+
+		if(report_organs)	//we either finish the list, or set it to be empty if no organs were reported in that category
+			if(!max_damage)
+				max_damage = "\t<span class='alert'>Non-Functional Organs: </span>\n"
+			else
+				max_damage += "</span>\n"
+			if(!major_damage)
+				major_damage = "\t<span class='info'>Severely Damaged Organs: </span>\n"
+			else
+				major_damage += "</span>\n"
+			if(!minor_damage)
+				minor_damage = "\t<span class='info'>Mildly Damaged Organs: </span>\n"
+			else
+				minor_damage += "</span>\n"
+			msg += "[minor_damage]"
+			msg += "[major_damage]"
+			msg += "[max_damage]"
+
+>>>>>>> e8219dd9f7... Merge pull request #9697 from Poojawa/patch-1
 
 	// Species and body temperature
 	if(ishuman(M))
@@ -238,10 +294,15 @@ SLIME SCANNER
 		else if (S.mutantstomach != initial(S.mutantstomach))
 			mutant = TRUE
 
+<<<<<<< HEAD
 		msg += "<span class='info'>Species: [S.name]</span>\n"
+=======
+		msg += "\t<span class='info'>Reported Species: [H.dna.custom_species ? H.dna.custom_species : S.name]</span>\n" 
+		msg += "\t<span class='info'>Base Species: [S.name]</span>\n"
+>>>>>>> e8219dd9f7... Merge pull request #9697 from Poojawa/patch-1
 		if(mutant)
-			msg += "<span class='info'>Subject has mutations present.</span>"
-	msg += "<span class='info'>Body temperature: [round(M.bodytemperature-T0C,0.1)] &deg;C ([round(M.bodytemperature*1.8-459.67,0.1)] &deg;F)</span>\n"
+			msg += "\t<span class='info'>Subject has mutations present.</span>\n"
+	msg += "\t<span class='info'>Body temperature: [round(M.bodytemperature-T0C,0.1)] &deg;C ([round(M.bodytemperature*1.8-459.67,0.1)] &deg;F)</span>\n"
 
 	// Time of death
 	if(M.tod && (M.stat == DEAD || ((HAS_TRAIT(M, TRAIT_FAKEDEATH)) && !advanced)))
