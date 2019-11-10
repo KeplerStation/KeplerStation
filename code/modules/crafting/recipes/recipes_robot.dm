@@ -76,8 +76,30 @@
 	time = 40
 	category = CAT_ROBOT
 
+<<<<<<< HEAD
 /datum/crafting_recipe/potatos
 	name = "Potat-OS"
 	reqs = list(/obj/item/stack/cable_coil = 1, /obj/item/stack/rods = 1,  /obj/item/reagent_containers/food/snacks/grown/potato = 1, /obj/item/aicard = 1 )
 	result = /obj/item/aicard/potato
 	category = CAT_ROBOT
+=======
+/datum/crafting_recipe/aitater
+	name = "intelliTater"
+	result = /obj/item/aicard/aitater
+	time = 30
+	tools = list(TOOL_WIRECUTTER)
+	reqs = list(/obj/item/aicard = 1,
+				/obj/item/reagent_containers/food/snacks/grown/potato = 1,
+				/obj/item/stack/cable_coil = 5)
+	category = CAT_ROBOT
+
+/datum/crafting_recipe/aispook
+	name = "intelliLantern"
+	result = /obj/item/aicard/aispook
+	time = 30
+	tools = list(TOOL_WIRECUTTER)
+	reqs = list(/obj/item/aicard = 1,
+					/obj/item/reagent_containers/food/snacks/grown/pumpkin = 1,
+					/obj/item/stack/cable_coil = 5)
+	category = CAT_ROBOT
+>>>>>>> 92455b5b8c... Merge pull request #9695 from Ghommie/Ghommie-cit311
