@@ -3,13 +3,8 @@
 /////////////////
 
 /datum/crafting_recipe/showercurtain
-<<<<<<< HEAD
-	name = "Shower Curtain"
-	reqs = 	list(/obj/item/stack/sheet/cloth = 2, 
-=======
 	name = "Shower Curtains"
 	reqs = 	list(/obj/item/stack/sheet/cloth = 2,
->>>>>>> 92455b5b8c... Merge pull request #9695 from Ghommie/Ghommie-cit311
 				 /obj/item/stack/sheet/plastic = 2,
 				 /obj/item/stack/rods = 1)
 	result = /obj/structure/curtain
