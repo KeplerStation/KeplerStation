@@ -227,7 +227,11 @@
 	terminate_effects()
 	. = ..()
 
+<<<<<<< HEAD
 /obj/item/organ/eyes/robotic/glow/Remove(mob/living/carbon/M, special = 0)
+=======
+/obj/item/organ/eyes/robotic/glow/Remove(mob/living/carbon/M, special = FALSE)
+>>>>>>> 3570df6084... Merge pull request #9726 from Ghommie/Ghommie-cit323
 	terminate_effects()
 	. = ..()
 
