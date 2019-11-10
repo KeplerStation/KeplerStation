@@ -9,7 +9,7 @@ GLOBAL_LIST_EMPTY(objectives)
 	var/explanation_text = "Nothing"	//What that person is supposed to do.
 	var/team_explanation_text			//For when there are multiple owners.
 	var/datum/mind/target = null		//If they are focused on a particular person.
-	var/target_amount = 0				//If they are focused on a particular number. Steal objectives have their own counter.
+	var/target_amount = 0				//If they are focused on a particular number. Steal objectives ++++have their own counter.
 	var/completed = 0					//currently only used for custom objectives.
 	var/martyr_compatible = 0			//If the objective is compatible with martyr objective, i.e. if you can still do it while dead.
 
@@ -292,14 +292,9 @@ GLOBAL_LIST_EMPTY(objectives)
 	human_check = FALSE
 
 /datum/objective/hijack
-<<<<<<< HEAD
+	name = "hijack"
 	explanation_text = "Hijack the shuttle to ensure no loyalist Horizons crew escape alive and out of custody."
 	team_explanation_text = "Hijack the shuttle to ensure no loyalist Horizons crew escape alive and out of custody. Leave no team member behind."
-=======
-	name = "hijack"
-	explanation_text = "Hijack the shuttle to ensure no loyalist Nanotrasen crew escape alive and out of custody."
-	team_explanation_text = "Hijack the shuttle to ensure no loyalist Nanotrasen crew escape alive and out of custody. Leave no team member behind."
->>>>>>> 1493863533... Merge pull request #9716 from Ghommie/Ghommie-cit317
 	martyr_compatible = 0 //Technically you won't get both anyway.
 
 /datum/objective/hijack/check_completion() // Requires all owners to escape.
