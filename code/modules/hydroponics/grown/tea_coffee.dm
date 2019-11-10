@@ -44,6 +44,26 @@
 	filling_color = "#4582B4"
 	grind_results = list("teapowder" = 0, "salglu_solution" = 0)
 
+<<<<<<< HEAD
+=======
+// Kitty drugs
+/obj/item/seeds/tea/catnip
+	name = "pack of catnip seeds"
+	icon_state = "seed-catnip"
+	desc = "Long stocks with flowering tips that has a chemical to make feline attracted to it."
+	species = "catnip"
+	plantname = "Catnip Plant"
+	product = /obj/item/reagent_containers/food/snacks/grown/tea/catnip
+	reagents_add = list("catnip" = 0.1, "vitamin" = 0.06, "teapowder" = 0.3)
+	rarity = 50
+
+/obj/item/reagent_containers/food/snacks/grown/tea/catnip
+	seed = /obj/item/seeds/tea/catnip
+	name = "Catnip buds"
+	icon_state = "catnip"
+	filling_color = "#4582B4"
+	grind_results = list("catnp" = 2, "water" = 1)
+>>>>>>> 7b6604108f... Merge pull request #9713 from Trilbyspaceclone/sprite-issues
 
 // Coffee
 /obj/item/seeds/coffee
