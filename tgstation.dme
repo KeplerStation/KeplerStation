@@ -3089,8 +3089,6 @@
 #include "modular_citadel\code\modules\reagents\reagent container\cit_kegs.dm"
 #include "modular_citadel\code\modules\recycling\disposal\bin.dm"
 #include "modular_citadel\code\modules\research\designs\autoylathe_designs.dm"
-<<<<<<< HEAD
-#include "modular_citadel\code\modules\vehicles\secway.dm"
 #include "modular_kepler\code\game\machinery\body_scanner.dm"
 #include "modular_kepler\code\game\objects\ids.dm"
 #include "modular_kepler\code\game\objects\items\cards_ids.dm"
@@ -3102,7 +3100,4 @@
 #include "modular_kepler\code\modules\oracle_ui\oracle_ui.dm"
 #include "modular_kepler\code\modules\oracle_ui\themed.dm"
 #include "modular_kepler\interface\skin.dmf"
-=======
-#include "modular_citadel\interface\skin.dmf"
->>>>>>> 4fc10d436d... Merge pull request #9721 from Ghommie/Ghommie-cit319
 // END_INCLUDE
