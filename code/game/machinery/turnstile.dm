@@ -80,10 +80,14 @@
 					outdir = EAST
 		var/turf/outturf = get_step(src, outdir)
 		var/canexit = (target == src.loc) | (target == outturf)
-
-		if(!canexit && world.time - M.last_bumped <= 5)
-			to_chat(usr, "<span class='notice'>\the [src] resists your efforts.</span>")
+		
+		// KEPLER CHANGE: Fix turnstile time checking logic
+		if(world.time - M.last_bumped <= 5)
+			return FALSE
 		M.last_bumped = world.time
+
+		if(!canexit) // END KEPLER CHANGE THIS LINE
+			to_chat(usr, "<span class='notice'>\the [src] resists your efforts.</span>")
 		return canexit
 	else
 		return TRUE
