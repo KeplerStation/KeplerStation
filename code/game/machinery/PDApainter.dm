@@ -1,7 +1,7 @@
 /obj/machinery/pdapainter
 	name = "\improper color manipulator"
 	desc = "A machine able to color PDAs and IDs with ease. Insert an ID card or PDA and pick a color scheme.1"
-	icon = 'icons/obj/pda.dmi'
+	icon = 'modular_kepler/icons/obj/pda.dmi'
 	icon_state = "coloriser"
 	density = TRUE
 	max_integrity = 200
