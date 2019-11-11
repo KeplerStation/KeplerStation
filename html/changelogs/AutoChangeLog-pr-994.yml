@@ -1,4 +1,0 @@
-author: "AffectedArc07"
-delete-after: True
-changes: 
-  - bugfix: "Turnstiles no longer spam your chat if you go through them the wrong way"
