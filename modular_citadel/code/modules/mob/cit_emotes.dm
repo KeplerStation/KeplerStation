@@ -1,7 +1,7 @@
 #define INSULTS_FILE "insult.json"
 
 /mob
-	var/nextsoundemote = 1
+	var/nextemote = 1
 
 //Disables the custom emote blacklist from TG that normally applies to slimes.
 /datum/emote/living/custom
@@ -26,12 +26,12 @@
 	. = ..()
 
 /datum/emote/living/scream/run_emote(mob/living/user, params) //I can't not port this shit, come on.
-	if(user.nextsoundemote >= world.time || user.stat != CONSCIOUS)
+	if(user.nextemote >= world.time || user.stat != CONSCIOUS)
 		return
 	var/sound
 	var/miming = user.mind ? user.mind.miming : 0
 	if(!user.is_muzzled() && !miming)
-		user.nextsoundemote = world.time + 7
+		user.nextemote = world.time + 14
 		if(issilicon(user))
 			sound = 'modular_citadel/sound/voice/scream_silicon.ogg'
 			if(iscyborg(user))
@@ -68,83 +68,74 @@
 		message = "makes a very loud noise."
 	. = ..()
 
-/datum/emote/sound/carbon/snap
+/*/datum/emote/sound/carbon/snap
 	key = "snap"
 	key_third_person = "snaps"
 	muzzle_ignore = TRUE
 	restraint_check = TRUE
 	emote_type = EMOTE_AUDIBLE
 	sound = 'sound/effects/snap01.ogg'
-	mob_type_allowed_typecache = list(/mob/living/carbon/)
+	mob_type_allowed_typecache = list(/mob/living/carbon/)*/
 
-
-/datum/emote/living/snap
+/datum/emote/living/carbon/snap
 	key = "snap"
 	key_third_person = "snaps"
 	message = "snaps their fingers."
 	emote_type = EMOTE_AUDIBLE
 
-/datum/emote/living/snap/run_emote(mob/living/user, params)
-	if(ishuman(user))
-		if(user.nextsoundemote >= world.time)
-			return
-		user.nextsoundemote = world.time + 7
-		playsound(user, 'modular_citadel/sound/voice/snap.ogg', 50, 1, -1)
+/datum/emote/living/carbon/snap/run_emote(mob/living/user, params)
 	. = ..()
+	if(.)
+		if(ishuman(user))
+			playsound(user, 'modular_citadel/sound/voice/snap.ogg', 50, 1, -1)
 
-/datum/emote/living/snap2
+/datum/emote/living/carbon/snap2
 	key = "snap2"
 	key_third_person = "snaps twice"
 	message = "snaps twice."
 	emote_type = EMOTE_AUDIBLE
 
-/datum/emote/living/snap2/run_emote(mob/living/user, params)
-	if(ishuman(user))
-		if(user.nextsoundemote >= world.time)
-			return
-		user.nextsoundemote = world.time + 7
-		playsound(user, 'modular_citadel/sound/voice/snap2.ogg', 50, 1, -1)
+/datum/emote/living/carbon/snap2/run_emote(mob/living/user, params)
 	. = ..()
+	if(.)
+		if(ishuman(user))
+			playsound(user, 'modular_citadel/sound/voice/snap2.ogg', 50, 1, -1)
 
-/datum/emote/living/snap3
+/datum/emote/living/carbon/snap3
 	key = "snap3"
 	key_third_person = "snaps thrice"
 	message = "snaps thrice."
 	emote_type = EMOTE_AUDIBLE
 
-/datum/emote/living/snap3/run_emote(mob/living/user, params)
-	if(ishuman(user))
-		if(user.nextsoundemote >= world.time)
-			return
-		user.nextsoundemote = world.time + 7
-		playsound(user, 'modular_citadel/sound/voice/snap3.ogg', 50, 1, -1)
+/datum/emote/living/carbon/snap3/run_emote(mob/living/user, params)
 	. = ..()
+	if(.)
+		if(ishuman(user))
+			playsound(user, 'modular_citadel/sound/voice/snap3.ogg', 50, 1, -1)
 
-/datum/emote/living/peep
+/datum/emote/living/carbon/peep
 	key = "peep"
 	key_third_person = "peeps like a bird"
 	message = "peeps like a bird!"
 	emote_type = EMOTE_AUDIBLE
 
-/datum/emote/living/peep/run_emote(mob/living/user, params)
-	if(ishuman(user))
-		if(user.nextsoundemote >= world.time)
-			return
-		user.nextsoundemote = world.time + 7
-		playsound(user, 'modular_citadel/sound/voice/peep.ogg', 50, 1, -1)
+/datum/emote/living/carbon/peep/run_emote(mob/living/user, params)
 	. = ..()
+	if(.)
+		if(ishuman(user))
+			playsound(user, 'modular_citadel/sound/voice/peep.ogg', 50, 1, -1)
 
-/datum/emote/living/mothsqueak
+/datum/emote/living/carbon/human/species/moth
+	mob_type_allowed_typecache = list(/mob/living/carbon/human/species/moth)
+
+/datum/emote/living/carbon/human/species/moth/mothsqueak
 	key = "msqueak"
 	key_third_person = "lets out a tiny squeak"
 	message = "lets out a tiny squeak!"
 	emote_type = EMOTE_AUDIBLE
-	mob_type_allowed_typecache = list(/mob/living/carbon)
 
-/datum/emote/living/mothsqueak/run_emote(mob/living/user, params)
-	if(ishuman(user))
-		if(user.nextsoundemote >= world.time)
-			return
-		user.nextsoundemote = world.time + 7
-		playsound(user, 'modular_citadel/sound/voice/mothsqueak.ogg', 50, 1, -1)
+/datum/emote/living/carbon/human/species/moth/mothsqueak/run_emote(mob/living/user, params)
 	. = ..()
+	if(.)
+		if(ishuman(user))
+			playsound(user, 'modular_citadel/sound/voice/mothsqueak.ogg', 50, 1, -1)
