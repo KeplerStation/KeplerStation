@@ -136,6 +136,10 @@
 		var/mob/living/L = user
 		if(HAS_TRAIT(L, TRAIT_EMOTEMUTE))
 			return FALSE
+	
+	if(user.nextemote >= world.time)
+		return FALSE
+	user.nextemote = world.time + 14
 
 /datum/emote/sound
 	var/sound //Sound to play when emote is called
