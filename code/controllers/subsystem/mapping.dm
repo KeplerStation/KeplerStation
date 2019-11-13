@@ -76,7 +76,8 @@ SUBSYSTEM_DEF(mapping)
 	if(CONFIG_GET(flag/roundstart_away))
 		createRandomZlevel()
 
-
+	load_vr_level() // KEPLER CHANGE: Force load VR level
+	
 	// Generate mining ruins
 	loading_ruins = TRUE
 	var/list/lava_ruins = levels_by_trait(ZTRAIT_LAVA_RUINS)
@@ -252,7 +253,7 @@ SUBSYSTEM_DEF(mapping)
 				msg += ", [FailedZs[I]]"
 		msg += ". Yell at your server host!"
 		INIT_ANNOUNCE(msg)
-#undef INIT_ANNOUNCE
+// #undef INIT_ANNOUNCE // KEPLER CHANGE: Leave this in
 
 GLOBAL_LIST_EMPTY(the_station_areas)
 
