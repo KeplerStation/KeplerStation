@@ -1,4 +1,0 @@
-author: "Alonefromhell"
-delete-after: True
-changes: 
-  - bugfix: "Supply point generation have been reduced to a somewhat sane level"
