@@ -401,25 +401,44 @@ There are several things that need to be remembered:
 
 	if(wear_suit)
 		var/obj/item/clothing/suit/S = wear_suit
-		var/no_taur_thanks = FALSE
+		var/item_level_support = FALSE // LISTEN! If you must degrade the code with further snowflake checks, at least keep it compatible with worn non-clothing items!
 		if(!istype(S))
-			no_taur_thanks = TRUE
+			item_level_support = TRUE
 		wear_suit.screen_loc = ui_oclothing
 		if(client && hud_used && hud_used.hud_shown)
 			if(hud_used.inventory_shown)
 				client.screen += wear_suit
 		update_observer_view(wear_suit,1)
 
+<<<<<<< HEAD
 		if(DIGITIGRADE in dna.species.species_traits)
 			if(!S.force_alternate_icon)
 				S.alternate_worn_icon = 'modular_citadel/icons/mob/suit_digi.dmi'
+=======
+		if(!item_level_support && !S.force_alternate_icon)
+			if(S.mutantrace_variation) //Just make sure we've got this checked too
+				if(S.taurmode == NOT_TAURIC && S.adjusted == ALT_STYLE) //are we not a taur, but we have Digitigrade legs? Run this check first, then.
+					S.alternate_worn_icon = 'modular_citadel/icons/mob/suit_digi.dmi'
+				else
+					S.alternate_worn_icon = null
+
+				if(S.tauric == TRUE) //Are we a suit with tauric mode possible?
+					if(S.taurmode == SNEK_TAURIC)
+						S.alternate_worn_icon = 'modular_citadel/icons/mob/taur_naga.dmi'
+					if(S.taurmode == PAW_TAURIC)
+						S.alternate_worn_icon = 'modular_citadel/icons/mob/taur_canine.dmi'
+					if(S.taurmode == NOT_TAURIC && S.adjusted == ALT_STYLE)
+						S.alternate_worn_icon = 'modular_citadel/icons/mob/suit_digi.dmi'
+					else if(S.taurmode == NOT_TAURIC && S.adjusted == NORMAL_STYLE)
+						S.alternate_worn_icon = null
+>>>>>>> 178501f415... Merge pull request #9785 from Ghommie/Ghommie-cit344
 
 		overlays_standing[SUIT_LAYER] = S.build_worn_icon(state = wear_suit.icon_state, default_layer = SUIT_LAYER, default_icon_file = ((wear_suit.alternate_worn_icon) ? S.alternate_worn_icon : 'icons/mob/suit.dmi'))
 		var/mutable_appearance/suit_overlay = overlays_standing[SUIT_LAYER]
 		if(OFFSET_SUIT in dna.species.offset_features)
 			suit_overlay.pixel_x += dna.species.offset_features[OFFSET_SUIT][1]
 			suit_overlay.pixel_y += dna.species.offset_features[OFFSET_SUIT][2]
-		if(!no_taur_thanks && S.center)
+		if(!item_level_support && S.center)
 			suit_overlay = center_image(suit_overlay, S.dimension_x, S.dimension_y)
 		overlays_standing[SUIT_LAYER] = suit_overlay
 	update_hair()
