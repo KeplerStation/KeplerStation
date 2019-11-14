@@ -119,8 +119,8 @@
 	name = "ghost"
 	real_name = "ghost"
 	icon = 'icons/mob/mob.dmi'
-	maxHealth = 1e6
-	health = 1e6
+	maxHealth = 120
+	health = 120
 	speak_emote = list("howls")
 	emote_hear = list("wails","screeches")
 	density = FALSE
@@ -133,7 +133,6 @@
 	. = ..()
 	icon_state = pick("ghost","ghostian","ghostian2","ghostking","ghost1","ghost2")
 	icon_living = icon_state
-	status_flags |= GODMODE
 	timer = rand(1,15)
 
 /mob/living/simple_animal/shade/howling_ghost/Life()
@@ -168,12 +167,8 @@
 			step(I,direction)
 		return
 
-/mob/living/simple_animal/shade/howling_ghost/adjustHealth()
-	. = 0
-
 /mob/living/simple_animal/shade/howling_ghost/CanPass(atom/movable/mover, turf/target)
 	return 1
-
 
 ///////////////////////////
 //Spookoween Insane Clown//
@@ -187,8 +182,8 @@
 	icon_dead = "scary_clown"
 	icon_gib = "scary_clown"
 	speak = list("...", ". . .")
-	maxHealth = 1e6
-	health = 1e6
+	maxHealth = 120
+	health = 120
 	emote_see = list("silently stares")
 	unsuitable_atmos_damage = 0
 	var/timer
@@ -196,8 +191,6 @@
 /mob/living/simple_animal/hostile/retaliate/clown/insane/Initialize()
 	. = ..()
 	timer = rand(5,15)
-	status_flags = (status_flags | GODMODE)
-	return
 
 /mob/living/simple_animal/hostile/retaliate/clown/insane/Retaliate()
 	return
@@ -229,7 +222,7 @@
 	return
 
 /mob/living/simple_animal/hostile/retaliate/clown/insane/adjustHealth()
-	. = 0
+	. = ..() 
 	if(prob(5))
 		playsound(loc, 'sound/spookoween/insane_low_laugh.ogg', 300, 1)
 
