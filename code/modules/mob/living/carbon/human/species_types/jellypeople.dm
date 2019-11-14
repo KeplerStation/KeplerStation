@@ -9,6 +9,12 @@
 	mutant_heart = /obj/item/organ/heart/slime
 	inherent_traits = list(TRAIT_TOXINLOVER)
 	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/slime
+<<<<<<< HEAD
+=======
+	gib_types = list(/obj/effect/gibspawner/slime, /obj/effect/gibspawner/slime/bodypartless)
+	exotic_blood = "jellyblood"
+	exotic_bloodtype = "GEL"
+>>>>>>> 8f08e1017e... Merge pull request #9688 from Ghommie/Ghommie-cit306
 	damage_overlay_type = ""
 	var/datum/action/innate/regenerate_limbs/regenerate_limbs
 	var/datum/action/innate/slime_change/slime_change	//CIT CHANGE
