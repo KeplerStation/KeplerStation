@@ -1,6 +1,10 @@
 /obj/item/export_scanner
 	name = "export scanner"
+<<<<<<< HEAD
 	desc = "A device used to check objects against Horizons' exports and bounty database."
+=======
+	desc = "A device used to check objects against Nanotrasen exports and bounty database. Sadly can not scan reagents vaule."
+>>>>>>> 4c89b8c33f... Merge pull request #9628 from Trilbyspaceclone/Cargo_MKII
 	icon = 'icons/obj/device.dmi'
 	icon_state = "export_scanner"
 	item_state = "radio"
@@ -31,7 +35,7 @@
 	else
 		// Before you fix it:
 		// yes, checking manifests is a part of intended functionality.
-		
+
 		var/datum/export_report/ex = export_item_and_contents(O, cargo_console.get_export_categories(), dry_run=TRUE)
 		var/price = 0
 		for(var/x in ex.total_amount)
