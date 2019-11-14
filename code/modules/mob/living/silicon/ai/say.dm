@@ -49,7 +49,11 @@
 		else
 			padloc = "(UNKNOWN)"
 		src.log_talk(message, LOG_SAY, tag="HOLOPAD in [padloc]")
+<<<<<<< HEAD
 		send_speech(message, 7, T, "robot", SPAN_ROBOT, language)
+=======
+		send_speech(message, 7, T, "robot", language)
+>>>>>>> 3015ec5c04... Merge pull request #9764 from Ghommie/Ghommie-cit335
 		to_chat(src, "<i><span class='game say'>Holopad transmitted, <span class='name'>[real_name]</span> <span class='message robot'>\"[message]\"</span></span></i>")
 	else
 		to_chat(src, "No holopad connected.")

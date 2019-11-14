@@ -702,7 +702,11 @@ Code:
 
 	if(href_list["mule"]) //MULEbots are special snowflakes, and need different args due to how they work.
 
+<<<<<<< HEAD
 		active_bot.bot_control(command= href_list["mule"], user= usr)
+=======
+		active_bot.bot_control(href_list["mule"], usr, TRUE)
+>>>>>>> 3015ec5c04... Merge pull request #9764 from Ghommie/Ghommie-cit335
 
 	if(!host_pda)
 		return

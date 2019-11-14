@@ -131,6 +131,10 @@ GLOBAL_PROTECT(admin_verbs_server)
 	/client/proc/adminchangemap,
 	/client/proc/toggle_hub
 	)
+<<<<<<< HEAD
+=======
+GLOBAL_PROTECT(admin_verbs_server)
+>>>>>>> 3015ec5c04... Merge pull request #9764 from Ghommie/Ghommie-cit335
 GLOBAL_LIST_INIT(admin_verbs_debug, world.AVerbsDebug())
 GLOBAL_PROTECT(admin_verbs_debug)
 /world/proc/AVerbsDebug()
@@ -172,6 +176,10 @@ GLOBAL_PROTECT(admin_verbs_debug)
 	/client/proc/reload_configuration,
 	/datum/admins/proc/create_or_modify_area,
 	)
+<<<<<<< HEAD
+=======
+GLOBAL_PROTECT(admin_verbs_debug)
+>>>>>>> 3015ec5c04... Merge pull request #9764 from Ghommie/Ghommie-cit335
 GLOBAL_LIST_INIT(admin_verbs_possess, list(/proc/possess, /proc/release))
 GLOBAL_PROTECT(admin_verbs_possess)
 GLOBAL_LIST_INIT(admin_verbs_permissions, list(/client/proc/edit_admin_permissions))
@@ -180,6 +188,10 @@ GLOBAL_LIST_INIT(admin_verbs_poll, list(/client/proc/create_poll))
 GLOBAL_PROTECT(admin_verbs_poll)
 
 //verbs which can be hidden - needs work
+<<<<<<< HEAD
+=======
+GLOBAL_PROTECT(admin_verbs_poll)
+>>>>>>> 3015ec5c04... Merge pull request #9764 from Ghommie/Ghommie-cit335
 GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 	/client/proc/set_ooc,
 	/client/proc/reset_ooc,

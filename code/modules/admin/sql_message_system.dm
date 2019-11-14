@@ -556,7 +556,7 @@
 /proc/convert_notes_sql(ckey)
 	if(!fexists(NOTESFILE))
 		return
-		
+
 	var/savefile/notesfile = new(NOTESFILE)
 	if(!notesfile)
 		log_game("Error: Cannot access [NOTESFILE]")

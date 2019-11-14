@@ -307,7 +307,10 @@
 	//Handle Borg stuff first
 	if(iscyborg(mob_occupant))
 		var/mob/living/silicon/robot/R = mob_occupant
+<<<<<<< HEAD
 		if(!istype(R)) return
+=======
+>>>>>>> 3015ec5c04... Merge pull request #9764 from Ghommie/Ghommie-cit335
 
 		R.contents -= R.mmi
 		qdel(R.mmi)

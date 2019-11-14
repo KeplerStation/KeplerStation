@@ -71,7 +71,11 @@
 	var/turf/T = loc
 	if(!istype(T))
 		return FALSE
+<<<<<<< HEAD
 	if(T.Adjacent(neighbor,target = neighbor, mover = src))
+=======
+	if(T.Adjacent(neighbor, neighbor, src))
+>>>>>>> 3015ec5c04... Merge pull request #9764 from Ghommie/Ghommie-cit335
 		return TRUE
 	return FALSE
 

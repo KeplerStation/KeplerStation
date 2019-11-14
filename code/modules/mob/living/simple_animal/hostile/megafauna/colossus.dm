@@ -728,7 +728,11 @@ Difficulty: Very Hard
 		holder_animal.mind.AddSpell(P)
 		holder_animal.verbs -= /mob/living/verb/pulled
 
+<<<<<<< HEAD
 /obj/structure/closet/stasis/dump_contents(var/override = TRUE, var/kill = 1)
+=======
+/obj/structure/closet/stasis/dump_contents(override = TRUE, kill = 1)
+>>>>>>> 3015ec5c04... Merge pull request #9764 from Ghommie/Ghommie-cit335
 	STOP_PROCESSING(SSobj, src)
 	for(var/mob/living/L in src)
 		REMOVE_TRAIT(L, TRAIT_MUTE, STASIS_MUTE)

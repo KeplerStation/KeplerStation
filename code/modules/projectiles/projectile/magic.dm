@@ -221,7 +221,11 @@
 				new_mob =new hooman(M.loc)
 
 			var/datum/preferences/A = new()	//Randomize appearance for the human
+<<<<<<< HEAD
 			A.copy_to(new_mob, 0)
+=======
+			A.copy_to(new_mob, FALSE)
+>>>>>>> 3015ec5c04... Merge pull request #9764 from Ghommie/Ghommie-cit335
 
 			var/mob/living/carbon/human/H = new_mob
 			H.update_body()
