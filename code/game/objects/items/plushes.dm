@@ -934,9 +934,30 @@
 	attack_verb = list("pred", "coded", "remembered")
 
 /obj/item/toy/plush/catgirl/fermis
+<<<<<<< HEAD
     name = "medcat plushie"
     desc = "An affectionate stuffed toy that resembles a certain medcat, comes complete with battery operated wagging tail!! You get the impression she's cheering you on to to find happiness and be kind to people."
     icon_state = "fermis"
     item_state = "fermis"
     attack_verb = list("cuddled", "petpatted", "wigglepurred")
     squeak_override = list('modular_citadel/sound/voice/merowr.ogg' = 1)
+=======
+	name = "medcat plushie"
+	desc = "An affectionate stuffed toy that resembles a certain medcat, comes complete with battery operated wagging tail!! You get the impression she's cheering you on to to find happiness and be kind to people."
+	icon_state = "fermis"
+	item_state = "fermis"
+	attack_verb = list("cuddled", "petpatted", "wigglepurred")
+	squeak_override = list('modular_citadel/sound/voice/merowr.ogg' = 1)
+
+/obj/item/toy/plush/catgirl/mariaf
+	desc = "An adorable stuffed toy that resembles a very tall cat girl."
+	icon_state = "mariaf"
+	item_state = "mariaf"
+	attack_verb = list("hugged", "stabbed", "licked")
+
+/obj/item/toy/plush/catgirl/maya
+	desc = "An adorable stuffed toy that resembles an angry cat girl. She has her own tiny nuke disk!"
+	icon_state = "maya"
+	item_state = "maya"
+	attack_verb = list("nuked", "arrested", "harmbatonned")
+>>>>>>> 2f4562a63b... Merge pull request #9656 from Ghommie/Ghommie-cit290

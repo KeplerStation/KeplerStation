@@ -975,7 +975,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 		<tr>
 			<th>Uniform:</th>
 			<td>
-			   [uniform_select]
+				[uniform_select]
 			</td>
 		</tr>
 		<tr>

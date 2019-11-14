@@ -62,8 +62,13 @@ GLOBAL_VAR_INIT(war_declared, FALSE)
 
 	for(var/obj/machinery/computer/camera_advanced/shuttle_docker/D in GLOB.jam_on_wardec)
 		D.jammed = TRUE
+<<<<<<< HEAD
     
   GLOB.war_declared = TRUE
+=======
+
+	GLOB.war_declared = TRUE
+>>>>>>> 2f4562a63b... Merge pull request #9656 from Ghommie/Ghommie-cit290
 	var/list/nukeops = get_antag_minds(/datum/antagonist/nukeop)
 	var/actual_players = GLOB.joined_player_list.len - nukeops.len
 
