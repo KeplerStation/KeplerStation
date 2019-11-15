@@ -41,8 +41,6 @@
 					/obj/item/integrated_electronics/wirer)
 	crate_name = "circuitry starter pack crate"
 
-<<<<<<< HEAD
-=======
 /datum/supply_pack/science/monkey
 	name = "Monkey Cube Crate"
 	desc = "Stop monkeying around! Contains seven monkey cubes. Just add water!"
@@ -58,19 +56,7 @@
 					/obj/item/clothing/gloves/color/latex/nitrile,
 					/obj/item/clothing/gloves/color/latex/nitrile)
 	crate_name = "nitrile gloves crate"
-
-/datum/supply_pack/science/nuke_b_gone
-	name = "Nuke Defusal Kit"
-	desc = "Contains set of tools to defuse a nuke."
-	cost = 7500 //Usefull for traitors/nukies that fucked up
-	dangerous = TRUE
-	DropPodOnly = TRUE
-	contains = list(/obj/item/nuke_core_container/nt,
-					/obj/item/screwdriver/nuke/nt,
-					/obj/item/paper/guides/nt/nuke_instructions)
-	crate_name = "safe defusal kit storage"
-
->>>>>>> 4c89b8c33f... Merge pull request #9628 from Trilbyspaceclone/Cargo_MKII
+a
 /datum/supply_pack/science/plasma
 	name = "Plasma Assembly Crate"
 	desc = "Everything you need to burn something to the ground, this contains three plasma assembly sets. Each set contains a plasma tank, igniter, proximity sensor, and timer! Warranty void if exposed to high temperatures. Requires Toxins access to open."

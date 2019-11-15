@@ -1150,12 +1150,9 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "stomach acid"
 	glass_icon_state = "acidspitglass"
 	glass_name = "Acid Spit"
-<<<<<<< HEAD
 	glass_desc = "A drink made from live aliens."
-=======
-	glass_desc = "A drink from Nanotrasen. Made from live aliens."
 	value = 3
->>>>>>> 4c89b8c33f... Merge pull request #9628 from Trilbyspaceclone/Cargo_MKII
+
 
 /datum/reagent/consumable/ethanol/amasec
 	name = "Amasec"
@@ -1396,12 +1393,8 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "da bomb"
 	glass_icon_state = "atomicbombglass"
 	glass_name = "Atomic Bomb"
-<<<<<<< HEAD
 	glass_desc = "Horizons cannot take legal responsibility for your actions after imbibing."
-=======
-	glass_desc = "Nanotrasen cannot take legal responsibility for your actions after imbibing."
 	value = 3.56
->>>>>>> 4c89b8c33f... Merge pull request #9628 from Trilbyspaceclone/Cargo_MKII
 
 /datum/reagent/consumable/ethanol/atomicbomb/on_mob_life(mob/living/carbon/M)
 	M.set_drugginess(50)
@@ -1898,12 +1891,8 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "seduction"
 	glass_icon_state = "between_the_sheets"
 	glass_name = "Between the Sheets"
-<<<<<<< HEAD
 	glass_desc = "The only drink that comes with a label reminding you of Horizons' zero-tolerance promiscuity policy."
-=======
-	glass_desc = "The only drink that comes with a label reminding you of Nanotrasen's zero-tolerance promiscuity policy."
 	value = 2
->>>>>>> 4c89b8c33f... Merge pull request #9628 from Trilbyspaceclone/Cargo_MKII
 
 /datum/reagent/consumable/ethanol/between_the_sheets/on_mob_life(mob/living/L)
 	..()
@@ -2268,33 +2257,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_desc = "Although historians believe the drink was originally created to commemorate the end of an important conflict in man's past, its origins have largely been forgotten and it is today seen more as a general symbol of human supremacy."
 	value = 1
 
-<<<<<<< HEAD
-=======
-/datum/reagent/consumable/ethanol/commander_and_chief
-	name = "Commander and Chief"
-	id = "commander_and_chief"
-	description = "A cocktail for the captain on the go."
-	color = "#ffffc9"
-	boozepwr = 50
-	quality = DRINK_FANTASTIC
-	taste_description = "Tastes like...duty and responsibility?"
-	glass_icon_state = "commander_and_chief"
-	glass_name = "Commander and Chief"
-	glass_desc = "The gems of this majestic chalice represent the departments and their Heads."
-	value = 10
-
-/datum/reagent/consumable/ethanol/commander_and_chief/on_mob_life(mob/living/carbon/M)
-	if(M.mind && HAS_TRAIT(M.mind, TRAIT_CAPTAIN_METABOLISM))
-		M.heal_bodypart_damage(2,2,2)
-		M.adjustBruteLoss(-3.5,0)
-		M.adjustOxyLoss(-3.5,0)
-		M.adjustFireLoss(-3.5,0)
-		M.adjustToxLoss(-3.5,0)
-		M.radiation = max(M.radiation - 25, 0)
-		. = 1
-	return ..()
-
->>>>>>> 4c89b8c33f... Merge pull request #9628 from Trilbyspaceclone/Cargo_MKII
 /datum/reagent/consumable/ethanol/fruit_wine
 	name = "Fruit Wine"
 	id = "fruit_wine"

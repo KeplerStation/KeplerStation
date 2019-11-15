@@ -243,12 +243,9 @@
 	reagent_state = LIQUID
 	pH = 7.2
 	color = "#ffeac9"
-<<<<<<< HEAD
-=======
 	metabolization_rate = 5 * REAGENTS_METABOLISM
 	overdose_threshold = 50
 	value = 3
->>>>>>> 4c89b8c33f... Merge pull request #9628 from Trilbyspaceclone/Cargo_MKII
 
 /datum/reagent/medicine/silver_sulfadiazine/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)
@@ -301,12 +298,9 @@
 	reagent_state = LIQUID
 	color = "#FF9696"
 	pH = 6.7
-<<<<<<< HEAD
-=======
 	metabolization_rate = 5 * REAGENTS_METABOLISM
 	overdose_threshold = 50
 	value = 3
->>>>>>> 4c89b8c33f... Merge pull request #9628 from Trilbyspaceclone/Cargo_MKII
 
 /datum/reagent/medicine/styptic_powder/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)
@@ -419,12 +413,9 @@
 	reagent_state = LIQUID
 	color = "#FFEBEB"
 	pH = 11.5
-<<<<<<< HEAD
-=======
 	metabolization_rate = 5 * REAGENTS_METABOLISM
 	overdose_threshold = 40
 	value = 6
->>>>>>> 4c89b8c33f... Merge pull request #9628 from Trilbyspaceclone/Cargo_MKII
 
 /datum/reagent/medicine/synthflesh/reaction_mob(mob/living/M, method=TOUCH, reac_volume,show_message = 1)
 	if(iscarbon(M))
