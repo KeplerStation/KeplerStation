@@ -692,14 +692,6 @@ SUBSYSTEM_DEF(job)
 				else if(!M.equip_to_slot_if_possible(I, SLOT_IN_BACKPACK, disable_warning = TRUE, bypass_equip_delay_self = TRUE)) // Otherwise, try to put it in the backpack	
 					I.forceMove(get_turf(M)) // If everything fails, just put it on the floor under the mob.	
 
-/datum/controller/subsystem/job/proc/FreeRole(rank)	
-	if(!rank)	
-		return	
-	var/datum/job/job = GetJob(rank)	
-	if(!job)	
-		return FALSE	
-	job.current_positions = max(0, job.current_positions - 1)
-
 /datum/controller/subsystem/job/proc/FreeRole(rank)
 	if(!rank)
 		return
