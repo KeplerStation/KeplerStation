@@ -414,7 +414,7 @@
 	pixel_x = 24;
 	specialfunctions = 4
 	},
-/obj/item/bedsheet/dorms,
+/obj/item/bedsheet/blue,
 /turf/open/floor/wood,
 /area/awaymission/beach)
 "bm" = (
@@ -426,7 +426,7 @@
 	pixel_x = 24;
 	specialfunctions = 4
 	},
-/obj/item/bedsheet/dorms,
+/obj/item/bedsheet/green,
 /turf/open/floor/wood,
 /area/awaymission/beach)
 "bn" = (
@@ -438,7 +438,7 @@
 	pixel_x = 24;
 	specialfunctions = 4
 	},
-/obj/item/bedsheet/dorms,
+/obj/item/bedsheet/red,
 /turf/open/floor/wood,
 /area/awaymission/beach)
 "bo" = (
@@ -678,7 +678,7 @@
 	pixel_x = 24;
 	specialfunctions = 4
 	},
-/obj/item/bedsheet/dorms,
+/obj/item/bedsheet/brown,
 /turf/open/floor/wood,
 /area/awaymission/beach)
 "bV" = (
@@ -696,7 +696,7 @@
 	pixel_x = 24;
 	specialfunctions = 4
 	},
-/obj/item/bedsheet/dorms,
+/obj/item/bedsheet/black,
 /turf/open/floor/wood,
 /area/awaymission/beach)
 "bX" = (
