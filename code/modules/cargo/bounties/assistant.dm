@@ -187,22 +187,22 @@
 	reward = 3000
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/meat/slab/corgi)
 
-/datum/bounty/item/assistant/tail_whip
-	name = "Nine Tails whip"
-	description = "Commander Jackson is looking for a fine addition to her exotic weapons collection. She will reward you handsomely for either a Cat or Liz o' Nine Tails."
-	reward = 4000
-	wanted_types = list(/obj/item/melee/chainofcommand/tailwhip)
+///datum/bounty/item/assistant/tail_whip
+//	name = "Nine Tails whip"
+//	description = "Commander Jackson is looking for a fine addition to her exotic weapons collection. She will reward you handsomely for either a Cat or Liz o' Nine Tails."
+//	reward = 4000
+//	wanted_types = list(/obj/item/melee/chainofcommand/tailwhip)
 
 /datum/bounty/item/assistant/bolas
 	name = "Bolas"
-	description = "Centcom's chef has lost their mind. They're streaking naked though the halls, greased up with butter and cooking oil. Send some bola's so we can capture them."
+	description = "Head Office's chef has a meltdown. They're streaking naked though the halls spraying vegetable oil everywhere. Send some bola's so we can capture them."
 	reward = 1000
 	required_count = 3
 	wanted_types = list(/obj/item/restraints/legcuffs/bola)
 
 /datum/bounty/item/assistant/metalshields
 	name = "Metal Shields"
-	description = "NT is testing the effects of electricity on clowns wielding metal shields. We have clowns, and we have electricity. Send us the shields."
+	description = "The ICC wants to test the efficacy of stun weapons against shielded targets. Send in some metal shields."
 	reward = 1400
 	required_count = 4
 	wanted_types = list(/obj/item/shield/makeshift)
@@ -216,7 +216,7 @@
 
 /datum/bounty/item/assistant/gasmasks
 	name = "Gas Masks" 
-	description = "The good news is that we have more miasma than we'll ever need. The bad news is, somone opened the release valve on the canisters. Ship us some gas masks!"
+	description = "It's Taco Tuesday. Send some Gas Masks and don't ask any further questions, please."
 	reward = 1100
 	required_count = 4
 	wanted_types = list(/obj/item/clothing/mask/gas)
