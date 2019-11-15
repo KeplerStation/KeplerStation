@@ -122,12 +122,12 @@
 	trigger_cooldown = 20
 	rogue_types = list(/datum/nanite_program/brain_misfire, /datum/nanite_program/brain_decay)
 
-	extra_settings = list("Sentence")
+	extra_settings = list(NES_SENTENCE)
 	var/sentence = ""
 
 /datum/nanite_program/triggered/speech/set_extra_setting(user, setting)
-	if(setting == "Sentence")
-		var/new_sentence = stripped_input(user, "Choose the sentence that the host will be forced to say.", "Sentence", sentence, MAX_MESSAGE_LEN)
+	if(setting == NES_SENTENCE)
+		var/new_sentence = stripped_input(user, "Choose the sentence that the host will be forced to say.", NES_SENTENCE, sentence, MAX_MESSAGE_LEN)
 		if(!new_sentence)
 			return
 		if(copytext(new_sentence, 1, 2) == "*") //emotes are abusable, like surrender
@@ -135,7 +135,7 @@
 		sentence = new_sentence
 
 /datum/nanite_program/triggered/speech/get_extra_setting(setting)
-	if(setting == "Sentence")
+	if(setting == NES_SENTENCE)
 		return sentence
 
 /datum/nanite_program/triggered/speech/copy_extra_settings_to(datum/nanite_program/triggered/speech/target)
@@ -157,18 +157,18 @@
 	trigger_cooldown = 20
 	rogue_types = list(/datum/nanite_program/brain_misfire, /datum/nanite_program/brain_decay)
 
-	extra_settings = list("Message")
+	extra_settings = list(NES_MESSAGE)
 	var/message = ""
 
 /datum/nanite_program/triggered/voice/set_extra_setting(user, setting)
-	if(setting == "Message")
-		var/new_message = stripped_input(user, "Choose the message sent to the host.", "Message", message, MAX_MESSAGE_LEN)
+	if(setting == NES_MESSAGE)
+		var/new_message = stripped_input(user, "Choose the message sent to the host.", NES_MESSAGE, message, MAX_MESSAGE_LEN)
 		if(!new_message)
 			return
 		message = new_message
 
 /datum/nanite_program/triggered/voice/get_extra_setting(setting)
-	if(setting == "Message")
+	if(setting == NES_MESSAGE)
 		return message
 
 /datum/nanite_program/triggered/voice/copy_extra_settings_to(datum/nanite_program/triggered/voice/target)
@@ -188,7 +188,7 @@
 	trigger_cooldown = 80
 	unique = FALSE
 	rogue_types = list(/datum/nanite_program/brain_misfire)
-	extra_settings = list("Hallucination Type")
+	extra_settings = list(NES_HALLUCINATION_TYPE)
 	var/hal_type
 	var/hal_details
 
@@ -202,7 +202,7 @@
 		C.hallucination += 15
 	else
 		switch(hal_type)
-			if("Message")
+			if(NES_MESSAGE)
 				new /datum/hallucination/chat(C, TRUE, null, hal_details)
 			if("Battle")
 				new /datum/hallucination/battle(C, TRUE, hal_details)
@@ -224,8 +224,8 @@
 				new /datum/hallucination/fake_flood(C, TRUE)
 
 /datum/nanite_program/triggered/hallucination/set_extra_setting(user, setting)
-	if(setting == "Hallucination Type")
-		var/list/possible_hallucinations = list("Random","Message","Battle","Sound","Weird Sound","Station Message","Health","Alert","Fire","Shock","Plasma Flood")
+	if(setting == NES_HALLUCINATION_TYPE)
+		var/list/possible_hallucinations = list("Random",NES_MESSAGE,"Battle","Sound","Weird Sound","Station Message","Health","Alert","Fire","Shock","Plasma Flood")
 		var/hal_type_choice = input("Choose the hallucination type", name) as null|anything in possible_hallucinations
 		if(!hal_type_choice)
 			return
@@ -233,9 +233,9 @@
 			if("Random")
 				hal_type = null
 				hal_details = null
-			if("Message")
-				hal_type = "Message"
-				var/hal_chat = stripped_input(user, "Choose the message the host will hear, or leave empty for random messages.", "Message", hal_details, MAX_MESSAGE_LEN)
+			if(NES_MESSAGE)
+				hal_type = NES_MESSAGE
+				var/hal_chat = stripped_input(user, "Choose the message the host will hear, or leave empty for random messages.", NES_MESSAGE, hal_details, MAX_MESSAGE_LEN)
 				if(hal_chat)
 					hal_details = hal_chat
 			if("Battle")
@@ -300,7 +300,7 @@
 				hal_type = "Plasma Flood"
 
 /datum/nanite_program/triggered/hallucination/get_extra_setting(setting)
-	if(setting == "Hallucination Type")
+	if(setting == NES_HALLUCINATION_TYPE)
 		if(!hal_type)
 			return "Random"
 		else

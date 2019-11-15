@@ -4,7 +4,7 @@
 	desc = "The nanites constantly send encrypted signals attempting to forcefully copy their own programming into other nanite clusters."
 	use_rate = 0.5
 	rogue_types = list(/datum/nanite_program/toxic)
-	extra_settings = list("Program Overwrite","Cloud Overwrite")
+	extra_settings = list(NES_PROGRAM_OVERWRITE,NES_CLOUD_OVERWRITE)
 
 	var/sync_programs = TRUE
 	var/sync_overwrite = FALSE
@@ -12,7 +12,7 @@
 	var/set_cloud = 0
 
 /datum/nanite_program/viral/set_extra_setting(user, setting)
-	if(setting == "Program Overwrite")
+	if(setting == NES_PROGRAM_OVERWRITE)
 		var/overwrite_type = input("Choose what to do with the target's programs", name) as null|anything in list("Overwrite","Add To","Ignore")
 		if(!overwrite_type)
 			return
@@ -26,7 +26,7 @@
 			if("Overwrite") //Replace target's programs with the source
 				sync_programs = TRUE
 				sync_overwrite = TRUE
-	if(setting == "Cloud Overwrite")
+	if(setting == NES_CLOUD_OVERWRITE)
 		var/overwrite_type = input("Choose what to do with the target's Cloud ID", name) as null|anything in list("Overwrite","Disable","Keep")
 		if(!overwrite_type)
 			return
@@ -45,14 +45,14 @@
 				set_cloud = CLAMP(round(new_cloud, 1), 1, 100)
 
 /datum/nanite_program/viral/get_extra_setting(setting)
-	if(setting == "Program Overwrite")
+	if(setting == NES_PROGRAM_OVERWRITE)
 		if(!sync_programs)
 			return "Ignore"
 		else if(sync_overwrite)
 			return "Overwrite"
 		else
 			return "Add To"
-	if(setting == "Cloud Overwrite")
+	if(setting == NES_CLOUD_OVERWRITE)
 		if(!overwrite_cloud)
 			return "None"
 		else if(set_cloud == 0)
@@ -97,11 +97,11 @@
 	trigger_cooldown = 50
 	rogue_types = list(/datum/nanite_program/toxic)
 
-	extra_settings = list("Scan Type")
+	extra_settings = list(NES_SCAN_TYPE)
 	var/scan_type = "Medical"
 
 /datum/nanite_program/triggered/self_scan/set_extra_setting(user, setting)
-	if(setting == "Scan Type")
+	if(setting == NES_SCAN_TYPE)
 		var/list/scan_types = list("Medical","Chemical","Nanite")
 		var/new_scan_type = input("Choose the scan type", name) as null|anything in scan_types
 		if(!new_scan_type)
@@ -109,7 +109,7 @@
 		scan_type = new_scan_type
 
 /datum/nanite_program/triggered/self_scan/get_extra_setting(setting)
-	if(setting == "Scan Type")
+	if(setting == NES_SCAN_TYPE)
 		return scan_type
 
 /datum/nanite_program/triggered/self_scan/copy_extra_settings_to(datum/nanite_program/triggered/self_scan/target)
@@ -147,18 +147,18 @@
 	desc = "The nanites receive and relay long-range nanite signals."
 	rogue_types = list(/datum/nanite_program/toxic)
 
-	extra_settings = list("Relay Channel")
+	extra_settings = list(NES_RELAY_CHANNEL)
 	var/relay_channel = 1
 
 /datum/nanite_program/relay/set_extra_setting(user, setting)
-	if(setting == "Relay Channel")
+	if(setting == NES_RELAY_CHANNEL)
 		var/new_channel = input(user, "Set the relay channel (1-9999):", name, null) as null|num
 		if(isnull(new_channel))
 			return
 		relay_channel = CLAMP(round(new_channel, 1), 1, 9999)
 
 /datum/nanite_program/relay/get_extra_setting(setting)
-	if(setting == "Relay Channel")
+	if(setting == NES_RELAY_CHANNEL)
 		return relay_channel
 
 /datum/nanite_program/relay/copy_extra_settings_to(datum/nanite_program/relay/target)
