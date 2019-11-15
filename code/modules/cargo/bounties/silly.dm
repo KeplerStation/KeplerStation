@@ -38,7 +38,6 @@
 	reward = 1200
 	required_count = 8
 	wanted_types = list(/obj/item/clothing/shoes)
-	exclude_types = list(/obj/item/clothing/shoes/wraps, /obj/item/clothing/shoes/wraps/silver, /obj/item/clothing/shoes/wraps/red, /obj/item/clothing/shoes/wraps/blue)
 
 /datum/bounty/item/silly/sunglasses
 	name = "Sunglasses"
