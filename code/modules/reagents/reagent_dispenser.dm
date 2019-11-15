@@ -173,7 +173,6 @@
 	if(!QDELETED(src))
 		qdel(src)
 
-
 /obj/structure/reagent_dispensers/virusfood
 	name = "virus food dispenser"
 	desc = "A dispenser of low-potency virus mutagenic."
@@ -182,10 +181,22 @@
 	density = FALSE
 	reagent_id = "virusfood"
 
-
 /obj/structure/reagent_dispensers/cooking_oil
 	name = "vat of cooking oil"
 	desc = "A huge metal vat with a tap on the front. Filled with cooking oil for use in frying food."
 	icon_state = "vat"
 	anchored = TRUE
 	reagent_id = "cooking_oil"
+
+/obj/structure/reagent_dispensers/keg
+	name = "keg"
+	desc = "A keg."
+	icon = 'modular_citadel/icons/obj/objects.dmi'
+	icon_state = "keg"
+	reagent_id = "water"
+
+/obj/structure/reagent_dispensers/keg/mead
+	name = "keg of mead"
+	desc = "A keg of mead."
+	icon_state = "orangekeg"
+	reagent_id = "mead"
