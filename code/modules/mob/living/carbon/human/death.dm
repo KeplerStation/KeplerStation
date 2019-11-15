@@ -4,21 +4,6 @@
 /mob/living/carbon/human/dust_animation()
 	new /obj/effect/temp_visual/dust_animation(loc, "dust-h")
 
-<<<<<<< HEAD
-/mob/living/carbon/human/spawn_gibs(with_bodyparts)
-	if(isjellyperson(src))
-		if(with_bodyparts)
-			new /obj/effect/gibspawner/slime(drop_location(), dna, get_static_viruses())
-		else
-			new /obj/effect/gibspawner/slime/bodypartless(drop_location(), dna, get_static_viruses())
-
-	if(islizard(src))
-		if(with_bodyparts)
-			new /obj/effect/gibspawner/lizard(drop_location(), dna, get_static_viruses())
-		else
-			new /obj/effect/gibspawner/lizard/bodypartless(drop_location(), dna, get_static_viruses())
-
-=======
 /mob/living/carbon/human/spawn_gibs(with_bodyparts, atom/loc_override)
 	var/location = loc_override ? loc_override.drop_location() : drop_location()
 	if(dna?.species?.gib_types)
@@ -29,7 +14,6 @@
 			new path(location, src, get_static_viruses())
 		else
 			new S.gib_types(location, src, get_static_viruses())
->>>>>>> 8f08e1017e... Merge pull request #9688 from Ghommie/Ghommie-cit306
 	else
 		if(with_bodyparts)
 			new /obj/effect/gibspawner/human(location, src, get_static_viruses())
