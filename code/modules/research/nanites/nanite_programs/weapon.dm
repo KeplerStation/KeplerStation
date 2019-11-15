@@ -166,19 +166,19 @@
 	use_rate = 3
 	rogue_types = list(/datum/nanite_program/brain_decay, /datum/nanite_program/brain_misfire)
 
-	extra_settings = list("Directive")
+	extra_settings = list(NES_DIRECTIVE)
 	var/cooldown = 0 //avoids spam when nanites are running low
 	var/directive = "..."
 
 /datum/nanite_program/mind_control/set_extra_setting(user, setting)
-	if(setting == "Directive")
-		var/new_directive = stripped_input(user, "Choose the directive to imprint with mind control.", "Directive", directive, MAX_MESSAGE_LEN)
+	if(setting == NES_DIRECTIVE)
+		var/new_directive = stripped_input(user, "Choose the directive to imprint with mind control.", NES_DIRECTIVE, directive, MAX_MESSAGE_LEN)
 		if(!new_directive)
 			return
 		directive = new_directive
 
 /datum/nanite_program/mind_control/get_extra_setting(setting)
-	if(setting == "Directive")
+	if(setting == NES_DIRECTIVE)
 		return directive
 
 /datum/nanite_program/mind_control/copy_extra_settings_to(datum/nanite_program/mind_control/target)
