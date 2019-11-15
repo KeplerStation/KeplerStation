@@ -84,13 +84,8 @@
 
 /obj/item/clothing/gloves/rapid/hug
 	name = "Hugs of the North Star"
-<<<<<<< HEAD
-	desc = "Just looking at these fills you with an urge to hug the shit out of people"
-	warcry = "" //Shouldn't ever come into play
-=======
 	desc = "Just looking at these fills you with an urge to hug the shit out of people. In a very friendly manner."
-	warcry = "owo" //Shouldn't ever come into play
->>>>>>> 9b56aa0cae... Merge pull request #9781 from Hatterhat/northstar-fast-intents
+	warcry = "" //Shouldn't ever come into play
 
 /obj/item/clothing/gloves/rapid/hug/Touch(mob/living/target,proximity = TRUE)
 	if(!istype(target))
