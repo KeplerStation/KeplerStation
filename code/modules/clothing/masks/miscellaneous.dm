@@ -67,11 +67,13 @@
 			message += pick(" Ravioli, ravioli, give me the formuoli!"," Mamma-mia!"," Mamma-mia! That's a spicy meat-ball!", " La la la la la funiculi funicula!")
 	speech_args[SPEECH_MESSAGE] = trim(message)
 
+/* KEPLER CHANGE: Burn the shit out of this with holy fire
 /obj/item/clothing/mask/joy
 	name = "joy mask"
 	desc = "Express your happiness or hide your sorrows with this laughing face with crying tears of joy cutout."
 	icon_state = "joy"
 	mutantrace_variation = MUTANTRACE_VARIATION
+*/
 
 /obj/item/clothing/mask/pig
 	name = "pig mask"
