@@ -3040,7 +3040,6 @@
 #include "modular_citadel\code\modules\mentor\mentorhelp.dm"
 #include "modular_citadel\code\modules\mentor\mentorpm.dm"
 #include "modular_citadel\code\modules\mentor\mentorsay.dm"
-#include "modular_citadel\code\modules\mining\mining_ruins.dm"
 #include "modular_citadel\code\modules\mob\cit_emotes.dm"
 #include "modular_citadel\code\modules\mob\mob.dm"
 #include "modular_citadel\code\modules\mob\living\damage_procs.dm"
