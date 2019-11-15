@@ -200,11 +200,12 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 #define LOCKED_SENSORS 2
 
 //Wet floor type flags. Stronger ones should be higher in number.
-#define TURF_DRY		0
-#define TURF_WET_WATER	1
-#define TURF_WET_PERMAFROST	2
-#define TURF_WET_ICE 4
-#define TURF_WET_LUBE	8
+#define TURF_DRY		(0)
+#define TURF_WET_WATER	(1<<0)
+#define TURF_WET_PERMAFROST	(1<<1)
+#define TURF_WET_ICE (1<<2)
+#define TURF_WET_LUBE	(1<<3)
+#define TURF_WET_SUPERLUBE	(1<<4)
 
 #define IS_WET_OPEN_TURF(O) O.GetComponent(/datum/component/wet_floor)
 
@@ -496,6 +497,11 @@ GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi', PDA_S
 
 #define AREASELECT_CORNERA "corner A"
 #define AREASELECT_CORNERB "corner B"
+
+#define VARSET_FROM_LIST(L, V) if(L && L[#V]) V = L[#V]
+#define VARSET_FROM_LIST_IF(L, V, C...) if(L && L[#V] && (C)) V = L[#V]
+#define VARSET_TO_LIST(L, V) if(L) L[#V] = V
+#define VARSET_TO_LIST_IF(L, V, C...) if(L && (C)) L[#V] = V
 
 #define PREF_SAVELOAD_COOLDOWN 5
 
