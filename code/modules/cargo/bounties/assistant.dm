@@ -1,34 +1,16 @@
-<<<<<<< HEAD
-/datum/bounty/item/assistant/strange_object
-	name = "Strange Object"
-	description = "Horizons has taken an interest in strange objects. Find one in maint, and ship it off to Head Office right away."
-	reward = 600
-	wanted_types = list(/obj/item/relic)
-
-/datum/bounty/item/assistant/scooter
-	name = "Scooter"
-	description = "Horizons has determined walking to be wasteful. Ship a scooter to Head Office to speed operations up."
-	reward = 850 // the mat hoffman
-=======
 //Moved Maint Loot and other assorted bounties to silly.dm
 
 /datum/bounty/item/assistant/scooter
 	name = "Scooter"
-	description = "Nanotrasen has determined walking to be wasteful. Ship a scooter to CentCom to speed operations up."
+	description = "Horizons has determined walking to be wasteful. Ship a scooter to Head Office to speed operations up."
 	reward = 900 // the mat hoffman
->>>>>>> d15a1b0e6b... Merge pull request #9680 from Owai-Seek/extendedbounties
 	wanted_types = list(/obj/vehicle/ridden/scooter)
 	include_subtypes = FALSE
 
 /datum/bounty/item/assistant/skateboard
 	name = "Skateboard"
-<<<<<<< HEAD
 	description = "Horizons has determined walking to be wasteful. Ship a skateboard to Head Office to speed operations up."
 	reward = 700 // the tony hawk
-=======
-	description = "Nanotrasen has determined walking to be wasteful. Ship a skateboard to CentCom to speed operations up."
-	reward = 750 // the tony hawk
->>>>>>> d15a1b0e6b... Merge pull request #9680 from Owai-Seek/extendedbounties
 	wanted_types = list(/obj/vehicle/ridden/scooter/skateboard)
 
 /datum/bounty/item/assistant/stunprod
@@ -39,15 +21,9 @@
 
 /datum/bounty/item/assistant/soap
 	name = "Soap"
-<<<<<<< HEAD
 	description = "Soap has gone missing from Head Office's bathrooms and nobody knows who took it. Replace it and be the hero Head Office needs."
 	reward = 1000
 	required_count = 3
-=======
-	description = "Soap has gone missing from CentCom's bathrooms and nobody knows who took it. Replace it and be the hero CentCom needs."
-	reward = 1200
-	required_count = 3 //You can (apparently) get soap from the mining rewards vendor.
->>>>>>> d15a1b0e6b... Merge pull request #9680 from Owai-Seek/extendedbounties
 	wanted_types = list(/obj/item/soap)
 
 /datum/bounty/item/assistant/spear
@@ -90,78 +66,38 @@
 	reward = 1250
 	wanted_types = list(/obj/item/extendohand)
 
-<<<<<<< HEAD
-/datum/bounty/item/assistant/donut
-	name = "Donuts"
-	description = "Head Office's security forces are facing heavy losses against the Syndicate. Ship donuts to raise morale."
-	reward = 2000
-	required_count = 10
-	wanted_types = list(/obj/item/reagent_containers/food/snacks/donut)
-
-/datum/bounty/item/assistant/donkpocket
-	name = "Donk-Pockets"
-	description = "Consumer safety recall: Warning. Donk-Pockets manufactured in the past year contain hazardous lizard biomatter. Return units to Head Office immediately."
-	reward = 1000
-	required_count = 10
-	wanted_types = list(/obj/item/reagent_containers/food/snacks/donkpocket)
-
-/datum/bounty/item/assistant/briefcase
-	name = "Briefcase"
-	description = "Head Office will be holding a business convention this year. Ship a few briefcases in support."
-	reward = 1500
-	required_count = 5
-	wanted_types = list(/obj/item/storage/briefcase, /obj/item/storage/secure/briefcase)
-
-/datum/bounty/item/assistant/sunglasses
-	name = "Sunglasses"
-	description = "A famous blues duo is passing through the sector, but they've lost their shades and they can't perform. Ship new sunglasses to Head Office to rectify this."
-	reward = 1000
-	required_count = 2
-	wanted_types = list(/obj/item/clothing/glasses/sunglasses)
-
-/datum/bounty/item/assistant/monkey_hide
-	name = "Monkey Hide"
-	description = "One of the scientists at Head Office is interested in testing products on monkey skin. Your mission is to acquire monkey's hide and ship it."
-	reward = 500
-=======
 // /datum/bounty/item/assistant/donut
 // 	name = "Donuts"
-// 	description = "CentCom's security forces are facing heavy losses against the Syndicate. Ship donuts to raise morale."
+// 	description = "Head Office's security forces are facing heavy losses against the Syndicate. Ship donuts to raise morale."
 // 	reward = 2000
 // 	required_count = 10
 // 	wanted_types = list(/obj/item/reagent_containers/food/snacks/donut)
 
 // /datum/bounty/item/assistant/donkpocket
 // 	name = "Donk-Pockets"
-// 	description = "Consumer safety recall: Warning. Donk-Pockets manufactured in the past year contain hazardous lizard biomatter. Return units to CentCom immediately."
+// 	description = "Consumer safety recall: Warning. Donk-Pockets manufactured in the past year contain hazardous lizard biomatter. Return units to Head Office immediately."
 // 	reward = 1000
 // 	required_count = 10
 // 	wanted_types = list(/obj/item/reagent_containers/food/snacks/donkpocket)
 
 /datum/bounty/item/assistant/briefcase
 	name = "Briefcase"
-	description = "Central Command will be holding a business convention this year. Ship a few briefcases in support."
+	description = "Head Office will be holding a business convention this year. Ship a few briefcases in support."
 	reward = 1200
 	required_count = 3
 	wanted_types = list(/obj/item/storage/briefcase, /obj/item/storage/secure/briefcase)
 
 /datum/bounty/item/assistant/monkey_hide
 	name = "Monkey Hide"
-	description = "One of the scientists at CentCom is interested in testing products on monkey skin. Your mission is to acquire monkey's hide and ship it."
+	description = "One of the scientists at Head Office is interested in testing products on monkey skin. Your mission is to acquire monkey's hide and ship it."
 	reward = 1250
 	required_count = 3
->>>>>>> d15a1b0e6b... Merge pull request #9680 from Owai-Seek/extendedbounties
 	wanted_types = list(/obj/item/stack/sheet/animalhide/monkey)
 
 /datum/bounty/item/assistant/shard
 	name = "Shards"
-<<<<<<< HEAD
 	description = "A killer clown has been stalking Head Office, and staff have been unable to catch her because she's not wearing shoes. Please ship some shards so that a booby trap can be constructed."
 	reward = 500
-=======
-	description = "A killer clown has been stalking CentCom, and staff have been unable to catch her because she's not wearing shoes. Please ship some shards so that a booby trap can be constructed."
-	reward = 750
->>>>>>> d15a1b0e6b... Merge pull request #9680 from Owai-Seek/extendedbounties
 	required_count = 15
 	wanted_types = list(/obj/item/shard)
 
@@ -200,19 +136,11 @@
 	required_count = 8
 	wanted_types = list(/obj/item/twohanded/required/kirbyplants)
 
-<<<<<<< HEAD
-/datum/bounty/item/assistant/earmuffs
-	name = "Earmuffs"
-	description = "Head Office is getting tired of your station's messages. They've ordered that you ship some earmuffs to lessen the annoyance."
-	reward = 1000
-	wanted_types = list(/obj/item/clothing/ears/earmuffs)
-=======
 // /datum/bounty/item/assistant/earmuffs
 // 	name = "Earmuffs"
-// 	description = "Central Command is getting tired of your station's messages. They've ordered that you ship some earmuffs to lessen the annoyance."
+// 	description = "Head Office is getting tired of your station's messages. They've ordered that you ship some earmuffs to lessen the annoyance."
 // 	reward = 1000
 // 	wanted_types = list(/obj/item/clothing/ears/earmuffs)
->>>>>>> d15a1b0e6b... Merge pull request #9680 from Owai-Seek/extendedbounties
 
 /datum/bounty/item/assistant/cuffs
 	name = "Handcuffs"
