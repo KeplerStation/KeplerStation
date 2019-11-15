@@ -104,34 +104,34 @@
 	required_count = 2
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/khachapuri)
 
-/datum/bounty/item/chef/ratkebab
-	name = "Rat Kebabs"
-	description = "Centcom is requesting some -special- kebabs for it's service staff."
-	reward = 1800
-	required_count = 3
-	wanted_types = list(/obj/item/reagent_containers/food/snacks/kebab/rat)
+///datum/bounty/item/chef/ratkebab
+//	name = "Rat Kebabs"
+//	description = "Centcom is requesting some -special- kebabs for it's service staff."
+//	reward = 1800
+//	required_count = 3
+//	wanted_types = list(/obj/item/reagent_containers/food/snacks/kebab/rat)
 
 /datum/bounty/item/chef/benedict
 	name = "Eggs Benedict"
-	description = "Command requires a high-calory breakfast item. Ship it right away."
+	description = "We're honouring a visiting religious dignitary. He's very particular about names. Ship it right away."
 	reward = 1750
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/benedict)
 
 /datum/bounty/item/chef/braincake
 	name = "Brain Cake"
-	description = "The science division requires a brain cake for testing purposes. Don't ask."
+	description = "The ICC requires a brain cake for testing purposes. Don't ask."
 	reward = 1200
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/store/cake/brain)
 
 /datum/bounty/item/chef/waffles
 	name = "Waffles"
-	description = "Security staff at Centcom are looking for a fun treat. Ship us some waffles so they can fill the cells."
+	description = "The ICC is holding their annual business mixer. Ship some waffles so we can impress the bigwigs."
 	reward = 1000
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/waffles)
 
 /datum/bounty/item/chef/sugarcookie
 	name = "Sugar Cookies"
-	description = "Everyone needs a little sugar in their life. Ship some sweets to Command so we can satiate our sweet tooth."
+	description = "Everyone needs a little sugar in their life. Ship some sweets to Head Office."
 	reward = 1200
 	required_count = 6
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/sugarcookie)
