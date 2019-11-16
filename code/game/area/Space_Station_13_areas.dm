@@ -251,6 +251,13 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Incinerator"
 	icon_state = "disposal"
 
+/area/maintenance/bar
+	name = "Maintenance Bar"
+	icon_state = "maintbar"
+
+/area/maintenance/bar/cafe
+	name = "Abandoned Cafe"
+
 
 //Hallway
 
@@ -498,6 +505,16 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/crew_quarters/theatre/abandoned
 	name = "Abandoned Theatre"
 	icon_state = "Theatre"
+
+/area/crew_quarters/theatre/clown
+	name = "Clown's Office"
+
+/area/crew_quarters/theatre/mime
+	name = "Mime's Office"
+
+/area/crew_quarters/cryopod
+	name = "Cryogenics"
+	icon_state = "cryosleep"
 
 /area/library
 	name = "Library"
