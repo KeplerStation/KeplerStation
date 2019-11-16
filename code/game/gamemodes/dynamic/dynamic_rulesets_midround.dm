@@ -31,16 +31,10 @@
 	// So for example you can get the list of all current dead players with var/list/dead_players = candidates[CURRENT_DEAD_PLAYERS]
 	// Make sure to properly typecheck the mobs in those lists, as the dead_players list could contain ghosts, or dead players still in their bodies.
 	// We're still gonna trim the obvious (mobs without clients, jobbanned players, etc)
-<<<<<<< HEAD
     living_players = trim_list(mode.current_players[CURRENT_LIVING_PLAYERS])
     living_antags = trim_list(mode.current_players[CURRENT_LIVING_ANTAGS])
     dead_players = trim_list(mode.current_players[CURRENT_DEAD_PLAYERS])
     list_observers = trim_list(mode.current_players[CURRENT_OBSERVERS])
-=======
-	living_players = trim_list(mode.current_players[CURRENT_LIVING_PLAYERS])
-	living_antags = trim_list(mode.current_players[CURRENT_LIVING_ANTAGS])
-	list_observers = trim_list(mode.current_players[CURRENT_OBSERVERS])
->>>>>>> 8ac6a56993... Merge pull request #9557 from Putnam3145/super-special-awesome-dynamic
 
 /datum/dynamic_ruleset/midround/proc/trim_list(list/L = list())
 	var/list/trimmed_list = L.Copy()

@@ -58,12 +58,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/inquisitive_ghost = 1
 	var/allow_midround_antag = 1
 	var/preferred_map = null
-<<<<<<< HEAD
-=======
 	var/preferred_chaos = null
-	var/pda_style = MONO
-	var/pda_color = "#808000"
->>>>>>> 8ac6a56993... Merge pull request #9557 from Putnam3145/super-special-awesome-dynamic
 	var/pda_skin = PDA_SKIN_ALT
 
 	var/uses_glasses_colour = 0

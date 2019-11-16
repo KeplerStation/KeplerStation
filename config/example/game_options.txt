@@ -558,10 +558,8 @@ MONKEYCAP 64
 ## Uncomment to use TG-style combat
 #DISABLE_STAMBUFFER
 
-<<<<<<< HEAD:config/example/game_options.txt
 ## Comment to disable roundstart voting
 #ROUNDSTART_VOTE
-=======
+
 #Replaces standard extended/secret dichotomy with extended and calm/chaotic votes for dynamic.
 DYNAMIC_VOTING
->>>>>>> 8ac6a56993... Merge pull request #9557 from Putnam3145/super-special-awesome-dynamic:config/game_options.txt
