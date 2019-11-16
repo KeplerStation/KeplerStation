@@ -163,6 +163,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["damagescreenshake"]	>> damagescreenshake
 	S["widescreenpref"]		>> widescreenpref
 	S["autostand"]			>> autostand
+	S["preferred_chaos"]	>> preferred_chaos
 
 	//try to fix any outdated data if necessary
 	if(needs_update >= 0)
@@ -250,6 +251,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["arousable"], arousable)
 	WRITE_FILE(S["widescreenpref"], widescreenpref)
 	WRITE_FILE(S["autostand"], autostand)
+	WRITE_FILE(S["preferred_chaos"], preferred_chaos)
+
 	return 1
 
 /datum/preferences/proc/load_character(slot)
