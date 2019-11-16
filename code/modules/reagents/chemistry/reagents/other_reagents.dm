@@ -2,6 +2,7 @@
 	data = list("donor"=null,"viruses"=null,"blood_DNA"=null,"blood_type"=null,"resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
 	name = "Blood"
 	id = "blood"
+	value = 1
 	color = "#C80000" // rgb: 200, 0, 0
 	description = "Blood from a human, or otherwise."
 	metabolization_rate = 5 //fast rate so it disappears fast.

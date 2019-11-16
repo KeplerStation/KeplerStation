@@ -31,11 +31,11 @@
 		obj_flags &= ~EMAGGED
 
 /obj/machinery/computer/cargo/proc/get_export_categories()
-	var/cat = EXPORT_CARGO
+	. = EXPORT_CARGO
 	if(contraband)
-		cat |= EXPORT_CONTRABAND
+		. |= EXPORT_CONTRABAND
 	if(obj_flags & EMAGGED)
-		cat |= EXPORT_EMAG
+		. |= EXPORT_EMAG
 
 /obj/machinery/computer/cargo/emag_act(mob/user)
 	. = ..()
@@ -167,7 +167,7 @@
 			if(ishuman(usr))
 				var/mob/living/carbon/human/H = usr
 				name = H.get_authentification_name()
-				rank = H.get_assignment()
+				rank = H.get_assignment(hand_first = TRUE)
 			else if(issilicon(usr))
 				name = usr.real_name
 				rank = "Silicon"
