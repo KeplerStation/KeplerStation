@@ -56,4 +56,19 @@
 					return
 				stored.attack_hand(src) // take out thing from backpack
 				return
+<<<<<<< HEAD
 	return ..()
+=======
+	switch(_key)
+		if("Shift")
+			sprint_hotkey(TRUE)
+			return
+	return ..()
+
+/mob/living/carbon/human/key_up(_key, client/user)
+	switch(_key)
+		if("Shift")
+			sprint_hotkey(FALSE)
+			return
+	return ..()
+>>>>>>> d9b24b20d1... Merge pull request #9817 from Ghommie/Ghommie-cit357
