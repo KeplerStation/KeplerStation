@@ -65,13 +65,8 @@
 			dat += "<td>Unclaimed</td>"
 		dat += "</tr>"
 	dat += "</table>"
-<<<<<<< HEAD
-
-	var/datum/browser/popup = new(user, "bounties", "Horizons Bounties", 700, 600)
-=======
 	dat = dat.Join()
-	var/datum/browser/popup = new(user, "bounties", "Nanotrasen Bounties", 700, 600)
->>>>>>> 66f8b5f404... Merge pull request #9769 from Ghommie/Ghommie-cit336
+	var/datum/browser/popup = new(user, "bounties", "Horizons Bounties", 700, 600)
 	popup.set_content(dat)
 	popup.set_title_image(user.browse_rsc_icon(src.icon, src.icon_state))
 	popup.open()
