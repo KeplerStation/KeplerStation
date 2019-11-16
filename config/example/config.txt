@@ -4,6 +4,11 @@ $include game_options.txt
 $include dbconfig.txt
 $include comms.txt
 $include antag_rep.txt
+<<<<<<< HEAD:config/example/config.txt
+=======
+$include donator_groupings.txt
+$include dynamic_config.txt
+>>>>>>> 8ac6a56993... Merge pull request #9557 from Putnam3145/super-special-awesome-dynamic:config/config.txt
 
 # You can use the @ character at the beginning of a config option to lock it from being edited in-game
 # Example usage:

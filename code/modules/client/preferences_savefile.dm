@@ -163,6 +163,13 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["damagescreenshake"]	>> damagescreenshake
 	S["widescreenpref"]		>> widescreenpref
 	S["autostand"]			>> autostand
+<<<<<<< HEAD
+=======
+	S["cit_toggles"]		>> cit_toggles
+	S["lewdchem"]			>> lewdchem
+	S["preferred_chaos"]	>> preferred_chaos
+
+>>>>>>> 8ac6a56993... Merge pull request #9557 from Putnam3145/super-special-awesome-dynamic
 
 	//try to fix any outdated data if necessary
 	if(needs_update >= 0)
@@ -250,6 +257,13 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["arousable"], arousable)
 	WRITE_FILE(S["widescreenpref"], widescreenpref)
 	WRITE_FILE(S["autostand"], autostand)
+<<<<<<< HEAD
+=======
+	WRITE_FILE(S["cit_toggles"], cit_toggles)
+	WRITE_FILE(S["lewdchem"], lewdchem)
+	WRITE_FILE(S["preferred_chaos"], preferred_chaos)
+
+>>>>>>> 8ac6a56993... Merge pull request #9557 from Putnam3145/super-special-awesome-dynamic
 	return 1
 
 /datum/preferences/proc/load_character(slot)
