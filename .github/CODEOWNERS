@@ -7,3 +7,4 @@
 #AffectedArc07
 /modular_citadel/ @AffectedArc07
 /SQL/database_changelog.txt @AffectedArc07
+/config/example/ @AffectedArc07
