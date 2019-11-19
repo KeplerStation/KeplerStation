@@ -1,5 +1,9 @@
 /mob/living/silicon/robot/examine(mob/user)
+<<<<<<< HEAD
 	var/msg = "<span class='info'>*---------*\nThis is [icon2html(src, user)] \a <EM>[src]</EM>!\n"
+=======
+	var/msg = "<span class='info'>*---------*\nThis is [icon2html(src, user)] \a <EM>[src]</EM>, a [src.module.name] unit!\n"
+>>>>>>> 40a01dedfe... Merge pull request #9806 from BlackMajor/Yote
 	if(desc)
 		msg += "[desc]\n"
 

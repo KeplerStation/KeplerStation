@@ -203,7 +203,11 @@
 	desc = "A trash bag of holding replacement for the janiborg's standard trash bag."
 	icon_state = "cyborg_upgrade3"
 	require_module = 1
+<<<<<<< HEAD
 	module_type = list(/obj/item/robot_module/janitor)
+=======
+	module_type = list(/obj/item/robot_module/butler)
+>>>>>>> 40a01dedfe... Merge pull request #9806 from BlackMajor/Yote
 
 /obj/item/borg/upgrade/tboh/action(mob/living/silicon/robot/R)
 	. = ..()
@@ -230,7 +234,11 @@
 	desc = "An advanced mop replacement for the janiborg's standard mop."
 	icon_state = "cyborg_upgrade3"
 	require_module = 1
+<<<<<<< HEAD
 	module_type = list(/obj/item/robot_module/janitor)
+=======
+	module_type = list(/obj/item/robot_module/butler)
+>>>>>>> 40a01dedfe... Merge pull request #9806 from BlackMajor/Yote
 
 /obj/item/borg/upgrade/amop/action(mob/living/silicon/robot/R)
 	. = ..()
@@ -513,7 +521,14 @@
 		advanced health scanner, for better readings on patients."
 	icon_state = "cyborg_upgrade3"
 	require_module = 1
+<<<<<<< HEAD
 	module_type = list(/obj/item/robot_module/medical,/obj/item/robot_module/syndicate_medical) 
+=======
+	module_type = list(
+		/obj/item/robot_module/medical,
+		/obj/item/robot_module/syndicate_medical,
+		/obj/item/robot_module/medihound)
+>>>>>>> 40a01dedfe... Merge pull request #9806 from BlackMajor/Yote
 
 /obj/item/borg/upgrade/advhealth/action(mob/living/silicon/robot/R, user = usr)
 	. = ..()
