@@ -314,13 +314,8 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 				jobs += "<b>Assignment:</b> [target_rank] (<a href='?src=[REF(src)];choice=demote'>Demote</a>)</span>"
 
 			var/list/accesses = list()
-<<<<<<< HEAD
 			if(istype(src, /obj/machinery/computer/card/centcom)) //REE
 				accesses += "<h5>Head Office:</h5>"
-=======
-			if(istype(src, /obj/machinery/computer/card/centcom)) // REE
-				accesses += "<h5>Central Command:</h5>"
->>>>>>> 779fac99b4... Merge pull request #9829 from Ghommie/Ghommie-cit361
 				for(var/A in get_all_centcom_access())
 					if(A in inserted_modify_id.access)
 						accesses += "<a href='?src=[REF(src)];choice=access;access_target=[A];allowed=0'><font color=\"6bc473\">[replacetext(get_centcom_access_desc(A), " ", "&nbsp")]</font></a> "
