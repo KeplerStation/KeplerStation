@@ -1,0 +1,5 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - rscadd: "Added saboteur syndicate engiborg"
+  - tweak: "changed cyborg tool icons and the secborg taser/laser icons."
