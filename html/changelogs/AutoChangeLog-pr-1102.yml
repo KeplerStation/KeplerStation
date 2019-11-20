@@ -1,5 +1,0 @@
-author: "Putnam"
-delete-after: True
-changes: 
-  - bugfix: "summon events now ends when the wizard dies in dynamic"
-  - tweak: "cursed items, changes races, change faces, change places, change minds, summon guns (random), summon magic (random) are all limited to roundstart wizards only"
