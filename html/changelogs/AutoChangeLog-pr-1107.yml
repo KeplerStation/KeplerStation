@@ -1,4 +1,0 @@
-author: "KeplerStation-Bot"
-delete-after: True
-changes: 
-  - bugfix: "fixed a few minor issues with console frames building."
