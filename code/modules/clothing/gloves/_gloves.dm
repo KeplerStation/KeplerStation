@@ -14,10 +14,10 @@
 
 /obj/item/clothing/gloves/ComponentInitialize()
 	. = ..()
-	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, .proc/clean_blood2)
+	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, /atom.proc/clean_blood)
 
-/obj/item/clothing/gloves/proc/clean_blood2(datum/source, strength)
-	clean_blood()
+/obj/item/clothing/gloves/clean_blood(datum/source, strength)
+	..()
 	if(strength < CLEAN_WEAK)
 		return
 	transfer_blood = 0
