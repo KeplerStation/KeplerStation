@@ -114,11 +114,19 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	..()
 
 
-/proc/generate_selectable_species()
+/proc/generate_selectable_species(clear = FALSE)
+	if(clear)
+		GLOB.roundstart_races = list()
+		GLOB.roundstart_race_names = list()
 	for(var/I in subtypesof(/datum/species))
 		var/datum/species/S = new I
 		if(S.check_roundstart_eligible())
+<<<<<<< HEAD
 			GLOB.roundstart_races += S.id
+=======
+			GLOB.roundstart_races |= S.id
+			GLOB.roundstart_race_names["[S.name]"] = S.id
+>>>>>>> 0300927974... Merge pull request #9487 from Citadel-Station-13/spooky
 			qdel(S)
 	if(!GLOB.roundstart_races.len)
 		GLOB.roundstart_races += "human"
