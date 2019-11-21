@@ -28,3 +28,7 @@
 #define NES_PROGRAM_OVERWRITE "Program Overwrite"
 #define NES_CLOUD_OVERWRITE "Cloud Overwrite"
 #define NES_SCAN_TYPE "Scan Type"
+
+//Research nanites
+#define NANITE_RESEARCH_CLIENT 1 //Amount of points to add to research if there is a client in the mob.
+#define NANITE_RESEARCH_NOCLIENT 0.25 //Amount of points to add to research if there is no client in the mob.
