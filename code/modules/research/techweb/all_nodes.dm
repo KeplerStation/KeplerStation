@@ -616,7 +616,7 @@
 /datum/techweb_node/botany
 	id = "botany"
 	display_name = "Botanical Engineering"
-	description = "Botanical tools"
+	description = "Botanical tools."
 	prereq_ids = list("adv_engi", "biotech")
 	design_ids = list("diskplantgene", "portaseeder", "plantgenes", "flora_gun", "hydro_tray", "biogenerator", "seed_extractor")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2750)
@@ -1046,6 +1046,7 @@
 	id = "alien_bio"
 	display_name = "Alien Biological Tools"
 	description = "Advanced biological tools."
+<<<<<<< HEAD
 	prereq_ids = list("alientech", "adv_biotech")
 	design_ids = list("alien_scalpel", "alien_hemostat", "alien_retractor", "alien_saw", "alien_drill", "alien_cautery")
 	boost_item_paths = list(/obj/item/gun/energy/alien, /obj/item/scalpel/alien, /obj/item/hemostat/alien, /obj/item/retractor/alien, /obj/item/circular_saw/alien,
@@ -1054,12 +1055,23 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 20000
 	hidden = TRUE
+=======
+	prereq_ids = list("alientech", "advance_surgerytools")
+	design_ids = list("alien_scalpel", "alien_hemostat", "alien_retractor", "alien_saw", "alien_drill", "alien_cautery", "ayyplantgenes")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	export_price = 10000
+>>>>>>> f82dd255dc... Merge pull request #9869 from Hatterhat/ayy-dna-manip
 
 /datum/techweb_node/alien_engi
 	id = "alien_engi"
 	display_name = "Alien Engineering"
+<<<<<<< HEAD
 	description = "Alien engineering tools"
 	prereq_ids = list("alientech", "adv_engi")
+=======
+	description = "Alien engineering tools."
+	prereq_ids = list("alientech", "exp_tools")
+>>>>>>> f82dd255dc... Merge pull request #9869 from Hatterhat/ayy-dna-manip
 	design_ids = list("alien_wrench", "alien_wirecutters", "alien_screwdriver", "alien_crowbar", "alien_welder", "alien_multitool")
 	boost_item_paths = list(/obj/item/screwdriver/abductor, /obj/item/wrench/abductor, /obj/item/crowbar/abductor, /obj/item/multitool/abductor, /obj/item/stock_parts/cell/infinite/abductor,
 	/obj/item/weldingtool/abductor, /obj/item/wirecutters/abductor, /obj/item/circuitboard/machine/abductor, /obj/item/abductor_baton, /obj/item/abductor)
