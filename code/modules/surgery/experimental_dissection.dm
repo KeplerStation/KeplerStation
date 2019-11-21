@@ -109,3 +109,8 @@
 	value_multiplier = 10
 	requires_tech = TRUE
 	replaced_by = null
+<<<<<<< HEAD
+=======
+
+#undef BASE_HUMAN_REWARD
+>>>>>>> 8df8acb1b7... Merge pull request #9811 from Ghommie/Ghommie-cit353

@@ -41,9 +41,15 @@
 					update_damage_overlays()
 			else
 				adjustStaminaLoss(damage_amount, forced = forced)
+<<<<<<< HEAD
 		if(BRAIN)
 			adjustOrganLoss(ORGAN_SLOT_BRAIN, damage_amount)
 
+=======
+		//citadel code
+		if(AROUSAL)
+			adjustArousalLoss(damage_amount)
+>>>>>>> 8df8acb1b7... Merge pull request #9811 from Ghommie/Ghommie-cit353
 	return TRUE
 
 

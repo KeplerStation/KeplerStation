@@ -30,7 +30,11 @@
 	pH = 3.7
 	can_synth = TRUE
 
+<<<<<<< HEAD
 /datum/reagent/fermi/eigenstate/on_new()
+=======
+/datum/reagent/fermi/eigenstate/on_new(list/data)
+>>>>>>> 8df8acb1b7... Merge pull request #9811 from Ghommie/Ghommie-cit353
 	location_created = data["location_created"]
 
 //Main functions

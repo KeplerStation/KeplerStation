@@ -364,6 +364,33 @@
 		else
 			species_color = ""
 
+<<<<<<< HEAD
+=======
+		if("legs" in S.default_features)
+			if(body_zone == BODY_ZONE_L_LEG || body_zone == BODY_ZONE_R_LEG)
+				if(DIGITIGRADE in S.species_traits)
+					digitigrade_type = lowertext(H.dna.features["legs"])
+			else
+				digitigrade_type = null
+
+		if("mam_body_markings" in S.default_features)
+			var/datum/sprite_accessory/Smark
+			Smark = GLOB.mam_body_markings_list[H.dna.features["mam_body_markings"]]
+			if(Smark)
+				body_markings_icon = Smark.icon
+			if(H.dna.features["mam_body_markings"] != "None")
+				body_markings = lowertext(H.dna.features["mam_body_markings"])
+				aux_marking = lowertext(H.dna.features["mam_body_markings"])
+			else
+				body_markings = "plain"
+				aux_marking = "plain"
+			markings_color = list(colorlist)
+
+		else
+			body_markings = null
+			aux_marking = null
+
+>>>>>>> 8df8acb1b7... Merge pull request #9811 from Ghommie/Ghommie-cit353
 		if(!dropping_limb && H.dna.check_mutation(HULK))
 			mutation_color = "00aa00"
 		else

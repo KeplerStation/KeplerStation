@@ -14,7 +14,11 @@
 
 /obj/item/clothing/gloves/ComponentInitialize()
 	. = ..()
+<<<<<<< HEAD
 	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, .proc/clean_blood2)
+=======
+	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, /atom.proc/clean_blood)
+>>>>>>> 8df8acb1b7... Merge pull request #9811 from Ghommie/Ghommie-cit353
 
 /obj/item/clothing/gloves/proc/clean_blood2(datum/source, strength)
 	clean_blood()
