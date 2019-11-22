@@ -27,7 +27,7 @@ Assistant
 	name = "Assistant"
 	jobtype = /datum/job/assistant
 
-/datum/outfit/job/assistant/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/assistant/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
 	if (CONFIG_GET(flag/grey_assistants))
 		uniform = /obj/item/clothing/under/color/grey

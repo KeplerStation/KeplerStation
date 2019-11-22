@@ -98,8 +98,9 @@
 	//Equip the rest of the gear
 	H.dna.species.before_equip_job(src, H, visualsOnly)
 
-	if(outfit_override || outfit)
-		H.equipOutfit(outfit_override ? outfit_override : outfit, visualsOnly)
+	var/datum/outfit/job/O = outfit_override || outfit
+	if(O)
+		H.equipOutfit(O, visualsOnly, preference_source) //mob doesn't have a client yet.
 
 	H.dna.species.after_equip_job(src, H, visualsOnly)
 
@@ -172,8 +173,8 @@
 	var/satchel  = /obj/item/storage/backpack/satchel
 	var/duffelbag = /obj/item/storage/backpack/duffelbag
 
-/datum/outfit/job/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	switch(H.backbag)
+/datum/outfit/job/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
+	switch(preference_source?.prefs.backbag)
 		if(GBACKPACK)
 			back = /obj/item/storage/backpack //Grey backpack
 		if(GSATCHEL)
@@ -189,7 +190,7 @@
 		else
 			back = backpack //Department backpack
 
-/datum/outfit/job/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	if(visualsOnly)
 		return
 

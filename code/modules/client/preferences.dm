@@ -1625,7 +1625,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.undershirt = undershirt
 	character.socks = socks
 
-	character.backbag = backbag
 
 	var/datum/species/chosen_species
 	if(!roundstart_checks || (pref_species.id in GLOB.roundstart_races))
