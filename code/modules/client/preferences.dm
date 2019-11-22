@@ -1624,15 +1624,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.underwear = underwear
 	character.undershirt = undershirt
 	character.socks = socks
-<<<<<<< HEAD
-
 	character.backbag = backbag
-=======
-	character.saved_socks = socks
-	character.undie_color = undie_color
-	character.shirt_color = shirt_color
-	character.socks_color = socks_color
->>>>>>> 1ddb9935ff... Merge pull request #9530 from Ghommie/Ghommie-cit245
+
 
 	var/datum/species/chosen_species
 	if(!roundstart_checks || (pref_species.id in GLOB.roundstart_races))
