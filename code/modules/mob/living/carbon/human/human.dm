@@ -31,7 +31,7 @@
 	if(CONFIG_GET(flag/disable_stambuffer))
 		togglesprint()
 
-	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, .proc/clean_blood2)
+	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, /atom.proc/clean_blood)
 
 
 /mob/living/carbon/human/ComponentInitialize()
@@ -687,14 +687,13 @@
 		if(..())
 			dropItemToGround(I)
 
-/mob/living/carbon/human/proc/clean_blood2()
+/mob/living/carbon/human/clean_blood()
 	var/mob/living/carbon/human/H = src
 	if(H.gloves)
-		var/obj/item/clothing/gloves/G = H.gloves
-		if(G.clean_blood2()) // The 2 is important here
+		if(H.clean_blood())
 			H.update_inv_gloves()
 	else
-		clean_blood()
+		..()
 		if(H.bloody_hands)
 			H.bloody_hands = 0
 			H.update_inv_gloves()

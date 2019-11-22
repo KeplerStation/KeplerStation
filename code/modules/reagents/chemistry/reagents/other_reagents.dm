@@ -1138,8 +1138,7 @@
 						H.update_inv_w_uniform()
 				if(H.shoes)
 					SEND_SIGNAL(H.shoes, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
-					var/obj/item/clothing/shoes/S = H.shoes
-					if(S.clean_blood2())
+					if(H.clean_blood())
 						H.update_inv_shoes()
 				H.wash_cream()
 			SEND_SIGNAL(M, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
