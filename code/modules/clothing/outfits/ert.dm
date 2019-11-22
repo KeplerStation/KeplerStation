@@ -45,13 +45,8 @@
 	R.recalculateChannels()
 
 /datum/outfit/ert/commander/alert
-<<<<<<< HEAD
 	name = "RRT Commander - Amber Alert"
-	
-=======
-	name = "ERT Commander - Amber Alert"
 
->>>>>>> 1ddb9935ff... Merge pull request #9530 from Ghommie/Ghommie-cit245
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/alert
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	backpack_contents = list(/obj/item/storage/box/engineer=1,\
@@ -92,13 +87,8 @@
 	R.recalculateChannels()
 
 /datum/outfit/ert/security/alert
-<<<<<<< HEAD
 	name = "RRT Officer - Amber Alert"
-	
-=======
-	name = "ERT Security - Amber Alert"
 
->>>>>>> 1ddb9935ff... Merge pull request #9530 from Ghommie/Ghommie-cit245
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/alert/sec
 	backpack_contents = list(/obj/item/storage/box/engineer=1,\
 		/obj/item/storage/box/handcuffs=1,\
