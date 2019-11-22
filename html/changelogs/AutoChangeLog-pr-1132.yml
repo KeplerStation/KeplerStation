@@ -1,0 +1,5 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - soundadd: "added a new gun sounds"
+  - sounddel: "removed an old gun sounds"
