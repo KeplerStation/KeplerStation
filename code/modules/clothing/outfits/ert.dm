@@ -6,7 +6,7 @@
 	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset/headset_cent/alt
 
-/datum/outfit/ert/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/ert/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	if(visualsOnly)
 		return
 
@@ -35,7 +35,7 @@
 		/obj/item/gun/energy/e_gun=1)
 	l_pocket = /obj/item/switchblade
 
-/datum/outfit/ert/commander/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/ert/commander/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
 
 	if(visualsOnly)
@@ -45,8 +45,13 @@
 	R.recalculateChannels()
 
 /datum/outfit/ert/commander/alert
+<<<<<<< HEAD
 	name = "RRT Commander - Amber Alert"
 	
+=======
+	name = "ERT Commander - Amber Alert"
+
+>>>>>>> 1ddb9935ff... Merge pull request #9530 from Ghommie/Ghommie-cit245
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/alert
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	backpack_contents = list(/obj/item/storage/box/engineer=1,\
@@ -76,7 +81,7 @@
 		/obj/item/gun/energy/e_gun/stun=1,\
 		/obj/item/melee/baton/loaded=1)
 
-/datum/outfit/ert/security/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/ert/security/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
 
 	if(visualsOnly)
@@ -87,8 +92,13 @@
 	R.recalculateChannels()
 
 /datum/outfit/ert/security/alert
+<<<<<<< HEAD
 	name = "RRT Officer - Amber Alert"
 	
+=======
+	name = "ERT Security - Amber Alert"
+
+>>>>>>> 1ddb9935ff... Merge pull request #9530 from Ghommie/Ghommie-cit245
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/alert/sec
 	backpack_contents = list(/obj/item/storage/box/engineer=1,\
 		/obj/item/storage/box/handcuffs=1,\
@@ -120,7 +130,7 @@
 		/obj/item/reagent_containers/hypospray/combat=1,\
 		/obj/item/gun/medbeam=1)
 
-/datum/outfit/ert/medic/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/ert/medic/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
 
 	if(visualsOnly)
@@ -166,7 +176,7 @@
 		/obj/item/gun/energy/e_gun=1,\
 		/obj/item/construction/rcd/loaded=1)
 
-/datum/outfit/ert/engineer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/ert/engineer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
 
 	if(visualsOnly)
@@ -214,7 +224,7 @@
 	l_hand = /obj/item/storage/toolbox/plastitanium
 	gloves = /obj/item/clothing/gloves/color/yellow
 
-/datum/outfit/ert/greybois/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/ert/greybois/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	if(visualsOnly)
 		return
 	var/obj/item/card/id/W = H.wear_id
@@ -238,7 +248,7 @@
 	l_hand = /obj/item/clipboard
 	id = /obj/item/card/id
 
-/datum/outfit/centcom_official/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/centcom_official/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	if(visualsOnly)
 		return
 
@@ -288,7 +298,7 @@
 		/obj/item/reagent_containers/hypospray/combat/heresypurge=1,
 		/obj/item/gun/medbeam=1)
 
-/datum/outfit/ert/chaplain/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/ert/chaplain/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
 
 	if(visualsOnly)

@@ -27,7 +27,11 @@
 	var/underwear = "Nude"	//Which underwear the player wants
 	var/undershirt = "Nude" //Which undershirt the player wants
 	var/socks = "Nude" //Which socks the player wants
+<<<<<<< HEAD
 	var/backbag = DBACKPACK		//Which backpack type the player has chosen.
+=======
+	var/socks_color = "FFFFFF"
+>>>>>>> 1ddb9935ff... Merge pull request #9530 from Ghommie/Ghommie-cit245
 
 	//Equipment slots
 	var/obj/item/wear_suit = null
