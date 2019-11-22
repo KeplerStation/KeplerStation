@@ -190,16 +190,6 @@
 		else
 			back = backpack //Department backpack
 
-	//converts the uniform string into the path we'll wear, whether it's the skirt or regular variant
-	var/holder
-	if(preference_source && preference_source.prefs.jumpsuit_style == PREF_SKIRT)
-		holder = "[uniform]/skirt"
-		if(!text2path(holder))
-			holder = "[uniform]"
-	else
-		holder = "[uniform]"
-	uniform = text2path(holder)
-
 /datum/outfit/job/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	if(visualsOnly)
 		return
@@ -222,8 +212,6 @@
 		PDA.owner = H.real_name
 		PDA.ownjob = J.title
 		PDA.update_label()
-		if(preference_source && !PDA.equipped) //PDA's screen color, font style and look depend on client preferences.
-			PDA.update_style(preference_source)
 
 /datum/outfit/job/get_chameleon_disguise_info()
 	var/list/types = ..()

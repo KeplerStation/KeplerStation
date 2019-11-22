@@ -1624,7 +1624,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.underwear = underwear
 	character.undershirt = undershirt
 	character.socks = socks
-	character.backbag = backbag
 
 
 	var/datum/species/chosen_species

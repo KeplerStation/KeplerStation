@@ -29,14 +29,7 @@ Assistant
 
 /datum/outfit/job/assistant/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
-	var/suited = !preference_source || preference_source.prefs.jumpsuit_style == PREF_SUIT
 	if (CONFIG_GET(flag/grey_assistants))
-		if(suited)
-			uniform = /obj/item/clothing/under/color/grey
-		else
-			uniform = /obj/item/clothing/under/skirt/color/grey
+		uniform = /obj/item/clothing/under/color/grey
 	else
-		if(suited)
-			uniform = /obj/item/clothing/under/color/random
-		else
-			uniform = /obj/item/clothing/under/skirt/color/random
+		uniform = /obj/item/clothing/under/color/random

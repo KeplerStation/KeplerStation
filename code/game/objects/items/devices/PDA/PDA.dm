@@ -166,7 +166,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	if(equipped || !user.client)
 		return
 	if(user.client)
-		var/pref_skin = GLOB.pda_reskins[C.prefs.pda_skin]
+		var/pref_skin = GLOB.pda_reskins[user.client.prefs.pda_skin]
 		if(icon != pref_skin)
 			icon = pref_skin
 			update_icon(FALSE, TRUE)
