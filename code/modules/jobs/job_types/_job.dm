@@ -173,15 +173,8 @@
 	var/satchel  = /obj/item/storage/backpack/satchel
 	var/duffelbag = /obj/item/storage/backpack/duffelbag
 
-<<<<<<< HEAD
-/datum/outfit/job/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	switch(H.backbag)
-=======
-	var/pda_slot = SLOT_BELT
-
 /datum/outfit/job/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	switch(preference_source?.prefs.backbag)
->>>>>>> 1ddb9935ff... Merge pull request #9530 from Ghommie/Ghommie-cit245
 		if(GBACKPACK)
 			back = /obj/item/storage/backpack //Grey backpack
 		if(GSATCHEL)
@@ -197,9 +190,6 @@
 		else
 			back = backpack //Department backpack
 
-<<<<<<< HEAD
-/datum/outfit/job/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-=======
 	//converts the uniform string into the path we'll wear, whether it's the skirt or regular variant
 	var/holder
 	if(preference_source && preference_source.prefs.jumpsuit_style == PREF_SKIRT)
@@ -211,7 +201,6 @@
 	uniform = text2path(holder)
 
 /datum/outfit/job/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
->>>>>>> 1ddb9935ff... Merge pull request #9530 from Ghommie/Ghommie-cit245
 	if(visualsOnly)
 		return
 
