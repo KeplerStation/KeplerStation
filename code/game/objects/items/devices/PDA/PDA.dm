@@ -165,40 +165,12 @@ GLOBAL_LIST_EMPTY(PDAs)
 	. = ..()
 	if(equipped || !user.client)
 		return
-<<<<<<< HEAD
 	if(user.client)
-		var/pref_skin = GLOB.pda_reskins[user.client.prefs.pda_skin]
+		var/pref_skin = GLOB.pda_reskins[C.prefs.pda_skin]
 		if(icon != pref_skin)
 			icon = pref_skin
 			update_icon(FALSE, TRUE)
 		equipped = TRUE
-=======
-	update_style(user.client)
-
-/obj/item/pda/proc/update_style(client/C)
-	background_color = C.prefs.pda_color
-	switch(C.prefs.pda_style)
-		if(MONO)
-			font_index = MODE_MONO
-			font_mode = FONT_MONO
-		if(SHARE)
-			font_index = MODE_SHARE
-			font_mode = FONT_SHARE
-		if(ORBITRON)
-			font_index = MODE_ORBITRON
-			font_mode = FONT_ORBITRON
-		if(VT)
-			font_index = MODE_VT
-			font_mode = FONT_VT
-		else
-			font_index = MODE_MONO
-			font_mode = FONT_MONO
-	var/pref_skin = GLOB.pda_reskins[C.prefs.pda_skin]
-	if(icon != pref_skin)
-		icon = pref_skin
-		update_icon(FALSE, TRUE)
-	equipped = TRUE
->>>>>>> 1ddb9935ff... Merge pull request #9530 from Ghommie/Ghommie-cit245
 
 /obj/item/pda/proc/update_label()
 	name = "PDA-[owner] ([ownjob])" //Name generalisation
