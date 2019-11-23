@@ -112,11 +112,15 @@
 	throw_range = 7
 	attack_verb = list("HONKED")
 	var/moodlet = "honk" //used to define which kind of moodlet is added to the honked target
-	var/honksound = 'sound/items/bikehorn.ogg'
+	var/list/honksounds = list('sound/items/bikehorn.ogg' = 1)
 
 /obj/item/bikehorn/Initialize()
 	. = ..()
+<<<<<<< HEAD
 	AddComponent(/datum/component/squeak, list(honksound=1), 50)
+=======
+	AddComponent(/datum/component/squeak, honksounds, 50)
+>>>>>>> ea4fdf727b... Merge pull request #9917 from Ghommie/Ghommie-cit384
 
 /obj/item/bikehorn/attack(mob/living/carbon/M, mob/living/carbon/user)
 	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, moodlet, /datum/mood_event/honk)
@@ -132,7 +136,7 @@
 	name = "air horn"
 	desc = "Damn son, where'd you find this?"
 	icon_state = "air_horn"
-	honksound = 'sound/items/airhorn2.ogg'
+	honksounds = list('sound/items/airhorn2.ogg' = 1)
 
 //golden bikehorn
 /obj/item/bikehorn/golden
