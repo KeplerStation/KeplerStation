@@ -132,7 +132,7 @@
 	name = "air horn"
 	desc = "Damn son, where'd you find this?"
 	icon_state = "air_horn"
-	honksound = 'sound/items/airhorn2.ogg'
+	honksounds = list('sound/items/airhorn2.ogg' = 1)
 
 //golden bikehorn
 /obj/item/bikehorn/golden
