@@ -805,11 +805,6 @@
 	if(admin_revive)
 		regenerate_limbs()
 		regenerate_organs()
-		// KEPLER CHANGE: Fix broken bones
-		for(var/obj/item/bodypart/BP in bodyparts)
-			BP.bone_status = BONE_FLAG_NORMAL
-		update_inv_splints()
-		// END KEPLER CHANGE
 	remove_all_embedded_objects()
 	set_heartattack(FALSE)
 	drunkenness = 0
