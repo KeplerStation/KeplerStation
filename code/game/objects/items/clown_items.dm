@@ -124,7 +124,11 @@
 
 /obj/item/bikehorn/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] solemnly points the horn at [user.p_their()] temple! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+<<<<<<< HEAD
 	playsound(src, 'sound/items/bikehorn.ogg', 50, 1)
+=======
+	playsound(src, pickweight(honksounds), 50, 1)
+>>>>>>> 037b278e9e... Merge pull request #9918 from Ghommie/Ghommie-cit384
 	return (BRUTELOSS)
 
 //air horn
