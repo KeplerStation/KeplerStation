@@ -947,9 +947,13 @@
 /obj/item/clothing/suit/space/hardsuit/lavaknight/worn_overlays(isinhands = FALSE, icon_file)
 	. = ..()
 	if(!isinhands)
+<<<<<<< HEAD
 		var/mutable_appearance/energy_overlay
 		energy_overlay = mutable_appearance(icon_file, "knight_cydonia_overlay", ABOVE_LIGHTING_LAYER)
 
+=======
+		var/mutable_appearance/energy_overlay = mutable_appearance(icon_file, "knight_cydonia_overlay", ABOVE_LIGHTING_LAYER)
+>>>>>>> 47b5dbeaaa... Merge pull request #9625 from Ghommie/Ghommie-cit277
 		energy_overlay.plane = ABOVE_LIGHTING_LAYER
 		energy_overlay.color = energy_color
 		. += energy_overlay
