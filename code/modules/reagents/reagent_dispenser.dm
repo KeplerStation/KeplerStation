@@ -57,6 +57,43 @@
 	reagent_id = "firefighting_foam"
 	tank_volume = 500
 
+<<<<<<< HEAD
+=======
+/obj/structure/reagent_dispensers/water_cooler
+	name = "liquid cooler"
+	desc = "A machine that dispenses liquid to drink."
+	icon = 'icons/obj/vending.dmi'
+	icon_state = "water_cooler"
+	anchored = TRUE
+	tank_volume = 500
+	var/paper_cups = 25 //Paper cups left from the cooler
+
+/obj/structure/reagent_dispensers/water_cooler/examine(mob/user)
+	. = ..()
+	if (paper_cups > 1)
+		. += "There are [paper_cups] paper cups left."
+	else if (paper_cups == 1)
+		. += "There is one paper cup left."
+	else
+		. += "There are no paper cups left."
+
+/obj/structure/reagent_dispensers/water_cooler/attack_hand(mob/living/user)
+	. = ..()
+	if(.)
+		return
+	if(!paper_cups)
+		to_chat(user, "<span class='warning'>There aren't any cups left!</span>")
+		return
+	user.visible_message("<span class='notice'>[user] takes a cup from [src].</span>", "<span class='notice'>You take a paper cup from [src].</span>")
+	var/obj/item/reagent_containers/food/drinks/sillycup/S = new(get_turf(src))
+	user.put_in_hands(S)
+	paper_cups--
+
+//////////////
+//Fuel Tanks//
+//////////////
+
+>>>>>>> c81d1fe7a3... Merge pull request #9867 from Ghommie/Ghommie-cit375
 /obj/structure/reagent_dispensers/fueltank
 	name = "fuel tank"
 	desc = "A tank full of industrial welding fuel. Do not consume."

@@ -238,7 +238,12 @@ SLIME SCANNER
 		else if (S.mutantstomach != initial(S.mutantstomach))
 			mutant = TRUE
 
+<<<<<<< HEAD
 		msg += "<span class='info'>Species: [S.name]</span>\n"
+=======
+		msg += "\t<span class='info'>Reported Species: [H.dna.custom_species ? H.dna.custom_species : S.name]</span>\n"
+		msg += "\t<span class='info'>Base Species: [S.name]</span>\n"
+>>>>>>> c81d1fe7a3... Merge pull request #9867 from Ghommie/Ghommie-cit375
 		if(mutant)
 			msg += "<span class='info'>Subject has mutations present.</span>"
 	msg += "<span class='info'>Body temperature: [round(M.bodytemperature-T0C,0.1)] &deg;C ([round(M.bodytemperature*1.8-459.67,0.1)] &deg;F)</span>\n"
@@ -378,7 +383,7 @@ SLIME SCANNER
 
 /obj/item/analyzer/examine(mob/user)
 	. = ..()
-	to_chat(user, "<span class='notice'>Alt-click [src] to activate the barometer function.</span>")
+	. += "<span class='notice'>Alt-click [src] to activate the barometer function.</span>"
 
 /obj/item/analyzer/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] begins to analyze [user.p_them()]self with [src]! The display shows that [user.p_theyre()] dead!</span>")

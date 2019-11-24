@@ -979,6 +979,11 @@
 			update_light()
 
 /obj/item/clothing/suit/space/hardsuit/lavaknight/examine(mob/user)
+<<<<<<< HEAD
 	..()
 	to_chat(user, "<span class='notice'>Alt-click to recolor it.</span>")
 */
+=======
+	. = ..()
+	. += "<span class='notice'>Alt-click to recolor it.</span>"
+>>>>>>> c81d1fe7a3... Merge pull request #9867 from Ghommie/Ghommie-cit375

@@ -111,6 +111,13 @@
 		user.visible_message("<span class='warning'>[src] fizzles and sparks. It seems like it's out of charges.</span>")
 		playsound(src, 'sound/effects/light_flicker.ogg', 100, 1)
 
+<<<<<<< HEAD
+=======
+/obj/item/card/emag/examine(mob/user)
+	. = ..()
+	. += "<span class='notice'>It has <b>[uses ? uses : "no"]</b> charges left.</span>"
+
+>>>>>>> c81d1fe7a3... Merge pull request #9867 from Ghommie/Ghommie-cit375
 /obj/item/card/emag/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/emagrecharge))
 		var/obj/item/emagrecharge/ER = W
@@ -135,9 +142,9 @@
 /obj/item/emagrecharge/examine(mob/user)
 	. = ..()
 	if(uses)
-		to_chat(user, "<span class='notice'>It can add up to [uses] charges to compatible devices</span>")
+		. += "<span class='notice'>It can add up to [uses] charges to compatible devices</span>"
 	else
-		to_chat(user, "<span class='warning'>It has a small, red, blinking light coming from inside of it. It's spent.</span>")
+		. += "<span class='warning'>It has a small, red, blinking light coming from inside of it. It's spent.</span>"
 
 /obj/item/card/emagfake
 	desc = "It's a card with a magnetic strip attached to some circuitry. Closer inspection shows that this card is a poorly made replica, with a \"DonkCo\" logo stamped on the back."
@@ -189,9 +196,9 @@
 		return
 
 /obj/item/card/id/examine(mob/user)
-	..()
+	. = ..()
 	if(mining_points)
-		to_chat(user, "There's [mining_points] mining equipment redemption point\s loaded onto this card.")
+		. += "There's [mining_points] mining equipment redemption point\s loaded onto this card."
 
 /obj/item/card/id/GetAccess()
 	return access
@@ -401,13 +408,13 @@ update_label("John Doe", "Clowny")
 /obj/item/card/id/prisoner/examine(mob/user)
 	. = ..()
 	if(sentence && world.time < sentence)
-		to_chat(user, "<span class='notice'>You're currently serving a sentence for [crime]. <b>[DisplayTimeText(sentence - world.time)]</b> left.</span>")
+		. += "<span class='notice'>You're currently serving a sentence for [crime]. <b>[DisplayTimeText(sentence - world.time)]</b> left.</span>"
 	else if(goal)
-		to_chat(user, "<span class='notice'>You have accumulated [points] out of the [goal] points you need for freedom.</span>")
+		. += "<span class='notice'>You have accumulated [points] out of the [goal] points you need for freedom.</span>"
 	else if(!sentence)
-		to_chat(user, "<span class='warning'>You are currently serving a permanent sentence for [crime].</span>")
+		. += "<span class='warning'>You are currently serving a permanent sentence for [crime].</span>"
 	else
-		to_chat(user, "<span class='notice'>Your sentence is up! You're free!</span>")
+		. += "<span class='notice'>Your sentence is up! You're free!</span>"
 
 /obj/item/card/id/prisoner/one
 	name = "Prisoner #13-001"
@@ -529,8 +536,8 @@ update_label("John Doe", "Clowny")
 	update_icon()
 
 /obj/item/card/id/knight/examine(mob/user)
-	..()
-	to_chat(user, "<span class='notice'>Alt-click to recolor it.</span>")
+	. = ..()
+	. += "<span class='notice'>Alt-click to recolor it.</span>"
 
 /obj/item/card/id/knight/blue
 	id_color = "#0000FF"
