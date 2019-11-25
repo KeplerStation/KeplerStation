@@ -53,7 +53,8 @@
 		return
 
 	var/turf/open/T = get_turf(parent)
-	if(abs(ONE_ATMOSPHERE - T.return_air().return_pressure()) > (potency/10 + 10)) // clouds can begin showing at around 50-60 potency in standard atmos
+	var/datum/gas_mixture/turf/atm = T.return_air()
+	if(abs(ONE_ATMOSPHERE - atm.return_pressure()) > (potency/10 + 10)) // clouds can begin showing at around 50-60 potency in standard atmos
 		return
 
 	var/datum/gas_mixture/stank = new
