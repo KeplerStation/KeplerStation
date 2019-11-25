@@ -1,6 +1,0 @@
-author: "KeplerStation-Bot"
-delete-after: True
-changes: 
-  - rscadd: "Added traumas"
-  - rscadd: "Added science powergame tool"
-  - tweak: "a few hearing args"
