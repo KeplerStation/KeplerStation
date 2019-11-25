@@ -62,6 +62,11 @@
 	M.SetSleeping(0, 0)
 	M.jitteriness = 0
 	M.cure_all_traumas(TRAUMA_RESILIENCE_MAGIC)
+	// KEPLER CHANGE: Fixing broken bones
+	for(var/obj/item/bodypart/BP in M.bodyparts)
+		BP.bone_status = BONE_FLAG_NORMAL
+	M.update_inv_splints()
+	// END KEPLER CHANGE
 	if(M.blood_volume < (BLOOD_VOLUME_NORMAL*M.blood_ratio))
 		M.blood_volume = (BLOOD_VOLUME_NORMAL*M.blood_ratio)
 
