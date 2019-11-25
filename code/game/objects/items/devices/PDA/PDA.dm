@@ -103,12 +103,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 
 /obj/item/pda/examine(mob/user)
 	. = ..()
-<<<<<<< HEAD
-	var/dat = id ? "<span class='notice'>Alt-click to remove the id.</span>" : ""
-	
-=======
 	. += id ? "<span class='notice'>Alt-click to remove the id.</span>" : ""
->>>>>>> c81d1fe7a3... Merge pull request #9867 from Ghommie/Ghommie-cit375
 	if(inserted_item && (!isturf(loc)))
 		. += "<span class='notice'>Ctrl-click to remove [inserted_item].</span>"
 	if(LAZYLEN(GLOB.pda_reskins))

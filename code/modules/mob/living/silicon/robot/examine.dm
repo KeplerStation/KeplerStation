@@ -1,9 +1,5 @@
 /mob/living/silicon/robot/examine(mob/user)
-<<<<<<< HEAD
-	var/msg = "<span class='info'>*---------*\nThis is [icon2html(src, user)] \a <EM>[src]</EM>!\n"
-=======
-	. = list("<span class='info'>*---------*\nThis is [icon2html(src, user)] \a <EM>[src]</EM>, a [src.module.name] unit!")
->>>>>>> c81d1fe7a3... Merge pull request #9867 from Ghommie/Ghommie-cit375
+	. = list("<span class='info'>*---------*\nThis is [icon2html(src, user)] \a <EM>[src]</EM>!\n")
 	if(desc)
 		. += "[desc]"
 

@@ -26,11 +26,7 @@
 		else if(skipface)
 			. += "You can't make out what species they are."
 		else
-<<<<<<< HEAD
-			msg += "[t_He] [t_is] a [pref_species.name]!\n"
-=======
-			. += "[t_He] [t_is] a [H.dna.custom_species ? H.dna.custom_species : pref_species.name]!"
->>>>>>> c81d1fe7a3... Merge pull request #9867 from Ghommie/Ghommie-cit375
+			. += "[t_He] [t_is] a [pref_species.name]!\n"
 
 	//uniform
 	if(w_uniform && !(SLOT_W_UNIFORM in obscured))
@@ -110,20 +106,6 @@
 	if(!isnull(effects_exam))
 		. += effects_exam
 
-<<<<<<< HEAD
-=======
-	//CIT CHANGES START HERE - adds genital details to examine text
-	if(LAZYLEN(internal_organs))
-		for(var/obj/item/organ/genital/dicc in internal_organs)
-			if(istype(dicc) && dicc.is_exposed())
-				. += "[dicc.desc]"
-
-	var/cursed_stuff = attempt_vr(src,"examine_bellies",args) //vore Code
-	if(!isnull(cursed_stuff))
-		. += cursed_stuff
-//END OF CIT CHANGES
-
->>>>>>> c81d1fe7a3... Merge pull request #9867 from Ghommie/Ghommie-cit375
 	//Jitters
 	switch(jitteriness)
 		if(300 to INFINITY)
@@ -151,7 +133,7 @@
 		if(B.bone_status == BONE_FLAG_SPLINTED)
 			splinted_stuff += B.name
 	if(splinted_stuff.len)
-		msg += "<span class='warning'><B>[t_His] [english_list(splinted_stuff)] [splinted_stuff.len > 1 ? "are" : "is"] splinted!</B></span>\n"
+		. += "<span class='warning'><B>[t_His] [english_list(splinted_stuff)] [splinted_stuff.len > 1 ? "are" : "is"] splinted!</B></span>\n"
 
 	if(get_bodypart(BODY_ZONE_HEAD) && !getorgan(/obj/item/organ/brain))
 		. += "<span class='deadsay'>It appears that [t_his] brain is missing...</span>"
@@ -176,12 +158,8 @@
 		if(!(BP.get_damage(include_stamina = FALSE) >= BP.max_damage)) //Stamina is disabling the limb
 			damage_text = "limp and lifeless"
 		else
-<<<<<<< HEAD
 			var/more_brute = BP.brute_dam >= BP.burn_dam
 			damage_text = more_brute ? "bruised and mangled" : "burnt and blistered"
-=======
-			damage_text = (BP.brute_dam >= BP.burn_dam) ? BP.heavy_brute_msg : BP.heavy_burn_msg
->>>>>>> c81d1fe7a3... Merge pull request #9867 from Ghommie/Ghommie-cit375
 		msg += "<B>[capitalize(t_his)] [BP.name] is [damage_text]!</B>\n"
 
 	//stores missing limbs
