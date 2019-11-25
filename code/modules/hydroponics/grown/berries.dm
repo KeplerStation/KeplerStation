@@ -162,6 +162,34 @@
 	tastes = list("blue cherry" = 1)
 	wine_power = 50
 
+<<<<<<< HEAD
+=======
+//Cherry Bulbs
+/obj/item/seeds/cherry/bulb
+	name = "pack of cherry bulb pits"
+	desc = "The glowy kind of cherries."
+	icon_state = "seed-cherrybulb"
+	species = "cherrybulb"
+	plantname = "Cherry Bulb Tree"
+	product = /obj/item/reagent_containers/food/snacks/grown/cherrybulbs
+	genes = list(/datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/glow/pink)
+	mutatelist = list()
+	reagents_add = list("nutriment" = 0.07, "sugar" = 0.07)
+	rarity = 10
+
+/obj/item/reagent_containers/food/snacks/grown/cherrybulbs
+	seed = /obj/item/seeds/cherry/bulb
+	name = "cherry bulbs"
+	desc = "They're like little Space Christmas lights!"
+	icon_state = "cherry_bulb"
+	filling_color = "#FF0000"
+	bitesize_mod = 2
+	foodtype = FRUIT
+	grind_results = list("cherryjelly" = 0)
+	tastes = list("cherry" = 1)
+	wine_power = 50
+
+>>>>>>> 8219d298a5... Merge pull request #9942 from Useroth/new-tg-plants
 // Grapes
 /obj/item/seeds/grape
 	name = "pack of grape seeds"

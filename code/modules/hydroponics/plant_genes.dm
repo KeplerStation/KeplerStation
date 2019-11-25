@@ -132,6 +132,18 @@
 			return FALSE
 	return TRUE
 
+<<<<<<< HEAD
+=======
+/datum/plant_gene/reagent/polypyr
+	name = "Polypyrylium Oligomers"
+	reagent_id = "polypyr"
+	rate = 0.15
+
+/datum/plant_gene/reagent/liquidelectricity
+	name = "Liquid Electricity"
+	reagent_id = "liquidelectricity"
+	rate = 0.1
+>>>>>>> 8219d298a5... Merge pull request #9942 from Useroth/new-tg-plants
 
 // Various traits affecting the product. Each must be somehow useful.
 /datum/plant_gene/trait
