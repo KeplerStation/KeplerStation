@@ -15,6 +15,16 @@
 	var/arousable = TRUE
 	var/widescreenpref = TRUE
 	var/autostand = TRUE
+<<<<<<< HEAD
+=======
+	var/lewdchem = FALSE
+
+	//vore prefs
+	var/toggleeatingnoise = TRUE
+	var/toggledigestionnoise = TRUE
+	var/hound_sleeper = TRUE
+	var/cit_toggles = TOGGLES_CITADEL
+>>>>>>> 6b53845f06... Merge pull request #9268 from Thalpy/FERMICHEMCurTweaks
 
 	// stuff that was in base
 	max_save_slots = 10
