@@ -34,10 +34,7 @@
 	new /obj/item/gun/energy/e_gun(src)
 	new /obj/item/door_remote/captain(src)
 	new /obj/item/storage/photo_album/Captain(src)
-<<<<<<< HEAD
-=======
 	new /obj/item/clothing/head/caphat/beret/white(src)
->>>>>>> 2aa0211121... Merge pull request #9906 from Xantholne/xantholne-berets02
 
 /obj/structure/closet/secure_closet/hop
 	name = "\proper head of personnel's locker"
@@ -68,10 +65,7 @@
 	new /obj/item/circuitboard/machine/techfab/department/service(src)
 	new /obj/item/storage/photo_album/HoP(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/hop(src)
-<<<<<<< HEAD
-=======
 	new /obj/item/clothing/head/hopcap/beret/white(src)
->>>>>>> 2aa0211121... Merge pull request #9906 from Xantholne/xantholne-berets02
 
 /obj/structure/closet/secure_closet/hos
 	name = "\proper head of security's locker"
@@ -135,11 +129,8 @@
 	new /obj/item/clothing/gloves/krav_maga/sec(src)
 	new /obj/item/door_remote/head_of_security(src)
 	new /obj/item/gun/ballistic/shotgun/automatic/combat/compact(src)
-<<<<<<< HEAD
-
-=======
 	new /obj/item/clothing/head/beret/sec/corporatewarden(src)
->>>>>>> 2aa0211121... Merge pull request #9906 from Xantholne/xantholne-berets02
+	
 /obj/structure/closet/secure_closet/security
 	name = "security officer's locker"
 	req_access = list(ACCESS_SECURITY)
