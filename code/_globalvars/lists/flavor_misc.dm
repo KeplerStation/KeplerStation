@@ -64,12 +64,7 @@ GLOBAL_LIST_INIT(ai_core_display_screens, list(
 	"Hades",
 	"Heartline",
 	"Helios",
-<<<<<<< HEAD
 	"Horizons",
-=======
-	"Hotdog",
-	"Hourglass",
->>>>>>> 8b56e25d97... Merge pull request #9920 from YakumoChen/ai-sprites
 	"House",
 	"Inverted",
 	"Jack",
