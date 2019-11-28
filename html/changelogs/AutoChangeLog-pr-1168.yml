@@ -1,4 +1,0 @@
-author: "AffectedArc07"
-delete-after: True
-changes: 
-  - bugfix: "Washing gloves no longer makes an infinite recursion loop"
