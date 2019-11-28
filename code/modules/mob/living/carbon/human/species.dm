@@ -667,8 +667,10 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				if("moth_wings")
 					S = GLOB.moth_wings_list[H.dna.features["moth_wings"]]
 				if("moth_markings")
+				//KEPLER CHANGE
 					S = GLOB.moth_markings_list[H.dna.features["moth_markings"]]
 				if("caps")
+				//END KEPLER CHANGE
 					S = GLOB.caps_list[H.dna.features["caps"]]
 			if(!S || S.icon_state == "none")
 				continue

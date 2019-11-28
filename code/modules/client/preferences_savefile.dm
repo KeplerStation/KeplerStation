@@ -462,7 +462,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_lizard_body_markings"]	, features["body_markings"])
 	WRITE_FILE(S["feature_lizard_legs"]			, features["legs"])
 	WRITE_FILE(S["feature_moth_wings"]			, features["moth_wings"])
-	WRITE_FILE(S["feature_moth_markings"]		, features["moth_markings"])
 
 	//Custom names
 	for(var/custom_name_id in GLOB.preferences_custom_names)
@@ -483,6 +482,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["negative_quirks"]		, negative_quirks)
 	WRITE_FILE(S["neutral_quirks"]		, neutral_quirks)
 
+	//KEPLER CHANGE
+	WRITE_FILE(S["feature_moth_markings"]		, features["moth_markings"])
+
+	//Citadel
 	cit_character_pref_save(S)
 
 	return 1
