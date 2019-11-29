@@ -3098,4 +3098,5 @@
 #include "modular_kepler\code\modules\oracle_ui\themed.dm"
 #include "modular_kepler\code\modules\vr\vr_levels.dm"
 #include "modular_kepler\interface\skin.dmf"
+#include "modular_kepler\code\modules\mob\dead\new_player\sprite_accessories\moth_markings.dm"
 // END_INCLUDE
