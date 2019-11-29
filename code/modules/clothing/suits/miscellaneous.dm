@@ -745,8 +745,6 @@
 	flags_inv = HIDEGLOVES|HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS|HEAD
 	alternate_worn_layer = UNDER_HEAD_LAYER
-<<<<<<< HEAD
-=======
 
 /obj/item/clothing/suit/flakjack
 	name = "flak jacket"
@@ -768,4 +766,3 @@
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	flags_inv = HIDEJUMPSUIT
 	resistance_flags = NONE
->>>>>>> 7495ce602a... Merge pull request #9693 from Ghommie/Ghommie-cit310
