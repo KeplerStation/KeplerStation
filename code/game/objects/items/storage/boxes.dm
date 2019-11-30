@@ -831,7 +831,7 @@
 
 
 #define NODESIGN "None"
-#define NANOTRASEN "NanotrasenStandard"
+#define NANOTRASEN "HorizonsStandard"
 #define SYNDI "SyndiSnacks"
 #define HEART "Heart"
 #define SMILEY "SmileyFace"

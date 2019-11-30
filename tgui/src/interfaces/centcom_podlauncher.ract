@@ -1,8 +1,8 @@
 <ui-notice>
-    <span>To use this, simply spawn the atoms you want in one of the four Centcom Supplypod Bays. Items in the bay will then be launched inside your supplypod, one turf-full at a time! You can optionally use the following buttons to configure how the supplypod acts.</span>
+    <span>To use this, simply spawn the atoms you want in one of the four Head Office Supplypod Bays. Items in the bay will then be launched inside your supplypod, one turf-full at a time! You can optionally use the following buttons to configure how the supplypod acts.</span>
 </ui-notice>
 
-<ui-display title='Centcom Pod Customization (to be used against helen weinstein)'>
+<ui-display title='Head Office Pod Customization (to be used against helen weinstein)'>
    <ui-section label = 'Which supplypod bay will you use?'>
         <ui-button style='{{data.bay == 1 ? "selected" : null}}' action='bay1'>Bay #1</ui-button>
         <ui-button style='{{data.bay == 2 ? "selected" : null}}' action='bay2'>Bay #2</ui-button>
@@ -11,13 +11,13 @@
     </ui-section>
 
     <ui-section label = 'Useful teleport tools!'>
-        <ui-button action='teleportCentcom'>Teleport to Centcom's Supplypod Loading Bay</ui-button>
+        <ui-button action='teleportCentcom'>Teleport to Head Office's Supplypod Loading Bay</ui-button>
         <ui-button state='{{data.oldArea ? null : "disabled"}}'action='teleportBack'>Teleport Back to {{data.oldArea ? data.oldArea : "where you were"}}</ui-button>
     </ui-section>
 
     <ui-section label='Keep stuff after launching?'>
         <ui-button style='{{data.launchClone ? "selected" : null}}' action='launchClone' tooltip-side='left'
-        tooltip='Choosing this will create a duplicate of the item to be launched in Centcom, allowing you to send one type of item multiple times. Either way, the atoms are forceMoved into the supplypod after it lands (but before it opens).'>Clone and Launch</ui-button>
+        tooltip='Choosing this will create a duplicate of the item to be launched in Head Office, allowing you to send one type of item multiple times. Either way, the atoms are forceMoved into the supplypod after it lands (but before it opens).'>Clone and Launch</ui-button>
     </ui-section>
 
     <ui-section label='Launch all at once?'>
@@ -53,7 +53,7 @@
         <ui-button style='{{data.effectQuiet ? "selected" : null}}' action='effectQuiet' tooltip-side='left'
         tooltip='This will keep the supplypod from making any sounds, except for those specifically set by admins in the Sound section.'>Quiet Landing</ui-button>
         <ui-button style='{{data.effectReverse ? "selected" : null}}' action='effectReverse' tooltip-side='left'
-        tooltip='This pod will not send any items. Instead, after landing, the supplypod will close (similar to a normal closet closing), and then launch back to the right centcom bay to drop off any new contents.'>Reverse Mode</ui-button>
+        tooltip='This pod will not send any items. Instead, after landing, the supplypod will close (similar to a normal closet closing), and then launch back to the right bay at Head Office to drop off any new contents.'>Reverse Mode</ui-button>
         <ui-button style='{{data.effectMissile ? "selected" : null}}' action='effectMissile' tooltip-side='left'
         tooltip='This pod will not send any items. Instead, it will immediatley delete after landing (Similar visually to setting openDelay & departDelay to 0, but this looks nicer). Useful if you just wanna fuck some shit up. Combos well with the Missile style.'>Missile Mode</ui-button>
         <ui-button style='{{data.effectCircle ? "selected" : null}}' action='effectCircle' tooltip-side='left'
@@ -72,7 +72,7 @@
          <ui-button style='{{data.openingSound ? "selected" : null}}' action='openingSound' tooltip-side='left'
         tooltip='Choose a sound to play when the pod opens.'>Custom Opening Sound</ui-button>
         <ui-button style='{{data.leavingSound ? "selected" : null}}' action='leavingSound' tooltip-side='left'
-        tooltip='Choose a sound to play when the pod departs (whether that be delection in the case of a bluespace pod, or leaving for centcom for a reversing pod).'>Custom Leaving Sound</ui-button>
+        tooltip='Choose a sound to play when the pod departs (whether that be delection in the case of a bluespace pod, or leaving for Head Office for a reversing pod).'>Custom Leaving Sound</ui-button>
         <ui-button style='{{data.soundVolume ? "selected" : null}}' action='soundVolume' tooltip-side='left'
         tooltip='Choose the volume for the sound to play at. Default values are between 1 and 100, but hey, do whatever. Im a tooltip, not a cop.'>Admin Sound Volume</ui-button>
     </ui-section>
@@ -88,23 +88,23 @@
 
     <ui-section label='Style?'>
         <ui-button style='{{data.styleChoice == 1 ? "selected" : null}}' action='styleStandard' tooltip-side='left'
-        tooltip='Changes the pods style from the default Centcom color scheme to your standard Nanotrasen black and orange. Same color scheme as the normal station-used supplypods.'>Standard</ui-button>
+        tooltip='Changes the pods style from the default Head Office color scheme to your standard Horizons black and orange. Same color scheme as the normal station-used supplypods.'>Standard</ui-button>
         <ui-button style='{{data.styleChoice == 2 ? "selected" : null}}' action='styleBluespace' tooltip-side='left'
-        tooltip='Changes the pods style from the default Centcom color scheme to the same as the stations upgraded blue-and-white Bluespace Supplypods.'>Advanced</ui-button>
+        tooltip='Changes the pods style from the default Head Office color scheme to the same as the stations upgraded blue-and-white Bluespace Supplypods.'>Advanced</ui-button>
         <ui-button style='{{data.styleChoice == 4 ? "selected" : null}}' action='styleSyndie' tooltip-side='left'
-        tooltip='Changes the pods style from the default Centcom color scheme to a menacing black and blood-red. Great for sending meme-ops in style!'>Syndicate</ui-button>
+        tooltip='Changes the pods style from the default Head Office color scheme to a menacing black and blood-red. Great for sending meme-ops in style!'>Syndicate</ui-button>
         <ui-button style='{{data.styleChoice == 5 ? "selected" : null}}' action='styleBlue' tooltip-side='left'
-        tooltip='Changes the pods style from the default Centcom color scheme to a menacing black and dark blue. Great for sending deathsquads in style!'>Deathsquad</ui-button>
+        tooltip='Changes the pods style from the default Head Office color scheme to a menacing black and dark blue. Great for sending deathsquads in style!'>Deathsquad</ui-button>
          <ui-button style='{{data.styleChoice == 6 ? "selected" : null}}' action='styleCult' tooltip-side='left'
-        tooltip='Changes the pods style from the default Centcom style to a blood and rune covered cult pod!'>Cult Pod</ui-button>
+        tooltip='Changes the pods style from the default Head Office style to a blood and rune covered cult pod!'>Cult Pod</ui-button>
         <ui-button style='{{data.styleChoice == 7 ? "selected" : null}}' action='styleMissile' tooltip-side='left'
-        tooltip='Changes the pods style from the default Centcom style to a large missile. Combos well with a missile mode, so the missile doesnt stick around after landing.'>Missile</ui-button>
+        tooltip='Changes the pods style from the default Head Office style to a large missile. Combos well with a missile mode, so the missile doesnt stick around after landing.'>Missile</ui-button>
         <ui-button style='{{data.styleChoice == 8 ? "selected" : null}}' action='styleSMissile' tooltip-side='left'
-        tooltip='Changes the pods style from the default Centcom style to a large blood-red missile. Combos well with missile mode, so the missile doesnt stick around after landing.'>Syndicate Missile</ui-button>
+        tooltip='Changes the pods style from the default Head Office style to a large blood-red missile. Combos well with missile mode, so the missile doesnt stick around after landing.'>Syndicate Missile</ui-button>
         <ui-button style='{{data.styleChoice == 9 ? "selected" : null}}' action='styleBox' tooltip-side='left'
-        tooltip='Changes the pods style from the default Centcom style to a large, dark-green military supply crate.'>Supply Crate</ui-button>
+        tooltip='Changes the pods style from the default Head Office style to a large, dark-green military supply crate.'>Supply Crate</ui-button>
         <ui-button style='{{data.styleChoice == 10 ? "selected" : null}}' action='styleHONK' tooltip-side='left'
-        tooltip='Changes the pods style from the default Centcom color scheme to a colorful, clown inspired look.'>HONK</ui-button>
+        tooltip='Changes the pods style from the default Head Office color scheme to a colorful, clown inspired look.'>HONK</ui-button>
         <ui-button style='{{data.styleChoice == 11 ? "selected" : null}}' action='styleFruit' tooltip-side='left'
         tooltip='for when an orange is angry'>Fruit~</ui-button>
         <ui-button style='{{data.styleChoice== 12 ? "selected" : null}}' action='styleInvisible' tooltip-side='left'
