@@ -56973,6 +56973,10 @@
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
+"mGw" = (
+/obj/machinery/vending/autodrobe/all_access,
+/turf/open/floor/plasteel,
+/area/crew_quarters/locker)
 "mNi" = (
 /obj/machinery/light_switch{
 	pixel_x = -20
@@ -76820,7 +76824,7 @@ aLH
 aLE
 aOl
 aPA
-aQN
+mGw
 aQN
 aQN
 aUt
