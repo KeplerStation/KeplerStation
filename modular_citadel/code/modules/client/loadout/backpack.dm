@@ -58,6 +58,7 @@
 	category = SLOT_IN_BACKPACK
 	path = /obj/item/toy/tennis/purple
 
+<<<<<<< HEAD
 /datum/gear/paperbin
 	name = "Paper Bin"
 	category = SLOT_IN_BACKPACK
@@ -67,6 +68,12 @@
 	name = "Box of crayons"
 	category = SLOT_IN_BACKPACK
 	path = /obj/item/storage/crayons
+=======
+/datum/gear/dildo
+	name = "Customizable dildo"
+	category = SLOT_IN_BACKPACK
+	path = /obj/item/dildo/custom
+>>>>>>> fde3f52212... Merge pull request #10005 from Commandersand/loadoutcit
 
 /datum/gear/toykatana
 	name = "Toy Katana"
@@ -95,3 +102,24 @@
 	name = "Spare cassette tape"
 	category = SLOT_IN_BACKPACK
 	path = /obj/item/tape/random
+
+/datum/gear/paperbin
+	name = "Paper Bin"
+	category = SLOT_IN_BACKPACK
+	path = /obj/item/paper_bin
+
+/datum/gear/crayons
+	name = "Box of crayons"
+	category = SLOT_IN_BACKPACK
+	path = /obj/item/storage/crayons
+
+/datum/gear/multipen
+	name = "A multicolored pen"
+	category = SLOT_IN_BACKPACK
+	path = /obj/item/pen/fourcolor
+
+/datum/gear/fountainpen
+	name = "A fancy pen"
+	category = SLOT_IN_BACKPACK
+	path = /obj/item/pen/fountain
+	cost = 2
