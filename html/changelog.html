@@ -56,15 +56,31 @@
 		-->
 		<div class="commit sansserif">
 			<h2 class="date">01 December 2019</h2>
+			<h3 class="author">Bhijn updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="code_imp">Item mousedrop() now provides a return value indicating whether or not behavior has been overridden somehow.</li>
+				<li class="bugfix">Defibs now properly check that their loc is the same as the user for mousedrop() calls, meaning ghosts can no longer make you equip defibs. Plus extra sanity checks.</li>
+				<li class="bugfix">Pet carriers no longer attack turfs while trying to unload their contents.</li>
+				<li class="bugfix">Decks of cards now function as they originally intended when attempting to use their drag and drop behavior.</li>
+				<li class="bugfix">Paper bins and papercutters no longer act wonky when you're trying to pull a piece of paper from them.</li>
+				<li class="bugfix">Adds clothing drag n drop sanity checks.</li>
+				<li class="bugfix">Sythetic hats now have extra sanity checks</li>
+			</ul>
 			<h3 class="author">KeplerStation-Bot updated:</h3>
 			<ul class="changes bgimages16">
 				<li class="rscadd">extradimensional oranges now contain haloperidol</li>
 				<li class="bugfix">extradimensional oranges now actually grow properly and give proper seeds.</li>
+				<li class="bugfix">Fixing implant cases being lost inside implant pads when trying to eject them with your active hand full.</li>
+				<li class="tweak">Moved the implant pad's case ejection from attack_hand() to AltClick(), added examination infos about it.</li>
 			</ul>
 			<h3 class="author">Putnam updated:</h3>
 			<ul class="changes bgimages16">
 				<li class="bugfix">Threat log now accurately represents what actually used the threat.</li>
 				<li class="tweak">Verbose threat log (admin-only) now shows ALL threat level changes.</li>
+			</ul>
+			<h3 class="author">Tetr4 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Turning a tile with gas effects into space now gets rid of the effects.</li>
 			</ul>
 
 			<h2 class="date">30 November 2019</h2>
