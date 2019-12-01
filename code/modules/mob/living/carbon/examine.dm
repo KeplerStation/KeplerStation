@@ -38,7 +38,11 @@
 			continue
 		msg += "<span class='warning'><B>[t_His] [parse_zone(t)] is missing!</B></span>\n"
 
+<<<<<<< HEAD
 	msg += "<span class='warning'>"
+=======
+	var/list/msg = list()
+>>>>>>> e1a9c8e6d3... Merge pull request #9972 from Ghommie/Ghommie-cit403
 	var/temp = getBruteLoss()
 	if(!(user == src && src.hal_screwyhud == SCREWYHUD_HEALTHY)) //fake healthy
 		if(temp)
@@ -78,7 +82,12 @@
 	if(pulledby && pulledby.grab_state)
 		msg += "[t_He] [t_is] restrained by [pulledby]'s grip.\n"
 
+<<<<<<< HEAD
 	msg += "</span>"
+=======
+	if(msg.len)
+		. += "<span class='warning'>[msg.Join("")]</span>"
+>>>>>>> e1a9c8e6d3... Merge pull request #9972 from Ghommie/Ghommie-cit403
 
 	if(!appears_dead)
 		if(stat == UNCONSCIOUS)
