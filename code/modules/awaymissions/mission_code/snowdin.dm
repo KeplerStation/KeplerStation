@@ -373,7 +373,7 @@
 	PRESET /datum/preset_holoimage/captain
 	NAME Caleb Reed
 	DELAY 10
-	SAY Paid in experience! That's the Horizons Motto!
+	SAY Paid in adventure! That's the Horizons Motto!
 	DELAY 30;"}
 
 /obj/item/disk/holodisk/snowdin/welcometodie
@@ -386,7 +386,7 @@
 	DELAY 30
 	SAY You have been selected out of $)@! potential candidates for this post!
 	DELAY 30
-	SAY Horizons is pleased to have you working in one of the many top-of-the-line research posts within the $%@!! sector!
+	SAY Horizons is pleased to have you working in one of the many exploratory posts within the $%@!! sector!
 	DELAY 30
 	SAY Further job assignment information can be found at your local security post! Have a secure day!
 	DELAY 20;"}
