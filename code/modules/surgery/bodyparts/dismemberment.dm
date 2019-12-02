@@ -338,6 +338,11 @@
 	return 0
 
 /mob/living/carbon/regenerate_limbs(noheal, list/excluded_limbs)
+	// KEPLER CHANGE: Fix broken bones
+	for(var/obj/item/bodypart/BP in bodyparts)
+		BP.bone_status = BONE_FLAG_NORMAL
+	update_inv_splints()
+	// END KEPLER CHANGE
 	var/list/limb_list = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_R_ARM, BODY_ZONE_L_ARM, BODY_ZONE_R_LEG, BODY_ZONE_L_LEG)
 	if(excluded_limbs)
 		limb_list -= excluded_limbs

@@ -27,7 +27,7 @@
 
 /datum/bounty/item/gardencook/onionrings
 	name = "Onion Rings"
-	description = "Nanotrasen is remembering Saturn day. Ship onion rings to show the station's support."
+	description = "Head Office is remembering Saturn day. Ship onion rings to show the station's support."
 	reward = 800
 	required_count = 3
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/onionrings)
