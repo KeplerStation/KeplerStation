@@ -201,10 +201,17 @@
 	wanted_types = list(/obj/item/restraints/legcuffs/bola)
 
 /datum/bounty/item/assistant/metalshields
+<<<<<<< HEAD
 	name = "Metal Shields"
 	description = "The ICC wants to test the efficacy of stun weapons against shielded targets. Send in some metal shields."
 	reward = 1400
 	required_count = 4
+=======
+	name = "Metal Shields" //I didnt realise how much work it was to make these, you need 2 Cloth, 3 Leather, Tools, 10 Metal, and a Cable Coil Stack for each one.
+	description = "NT is testing the effects of electricity on clowns wielding metal shields. We have clowns, and we have electricity. Send us the shields."
+	reward = 3000
+	required_count = 2
+>>>>>>> 0a5e9bdb62... Merge pull request #9915 from Owai-Seek/tinytweaks
 	wanted_types = list(/obj/item/shield/makeshift)
 
 /datum/bounty/item/assistant/toolbelts
