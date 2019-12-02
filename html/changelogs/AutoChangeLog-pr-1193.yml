@@ -1,8 +1,0 @@
-author: "AffectedArc07"
-delete-after: True
-changes: 
-  - tweak: "Converted more NT to Horizons"
-  - rscadd: "Added an autodrobe to BoxStation locker room"
-  - imageadd: "Added images for the harvest sprite for fairygrass"
-  - imageadd: "Added images for missing berets"
-  - imageadd: "Added images for bottle exports"
