@@ -160,6 +160,7 @@
 #define TRAIT_EMPATH			"empath"
 #define TRAIT_FRIENDLY			"friendly"
 #define TRAIT_CULT_EYES 		"cult_eyes"
+#define TRAIT_FREESPRINT		"free_sprinting"
 
 
 // common trait sources
