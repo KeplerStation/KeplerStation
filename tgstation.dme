@@ -3092,11 +3092,11 @@
 #include "modular_kepler\code\modules\client\preferences.dm"
 #include "modular_kepler\code\modules\client\verbs\ooc.dm"
 #include "modular_kepler\code\modules\mob\dead\new_player\tos_procs.dm"
+#include "modular_kepler\code\modules\mob\dead\new_player\sprite_accessories\moth_markings.dm"
 #include "modular_kepler\code\modules\oracle_ui\assets.dm"
 #include "modular_kepler\code\modules\oracle_ui\hookup_procs.dm"
 #include "modular_kepler\code\modules\oracle_ui\oracle_ui.dm"
 #include "modular_kepler\code\modules\oracle_ui\themed.dm"
 #include "modular_kepler\code\modules\vr\vr_levels.dm"
 #include "modular_kepler\interface\skin.dmf"
-#include "modular_kepler\code\modules\mob\dead\new_player\sprite_accessories\moth_markings.dm"
 // END_INCLUDE
