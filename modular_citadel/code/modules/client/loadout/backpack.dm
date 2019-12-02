@@ -94,9 +94,6 @@
 /datum/gear/tape
 	name = "Spare cassette tape"
 	category = SLOT_IN_BACKPACK
-<<<<<<< HEAD
-	path = /obj/item/tape/random
-=======
 	path = /obj/item/tape/random
 
 /datum/gear/newspaper
@@ -124,4 +121,3 @@
 	category = SLOT_IN_BACKPACK
 	path = /obj/item/pen/fountain
 	cost = 2
->>>>>>> 0a5e9bdb62... Merge pull request #9915 from Owai-Seek/tinytweaks
