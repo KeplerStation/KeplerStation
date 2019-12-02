@@ -388,11 +388,17 @@
 /obj/machinery/smartfridge/organ
 	name = "smart organ storage"
 	desc = "A refrigerated storage unit for organ storage."
-	max_n_of_items = 20	//vastly lower to prevent processing too long
+	max_n_of_items = 25	//vastly lower to prevent processing too long
 	var/repair_rate = 0
 
 /obj/machinery/smartfridge/organ/accept_check(obj/item/O)
 	if(istype(O, /obj/item/organ))
+		return TRUE
+	if(istype(O, /obj/item/reagent_containers/syringe))
+		return TRUE
+	if(istype(O, /obj/item/reagent_containers/glass/bottle))
+		return TRUE
+	if(istype(O, /obj/item/reagent_containers/medspray))
 		return TRUE
 	return FALSE
 
@@ -400,8 +406,9 @@
 	. = ..()
 	if(!.)	//if the item loads, clear can_decompose
 		return
-	var/obj/item/organ/organ = O
-	organ.organ_flags |= ORGAN_FROZEN
+	if(istype(O, /obj/item/organ))
+		var/obj/item/organ/organ = O
+		organ.organ_flags |= ORGAN_FROZEN
 
 /obj/machinery/smartfridge/organ/RefreshParts()
 	for(var/obj/item/stock_parts/matter_bin/B in component_parts)
@@ -419,6 +426,18 @@
 	. = ..()
 	if(istype(AM))
 		AM.organ_flags &= ~ORGAN_FROZEN
+
+
+/obj/machinery/smartfridge/organ/preloaded
+	initial_contents = list(
+		/obj/item/reagent_containers/medspray/synthtissue = 1,
+		/obj/item/reagent_containers/medspray/sterilizine = 1)
+
+/obj/machinery/smartfridge/organ/preloaded/Initialize()
+	..()
+	var/list = list(/obj/item/organ/tongue, /obj/item/organ/brain, /obj/item/organ/heart, /obj/item/organ/liver, /obj/item/organ/ears, /obj/item/organ/eyes, /obj/item/organ/tail, /obj/item/organ/stomach)
+	var/newtype = pick(list)
+	load(new newtype(src.loc))
 
 // -----------------------------
 // Chemistry Medical Smartfridge
