@@ -115,18 +115,6 @@
 					/obj/item/clothing/accessory/attrocious_pokadots = 8,
 					/obj/item/clothing/accessory/black_white_pokadots = 8)
 	contraband = list(/obj/item/clothing/under/syndicate/tacticool = 3,
-<<<<<<< HEAD
-		              /obj/item/clothing/mask/balaclava = 3,
-		              /obj/item/clothing/head/ushanka = 3,
-		              /obj/item/clothing/under/soviet = 3,
-		              /obj/item/storage/belt/fannypack/black = 3,
-		              /obj/item/clothing/suit/jacket/letterman_syndie = 5,
-		              /obj/item/clothing/under/jabroni = 2,
-		              /obj/item/clothing/suit/vapeshirt = 2,
-		              /obj/item/clothing/under/geisha = 4,
-		              /obj/item/clothing/accessory/syndi_pokadots = 4)
-=======
-					/obj/item/clothing/under/syndicate/tacticool/skirt = 3,
 					/obj/item/clothing/mask/balaclava = 3,
 					/obj/item/clothing/head/ushanka = 3,
 					/obj/item/clothing/under/soviet = 3,
@@ -137,7 +125,6 @@
 					/obj/item/clothing/under/geisha = 4,
 					/obj/item/clothing/accessory/syndi_pokadots = 4,
 					/obj/item/clothing/under/keyholesweater = 3)
->>>>>>> 0a5e9bdb62... Merge pull request #9915 from Owai-Seek/tinytweaks
 	premium = list(/obj/item/clothing/under/suit_jacket/checkered = 4,
 		           /obj/item/clothing/head/mailman = 2,
 		           /obj/item/clothing/under/rank/mailman = 2,
