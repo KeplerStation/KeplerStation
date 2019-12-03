@@ -22,7 +22,7 @@
 	var/customname = "custom"
 
 /obj/item/reagent_containers/food/snacks/customizable/examine(mob/user)
-	..()
+	. = ..()
 	var/ingredients_listed = ""
 	for(var/obj/item/reagent_containers/food/snacks/ING in ingredients)
 		ingredients_listed += "[ING.name], "
@@ -35,7 +35,7 @@
 		size = "huge"
 	if(ingredients.len>16)
 		size = "monster"
-	to_chat(user, "It contains [ingredients.len?"[ingredients_listed]":"no ingredient, "]making a [size]-sized [initial(name)].")
+	. += "It contains [ingredients.len?"[ingredients_listed]":"no ingredient, "]making a [size]-sized [initial(name)]."
 
 /obj/item/reagent_containers/food/snacks/customizable/attackby(obj/item/I, mob/user, params)
 	if(!istype(I, /obj/item/reagent_containers/food/snacks/customizable) && istype(I, /obj/item/reagent_containers/food/snacks))
