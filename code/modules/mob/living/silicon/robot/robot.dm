@@ -1231,3 +1231,41 @@
 			connected_ai.aicamera.stored[i] = TRUE
 		for(var/i in connected_ai.aicamera.stored)
 			aicamera.stored[i] = TRUE
+<<<<<<< HEAD
+=======
+
+/mob/living/silicon/robot/lay_down()
+	..()
+	update_canmove()
+
+/mob/living/silicon/robot/update_canmove()
+	..()
+	if(client && stat != DEAD && dogborg == FALSE)
+		if(resting)
+			cut_overlays()
+			icon_state = "[module.cyborg_base_icon]-rest"
+		else
+			icon_state = "[module.cyborg_base_icon]"
+	update_icons()
+
+/mob/living/silicon/robot/proc/rest_style()
+	set name = "Switch Rest Style"
+	set category = "Robot Commands"
+	set desc = "Select your resting pose."
+	sitting = 0
+	bellyup = 0
+	var/choice = alert(src, "Select resting pose", "", "Resting", "Sitting", "Belly up")
+	switch(choice)
+		if("Resting")
+			update_icons()
+			return 0
+		if("Sitting")
+			sitting = 1
+		if("Belly up")
+			bellyup = 1
+	update_icons()
+
+/mob/living/silicon/robot/adjustStaminaLossBuffered(amount, updating_health = 1)
+	if(istype(cell))
+		cell.charge -= amount*5
+>>>>>>> d217a9f445... Merge pull request #10032 from Ghommie/Ghommie-cit418
