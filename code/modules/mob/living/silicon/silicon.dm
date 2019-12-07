@@ -13,6 +13,11 @@
 	mob_biotypes = list(MOB_ROBOTIC)
 	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 	speech_span = SPAN_ROBOT
+<<<<<<< HEAD
+=======
+	flags_1 = PREVENT_CONTENTS_EXPLOSION_1 | HEAR_1
+	no_vore = TRUE
+>>>>>>> 602bc57060... Merge pull request #10064 from Citadel-Station-13/kevinz000-patch-121
 
 	var/datum/ai_laws/laws = null//Now... THEY ALL CAN ALL HAVE LAWS
 	var/last_lawchange_announce = 0
