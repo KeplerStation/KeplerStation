@@ -77,6 +77,18 @@ a
 	crate_name = "plasma assembly crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma
 
+<<<<<<< HEAD
+=======
+/datum/supply_pack/science/relic
+	name = "Relic Crate"
+	desc = "Ever wanted to play with old discounted toys? Look no further. Contains two relics."
+	cost = 1000
+	contraband = TRUE
+	contains = list(/obj/item/relic,
+					/obj/item/relic)
+	crate_name = "relic crate"
+
+>>>>>>> c706720dd1... Merge pull request #9912 from Owai-Seek/cargocleanupv2boogaloo
 /datum/supply_pack/science/robotics
 	name = "Robotics Assembly Crate"
 	desc = "The tools you need to replace those finicky humans with a loyal robot army! Contains three proximity sensors, two high-powered cells, six flashes, and an electrical toolbox. Requires Robotics access to open."
