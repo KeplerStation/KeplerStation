@@ -761,3 +761,11 @@
 	item_color = "durathread"
 	can_adjust = FALSE
 	armor = list("melee" = 10, "laser" = 10, "fire" = 40, "acid" = 10, "bomb" = 5) 
+
+/obj/item/clothing/under/telegram
+	name = "telegram suit"
+	desc = "Bright and red, hard to miss. Mostly warn by hotel staff or singing telegram."
+	icon_state = "telegram"
+	item_state = "telegram"
+	body_parts_covered = CHEST|GROIN
+	can_adjust = FALSE
