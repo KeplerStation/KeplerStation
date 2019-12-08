@@ -44,7 +44,6 @@
 	crate_name = "art supply crate"
 	crate_type = /obj/structure/closet/crate/wooden
 
-<<<<<<< HEAD
 /datum/supply_pack/misc/captain_pen
 	name = "Captain Pen"
 	desc = "A spare Captain fountain pen."
@@ -78,8 +77,6 @@
 					/obj/structure/piano/unanchored)
 	crate_type = /obj/structure/closet/crate/wooden
 
-=======
->>>>>>> c706720dd1... Merge pull request #9912 from Owai-Seek/cargocleanupv2boogaloo
 /datum/supply_pack/misc/book_crate
 	name = "Book Crate"
 	desc = "Surplus from the Horizons Archives, these five books are sure to be good reads."
@@ -219,18 +216,6 @@
 					/obj/structure/piano/unanchored)
 	crate_type = /obj/structure/closet/crate/wooden
 
-/datum/supply_pack/misc/cbtpack
-	name = "CBT Equipment"
-	desc = "(*!&@#CBT is a special term coined by high ranking syndicate operatives for a special form of information extraction. While the training required to use this shipment is highly classified, the distribution of it's contents are not. In addition to this crates unusual contents, we have added a bar of soap.#@*$"
-	hidden = TRUE
-	cost = 2400
-	contains = list(/mob/living/simple_animal/chicken,
-					/obj/item/toy/beach_ball/holoball,
-					/obj/item/melee/baton/cattleprod,
-					/obj/item/soap/syndie)
-	crate_name = "cbt crate"
-	crate_type = /obj/structure/closet/crate/large
-
 /datum/supply_pack/misc/casinocrate
 	name = "Casino Crate"
 	desc = "Start up your own grand casino with this crate filled with slot machine and arcade boards!"
@@ -266,22 +251,6 @@
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////// Misc Supplies ///////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
-
-/datum/supply_pack/misc/exoticfootwear
-	name = "Exotic Footwear Crate"
-	desc = "Popularised by lizards and exotic dancers, the footwear included in this shipment is sure to give your feet the breathing room they deserve. Sweet Kicks Inc. is not responsible for any damage, distress, or @r0u$a1 caused by this shipment."
-	cost = 4337
-	contains = list(/obj/item/clothing/shoes/wraps,
-					/obj/item/clothing/shoes/wraps,
-					/obj/item/clothing/shoes/wraps/silver,
-					/obj/item/clothing/shoes/wraps/silver,
-					/obj/item/clothing/shoes/wraps/red,
-					/obj/item/clothing/shoes/wraps/red,
-					/obj/item/clothing/shoes/wraps/blue,
-					/obj/item/clothing/shoes/wraps/blue,
-					/obj/item/clothing/shoes/clown_shoes,
-					/obj/item/clothing/shoes/kindleKicks)
-	crate_name = "footie crate"
 
 /datum/supply_pack/misc/wrapping_paper
 	name = "Festive Wrapping Paper Crate"
@@ -435,7 +404,6 @@
 //////////////////////////////// Lewd Supplies ///////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
-<<<<<<< HEAD
 /datum/supply_pack/misc/religious_supplies
 	name = "Religious Supplies Crate"
 	desc = "Keep your local chaplain happy and well-supplied, lest they call down judgement upon your cargo bay. Contains two bottles of holywater, bibles, chaplain robes, and burial garmets."
@@ -448,37 +416,5 @@
 					/obj/item/clothing/suit/hooded/chaplain_hoodie
 					)
 	crate_name = "religious supplies crate"
-=======
-/datum/supply_pack/misc/lewd
-	name = "Lewd Crate" // OwO
-	desc = "Pssst, want to have a good time with your sluts? Well I got what you want! Maid clothing, dildos, collars and more!"
-	cost = 5250
-	contraband = TRUE
-	contains = list(/obj/item/dildo/custom,
-					/obj/item/dildo/custom,
-					/obj/item/vending_refill/kink,
-					/obj/item/vending_refill/kink,
-					/obj/item/clothing/under/maid,
-					/obj/item/clothing/under/maid,
-					/obj/item/electropack/shockcollar,
-					/obj/item/electropack/shockcollar,
-					/obj/item/restraints/handcuffs/fake/kinky,
-					/obj/item/restraints/handcuffs/fake/kinky,
-					/obj/item/clothing/head/kitty/genuine, // Why its illegal
-					/obj/item/clothing/head/kitty/genuine,
-					/obj/item/storage/pill_bottle/penis_enlargement,
-					/obj/structure/reagent_dispensers/keg/aphro)
-	crate_name = "lewd kit"
-	crate_type = /obj/structure/closet/crate
 
-/datum/supply_pack/misc/lewdkeg
-	name = "Lewd Deluxe Keg"
-	desc = "That other stuff not getting you ready? Well I have a Chemslut making tons of the good stuff."
-	cost = 7500 //It can be a weapon
-	contraband = TRUE
-	contains = list(/obj/structure/reagent_dispensers/keg/aphro/strong)
-	crate_name = "deluxe keg"
-	crate_type = /obj/structure/closet/crate
-
->>>>>>> c706720dd1... Merge pull request #9912 from Owai-Seek/cargocleanupv2boogaloo
 

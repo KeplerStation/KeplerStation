@@ -108,13 +108,8 @@
 		new /obj/item/grown/log(.)
 
 /datum/supply_pack/materials/rcdammo
-<<<<<<< HEAD
 	name = "Spare RCD ammo"
-	desc = "This crate contains sixteen RCD ammo packs, to help with any holes or projects people might be working on."
-=======
-	name = "Spare RDC ammo"
 	desc = "This crate contains sixteen RCD compressed matter packs, to help with any holes or projects people might be working on."
->>>>>>> c706720dd1... Merge pull request #9912 from Owai-Seek/cargocleanupv2boogaloo
 	cost = 3750
 	contains = list(/obj/item/rcd_ammo,
 					/obj/item/rcd_ammo,
@@ -133,14 +128,6 @@
 					/obj/item/rcd_ammo,
 					/obj/item/rcd_ammo)
 	crate_name = "rcd ammo"
-
-/datum/supply_pack/materials/loom
-	name = "Loom"
-	desc = "A large pre-made loom."
-	cost = 1000
-	contains = list(/obj/structure/loom/unanchored)
-	crate_name = "loom crate"
-	crate_type = /obj/structure/closet/crate/large
 
 //////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// Canisters //////////////////////////////////////
@@ -232,14 +219,4 @@
 	crate_name = "high-capacity water tank crate"
 	crate_type = /obj/structure/closet/crate/large
 
-<<<<<<< HEAD
-/datum/supply_pack/materials/loom
-	name = "Loom"
-	desc = "A large pre-made loom."
-	cost = 1000
-	contains = list(/obj/structure/loom)
-	crate_name = "loom crate"
-	crate_type = /obj/structure/closet/crate/large
-=======
->>>>>>> c706720dd1... Merge pull request #9912 from Owai-Seek/cargocleanupv2boogaloo
 

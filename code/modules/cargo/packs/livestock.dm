@@ -156,8 +156,6 @@
 					/mob/living/simple_animal/hostile/retaliate/poison/snake,
 					/mob/living/simple_animal/hostile/retaliate/poison/snake)
 	crate_name = "snake crate"
-<<<<<<< HEAD
-=======
 
 /datum/supply_pack/critter/mouse
 	name = "Mouse Crate"
@@ -170,15 +168,3 @@
 	. = ..()
 	for(var/i in 1 to 11)
 		new /mob/living/simple_animal/mouse(.)
-
-/datum/supply_pack/critter/secbat
-	name = "Security Bat Crate"
-	desc = "Contains five security bats, perfect to Bat-up any security officer."
-	cost = 2500
-	contains = list(/mob/living/simple_animal/hostile/retaliate/bat/secbat,
-					/mob/living/simple_animal/hostile/retaliate/bat/secbat,
-					/mob/living/simple_animal/hostile/retaliate/bat/secbat,
-					/mob/living/simple_animal/hostile/retaliate/bat/secbat,
-					/mob/living/simple_animal/hostile/retaliate/bat/secbat)
-	crate_name = "security bat crate"
->>>>>>> c706720dd1... Merge pull request #9912 from Owai-Seek/cargocleanupv2boogaloo

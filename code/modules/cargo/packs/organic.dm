@@ -166,48 +166,6 @@
 	access = ACCESS_THEATRE
 	crate_type = /obj/structure/closet/crate/secure
 
-<<<<<<< HEAD
-/datum/supply_pack/organic/hunting
-	name = "Hunting gear"
-	desc = "Even in space, we can fine prey to hunt, this crate contains everthing a fine hunter needs to have a sporting time. This crate needs armory access to open. A true huntter only needs a fine bottle of cognac, a nice coat, some good o' cigars, and of cource a huntting shotgun. "
-	cost = 3500
-	contraband = TRUE
-	contains = list(/obj/item/clothing/head/flatcap,
-					/obj/item/clothing/suit/hooded/wintercoat/captain,
-					/obj/item/reagent_containers/food/drinks/bottle/cognac,
-					/obj/item/storage/fancy/cigarettes/cigars/havana,
-					/obj/item/clothing/gloves/color/white,
-					/obj/item/clothing/under/rank/curator,
-					/obj/item/gun/ballistic/shotgun/lethal)
-	access = ACCESS_ARMORY
-	crate_name = "sporting crate"
-	crate_type = /obj/structure/closet/crate/secure // Would have liked a wooden crate but access >:(
-
-/datum/supply_pack/organic/hydroponics
-	name = "Hydroponics Crate"
-	desc = "Supplies for growing a great garden! Contains two bottles of ammonia, two Plant-B-Gone spray bottles, a hatchet, cultivator, plant analyzer, as well as a pair of leather gloves and a botanist's apron."
-	cost = 1750
-	contains = list(/obj/item/reagent_containers/spray/plantbgone,
-					/obj/item/reagent_containers/spray/plantbgone,
-					/obj/item/reagent_containers/glass/bottle/ammonia,
-					/obj/item/reagent_containers/glass/bottle/ammonia,
-					/obj/item/hatchet,
-					/obj/item/cultivator,
-					/obj/item/plant_analyzer,
-					/obj/item/clothing/gloves/botanic_leather,
-					/obj/item/clothing/suit/apron)
-	crate_name = "hydroponics crate"
-	crate_type = /obj/structure/closet/crate/hydroponics
-
-/datum/supply_pack/organic/hydroponics/hydrotank
-	name = "Hydroponics Backpack Crate"
-	desc = "Bring on the flood with this high-capacity backpack crate. Contains 500 units of life-giving H2O. Requires hydroponics access to open."
-	cost = 1200
-	access = ACCESS_HYDROPONICS
-	contains = list(/obj/item/watertank)
-	crate_name = "hydroponics backpack crate"
-	crate_type = /obj/structure/closet/crate/secure
-=======
 /datum/supply_pack/organic/fakemeat
 	name = "Meat Crate"
 	desc = "Run outta meat already? Keep the lizards content with this freezer filled with cruelty-free chemically compounded meat! Contains 12 slabs of meat product, and 4 slabs of *carp*."
@@ -230,7 +188,6 @@
 					/obj/item/reagent_containers/food/snacks/carpmeat/imitation)
 	crate_name = "meaty crate"
 	crate_type = /obj/structure/closet/crate/freezer
->>>>>>> c706720dd1... Merge pull request #9912 from Owai-Seek/cargocleanupv2boogaloo
 
 /datum/supply_pack/organic/monkeydripmeat
 	name = "*Meat* Crate"
