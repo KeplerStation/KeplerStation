@@ -597,6 +597,7 @@
 
 	return cooldown
 
+
 #undef COOLDOWN_STUN
 #undef COOLDOWN_DAMAGE
 #undef COOLDOWN_MEME
