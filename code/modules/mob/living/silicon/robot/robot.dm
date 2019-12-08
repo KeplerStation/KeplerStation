@@ -1231,3 +1231,7 @@
 			connected_ai.aicamera.stored[i] = TRUE
 		for(var/i in connected_ai.aicamera.stored)
 			aicamera.stored[i] = TRUE
+
+/mob/living/silicon/robot/adjustStaminaLossBuffered(amount, updating_health = 1)
+	if(istype(cell))
+		cell.charge -= amount*5

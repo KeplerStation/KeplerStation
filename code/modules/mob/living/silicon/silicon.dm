@@ -71,9 +71,6 @@
 /mob/living/silicon/contents_explosion(severity, target)
 	return
 
-/mob/living/silicon/prevent_content_explosion()
-	return TRUE
-
 /mob/living/silicon/proc/cancelAlarm()
 	return
 

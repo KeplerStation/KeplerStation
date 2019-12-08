@@ -16,7 +16,7 @@
 	icon_state = "cellconsole_1"
 	circuit = /obj/item/circuitboard/cryopodcontrol
 	density = FALSE
-	interaction_flags_machine = INTERACT_MACHINE_OFFLINE
+	interaction_flags_machine = INTERACT_MACHINE_OFFLINE | INTERACT_MACHINE_ALLOW_SILICON | INTERACT_MACHINE_OPEN_SILICON
 	req_one_access = list(ACCESS_HEADS, ACCESS_ARMORY) //Heads of staff or the warden can go here to claim recover items from their department that people went were cryodormed with.
 	var/mode = null
 
@@ -34,9 +34,6 @@
 	var/list/theft_cache = list()
 
 	var/allow_items = TRUE
-
-/obj/machinery/computer/cryopod/attack_ai()
-	attack_hand()
 
 /obj/machinery/computer/cryopod/ui_interact(mob/user = usr)
 	if(!is_operational())
