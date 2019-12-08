@@ -186,15 +186,3 @@
 	description = "<span class='warning'>A plush I tried to pet had no stuffing...</span>\n"
 	mood_change = -1
 	timeout = 2 MINUTES
-
-//Cursed stuff below
-
-/datum/mood_event/emptypred
-	description = "<span class='nicegreen'>I had to let someone out.</span>\n"
-	mood_change = -2
-	timeout = 1 MINUTES
-
-/datum/mood_event/emptyprey
-	description = "<span class='nicegreen'>It feels quite cold out here.</span>\n"
-	mood_change = -2
-	timeout = 1 MINUTES
