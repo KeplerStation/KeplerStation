@@ -359,15 +359,6 @@
 		if(prob(3))
 			message += pick(" Honh honh honh!"," Honh!"," Zut Alors!")
 	speech_args[SPEECH_MESSAGE] = trim(message)
-<<<<<<< HEAD
-=======
-
-/obj/item/clothing/head/assu_helmet
-	name = "DAB helmet"
-	icon_state = "assu_helmet"
-	item_state = "assu_helmet"
-	desc = "A cheap replica of old riot helmet without visor. It has \"D.A.B.\" written on the front."
-	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/hotel
 	name = "Telegram cap"
@@ -382,4 +373,3 @@
 	icon_state = "colour"
 	item_color = "colour"
 	dog_fashion = /datum/dog_fashion/head/colour
->>>>>>> e3d09ccae8... Merge pull request #9913 from Trilbyspaceclone/crow
