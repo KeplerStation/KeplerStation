@@ -1,4 +1,0 @@
-author: "KeplerStation-Bot"
-delete-after: True
-changes: 
-  - tweak: "Glowsticks can no longer be radioactively contaminated (one more supermatter contam exploit gone)"
