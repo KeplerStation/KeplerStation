@@ -242,7 +242,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			QDEL_NULL(eyes)
 		if(should_have_eyes && !eyes)
 			eyes = new mutanteyes
-			eyes.Insert(C)
+			eyes.Insert(C, TRUE)
 
 		if(ears && (replace_current || !should_have_ears))
 			ears.Remove(C,1)
