@@ -701,14 +701,9 @@ Code:
 		playsound(src, 'sound/machines/terminal_select.ogg', 50, 1)
 
 	if(href_list["mule"]) //MULEbots are special snowflakes, and need different args due to how they work.
-<<<<<<< HEAD
-
-		active_bot.bot_control(command= href_list["mule"], user= usr)
-=======
 		var/mob/living/simple_animal/bot/mulebot/mule = active_bot
 		if (istype(mule))
-			active_bot.bot_control(href_list["mule"], usr, TRUE)
->>>>>>> d217a9f445... Merge pull request #10032 from Ghommie/Ghommie-cit418
+			active_bot.bot_control(command= href_list["mule"], user= usr)
 
 	if(!host_pda)
 		return
