@@ -140,25 +140,11 @@
 			continue
 		//This entire if/else chain could be in two lines but isn't for readibilties sake.
 		var/msg = message
-<<<<<<< HEAD
-		if(isobserver(M) && no_ghosts)
-			continue
-		if(M == src) //the src always see the main message or self message
-			if(self_message)
-				msg = self_message
-		else //CITADEL EDIT, required for code to remove (T != loc && T != src)) as a check
-			if(M.see_invisible<invisibility) //if src is invisible to us,
-				if(blind_message) // then people see blind message if there is one, otherwise nothing.
-					msg = blind_message
-				else
-					continue
-=======
-		//CITADEL EDIT, required for vore code to remove (T != loc && T != src)) as a check
+		//CITADEL EDIT, required for code to remove (T != loc && T != src)) as a check
 		if(M.see_invisible<invisibility) //if src is invisible to us,
 			msg = blind_message
 		else if(T.lighting_object && T.lighting_object.invisibility <= M.see_invisible && T.is_softly_lit()) //the light object is dark and not invisible to us
 			msg = blind_message
->>>>>>> 4e022af46f... Merge pull request #10056 from Ghommie/Ghommie-cit430
 
 		if(!msg)
 			continue
