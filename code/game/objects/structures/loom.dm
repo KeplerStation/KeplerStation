@@ -1,7 +1,7 @@
 #define FABRIC_PER_SHEET 4
 
 //Loom, turns raw cotton and durathread into their respective fabrics.
-
+///This is a loom. It's usually made out of wood and used to weave fabric like durathread or cotton into their respective cloth types.
 /obj/structure/loom
 	name = "loom"
 	desc = "A simple device used to weave cloth and other thread-based fabrics together into usable material."
