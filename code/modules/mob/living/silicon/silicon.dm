@@ -13,11 +13,7 @@
 	mob_biotypes = list(MOB_ROBOTIC)
 	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 	speech_span = SPAN_ROBOT
-<<<<<<< HEAD
-=======
 	flags_1 = PREVENT_CONTENTS_EXPLOSION_1
-	no_vore = TRUE
->>>>>>> 6a305dfe4f... Merge pull request #9955 from Ghommie/Ghommie-cit394
 
 	var/datum/ai_laws/laws = null//Now... THEY ALL CAN ALL HAVE LAWS
 	var/last_lawchange_announce = 0

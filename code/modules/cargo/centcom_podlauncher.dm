@@ -542,13 +542,8 @@ force_open = FALSE, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.adm
 	if (launchClone) //We arent launching the actual items from the bay, rather we are creating clones and launching those
 		for (var/atom/movable/O in launchList)
 			DuplicateObject(O).forceMove(toLaunch) //Duplicate each atom/movable in launchList and forceMove them into the supplypod
-<<<<<<< HEAD
-		new /obj/effect/DPtarget(A, toLaunch) //Create the DPTarget, which will eventually forceMove the temp_pod to it's location
-	else	
-=======
 		new /obj/effect/abstract/DPtarget(A, toLaunch) //Create the DPTarget, which will eventually forceMove the temp_pod to it's location
 	else
->>>>>>> 6a305dfe4f... Merge pull request #9955 from Ghommie/Ghommie-cit394
 		for (var/atom/movable/O in launchList) //If we aren't cloning the objects, just go through the launchList
 			O.forceMove(toLaunch) //and forceMove any atom/moveable into the supplypod
 		new /obj/effect/abstract/DPtarget(A, toLaunch) //Then, create the DPTarget effect, which will eventually forceMove the temp_pod to it's location
@@ -570,8 +565,6 @@ force_open = FALSE, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.adm
 	qdel(temp_pod) //Delete the temp_pod
 	qdel(selector) //Delete the selector effect
 	. = ..()
-<<<<<<< HEAD
-=======
 
 /datum/centcom_podlauncher/proc/supplypod_punish_log(var/list/whoDyin)
 	var/podString = effectBurst ? "5 pods" : "a pod"
@@ -594,4 +587,3 @@ force_open = FALSE, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.adm
 	if (!isemptylist(whoDyin))
 		for (var/mob/living/M in whoDyin)
 			admin_ticket_log(M, "[key_name_admin(usr)] [msg]")
->>>>>>> 6a305dfe4f... Merge pull request #9955 from Ghommie/Ghommie-cit394

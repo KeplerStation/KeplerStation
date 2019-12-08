@@ -53,13 +53,8 @@
 	set category = "Gondola"
 	set desc = "Take a deep look inside youself, and count up what's inside"
 	var/total = contents.len
-<<<<<<< HEAD
 	if (total)	
 		to_chat(src, "<span class='notice'>You detect [total] object[total > 1 ? "s" : ""] within your incredibly vast belly.</span>")
-=======
-	if (total)
-		to_chat(src, "<span class='notice'>You detect [total] object\s within your incredibly vast belly.</span>")
->>>>>>> 6a305dfe4f... Merge pull request #9955 from Ghommie/Ghommie-cit394
 	else
 		to_chat(src, "<span class='notice'>A closer look inside yourself reveals... nothing.</span>")
 
