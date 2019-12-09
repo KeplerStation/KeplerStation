@@ -185,11 +185,8 @@
 	icon_state = "cabinet"
 	resistance_flags = FLAMMABLE
 	max_integrity = 70
-<<<<<<< HEAD
-=======
 	material_drop = /obj/item/stack/sheet/mineral/wood
 	cutting_tool = /obj/item/screwdriver
->>>>>>> 6368f04f2d... Merge pull request #10044 from Ghommie/Ghommie-cit423
 
 /obj/structure/closet/secure_closet/detective/PopulateContents()
 	..()
