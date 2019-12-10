@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - bugfix: "Fixed space hermit asteroid rocks unintendedly spawning airless asteroid turf when mined, save for the perimeter."
