@@ -745,6 +745,7 @@
 	STR.max_items = 1
 	STR.rustle_sound = FALSE
 	STR.max_w_class = WEIGHT_CLASS_BULKY
+<<<<<<< HEAD
 	STR.can_hold = typecacheof(list(
 		/obj/item/melee/sabre
 		))
@@ -774,22 +775,15 @@
 	if(attack_type == PROJECTILE_ATTACK)
 		final_block_chance = 0 //To thin to block bullets
 	return ..()
+=======
+	STR.can_hold = typecacheof(fitting_swords)
+	STR.quickdraw = TRUE
+>>>>>>> 9ec8458803... Merge pull request #9983 from Ghommie/Ghommie-cit408
 
 /obj/item/storage/belt/sabre/examine(mob/user)
 	. = ..()
 	if(length(contents))
 		. += "<span class='notice'>Alt-click it to quickly draw the blade.</span>"
-
-/obj/item/storage/belt/sabre/AltClick(mob/user)
-	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
-		return
-	if(length(contents))
-		var/obj/item/I = contents[1]
-		user.visible_message("[user] takes [I] out of [src].", "<span class='notice'>You take [I] out of [src].</span>")
-		user.put_in_hands(I)
-		update_icon()
-	else
-		to_chat(user, "[src] is empty.")
 
 /obj/item/storage/belt/sabre/update_icon()
 	icon_state = initial(icon_state)
