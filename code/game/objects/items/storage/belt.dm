@@ -745,40 +745,8 @@
 	STR.max_items = 1
 	STR.rustle_sound = FALSE
 	STR.max_w_class = WEIGHT_CLASS_BULKY
-<<<<<<< HEAD
-	STR.can_hold = typecacheof(list(
-		/obj/item/melee/sabre
-		))
-
-/obj/item/storage/belt/sabre/rapier
-	name = "rapier sheath"
-	desc = "A black sheath, feels seemingly metallic."
-	icon_state = "rsheath"
-	item_state = "rsheath"
-	force = 5
-	throwforce = 15
-	block_chance = 30
-	w_class = WEIGHT_CLASS_BULKY
-	attack_verb = list("bashed", "slashes", "prods", "pokes")
-
-/obj/item/storage/belt/sabre/rapier/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 1
-	STR.rustle_sound = FALSE
-	STR.max_w_class = WEIGHT_CLASS_BULKY
-	STR.can_hold = typecacheof(list(
-		/obj/item/melee/rapier
-		))
-
-/obj/item/storage/belt/sabre/rapier/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	if(attack_type == PROJECTILE_ATTACK)
-		final_block_chance = 0 //To thin to block bullets
-	return ..()
-=======
 	STR.can_hold = typecacheof(fitting_swords)
 	STR.quickdraw = TRUE
->>>>>>> 9ec8458803... Merge pull request #9983 from Ghommie/Ghommie-cit408
 
 /obj/item/storage/belt/sabre/examine(mob/user)
 	. = ..()
