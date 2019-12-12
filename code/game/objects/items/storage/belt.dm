@@ -745,7 +745,7 @@
 	STR.max_items = 1
 	STR.rustle_sound = FALSE
 	STR.max_w_class = WEIGHT_CLASS_BULKY
-	STR.can_hold = typecacheof(fitting_swords)
+	STR.can_hold = typecacheof(list(/obj/item/melee/sabre, /obj/item/melee/baton/stunsword))
 	STR.quickdraw = TRUE
 
 /obj/item/storage/belt/sabre/examine(mob/user)
