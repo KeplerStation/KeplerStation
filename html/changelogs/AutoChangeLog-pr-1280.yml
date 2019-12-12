@@ -1,4 +1,0 @@
-author: "KeplerStation-Bot"
-delete-after: True
-changes: 
-  - bugfix: "Dynamic from-ghost antags no longer double dip on threat refunds when the mode fails due to not enough applications."

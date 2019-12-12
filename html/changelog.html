@@ -55,6 +55,22 @@
 		
 		-->
 		<div class="commit sansserif">
+			<h2 class="date">12 December 2019</h2>
+			<h3 class="author">Ghommie, Skogol updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="refactor">refactored altclick interaction to allow alt-click interactable objects to parent call without forcing the turf contents stat menu open.</li>
+				<li class="tweak">Alt clicking will no longer show turf contents for items inside bags etc.</li>
+				<li class="tweak">Alt clicking the source of your turf contents stat menu will now close said menu.</li>
+			</ul>
+			<h3 class="author">KeplerStation-Bot updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Dynamic has a (totally unused for any relevant purpose) roundstart report now.</li>
+				<li class="bugfix">Dynamic from-ghost antags no longer double dip on threat refunds when the mode fails due to not enough applications.</li>
+				<li class="bugfix">Fixes reviver implant having been a crapshot ever since soft-crit was introduced years ago.</li>
+				<li class="tweak">Added a "convalescence" time (about 15 seconds) after the user is out of unconsciousbess/crit to ensure they are properly stabilized.</li>
+				<li class="tweak">Added a 15 minutes hardcap for accumulated revive cooldown (equivalent to 150 points of brute or burn healed) above which the implant starts cooling down regardless of user's conditions.</li>
+			</ul>
+
 			<h2 class="date">10 December 2019</h2>
 			<h3 class="author">KeplerStation-Bot updated:</h3>
 			<ul class="changes bgimages16">
@@ -1077,44 +1093,6 @@
 			<h3 class="author">original by: WJohnston, Antur, Arcane, plapatin, sprites by cogwerks and edited by mrdoombringer. port by sishen1542 updated:</h3>
 			<ul class="changes bgimages16">
 				<li class="rscadd">THE GOOSE IS LOOSE</li>
-			</ul>
-
-			<h2 class="date">10 October 2019</h2>
-			<h3 class="author">Fermi updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">fixed an angery PR</li>
-			</ul>
-			<h3 class="author">Ghommie (original PR by AnturK) updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">Supermatter now melt walls if it finds itself in one.</li>
-			</ul>
-			<h3 class="author">JTGSZ updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="tweak">Gang Dominator excessive wall check tweaked to 25 open turfs</li>
-				<li class="bugfix">Gang Dominator no longer functions off-station.</li>
-			</ul>
-			<h3 class="author">KeplerStation-Bot updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="refactor">Refactored implants to not be located inside mobs codewise, akin to organs.</li>
-				<li class="bugfix">Fixed gps tracking implants.</li>
-				<li class="bugfix">Fixed item not being dumped out of storage implants onto the owner's turf upon removal.</li>
-				<li class="rscadd">Reebe QoL aka creep in gear</li>
-				<li class="bugfix">???</li>
-				<li class="server">HEY MADE THE REEBEEE WAY SMALLER - Making it less lagging hopefully</li>
-				<li class="tweak">Bottles in PanD.E.M.I.C 2200 can now be replaced with an inhand bottle directly</li>
-				<li class="tweak">Ejecting a bottle from the PanD.E.M.I.C 2200 puts it directly into the user's hand</li>
-				<li class="tweak">Alt-clicking the PanD.E.M.I.C 2200 ejects the current bottle</li>
-				<li class="bugfix">teleporting a locker is bad</li>
-				<li class="bugfix">non-alphanumeric graffiti decals will no longer display as "letter".</li>
-				<li class="refactor">turned virtual reality into a component datum, which is then applied to spawned virtual mobs. This fixes mob transformations (such as wabbajack and monkeyizing) breaking the previously hardcoded behaviour and trapping you in VR, also enabling a more concrete virtual reality inception experience.</li>
-				<li class="tweak">made the autoprocess button relevant</li>
-				<li class="tweak">changes so that spooktober starts earlier</li>
-				<li class="bugfix">fixed the dark blue lum major effect</li>
-			</ul>
-			<h3 class="author">TerraGS / Skoglol updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="rscadd">Adds toggleable light and blinking charge indicator to kinetic crusher</li>
-				<li class="rscadd">Kinetic crusher can now be one-hand carried. You'll still need two hand to use it.</li>
 			</ul>
 		</div>
 
