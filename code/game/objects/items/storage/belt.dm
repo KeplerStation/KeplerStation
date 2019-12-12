@@ -745,51 +745,13 @@
 	STR.max_items = 1
 	STR.rustle_sound = FALSE
 	STR.max_w_class = WEIGHT_CLASS_BULKY
-	STR.can_hold = typecacheof(list(
-		/obj/item/melee/sabre
-		))
-
-/obj/item/storage/belt/sabre/rapier
-	name = "rapier sheath"
-	desc = "A black sheath, feels seemingly metallic."
-	icon_state = "rsheath"
-	item_state = "rsheath"
-	force = 5
-	throwforce = 15
-	block_chance = 30
-	w_class = WEIGHT_CLASS_BULKY
-	attack_verb = list("bashed", "slashes", "prods", "pokes")
-
-/obj/item/storage/belt/sabre/rapier/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 1
-	STR.rustle_sound = FALSE
-	STR.max_w_class = WEIGHT_CLASS_BULKY
-	STR.can_hold = typecacheof(list(
-		/obj/item/melee/rapier
-		))
-
-/obj/item/storage/belt/sabre/rapier/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	if(attack_type == PROJECTILE_ATTACK)
-		final_block_chance = 0 //To thin to block bullets
-	return ..()
+	STR.can_hold = typecacheof(list(/obj/item/melee/sabre, /obj/item/melee/baton/stunsword))
+	STR.quickdraw = TRUE
 
 /obj/item/storage/belt/sabre/examine(mob/user)
 	. = ..()
 	if(length(contents))
 		. += "<span class='notice'>Alt-click it to quickly draw the blade.</span>"
-
-/obj/item/storage/belt/sabre/AltClick(mob/user)
-	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
-		return
-	if(length(contents))
-		var/obj/item/I = contents[1]
-		user.visible_message("[user] takes [I] out of [src].", "<span class='notice'>You take [I] out of [src].</span>")
-		user.put_in_hands(I)
-		update_icon()
-	else
-		to_chat(user, "[src] is empty.")
 
 /obj/item/storage/belt/sabre/update_icon()
 	icon_state = initial(icon_state)
