@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - bugfix: "Fixed raven's shuttle computer not being of the emergency shuttle type."
