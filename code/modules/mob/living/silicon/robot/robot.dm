@@ -107,16 +107,8 @@
 	can_buckle = TRUE
 	buckle_lying = FALSE
 	var/static/list/can_ride_typecache = typecacheof(/mob/living/carbon/human)
-
-<<<<<<< HEAD
-=======
-	var/sitting = 0
-	var/bellyup = 0
-	var/dogborg = FALSE
-
 	var/cansprint = 1
 
->>>>>>> cdeb4733aa... Merge pull request #9863 from BlackMajor/Yote
 /mob/living/silicon/robot/get_cell()
 	return cell
 
