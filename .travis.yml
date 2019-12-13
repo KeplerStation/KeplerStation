@@ -65,13 +65,24 @@ matrix:
         - tools/travis/install_byond.sh
         - source $HOME/BYOND/byond/bin/byondsetup
         - tools/travis/install_libmariadb.sh
+<<<<<<< HEAD
         - tools/travis/install_libs.sh
+=======
+        - tools/travis/install_rust_g.sh
+>>>>>>> eec02ae973... Merge pull request #9757 from Ghommie/Ghommie-cit333
       before_script:
         - mysql -u root -e 'CREATE DATABASE tg_travis;'
         - mysql -u root tg_travis < SQL/tgstation_schema.sql
         - mysql -u root -e 'CREATE DATABASE tg_travis_prefixed;'
         - mysql -u root tg_travis_prefixed < SQL/tgstation_schema_prefixed.sql
+<<<<<<< HEAD
       script:
         - tools/travis/dm.sh -DTRAVISBUILDING tgstation.dme || travis_terminate 1
         - tools/travis/run_server.sh
 
+=======
+        - tools/travis/build_bsql.sh
+      script:
+        - tools/travis/dm.sh -DTRAVISBUILDING tgstation.dme || travis_terminate 1
+        - tools/travis/run_server.sh
+>>>>>>> eec02ae973... Merge pull request #9757 from Ghommie/Ghommie-cit333
