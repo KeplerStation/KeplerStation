@@ -153,11 +153,19 @@
 		update_gut()
 		cleaning = FALSE
 		playsound(loc, voracious ? 'sound/effects/splat.ogg' : 'sound/effects/bin_close.ogg', 50, 1)
+<<<<<<< HEAD
 
 	else //You clicked eject with nothing in you, let's just reset stuff to be sure.
 		items_preserved.Cut()
 		cleaning = FALSE
 	update_gut()
+=======
+	items_preserved.Cut()
+	cleaning = FALSE
+	patient = null
+	if(hound)
+		update_gut(hound)
+>>>>>>> 659b78d8b8... Merge pull request #10162 from BlackMajor/Yeehaw
 
 
 /obj/item/dogborg/sleeper/attack_self(mob/user)
@@ -543,5 +551,12 @@
 			update_gut()
 			user.visible_message("<span class='warning'>[hound.name]'s garbage processor groans lightly as [trashman] slips inside.</span>", "<span class='notice'>Your garbage compactor groans lightly as [trashman] slips inside.</span>")
 			playsound(hound, 'sound/effects/bin_close.ogg', 80, 1)
+<<<<<<< HEAD
 		return
 	return
+=======
+
+/obj/item/dogborg/sleeper/K9/flavour
+	name = "Recreational Sleeper"
+	desc = "A mounted, underslung sleeper, intended for holding willing occupants for leisurely purposes."
+>>>>>>> 659b78d8b8... Merge pull request #10162 from BlackMajor/Yeehaw

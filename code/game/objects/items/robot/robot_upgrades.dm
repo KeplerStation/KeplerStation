@@ -410,7 +410,12 @@
 		to produce more advanced and complex medical reagents."
 	icon_state = "cyborg_upgrade3"
 	require_module = 1
+<<<<<<< HEAD
 	module_type = list(/obj/item/robot_module/medical,/obj/item/robot_module/syndicate_medical)
+=======
+	module_type = list(/obj/item/robot_module/medical,
+		/obj/item/robot_module/syndicate_medical)
+>>>>>>> 659b78d8b8... Merge pull request #10162 from BlackMajor/Yeehaw
 	var/list/additional_reagents = list()
 
 /obj/item/borg/upgrade/hypospray/action(mob/living/silicon/robot/R, user = usr)
@@ -466,6 +471,7 @@
 		for(var/obj/item/reagent_containers/borghypo/H in R.module.modules)
 			H.bypass_protection = initial(H.bypass_protection)
 
+<<<<<<< HEAD
 /obj/item/borg/upgrade/defib
 	name = "medical cyborg defibrillator"
 	desc = "An upgrade to the Medical module, installing a built-in \
@@ -481,6 +487,8 @@
 		R.module.basic_modules += S
 		R.module.add_module(S, FALSE, TRUE)
 
+=======
+>>>>>>> 659b78d8b8... Merge pull request #10162 from BlackMajor/Yeehaw
 /obj/item/borg/upgrade/defib/deactivate(mob/living/silicon/robot/R, user = usr)
 	. = ..()
 	if (.)
@@ -494,7 +502,12 @@
 		out procedures"
 	icon_state = "cyborg_upgrade3"
 	require_module = 1
+<<<<<<< HEAD
 	module_type = list(/obj/item/robot_module/medical,/obj/item/robot_module/syndicate_medical)
+=======
+	module_type = list(/obj/item/robot_module/medical,
+		/obj/item/robot_module/syndicate_medical)
+>>>>>>> 659b78d8b8... Merge pull request #10162 from BlackMajor/Yeehaw
 
 /obj/item/borg/upgrade/processor/action(mob/living/silicon/robot/R, user = usr)
 	. = ..()
@@ -515,7 +528,13 @@
 		advanced health scanner, for better readings on patients."
 	icon_state = "cyborg_upgrade3"
 	require_module = 1
+<<<<<<< HEAD
 	module_type = list(/obj/item/robot_module/medical,/obj/item/robot_module/syndicate_medical) 
+=======
+	module_type = list(
+		/obj/item/robot_module/medical,
+		/obj/item/robot_module/syndicate_medical)
+>>>>>>> 659b78d8b8... Merge pull request #10162 from BlackMajor/Yeehaw
 
 /obj/item/borg/upgrade/advhealth/action(mob/living/silicon/robot/R, user = usr)
 	. = ..()
@@ -634,7 +653,12 @@
 	icon = 'icons/obj/device.dmi'
 	icon_state = "pinpointer_crew"
 	require_module = TRUE
+<<<<<<< HEAD
 	module_type = list(/obj/item/robot_module/medical,/obj/item/robot_module/syndicate_medical)
+=======
+	module_type = list(/obj/item/robot_module/medical,
+		/obj/item/robot_module/syndicate_medical)
+>>>>>>> 659b78d8b8... Merge pull request #10162 from BlackMajor/Yeehaw
 
 /obj/item/borg/upgrade/pinpointer/action(mob/living/silicon/robot/R, user = usr)
 	. = ..()
