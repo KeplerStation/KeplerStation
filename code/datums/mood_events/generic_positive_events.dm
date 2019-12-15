@@ -133,3 +133,30 @@
 	description = "<span class='nicegreen'>I've played with plushes recently.</span>\n"
 	mood_change = 3
 	timeout = 3000
+<<<<<<< HEAD
+=======
+
+/datum/mood_event/drankblood
+	description = "<span class='nicegreen'>I have fed greedly from that which nourishes me.</span>\n"
+	mood_change = 10
+	timeout = 900
+
+/datum/mood_event/coffinsleep
+	description = "<span class='nicegreen'>I slept in a coffin during the day. I feel whole again.</span>\n"
+	mood_change = 8
+	timeout = 1200
+//Cursed stuff below.
+
+/datum/mood_event/orgasm
+	description = "<span class='userlove'>I came!</span>\n" //funny meme haha
+	mood_change = 3
+	timeout = 100 SECONDS
+
+/datum/mood_event/fedpred
+	description = "<span class='nicegreen'>I've devoured someone!</span>\n"
+	mood_change = 3
+
+/datum/mood_event/fedprey
+	description = "<span class='nicegreen'>It feels quite cozy in here.</span>\n"
+	mood_change = 3
+>>>>>>> c39a5d0462... Merge pull request #10011 from Arturlang/Bloodsuckers
