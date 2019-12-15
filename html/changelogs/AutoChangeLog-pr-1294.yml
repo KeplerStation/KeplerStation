@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - rscdel: "conveyors can only stack items on tiles to 150 now."
