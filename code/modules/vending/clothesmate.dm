@@ -119,16 +119,6 @@
 					/obj/item/clothing/under/geisha = 4,,
 					/obj/item/clothing/under/keyholesweater = 3)
 	premium = list(/obj/item/clothing/under/suit_jacket/checkered = 4,
-<<<<<<< HEAD
-		           /obj/item/clothing/head/mailman = 2,
-		           /obj/item/clothing/under/rank/mailman = 2,
-		           /obj/item/clothing/suit/jacket/leather = 4,
-		           /obj/item/clothing/suit/jacket/leather/overcoat = 4,
-		           /obj/item/clothing/under/pants/mustangjeans = 3,
-		           /obj/item/clothing/neck/necklace/dope = 5,
-		           /obj/item/clothing/suit/jacket/letterman_nanotrasen = 5,
-		           /obj/item/clothing/accessory/nt_pokadots = 5)
-=======
 					/obj/item/clothing/head/mailman = 2,
 					/obj/item/clothing/under/rank/mailman = 2,
 					/obj/item/clothing/suit/jacket/leather = 4,
@@ -136,7 +126,6 @@
 					/obj/item/clothing/under/pants/mustangjeans = 3,
 					/obj/item/clothing/neck/necklace/dope = 5,
 					/obj/item/clothing/suit/jacket/letterman_nanotrasen = 5)
->>>>>>> cce63507d1... Merge pull request #9970 from Ghommie/Ghommie-cit402
 	refill_canister = /obj/item/vending_refill/clothing
 
 /obj/item/vending_refill/clothing
