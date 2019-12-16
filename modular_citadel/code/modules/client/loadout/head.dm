@@ -97,8 +97,6 @@
 	path = /obj/item/clothing/head/caphat/formal/fedcover/sec
 	restricted_desc = "Engineering, Security, and Cargo"
 	restricted_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer","Warden","Detective","Security Officer","Head of Security","Cargo Technician", "Shaft Miner", "Quartermaster")
-<<<<<<< HEAD
-=======
 
 /datum/gear/santahatr
 	name = "Red Santa Hat"
@@ -109,4 +107,3 @@
 	name = "Green Santa Hat"
 	category = SLOT_HEAD
 	path = /obj/item/clothing/head/christmashatg
->>>>>>> ba7a3f5fd2... Merge pull request #9971 from Xantholne/xantholne-christmas01
