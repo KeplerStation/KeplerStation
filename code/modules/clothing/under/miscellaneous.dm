@@ -769,8 +769,6 @@
 	item_state = "telegram"
 	body_parts_covered = CHEST|GROIN
 	can_adjust = FALSE
-<<<<<<< HEAD
-=======
 
 /obj/item/clothing/under/durathread
 	name = "durathread jumpsuit"
@@ -822,4 +820,3 @@
 	item_state = "christmasfemaleg"
 	body_parts_covered = CHEST|GROIN
 	can_adjust = FALSE
->>>>>>> ba7a3f5fd2... Merge pull request #9971 from Xantholne/xantholne-christmas01
