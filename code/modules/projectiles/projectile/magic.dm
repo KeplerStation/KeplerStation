@@ -508,8 +508,6 @@
 	var/turf/T = get_turf(target)
 	for(var/i=0, i<50, i+=10)
 		addtimer(CALLBACK(GLOBAL_PROC, .proc/explosion, T, -1, exp_heavy, exp_light, exp_flash, FALSE, FALSE, exp_fire), i)
-<<<<<<< HEAD
-=======
 
 /obj/item/projectile/magic/nuclear
 	name = "\proper blazing manliness"
@@ -538,4 +536,3 @@
 	for(var/atom/movable/AM in contents)
 		AM.forceMove(get_turf(src))
 	. = ..()
->>>>>>> 74cc1ec547... Merge pull request #10177 from BlackMajor/FIST
