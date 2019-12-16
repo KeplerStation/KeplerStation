@@ -801,3 +801,46 @@
 	resistance_flags = NONE
 	mutantrace_variation = NO_MUTANTRACE_VARIATION
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 5, "bio" = 0, "rad" = 0, "fire" = -5, "acid" = -15) //nylon sucks against acid
+<<<<<<< HEAD
+=======
+
+/obj/item/clothing/suit/assu_suit
+	name = "DAB suit"
+	desc = "A cheap replica of old SWAT armor. On its back, it is written: \"<i>Desperate Assistance Battleforce</i>\"."
+	icon_state = "assu_suit"
+	item_state = "assu_suit"
+	blood_overlay_type = "armor"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	flags_inv = HIDEJUMPSUIT
+	resistance_flags = NONE
+
+/obj/item/clothing/suit/hooded/wintercoat/christmascoatr
+	name = "red christmas coat"
+	desc = "A festive red Christmas coat! Smells like Candy Cane!"
+	icon_state = "christmascoatr"
+	item_state = "christmascoatr"
+	hoodtype = /obj/item/clothing/head/hooded/winterhood/christmashoodr
+
+/obj/item/clothing/head/hooded/winterhood/christmashoodr
+	icon_state = "christmashoodr"
+
+/obj/item/clothing/suit/hooded/wintercoat/christmascoatg
+	name = "green christmas coat"
+	desc = "A festive green Christmas coat! Smells like Candy Cane!"
+	icon_state = "christmascoatg"
+	item_state = "christmascoatg"
+	hoodtype = /obj/item/clothing/head/hooded/winterhood/christmashoodg
+
+/obj/item/clothing/head/hooded/winterhood/christmashoodg
+	icon_state = "christmashoodg"
+
+/obj/item/clothing/suit/hooded/wintercoat/christmascoatrg
+	name = "red and green christmas coat"
+	desc = "A festive red and green Christmas coat! Smells like Candy Cane!"
+	icon_state = "christmascoatrg"
+	item_state = "christmascoatrg"
+	hoodtype = /obj/item/clothing/head/hooded/winterhood/christmashoodrg
+
+/obj/item/clothing/head/hooded/winterhood/christmashoodrg
+	icon_state = "christmashoodrg"
+>>>>>>> ba7a3f5fd2... Merge pull request #9971 from Xantholne/xantholne-christmas01

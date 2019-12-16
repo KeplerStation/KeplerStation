@@ -308,3 +308,46 @@
 	path = /obj/item/clothing/under/rank/trek/engsec/ent
 	restricted_desc = "Engineering and Security"
 	restricted_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer","Warden","Detective","Security Officer","Head of Security","Cargo Technician", "Shaft Miner", "Quartermaster")
+<<<<<<< HEAD
+=======
+
+//Memes
+/datum/gear/gear_harnesses
+	name = "Gear Harness"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/gear_harness
+
+//Christmas
+/datum/gear/christmasmaler
+	name = "Red Masculine Christmas Suit"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/christmas/christmasmaler
+
+/datum/gear/christmasmaleg
+	name = "Green Masculine Christmas Suit"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/christmas/christmasmaleg
+
+/datum/gear/christmasfemaler
+	name = "Red Feminine Christmas Suit"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/christmas/christmasfemaler
+
+/datum/gear/christmasfemaleg
+	name = "Green Feminine Christmas Suit"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/christmas/christmasfemaleg
+
+/datum/gear/pinkstripper
+	name = "Pink stripper outfit"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/stripper_pink
+	cost = 3
+
+/datum/gear/greenstripper
+	name = "Green stripper outfit"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/stripper_green
+	cost = 3
+	
+>>>>>>> ba7a3f5fd2... Merge pull request #9971 from Xantholne/xantholne-christmas01

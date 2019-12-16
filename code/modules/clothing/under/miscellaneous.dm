@@ -769,3 +769,57 @@
 	item_state = "telegram"
 	body_parts_covered = CHEST|GROIN
 	can_adjust = FALSE
+<<<<<<< HEAD
+=======
+
+/obj/item/clothing/under/durathread
+	name = "durathread jumpsuit"
+	desc = "A jumpsuit made from durathread, its resilient fibres provide some protection to the wearer."
+	icon_state = "durathread"
+	item_state = "durathread"
+	item_color = "durathread"
+	can_adjust = TRUE
+	armor = list("melee" = 10, "laser" = 10, "fire" = 40, "acid" = 10, "bomb" = 5)
+
+/obj/item/clothing/under/duraskirt
+	name = "durathread jumpskirt"
+	desc = "A jumpsuit made from durathread, its resilient fibres provide some protection to the wearer. Being a short skirt, it naturally doesn't protect the legs."
+	icon_state = "duraskirt"
+	item_state = "duraskirt"
+	item_color = "durathread"
+	can_adjust = FALSE
+	body_parts_covered = CHEST|GROIN|ARMS
+	armor = list("melee" = 10, "laser" = 10, "fire" = 40, "acid" = 10, "bomb" = 5)
+
+/obj/item/clothing/under/christmas/christmasmaler
+	name = "red masculine christmas suit"
+	desc = "A simple red christmas suit that looks close to Santa's!"
+	icon_state = "christmasmaler"
+	item_state = "christmasmaler"
+	body_parts_covered = CHEST|GROIN
+	can_adjust = FALSE
+
+/obj/item/clothing/under/christmas/christmasmaleg
+	name = "green masculine christmas suit"
+	desc = "A simple green christmas suit that smells minty!"
+	icon_state = "christmasmaleg"
+	item_state = "christmasmaleg"
+	body_parts_covered = CHEST|GROIN
+	can_adjust = FALSE
+
+/obj/item/clothing/under/christmas/christmasfemaler
+	name = "red feminine christmas suit"
+	desc = "A simple red christmas suit that looks like Mrs Claus!"
+	icon_state = "christmasfemaler"
+	item_state = "christmasfemaler"
+	body_parts_covered = CHEST|GROIN
+	can_adjust = FALSE
+
+/obj/item/clothing/under/christmas/christmasfemaleg
+	name = "green feminine christmas suit"
+	desc = "A simple green christmas suit that smells minty!"
+	icon_state = "christmasfemaleg"
+	item_state = "christmasfemaleg"
+	body_parts_covered = CHEST|GROIN
+	can_adjust = FALSE
+>>>>>>> ba7a3f5fd2... Merge pull request #9971 from Xantholne/xantholne-christmas01
