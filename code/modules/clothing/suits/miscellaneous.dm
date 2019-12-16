@@ -801,18 +801,6 @@
 	resistance_flags = NONE
 	mutantrace_variation = NO_MUTANTRACE_VARIATION
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 5, "bio" = 0, "rad" = 0, "fire" = -5, "acid" = -15) //nylon sucks against acid
-<<<<<<< HEAD
-=======
-
-/obj/item/clothing/suit/assu_suit
-	name = "DAB suit"
-	desc = "A cheap replica of old SWAT armor. On its back, it is written: \"<i>Desperate Assistance Battleforce</i>\"."
-	icon_state = "assu_suit"
-	item_state = "assu_suit"
-	blood_overlay_type = "armor"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	flags_inv = HIDEJUMPSUIT
-	resistance_flags = NONE
 
 /obj/item/clothing/suit/hooded/wintercoat/christmascoatr
 	name = "red christmas coat"
@@ -843,4 +831,3 @@
 
 /obj/item/clothing/head/hooded/winterhood/christmashoodrg
 	icon_state = "christmashoodrg"
->>>>>>> ba7a3f5fd2... Merge pull request #9971 from Xantholne/xantholne-christmas01
