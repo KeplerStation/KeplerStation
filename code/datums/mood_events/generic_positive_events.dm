@@ -133,3 +133,8 @@
 	description = "<span class='nicegreen'>I've played with plushes recently.</span>\n"
 	mood_change = 3
 	timeout = 3000
+
+/datum/mood_event/hope_lavaland
+	description = "<span class='nicegreen'>What a peculiar emblem.  It makes me feel hopeful for my future.</span>\n"
+	mood_change = 5
+
