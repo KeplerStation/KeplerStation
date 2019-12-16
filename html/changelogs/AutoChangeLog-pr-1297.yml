@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - bugfix: "officer's sabre now properly makes the unsheating and resheating noise"
