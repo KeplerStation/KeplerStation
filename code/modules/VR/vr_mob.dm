@@ -36,5 +36,5 @@
 
 /datum/action/quit_vr/Trigger() //this merely a trigger for /datum/component/virtual_reality
 	. = ..()
-	if(!.)
+	if(.) //The component was not there to block the trigger.
 		Remove(owner)
