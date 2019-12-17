@@ -98,16 +98,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 						new_value = JP_LOW
 			if(new_value)
 				job_preferences["[initial(J.title)]"] = new_value
-<<<<<<< HEAD
-=======
+	
 	else if(current_version < 23) // we are fixing a gamebreaking bug.
 		job_preferences = list() //It loaded null from nonexistant savefile field.
-
-	if(current_version < 24 && S["feature_exhibitionist"])
-		var/datum/quirk/exhibitionism/E
-		var/quirk_name = initial(E.name)
-		all_quirks += quirk_name
->>>>>>> ed44b3130c... Merge pull request #10172 from Ghommie/Ghommie-cit460
 
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
 	if(!ckey)
@@ -420,12 +413,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 			job_preferences -= j
 
 	all_quirks = SANITIZE_LIST(all_quirks)
-<<<<<<< HEAD
-	positive_quirks = SANITIZE_LIST(positive_quirks)
-	negative_quirks = SANITIZE_LIST(negative_quirks)
-	neutral_quirks = SANITIZE_LIST(neutral_quirks)
-=======
->>>>>>> ed44b3130c... Merge pull request #10172 from Ghommie/Ghommie-cit460
 
 	cit_character_pref_load(S)
 
