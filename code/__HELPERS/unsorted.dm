@@ -1549,3 +1549,14 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 /proc/CallAsync(datum/source, proctype, list/arguments)
 	set waitfor = FALSE
 	return call(source, proctype)(arglist(arguments))
+<<<<<<< HEAD
+=======
+
+/proc/num2sign(numeric)
+	if(numeric > 0)
+		return 1
+	else if(numeric < 0)
+		return -1
+	else
+		return 0
+>>>>>>> ed44b3130c... Merge pull request #10172 from Ghommie/Ghommie-cit460
