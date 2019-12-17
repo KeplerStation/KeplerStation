@@ -2,13 +2,8 @@
 	// Animated beings of stone. They have increased defenses, and do not need to breathe. They're also slow as fuuuck.
 	name = "Golem"
 	id = "iron golem"
-<<<<<<< HEAD
 	species_traits = list(NOBLOOD,MUTCOLORS,NO_UNDERWEAR)
-	inherent_traits = list(TRAIT_RESISTHEAT,TRAIT_NOBREATH,TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_NOFIRE,TRAIT_NOGUNS,TRAIT_RADIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER)
-=======
-	species_traits = list(NOBLOOD,MUTCOLORS,NO_UNDERWEAR,NOGENITALS,NOAROUSAL)
 	inherent_traits = list(TRAIT_RESISTHEAT,TRAIT_NOBREATH,TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_NOFIRE,TRAIT_CHUNKYFINGERS,TRAIT_RADIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER)
->>>>>>> 7017ab243b... Merge pull request #10216 from Ghommie/Ghommie-cit474
 	inherent_biotypes = list(MOB_INORGANIC, MOB_HUMANOID)
 	mutant_organs = list(/obj/item/organ/adamantine_resonator)
 	speedmod = 2
@@ -696,13 +691,8 @@
 	sexes = FALSE
 	info_text = "As a <span class='danger'>Cloth Golem</span>, you are able to reform yourself after death, provided your remains aren't burned or destroyed. You are, of course, very flammable. \
 	Being made of cloth, your body is magic resistant and faster than that of other golems, but weaker and less resilient."
-<<<<<<< HEAD
 	species_traits = list(NOBLOOD,NO_UNDERWEAR) //no mutcolors, and can burn
-	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_NOBREATH,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_RADIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER,TRAIT_NOGUNS)
-=======
-	species_traits = list(NOBLOOD,NO_UNDERWEAR,NOGENITALS,NOAROUSAL) //no mutcolors, and can burn
 	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_NOBREATH,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_RADIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER,TRAIT_CHUNKYFINGERS)
->>>>>>> 7017ab243b... Merge pull request #10216 from Ghommie/Ghommie-cit474
 	inherent_biotypes = list(MOB_UNDEAD, MOB_HUMANOID)
 	armor = 15 //feels no pain, but not too resistant
 	burnmod = 2 // don't get burned
@@ -901,13 +891,8 @@
 	prefix = "Cardboard"
 	special_names = list("Box")
 	info_text = "As a <span class='danger'>Cardboard Golem</span>, you aren't very strong, but you are a bit quicker and can easily create more brethren by using cardboard on yourself."
-<<<<<<< HEAD
 	species_traits = list(NOBLOOD,NO_UNDERWEAR,MUTCOLORS)
-	inherent_traits = list(TRAIT_NOBREATH, TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_NOGUNS,TRAIT_RADIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER)
-=======
-	species_traits = list(NOBLOOD,NO_UNDERWEAR,NOGENITALS,NOAROUSAL,MUTCOLORS)
 	inherent_traits = list(TRAIT_NOBREATH, TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_CHUNKYFINGERS,TRAIT_RADIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER)
->>>>>>> 7017ab243b... Merge pull request #10216 from Ghommie/Ghommie-cit474
 	fixed_mut_color = "ffffff"
 	limbs_id = "c_golem" //special sprites
 	attack_verb = "bash"
@@ -987,13 +972,8 @@
 	sexes = FALSE
 	fixed_mut_color = "ffffff"
 	attack_verb = "rattl"
-<<<<<<< HEAD
 	species_traits = list(NOBLOOD,NO_UNDERWEAR,MUTCOLORS)	
-	inherent_traits = list(TRAIT_RESISTHEAT,TRAIT_NOBREATH,TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_NOFIRE,TRAIT_NOGUNS,TRAIT_RADIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER,TRAIT_FAKEDEATH,TRAIT_CALCIUM_HEALER)
-=======
-	species_traits = list(NOBLOOD,NO_UNDERWEAR,NOGENITALS,NOAROUSAL,MUTCOLORS)
 	inherent_traits = list(TRAIT_RESISTHEAT,TRAIT_NOBREATH,TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_NOFIRE,TRAIT_CHUNKYFINGERS,TRAIT_RADIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER,TRAIT_FAKEDEATH,TRAIT_CALCIUM_HEALER)
->>>>>>> 7017ab243b... Merge pull request #10216 from Ghommie/Ghommie-cit474
 	info_text = "As a <span class='danger'>Bone Golem</span>, You have a powerful spell that lets you chill your enemies with fear, and milk heals you! Just make sure to watch our for bone-hurting juice."
 	var/datum/action/innate/bonechill/bonechill
 
