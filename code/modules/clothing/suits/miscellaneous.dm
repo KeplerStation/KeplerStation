@@ -801,3 +801,33 @@
 	resistance_flags = NONE
 	mutantrace_variation = NO_MUTANTRACE_VARIATION
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 5, "bio" = 0, "rad" = 0, "fire" = -5, "acid" = -15) //nylon sucks against acid
+
+/obj/item/clothing/suit/hooded/wintercoat/christmascoatr
+	name = "red christmas coat"
+	desc = "A festive red Christmas coat! Smells like Candy Cane!"
+	icon_state = "christmascoatr"
+	item_state = "christmascoatr"
+	hoodtype = /obj/item/clothing/head/hooded/winterhood/christmashoodr
+
+/obj/item/clothing/head/hooded/winterhood/christmashoodr
+	icon_state = "christmashoodr"
+
+/obj/item/clothing/suit/hooded/wintercoat/christmascoatg
+	name = "green christmas coat"
+	desc = "A festive green Christmas coat! Smells like Candy Cane!"
+	icon_state = "christmascoatg"
+	item_state = "christmascoatg"
+	hoodtype = /obj/item/clothing/head/hooded/winterhood/christmashoodg
+
+/obj/item/clothing/head/hooded/winterhood/christmashoodg
+	icon_state = "christmashoodg"
+
+/obj/item/clothing/suit/hooded/wintercoat/christmascoatrg
+	name = "red and green christmas coat"
+	desc = "A festive red and green Christmas coat! Smells like Candy Cane!"
+	icon_state = "christmascoatrg"
+	item_state = "christmascoatrg"
+	hoodtype = /obj/item/clothing/head/hooded/winterhood/christmashoodrg
+
+/obj/item/clothing/head/hooded/winterhood/christmashoodrg
+	icon_state = "christmashoodrg"

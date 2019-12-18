@@ -388,7 +388,6 @@
 		around.</span>",
 		"<span class='notice'>...and move this one instead.</span>")
 
-
 ///////////////////////////////////LUMINESCENTS//////////////////////////////////////////
 
 //Luminescents are able to consume and use slime extracts, without them decaying.
@@ -591,19 +590,16 @@
 	link_minds = new(src)
 	link_minds.Grant(C)
 	slimelink_owner = C
-	link_mob(C)
+	link_mob(C, TRUE)
 
-/datum/species/jelly/stargazer/proc/link_mob(mob/living/M)
-	if(QDELETED(M) || M.stat == DEAD)
+/datum/species/jelly/stargazer/proc/link_mob(mob/living/M, selflink = FALSE)
+	if(QDELETED(M) || (M in linked_mobs))
 		return FALSE
-	if(HAS_TRAIT(M, TRAIT_MINDSHIELD)) //mindshield implant, no dice
-		return FALSE
-	if(M.anti_magic_check(FALSE, FALSE, TRUE, 0))
-		return FALSE
-	if(M in linked_mobs)
+	if(!selflink && (M.stat == DEAD || HAS_TRAIT(M, TRAIT_MINDSHIELD) || M.anti_magic_check(FALSE, FALSE, TRUE, 0)))
 		return FALSE
 	linked_mobs.Add(M)
-	to_chat(M, "<span class='notice'>You are now connected to [slimelink_owner.real_name]'s Slime Link.</span>")
+	if(!selflink)
+		to_chat(M, "<span class='notice'>You are now connected to [slimelink_owner.real_name]'s Slime Link.</span>")
 	var/datum/action/innate/linked_speech/action = new(src)
 	linked_actions.Add(action)
 	action.Grant(M)
