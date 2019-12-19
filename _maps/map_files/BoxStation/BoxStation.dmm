@@ -282,6 +282,7 @@
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aaK" = (
+<<<<<<< HEAD
 /obj/machinery/washing_machine,
 /obj/structure/window/reinforced{
 	dir = 1
@@ -294,6 +295,13 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/security/prison)
+=======
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/bar)
+>>>>>>> 4d466e17f3... Merge pull request #10173 from Ghommie/Ghommie-cit461
 "aaL" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -13038,6 +13046,7 @@
 /turf/open/floor/plasteel/freezer,
 /area/crew_quarters/toilet)
 "aDP" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plasteel/freezer,
 /area/crew_quarters/toilet)
@@ -13048,6 +13057,13 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/crew_quarters/toilet)
+=======
+/obj/structure/chair/comfy/brown{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/bar)
+>>>>>>> 4d466e17f3... Merge pull request #10173 from Ghommie/Ghommie-cit461
 "aDR" = (
 /obj/structure/table/wood,
 /obj/structure/mirror{
@@ -93267,6 +93283,7 @@ aBB
 aGy
 aIa
 cNE
+<<<<<<< HEAD
 aKM
 aMu
 aNG
@@ -93279,6 +93296,20 @@ aQc
 aSq
 aQc
 bad
+=======
+aQP
+awB
+awB
+aaK
+aFi
+awB
+awB
+awB
+aIi
+aOu
+aKR
+asD
+>>>>>>> 4d466e17f3... Merge pull request #10173 from Ghommie/Ghommie-cit461
 bby
 aYV
 aYV
