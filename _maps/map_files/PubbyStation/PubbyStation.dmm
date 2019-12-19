@@ -174,7 +174,6 @@
 	pixel_x = -27
 	},
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 26
 	},
 /turf/open/floor/circuit,
@@ -672,7 +671,7 @@
 /obj/item/pen,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /obj/item/paper_bin,
@@ -2477,7 +2476,7 @@
 	dir = 6
 	},
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -27
 	},
 /turf/open/floor/plasteel/showroomfloor,
@@ -3411,7 +3410,7 @@
 /obj/item/gun/energy/e_gun,
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -27
 	},
 /turf/open/floor/plasteel/dark,
@@ -4272,7 +4271,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden,
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -27
 	},
 /obj/effect/turf_decal/tile/red{
@@ -4988,7 +4987,7 @@
 	dir = 4
 	},
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /turf/open/floor/plasteel/showroomfloor,
@@ -8252,7 +8251,7 @@
 	dir = 10
 	},
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 24
 	},
 /turf/open/floor/plasteel/dark,
@@ -8738,7 +8737,7 @@
 /area/crew_quarters/dorms)
 "avl" = (
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /obj/machinery/computer/cryopod{
@@ -9697,7 +9696,7 @@
 	light_color = "#e8eaff"
 	},
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /obj/machinery/computer/rdconsole{
@@ -11453,7 +11452,6 @@
 "aBB" = (
 /obj/machinery/computer/cargo/request,
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 29
 	},
 /turf/open/floor/wood,
@@ -12401,7 +12399,7 @@
 /area/storage/primary)
 "aDB" = (
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /obj/effect/turf_decal/tile/neutral,
@@ -14379,7 +14377,6 @@
 	dir = 4
 	},
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 29
 	},
 /obj/effect/turf_decal/tile/blue{
@@ -17531,7 +17528,7 @@
 	dir = 10
 	},
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /turf/open/floor/plasteel,
@@ -18579,7 +18576,7 @@
 /area/maintenance/department/crew_quarters/bar)
 "aSA" = (
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -28
 	},
 /obj/machinery/hydroponics/constructable,
@@ -18798,7 +18795,6 @@
 	dir = 4
 	},
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 29
 	},
 /obj/effect/turf_decal/tile/brown{
@@ -19131,7 +19127,7 @@
 "aTP" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /obj/effect/turf_decal/tile/neutral,
@@ -21351,7 +21347,7 @@
 	dir = 4
 	},
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /obj/effect/turf_decal/tile/brown,
@@ -21748,7 +21744,7 @@
 	dir = 1
 	},
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /turf/open/floor/plasteel/dark,
@@ -22100,7 +22096,7 @@
 	dir = 8
 	},
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -28
 	},
 /obj/effect/turf_decal/tile/green{
@@ -24456,7 +24452,6 @@
 "bfx" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 24
 	},
 /obj/effect/turf_decal/delivery,
@@ -24842,7 +24837,6 @@
 /area/hallway/primary/central)
 "bgx" = (
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 27
 	},
 /obj/structure/chair,
@@ -26706,7 +26700,7 @@
 "bly" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -26;
 	pixel_y = 28
 	},
@@ -28017,7 +28011,6 @@
 "boz" = (
 /obj/machinery/vending/clothing,
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 27
 	},
 /obj/effect/turf_decal/tile/blue{
@@ -30047,7 +30040,7 @@
 "bsB" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer,
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -26
 	},
 /obj/structure/sign/poster/official/random{
@@ -30254,7 +30247,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /obj/effect/turf_decal/tile/green,
@@ -30383,7 +30376,7 @@
 /obj/item/crowbar,
 /obj/item/wrench,
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -28
 	},
 /obj/item/multitool,
@@ -30833,7 +30826,7 @@
 /area/medical/chemistry)
 "bun" = (
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /obj/effect/turf_decal/tile/yellow{
@@ -30871,7 +30864,7 @@
 	network = list("ss13","rd")
 	},
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /obj/machinery/light{
@@ -31492,7 +31485,7 @@
 	dir = 1
 	},
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -28
 	},
 /obj/effect/turf_decal/tile/purple{
@@ -34293,7 +34286,7 @@
 /area/science/storage)
 "bBH" = (
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -28
 	},
 /obj/effect/turf_decal/tile/purple{
@@ -34322,7 +34315,7 @@
 "bBK" = (
 /obj/structure/closet/bombcloset,
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -24
 	},
 /obj/structure/sign/poster/official/random{
@@ -35623,7 +35616,7 @@
 	dir = 4
 	},
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /obj/machinery/light{
@@ -36668,7 +36661,7 @@
 "bGe" = (
 /obj/machinery/portable_atmospherics/scrubber,
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -36714,7 +36707,7 @@
 	network = list("ss13","rd")
 	},
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /turf/open/floor/engine,
@@ -37147,7 +37140,7 @@
 	dir = 4
 	},
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
@@ -39338,6 +39331,13 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = -26
+	},
+>>>>>>> 66c6659681... Merge pull request #10160 from Ghommie/Ghommie-cit453
 /turf/open/floor/plasteel/white,
 /area/medical/surgery)
 "bLN" = (
@@ -41001,7 +41001,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -24
 	},
 /obj/effect/turf_decal/tile/yellow{
@@ -41224,7 +41224,6 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 29
 	},
 /turf/open/floor/plasteel/dark,
@@ -41276,7 +41275,6 @@
 	},
 /obj/item/stock_parts/cell/high/plus,
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 29
 	},
 /obj/effect/turf_decal/tile/green{
@@ -42947,7 +42945,6 @@
 	dir = 4
 	},
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 29
 	},
 /obj/effect/turf_decal/tile/yellow{
@@ -45349,7 +45346,6 @@
 	dir = 4
 	},
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 29
 	},
 /obj/effect/turf_decal/stripes/corner{
@@ -47544,7 +47540,7 @@
 /area/engine/engineering)
 "cgV" = (
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -24
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -48363,7 +48359,7 @@
 "ckD" = (
 /obj/structure/chair/wood/normal,
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -28
 	},
 /turf/open/floor/plasteel/dark,
@@ -52189,7 +52185,6 @@
 	network = list("ss13","monastery")
 	},
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 29
 	},
 /turf/open/floor/plasteel/dark,
@@ -53835,7 +53830,7 @@
 /area/maintenance/department/security/brig)
 "ePS" = (
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -28
 	},
 /obj/machinery/light{
@@ -54220,7 +54215,7 @@
 "fFv" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -24
 	},
 /turf/open/floor/plasteel/dark,
@@ -54357,7 +54352,7 @@
 "gdL" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -28
 	},
 /obj/effect/turf_decal/tile/purple{
@@ -56345,7 +56340,7 @@
 	dir = 8
 	},
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -27
 	},
 /obj/effect/turf_decal/tile/green{
@@ -59422,7 +59417,6 @@
 	pixel_y = 6
 	},
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 27
 	},
 /turf/open/floor/plasteel/cafeteria,
@@ -59823,7 +59817,6 @@
 	dir = 4
 	},
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 29
 	},
 /obj/effect/turf_decal/tile/red{
@@ -60061,7 +60054,7 @@
 	},
 /obj/item/hand_labeler,
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 28
 	},
 /obj/machinery/light{
@@ -61714,7 +61707,6 @@
 	dir = 4
 	},
 /obj/machinery/firealarm{
-	dir = 1;
 	pixel_y = 29
 	},
 /obj/effect/turf_decal/tile/neutral{
