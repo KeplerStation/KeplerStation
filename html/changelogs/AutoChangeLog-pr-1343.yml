@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - balance: "Buffed HE pipes by making them realistically radiate away heat."
