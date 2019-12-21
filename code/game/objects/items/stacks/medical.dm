@@ -156,10 +156,6 @@
 /obj/item/stack/medical/ointment/suicide_act(mob/living/user)
 	user.visible_message("<span class='suicide'>[user] is squeezing \the [src] into [user.p_their()] mouth! [user.p_do(TRUE)]n't [user.p_they()] know that stuff is toxic?</span>")
 	return TOXLOSS
-<<<<<<< HEAD
-
-/obj/item/stack/medical/get_belt_overlay()
-	return mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "pouch")
 
 // SPLINTS
 /obj/item/stack/medical/splint
@@ -196,5 +192,3 @@
 		C.update_inv_splints()
 		user.visible_message("<span class='green'>[user] applies [src] on [M].</span>", "<span class='green'>You apply [src] on [M].</span>")
 		use(1)
-=======
->>>>>>> ce34bcf2e4... Merge pull request #10012 from Commandersand/INEEDAMEDICBAG
