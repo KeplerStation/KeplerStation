@@ -137,6 +137,7 @@
 	requirements = list(5,5,5,5,5,5,5,5,5,5)
 	high_population_requirement = 5
 	repeatable = TRUE
+	always_max_weight = TRUE
 
 //////////////////////////////////////////////
 //                                          //
@@ -295,6 +296,7 @@
 	requirements = list(5,5,5,5,5,5,5,5,5,5)
 	high_population_requirement = 5
 	repeatable = TRUE
+	always_max_weight = TRUE
 
 /datum/dynamic_ruleset/event/space_dust
 	name = "Minor Space Dust"
@@ -308,6 +310,7 @@
 	requirements = list(5,5,5,5,5,5,5,5,5,5)
 	high_population_requirement = 5
 	repeatable = TRUE
+	always_max_weight = TRUE
 
 /datum/dynamic_ruleset/event/major_dust
 	name = "Major Space Dust"
@@ -347,6 +350,7 @@
 	requirements = list(101,101,101,5,5,5,5,5,5,5)
 	high_population_requirement = 5
 	repeatable = TRUE
+	always_max_weight = TRUE
 
 /datum/dynamic_ruleset/event/radiation_storm
 	name = "Radiation Storm"
