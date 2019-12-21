@@ -1,4 +1,0 @@
-author: "KeplerStation-Bot"
-delete-after: True
-changes: 
-  - rscadd: "Added ability to pick up certain simplemobs."
