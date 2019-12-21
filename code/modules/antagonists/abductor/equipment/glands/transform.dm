@@ -11,5 +11,5 @@
 /obj/item/organ/heart/gland/transform/activate()
 	to_chat(owner, "<span class='notice'>You feel unlike yourself.</span>")
 	randomize_human(owner)
-	var/species = pick(list(/datum/species/human, /datum/species/lizard, /datum/species/insect, /datum/species/fly))
+	var/species = pick(list(/datum/species/human, /datum/species/lizard, /datum/species/fly))
 	owner.set_species(species)
