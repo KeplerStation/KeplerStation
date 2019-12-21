@@ -5,17 +5,22 @@
 	icon_state = "gland"
 	status = ORGAN_ROBOTIC
 	beating = TRUE
+	organ_flags = ORGAN_NO_SPOIL
 	var/true_name = "baseline placebo referencer"
 	var/cooldown_low = 300
 	var/cooldown_high = 300
 	var/next_activation = 0
 	var/uses // -1 For infinite
-	var/human_only = 0
-	var/active = 0
+	var/human_only = FALSE
+	var/active = FALSE
 
 	var/mind_control_uses = 1
 	var/mind_control_duration = 1800
 	var/active_mind_control = FALSE
+
+/obj/item/organ/heart/gland/Initialize()
+	. = ..()
+	icon_state = pick(list("health", "spider", "slime", "emp", "species", "egg", "vent", "mindshock", "viral"))
 
 /obj/item/organ/heart/gland/examine(mob/user)
 	. = ..()
@@ -55,14 +60,18 @@
 	active_mind_control = TRUE
 	message_admins("[key_name(user)] sent an abductor mind control message to [key_name(owner)]: [command]")
 	update_gland_hud()
-
+	var/obj/screen/alert/mind_control/mind_alert = owner.throw_alert("mind_control", /obj/screen/alert/mind_control)
+	mind_alert.command = command
 	addtimer(CALLBACK(src, .proc/clear_mind_control), mind_control_duration)
+	return TRUE
 
 /obj/item/organ/heart/gland/proc/clear_mind_control()
 	if(!ownerCheck() || !active_mind_control)
 		return FALSE
-	to_chat(owner, "<span class='userdanger'>You feel the compulsion fade, and you completely forget about your previous orders.</span>")
+	to_chat(owner, "<span class='userdanger'>You feel the compulsion fade, and you <i>completely forget</i> about your previous orders.</span>")
+	owner.clear_alert("mind_control")
 	active_mind_control = FALSE
+	return TRUE
 
 /obj/item/organ/heart/gland/Remove(mob/living/carbon/M, special = 0)
 	active = 0
@@ -98,6 +107,7 @@
 		active = 0
 
 /obj/item/organ/heart/gland/proc/activate()
+<<<<<<< HEAD
 	return
 
 /obj/item/organ/heart/gland/heals
@@ -352,3 +362,6 @@
 	if(istype(T))
 		T.atmos_spawn_air("plasma=50;TEMP=[T20C]")
 	owner.vomit()
+=======
+	return
+>>>>>>> 19fc981cc1... Merge pull request #9596 from Linzolle/abductor-update
