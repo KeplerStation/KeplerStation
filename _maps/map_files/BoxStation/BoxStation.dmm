@@ -45504,7 +45504,6 @@
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "cdj" = (
-<<<<<<< HEAD
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
@@ -45517,10 +45516,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
-=======
-/turf/template_noop,
-/area/template_noop)
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
 "cdk" = (
 /obj/machinery/computer/atmos_alert,
 /obj/effect/turf_decal/tile/neutral{
@@ -46192,18 +46187,18 @@
 "cfa" = (
 /obj/structure/rack,
 /obj/item/storage/belt/utility,
-/obj/item/wrench,
-/obj/item/weldingtool,
-/obj/item/clothing/head/welding{
-	pixel_x = -3;
-	pixel_y = 5
-	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+/obj/item/weldingtool/largetank,
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/clothing/glasses/welding,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cfb" = (
@@ -46222,7 +46217,7 @@
 /area/crew_quarters/heads/chief)
 "cfd" = (
 /obj/machinery/firealarm{
-	dir = 4;
+	dir = 8;
 	pixel_x = 24
 	},
 /obj/structure/closet/radiation,
@@ -46394,6 +46389,9 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+/obj/item/clothing/under/overalls,
+/obj/item/clothing/under/overalls,
+/obj/item/radio/headset/headset_eng,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cfD" = (
@@ -46415,10 +46413,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/heads/chief)
-"cfG" = (
-/obj/effect/landmark/stationroom/box/engine,
-/turf/open/space/basic,
-/area/space)
 "cfH" = (
 /obj/machinery/button/door{
 	id = "ceprivacy";
@@ -46451,6 +46445,9 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+/obj/item/clothing/under/overalls,
+/obj/item/clothing/under/overalls,
+/obj/item/radio/headset/headset_eng,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cfJ" = (
@@ -46815,74 +46812,9 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
-<<<<<<< HEAD
 "cgI" = (
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
-	dir = 1
-	},
-/obj/effect/spawner/structure/window/plasma/reinforced,
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cgJ" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/spawner/structure/window/plasma/reinforced,
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cgK" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 9
-	},
-/obj/effect/spawner/structure/window/plasma/reinforced,
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cgL" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine Room";
-	req_access_txt = "10"
-	},
-/turf/open/floor/engine,
-=======
-"cgH" = (
-/obj/structure/closet/secure_closet/engineering_personal,
-/obj/effect/turf_decal/tile/yellow,
-/obj/effect/turf_decal/tile/yellow{
-	dir = 4
-	},
-/obj/item/clothing/under/overalls,
-/obj/item/clothing/under/overalls,
-/obj/item/radio/headset/headset_eng,
-/turf/open/floor/plasteel,
-/area/engine/engineering)
-"cgM" = (
-/obj/structure/closet/secure_closet/engineering_personal,
-/obj/machinery/airalarm{
-	dir = 8;
-	pixel_x = 24
-	},
-/obj/effect/turf_decal/tile/yellow,
-/obj/effect/turf_decal/tile/yellow{
-	dir = 4
-	},
-/obj/item/clothing/under/overalls,
-/obj/item/clothing/under/overalls,
-/obj/item/radio/headset/headset_eng,
-/turf/open/floor/plasteel,
-/area/engine/engineering)
-"cgN" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 10
-	},
-/obj/structure/closet/secure_closet/engineering_electrical,
-/obj/item/storage/toolbox/artistic{
-	icon_state = "yellow";
-	item_state = "toolbox_yellow";
-	name = "Cable Toolbox";
-	pixel_y = 6
-	},
-/turf/open/floor/plasteel,
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
-/area/engine/engineering)
+/turf/template_noop,
+/area/template_noop)
 "cgO" = (
 /obj/structure/rack,
 /obj/item/lighter,
@@ -47320,7 +47252,6 @@
 /obj/structure/lattice/catwalk,
 /turf/open/space,
 /area/solar/port/aft)
-<<<<<<< HEAD
 "chM" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -47328,8 +47259,6 @@
 /obj/structure/lattice/catwalk,
 /turf/open/space,
 /area/solar/port/aft)
-=======
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
 "chN" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -47389,39 +47318,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
-<<<<<<< HEAD
-"chV" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/structure/table/reinforced,
-/obj/item/tank/internals/emergency_oxygen/engi{
-	pixel_x = 5
-	},
-/obj/item/clothing/gloves/color/black,
-/obj/item/clothing/glasses/meson/engine,
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"chX" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-=======
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
 "chY" = (
 /obj/machinery/shieldgen,
 /turf/open/floor/plating,
@@ -47504,31 +47400,6 @@
 "cig" = (
 /turf/closed/wall,
 /area/engine/engineering)
-<<<<<<< HEAD
-"cii" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/structure/table/reinforced,
-/obj/item/clothing/suit/radiation,
-/obj/item/clothing/head/radiation,
-/obj/item/clothing/glasses/meson,
-/obj/item/geiger_counter,
-/obj/item/geiger_counter,
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-=======
-"cih" = (
-/obj/effect/spawner/lootdrop/keg,
-/turf/open/floor/plating,
-/area/maintenance/starboard/fore)
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
 "cij" = (
 /obj/machinery/modular_computer/console/preset/engineering,
 /obj/structure/cable{
@@ -48918,7 +48789,6 @@
 /area/engine/engineering)
 "clM" = (
 /obj/structure/table,
-/obj/item/crowbar/large,
 /obj/item/storage/box/lights/mixed,
 /obj/item/clothing/glasses/meson,
 /obj/item/clothing/glasses/meson,
@@ -48958,15 +48828,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/table,
-/obj/item/book/manual/wiki/engineering_hacking{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/book/manual/wiki/engineering_construction,
-/obj/item/clothing/glasses/meson,
 /obj/effect/turf_decal/tile/yellow{
-	dir = 1
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
@@ -49226,7 +49089,7 @@
 /area/engine/engineering)
 "cmG" = (
 /obj/machinery/firealarm{
-	dir = 8;
+	dir = 4;
 	pixel_x = -24
 	},
 /obj/structure/cable{
@@ -49925,6 +49788,12 @@
 	dir = 10
 	},
 /obj/structure/closet/secure_closet/engineering_electrical,
+/obj/item/storage/toolbox/artistic{
+	icon_state = "yellow";
+	item_state = "toolbox_yellow";
+	name = "Cable Toolbox";
+	pixel_y = 6
+	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cpa" = (
@@ -49935,6 +49804,9 @@
 	dir = 5
 	},
 /obj/structure/closet/secure_closet/engineering_welding,
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/glasses/welding,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cpb" = (
@@ -50054,62 +49926,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
-<<<<<<< HEAD
 "cps" = (
 /obj/structure/table,
-/obj/item/stack/sheet/glass/fifty,
-/obj/item/stack/sheet/glass/fifty,
-/obj/item/stack/sheet/glass/fifty,
+/obj/machinery/cell_charger,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
-"cpt" = (
-/obj/structure/table,
-/obj/item/clothing/gloves/color/yellow,
-/obj/item/storage/toolbox/electrical{
-	pixel_y = 5
-	},
-/turf/open/floor/plasteel,
-/area/engine/engineering)
-"cpu" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine Room";
-	req_access_txt = "10"
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cpv" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/effect/turf_decal/stripes/corner{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cpx" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cpy" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-=======
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
 "cpA" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -50215,6 +50036,11 @@
 	dir = 4
 	},
 /obj/machinery/rnd/production/protolathe/department/engineering,
+/obj/structure/sign/poster/contraband/power{
+	desc = "Lord Singuloth must feed. Annoyingly, it's really easy for people to sabotage containment and let Lord Singuloth eat the entire  station.. For this reason, Nanotrasen prefers Supermatter reactors.";
+	pixel_x = -32;
+	poster_item_desc = "This poster depicts Lord Singuloth. Nanotrasen doesn't approve. Nanotrasen wants Supermatter over Singularities, as they are usually much safer."
+	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cpW" = (
@@ -50225,6 +50051,9 @@
 /area/engine/engineering)
 "cpX" = (
 /obj/structure/table,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
 /obj/item/stack/rods/fifty,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
@@ -50322,56 +50151,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
-<<<<<<< HEAD
-"cqA" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/obj/machinery/door/airlock/external{
-	name = "Engineering External Access";
-	req_access_txt = "10;13"
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cqB" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/green/visible,
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cqC" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cqD" = (
-/obj/structure/sign/warning/radiation,
-/turf/closed/wall/r_wall,
-/area/engine/supermatter)
-"cqE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/airlock/engineering/glass/critical{
-	heat_proof = 1;
-	name = "Supermatter Chamber";
-	req_access_txt = "10"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/turf/open/floor/engine,
-/area/engine/supermatter)
-"cqF" = (
-/obj/machinery/atmospherics/pipe/simple/green/visible,
-/turf/closed/wall/r_wall,
-/area/engine/supermatter)
-=======
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
 "cqG" = (
 /obj/structure/rack,
 /obj/item/storage/box/rubbershot{
@@ -50457,10 +50236,6 @@
 	pixel_x = -3;
 	pixel_y = -2
 	},
-/turf/open/floor/plasteel,
-/area/engine/engineering)
-"cqQ" = (
-/obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cqR" = (
@@ -50718,28 +50493,6 @@
 /obj/machinery/meter,
 /turf/open/floor/plasteel,
 /area/maintenance/disposal/incinerator)
-<<<<<<< HEAD
-"css" = (
-/obj/structure/lattice/catwalk,
-/obj/machinery/atmospherics/pipe/heat_exchanging/simple,
-/turf/open/space,
-/area/space/nearstation)
-"csu" = (
-/obj/structure/closet/firecloset,
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"csv" = (
-/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
-	dir = 5
-	},
-/obj/structure/lattice,
-/turf/open/space,
-/area/space/nearstation)
-"csx" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/heat_exchanging/simple,
-/turf/open/space,
-/area/space/nearstation)
 "csy" = (
 /obj/structure/table,
 /obj/item/weldingtool,
@@ -50748,26 +50501,10 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
-"csA" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "engsm";
-	name = "Radiation Chamber Shutters"
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating,
-/area/engine/supermatter)
-=======
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
 "csD" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/aisat_interior)
-<<<<<<< HEAD
 "csE" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -50775,26 +50512,6 @@
 /obj/structure/lattice/catwalk,
 /turf/open/space,
 /area/solar/starboard/aft)
-"csH" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/machinery/atmospherics/components/trinary/filter/flipped/critical{
-	dir = 8
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"csI" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/machinery/atmospherics/components/trinary/filter/flipped/critical{
-	dir = 8
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-=======
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
 "csM" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/yellow/visible,
@@ -53876,817 +53593,6 @@
 /obj/structure/closet/radiation,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
-<<<<<<< HEAD
-"cEa" = (
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 1
-	},
-/obj/machinery/portable_atmospherics/canister/nitrogen,
-/obj/effect/turf_decal/bot,
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cEd" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/machinery/camera{
-	c_tag = "Engineering Supermatter Port";
-	dir = 4;
-	network = list("ss13","engine")
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cEe" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/green/visible,
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cEf" = (
-/obj/machinery/status_display/ai,
-/turf/closed/wall/r_wall,
-/area/engine/supermatter)
-"cEg" = (
-/obj/machinery/status_display,
-/turf/closed/wall/r_wall,
-/area/engine/supermatter)
-"cEh" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/cyan/visible,
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cEi" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/machinery/camera{
-	c_tag = "Engineering Supermatter Starboard";
-	dir = 8;
-	network = list("ss13","engine")
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cEk" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cEl" = (
-/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
-	dir = 6
-	},
-/obj/structure/lattice,
-/turf/open/space,
-/area/space/nearstation)
-"cEr" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cEs" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/components/binary/pump/on{
-	dir = 8;
-	name = "Gas to Cooling Loop"
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cEt" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "engsm";
-	name = "Radiation Chamber Shutters"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating,
-/area/engine/supermatter)
-"cEu" = (
-/obj/machinery/camera{
-	c_tag = "Supermatter Chamber";
-	network = list("engine");
-	pixel_x = 23
-	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/turf/open/floor/engine,
-/area/engine/supermatter)
-"cEv" = (
-/obj/machinery/atmospherics/pipe/manifold/general/visible{
-	dir = 8
-	},
-/obj/machinery/power/rad_collector/anchored,
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
-/obj/structure/window/plasma/reinforced{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/engine/supermatter)
-"cEw" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
-	dir = 8
-	},
-/turf/open/floor/engine,
-/area/engine/supermatter)
-"cEx" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/engine/supermatter)
-"cEy" = (
-/obj/machinery/atmospherics/pipe/manifold/general/visible{
-	dir = 4
-	},
-/obj/machinery/power/rad_collector/anchored,
-/obj/structure/cable/yellow{
-	icon_state = "0-4"
-	},
-/obj/structure/window/plasma/reinforced{
-	dir = 8
-	},
-/turf/open/floor/engine,
-/area/engine/supermatter)
-"cEz" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/turf/open/floor/engine,
-/area/engine/supermatter)
-"cEA" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "engsm";
-	name = "Radiation Chamber Shutters"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating,
-/area/engine/supermatter)
-"cEB" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/manifold/cyan/visible{
-	dir = 8
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cEC" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/components/binary/pump{
-	dir = 8;
-	name = "Mix to Gas"
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cED" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cEE" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
-	dir = 5
-	},
-/turf/open/space,
-/area/space/nearstation)
-"cEK" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 6
-	},
-/turf/closed/wall/r_wall,
-/area/engine/engineering)
-"cEL" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/machinery/airalarm{
-	dir = 4;
-	pixel_x = -22
-	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cEM" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "engsm";
-	name = "Radiation Chamber Shutters"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/item/tank/internals/plasma,
-/turf/open/floor/plating,
-/area/engine/supermatter)
-"cET" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "engsm";
-	name = "Radiation Chamber Shutters"
-	},
-/obj/effect/decal/cleanable/oil,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating,
-/area/engine/supermatter)
-"cEU" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/cyan/visible,
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cEW" = (
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cFb" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
-	dir = 1
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFc" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-4"
-	},
-/obj/machinery/atmospherics/components/binary/pump{
-	name = "Cooling Loop Bypass"
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFe" = (
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 5
-	},
-/obj/machinery/power/rad_collector/anchored,
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
-/obj/structure/window/plasma/reinforced{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/engine/supermatter)
-"cFh" = (
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 9
-	},
-/obj/machinery/power/rad_collector/anchored,
-/obj/structure/cable/yellow{
-	icon_state = "0-4"
-	},
-/obj/structure/window/plasma/reinforced{
-	dir = 8
-	},
-/turf/open/floor/engine,
-/area/engine/supermatter)
-"cFj" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "engsm";
-	name = "Radiation Chamber Shutters"
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating,
-/area/engine/supermatter)
-"cFk" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
-/obj/machinery/atmospherics/components/binary/pump{
-	dir = 1;
-	name = "Mix Bypass"
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFm" = (
-/obj/machinery/atmospherics/pipe/heat_exchanging/simple,
-/obj/structure/lattice,
-/turf/open/space,
-/area/space/nearstation)
-"cFn" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
-	dir = 6
-	},
-/turf/open/space,
-/area/space/nearstation)
-"cFo" = (
-/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
-	dir = 10
-	},
-/obj/structure/lattice,
-/turf/open/space,
-/area/space/nearstation)
-"cFu" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 4
-	},
-/obj/machinery/meter,
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFw" = (
-/obj/structure/sign/warning/electricshock,
-/turf/closed/wall/r_wall,
-/area/engine/supermatter)
-"cFy" = (
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFz" = (
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cFA" = (
-/obj/machinery/atmospherics/pipe/manifold/general/visible,
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cFI" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFJ" = (
-/obj/effect/turf_decal/stripes/corner{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/orange/visible,
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFK" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFL" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/cyan/visible{
-	dir = 6
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFM" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/cyan/visible{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFN" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/manifold/cyan/visible{
-	dir = 1
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFO" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/machinery/camera{
-	c_tag = "Engineering Supermatter Aft";
-	network = list("ss13","engine");
-	pixel_x = 23
-	},
-/obj/effect/turf_decal/delivery,
-/obj/machinery/atmospherics/pipe/simple/cyan/visible{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cFP" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/manifold/cyan/visible{
-	dir = 1
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFR" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/manifold/cyan/visible{
-	dir = 1
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFS" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/cyan/visible{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFT" = (
-/obj/effect/turf_decal/stripes/corner{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/cyan/visible{
-	dir = 9
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cFU" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cGd" = (
-/obj/structure/closet/crate/bin,
-/obj/effect/turf_decal/stripes/line{
-	dir = 10
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cGe" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/orange/visible{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cGf" = (
-/obj/machinery/atmospherics/components/trinary/filter/flipped/critical{
-	dir = 8;
-	filter_type = "n2"
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cGg" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cGh" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/effect/turf_decal/stripes/corner,
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cGi" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cGj" = (
-/obj/structure/table,
-/obj/item/pipe_dispenser,
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cGk" = (
-/obj/machinery/light,
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cGl" = (
-/obj/structure/closet/secure_closet/engineering_personal,
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cGr" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 5
-	},
-/turf/closed/wall/r_wall,
-/area/engine/engineering)
-"cGs" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 10
-	},
-/turf/closed/wall/r_wall,
-/area/engine/engineering)
-"cGt" = (
-/obj/structure/closet/wardrobe/engineering_yellow,
-/obj/effect/turf_decal/stripes/line{
-	dir = 10
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cGu" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
-	dir = 6
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cGv" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cGx" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/visible,
-/obj/machinery/meter,
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cGC" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 6
-	},
-/obj/machinery/atmospherics/components/binary/valve/digital/on{
-	dir = 4;
-	name = "Output Release"
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cGD" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
-	dir = 4
-	},
-/turf/closed/wall/r_wall,
-/area/engine/engineering)
-"cGE" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
-	dir = 10
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cGH" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cGI" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/engineering/glass{
-	name = "Laser Room";
-	req_access_txt = "10"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-"cGK" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 6
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cGL" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 9
-	},
-/turf/closed/wall/r_wall,
-/area/engine/engineering)
-"cGM" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
-/turf/open/floor/plating/airless,
-/area/engine/engineering)
-"cGR" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
-	dir = 1
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cGS" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cGT" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cGU" = (
-/obj/structure/reflector/double/anchored{
-	dir = 6
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cGV" = (
-/obj/structure/reflector/box/anchored{
-	dir = 1
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cGY" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cGZ" = (
-/obj/machinery/atmospherics/components/unary/outlet_injector/atmos/engine_waste{
-	dir = 1
-	},
-/turf/open/floor/plating/airless,
-/area/engine/engineering)
-"cHa" = (
-/obj/machinery/airalarm{
-	dir = 4;
-	pixel_x = -22
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cHb" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cHc" = (
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cHd" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cHe" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cHg" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cHj" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/emitter/anchored{
-	dir = 8;
-	state = 2
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cHn" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"cHo" = (
-/obj/structure/reflector/single/anchored{
-	dir = 9
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cHp" = (
-/obj/structure/reflector/single/anchored{
-	dir = 5
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"cHr" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-=======
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
 "cHD" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -55914,18 +54820,6 @@
 "iiW" = (
 /turf/open/floor/wood,
 /area/maintenance/bar)
-<<<<<<< HEAD
-"ijc" = (
-/obj/structure/table,
-/obj/item/stack/sheet/metal/fifty,
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-=======
-"imH" = (
-/obj/structure/falsewall,
-/turf/open/floor/plating,
-/area/maintenance/bar)
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
 "ipA" = (
 /turf/open/floor/plating,
 /area/maintenance/department/medical/morgue)
@@ -56059,15 +54953,6 @@
 	},
 /turf/open/floor/wood,
 /area/maintenance/port/aft)
-"jMY" = (
-/obj/structure/table,
-/obj/item/stack/cable_coil{
-	pixel_x = 3;
-	pixel_y = -7
-	},
-/obj/item/stack/cable_coil,
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
 "jSO" = (
 /obj/machinery/light{
 	dir = 4
@@ -56145,7 +55030,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/service)
-<<<<<<< HEAD
 "kQk" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/maintenance{
@@ -56154,15 +55038,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/medical/morgue)
-"kQq" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
-=======
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
 "kSb" = (
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
@@ -56209,24 +55084,10 @@
 /obj/effect/spawner/lootdrop/keg,
 /turf/open/floor/wood,
 /area/maintenance/bar)
-<<<<<<< HEAD
-"mBv" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/components/binary/valve{
-	dir = 4;
-	name = "Output to Waste"
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
 "mGw" = (
 /obj/machinery/vending/autodrobe/all_access,
 /turf/open/floor/plasteel,
 /area/crew_quarters/locker)
-=======
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
 "mNi" = (
 /obj/machinery/light_switch{
 	pixel_x = -20
@@ -56284,6 +55145,10 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
+"ocV" = (
+/obj/effect/landmark/stationroom/box/engine,
+/turf/open/space/basic,
+/area/space)
 "olr" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel/white,
@@ -56618,25 +55483,6 @@
 	},
 /turf/open/floor/wood,
 /area/maintenance/bar)
-<<<<<<< HEAD
-"udp" = (
-/obj/item/crowbar/large,
-/obj/structure/rack,
-/obj/item/flashlight,
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-"uhH" = (
-/obj/item/wrench,
-/obj/item/weldingtool,
-/obj/item/clothing/head/welding{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/structure/rack,
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
-=======
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
 "ujF" = (
 /obj/machinery/cryopod{
 	dir = 4
@@ -81521,7 +80367,7 @@ bTA
 bEP
 cdi
 bCq
-bCq
+bHE
 bHE
 bHE
 cmD
@@ -81533,25 +80379,25 @@ cpV
 cqw
 cqO
 crp
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
 aaa
-cfG
+ocV
 aaa
 aaa
 aaa
@@ -81790,20 +80636,20 @@ cgR
 cgR
 cqN
 cro
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -82047,20 +80893,20 @@ ciN
 cji
 cDZ
 crr
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -82304,20 +81150,20 @@ cgR
 cDB
 cqP
 crq
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -82559,22 +81405,22 @@ coH
 cgR
 cgR
 cqx
-cqR
+cgR
 crp
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -82816,22 +81662,22 @@ coH
 cps
 cpX
 cqz
-cqQ
+cqR
 ccw
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -83072,28 +81918,28 @@ coa
 coJ
 clJ
 clJ
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -83327,30 +82173,30 @@ ccw
 ccw
 cnZ
 coH
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -83584,30 +82430,30 @@ cmG
 cnt
 cob
 coL
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -83840,31 +82686,31 @@ cTc
 cTe
 cgR
 cgw
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -84096,61 +82942,32 @@ ckG
 clJ
 cmF
 cgR
-<<<<<<< HEAD
 cgI
-chF
-ciO
-cqc
-cqc
-cqc
-cEd
-cEr
-cEL
-cFb
-cFu
-cFI
-cGd
-cGs
-cGr
-ccw
-ccw
-ccw
-ccw
-ccw
-ccw
-aaa
-eRz
-aaT
-eRz
-aaa
-=======
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -84382,61 +83199,32 @@ cTa
 ceZ
 clQ
 cgR
-<<<<<<< HEAD
-cgx
-coM
-cpv
-cqb
-cqb
-cqb
-cqb
-cEs
-cqb
-cqb
-cAp
-cqb
-cAo
-cGt
-cgx
-jMY
-csd
-cHa
-csd
-uhH
-ccw
-aaa
-aaT
-ctv
-aaT
-aaa
-=======
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -84668,32 +83456,32 @@ cTb
 cTd
 ckF
 ckF
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -84925,32 +83713,32 @@ cnA
 cev
 cfg
 cgU
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -85182,32 +83970,32 @@ cig
 cig
 cTf
 cgR
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -85439,32 +84227,32 @@ ckI
 clJ
 cmL
 cBO
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -85696,32 +84484,32 @@ ckK
 clJ
 cmL
 cgR
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aae
 aaa
@@ -85953,32 +84741,32 @@ ckI
 clJ
 cmL
 cnv
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -86210,32 +84998,32 @@ cfb
 ccw
 cmN
 cgR
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -86467,32 +85255,32 @@ cfb
 clM
 cfz
 cgR
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -86724,32 +85512,32 @@ cfb
 cfa
 cje
 cgR
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -86981,32 +85769,32 @@ ckL
 cmF
 cje
 cgR
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -87238,32 +86026,32 @@ ceq
 clQ
 cje
 cgR
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -87495,61 +86283,32 @@ ckO
 ckH
 cja
 cny
-<<<<<<< HEAD
-ccw
-cip
-cnx
-cDx
-cqb
-cqb
-cqb
-cEC
-cqb
-cqb
-cAr
-cqb
-cGh
-cGC
-cey
-ijc
-csd
-cEk
-csd
-udp
-ccw
-aaf
-aaT
-ctv
-aaT
-aaa
-=======
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -87781,32 +86540,32 @@ cfb
 clR
 cgR
 cgR
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -88038,32 +86797,32 @@ ces
 clN
 ccm
 ckF
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -88298,29 +87057,29 @@ cgU
 cgU
 cis
 cjN
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -88555,55 +87314,29 @@ cfI
 cgQ
 cjS
 cjN
-<<<<<<< HEAD
-cqm
-cgR
-crd
-cEk
-crL
-cEW
-cse
-cse
-csu
-cGl
-ccw
-aaa
-aaa
-aaf
-aaa
-aaf
-ctv
-aaT
-aaa
-aaa
-aaf
-aaa
-aaa
-=======
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
->>>>>>> 9a022f21eb... Merge pull request #10245 from r4d6/substationV2
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
@@ -88838,29 +87571,29 @@ ccw
 ccw
 cDl
 cjN
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
-cdj
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
+cgI
 aaa
 aaa
 aaa
