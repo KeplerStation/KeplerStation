@@ -672,11 +672,20 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 					S = GLOB.wings_open_list[H.dna.features["wings"]]
 				if("legs")
 					S = GLOB.legs_list[H.dna.features["legs"]]
+<<<<<<< HEAD
 				if("moth_wings")
 					S = GLOB.moth_wings_list[H.dna.features["moth_wings"]]
 				//KEPLER CHANGE
 				if("moth_markings")
 					S = GLOB.moth_markings_list[H.dna.features["moth_markings"]]
+=======
+				if("insect_wings")
+					S = GLOB.insect_wings_list[H.dna.features["insect_wings"]]
+				if("insect_fluff")
+					S = GLOB.insect_fluffs_list[H.dna.features["insect_fluff"]]
+				if("insect_markings")
+					S = GLOB.insect_markings_list[H.dna.features["insect_markings"]]
+>>>>>>> e7cf680ca7... Merge pull request #10266 from shellspeed1/master
 				if("caps")
 				//END KEPLER CHANGE
 					S = GLOB.caps_list[H.dna.features["caps"]]

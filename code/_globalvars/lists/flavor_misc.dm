@@ -34,8 +34,14 @@ GLOBAL_LIST_EMPTY(ears_list)
 GLOBAL_LIST_EMPTY(wings_list)
 GLOBAL_LIST_EMPTY(wings_open_list)
 GLOBAL_LIST_EMPTY(r_wings_list)
+<<<<<<< HEAD
 GLOBAL_LIST_EMPTY(moth_wings_list)
 GLOBAL_LIST_EMPTY(moth_markings_list) //KEPLER CHANGE
+=======
+GLOBAL_LIST_EMPTY(insect_wings_list)
+GLOBAL_LIST_EMPTY(insect_fluffs_list)
+GLOBAL_LIST_EMPTY(insect_markings_list)
+>>>>>>> e7cf680ca7... Merge pull request #10266 from shellspeed1/master
 GLOBAL_LIST_EMPTY(caps_list)
 
 GLOBAL_LIST_INIT(ghost_forms_with_directions_list, list("ghost")) //stores the ghost forms that support directional sprites
