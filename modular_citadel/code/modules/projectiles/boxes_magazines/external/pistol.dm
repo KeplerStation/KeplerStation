@@ -41,6 +41,7 @@
  	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 	
 /datum/design/bolt_clip
+<<<<<<< HEAD
  	name = "Surplus Rifle Clip"
  	desc = "A stripper clip used to quickly load bolt action rifles. Contains 5 rounds."
  	id = "bolt_clip"
@@ -51,6 +52,18 @@
  	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
  
 /datum/design/m45 //Kinda NT in throey
+=======
+	name = "Surplus Rifle Clip"
+	desc = "A stripper clip used to quickly load bolt action rifles. Contains 5 rounds."
+	id = "bolt_clip"
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 8000)
+	build_path = /obj/item/ammo_box/a762
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/m45 //Kinda NT in theory
+>>>>>>> 12d0a2ee4c... Merge pull request #10281 from Hatterhat/4-am-coding-more-like-4head
 	name = "handgun magazine (.45)"
 	id = "m45"
 	build_type = PROTOLATHE
@@ -66,5 +79,15 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 80000)
 	build_path = /obj/item/ammo_box/magazine/pistolm9mm
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/sl357
+	name = "revolver speedloader (.357)"
+	desc = "A revolver speedloader."
+	id = "sl357"
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 30000)
+	build_path = /obj/item/ammo_box/a357
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
