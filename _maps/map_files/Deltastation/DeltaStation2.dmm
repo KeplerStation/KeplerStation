@@ -124,36 +124,6 @@
 	},
 /turf/open/floor/plating,
 /area/crew_quarters/abandoned_gambling_den)
-"aaq" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/obj/machinery/airalarm{
-	dir = 1;
-	pixel_y = -22
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/structure/table,
-/obj/structure/bedsheetbin/towel,
-/turf/open/floor/plasteel,
-/area/crew_quarters/toilet/restrooms)
-"aar" = (
-/obj/structure/table,
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/structure/bedsheetbin/color,
-/turf/open/floor/plasteel/white/corner{
-	dir = 1
-	},
-/area/crew_quarters/dorms)
 "aas" = (
 /obj/docking_port/stationary/random{
 	id = "pod_lavaland1";
@@ -173,6 +143,7 @@
 /obj/effect/landmark/xeno_spawn,
 /turf/open/space,
 /area/solar/starboard/fore)
+<<<<<<< HEAD
 "aav" = (
 /obj/effect/decal/cleanable/cobweb,
 /obj/machinery/computer/arcade{
@@ -248,6 +219,8 @@
 	},
 /turf/open/floor/plating,
 /area/security/prison)
+=======
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "aaE" = (
 /obj/structure/lattice/catwalk,
 /turf/open/space,
@@ -1539,6 +1512,26 @@
 	},
 /turf/open/floor/plating,
 /area/construction/mining/aux_base)
+"agv" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/machinery/airalarm{
+	dir = 2;
+	pixel_y = 22
+	},
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
 "agB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -4600,6 +4593,14 @@
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/starboard/fore)
+"anz" = (
+/obj/effect/decal/cleanable/cobweb,
+/obj/machinery/computer/arcade{
+	icon_state = "arcade";
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
 "anA" = (
 /obj/structure/cable/white{
 	icon_state = "0-2"
@@ -7130,6 +7131,13 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
+"arX" = (
+/obj/machinery/computer/arcade{
+	icon_state = "arcade";
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
 "arY" = (
 /obj/structure/table/wood,
 /obj/item/toy/talking/codex_gigas,
@@ -7159,6 +7167,14 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
+/area/maintenance/starboard/fore)
+"asa" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/computer/arcade{
+	icon_state = "arcade";
+	dir = 1
+	},
+/turf/open/floor/plating,
 /area/maintenance/starboard/fore)
 "asb" = (
 /obj/machinery/airalarm{
@@ -21782,6 +21798,13 @@
 /area/security/prison)
 "aRh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plating,
+/area/security/prison)
+"aRi" = (
+/obj/machinery/computer/arcade{
+	icon_state = "arcade";
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/security/prison)
 "aRj" = (
@@ -55667,6 +55690,10 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/item/gun/ballistic/shotgun/riot{
+	pixel_x = -3;
+	pixel_y = 3
+	},
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
 "bRv" = (
@@ -55711,6 +55738,8 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/item/gun/energy/pumpaction/blaster,
+/obj/item/gun/energy/pumpaction/blaster,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "bRx" = (
@@ -56734,6 +56763,10 @@
 /obj/effect/turf_decal/bot,
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/item/gun/energy/laser{
+	pixel_x = 3;
+	pixel_y = -3
 	},
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
@@ -58278,10 +58311,6 @@
 /obj/effect/turf_decal/bot,
 /obj/structure/window/reinforced{
 	dir = 4
-	},
-/obj/item/gun/energy/e_gun/advtaser{
-	pixel_x = 3;
-	pixel_y = -3
 	},
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
@@ -60212,6 +60241,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
+/obj/item/gun/energy/e_gun,
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
 "bXQ" = (
@@ -80384,6 +80414,23 @@
 	},
 /turf/open/floor/plating,
 /area/crew_quarters/toilet/restrooms)
+"cFc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/machinery/airalarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/structure/table,
+/obj/structure/bedsheetbin/towel,
+/turf/open/floor/plasteel,
+/area/crew_quarters/toilet/restrooms)
 "cFd" = (
 /obj/machinery/shower{
 	dir = 8
@@ -83847,6 +83894,19 @@
 /obj/item/reagent_containers/dropper,
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
+"cKT" = (
+/obj/structure/table,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/structure/bedsheetbin/color,
+/turf/open/floor/plasteel/white/corner{
+	dir = 1
+	},
+/area/crew_quarters/dorms)
 "cKU" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/tile/neutral{
@@ -118730,7 +118790,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/structure/closet/crate/coffin,
+/obj/structure/bodycontainer/morgue,
 /turf/open/floor/plasteel/dark,
 /area/chapel/office)
 "dTy" = (
@@ -120059,6 +120119,17 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
+"dWi" = (
+/obj/structure/table,
+/obj/machinery/computer/libraryconsole/bookmanagement,
+/obj/structure/cable/white{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/white{
+	icon_state = "2-8"
+	},
+/turf/open/floor/plating,
+/area/security/prison)
 "dWm" = (
 /obj/structure/reagent_dispensers/virusfood{
 	pixel_x = -32
@@ -125628,6 +125699,17 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/library)
+<<<<<<< HEAD
+=======
+"euu" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/light/small,
+/turf/open/floor/plasteel,
+/area/maintenance/port/fore)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "exE" = (
 /obj/machinery/air_sensor/atmos/toxins_mixing_tank,
 /turf/open/floor/engine/vacuum,
@@ -125642,6 +125724,27 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/misc_lab)
+"eHb" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
+"eIC" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
+/turf/open/floor/plasteel,
+/area/maintenance/port/fore)
 "eJc" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible,
 /turf/closed/wall/r_wall,
@@ -125746,6 +125849,24 @@
 	},
 /turf/open/floor/plasteel,
 /area/medical/medbay/central)
+"flG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/computer/arcade{
+	icon_state = "arcade";
+	dir = 1
+	},
+/turf/open/floor/plasteel/dark,
+/area/maintenance/starboard/fore)
 "fno" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -125803,6 +125924,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/closed/wall/r_wall,
 /area/science/circuit)
+<<<<<<< HEAD
 "fHS" = (
 /obj/structure/sign/warning/vacuum,
 /turf/closed/wall/r_wall,
@@ -125812,6 +125934,8 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/security/prison)
+=======
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "fLR" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
@@ -125840,20 +125964,49 @@
 	},
 /turf/open/floor/engine,
 /area/science/mixing)
+"gkl" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
 "gmj" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall/r_wall,
 /area/science/circuit)
+<<<<<<< HEAD
 "gJj" = (
 /obj/machinery/door/window/northleft{
 	name = "Mass Driver"
+=======
+"gug" = (
+/obj/machinery/light/small,
+/turf/open/floor/plasteel,
+/area/security/prison)
+"gER" = (
+/obj/structure/cable/white{
+	icon_state = "4-8"
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 	},
-/obj/machinery/mass_driver{
-	id = "chapelgun";
-	name = "Holy Driver"
+/obj/structure/cable/white{
+	icon_state = "2-4"
 	},
-/turf/open/floor/plating,
-/area/chapel/office)
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/port/aft)
 "gKr" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 1
@@ -125871,6 +126024,7 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/misc_lab)
+<<<<<<< HEAD
 "gNJ" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -125887,6 +126041,8 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/chapel/office)
+=======
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "gNS" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/tile/neutral{
@@ -125927,6 +126083,15 @@
 	dir = 1
 	},
 /area/science/circuit)
+<<<<<<< HEAD
+=======
+"gVS" = (
+/obj/item/clothing/head/kitty,
+/obj/item/clothing/under/maid,
+/obj/item/clothing/mask/muzzle,
+/turf/open/floor/plating,
+/area/crew_quarters/abandoned_gambling_den)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "gXn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line{
@@ -125937,6 +126102,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/department/electrical)
+"hds" = (
+/obj/structure/grille,
+/turf/open/space,
+/area/space/nearstation)
 "hdH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/conveyor{
@@ -125945,10 +126114,6 @@
 	},
 /turf/open/floor/plating,
 /area/quartermaster/storage)
-"hei" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/r_wall,
-/area/chapel/office)
 "hic" = (
 /obj/structure/table/reinforced,
 /obj/item/integrated_electronics/analyzer,
@@ -125958,6 +126123,24 @@
 	dir = 10
 	},
 /area/science/circuit)
+<<<<<<< HEAD
+=======
+"hig" = (
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/port/fore)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "hrP" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
@@ -125977,6 +126160,19 @@
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/port/aft)
+"hsc" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
 "hFo" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/segment{
@@ -126008,6 +126204,7 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
+<<<<<<< HEAD
 "hHc" = (
 /turf/open/floor/plasteel,
 /area/security/prison)
@@ -126027,6 +126224,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/port/aft)
+=======
+"hJk" = (
+/turf/open/space,
+/area/space)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "hNZ" = (
 /obj/structure/chair/office/light{
 	dir = 8
@@ -126042,6 +126244,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/medical/medbay/central)
+<<<<<<< HEAD
 "iaF" = (
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
@@ -126055,6 +126258,13 @@
 /obj/structure/filingcabinet/chestdrawer,
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
+=======
+"hUt" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 2;
+	name = "2maintenance loot spawner"
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 	},
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
@@ -126062,11 +126272,25 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/keycard_auth{
 	pixel_x = -24
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/qm)
+=======
+/turf/open/floor/plasteel,
+/area/maintenance/port/aft)
+"iaF" = (
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel,
+/area/science/research)
+"ijB" = (
+/obj/structure/reagent_dispensers/keg/aphro/strong,
+/obj/item/reagent_containers/glass/beaker,
+/turf/open/floor/plating,
+/area/crew_quarters/abandoned_gambling_den)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "iwL" = (
 /obj/machinery/status_display{
 	pixel_x = 32
@@ -126085,9 +126309,6 @@
 	},
 /turf/open/floor/engine/vacuum,
 /area/science/mixing)
-"iyd" = (
-/turf/open/space,
-/area/space)
 "iQh" = (
 /obj/structure/bodycontainer/morgue{
 	dir = 1
@@ -126128,6 +126349,37 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/mixing)
+"iUn" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/structure/closet/crate/coffin,
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
+"iZm" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/computer/arcade{
+	icon_state = "arcade";
+	dir = 1
+	},
+/turf/open/floor/plasteel/dark,
+/area/maintenance/starboard/fore)
 "jdO" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -126152,9 +126404,17 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/research/abandoned)
+<<<<<<< HEAD
 "jhK" = (
+=======
+"jie" = (
+/obj/machinery/vr_sleeper,
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 /turf/open/floor/plasteel,
-/area/maintenance/port/aft)
+/area/security/prison)
 "jjN" = (
 /obj/structure/table/reinforced,
 /obj/machinery/camera{
@@ -126257,6 +126517,7 @@
 /obj/machinery/chem_master,
 /turf/open/floor/plasteel/dark,
 /area/medical/medbay/central)
+<<<<<<< HEAD
 "jPA" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -126277,6 +126538,11 @@
 	pixel_y = -24
 	},
 /turf/open/floor/plasteel/dark,
+=======
+"jPL" = (
+/obj/structure/sign/warning/vacuum,
+/turf/closed/wall/r_wall,
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 /area/chapel/office)
 "jRy" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -126298,6 +126564,16 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plating,
 /area/science/mixing)
+"jTP" = (
+/obj/machinery/door/window/northleft{
+	name = "Mass Driver"
+	},
+/obj/machinery/mass_driver{
+	id = "chapelgun";
+	name = "Holy Driver"
+	},
+/turf/open/floor/plating,
+/area/chapel/office)
 "kam" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/conveyor{
@@ -126306,6 +126582,12 @@
 	},
 /turf/open/floor/plating,
 /area/quartermaster/storage)
+"ktV" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 2
+	},
+/turf/open/floor/plating,
+/area/chapel/office)
 "kvf" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -126346,6 +126628,7 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
+<<<<<<< HEAD
 "kSI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral{
@@ -126359,15 +126642,36 @@
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/port/fore)
+=======
+"kTU" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/r_wall,
+/area/chapel/office)
+"lag" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space/nearstation)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "lak" = (
 /turf/open/floor/plasteel/white/side{
 	dir = 10
 	},
 /area/science/circuit)
+<<<<<<< HEAD
 "lcB" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/security/prison)
+=======
+"lem" = (
+/obj/effect/turf_decal/delivery,
+/obj/machinery/hydroponics/soil,
+/obj/item/seeds/grape,
+/turf/open/floor/plasteel,
+/area/hydroponics/garden/abandoned{
+	name = "Maintenance Garden"
+	})
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "loI" = (
 /obj/machinery/autolathe,
 /obj/machinery/door/window/southleft{
@@ -126399,6 +126703,13 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/mixing)
+"lva" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
+/turf/open/floor/plasteel,
+/area/maintenance/port/fore)
 "lyU" = (
 /obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume/incinerator_toxmix{
 	dir = 8
@@ -126512,12 +126823,47 @@
 	dir = 1
 	},
 /area/science/circuit)
+<<<<<<< HEAD
 "mbz" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/watermelon,
 /turf/open/floor/plasteel,
 /area/hydroponics/garden/abandoned)
+=======
+"lYm" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/delivery,
+/obj/structure/closet,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 3;
+	name = "3maintenance loot spawner"
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/port/aft)
+"mhH" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "mkm" = (
 /obj/machinery/atmospherics/components/binary/valve,
 /obj/machinery/embedded_controller/radio/airlock_controller/incinerator_toxmix{
@@ -126536,6 +126882,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/mixing)
+<<<<<<< HEAD
+=======
+"mqT" = (
+/turf/open/floor/plasteel,
+/area/security/prison)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "mvm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/white{
@@ -126557,6 +126909,39 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/circuit/green,
 /area/science/research/abandoned)
+<<<<<<< HEAD
+=======
+"mIi" = (
+/obj/item/electropack/shockcollar,
+/obj/item/assembly/signaler,
+/turf/open/floor/plating,
+/area/crew_quarters/abandoned_gambling_den)
+"mIQ" = (
+/obj/machinery/button/crematorium{
+	id = "cremawheat";
+	pixel_x = -26;
+	req_access_txt = "27"
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/structure/table,
+/obj/item/clothing/under/burial,
+/obj/item/clothing/under/burial,
+/obj/item/clothing/under/burial,
+/obj/item/clothing/under/burial,
+/obj/item/clothing/under/burial,
+/obj/item/clothing/under/burial,
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "mQE" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -126580,6 +126965,7 @@
 	},
 /turf/open/floor/engine,
 /area/science/mixing)
+<<<<<<< HEAD
 "mXJ" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -126613,10 +126999,17 @@
 /obj/item/seeds/grape,
 /turf/open/floor/plasteel,
 /area/hydroponics/garden/abandoned)
+=======
+"nyN" = (
+/obj/machinery/vending/kink,
+/turf/open/floor/plating,
+/area/crew_quarters/abandoned_gambling_den)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "nSh" = (
 /obj/machinery/atmospherics/pipe/simple/general/hidden,
 /turf/closed/wall/r_wall,
 /area/maintenance/disposal/incinerator)
+<<<<<<< HEAD
 "orv" = (
 /obj/structure/table,
 /obj/item/storage/crayons,
@@ -126630,18 +127023,53 @@
 	},
 /area/security/prison)
 "owr" = (
+=======
+"nUj" = (
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/port/aft)
+"nZa" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/window{
+	req_one_access_txt = "48,50"
+	},
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel,
+/area/quartermaster/sorting)
+"oDr" = (
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+<<<<<<< HEAD
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
+=======
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/effect/turf_decal/tile/neutral{
+/obj/machinery/computer/arcade{
+	icon_state = "arcade";
 	dir = 4
 	},
-/obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel/dark,
-/area/chapel/office)
+/area/maintenance/starboard/fore)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "oIl" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 1
@@ -126691,6 +127119,7 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/mixing)
+<<<<<<< HEAD
 "oOb" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -126704,6 +127133,8 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/quartermaster/sorting)
+=======
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "oSD" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold/general/visible{
@@ -126794,6 +127225,39 @@
 	},
 /turf/open/floor/plating,
 /area/science/research/abandoned)
+<<<<<<< HEAD
+=======
+"pDQ" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/port/fore)
+"pLz" = (
+/obj/structure/sign/warning/nosmoking,
+/turf/closed/wall,
+/area/medical/surgery)
+"pPt" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/structure/bodycontainer/morgue,
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "pQm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/white{
@@ -126811,6 +127275,7 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/research/abandoned)
+<<<<<<< HEAD
 "pSV" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/hydroponics/soil,
@@ -126819,6 +127284,29 @@
 	},
 /turf/open/floor/plasteel,
 /area/hydroponics/garden/abandoned)
+=======
+"qbg" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/machinery/computer/pod/old{
+	density = 0;
+	icon = 'icons/obj/airlock_machines.dmi';
+	icon_state = "airlock_control_standby";
+	id = "chapelgun";
+	name = "Mass Driver Controller";
+	pixel_x = -24
+	},
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "qhc" = (
 /obj/structure/table/reinforced,
 /obj/item/integrated_electronics/analyzer,
@@ -126828,6 +127316,10 @@
 	dir = 9
 	},
 /area/science/circuit)
+"qkw" = (
+/obj/effect/landmark/barthpot,
+/turf/open/floor/wood,
+/area/library)
 "qnx" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/atmos/toxins_mixing_input,
 /turf/open/floor/engine/vacuum,
@@ -126837,14 +127329,29 @@
 	dir = 5
 	},
 /area/science/circuit)
+<<<<<<< HEAD
 "qBG" = (
 /obj/effect/spawner/lootdrop/keg,
 /turf/open/floor/plating,
 /area/crew_quarters/abandoned_gambling_den)
 "qMR" = (
 /obj/effect/turf_decal/stripes/line,
+=======
+"qzY" = (
+/obj/machinery/door/window/northright{
+	name = "Coffin Storage"
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/closet/crate/coffin,
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 /turf/open/floor/plating,
 /area/chapel/office)
+"qBG" = (
+/obj/effect/spawner/lootdrop/keg,
+/turf/open/floor/plating,
+/area/crew_quarters/abandoned_gambling_den)
 "rhO" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 1
@@ -126858,6 +127365,18 @@
 	dir = 6
 	},
 /area/science/circuit)
+"rTc" = (
+/obj/structure/sign/warning/electricshock{
+	pixel_y = 32
+	},
+/obj/machinery/vr_sleeper,
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating{
+	icon_state = "platingdmg2"
+	},
+/area/security/prison)
 "rUD" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold/general/visible{
@@ -126899,20 +127418,79 @@
 /obj/effect/decal/remains/xeno,
 /turf/open/floor/engine/vacuum,
 /area/science/mixing)
+<<<<<<< HEAD
 "sko" = (
 /obj/machinery/smartfridge/organ,
 /turf/closed/wall,
 /area/medical/surgery)
+=======
+"siB" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/closet/crate/coffin,
+/turf/open/floor/plating,
+/area/chapel/office)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "svv" = (
 /obj/machinery/door/poddoor/incinerator_toxmix,
 /turf/open/floor/engine/vacuum,
 /area/science/mixing)
+<<<<<<< HEAD
+=======
+"sBk" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006
+	},
+/area/maintenance/port/aft)
+"tma" = (
+/obj/structure/filingcabinet/chestdrawer,
+/obj/effect/turf_decal/tile/brown{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/brown{
+	dir = 8
+	},
+/obj/machinery/keycard_auth{
+	pixel_x = -25
+	},
+/turf/open/floor/plasteel,
+/area/quartermaster/qm)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "tmi" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/science/circuit)
+<<<<<<< HEAD
+=======
+"tra" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "twt" = (
 /obj/machinery/vr_sleeper,
 /obj/effect/turf_decal/tile/neutral{
@@ -126920,6 +127498,7 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/recreation)
+<<<<<<< HEAD
 "tCh" = (
 /turf/closed/wall,
 /area/science/misc_lab)
@@ -126930,6 +127509,26 @@
 	},
 /turf/open/floor/plating,
 /area/security/prison)
+=======
+"tzT" = (
+/obj/structure/cable/white{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
+/turf/open/floor/plasteel,
+/area/maintenance/port/fore)
+"tCh" = (
+/turf/closed/wall,
+/area/science/misc_lab)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "tMk" = (
 /turf/open/floor/plasteel/white/side{
 	dir = 10
@@ -126945,6 +127544,16 @@
 /obj/machinery/chem_heater,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
+"umo" = (
+/obj/structure/table,
+/obj/effect/decal/cleanable/cobweb,
+/obj/item/storage/crayons,
+/obj/item/storage/crayons,
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel,
+/area/security/prison)
 "upk" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Holodeck Access"
@@ -126977,6 +127586,10 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/misc_lab)
+"uNx" = (
+/obj/item/twohanded/required/kirbyplants/random,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "uNP" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible,
 /obj/effect/turf_decal/stripes/line{
@@ -127005,6 +127618,7 @@
 	},
 /turf/open/floor/engine,
 /area/engine/supermatter)
+<<<<<<< HEAD
 "uZN" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/maintenance{
@@ -127030,6 +127644,21 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
+=======
+"vhA" = (
+/obj/item/clothing/under/color/grey,
+/turf/open/floor/plating,
+/area/crew_quarters/abandoned_gambling_den)
+"vph" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/port/fore)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "vAb" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -127043,6 +127672,26 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/science/circuit)
+<<<<<<< HEAD
+=======
+"wjb" = (
+/obj/effect/turf_decal/delivery,
+/obj/machinery/hydroponics/soil,
+/obj/item/seeds/lime{
+	pixel_x = 6
+	},
+/turf/open/floor/plasteel,
+/area/hydroponics/garden/abandoned{
+	name = "Maintenance Garden"
+	})
+"wsI" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/port/fore)
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "wAA" = (
 /obj/structure/sign/nanotrasen,
 /turf/closed/wall/r_wall,
@@ -127058,6 +127707,28 @@
 /obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel/white,
 /area/science/misc_lab)
+"wJf" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
+"wQz" = (
+/obj/machinery/seed_extractor,
+/obj/item/reagent_containers/glass/bucket,
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel,
+/area/hydroponics/garden/abandoned{
+	name = "Maintenance Garden"
+	})
 "xaf" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Holodeck Access"
@@ -127076,6 +127747,14 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/recreation)
+"xdG" = (
+/obj/machinery/door/poddoor{
+	id = "chapelgun";
+	name = "Chapel Launcher Door"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plating,
+/area/chapel/office)
 "xmt" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
@@ -127163,6 +127842,7 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/science/research)
+<<<<<<< HEAD
 "xWZ" = (
 /obj/structure/bodycontainer/morgue{
 	dir = 2
@@ -127182,6 +127862,8 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/chapel/office)
+=======
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 "xXn" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/toxins_mixing_output,
 /turf/open/floor/engine/vacuum,
@@ -156088,7 +156770,11 @@ arB
 aug
 alg
 alg
+<<<<<<< HEAD
 aAd
+=======
+pDQ
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aKg
 alf
 aMO
@@ -156345,7 +157031,11 @@ aAb
 aAb
 aAb
 aAb
+<<<<<<< HEAD
 arB
+=======
+vph
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aKh
 alf
 aMN
@@ -156603,7 +157293,11 @@ aCw
 aFJ
 aAb
 aIH
+<<<<<<< HEAD
 aoY
+=======
+eIC
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 alf
 aMP
 aDw
@@ -157116,8 +157810,13 @@ mbz
 aEB
 aFL
 aAb
+<<<<<<< HEAD
 arB
 alg
+=======
+aIH
+lva
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 avm
 arB
 arB
@@ -157368,8 +158067,13 @@ alf
 alf
 aAb
 aBj
+<<<<<<< HEAD
 aCw
 jpo
+=======
+aCv
+wQz
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aEC
 aFM
 aAb
@@ -157500,7 +158204,11 @@ edL
 eep
 eff
 aad
+<<<<<<< HEAD
 ajr
+=======
+lag
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aaa
 ajr
 aaa
@@ -157625,8 +158333,13 @@ axK
 alg
 aAb
 aBk
+<<<<<<< HEAD
 aCw
 nGb
+=======
+aCv
+lem
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aEC
 aFN
 aAb
@@ -157757,7 +158470,11 @@ edM
 eeq
 dLY
 aad
+<<<<<<< HEAD
 aad
+=======
+hds
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aaa
 aad
 aaa
@@ -157888,7 +158605,11 @@ aED
 aFO
 aHm
 aII
+<<<<<<< HEAD
 aKj
+=======
+euu
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aLz
 aMR
 aOq
@@ -158145,7 +158866,11 @@ aEE
 aFP
 aHn
 aIJ
+<<<<<<< HEAD
 aKj
+=======
+wsI
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aLz
 aMS
 aOr
@@ -158397,12 +159122,21 @@ ayX
 aAb
 aBn
 aCx
+<<<<<<< HEAD
 pSV
 aCw
 aFQ
 aAb
 asQ
 ift
+=======
+wjb
+aCv
+aFQ
+aAb
+hig
+wsI
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aLz
 aMT
 aOs
@@ -158775,7 +159509,11 @@ dXz
 dYt
 dON
 dOl
+<<<<<<< HEAD
 eap
+=======
+gER
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 eaX
 dYu
 ect
@@ -159031,8 +159769,13 @@ dON
 dON
 dON
 dON
+<<<<<<< HEAD
 dZJ
 ean
+=======
+sBk
+nUj
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 ebc
 ebQ
 ecu
@@ -159173,7 +159916,11 @@ aAb
 aAb
 aAb
 aIL
+<<<<<<< HEAD
 arB
+=======
+lva
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aLz
 aLz
 aLz
@@ -159294,12 +160041,16 @@ dZN
 dZN
 dZN
 dZN
-fHS
+jPL
 dZN
 dLY
 dLY
 aad
+<<<<<<< HEAD
 ajr
+=======
+lag
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aad
 aad
 aaa
@@ -159430,7 +160181,11 @@ aEG
 aFS
 aHp
 aIM
+<<<<<<< HEAD
 aEG
+=======
+tzT
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aLB
 aFS
 aEG
@@ -159545,6 +160300,7 @@ dWJ
 dLW
 dYu
 dZg
+<<<<<<< HEAD
 jhK
 jhK
 dZN
@@ -159554,11 +160310,22 @@ gJj
 qMR
 fwr
 aaa
+=======
+lYm
+hUt
+dZN
+hsc
+gkl
+qbg
+jTP
+ktV
+xdG
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aaa
-iyd
+hJk
 aaa
 aaa
-iyd
+hJk
 aaa
 aaa
 aaa
@@ -159734,7 +160501,11 @@ caG
 chU
 cjt
 ckR
+<<<<<<< HEAD
 cmt
+=======
+qkw
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 cnR
 cpv
 cqQ
@@ -159802,11 +160573,22 @@ dTw
 dTw
 dTw
 dTw
+<<<<<<< HEAD
 hLO
 uZN
 hei
 gNJ
 jPA
+=======
+dZN
+dZN
+kTU
+agv
+eHb
+eHb
+qzY
+siB
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 dTw
 dTw
 dTw
@@ -160051,19 +160833,32 @@ dPJ
 dQC
 dRB
 dSz
+<<<<<<< HEAD
 dTx
 dUi
+=======
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 dTx
+dUi
+iUn
 dVN
-dTx
+iUn
 dXB
 dYv
 dTw
+<<<<<<< HEAD
 dZN
 dZN
 dZN
 xWZ
 nht
+=======
+dZO
+mIQ
+pPt
+mhH
+tra
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 dTw
 dTw
 dTw
@@ -160316,7 +161111,11 @@ dUj
 dXC
 dYw
 dZh
+<<<<<<< HEAD
 dZO
+=======
+wJf
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 eau
 ebd
 ebS
@@ -167138,7 +167937,7 @@ aCP
 avQ
 aFe
 aGp
-oOb
+nZa
 aJg
 aKF
 aLP
@@ -169695,7 +170494,7 @@ aox
 apu
 aqy
 arb
-aax
+flG
 aig
 auA
 avU
@@ -169952,7 +170751,7 @@ aoy
 apv
 aqz
 apu
-aay
+arX
 aig
 auB
 avU
@@ -170461,8 +171260,8 @@ aiC
 akU
 alI
 amE
-aav
-aaw
+anz
+oDr
 apw
 aqA
 apy
@@ -170980,7 +171779,7 @@ aiC
 apy
 apy
 apu
-aaz
+iZm
 atw
 auD
 avW
@@ -171237,7 +172036,7 @@ aoB
 apz
 apw
 apv
-aaA
+asa
 atw
 auE
 avW
@@ -171825,7 +172624,7 @@ bsE
 cAm
 cBI
 cDo
-aaq
+cFc
 cAm
 cHW
 cIW
@@ -173905,7 +174704,11 @@ dkv
 dma
 dma
 dma
+<<<<<<< HEAD
 dma
+=======
+pLz
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 dsI
 dro
 dvz
@@ -174341,7 +175144,11 @@ aaa
 aaa
 aad
 aQR
+<<<<<<< HEAD
 itV
+=======
+tma
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aUq
 aVR
 aXF
@@ -176198,7 +177005,7 @@ cFr
 cGP
 cqd
 cJe
-aar
+cKT
 cMq
 cAw
 cPM
@@ -178444,7 +179251,11 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
 aaa
+=======
+lag
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aFm
 peC
 aFm
@@ -178701,10 +179512,17 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
 aaa
 aFm
 orv
 fKE
+=======
+lag
+aFm
+umo
+bbt
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aFm
 aMc
 aNx
@@ -178958,10 +179776,17 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
 aaa
 aFm
 fxR
 lcB
+=======
+lag
+aFm
+jie
+gug
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aFm
 aKV
 aNy
@@ -179217,10 +180042,17 @@ ajr
 ajr
 aad
 aFm
+<<<<<<< HEAD
 eVa
 hHc
 lcB
 hHc
+=======
+rTc
+mqT
+uNx
+mqT
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aNz
 aPh
 aQZ
@@ -179473,11 +180305,19 @@ aaa
 ajr
 aad
 aad
+<<<<<<< HEAD
 tLg
 vsZ
 lcB
 hHc
 lcB
+=======
+aFn
+dWi
+aJA
+aJA
+aMe
+>>>>>>> 93248336ea... Merge pull request #10265 from Trilbyspaceclone/map_redo
 aNA
 aPi
 aRa
@@ -181793,7 +182633,7 @@ aFn
 aMn
 aNI
 aPr
-aaB
+aRi
 aKV
 aUC
 aWk
