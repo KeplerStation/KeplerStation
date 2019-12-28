@@ -44,18 +44,6 @@
 	SEND_SIGNAL(src, COMSIG_COMBAT_TOGGLED, src, combatmode)
 	return TRUE
 
-<<<<<<< HEAD
-=======
-mob/living/carbon/proc/toggle_vore_mode()
-	voremode = !voremode
-	var/obj/screen/voretoggle/T = locate() in hud_used?.static_inventory
-	T?.update_icon_state()
-	if(combatmode)
-		return FALSE //let's not override the main draw of the game these days
-	SEND_SIGNAL(src, COMSIG_VORE_TOGGLED, src, voremode)
-	return TRUE
-
->>>>>>> d562a5ba27... Merge pull request #10212 from Ghommie/Ghommie-cit471
 /mob/living/carbon/Move(atom/newloc, direct = 0)
 	var/currentdirection = dir
 	. = ..()

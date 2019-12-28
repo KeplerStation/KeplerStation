@@ -111,19 +111,7 @@
 		using.screen_loc = ui_boxarea // CIT CHANGE
 	using.hud = src
 	static_inventory += using
-<<<<<<< HEAD
-	
-=======
 
-	using = new /obj/screen/voretoggle() //We fancy Vore now
-	using.icon = tg_ui_icon_to_cit_ui(ui_style)
-	using.screen_loc = ui_voremode
-	if(!widescreenlayout)
-		using.screen_loc = ui_boxvore
-	using.hud = src
-	static_inventory += using
-
->>>>>>> d562a5ba27... Merge pull request #10212 from Ghommie/Ghommie-cit471
 	action_intent = new /obj/screen/act_intent/segmented
 	action_intent.icon_state = mymob.a_intent
 	action_intent.hud = src
@@ -350,16 +338,8 @@
 	healths = new /obj/screen/healths()
 	healths.hud = src
 	infodisplay += healths
-<<<<<<< HEAD
-	//CIT CHANGE - adds stamina to hud
-=======
-	//CIT CHANGE - adds arousal and stamina to hud
-	arousal = new /obj/screen/arousal()
-	arousal.icon_state = (owner.canbearoused == 1 ? "arousal0" : "")
-	arousal.hud = src
-	infodisplay += arousal
->>>>>>> d562a5ba27... Merge pull request #10212 from Ghommie/Ghommie-cit471
 
+	//CIT CHANGE - adds stamina to hud
 	staminas = new /obj/screen/staminas()
 	staminas.hud = src
 	infodisplay += staminas
@@ -393,21 +373,6 @@
 	devilsouldisplay.hud = src
 	infodisplay += devilsouldisplay
 
-<<<<<<< HEAD
-=======
-	blood_display = new /obj/screen/bloodsucker/blood_counter	// Blood Volume
-	blood_display.hud = src
-	infodisplay += blood_display
-
-	vamprank_display = new /obj/screen/bloodsucker/rank_counter	// Vampire Rank
-	vamprank_display.hud = src
-	infodisplay += vamprank_display
-
-	sunlight_display = new /obj/screen/bloodsucker/sunlight_counter	// Sunlight
-	sunlight_display.hud = src
-	infodisplay += sunlight_display
-
->>>>>>> d562a5ba27... Merge pull request #10212 from Ghommie/Ghommie-cit471
 	zone_select =  new /obj/screen/zone_sel()
 	zone_select.icon = ui_style
 	zone_select.hud = src

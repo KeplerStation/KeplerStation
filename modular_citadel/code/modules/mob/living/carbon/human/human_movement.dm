@@ -24,16 +24,9 @@
 		if(sprinting)
 			playsound_local(src, 'modular_citadel/sound/misc/sprintactivate.ogg', 50, FALSE, pressure_affected = FALSE)
 		else
-<<<<<<< HEAD
 			playsound_local(src, 'modular_citadel/sound/misc/sprintdeactivate.ogg', 50, FALSE, pressure_affected = FALSE)
-	if(hud_used && hud_used.static_inventory)
-		for(var/obj/screen/sprintbutton/selector in hud_used.static_inventory)
-			selector.insert_witty_toggle_joke_here(src)
-=======
-			playsound_local(src, 'sound/misc/sprintdeactivate.ogg', 50, FALSE, pressure_affected = FALSE)
 	var/obj/screen/sprintbutton/S = locate() in hud_used?.static_inventory
 	S?.update_icon_state()
->>>>>>> d562a5ba27... Merge pull request #10212 from Ghommie/Ghommie-cit471
 	return TRUE
 
 /mob/living/carbon/human/proc/sprint_hotkey(targetstatus)
