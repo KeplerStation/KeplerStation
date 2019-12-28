@@ -17,6 +17,7 @@
 	if(stat == DEAD || recoveringstam)
 		return "staminacrit"
 	else
+<<<<<<< HEAD
 		switch(hal_screwyhud)
 			if(1 to 2)
 				return "staminacrit"
@@ -38,6 +39,9 @@
 						return "stamina5"
 					else
 						return "stamina6"
+=======
+		icon_state = "stamina[CLAMP(FLOOR(user.getStaminaLoss() /20, 1), 0, 6)]"
+>>>>>>> ada00039b4... Merge pull request #10322 from Citadel-Station-13/kevinz000-patch-3
 
 //stam buffer
 /obj/screen/staminabuffer

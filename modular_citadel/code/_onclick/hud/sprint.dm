@@ -12,8 +12,14 @@
 		var/mob/living/carbon/human/H = usr
 		H.togglesprint()
 
+<<<<<<< HEAD
 /obj/screen/sprintbutton/proc/insert_witty_toggle_joke_here(mob/living/carbon/human/H)
 	if(!H)
+=======
+/obj/screen/sprintbutton/update_icon_state()
+	var/mob/living/user = hud?.mymob
+	if(!istype(user))
+>>>>>>> ada00039b4... Merge pull request #10322 from Citadel-Station-13/kevinz000-patch-3
 		return
 	if(H.sprinting)
 		icon_state = "act_sprint_on"
