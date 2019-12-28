@@ -18,10 +18,33 @@
 		var/mob/living/carbon/C = usr
 		C.toggle_combat_mode()
 
-/obj/screen/combattoggle/proc/rebasetointerbay(mob/living/carbon/C)
-	if(!C)
+/obj/screen/combattoggle/update_icon_state()
+	var/mob/living/carbon/user = hud?.mymob
+	if(!istype(user))
 		return
-	if(C.combatmode)
+	if(user.combatmode)
 		icon_state = "combat"
 	else
 		icon_state = "combat_off"
+<<<<<<< HEAD
+=======
+
+/obj/screen/voretoggle
+	name = "toggle vore mode"
+	icon = 'modular_citadel/icons/ui/screen_midnight.dmi'
+	icon_state = "nom_off"
+
+/obj/screen/voretoggle/Click()
+	if(iscarbon(usr))
+		var/mob/living/carbon/C = usr
+		C.toggle_vore_mode()
+
+/obj/screen/voretoggle/update_icon_state()
+	var/mob/living/carbon/user = hud?.mymob
+	if(!istype(user))
+		return
+	if(user.voremode && !user.combatmode)
+		icon_state = "nom"
+	else
+		icon_state = "nom_off"
+>>>>>>> d562a5ba27... Merge pull request #10212 from Ghommie/Ghommie-cit471

@@ -38,13 +38,24 @@
 
 	if(client)
 		client.show_popup_menus = !combatmode // So we can right-click for alternate actions and all that other good shit. Also moves examine to shift+rightclick to make it possible to attack while sprinting
-	if(hud_used && hud_used.static_inventory)
-		for(var/obj/screen/combattoggle/selector in hud_used.static_inventory)
-			selector.rebasetointerbay(src)
+	var/obj/screen/combattoggle/T = locate() in hud_used?.static_inventory
+	T?.update_icon_state()
 	combatmessagecooldown = 10 SECONDS + world.time //This is set 100% of the time to make sure squeezing regen out of process cycles doesn't result in the combat mode message getting spammed
 	SEND_SIGNAL(src, COMSIG_COMBAT_TOGGLED, src, combatmode)
 	return TRUE
 
+<<<<<<< HEAD
+=======
+mob/living/carbon/proc/toggle_vore_mode()
+	voremode = !voremode
+	var/obj/screen/voretoggle/T = locate() in hud_used?.static_inventory
+	T?.update_icon_state()
+	if(combatmode)
+		return FALSE //let's not override the main draw of the game these days
+	SEND_SIGNAL(src, COMSIG_VORE_TOGGLED, src, voremode)
+	return TRUE
+
+>>>>>>> d562a5ba27... Merge pull request #10212 from Ghommie/Ghommie-cit471
 /mob/living/carbon/Move(atom/newloc, direct = 0)
 	var/currentdirection = dir
 	. = ..()

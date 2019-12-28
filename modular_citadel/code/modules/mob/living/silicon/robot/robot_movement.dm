@@ -1,6 +1,3 @@
-/mob/living/silicon/robot
-	var/sprinting = FALSE
-
 /mob/living/silicon/robot/Move(NewLoc, direct)
 	. = ..()
 	if(. && sprinting && !(movement_type & FLYING) && canmove && !resting)
@@ -23,10 +20,16 @@
 		else
 			if(shutdown)
 				playsound_local(src, 'sound/effects/light_flicker.ogg', 50, FALSE, pressure_affected = FALSE)
+<<<<<<< HEAD
 			playsound_local(src, 'modular_citadel/sound/misc/sprintdeactivate.ogg', 50, FALSE, pressure_affected = FALSE)
 	if(hud_used && hud_used.static_inventory)
 		for(var/obj/screen/sprintbutton/selector in hud_used.static_inventory)
 			selector.insert_witty_toggle_joke_here(src)
+=======
+			playsound_local(src, 'sound/misc/sprintdeactivate.ogg', 50, FALSE, pressure_affected = FALSE)
+	var/obj/screen/sprintbutton/S = locate() in hud_used?.static_inventory
+	S?.update_icon_state()
+>>>>>>> d562a5ba27... Merge pull request #10212 from Ghommie/Ghommie-cit471
 	return TRUE
 
 /mob/living/silicon/robot/proc/sprint_hotkey(targetstatus)
