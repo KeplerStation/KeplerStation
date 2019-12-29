@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - soundadd: "Blue, Amber and Red security alert sounds should be half as loud now."
