@@ -518,12 +518,10 @@ GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi', PDA_S
 
 #define CRYOMOBS 'icons/obj/cryo_mobs.dmi'
 
-<<<<<<< HEAD
 // Bone flags
 #define BONE_FLAG_NO_BONES 0
 #define BONE_FLAG_NORMAL 1
 #define BONE_FLAG_BROKEN 2
 #define BONE_FLAG_SPLINTED 3
-=======
+
 #define CANT_REENTER_ROUND -1
->>>>>>> 640419eed5... Merge pull request #10343 from Ghommie/Ghommie-cit494
