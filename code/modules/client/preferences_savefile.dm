@@ -167,6 +167,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["widescreenpref"]		>> widescreenpref
 	S["autostand"]			>> autostand
 	S["preferred_chaos"]	>> preferred_chaos
+	S["auto_ooc"]	>> auto_ooc
 
 	//try to fix any outdated data if necessary
 	if(needs_update >= 0)
@@ -199,6 +200,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	damagescreenshake	= sanitize_integer(damagescreenshake, 0, 2, initial(damagescreenshake))
 	widescreenpref			= sanitize_integer(widescreenpref, 0, 1, initial(widescreenpref))
 	autostand			= sanitize_integer(autostand, 0, 1, initial(autostand))
+<<<<<<< HEAD
+=======
+	cit_toggles			= sanitize_integer(cit_toggles, 0, 65535, initial(cit_toggles))
+	auto_ooc			= sanitize_integer(auto_ooc, 0, 1, initial(auto_ooc))
+>>>>>>> 0bbae3500f... Merge pull request #10337 from Seris02/autoooc
 
 	return 1
 
@@ -255,6 +261,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["widescreenpref"], widescreenpref)
 	WRITE_FILE(S["autostand"], autostand)
 	WRITE_FILE(S["preferred_chaos"], preferred_chaos)
+	WRITE_FILE(S["auto_ooc"], auto_ooc)
 
 	return 1
 

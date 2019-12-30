@@ -277,9 +277,22 @@ Works together with spawning an observer, noted above.
 		if(world.time < roundstart_quit_limit) //add up the time difference to their antag rolling penalty if they quit before half a (ingame) hour even passed.
 			penalty += roundstart_quit_limit - world.time
 		if(penalty)
+<<<<<<< HEAD
 			ghost.reenter_round_timeout = world.realtime + penalty
 			if(ghost.reenter_round_timeout - SSshuttle.realtimeofstart > SSshuttle.auto_call + SSshuttle.emergencyCallTime + SSshuttle.emergencyDockTime + SSshuttle.emergencyEscapeTime)
 				ghost.reenter_round_timeout = CANT_REENTER_ROUND
+=======
+			penalty += world.realtime
+			if(penalty - SSshuttle.realtimeofstart > SSshuttle.auto_call + SSshuttle.emergencyCallTime + SSshuttle.emergencyDockTime + SSshuttle.emergencyEscapeTime)
+				penalty = CANT_REENTER_ROUND
+			if(client)
+				client.reenter_round_timeout = penalty
+			else //A disconnected player (quite likely for cryopods)
+				ghost.clientless_round_timeout = penalty
+	if (client && client.prefs && client.prefs.auto_ooc)
+		if (!(client.prefs.chat_toggles & CHAT_OOC))
+			client.prefs.chat_toggles ^= CHAT_OOC
+>>>>>>> 0bbae3500f... Merge pull request #10337 from Seris02/autoooc
 	transfer_ckey(ghost, FALSE)
 	return ghost
 

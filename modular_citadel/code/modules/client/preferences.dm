@@ -15,6 +15,7 @@
 	var/arousable = TRUE
 	var/widescreenpref = TRUE
 	var/autostand = TRUE
+	var/auto_ooc = FALSE
 
 	// stuff that was in base
 	max_save_slots = 10
