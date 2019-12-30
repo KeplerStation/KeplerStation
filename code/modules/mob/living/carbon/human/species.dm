@@ -1324,6 +1324,29 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		user.do_attack_animation(target, ATTACK_EFFECT_FACE_SLAP)
 		user.adjustStaminaLossBuffered(3)
 		return FALSE
+<<<<<<< HEAD
+=======
+	else if(aim_for_groin && (target == user || target.lying || same_dir) && (target_on_help || target_restrained || target_aiming_for_groin))
+		if(target.client?.prefs.cit_toggles & NO_ASS_SLAP)
+			to_chat(user,"A force stays your hand, preventing you from slapping \the [target]'s ass!")
+			return FALSE
+		user.do_attack_animation(target, ATTACK_EFFECT_ASS_SLAP)
+		user.adjustStaminaLossBuffered(3)
+		playsound(target.loc, 'sound/weapons/slap.ogg', 50, 1, -1)
+		user.visible_message(\
+			"<span class='danger'>\The [user] slaps \the [target]'s ass!</span>",\
+			"<span class='notice'>You slap [user == target ? "your" : "\the [target]'s"] ass!</span>",\
+			"You hear a slap."
+		)
+		if (target.canbearoused)
+			target.adjustArousalLoss(5)
+		if (target.getArousalLoss() >= 100 && ishuman(target) && HAS_TRAIT(target, TRAIT_MASO) && target.has_dna())
+			target.mob_climax(forced_climax=TRUE)
+		if (!HAS_TRAIT(target, TRAIT_NYMPHO))
+			stop_wagging_tail(target)
+
+		return FALSE
+>>>>>>> 74edd7b13f... Merge pull request #10243 from Putnam3145/lewdchem-better-options
 	else if(attacker_style && attacker_style.disarm_act(user,target))
 		return 1
 	else

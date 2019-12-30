@@ -15,6 +15,15 @@
 	var/arousable = TRUE
 	var/widescreenpref = TRUE
 	var/autostand = TRUE
+<<<<<<< HEAD
+=======
+
+	//vore prefs
+	var/toggleeatingnoise = TRUE
+	var/toggledigestionnoise = TRUE
+	var/hound_sleeper = TRUE
+	var/cit_toggles = TOGGLES_CITADEL
+>>>>>>> 74edd7b13f... Merge pull request #10243 from Putnam3145/lewdchem-better-options
 
 	// stuff that was in base
 	max_save_slots = 10
@@ -41,3 +50,14 @@
 		else
 			if(L[slot_to_string(slot)] < DEFAULT_SLOT_AMT)
 				return TRUE
+<<<<<<< HEAD
+=======
+
+datum/preferences/copy_to(mob/living/carbon/human/character, icon_updates = 1)
+	..()
+	character.give_genitals(TRUE)
+	character.flavor_text = features["flavor_text"] //Let's update their flavor_text at least initially
+	character.canbearoused = arousable
+	if(icon_updates)
+		character.update_genitals()
+>>>>>>> 74edd7b13f... Merge pull request #10243 from Putnam3145/lewdchem-better-options

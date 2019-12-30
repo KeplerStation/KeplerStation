@@ -150,15 +150,21 @@
 #define TRAIT_SKITTISH			"skittish"
 #define TRAIT_POOR_AIM			"poor_aim"
 #define TRAIT_PROSOPAGNOSIA		"prosopagnosia"
+<<<<<<< HEAD
 #define	TRAIT_DRUNK_HEALING		"drunk_healing"
 #define	TRAIT_TAGGER			"tagger"
 #define	TRAIT_PHOTOGRAPHER		"photographer"
 #define	TRAIT_MUSICIAN			"musician"
 #define	TRAIT_CROCRIN_IMMUNE    "crocin_immune"
+=======
+#define TRAIT_DRUNK_HEALING		"drunk_healing"
+#define TRAIT_TAGGER			"tagger"
+#define TRAIT_PHOTOGRAPHER		"photographer"
+#define TRAIT_MUSICIAN			"musician"
+>>>>>>> 74edd7b13f... Merge pull request #10243 from Putnam3145/lewdchem-better-options
 #define TRAIT_NYMPHO			"nymphomania"
 #define TRAIT_MASO              "masochism"
 #define	TRAIT_HIGH_BLOOD        "high_blood"
-#define TRAIT_PHARMA            "hepatic_pharmacokinesis"
 #define TRAIT_PARA              "paraplegic"
 #define TRAIT_EMPATH			"empath"
 #define TRAIT_FRIENDLY			"friendly"

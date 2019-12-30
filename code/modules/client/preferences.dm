@@ -174,6 +174,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	dat += "<a href='?_src_=prefs;preference=tab;tab=2' [current_tab == 2 ? "class='linkOn'" : ""]>Character Appearance</a>"
 	dat += "<a href='?_src_=prefs;preference=tab;tab=3' [current_tab == 3 ? "class='linkOn'" : ""]>Loadout</a>"
 	dat += "<a href='?_src_=prefs;preference=tab;tab=1' [current_tab == 1 ? "class='linkOn'" : ""]>Game Preferences</a>"
+	dat += "<a href='?_src_=prefs;preference=tab;tab=4' [current_tab == 4 ? "class='linkOn'" : ""]>Content Preferences</a>"
 
 	if(!path)
 		dat += "<div class='notice'>Please create an account to save your preferences</div>"
@@ -702,6 +703,26 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							dat += "</font>"
 				dat += "</td><td><font size=2><i>[gear.description]</i></font></td></tr>"
 			dat += "</table>"
+		if(4) // Content preferences
+			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
+			dat += "<h2>Fetish content prefs</h2>"
+			dat += "<b>Arousal:</b><a href='?_src_=prefs;preference=arousable'>[arousable == TRUE ? "Enabled" : "Disabled"]</a><BR>"
+			dat += "<b>Voracious MediHound sleepers:</b> <a href='?_src_=prefs;preference=hound_sleeper'>[(cit_toggles & MEDIHOUND_SLEEPER) ? "Yes" : "No"]</a><br>"
+			dat += "<b>Hear Vore Sounds:</b> <a href='?_src_=prefs;preference=toggleeatingnoise'>[(cit_toggles & EATING_NOISES) ? "Yes" : "No"]</a><br>"
+			dat += "<b>Hear Vore Digestion Sounds:</b> <a href='?_src_=prefs;preference=toggledigestionnoise'>[(cit_toggles & DIGESTION_NOISES) ? "Yes" : "No"]</a><br>"
+			dat += "<b>Forced Feminization:</b> <a href='?_src_=prefs;preference=feminization'>[(cit_toggles & FORCED_FEM) ? "Allowed" : "Disallowed"]</a><br>"
+			dat += "<b>Forced Masculinization:</b> <a href='?_src_=prefs;preference=masculinization'>[(cit_toggles & FORCED_MASC) ? "Allowed" : "Disallowed"]</a><br>"
+			dat += "<b>Lewd Hypno:</b> <a href='?_src_=prefs;preference=hypno'>[(cit_toggles & HYPNO) ? "Allowed" : "Disallowed"]</a><br>"
+			dat += "</td>"
+			dat +="<td width='300px' height='300px' valign='top'>"
+			dat += "<h2>Other content prefs</h2>"
+			dat += "<b>Breast Enlargement:</b> <a href='?_src_=prefs;preference=breast_enlargement'>[(cit_toggles & BREAST_ENLARGEMENT) ? "Allowed" : "Disallowed"]</a><br>"
+			dat += "<b>Penis Enlargement:</b> <a href='?_src_=prefs;preference=penis_enlargement'>[(cit_toggles & PENIS_ENLARGEMENT) ? "Allowed" : "Disallowed"]</a><br>"
+			dat += "<b>Hypno:</b> <a href='?_src_=prefs;preference=hypno'>[(cit_toggles & NEVER_HYPNO) ? "Disallowed" : "Allowed"]</a><br>"
+			dat += "<b>Aphrodisiacs:</b> <a href='?_src_=prefs;preference=aphro'>[(cit_toggles & NO_APHRO) ? "Disallowed" : "Allowed"]</a><br>"
+			dat += "<b>Ass Slapping:</b> <a href='?_src_=prefs;preference=aphro'>[(cit_toggles & NO_ASS_SLAP) ? "Disallowed" : "Allowed"]</a><br>"
+			dat += "<br>"
+
 
 	dat += "<hr><center>"
 
@@ -1428,6 +1449,39 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		else
 			switch(href_list["preference"])
 				//CITADEL PREFERENCES EDIT - I can't figure out how to modularize these, so they have to go here. :c -Pooj
+<<<<<<< HEAD
+=======
+				if("genital_colour")
+					features["genitals_use_skintone"] = !features["genitals_use_skintone"]
+				if("arousable")
+					arousable = !arousable
+				if("has_cock")
+					features["has_cock"] = !features["has_cock"]
+					if(features["has_cock"] == FALSE)
+						features["has_balls"] = FALSE
+				if("has_balls")
+					features["has_balls"] = !features["has_balls"]
+				if("has_ovi")
+					features["has_ovi"] = !features["has_ovi"]
+				if("has_eggsack")
+					features["has_eggsack"] = !features["has_eggsack"]
+				if("balls_internal")
+					features["balls_internal"] = !features["balls_internal"]
+				if("eggsack_internal")
+					features["eggsack_internal"] = !features["eggsack_internal"]
+				if("has_breasts")
+					features["has_breasts"] = !features["has_breasts"]
+					if(features["has_breasts"] == FALSE)
+						features["breasts_producing"] = FALSE
+				if("breasts_producing")
+					features["breasts_producing"] = !features["breasts_producing"]
+				if("has_vag")
+					features["has_vag"] = !features["has_vag"]
+					if(features["has_vag"] == FALSE)
+						features["has_womb"] = FALSE
+				if("has_womb")
+					features["has_womb"] = !features["has_womb"]
+>>>>>>> 74edd7b13f... Merge pull request #10243 from Putnam3145/lewdchem-better-options
 				if("widescreenpref")
 					widescreenpref = !widescreenpref
 					user.client.change_view(CONFIG_GET(string/default_view))
@@ -1534,6 +1588,36 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if (parent && parent.mob && parent.mob.hud_used)
 						parent.mob.hud_used.update_parallax_pref(parent.mob)
 
+<<<<<<< HEAD
+=======
+				// Citadel edit - Prefs don't work outside of this. :c
+				if("hound_sleeper")
+					cit_toggles ^= MEDIHOUND_SLEEPER
+
+				if("toggleeatingnoise")
+					cit_toggles ^= EATING_NOISES
+
+				if("toggledigestionnoise")
+					cit_toggles ^= DIGESTION_NOISES
+
+				if("breast_enlargement")
+					cit_toggles ^= BREAST_ENLARGEMENT
+
+				if("penis_enlargement")
+					cit_toggles ^= PENIS_ENLARGEMENT
+
+				if("feminization")
+					cit_toggles ^= FORCED_FEM
+
+				if("masculinization")
+					cit_toggles ^= FORCED_MASC
+
+				if("hypno")
+					cit_toggles ^= HYPNO
+
+				//END CITADEL EDIT
+
+>>>>>>> 74edd7b13f... Merge pull request #10243 from Putnam3145/lewdchem-better-options
 				if("ambientocclusion")
 					ambientocclusion = !ambientocclusion
 					if(parent && parent.screen && parent.screen.len)

@@ -166,6 +166,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["damagescreenshake"]	>> damagescreenshake
 	S["widescreenpref"]		>> widescreenpref
 	S["autostand"]			>> autostand
+<<<<<<< HEAD
+=======
+	S["cit_toggles"]		>> cit_toggles
+>>>>>>> 74edd7b13f... Merge pull request #10243 from Putnam3145/lewdchem-better-options
 	S["preferred_chaos"]	>> preferred_chaos
 
 	//try to fix any outdated data if necessary
@@ -254,6 +258,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["arousable"], arousable)
 	WRITE_FILE(S["widescreenpref"], widescreenpref)
 	WRITE_FILE(S["autostand"], autostand)
+<<<<<<< HEAD
+=======
+	WRITE_FILE(S["cit_toggles"], cit_toggles)
+>>>>>>> 74edd7b13f... Merge pull request #10243 from Putnam3145/lewdchem-better-options
 	WRITE_FILE(S["preferred_chaos"], preferred_chaos)
 
 	return 1
@@ -413,6 +421,21 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 			job_preferences -= j
 
 	all_quirks = SANITIZE_LIST(all_quirks)
+
+	for(var/V in all_quirks) // quirk migration
+		switch(V)
+			if("Acute hepatic pharmacokinesis")
+				DISABLE_BITFIELD(cit_toggles, PENIS_ENLARGEMENT)
+				DISABLE_BITFIELD(cit_toggles, BREAST_ENLARGEMENT)
+				ENABLE_BITFIELD(cit_toggles,FORCED_FEM)
+				ENABLE_BITFIELD(cit_toggles,FORCED_MASC)
+				all_quirks -= V
+			if("Crocin Immunity")
+				ENABLE_BITFIELD(cit_toggles,NO_APHRO)
+				all_quirks -= V
+			if("Buns of Steel")
+				ENABLE_BITFIELD(cit_toggles,NO_ASS_SLAP)
+				all_quirks -= V
 
 	cit_character_pref_load(S)
 
