@@ -1242,3 +1242,32 @@
 	new /obj/item/reagent_containers/food/snacks/salad/fruit(src)
 	new /obj/item/reagent_containers/food/snacks/cracker(src)
 	new /obj/item/tank/internals/emergency_oxygen(src)
+<<<<<<< HEAD
+=======
+
+//Where do I put this?
+/obj/item/secbat
+	name = "Secbat box"
+	desc = "Contained inside is a secbat for use with law enforcement."
+	icon = 'icons/obj/storage.dmi'
+	icon_state = "box"
+	item_state = "syringe_kit"
+	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+
+/obj/item/secbat/attack_self(mob/user)
+	new /mob/living/simple_animal/hostile/retaliate/bat/secbat(user.loc)
+	to_chat(user, "<span class='notice'>You open the box, releasing the secbat!</span>")
+	var/obj/item/stack/sheet/cardboard/I = new(user.drop_location())
+	qdel(src)
+	user.put_in_hands(I)
+
+/obj/item/storage/box/marshmallow
+	name = "box of marshmallows"
+	desc = "A box of marshmallows."
+	illustration = "marshmallow"
+
+/obj/item/storage/box/marshmallow/PopulateContents()
+	for (var/i in 1 to 5)
+		new /obj/item/reagent_containers/food/snacks/marshmallow(src)
+>>>>>>> 5c13fa64e3... Merge pull request #10338 from Seris02/marshmallow

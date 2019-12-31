@@ -110,5 +110,11 @@ GLOBAL_LIST_INIT(maintenance_loot, list(
 	/obj/item/reagent_containers/food/snacks/cannedpeaches/maint = 2,
 	/obj/item/clothing/shoes/wheelys = 1,
 	/obj/item/clothing/shoes/kindleKicks = 1,
+<<<<<<< HEAD
+=======
+	/obj/item/autosurgeon/penis = 1,
+	/obj/item/autosurgeon/testicles = 1,
+	/obj/item/storage/box/marshmallow = 2,
+>>>>>>> 5c13fa64e3... Merge pull request #10338 from Seris02/marshmallow
 	"" = 3
 	))
