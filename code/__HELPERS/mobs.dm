@@ -20,7 +20,11 @@
 		else
 			return "000"
 
+<<<<<<< HEAD
 /proc/random_underwear(gender)//Cit change - makes random underwear always return nude
+=======
+/proc/random_underwear(gender)
+>>>>>>> 8a4e44758f... Merge pull request #10165 from Ghommie/Ghommie-cit456
 	if(!GLOB.underwear_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/underwear, GLOB.underwear_list, GLOB.underwear_m, GLOB.underwear_f)
 	return "Nude"

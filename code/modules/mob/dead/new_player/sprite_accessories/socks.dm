@@ -2,10 +2,17 @@
 // Socks Definitions //
 ///////////////////////
 
+<<<<<<< HEAD
 /datum/sprite_accessory/socks
 	icon = 'icons/mob/underwear.dmi'
 
 /datum/sprite_accessory/socks/nude
+=======
+/datum/sprite_accessory/underwear/socks
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/underwear/socks/nude
+>>>>>>> 8a4e44758f... Merge pull request #10165 from Ghommie/Ghommie-cit456
 	name = "Nude"
 	icon_state = null
 

@@ -9,6 +9,7 @@
 	name = "Nude"
 	icon_state = null
 
+<<<<<<< HEAD
 /datum/sprite_accessory/underwear/mankini
 	name = "Mankini - Green"
 	icon_state = "mankini_green"
@@ -48,22 +49,76 @@
 /datum/sprite_accessory/underwear/male_hearts
 	name = "Boxers - Heart"
 	icon_state = "boxers_heart"
+=======
+/datum/sprite_accessory/underwear/bottom/mankini
+	name = "Mankini"
+	icon_state = "mankini"
+	has_color = TRUE
+	gender = MALE
+
+/datum/sprite_accessory/underwear/bottom/male_kinky
+	name = "Jockstrap"
+	icon_state = "jockstrap"
+	has_color = TRUE
+	gender = MALE
+
+/datum/sprite_accessory/underwear/bottom/briefs
+	name = "Briefs"
+	icon_state = "briefs"
+	has_color = TRUE
+	gender = MALE
+
+/datum/sprite_accessory/underwear/bottom/boxers
+	name = "Boxers"
+	icon_state = "boxers"
+	has_color = TRUE
+	has_digitigrade = TRUE
+	gender = MALE
+
+/datum/sprite_accessory/underwear/bottom/male_bee
+	name = "Boxers - Bee"
+	icon_state = "bee_shorts"
+	has_digitigrade = TRUE
+	gender = MALE
+
+/datum/sprite_accessory/underwear/bottom/male_hearts
+	name = "Boxers - Heart"
+	icon_state = "boxers_heart"
+	has_digitigrade = TRUE
+	gender = MALE
+>>>>>>> 8a4e44758f... Merge pull request #10165 from Ghommie/Ghommie-cit456
 
 /datum/sprite_accessory/underwear/male_stripe
 	name = "Boxers - Striped"
 	icon_state = "boxers_striped"
+<<<<<<< HEAD
+=======
+	has_digitigrade = TRUE
+	gender = MALE
+>>>>>>> 8a4e44758f... Merge pull request #10165 from Ghommie/Ghommie-cit456
 
 /datum/sprite_accessory/underwear/male_commie
 	name = "Boxers - Striped Communist"
 	icon_state = "boxers_commie"
+<<<<<<< HEAD
+=======
+	has_digitigrade = TRUE
+	gender = MALE
+>>>>>>> 8a4e44758f... Merge pull request #10165 from Ghommie/Ghommie-cit456
 
 /datum/sprite_accessory/underwear/male_usastripe
 	name = "Boxers - Striped Freedom"
 	icon_state = "boxers_assblastusa"
+<<<<<<< HEAD
+=======
+	has_digitigrade = TRUE
+	gender = MALE
+>>>>>>> 8a4e44758f... Merge pull request #10165 from Ghommie/Ghommie-cit456
 
 /datum/sprite_accessory/underwear/male_uk
 	name = "Boxers - Striped UK"
 	icon_state = "boxers_uk"
+<<<<<<< HEAD
 
 
 /datum/sprite_accessory/underwear/female_whitealt
@@ -87,6 +142,35 @@
 	icon_state = "boxer_briefs_yellow"
 
 /datum/sprite_accessory/underwear/female_beekini
+=======
+	has_digitigrade = TRUE
+	gender = MALE
+
+/datum/sprite_accessory/underwear/bottom/boxer_briefs
+	name = "Boxer Briefs"
+	icon_state = "boxer_briefs"
+	has_digitigrade = TRUE
+	has_color = TRUE
+
+/datum/sprite_accessory/underwear/bottom/panties
+	name = "Panties"
+	icon_state = "panties"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/bottom/panties_alt
+	name = "Panties - Alt"
+	icon_state = "panties_alt"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/bottom/fishnet_lower
+	name = "Panties - Fishnet"
+	icon_state = "fishnet_lower"
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/bottom/female_beekini
+>>>>>>> 8a4e44758f... Merge pull request #10165 from Ghommie/Ghommie-cit456
 	name = "Panties - Bee-kini"
 	icon_state = "panties_bee-kini"
 
@@ -117,6 +201,7 @@
 /datum/sprite_accessory/underwear/female_uk
 	name = "Panties - UK"
 	icon_state = "panties_uk"
+<<<<<<< HEAD
 
 /datum/sprite_accessory/underwear/female_white
 	name = "Panties - White"
@@ -132,6 +217,47 @@
 
 
 /datum/sprite_accessory/underwear/swimsuit_red
+=======
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/bottom/panties_neko
+	name = "Panties - Neko"
+	icon_state = "panties_neko"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/bottom/panties_slim
+	name = "Panties - Slim"
+	icon_state = "panties_slim"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/bottom/striped_panties
+	name = "Panties - Striped"
+	icon_state = "striped_panties"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/bottom/panties_swimsuit
+	name = "Panties - Swimsuit"
+	icon_state = "panties_swimming"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/bottom/panties_thin
+	name = "Panties - Thin"
+	icon_state = "panties_thin"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/bottom/longjon
+	name = "Long John Bottoms"
+	icon_state = "ljonb"
+	has_digitigrade = TRUE
+	has_color = TRUE
+
+/datum/sprite_accessory/underwear/bottom/swimsuit_red
+>>>>>>> 8a4e44758f... Merge pull request #10165 from Ghommie/Ghommie-cit456
 	name = "Swimsuit, One Piece - Red"
 	icon_state = "swimming_red"
 

@@ -23,7 +23,26 @@
 	. = ..()
 	if(.)
 		return
+<<<<<<< HEAD
 	if(!Adjacent(user))//no tele-grooming
+=======
+	var/mob/living/carbon/human/H = user
+
+	if(H.dna && H.dna.species && (NO_UNDERWEAR in H.dna.species.species_traits))
+		to_chat(H, "<span class='warning'>You are not capable of wearing underwear.</span>")
+		return
+
+	var/list/undergarment_choices = list("Underwear", "Underwear Color", "Undershirt", "Undershirt Color", "Socks", "Socks Color")
+	if(!(GLOB.underwear_list[H.underwear]?.has_color))
+		undergarment_choices -= "Underwear Color"
+	if(!(GLOB.undershirt_list[H.undershirt]?.has_color))
+		undergarment_choices -= "Undershirt Color"
+	if(!(GLOB.socks_list[H.socks]?.has_color))
+		undergarment_choices -= "Socks Color"
+
+	var/choice = input(H, "Underwear, Undershirt, or Socks?", "Changing") as null|anything in undergarment_choices
+	if(!H.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
+>>>>>>> 8a4e44758f... Merge pull request #10165 from Ghommie/Ghommie-cit456
 		return
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user

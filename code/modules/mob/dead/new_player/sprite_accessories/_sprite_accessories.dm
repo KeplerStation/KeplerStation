@@ -59,4 +59,24 @@
 	var/locked = FALSE		//Is this part locked from roundstart selection? Used for parts that apply effects
 	var/dimension_x = 32
 	var/dimension_y = 32
+<<<<<<< HEAD
 	var/center = FALSE	//Should we center the sprite?
+=======
+	var/center = FALSE	//Should we center the sprite?
+
+	//Special / holdover traits for Citadel specific sprites.
+	var/extra = FALSE
+	var/extra_color_src = MUTCOLORS2						//The color source for the extra overlay.
+	var/extra_icon = 'modular_citadel/icons/mob/mam_tails.dmi'
+	var/extra2 = FALSE
+	var/extra2_color_src = MUTCOLORS3
+	var/extra2_icon = 'modular_citadel/icons/mob/mam_tails.dmi'
+
+	//for snowflake/donor specific sprites
+	var/list/ckeys_allowed
+
+/datum/sprite_accessory/underwear
+	icon = 'icons/mob/underwear.dmi'
+	var/has_color = FALSE
+	var/has_digitigrade = FALSE
+>>>>>>> 8a4e44758f... Merge pull request #10165 from Ghommie/Ghommie-cit456
