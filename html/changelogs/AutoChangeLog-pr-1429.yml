@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - tweak: "range on Engi Tray scanners and Rad-Scanners"
