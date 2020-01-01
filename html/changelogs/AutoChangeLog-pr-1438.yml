@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - tweak: "allows bandoliers to hold any ammo type as long as it has a casing"
