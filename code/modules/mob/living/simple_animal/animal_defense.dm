@@ -10,16 +10,8 @@
 				visible_message("<span class='notice'>[M] [response_help] [src].</span>")
 				playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 
-<<<<<<< HEAD
-		if("grab")
-			grabbedby(M)
-=======
 		if(INTENT_GRAB)
-			if(grab_state >= GRAB_AGGRESSIVE && isliving(pulling))
-				vore_attack(M, pulling)
-			else
-				grabbedby(M)
->>>>>>> 2796719399... Merge pull request #9856 from Ghommie/Ghommie-cit367
+			grabbedby(M)
 
 		if(INTENT_HARM, INTENT_DISARM)
 			if(HAS_TRAIT(M, TRAIT_PACIFISM))
