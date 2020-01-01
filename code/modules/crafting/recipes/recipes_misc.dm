@@ -321,7 +321,7 @@
 				/obj/item/clothing/under/rank/security = 1)
 	category = CAT_MISC
 
-	/datum/crafting_recipe/bloodsucker/vassalrack
+/datum/crafting_recipe/bloodsucker/vassalrack
 		name = "Persuasion Rack"
 		//desc = "For converting crewmembers into loyal Vassals."
 		result = /obj/structure/bloodsucker/vassalrack
@@ -344,7 +344,7 @@
 		always_availible = FALSE	// Disabled til learned
 
 
-	/datum/crafting_recipe/bloodsucker/candelabrum
+/datum/crafting_recipe/bloodsucker/candelabrum
 		name = "Candelabrum"
 		//desc = "For converting crewmembers into loyal Vassals."
 		result = /obj/structure/bloodsucker/candelabrum
@@ -358,3 +358,11 @@
 		time = 100
 		category = CAT_MISC
 		always_availible = FALSE	// Disabled til learned
+	
+/datum/crafting_recipe/coconut_bong
+	name = "Coconut Bong"
+	result = /obj/item/bong/coconut
+	reqs = list(/obj/item/stack/sheet/mineral/bamboo = 2,
+				/obj/item/reagent_containers/food/snacks/grown/coconut = 1)
+	time = 70
+	category = CAT_MISC

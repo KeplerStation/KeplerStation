@@ -71,7 +71,7 @@
 	display_name = "Biological Technology"
 	description = "What makes us tick."	//the MC, silly!
 	prereq_ids = list("base")
-	design_ids = list("medicalkit", "chem_heater", "chem_master", "chem_dispenser", "sleeper", "vr_sleeper", "pandemic", "defibmount", "operating", "soda_dispenser", "beer_dispenser", "healthanalyzer", "blood_bag", "bloodbankgen", "bscanner")
+	design_ids = list("medicalkit", "chem_heater", "chem_master", "chem_dispenser", "sleeper", "vr_sleeper", "pandemic", "defibmount", "operating", "soda_dispenser", "beer_dispenser", "healthanalyzer", "blood_bag", "bloodbankgen", "bscanner", "telescopiciv")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
@@ -1056,7 +1056,7 @@
 							/obj/item/crowbar/abductor, /obj/item/multitool/abductor,
 							/obj/item/stock_parts/cell/infinite/abductor, /obj/item/weldingtool/abductor,
 							/obj/item/wirecutters/abductor, /obj/item/circuitboard/machine/abductor,
-							/obj/item/abductor_baton, /obj/item/abductor, /obj/item/stack/sheet/mineral/abductor)
+							/obj/item/abductor, /obj/item/stack/sheet/mineral/abductor)
 
 /datum/techweb_node/alien_bio
 	id = "alien_bio"
@@ -1066,7 +1066,7 @@
 	design_ids = list("alien_scalpel", "alien_hemostat", "alien_retractor", "alien_saw", "alien_drill", "alien_cautery", "ayyplantgenes")
 	boost_item_paths = list(/obj/item/gun/energy/alien, /obj/item/scalpel/alien, /obj/item/hemostat/alien, /obj/item/retractor/alien, /obj/item/circular_saw/alien,
 	/obj/item/cautery/alien, /obj/item/surgicaldrill/alien, /obj/item/screwdriver/abductor, /obj/item/wrench/abductor, /obj/item/crowbar/abductor, /obj/item/multitool/abductor, /obj/item/stock_parts/cell/infinite/abductor,
-	/obj/item/weldingtool/abductor, /obj/item/wirecutters/abductor, /obj/item/circuitboard/machine/abductor, /obj/item/abductor_baton, /obj/item/abductor)
+	/obj/item/weldingtool/abductor, /obj/item/wirecutters/abductor, /obj/item/circuitboard/machine/abductor, /obj/item/abductor/baton, /obj/item/abductor)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 20000
 	hidden = TRUE
@@ -1078,7 +1078,7 @@
 	prereq_ids = list("alientech", "adv_engi")
 	design_ids = list("alien_wrench", "alien_wirecutters", "alien_screwdriver", "alien_crowbar", "alien_welder", "alien_multitool")
 	boost_item_paths = list(/obj/item/screwdriver/abductor, /obj/item/wrench/abductor, /obj/item/crowbar/abductor, /obj/item/multitool/abductor, /obj/item/stock_parts/cell/infinite/abductor,
-	/obj/item/weldingtool/abductor, /obj/item/wirecutters/abductor, /obj/item/circuitboard/machine/abductor, /obj/item/abductor_baton, /obj/item/abductor)
+	/obj/item/weldingtool/abductor, /obj/item/wirecutters/abductor, /obj/item/circuitboard/machine/abductor, /obj/item/abductor/baton, /obj/item/abductor)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 20000
 	hidden = TRUE
@@ -1102,13 +1102,13 @@
 			continue
 		boost_item_paths |= UI.item	//allows deconning to unlock.
 
-/datum/techweb_node/advanced_illegl_ballistics
+/datum/techweb_node/advanced_illegal_ballistics
 	id = "advanced_illegal_ballistics"
-	display_name = "Advanced Illegal Ballistics"
-	description = "Advanced Ballistic for Illegal weaponds."
-	design_ids = list("10mm","10mmap","10mminc","10mmhp","pistolm9mm","m45","bolt_clip")
+	display_name = "Advanced Non-Standard Ballistics"
+	description = "Ballistic ammunition for non-standard firearms. Usually the ones you don't have nor want to be involved with."
+	design_ids = list("10mm","10mmap","10mminc","10mmhp","sl357","pistolm9mm","m45","bolt_clip")
 	prereq_ids = list("ballistic_weapons","syndicate_basic","explosive_weapons")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 25000) //This gives sec lethal mags/clips for guns form traitors or space.
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 25000) //This gives sec lethal mags/clips for guns from traitors, space, or anything in between.
 	export_price = 7000
 
 //Helpers for debugging/balancing the techweb in its entirety!
