@@ -220,6 +220,7 @@
 	name = "sodawater flavored snowcone"
 	desc = "A waterd down sodawater flavored snowcone snowball in a paper cup."
 	icon_state = "soda_sc"
+<<<<<<< HEAD
 	list_reagents = list("nutriment" = 1, "sodawater" = 5)
 	tastes = list("surgar" = 1, "water" = 5, "soda" = 5)
 	foodtype = JUNKFOOD | SUGAR
@@ -231,6 +232,24 @@
 	list_reagents = list("nutriment" = 1, "laughter" = 1)
 	tastes = list("vaild" = 5, "salt" = 5, "wats" = 5)
 	foodtype = JUNKFOOD | SUGAR
+=======
+	list_reagents = list("nutriment" = 1, "cola" = 5)
+	tastes = list("ice" = 1, "water" = 1, "cola" = 5)
+
+/obj/item/reagent_containers/food/snacks/snowcones/spacemountainwind
+	name = "Space Mountain Wind snowcone"
+	desc = "Space Mountain Wind drizzled over a snowball in a paper cup."
+	icon_state = "kiwi_sc"
+	list_reagents = list("nutriment" = 1, "spacemountainwind" = 5)
+	tastes = list("ice" = 1, "water" = 1, "mountain wind" = 5)
+
+/obj/item/reagent_containers/food/snacks/snowcones/pwrgame
+	name = "pwrgame snowcone"
+	desc = "Pwrgame soda drizzled over a snowball in a paper cup."
+	icon_state = "pwrgame_sc"
+	list_reagents = list("nutriment" = 1, "pwr_game" = 5)
+	tastes = list("ice" = 1, "water" = 1, "valid" = 5, "salt" = 5, "wats" = 5)
+>>>>>>> a881231149... Merge pull request #10395 from Hatterhat/shit-and-cum
 
 /obj/item/reagent_containers/food/snacks/snowcones/honey
 	name = "honey flavored snowcone"
@@ -244,4 +263,8 @@
 	desc = "A rainbow color snowball in a paper cup."
 	icon_state = "rainbow_sc"
 	list_reagents = list("nutriment" = 5, "laughter" = 25)
+<<<<<<< HEAD
 	tastes = list("sunlight" = 5, "light" = 5, "slime" = 5, "paint" = 3, "clouds" = 3)
+=======
+	tastes = list("ice" = 1, "water" = 1, "sunlight" = 5, "light" = 5, "slime" = 5, "paint" = 3, "clouds" = 3)
+>>>>>>> a881231149... Merge pull request #10395 from Hatterhat/shit-and-cum
