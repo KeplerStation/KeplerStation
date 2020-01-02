@@ -1237,3 +1237,14 @@
 /mob/living/silicon/robot/adjustStaminaLossBuffered(amount, updating_health = 1)
 	if(istype(cell))
 		cell.charge -= amount*5
+<<<<<<< HEAD
+=======
+
+/mob/living/silicon/robot/verb/viewmanifest()
+	set category = "Robot Commands"
+	set name = "View Crew Manifest"
+
+	if(usr.stat == DEAD)
+		return //won't work if dead
+	ai_roster()
+>>>>>>> 5d667a3540... Merge pull request #10388 from CameronWoof/ez-valids
