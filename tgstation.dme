@@ -42,6 +42,11 @@
 #include "code\__DEFINES\cult.dm"
 #include "code\__DEFINES\diseases.dm"
 #include "code\__DEFINES\DNA.dm"
+<<<<<<< HEAD
+=======
+#include "code\__DEFINES\donator_groupings.dm"
+#include "code\__DEFINES\dynamic.dm"
+>>>>>>> 0f9c3350cd... Merge pull request #10189 from Putnam3145/storytellers
 #include "code\__DEFINES\events.dm"
 #include "code\__DEFINES\exports.dm"
 #include "code\__DEFINES\fantasy_affixes.dm"
@@ -107,6 +112,11 @@
 #include "code\__DEFINES\turf_flags.dm"
 #include "code\__DEFINES\typeids.dm"
 #include "code\__DEFINES\vehicles.dm"
+<<<<<<< HEAD
+=======
+#include "code\__DEFINES\voreconstants.dm"
+#include "code\__DEFINES\vote.dm"
+>>>>>>> 0f9c3350cd... Merge pull request #10189 from Putnam3145/storytellers
 #include "code\__DEFINES\vv.dm"
 #include "code\__DEFINES\wall_dents.dm"
 #include "code\__DEFINES\wires.dm"
@@ -571,6 +581,7 @@
 #include "code\game\gamemodes\dynamic\dynamic_rulesets_latejoin.dm"
 #include "code\game\gamemodes\dynamic\dynamic_rulesets_midround.dm"
 #include "code\game\gamemodes\dynamic\dynamic_rulesets_roundstart.dm"
+#include "code\game\gamemodes\dynamic\dynamic_storytellers.dm"
 #include "code\game\gamemodes\extended\extended.dm"
 #include "code\game\gamemodes\gangs\dominator.dm"
 #include "code\game\gamemodes\gangs\dominator_countdown.dm"
