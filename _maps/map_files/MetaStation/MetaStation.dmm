@@ -26648,7 +26648,17 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral,
+=======
+/obj/effect/turf_decal/tile/neutral{
+	dir = 2
+	},
+/obj/structure/sign/departments/custodian{
+	pixel_x = 32;
+	pixel_y = -32
+	},
+>>>>>>> 6f20ab520c... Merge pull request #10378 from EmeraldSundisk/metacloset
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "baI" = (
