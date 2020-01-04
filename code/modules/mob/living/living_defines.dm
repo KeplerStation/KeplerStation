@@ -114,3 +114,5 @@
 	var/drag_slowdown = TRUE //Whether the mob is slowed down when dragging another prone mob
 
 	var/rotate_on_lying = FALSE
+	// KEPLER CHANGES
+	var/nextsoundemote
