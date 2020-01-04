@@ -519,18 +519,17 @@ GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi', PDA_S
 
 #define CRYOMOBS 'icons/obj/cryo_mobs.dmi'
 
-<<<<<<< HEAD
 // Bone flags
 #define BONE_FLAG_NO_BONES 0
 #define BONE_FLAG_NORMAL 1
 #define BONE_FLAG_BROKEN 2
 #define BONE_FLAG_SPLINTED 3
-=======
+
 #define CUSTOM_HOLOFORM_DELAY		10 SECONDS			//prevents spamming to make lag. it's pretty expensive to do this.
 
 #define HOLOFORM_FILTER_AI		"FILTER_AI"
 #define HOLOFORM_FILTER_PAI		"FILTER_PAI"
 #define HOLOFORM_FILTER_STATIC	"FILTER_STATIC"
->>>>>>> 499907f9b7... Merge pull request #10191 from Citadel-Station-13/michael_labs
+
 
 #define CANT_REENTER_ROUND -1
