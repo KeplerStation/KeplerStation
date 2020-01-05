@@ -105,7 +105,7 @@
 	name = "Eigenstasium"
 	id = "eigenstate"
 	results = list("eigenstate" = 1)
-	required_reagents = list("bluespace" = 1, "stable_plasma" = 1, "sugar" = 1)
+	required_reagents = list("bluespace" = 1, "stable_plasma" = 1, "caramel" = 1)
 	mix_message = "the reaction zaps suddenly!"
 	//FermiChem vars:
 	OptimalTempMin 		= 350 // Lower area of bell curve for determining heat based rate reactions
@@ -322,7 +322,11 @@
 	name = "secretcatchem"
 	id = "secretcatchem"
 	results = list("secretcatchem" = 5)
+<<<<<<< HEAD
 	required_reagents = list("stable_plasma" = 1, "sugar" = 1, "cream" = 1, "clonexadone" = 1)//Yes this will make a plushie if you don't lucky guess. It'll eat all your reagents too.
+=======
+	required_reagents = list("stable_plasma" = 1, "caramel" = 1, "cream" = 1, "clonexadone" = 1)//Yes this will make a kitty if you don't lucky guess. It'll eat all your reagents too.
+>>>>>>> 0e74c94d8c... Merge pull request #10278 from Trilbyspaceclone/patch-248
 	required_catalysts = list("SDGF" = 1)
 	required_temp = 600
 	mix_message = "the reaction gives off a meow!"
