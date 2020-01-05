@@ -88,46 +88,6 @@
 	if(quirk_holder)
 		quirk_holder.remove_client_colour(/datum/client_colour/monochrome)
 
-/datum/quirk/crocrin_immunity
-	name = "Crocin Immunity"
-	desc = "You're one of the few people in the galaxy who are genetically immune to Crocin and Hexacrocin products and their addictive properties! However, you can still get brain damage from Hexacrocin addiction."
-	mob_trait = TRAIT_CROCRIN_IMMUNE
-	value = 0
-<<<<<<< HEAD
-	gain_text = "<span class='notice'>You feel more prudish.</span>"
-	lose_text = "<span class='notice'>You don't feel as prudish as before.</span>"
-	medical_record_text = "Patient exhibits a special gene that makes them immune to aphrodisiacs."
-=======
-	mob_trait = TRAIT_NYMPHO
-	gain_text = "<span class='notice'>You are feeling extra wild.</span>"
-	lose_text = "<span class='notice'>You don't feel that burning sensation anymore.</span>"
-
-/datum/quirk/libido/add()
-	quirk_holder.min_arousal = 16
-	quirk_holder.arousal_rate = 3
-
-/datum/quirk/libido/remove()
-	if(quirk_holder)
-		quirk_holder.min_arousal = initial(quirk_holder.min_arousal)
-		quirk_holder.arousal_rate = initial(quirk_holder.arousal_rate)
-
-/datum/quirk/maso
-	name = "Masochism"
-	desc = "You are aroused by pain."
-	value = 0
-	mob_trait = TRAIT_MASO
-	gain_text = "<span class='notice'>You desire to be hurt.</span>"
-	lose_text = "<span class='notice'>Pain has become less exciting for you.</span>"
-
-/datum/quirk/exhibitionism
-	name = "Exhibitionism"
-	desc = "You don't mind showing off your bare body to strangers, in fact you find it quite satistying."
-	value = 0
-	medical_record_text = "Patient has been diagnosed with exhibitionistic disorder."
-	mob_trait = TRAIT_EXHIBITIONIST
-	gain_text = "<span class='notice'>You feel like exposing yourself to the world.</span>"
-	lose_text = "<span class='notice'>Indecent exposure doesn't sound as charming to you anymore.</span>"
-
 /datum/quirk/alcohol_intolerance
 	name = "Alcohol Intolerance"
 	desc = "You take toxin damage from alcohol rather than getting drunk."
@@ -145,4 +105,3 @@
 	if(H)
 		var/datum/species/species = H.dna.species
 		species.disliked_food &= ~ALCOHOL
->>>>>>> fdff70b702... Merge pull request #10256 from Putnam3145/alcohol-intolerance
