@@ -326,3 +326,35 @@
 		set_light(0)
 		lightCycle = 0
 		active = FALSE
+<<<<<<< HEAD
+=======
+
+/obj/item/clothing/shoes/russian
+	name = "russian boots"
+	desc = "Comfy shoes."
+	icon_state = "rus_shoes"
+	item_state = "rus_shoes"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
+
+// kevin is into feet
+/obj/item/clothing/shoes/wraps
+	name = "gilded leg wraps"
+	desc = "Ankle coverings. These ones have a golden design."
+	icon_state = "gildedcuffs"
+	body_parts_covered = FALSE
+
+/obj/item/clothing/shoes/wraps/silver
+	name = "silver leg wraps"
+	desc = "Ankle coverings. Not made of real silver."
+	icon_state = "silvergildedcuffs"
+
+/obj/item/clothing/shoes/wraps/red
+	name = "red leg wraps"
+	desc = "Ankle coverings. Show off your style with these shiny red ones!"
+	icon_state = "redcuffs"
+
+/obj/item/clothing/shoes/wraps/blue
+	name = "blue leg wraps"
+	desc = "Ankle coverings. Hang ten, brother."
+	icon_state = "bluecuffs"
+>>>>>>> d07d436ba2... Merge pull request #10384 from Hatterhat/tg-43454-43688-the-one-with-the-cargo
