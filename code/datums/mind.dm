@@ -128,23 +128,10 @@
 	transfer_martial_arts(new_character)
 	if(active || force_key_move)
 		new_character.key = key		//now transfer the key to link the client to our new body
-
-<<<<<<< HEAD
-=======
-//CIT CHANGE - makes arousal update when transfering bodies
-	if(isliving(new_character)) //New humans and such are by default enabled arousal. Let's always use the new mind's prefs.
-		var/mob/living/L = new_character
-		if(L.client && L.client.prefs)
-			L.canbearoused = L.client.prefs.arousable //Technically this should make taking over a character mean the body gain the new minds setting...
-			L.update_arousal_hud() //Removes the old icon
-			if (L.client.prefs.auto_ooc)
-				if (L.client.prefs.chat_toggles & CHAT_OOC)
-					L.client.prefs.chat_toggles ^= CHAT_OOC
-
+		
 	SEND_SIGNAL(src, COMSIG_MIND_TRANSFER, new_character, old_character)
 	SEND_SIGNAL(new_character, COMSIG_MOB_ON_NEW_MIND)
 
->>>>>>> 7ad6021472... Merge pull request #10437 from Ghommie/Ghommie-cit497
 /datum/mind/proc/store_memory(new_text)
 	if((length(memory) + length(new_text)) <= MAX_MESSAGE_LEN)
 		memory += "[new_text]<BR>"
