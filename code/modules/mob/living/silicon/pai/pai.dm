@@ -313,7 +313,6 @@
 
 /mob/living/silicon/pai/proc/initialize_dynamic_chassis_icons()
 	. = list()
-	var/icon/curr		//for inserts
 
 	//This is a horrible system and I wish I was not as lazy and did something smarter, like just generating a new icon in memory which is probably more efficient.
 
