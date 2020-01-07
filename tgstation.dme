@@ -462,11 +462,7 @@
 #include "code\datums\elements\_element.dm"
 #include "code\datums\elements\cleaning.dm"
 #include "code\datums\elements\earhealing.dm"
-<<<<<<< HEAD
-=======
 #include "code\datums\elements\wuv.dm"
-#include "code\datums\elements\ghost_role_eligibility.dm"
->>>>>>> da43d336c3... Merge pull request #10047 from Ghommie/Ghommie-cit425
 #include "code\datums\helper_datums\events.dm"
 #include "code\datums\helper_datums\getrev.dm"
 #include "code\datums\helper_datums\icon_snapshot.dm"
