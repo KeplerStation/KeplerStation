@@ -151,72 +151,6 @@
 					/obj/item/reagent_containers/glass/bottle/capsaicin)
 	crate_name = "fiesta crate"
 
-<<<<<<< HEAD
-/datum/supply_pack/organic/fruit_1
-	name = "Fruit Basic Crate"
-	desc = "Getting scurvy on the station? Well heres your fixing! Contains three of each - bananas, watermelons, limes, lemons, oranges and even three pineapple."
-	cost = 2250
-	contains = list(/obj/item/reagent_containers/food/snacks/grown/watermelon,
-					/obj/item/reagent_containers/food/snacks/grown/watermelon,
-					/obj/item/reagent_containers/food/snacks/grown/watermelon,
-					/obj/item/reagent_containers/food/snacks/grown/pineapple,
-					/obj/item/reagent_containers/food/snacks/grown/pineapple,
-					/obj/item/reagent_containers/food/snacks/grown/pineapple,
-					/obj/item/reagent_containers/food/snacks/grown/citrus/lime,
-					/obj/item/reagent_containers/food/snacks/grown/citrus/lime,
-					/obj/item/reagent_containers/food/snacks/grown/citrus/lime,
-					/obj/item/reagent_containers/food/snacks/grown/citrus/orange,
-					/obj/item/reagent_containers/food/snacks/grown/citrus/orange,
-					/obj/item/reagent_containers/food/snacks/grown/citrus/orange,
-					/obj/item/reagent_containers/food/snacks/grown/citrus/lemon,
-					/obj/item/reagent_containers/food/snacks/grown/citrus/lemon,
-					/obj/item/reagent_containers/food/snacks/grown/citrus/lemon,
-					/obj/item/reagent_containers/food/snacks/grown/banana,
-					/obj/item/reagent_containers/food/snacks/grown/banana,
-					/obj/item/reagent_containers/food/snacks/grown/banana)
-	crate_name = "fruit crate"
-
-/datum/supply_pack/organic/fruit_2
-	name = "Fruit Delux Crate"
-	desc = "Getting tired of the basic fruits and want to have something a bit more decadent! This crate is for you! Contains three of each - bunches of berries, apples, pineapples, cherries, green & red grapes, eggplants, bananas, peaches, and lastly seven strawberry. Includes one serving tray."
-	cost = 3500
-	contains = list(/obj/item/reagent_containers/food/snacks/grown/berries,
-					/obj/item/reagent_containers/food/snacks/grown/berries,
-					/obj/item/reagent_containers/food/snacks/grown/berries,
-					/obj/item/reagent_containers/food/snacks/grown/apple,
-					/obj/item/reagent_containers/food/snacks/grown/apple,
-					/obj/item/reagent_containers/food/snacks/grown/apple,
-					/obj/item/reagent_containers/food/snacks/grown/pineapple,
-					/obj/item/reagent_containers/food/snacks/grown/pineapple,
-					/obj/item/reagent_containers/food/snacks/grown/pineapple,
-					/obj/item/reagent_containers/food/snacks/grown/cherries,
-					/obj/item/reagent_containers/food/snacks/grown/cherries,
-					/obj/item/reagent_containers/food/snacks/grown/cherries,
-					/obj/item/reagent_containers/food/snacks/grown/grapes,
-					/obj/item/reagent_containers/food/snacks/grown/grapes,
-					/obj/item/reagent_containers/food/snacks/grown/grapes,
-					/obj/item/reagent_containers/food/snacks/grown/grapes/green,
-					/obj/item/reagent_containers/food/snacks/grown/grapes/green,
-					/obj/item/reagent_containers/food/snacks/grown/grapes/green,
-					/obj/item/reagent_containers/food/snacks/grown/banana,
-					/obj/item/reagent_containers/food/snacks/grown/banana,
-					/obj/item/reagent_containers/food/snacks/grown/banana,
-					/obj/item/reagent_containers/food/snacks/grown/eggplant,
-					/obj/item/reagent_containers/food/snacks/grown/eggplant,
-					/obj/item/reagent_containers/food/snacks/grown/eggplant,
-					/obj/item/reagent_containers/food/snacks/grown/peach,
-					/obj/item/reagent_containers/food/snacks/grown/peach,
-					/obj/item/reagent_containers/food/snacks/grown/peach,
-					/obj/item/reagent_containers/food/snacks/grown/strawberry,
-					/obj/item/reagent_containers/food/snacks/grown/strawberry,
-					/obj/item/reagent_containers/food/snacks/grown/strawberry,
-					/obj/item/reagent_containers/food/snacks/grown/strawberry,
-					/obj/item/reagent_containers/food/snacks/grown/strawberry,
-					/obj/item/reagent_containers/food/snacks/grown/strawberry,
-					/obj/item/reagent_containers/food/snacks/grown/strawberry,
-					/obj/item/storage/bag/tray)
-	crate_name = "fruit crate"
-=======
 /datum/supply_pack/organic/grill
 	name = "Grilling Starter Kit"
 	desc = "Hey dad I'm Hungry. Hi Hungry I'm THE NEW GRILLING STARTER KIT ONLY 5000 BUX GET NOW! Contains a cooking grill and five fuel coal sheets."
@@ -233,7 +167,6 @@
 	crate_type = /obj/structure/closet/crate
 	contains = list(/obj/item/stack/sheet/mineral/coal/ten)
 	crate_name = "grilling fuel kit crate"
->>>>>>> d07d436ba2... Merge pull request #10384 from Hatterhat/tg-43454-43688-the-one-with-the-cargo
 
 /datum/supply_pack/organic/cream_piee
 	name = "High-yield Clown-grade Cream Pie Crate"
