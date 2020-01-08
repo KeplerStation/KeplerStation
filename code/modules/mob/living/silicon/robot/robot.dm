@@ -109,6 +109,10 @@
 	var/static/list/can_ride_typecache = typecacheof(/mob/living/carbon/human)
 	var/cansprint = 1
 
+	var/orebox = null
+
+/mob/living/silicon/robot
+
 /mob/living/silicon/robot/get_cell()
 	return cell
 
