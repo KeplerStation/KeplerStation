@@ -12,6 +12,11 @@ SUBSYSTEM_DEF(vote)
 	var/mode = null
 	var/question = null
 	var/list/choices = list()
+<<<<<<< HEAD
+=======
+	var/list/scores = list()
+	var/list/choice_descs = list() // optional descriptions
+>>>>>>> 652cf6e60c... Merge pull request #10440 from Putnam3145/weird-secret
 	var/list/voted = list()
 	var/list/voting = list()
 	var/list/generated_actions = list()
@@ -19,6 +24,8 @@ SUBSYSTEM_DEF(vote)
 	var/obfuscated = FALSE//CIT CHANGE - adds obfuscated/admin-only votes
 
 	var/list/stored_gamemode_votes = list() //Basically the last voted gamemode is stored here for end-of-round use.
+
+	var/list/stored_modetier_results = list() // The aggregated tier list of the modes available in secret.
 
 /datum/controller/subsystem/vote/fire()	//called by master_controller
 	if(mode)
@@ -28,8 +35,14 @@ SUBSYSTEM_DEF(vote)
 			result()
 			for(var/client/C in voting)
 				C << browse(null, "window=vote;can_close=0")
+<<<<<<< HEAD
 			reset()
 		else
+=======
+			if(end_time < world.time) // result() can change this
+				reset()
+		else if(next_pop < world.time)
+>>>>>>> 652cf6e60c... Merge pull request #10440 from Putnam3145/weird-secret
 			var/datum/browser/client_popup
 			for(var/client/C in voting)
 				client_popup = new(C, "vote", "Voting Panel")
@@ -46,6 +59,7 @@ SUBSYSTEM_DEF(vote)
 	choices.Cut()
 	voted.Cut()
 	voting.Cut()
+	scores.Cut()
 	obfuscated = FALSE //CIT CHANGE - obfuscated votes
 	remove_action_buttons()
 
@@ -84,6 +98,111 @@ SUBSYSTEM_DEF(vote)
 				. += option
 	return .
 
+<<<<<<< HEAD
+=======
+/datum/controller/subsystem/vote/proc/calculate_condorcet_votes(var/blackbox_text)
+	// https://en.wikipedia.org/wiki/Schulze_method#Implementation
+	var/list/d[][] = new/list(choices.len,choices.len) // the basic vote matrix, how many times a beats b
+	for(var/ckey in voted)
+		var/list/this_vote = voted[ckey]
+		for(var/a in 1 to choices.len)
+			for(var/b in a+1 to choices.len)
+				var/a_rank = this_vote.Find(a)
+				var/b_rank = this_vote.Find(b)
+				a_rank = a_rank ? a_rank : choices.len+1
+				b_rank = b_rank ? b_rank : choices.len+1
+				if(a_rank<b_rank)
+					d[a][b]++
+				else if(b_rank<a_rank)
+					d[b][a]++
+				//if equal, do nothing
+	var/list/p[][] = new/list(choices.len,choices.len) //matrix of shortest path from a to b
+	for(var/i in 1 to choices.len)
+		for(var/j in 1 to choices.len)
+			if(i != j)
+				var/pref_number = d[i][j]
+				var/opposite_pref = d[j][i]
+				if(pref_number>opposite_pref)
+					p[i][j] = d[i][j]
+				else
+					p[i][j] = 0
+	for(var/i in 1 to choices.len)
+		for(var/j in 1 to choices.len)
+			if(i != j)
+				for(var/k in 1 to choices.len) // YEAH O(n^3) !!
+					if(i != k && j != k)
+						p[j][k] = max(p[j][k],min(p[j][i], p[i][k]))
+	//one last pass, now that we've done the math
+	for(var/i in 1 to choices.len)
+		for(var/j in 1 to choices.len)
+			if(i != j)
+				SSblackbox.record_feedback("nested tally","voting",p[i][j],list(blackbox_text,"Shortest Paths",choices[i],choices[j]))
+				if(p[i][j] >= p[j][i])
+					choices[choices[i]]++ // higher shortest path = better candidate, so we add to choices here
+					// choices[choices[i]] is the schulze ranking, here, rather than raw vote numbers
+
+/datum/controller/subsystem/vote/proc/calculate_majority_judgement_vote(var/blackbox_text)
+	// https://en.wikipedia.org/wiki/Majority_judgment
+	var/list/scores_by_choice = list()
+	for(var/choice in choices)
+		scores_by_choice[choice] = list()
+	for(var/ckey in voted)
+		var/list/this_vote = voted[ckey]
+		var/list/pretty_vote = list()
+		for(var/choice in this_vote)
+			sorted_insert(scores_by_choice[choice],this_vote[choice],/proc/cmp_numeric_asc)
+			// START BALLOT GATHERING
+			pretty_vote += choice
+			pretty_vote[choice] = GLOB.vote_score_options[this_vote[choice]]
+		SSblackbox.record_feedback("associative","voting_ballots",1,pretty_vote)
+		// END BALLOT GATHERING
+	for(var/score_name in scores_by_choice)
+		var/list/score = scores_by_choice[score_name]
+		for(var/indiv_score in score)
+			SSblackbox.record_feedback("nested tally","voting",1,list(blackbox_text,"Scores",score_name,GLOB.vote_score_options[indiv_score])) 
+		if(score.len == 0)
+			scores_by_choice -= score_name
+	while(scores_by_choice.len > 1)
+		var/highest_median = 0
+		for(var/score_name in scores_by_choice) // first get highest median
+			var/list/score = scores_by_choice[score_name]
+			if(!score.len)
+				scores_by_choice -= score_name
+				continue
+			var/median = score[max(1,round(score.len/2))]
+			if(median >= highest_median)
+				highest_median = median
+		for(var/score_name in scores_by_choice) // then, remove
+			var/list/score = scores_by_choice[score_name]
+			var/median = score[max(1,round(score.len/2))]
+			if(median < highest_median)
+				scores_by_choice -= score_name
+		for(var/score_name in scores_by_choice) // after removals
+			var/list/score = scores_by_choice[score_name]
+			if(score.len == 0)
+				choices[score_name] += 100 // we're in a tie situation--just go with the first one
+				return
+			var/median_pos = max(1,round(score.len/2))
+			score.Cut(median_pos,median_pos+1)
+			choices[score_name]++
+
+/datum/controller/subsystem/vote/proc/calculate_scores(var/blackbox_text)
+	var/list/scores_by_choice = list()
+	for(var/choice in choices)
+		scores_by_choice[choice] = list()
+	for(var/ckey in voted)
+		var/list/this_vote = voted[ckey]
+		for(var/choice in this_vote)
+			sorted_insert(scores_by_choice[choice],this_vote[choice],/proc/cmp_numeric_asc)
+	var/middle_score = round(GLOB.vote_score_options.len/2,1)
+	for(var/score_name in scores_by_choice)
+		var/list/score = scores_by_choice[score_name]
+		for(var/S in score)
+			scores[score_name] += S-middle_score
+		SSblackbox.record_feedback("nested tally","voting",scores[score_name],list(blackbox_text,"Total scores",score_name))
+
+
+>>>>>>> 652cf6e60c... Merge pull request #10440 from Putnam3145/weird-secret
 /datum/controller/subsystem/vote/proc/announce_result()
 	var/list/winners = get_result()
 	var/text
@@ -118,6 +237,13 @@ SUBSYSTEM_DEF(vote)
 	to_chat(world, "\n<font color='purple'>[text]</font>")
 	if(obfuscated) //CIT CHANGE - adds obfuscated votes. this messages admins with the vote's true results
 		var/admintext = "Obfuscated results"
+<<<<<<< HEAD
+=======
+		if(vote_system == RANKED_CHOICE_VOTING)
+			admintext += "\nIt should be noted that this is not a raw tally of votes (impossible in ranked choice) but the score determined by the schulze method of voting, so the numbers will look weird!"
+		else if(vote_system == SCORE_VOTING)
+			admintext += "\nIt should be noted that this is not a raw tally of votes but the number of runoffs done by majority judgement!"
+>>>>>>> 652cf6e60c... Merge pull request #10440 from Putnam3145/weird-secret
 		for(var/i=1,i<=choices.len,i++)
 			var/votes = choices[choices[i]]
 			admintext += "\n<b>[choices[i]]:</b> [votes]"
@@ -139,6 +265,12 @@ SUBSYSTEM_DEF(vote)
 				SSticker.save_mode(.)
 				message_admins("The gamemode has been voted for, and has been changed to: [GLOB.master_mode]")
 				log_admin("Gamemode has been voted for and switched to: [GLOB.master_mode].")
+				if(CONFIG_GET(flag/modetier_voting))
+					reset()
+					started_time = 0
+					initiate_vote("mode tiers","server",hideresults=FALSE,votesystem=RANKED_CHOICE_VOTING,forced=TRUE, vote_time = 30 MINUTES)
+					to_chat(world,"<b>The vote will end right as the round starts.</b>")
+					return .
 			if("restart")
 				if(. == "Restart Round")
 					restart = 1
@@ -149,6 +281,8 @@ SUBSYSTEM_DEF(vote)
 						restart = 1
 					else
 						GLOB.master_mode = .
+			if("mode tiers")
+				stored_modetier_results = choices.Copy()
 			if("dynamic")
 				if(SSticker.current_state > GAME_STATE_PREGAME)//Don't change the mode if the round already started.
 					return message_admins("A vote has tried to change the gamemode, but the game has already started. Aborting.")
@@ -256,6 +390,13 @@ SUBSYSTEM_DEF(vote)
 					choices |= M
 			if("roundtype") //CIT CHANGE - adds the roundstart secret/extended vote
 				choices.Add("secret", "extended")
+			if("mode tiers")
+				var/list/modes_to_add = config.votable_modes
+				var/list/probabilities = CONFIG_GET(keyed_list/probability)
+				for(var/tag in modes_to_add)
+					if(probabilities[tag] <= 0)
+						modes_to_add -= tag
+				choices.Add(modes_to_add)
 			if("dynamic")
 				var/saved_threats = SSpersistence.saved_threat_levels
 				if((saved_threats[1]+saved_threats[2]+saved_threats[3])>150)
