@@ -95,6 +95,37 @@
 		var/mob/living/carbon/C = owner
 		if(C.combatmode)
 			C.toggle_combat_mode(TRUE)
+<<<<<<< HEAD
+=======
+
+/datum/status_effect/no_combat_mode/mesmerize
+	id = "Mesmerize"
+	alert_type = /obj/screen/alert/status_effect/mesmerized
+
+/datum/status_effect/no_combat_mode/mesmerize/on_apply()
+	ADD_TRAIT(owner, TRAIT_MUTE, "mesmerize")
+
+/datum/status_effect/no_combat_mode/mesmerize/on_remove()
+	REMOVE_TRAIT(owner, TRAIT_MUTE, "mesmerize")
+
+/obj/screen/alert/status_effect/mesmerized
+	name = "Mesmerized"
+	desc = "You cant tear your sight from who is in front of you...Their gaze is simply too enthralling.."
+	icon = 'icons/mob/actions/bloodsucker.dmi'
+	icon_state = "power_mez"
+
+/datum/status_effect/no_combat_mode/electrode
+	id = "tased"
+
+/datum/status_effect/no_combat_mode/electrode/on_creation(mob/living/new_owner, set_duration)
+	if(isnum(set_duration)) //TODO, figure out how to grab from subtype
+		duration = set_duration
+	. = ..()
+	if(iscarbon(owner))
+		var/mob/living/carbon/C = owner
+		if(C.combatmode)
+			C.toggle_combat_mode(TRUE)
+>>>>>>> 2944a902c6... Merge pull request #10447 from Arturlang/Bloodsucker_tweaks
 		C.add_movespeed_modifier(MOVESPEED_ID_TASED_STATUS, TRUE, override = TRUE, multiplicative_slowdown = 8)
 
 /datum/status_effect/electrode/on_remove()
