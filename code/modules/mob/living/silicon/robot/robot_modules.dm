@@ -114,6 +114,10 @@
 		else if(istype(S, /obj/item/stack/marker_beacon))
 			S.cost = 1
 			S.source = get_or_create_estorage(/datum/robot_energy_storage/beacon)
+		
+		else if(istype(S, /obj/item/stack/packageWrap))
+			S.cost = 1
+			S.source = get_or_create_estorage(/datum/robot_energy_storage/wrapping_paper)
 
 		if(S && S.source)
 			S.materials = list()
@@ -130,6 +134,32 @@
 		rebuild_modules()
 	return I
 
+<<<<<<< HEAD
+=======
+//Adds flavoursome dogborg items to dogborg variants without mechanical benefits
+/obj/item/robot_module/proc/dogborg_equip()
+	has_snowflake_deadsprite = TRUE
+	cyborg_pixel_offset = -16
+	hat_offset = INFINITY
+	var/obj/item/I = new /obj/item/analyzer/nose/flavour(src)
+	basic_modules += I
+	I = new /obj/item/soap/tongue/flavour(src)
+	basic_modules += I
+	I = new /obj/item/dogborg/sleeper/K9/flavour(src)
+	if(istype(src, /obj/item/robot_module/engineering))
+		I.icon_state = "decompiler"
+	if(istype(src, /obj/item/robot_module/security))
+		I.icon_state = "sleeperb"
+	if(istype(src, /obj/item/robot_module/medical))
+		I.icon_state = "sleeper"
+	if(istype(src, /obj/item/robot_module/butler))
+		I.icon_state = "servicer"
+		if(cyborg_base_icon == "scrubpup")
+			I.icon_state = "compactor"
+	basic_modules += I
+	rebuild_modules()
+
+>>>>>>> b09ef97ae3... Merge pull request #10305 from BlackMajor/Yeehaw
 /obj/item/robot_module/proc/remove_module(obj/item/I, delete_after)
 	basic_modules -= I
 	modules -= I
@@ -300,6 +330,66 @@
 	can_be_pushed = FALSE
 	hat_offset = 3
 
+<<<<<<< HEAD
+=======
+/obj/item/robot_module/medical/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in list("Default", "Heavy", "Sleek", "Marina", "Droid", "Eyebot", "Medihound", "Medihound Dark", "Vale")
+	if(R.client && R.client.ckey in list("nezuli"))
+		borg_icon += "Alina"
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Default")
+			cyborg_base_icon = "medical"
+		if("Droid")
+			cyborg_base_icon = "medical"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+			hat_offset = 4
+		if("Sleek")
+			cyborg_base_icon = "sleekmed"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Marina")
+			cyborg_base_icon = "marinamed"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Eyebot")
+			cyborg_base_icon = "eyebotmed"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Heavy")
+			cyborg_base_icon = "heavymed"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Medihound")
+			cyborg_base_icon = "medihound"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "msleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE
+		if("Medihound Dark")
+			cyborg_base_icon = "medihounddark"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "mdsleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE
+		if("Vale")
+			cyborg_base_icon = "valemed"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "valemedsleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE
+		if("Alina")
+			cyborg_base_icon = "alina-med"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			special_light_key = "alina"
+			sleeper_overlay = "alinasleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE
+	return ..()
+
+>>>>>>> b09ef97ae3... Merge pull request #10305 from BlackMajor/Yeehaw
 /obj/item/robot_module/engineering
 	name = "Engineering"
 	basic_modules = list(
@@ -339,6 +429,64 @@
 	magpulsing = TRUE
 	hat_offset = -4
 
+<<<<<<< HEAD
+=======
+/obj/item/robot_module/engineering/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/list/engymodels = list("Default", "Default - Treads", "Heavy", "Sleek", "Marina", "Can", "Spider", "Loader","Handy", "Pup Dozer", "Vale")
+	if(R.client && R.client.ckey in list("nezuli"))
+		engymodels += "Alina"
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in engymodels
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Default")
+			cyborg_base_icon = "engineer"
+		if("Default - Treads")
+			cyborg_base_icon = "engi-tread"
+			special_light_key = "engineer"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Loader")
+			cyborg_base_icon = "loaderborg"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+			has_snowflake_deadsprite = TRUE
+		if("Handy")
+			cyborg_base_icon = "handyeng"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Sleek")
+			cyborg_base_icon = "sleekeng"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Can")
+			cyborg_base_icon = "caneng"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Marina")
+			cyborg_base_icon = "marinaeng"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Spider")
+			cyborg_base_icon = "spidereng"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Heavy")
+			cyborg_base_icon = "heavyeng"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Pup Dozer")
+			cyborg_base_icon = "pupdozer"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "dozersleeper"
+			dogborg = TRUE
+		if("Vale")
+			cyborg_base_icon = "valeeng"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "valeengsleeper"
+			dogborg = TRUE
+		if("Alina")
+			cyborg_base_icon = "alina-eng"
+			special_light_key = "alina"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "alinasleeper"
+			dogborg = TRUE
+	return ..()
+
+>>>>>>> b09ef97ae3... Merge pull request #10305 from BlackMajor/Yeehaw
 /obj/item/robot_module/security
 	name = "Security"
 	basic_modules = list(
@@ -361,6 +509,62 @@
 	to_chat(loc, "<span class='userdanger'>While you have picked the security module, you still have to follow your laws, NOT Space Law. \
 	For Crewsimov, this means you must follow criminals' orders unless there is a law 1 reason not to.</span>")
 
+<<<<<<< HEAD
+=======
+/obj/item/robot_module/security/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/list/secmodels = list("Default", "Default - Treads", "Heavy", "Sleek", "Can", "Marina", "Spider", "K9", "K9 Dark", "Vale")
+	if(R.client && R.client.ckey in list("nezuli"))
+		secmodels += "Alina"
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in secmodels
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Default")
+			cyborg_base_icon = "sec"
+		if("Default - Treads")
+			cyborg_base_icon = "sec-tread"
+			special_light_key = "sec"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Sleek")
+			cyborg_base_icon = "sleeksec"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Marina")
+			cyborg_base_icon = "marinasec"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Can")
+			cyborg_base_icon = "cansec"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Spider")
+			cyborg_base_icon = "spidersec"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Heavy")
+			cyborg_base_icon = "heavysec"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("K9")
+			cyborg_base_icon = "k9"
+			sleeper_overlay = "ksleeper"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			dogborg = TRUE
+		if("Alina")
+			cyborg_base_icon = "alina-sec"
+			special_light_key = "alina"
+			sleeper_overlay = "alinasleeper"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			dogborg = TRUE
+		if("K9 Dark")
+			cyborg_base_icon = "k9dark"
+			sleeper_overlay = "k9darksleeper"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			dogborg = TRUE
+		if("Vale")
+			cyborg_base_icon = "valesec"
+			sleeper_overlay = "valesecsleeper"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			dogborg = TRUE
+	return ..()
+
+>>>>>>> b09ef97ae3... Merge pull request #10305 from BlackMajor/Yeehaw
 /obj/item/robot_module/security/Initialize()
 	. = ..()
 	if(!CONFIG_GET(flag/weaken_secborg))
@@ -504,6 +708,84 @@
 	var/obj/item/reagent_containers/O = locate(/obj/item/reagent_containers/food/condiment/enzyme) in basic_modules
 	if(O)
 		O.reagents.add_reagent("enzyme", 2 * coeff)
+<<<<<<< HEAD
+=======
+	if(LR)
+		for(var/i in 1 to coeff)
+			LR.Charge(R)
+	var/obj/item/reagent_containers/spray/cyborg_drying/CD = locate(/obj/item/reagent_containers/spray/cyborg_drying) in basic_modules
+	if(CD)
+		CD.reagents.add_reagent("drying_agent", 5 * coeff)
+
+	var/obj/item/reagent_containers/spray/cyborg_lube/CL = locate(/obj/item/reagent_containers/spray/cyborg_lube) in emag_modules
+	if(CL)
+		CL.reagents.add_reagent("lube", 2 * coeff)
+
+/obj/item/robot_module/butler/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in list("(Service) Waitress", "(Service) Heavy", "(Service) Sleek", "(Service) Butler", "(Service) Tophat", "(Service) Can", "(Service) Bro", "(Service) DarkK9", "(Service) Vale", "(Service) ValeDark", "(Janitor) Default", "(Janitor) Sleek", "(Janitor) Marina", "(Janitor) Can", "(Janitor) Heavy", "(Janitor) Scrubpuppy")
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("(Service) Waitress")
+			cyborg_base_icon = "service_f"
+			special_light_key = "service"
+		if("(Service) Butler")
+			cyborg_base_icon = "service_m"
+			special_light_key = "service"
+		if("(Service) Bro")
+			cyborg_base_icon = "brobot"
+			special_light_key = "service"
+		if("(Service) Can")
+			cyborg_base_icon = "kent"
+			special_light_key = "medical"
+			hat_offset = 3
+		if("(Service) Tophat")
+			cyborg_base_icon = "tophat"
+			special_light_key = null
+			hat_offset = INFINITY //He is already wearing a hat
+		if("(Service) Sleek")
+			cyborg_base_icon = "sleekserv"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("(Service) Heavy")
+			cyborg_base_icon = "heavyserv"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("(Service) DarkK9")
+			cyborg_base_icon = "k50"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "ksleeper"
+			dogborg = TRUE
+		if("(Service) Vale")
+			cyborg_base_icon = "valeserv"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "valeservsleeper"
+			dogborg = TRUE
+		if("(Service) ValeDark")
+			cyborg_base_icon = "valeservdark"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "valeservsleeper"
+			dogborg = TRUE
+		if("(Janitor) Default")
+			cyborg_base_icon = "janitor"
+		if("(Janitor) Marina")
+			cyborg_base_icon = "marinajan"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("(Janitor) Sleek")
+			cyborg_base_icon = "sleekjan"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("(Janitor) Can")
+			cyborg_base_icon = "canjan"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("(Janitor) Heavy")
+			cyborg_base_icon = "heavyres"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("(Janitor) Scrubpuppy")
+			cyborg_base_icon = "scrubpup"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "jsleeper"
+			dogborg = TRUE
+	return ..()
+>>>>>>> b09ef97ae3... Merge pull request #10305 from BlackMajor/Yeehaw
 
 /obj/item/robot_module/miner
 	name = "Miner"
@@ -512,15 +794,25 @@
 		/obj/item/borg/sight/meson,
 		/obj/item/storage/bag/ore/cyborg,
 		/obj/item/pickaxe/drill/cyborg,
+<<<<<<< HEAD
 		/obj/item/shovel,
 		/obj/item/crowbar/cyborg,
+=======
+		/obj/item/twohanded/kinetic_crusher/cyborg,
+>>>>>>> b09ef97ae3... Merge pull request #10305 from BlackMajor/Yeehaw
 		/obj/item/weldingtool/mini,
 		/obj/item/extinguisher/mini,
 		/obj/item/storage/bag/sheetsnatcher/borg,
 		/obj/item/t_scanner/adv_mining_scanner,
 		/obj/item/gun/energy/kinetic_accelerator/cyborg,
+		/obj/item/gun/energy/plasmacutter/cyborg,
 		/obj/item/gps/cyborg,
-		/obj/item/stack/marker_beacon)
+		/obj/item/weapon/gripper/mining,
+		/obj/item/cyborg_clamp,
+		/obj/item/card/id/miningborg,
+		/obj/item/stack/marker_beacon,
+		/obj/item/destTagger,
+		/obj/item/stack/packageWrap)
 	emag_modules = list(/obj/item/borg/stun)
 	ratvar_modules = list(
 		/obj/item/clockwork/slab/cyborg/miner,
@@ -530,6 +822,46 @@
 	moduleselect_icon = "miner"
 	hat_offset = 0
 
+<<<<<<< HEAD
+=======
+/obj/item/robot_module/miner/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in list("Lavaland", "Heavy", "Sleek", "Marina", "Can", "Spider", "Asteroid", "Droid", "Blade")
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Lavaland")
+			cyborg_base_icon = "miner"
+		if("Asteroid")
+			cyborg_base_icon = "minerOLD"
+			special_light_key = "miner"
+		if("Droid")
+			cyborg_base_icon = "miner"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+			hat_offset = 4
+		if("Sleek")
+			cyborg_base_icon = "sleekmin"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Can")
+			cyborg_base_icon = "canmin"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Marina")
+			cyborg_base_icon = "marinamin"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Spider")
+			cyborg_base_icon = "spidermin"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Heavy")
+			cyborg_base_icon = "heavymin"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Blade")
+			cyborg_base_icon = "blade"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "bladesleeper"
+			dogborg = TRUE
+	return ..()
+
+>>>>>>> b09ef97ae3... Merge pull request #10305 from BlackMajor/Yeehaw
 /obj/item/robot_module/syndicate
 	name = "Syndicate Assault"
 	basic_modules = list(
@@ -674,3 +1006,8 @@
 	max_energy = 30
 	recharge_rate = 1
 	name = "Marker Beacon Storage"
+
+/datum/robot_energy_storage/wrapping_paper
+	max_energy = 30
+	recharge_rate = 1
+	name = "Wrapping Paper Storage"
