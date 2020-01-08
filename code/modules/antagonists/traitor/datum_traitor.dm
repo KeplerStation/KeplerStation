@@ -180,7 +180,11 @@
 			destroy_objective.owner = owner
 			destroy_objective.find_target()
 			add_objective(destroy_objective)
+<<<<<<< HEAD
 		else if(prob(30))
+=======
+		else if(prob(30) || (is_dynamic && (mode.storyteller.flags & NO_ASSASSIN)))
+>>>>>>> f263a3ea31... Merge pull request #10474 from Putnam3145/fix-traitor-again
 			var/datum/objective/maroon/maroon_objective = new
 			maroon_objective.owner = owner
 			maroon_objective.find_target()
