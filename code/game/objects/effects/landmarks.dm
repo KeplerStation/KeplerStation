@@ -432,8 +432,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	GLOB.ruin_landmarks -= src
 	ruin_template = null
 	. = ..()
-<<<<<<< HEAD
-=======
 
 //------Station Rooms Landmarks------------//
 /obj/effect/landmark/stationroom
@@ -483,4 +481,3 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/stationroom/box/engine/New()
 	. = ..()
 	templates = CONFIG_GET(keyed_list/box_random_engine)
->>>>>>> 959e87185a... Merge pull request #10463 from Putnam3145/random-engine
