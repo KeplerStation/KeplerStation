@@ -487,15 +487,11 @@ SUBSYSTEM_DEF(ticker)
 			SSticker.timeLeft = 900
 		SSticker.modevoted = TRUE
 		var/dynamic = CONFIG_GET(flag/dynamic_voting)
-<<<<<<< HEAD
-		SSvote.initiate_vote(dynamic ? "dynamic" : "roundtype","server",TRUE)
-=======
 		if(dynamic)
 			SSvote.initiate_vote("dynamic","server",hideresults=TRUE,votesystem=SCORE_VOTING,forced=TRUE,vote_time = 20 MINUTES)
 		else
 			SSvote.initiate_vote("roundtype","server",hideresults=TRUE,votesystem=PLURALITY_VOTING,forced=TRUE, \
 			vote_time = (CONFIG_GET(flag/modetier_voting) ? 1 MINUTES : 20 MINUTES))
->>>>>>> 652cf6e60c... Merge pull request #10440 from Putnam3145/weird-secret
 
 /datum/controller/subsystem/ticker/Recover()
 	current_state = SSticker.current_state
