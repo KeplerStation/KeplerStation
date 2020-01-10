@@ -20,7 +20,7 @@
 	access = list() 			//See get_access()
 	minimal_access = list() 	//See get_access()
 
-//	mind_traits = list(TRAIT_DISK_VERIFIER)
+	mind_traits = list(TRAIT_DISK_VERIFIER)
 
 	display_order = JOB_DISPLAY_ORDER_CAPTAIN
 
@@ -63,3 +63,4 @@
 	mask = /obj/item/clothing/mask/gas/sechailer
 	suit = /obj/item/clothing/suit/space/hardsuit/captain
 	suit_store = /obj/item/tank/internals/oxygen
+

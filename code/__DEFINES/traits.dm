@@ -118,6 +118,7 @@
 #define TRAIT_PARALYSIS_R_ARM	"para-r-arm"
 #define TRAIT_PARALYSIS_L_LEG	"para-l-leg"
 #define TRAIT_PARALYSIS_R_LEG	"para-r-leg"
+#define TRAIT_DISK_VERIFIER     "disk-verifier"
 #define TRAIT_UNINTELLIGIBLE_SPEECH "unintelligible-speech"
 #define TRAIT_SOOTHED_THROAT    "soothed-throat"
 #define TRAIT_LAW_ENFORCEMENT_METABOLISM "law-enforcement-metabolism"
@@ -168,8 +169,10 @@
 #define TRAIT_EMPATH			"empath"
 #define TRAIT_FRIENDLY			"friendly"
 #define TRAIT_CULT_EYES 		"cult_eyes"
+#define TRAIT_AUTO_CATCH_ITEM	"auto_catch_item"
+#define TRAIT_CLOWN_MENTALITY	"clown_mentality" // The future is now, clownman.
 #define TRAIT_FREESPRINT		"free_sprinting"
-
+#define TRAIT_NO_ALCOHOL		"alcohol_intolerance"
 
 // common trait sources
 #define TRAIT_GENERIC "generic"
@@ -223,5 +226,9 @@
 #define NINJA_SUIT_TRAIT "ninja-suit"
 #define ANTI_DROP_IMPLANT_TRAIT "anti-drop-implant"
 #define SLEEPING_CARP_TRAIT "sleeping_carp"
+#define RISING_BASS_TRAIT "rising_bass"
 #define ABDUCTOR_ANTAGONIST "abductor-antagonist"
+#define NUKEOP_ANTAGONIST "nukeop-antagonist"
 #define MADE_UNCLONEABLE "made-uncloneable"
+#define NUKEOP_TRAIT "nuke-op"
+#define DEATHSQUAD_TRAIT "deathsquad"

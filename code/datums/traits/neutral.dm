@@ -88,11 +88,20 @@
 	if(quirk_holder)
 		quirk_holder.remove_client_colour(/datum/client_colour/monochrome)
 
-/datum/quirk/crocrin_immunity
-	name = "Crocin Immunity"
-	desc = "You're one of the few people in the galaxy who are genetically immune to Crocin and Hexacrocin products and their addictive properties! However, you can still get brain damage from Hexacrocin addiction."
-	mob_trait = TRAIT_CROCRIN_IMMUNE
+/datum/quirk/alcohol_intolerance
+	name = "Alcohol Intolerance"
+	desc = "You take toxin damage from alcohol rather than getting drunk."
 	value = 0
-	gain_text = "<span class='notice'>You feel more prudish.</span>"
-	lose_text = "<span class='notice'>You don't feel as prudish as before.</span>"
-	medical_record_text = "Patient exhibits a special gene that makes them immune to aphrodisiacs."
+	mob_trait = TRAIT_NO_ALCOHOL
+	medical_record_text = "Patient's body does not react properly to ethyl alcohol."
+
+/datum/quirk/alcohol_intolerance/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	var/datum/species/species = H.dna.species
+	species.disliked_food |= ALCOHOL
+
+/datum/quirk/alcohol_intolerance/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(H)
+		var/datum/species/species = H.dna.species
+		species.disliked_food &= ~ALCOHOL

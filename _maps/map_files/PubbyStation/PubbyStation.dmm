@@ -35985,8 +35985,7 @@
 	dir = 1
 	},
 /obj/machinery/vending/wallmed{
-	pixel_y = 28;
-	products = list(/obj/item/reagent_containers/syringe = 3, /obj/item/reagent_containers/pill/patch/styptic = 1, /obj/item/reagent_containers/pill/patch/silver_sulf = 1, /obj/item/reagent_containers/medspray/sterilizine = 1)
+	pixel_y = 28
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /obj/effect/landmark/blobstart,
@@ -37819,8 +37818,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/vending/wallmed{
-	pixel_y = 28;
-	products = list(/obj/item/reagent_containers/syringe = 3, /obj/item/reagent_containers/pill/patch/styptic = 1, /obj/item/reagent_containers/pill/patch/silver_sulf = 1, /obj/item/reagent_containers/medspray/sterilizine = 1)
+	pixel_y = 28
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -38781,8 +38779,7 @@
 /area/medical/medbay/central)
 "bKw" = (
 /obj/machinery/vending/wallmed{
-	pixel_y = 28;
-	products = list(/obj/item/reagent_containers/syringe = 3, /obj/item/reagent_containers/pill/patch/styptic = 1, /obj/item/reagent_containers/pill/patch/silver_sulf = 1, /obj/item/reagent_containers/medspray/sterilizine = 1)
+	pixel_y = 28
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
@@ -41139,6 +41136,7 @@
 /area/engine/atmos)
 "bQa" = (
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
+/obj/machinery/atmospherics/miner/n2o,
 /turf/open/floor/engine/n2o,
 /area/engine/atmos)
 "bQb" = (
@@ -42547,6 +42545,7 @@
 /area/engine/atmos)
 "bSX" = (
 /obj/machinery/portable_atmospherics/canister/toxins,
+/obj/machinery/atmospherics/miner/toxins,
 /turf/open/floor/engine/plasma,
 /area/engine/atmos)
 "bSY" = (
@@ -44053,6 +44052,7 @@
 /area/engine/atmos)
 "bWf" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/machinery/atmospherics/miner/carbon_dioxide,
 /turf/open/floor/engine/co2,
 /area/engine/atmos)
 "bWg" = (
@@ -46167,6 +46167,7 @@
 /area/engine/atmos)
 "cbt" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/machinery/atmospherics/miner/nitrogen,
 /turf/open/floor/engine/n2,
 /area/engine/atmos)
 "cbu" = (
@@ -46174,6 +46175,7 @@
 /area/engine/atmos)
 "cbv" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/machinery/atmospherics/miner/oxygen,
 /turf/open/floor/engine/o2,
 /area/engine/atmos)
 "cbw" = (
