@@ -298,6 +298,7 @@
 /datum/sprite_accessory/undershirt/female_blue
 	name = "Bra, Strapless - Blue"
 	icon_state = "bra_blue"
+<<<<<<< HEAD
 
 /datum/sprite_accessory/undershirt/swimsuit_green
 	name = "Swimsuit, Top - Green"
@@ -306,3 +307,82 @@
 /datum/sprite_accessory/undershirt/swimsuit_purple
 	name = "Swimsuit, Top - Purple"
 	icon_state = "bra_swimming_purple"
+=======
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/striped_bra
+	name = "Bra - Striped"
+	icon_state = "striped_bra"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/fishnet_sleeves
+	name = "Fishnet - sleeves"
+	icon_state = "fishnet_sleeves"
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/fishnet_gloves
+	name = "Fishnet - gloves"
+	icon_state = "fishnet_gloves"
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/fishnet_base
+	name = "Fishnet - top"
+	icon_state = "fishnet_body"
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/swimsuit
+	name = "Swimsuit Top"
+	icon_state = "bra_swimming"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/swimsuit_alt
+	name = "Swimsuit Top - Strapless"
+	icon_state = "bra_swimming_alt"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/tubetop
+	name = "Tube Top"
+	icon_state = "tubetop"
+	has_color = TRUE
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/top/cowboyshirt
+	name = "Cowboy Shirt Black"
+	icon_state = "cowboyshirt"
+
+/datum/sprite_accessory/underwear/top/cowboyshirt/s
+	name = "Cowboy Shirt Shortsleeved Black"
+	icon_state = "cowboyshirt_s"
+
+/datum/sprite_accessory/underwear/top/cowboyshirt/white
+	name = "Cowboy Shirt White"
+	icon_state = "cowboyshirt_white"
+
+/datum/sprite_accessory/underwear/top/cowboyshirt/white/s
+	name = "Cowboy Shirt Shortsleeved White"
+	icon_state = "cowboyshirt_whites"
+
+/datum/sprite_accessory/underwear/top/cowboyshirt/navy
+	name = "Cowboy Shirt Navy"
+	icon_state = "cowboyshirt_navy"
+
+/datum/sprite_accessory/underwear/top/cowboyshirt/navy/s
+	name = "Cowboy Shirt Shortsleeved Navy"
+	icon_state = "cowboyshirt_navys"
+
+/datum/sprite_accessory/underwear/top/cowboyshirt/red
+	name = "Cowboy Shirt Red"
+	icon_state = "cowboyshirt_red"
+
+/datum/sprite_accessory/underwear/top/cowboyshirt/red/s
+	name = "Cowboy Shirt Shortsleeved Red"
+	icon_state = "cowboyshirt_reds"
+
+
+
+
+>>>>>>> 8f60099595... Merge pull request #10488 from Xantholne/xantholne-cowboy02
