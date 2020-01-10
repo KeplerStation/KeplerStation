@@ -88,14 +88,6 @@
 	var/invis_was = user.invisibility
 	user.invisibility = INVISIBILITY_MAXIMUM
 
-	// LOSE CUFFS
-	if(user.handcuffed)
-		var/obj/O = user.handcuffed
-		user.dropItemToGround(O)
-	if(user.legcuffed)
-		var/obj/O = user.legcuffed
-		user.dropItemToGround(O)
-
 	// Wait...
 	sleep(mist_delay / 2)
 
