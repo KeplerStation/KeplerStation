@@ -12,11 +12,8 @@ SUBSYSTEM_DEF(vote)
 	var/mode = null
 	var/question = null
 	var/list/choices = list()
-<<<<<<< HEAD
-=======
 	var/list/scores = list()
 	var/list/choice_descs = list() // optional descriptions
->>>>>>> 652cf6e60c... Merge pull request #10440 from Putnam3145/weird-secret
 	var/list/voted = list()
 	var/list/voting = list()
 	var/list/generated_actions = list()
@@ -35,14 +32,9 @@ SUBSYSTEM_DEF(vote)
 			result()
 			for(var/client/C in voting)
 				C << browse(null, "window=vote;can_close=0")
-<<<<<<< HEAD
-			reset()
-		else
-=======
 			if(end_time < world.time) // result() can change this
 				reset()
 		else if(next_pop < world.time)
->>>>>>> 652cf6e60c... Merge pull request #10440 from Putnam3145/weird-secret
 			var/datum/browser/client_popup
 			for(var/client/C in voting)
 				client_popup = new(C, "vote", "Voting Panel")
@@ -98,8 +90,6 @@ SUBSYSTEM_DEF(vote)
 				. += option
 	return .
 
-<<<<<<< HEAD
-=======
 /datum/controller/subsystem/vote/proc/calculate_condorcet_votes(var/blackbox_text)
 	// https://en.wikipedia.org/wiki/Schulze_method#Implementation
 	var/list/d[][] = new/list(choices.len,choices.len) // the basic vote matrix, how many times a beats b
@@ -201,8 +191,6 @@ SUBSYSTEM_DEF(vote)
 			scores[score_name] += S-middle_score
 		SSblackbox.record_feedback("nested tally","voting",scores[score_name],list(blackbox_text,"Total scores",score_name))
 
-
->>>>>>> 652cf6e60c... Merge pull request #10440 from Putnam3145/weird-secret
 /datum/controller/subsystem/vote/proc/announce_result()
 	var/list/winners = get_result()
 	var/text
@@ -237,13 +225,10 @@ SUBSYSTEM_DEF(vote)
 	to_chat(world, "\n<font color='purple'>[text]</font>")
 	if(obfuscated) //CIT CHANGE - adds obfuscated votes. this messages admins with the vote's true results
 		var/admintext = "Obfuscated results"
-<<<<<<< HEAD
-=======
 		if(vote_system == RANKED_CHOICE_VOTING)
 			admintext += "\nIt should be noted that this is not a raw tally of votes (impossible in ranked choice) but the score determined by the schulze method of voting, so the numbers will look weird!"
 		else if(vote_system == SCORE_VOTING)
 			admintext += "\nIt should be noted that this is not a raw tally of votes but the number of runoffs done by majority judgement!"
->>>>>>> 652cf6e60c... Merge pull request #10440 from Putnam3145/weird-secret
 		for(var/i=1,i<=choices.len,i++)
 			var/votes = choices[choices[i]]
 			admintext += "\n<b>[choices[i]]:</b> [votes]"
