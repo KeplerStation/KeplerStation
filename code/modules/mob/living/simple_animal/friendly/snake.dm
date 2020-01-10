@@ -1,6 +1,11 @@
 /mob/living/simple_animal/hostile/retaliate/poison
+<<<<<<< HEAD
     var/poison_per_bite = 0
     var/poison_type = "toxin"
+=======
+	var/poison_per_bite = 0
+	var/poison_type = /datum/reagent/toxin
+>>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 
 /mob/living/simple_animal/hostile/retaliate/poison/AttackingTarget()
     . = ..()
