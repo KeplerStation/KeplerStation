@@ -179,8 +179,7 @@
 	RemoveHelmet()
 
 /obj/item/clothing/suit/space/hardsuit/proc/ToggleHelmet()
-	var/mob/living/carbon/human/H = src.loc
-	var/datum/species/pref_species = H.dna.species
+	var/mob/living/carbon/human/H = loc
 	if(!helmettype)
 		return
 	if(!helmet)
@@ -194,6 +193,7 @@
 				to_chat(H, "<span class='warning'>You're already wearing something on your head!</span>")
 				return
 			else if(H.equip_to_slot_if_possible(helmet,SLOT_HEAD,0,0,1))
+<<<<<<< HEAD
 				if(helmet.mutantrace_variation)
 					if("snout" in pref_species.default_features)
 						if(H.dna.features["snout"] != "None")
@@ -202,6 +202,8 @@
 						helmet.muzzle_var = NORMAL_STYLE
 					H.update_inv_head()
 
+=======
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 				to_chat(H, "<span class='notice'>You engage the helmet on the hardsuit.</span>")
 				suittoggled = TRUE
 				H.update_inv_wear_suit()

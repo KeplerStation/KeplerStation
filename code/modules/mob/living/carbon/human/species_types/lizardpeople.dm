@@ -71,6 +71,7 @@
 		mutant_bodyparts |= "spines"
 	H.update_body()
 
+<<<<<<< HEAD
 /datum/species/lizard/on_species_gain(mob/living/carbon/human/C, datum/species/old_species)
 	if(("legs" in C.dna.species.mutant_bodyparts) && C.dna.features["legs"] == "Digitigrade Legs")
 		species_traits += DIGITIGRADE
@@ -84,6 +85,8 @@
 	if(DIGITIGRADE in species_traits)
 		C.Digitigrade_Leg_Swap(TRUE)
 
+=======
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 /*
  Lizard subspecies: ASHWALKERS
 */

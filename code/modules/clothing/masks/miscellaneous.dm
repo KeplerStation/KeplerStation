@@ -7,7 +7,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	gas_transfer_coefficient = 0.9
 	equip_delay_other = 20
-	mutantrace_variation = MUTANTRACE_VARIATION
+	mutantrace_variation = STYLE_MUZZLE
 
 /obj/item/clothing/mask/muzzle/attack_paw(mob/user)
 	if(iscarbon(user))
@@ -31,7 +31,7 @@
 	permeability_coefficient = 0.01
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 25, "rad" = 0, "fire" = 0, "acid" = 0)
 	actions_types = list(/datum/action/item_action/adjust)
-	mutantrace_variation = MUTANTRACE_VARIATION
+	mutantrace_variation = STYLE_MUZZLE
 
 /obj/item/clothing/mask/surgical/attack_self(mob/user)
 	adjustmask(user)
@@ -41,7 +41,7 @@
 	desc = "Warning: moustache is fake."
 	icon_state = "fake-moustache"
 	flags_inv = HIDEFACE
-	mutantrace_variation = MUTANTRACE_VARIATION
+	mutantrace_variation = STYLE_MUZZLE
 
 /obj/item/clothing/mask/fakemoustache/italian
 	name = "italian moustache"
@@ -72,8 +72,12 @@
 	name = "joy mask"
 	desc = "Express your happiness or hide your sorrows with this laughing face with crying tears of joy cutout."
 	icon_state = "joy"
+<<<<<<< HEAD
 	mutantrace_variation = MUTANTRACE_VARIATION
 */
+=======
+	mutantrace_variation = STYLE_MUZZLE
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 
 /obj/item/clothing/mask/pig
 	name = "pig mask"
@@ -244,7 +248,7 @@
 	slot_flags = ITEM_SLOT_MASK
 	adjusted_flags = ITEM_SLOT_HEAD
 	icon_state = "bandbotany"
-	mutantrace_variation = MUTANTRACE_VARIATION
+	mutantrace_variation = STYLE_MUZZLE
 
 /obj/item/clothing/mask/bandana/attack_self(mob/user)
 	adjustmask(user)

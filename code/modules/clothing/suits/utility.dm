@@ -34,6 +34,8 @@
 /obj/item/clothing/suit/fire/firefighter
 	icon_state = "firesuit"
 	item_state = "firefighter"
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAUR
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_SNEK_TAURIC|STYLE_PAW_TAURIC
 
 
 /obj/item/clothing/suit/fire/heavy
@@ -49,6 +51,8 @@
 	icon_state = "atmos_firesuit"
 	item_state = "firesuit_atmos"
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAUR
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_SNEK_TAURIC|STYLE_PAW_TAURIC
 
 /*
  * Bomb protection
@@ -70,7 +74,7 @@
 	equip_delay_other = 70
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	resistance_flags = NONE
-	mutantrace_variation = MUTANTRACE_VARIATION
+	mutantrace_variation = STYLE_MUZZLE
 
 
 /obj/item/clothing/suit/bomb_suit
@@ -93,6 +97,10 @@
 	strip_delay = 70
 	equip_delay_other = 70
 	resistance_flags = NONE
+<<<<<<< HEAD
+=======
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_SNEK_TAURIC|STYLE_PAW_TAURIC
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 
 
 /obj/item/clothing/head/bomb_hood/security
@@ -129,7 +137,7 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	resistance_flags = NONE
 	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
-	mutantrace_variation = MUTANTRACE_VARIATION
+	mutantrace_variation = STYLE_MUZZLE
 
 /obj/item/clothing/suit/radiation
 	name = "radiation suit"
@@ -149,3 +157,7 @@
 	flags_inv = HIDEJUMPSUIT
 	resistance_flags = NONE
 	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
+<<<<<<< HEAD
+=======
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_ALL_TAURIC
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447

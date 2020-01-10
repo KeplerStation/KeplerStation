@@ -279,8 +279,13 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		C.hud_used.update_locked_slots()
 
 	// this needs to be FIRST because qdel calls update_body which checks if we have DIGITIGRADE legs or not and if not then removes DIGITIGRADE from species_traits
+<<<<<<< HEAD
 	if(("legs" in C.dna.species.mutant_bodyparts) && C.dna.features["legs"] == "Digitigrade Legs")
 		species_traits += DIGITIGRADE
+=======
+	if(("legs" in C.dna.species.mutant_bodyparts) && (C.dna.features["legs"] == "Digitigrade" || C.dna.features["legs"] == "Avian"))
+		species_traits |= DIGITIGRADE
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 	if(DIGITIGRADE in species_traits)
 		C.Digitigrade_Leg_Swap(FALSE)
 
@@ -551,34 +556,50 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		return
 
 	var/obj/item/bodypart/head/HD = H.get_bodypart(BODY_ZONE_HEAD)
+	var/tauric = H.dna.features["taur"] && H.dna.features["taur"] != "None"
 
 	if("tail_lizard" in mutant_bodyparts)
+<<<<<<< HEAD
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "tail_lizard"
 
 	if("waggingtail_lizard" in mutant_bodyparts)
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+=======
+		if((H.wear_suit && (H.wear_suit.flags_inv & HIDETAUR)) || tauric)
+			bodyparts_to_add -= "tail_lizard"
+
+	if("waggingtail_lizard" in mutant_bodyparts)
+		if((H.wear_suit && (H.wear_suit.flags_inv & HIDETAUR)) || tauric)
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 			bodyparts_to_add -= "waggingtail_lizard"
 		else if ("tail_lizard" in mutant_bodyparts)
 			bodyparts_to_add -= "waggingtail_lizard"
 
 	if("tail_human" in mutant_bodyparts)
+<<<<<<< HEAD
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+=======
+		if((H.wear_suit && (H.wear_suit.flags_inv & HIDETAUR)) || tauric)
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 			bodyparts_to_add -= "tail_human"
 
-
 	if("waggingtail_human" in mutant_bodyparts)
+<<<<<<< HEAD
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+=======
+		if((H.wear_suit && (H.wear_suit.flags_inv & HIDETAUR)) || tauric)
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 			bodyparts_to_add -= "waggingtail_human"
 		else if ("tail_human" in mutant_bodyparts)
 			bodyparts_to_add -= "waggingtail_human"
 
 	if("spines" in mutant_bodyparts)
-		if(!H.dna.features["spines"] || H.dna.features["spines"] == "None" || H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+		if(!H.dna.features["spines"] || H.dna.features["spines"] == "None" || H.wear_suit && (H.wear_suit.flags_inv & HIDETAUR))
 			bodyparts_to_add -= "spines"
 
 	if("waggingspines" in mutant_bodyparts)
-		if(!H.dna.features["spines"] || H.dna.features["spines"] == "None" || H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+		if(!H.dna.features["spines"] || H.dna.features["spines"] == "None" || H.wear_suit && (H.wear_suit.flags_inv & HIDETAUR))
 			bodyparts_to_add -= "waggingspines"
 		else if ("tail" in mutant_bodyparts)
 			bodyparts_to_add -= "waggingspines"
@@ -609,6 +630,51 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		else if ("wings" in mutant_bodyparts)
 			bodyparts_to_add -= "wings_open"
 
+<<<<<<< HEAD
+=======
+	if("insect_fluff" in mutant_bodyparts)
+		if(!H.dna.features["insect_fluff"] || H.dna.features["insect_fluff"] == "None" || H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "insect_fluff"
+
+//CITADEL EDIT
+	//Race specific bodyparts:
+	//Xenos
+	if("xenodorsal" in mutant_bodyparts)
+		if(!H.dna.features["xenodorsal"] || H.dna.features["xenodorsal"] == "None" || (H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT)))
+			bodyparts_to_add -= "xenodorsal"
+	if("xenohead" in mutant_bodyparts)//This is an overlay for different castes using different head crests
+		if(!H.dna.features["xenohead"] || H.dna.features["xenohead"] == "None" || H.head && (H.head.flags_inv & HIDEHAIR) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEHAIR)) || !HD || HD.status == BODYPART_ROBOTIC)
+			bodyparts_to_add -= "xenohead"
+	if("xenotail" in mutant_bodyparts)
+		if(!H.dna.features["xenotail"] || H.dna.features["xenotail"] == "None" || H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "xenotail"
+
+	//Other Races
+	if("mam_tail" in mutant_bodyparts)
+		if((H.wear_suit && (H.wear_suit.flags_inv & HIDETAUR)) || tauric)
+			bodyparts_to_add -= "mam_tail"
+
+	if("mam_waggingtail" in mutant_bodyparts)
+		if((H.wear_suit && (H.wear_suit.flags_inv & HIDETAUR)) || tauric)
+			bodyparts_to_add -= "mam_waggingtail"
+		else if ("mam_tail" in mutant_bodyparts)
+			bodyparts_to_add -= "mam_waggingtail"
+
+	if("mam_ears" in mutant_bodyparts)
+		if(!H.dna.features["mam_ears"] || H.dna.features["mam_ears"] == "None" || H.head && (H.head.flags_inv & HIDEEARS) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEEARS)) || !HD || HD.status == BODYPART_ROBOTIC)
+			bodyparts_to_add -= "mam_ears"
+
+	if("mam_snouts" in mutant_bodyparts) //Take a closer look at that snout!
+		if((H.wear_mask && (H.wear_mask.flags_inv & HIDESNOUT)) || (H.head && (H.head.flags_inv & HIDESNOUT)) || !HD || HD.status == BODYPART_ROBOTIC)
+			bodyparts_to_add -= "mam_snouts"
+
+	if("taur" in mutant_bodyparts)
+		if(!tauric || (H.wear_suit && (H.wear_suit.flags_inv & HIDETAUR)))
+			bodyparts_to_add -= "taur"
+
+//END EDIT
+
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 	//Digitigrade legs are stuck in the phantom zone between true limbs and mutant bodyparts. Mainly it just needs more agressive updating than most limbs.
 	var/update_needed = FALSE
 	var/not_digitigrade = TRUE
@@ -620,8 +686,17 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(!(DIGITIGRADE in species_traits)) //Someone cut off a digitigrade leg and tacked it on
 			species_traits += DIGITIGRADE
 		var/should_be_squished = FALSE
+<<<<<<< HEAD
 		if(H.wear_suit && ((H.wear_suit.flags_inv & HIDEJUMPSUIT) || (H.wear_suit.body_parts_covered & LEGS)) || (H.w_uniform && (H.w_uniform.body_parts_covered & LEGS)))
 			should_be_squished = TRUE
+=======
+		if(H.wear_suit)
+			if(!(H.wear_suit.mutantrace_variation & STYLE_DIGITIGRADE) || (tauric && (H.wear_suit.mutantrace_variation & STYLE_ALL_TAURIC))) //digitigrade/taur suits
+				should_be_squished = TRUE
+		if(H.w_uniform && !H.wear_suit)
+			if(!(H.w_uniform.mutantrace_variation & STYLE_DIGITIGRADE))
+				should_be_squished = TRUE
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 		if(O.use_digitigrade == FULL_DIGITIGRADE && should_be_squished)
 			O.use_digitigrade = SQUISHED_DIGITIGRADE
 			update_needed = TRUE

@@ -23,6 +23,15 @@
 			add_overlay(M)
 	..()
 
+<<<<<<< HEAD
+=======
+/obj/item/storage/belt/worn_overlays(isinhands, icon_file, style_flags = NONE)
+	. = ..()
+	if(!isinhands && worn_overlays)
+		for(var/obj/item/I in contents)
+			. += I.get_worn_belt_overlay(icon_file)
+
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 /obj/item/storage/belt/Initialize()
 	. = ..()
 	update_icon()

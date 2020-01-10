@@ -225,6 +225,42 @@ LINEN BINS
 	item_color = "ian"
 	dream_messages = list("a dog", "a corgi", "woof", "bark", "arf")
 
+<<<<<<< HEAD
+=======
+/obj/item/bedsheet/runtime
+	icon_state = "sheetruntime"
+	item_color = "runtime"
+	dream_messages = list("a kitty", "a cat", "meow", "purr", "nya~")
+
+/obj/item/bedsheet/pirate
+	name = "pirate's bedsheet"
+	desc = "It has a Jolly Roger emblem on it and has a faint scent of grog."
+	icon_state = "sheetpirate"
+	item_color = "black"
+	dream_messages = list("doing whatever oneself wants", "cause a pirate is free", "being a pirate", "stealing", "landlubbers", "gold", "a buried treasure", "yarr", "avast", "a swashbuckler", "sailing the Seven Seas", "a parrot", "a monkey", "an island", "a talking skull")
+
+/obj/item/bedsheet/gondola
+	name = "gondola bedsheet"
+	desc = "A precious bedsheet made from the hide of a rare and peculiar critter."
+	icon_state = "sheetgondola"
+	item_color = "cargo"
+	var/g_mouth
+	var/g_eyes
+
+/obj/item/bedsheet/gondola/Initialize()
+	. = ..()
+	g_mouth = "sheetgondola_mouth[rand(1, 4)]"
+	g_eyes = "sheetgondola_eyes[rand(1, 4)]"
+	add_overlay(g_mouth)
+	add_overlay(g_eyes)
+
+/obj/item/bedsheet/gondola/worn_overlays(isinhands = FALSE, icon_file, style_flags = NONE)
+	. = ..()
+	if(!isinhands)
+		. += mutable_appearance(icon_file, g_mouth)
+		. += mutable_appearance(icon_file, g_eyes)
+
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 /obj/item/bedsheet/cosmos
 	name = "cosmic space bedsheet"
 	desc = "Made from the dreams of those who wonder at the stars."

@@ -131,15 +131,11 @@
 #define NECK		(1<<11)
 #define FULL_BODY	(~0)
 
-//flags for female outfits: How much the game can safely "take off" the uniform without it looking weird
-#define NO_FEMALE_UNIFORM			0
-#define FEMALE_UNIFORM_FULL			1
-#define FEMALE_UNIFORM_TOP			2
-
 //flags for alternate styles: These are hard sprited so don't set this if you didn't put the effort in
 #define NORMAL_STYLE		0
 #define ALT_STYLE			1
 
+<<<<<<< HEAD
 #define NORMAL_SUIT_STYLE		0
 #define DIGITIGRADE_SUIT_STYLE 	1
 
@@ -147,11 +143,22 @@
 #define NORMAL_FACED		0
 #define	MUZZLE_FACED		1
 #define	BEAKED_FACED		2
+=======
+//flags for female outfits: How much the game can safely "take off" the uniform without it looking weird
+#define NO_FEMALE_UNIFORM			0
+#define FEMALE_UNIFORM_FULL			1
+#define FEMALE_UNIFORM_TOP			2
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 
-//flags for outfits that have mutantrace variants (try not to use this): Currently only needed if you're trying to add tight fitting bootyshorts
-#define NO_MUTANTRACE_VARIATION		0
-#define MUTANTRACE_VARIATION		1
+//flags for outfits that have mutantrace variants: These are hard sprited too.
+#define STYLE_DIGITIGRADE		(1<<0) //jumpsuits, suits and shoes
+#define STYLE_MUZZLE			(1<<1) //hats or masks
+#define STYLE_SNEK_TAURIC		(1<<2) //taur-friendly suits
+#define STYLE_PAW_TAURIC		(1<<3)
+#define STYLE_HOOF_TAURIC		(1<<4)
+#define STYLE_ALL_TAURIC		(STYLE_SNEK_TAURIC|STYLE_PAW_TAURIC|STYLE_HOOF_TAURIC)
 
+//digitigrade legs settings.
 #define NOT_DIGITIGRADE				0
 #define FULL_DIGITIGRADE			1
 #define SQUISHED_DIGITIGRADE		2

@@ -628,6 +628,10 @@
 	item_color = "plasmaman"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 0, "fire" = 95, "acid" = 95)
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+<<<<<<< HEAD
+=======
+	mutantrace_variation = NONE
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 	can_adjust = FALSE
 	strip_delay = 80
 	var/next_extinguish = 0

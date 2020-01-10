@@ -9,7 +9,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE|HIDESNOUT
 	resistance_flags = ACID_PROOF
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	mutantrace_variation = MUTANTRACE_VARIATION
+	mutantrace_variation = STYLE_MUZZLE
 
 /obj/item/clothing/suit/bio_suit
 	name = "bio suit"
@@ -28,6 +28,10 @@
 	strip_delay = 70
 	equip_delay_other = 70
 	resistance_flags = ACID_PROOF
+<<<<<<< HEAD
+=======
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_SNEK_TAURIC|STYLE_PAW_TAURIC
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 
 //Standard biosuit, orange stripe
 /obj/item/clothing/head/bio_hood/general

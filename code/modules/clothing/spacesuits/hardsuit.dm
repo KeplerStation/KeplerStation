@@ -180,6 +180,10 @@
 	armor = list("melee" = 30, "bullet" = 5, "laser" = 10, "energy" = 5, "bomb" = 10, "bio" = 100, "rad" = 75, "fire" = 100, "acid" = 75)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/engine
 	resistance_flags = FIRE_PROOF
+<<<<<<< HEAD
+=======
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_ALL_TAURIC
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 
 	//Atmospherics
 /obj/item/clothing/head/helmet/space/hardsuit/engine/atmos
@@ -254,6 +258,10 @@
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/storage/bag/ore, /obj/item/pickaxe)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/mining
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+<<<<<<< HEAD
+=======
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_ALL_TAURIC
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 
 /obj/item/clothing/suit/space/hardsuit/mining/Initialize()
 	. = ..()
@@ -351,6 +359,10 @@
 	allowed = list(/obj/item/gun, /obj/item/ammo_box,/obj/item/ammo_casing, /obj/item/melee/baton, /obj/item/melee/transforming/energy/sword/saber, /obj/item/restraints/handcuffs, /obj/item/tank/internals)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi
 	jetpack = /obj/item/tank/jetpack/suit
+<<<<<<< HEAD
+=======
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_ALL_TAURIC
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 
 //Elite Syndie suit
 /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite
@@ -367,7 +379,6 @@
 	on = FALSE
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
-
 /obj/item/clothing/suit/space/hardsuit/syndi/elite
 	name = "elite syndicate hardsuit"
 	desc = "An elite version of the syndicate hardsuit, with improved armour and fireproofing. It is in travel mode."
@@ -379,6 +390,11 @@
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF | ACID_PROOF
+<<<<<<< HEAD
+=======
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_SNEK_TAURIC|STYLE_PAW_TAURIC
+
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 
 //The Owl Hardsuit
 /obj/item/clothing/head/helmet/space/hardsuit/syndi/owl
@@ -400,6 +416,7 @@
 	item_state = "s_suit"
 	item_color = "owl"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/owl
+	mutantrace_variation = STYLE_DIGITIGRADE
 
 
 	//Wizard hardsuit
@@ -426,6 +443,7 @@
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS					//Uncomment to enable firesuit protection
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/wizard
+	mutantrace_variation = STYLE_DIGITIGRADE
 
 /obj/item/clothing/suit/space/hardsuit/wizard/Initialize()
 	. = ..()
@@ -451,6 +469,10 @@
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/storage/firstaid, /obj/item/healthanalyzer, /obj/item/stack/medical)
 	armor = list("melee" = 30, "bullet" = 5, "laser" = 10, "energy" = 5, "bomb" = 10, "bio" = 100, "rad" = 60, "fire" = 60, "acid" = 75)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/medical
+<<<<<<< HEAD
+=======
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_ALL_TAURIC
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 
 	//Research Director hardsuit
 /obj/item/clothing/head/helmet/space/hardsuit/rd
@@ -509,6 +531,10 @@
 	item_state = "sec_hardsuit"
 	armor = list("melee" = 35, "bullet" = 15, "laser" = 30, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 50, "fire" = 75, "acid" = 75)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/security
+<<<<<<< HEAD
+=======
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_ALL_TAURIC
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 
 /obj/item/clothing/suit/space/hardsuit/security/Initialize()
 	. = ..()
@@ -577,6 +603,7 @@
 	item_state = "clown_hardsuit"
 	armor = list("melee" = 30, "bullet" = 5, "laser" = 10, "energy" = 5, "bomb" = 10, "bio" = 100, "rad" = 75, "fire" = 60, "acid" = 30)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/clown
+	mutantrace_variation = STYLE_DIGITIGRADE
 
 /obj/item/clothing/suit/space/hardsuit/clown/mob_can_equip(mob/M, slot)
 	if(!..() || !ishuman(M))
@@ -605,6 +632,7 @@
 	slowdown = 3
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/ancient
 	resistance_flags = FIRE_PROOF
+	mutantrace_variation = STYLE_DIGITIGRADE
 	var/footstep = 1
 	var/mob/listeningTo
 
@@ -742,10 +770,15 @@
 			var/mob/living/carbon/human/C = loc
 			C.update_inv_wear_suit()
 
-/obj/item/clothing/suit/space/hardsuit/shielded/worn_overlays(isinhands)
-	. = list()
+/obj/item/clothing/suit/space/hardsuit/shielded/worn_overlays(isinhands, icon_file, style_flags = NONE)
+	. = ..()
 	if(!isinhands)
+<<<<<<< HEAD
 		. += mutable_appearance('icons/effects/effects.dmi', shield_state, MOB_LAYER + 0.01)
+=======
+		var/file2use = style_flags & STYLE_ALL_TAURIC ? 'modular_citadel/icons/mob/64x32_effects.dmi' : 'icons/effects/effects.dmi'
+		. += mutable_appearance(file2use, shield_state, MOB_LAYER + 0.01)
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 
 /obj/item/clothing/head/helmet/space/hardsuit/shielded
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -816,6 +849,10 @@
 	allowed = list(/obj/item/gun, /obj/item/ammo_box, /obj/item/ammo_casing, /obj/item/melee/baton, /obj/item/melee/transforming/energy/sword/saber, /obj/item/restraints/handcuffs, /obj/item/tank/internals)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/shielded/syndi
 	slowdown = 0
+<<<<<<< HEAD
+=======
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_ALL_TAURIC
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 
 /obj/item/clothing/suit/space/hardsuit/shielded/syndi/Initialize()
 	jetpack = new /obj/item/tank/jetpack/suit(src)
@@ -875,7 +912,7 @@
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/resonator, /obj/item/mining_scanner, /obj/item/t_scanner/adv_mining_scanner, /obj/item/gun/energy/kinetic_accelerator)
 	var/energy_color = "#35FFF0"
 	var/obj/item/clothing/suit/space/hardsuit/lavaknight/linkedsuit = null
-	mutantrace_variation = NO_MUTANTRACE_VARIATION
+	mutantrace_variation = NONE
 
 /obj/item/clothing/head/helmet/space/hardsuit/lavaknight/Initialize()
 	. = ..()
@@ -906,7 +943,7 @@
 
 	add_overlay(helm_overlay)
 
-/obj/item/clothing/head/helmet/space/hardsuit/lavaknight/worn_overlays(isinhands = FALSE, icon_file)
+/obj/item/clothing/head/helmet/space/hardsuit/lavaknight/worn_overlays(isinhands = FALSE, icon_file, style_flags = NONE)
 	. = ..()
 	if(!isinhands)
 		var/mutable_appearance/energy_overlay = mutable_appearance(icon_file, "knight_cydonia_overlay", ABOVE_LIGHTING_LAYER)
@@ -926,7 +963,10 @@
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/storage/bag/ore, /obj/item/pickaxe)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/lavaknight
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+<<<<<<< HEAD
 
+=======
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 	var/energy_color = "#35FFF0"
 
 /obj/item/clothing/suit/space/hardsuit/lavaknight/Initialize()
@@ -946,7 +986,7 @@
 
 	add_overlay(suit_overlay)
 
-/obj/item/clothing/suit/space/hardsuit/lavaknight/worn_overlays(isinhands = FALSE, icon_file)
+/obj/item/clothing/suit/space/hardsuit/lavaknight/worn_overlays(isinhands = FALSE, icon_file, style_flags = NONE)
 	. = ..()
 	if(!isinhands)
 		var/mutable_appearance/energy_overlay

@@ -5,7 +5,11 @@
 //	You do not need to raise this if you are adding new values that have sane defaults.
 //	Only raise this value when changing the meaning/format/name/layout of an existing value
 //	where you would want the updater procs below to run
+<<<<<<< HEAD
 #define SAVEFILE_VERSION_MAX	22
+=======
+#define SAVEFILE_VERSION_MAX	25
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
@@ -102,6 +106,19 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	else if(current_version < 23) // we are fixing a gamebreaking bug.
 		job_preferences = list() //It loaded null from nonexistant savefile field.
 
+<<<<<<< HEAD
+=======
+	if(current_version < 24 && S["feature_exhibitionist"])
+		var/datum/quirk/exhibitionism/E
+		var/quirk_name = initial(E.name)
+		all_quirks += quirk_name
+	if(current_version < 25)
+		var/digi
+		S["feature_lizard_legs"] >> digi
+		if(digi == "Digitigrade Legs")
+			WRITE_FILE(S["feature_lizard_legs"], "Digitigrade")
+
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
 	if(!ckey)
 		return
@@ -389,6 +406,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	else
 		hair_style			= sanitize_inlist(hair_style, GLOB.hair_styles_female_list)
 		facial_hair_style			= sanitize_inlist(facial_hair_style, GLOB.facial_hair_styles_female_list)
+<<<<<<< HEAD
 		underwear		= sanitize_inlist(underwear, GLOB.underwear_f)
 		undershirt		= sanitize_inlist(undershirt, GLOB.undershirt_f)
 	socks			= sanitize_inlist(socks, GLOB.socks_list)
@@ -411,6 +429,38 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["feature_lizard_legs"]	= sanitize_inlist(features["legs"], GLOB.legs_list)
 	features["moth_wings"] 	= sanitize_inlist(features["moth_wings"], GLOB.moth_wings_list)
 	features["moth_markings"] 	= sanitize_inlist(features["moth_markings"], GLOB.moth_markings_list)
+=======
+	underwear						= sanitize_inlist(underwear, GLOB.underwear_list)
+	undie_color						= sanitize_hexcolor(undie_color, 3, FALSE, initial(undie_color))
+	undershirt						= sanitize_inlist(undershirt, GLOB.undershirt_list)
+	shirt_color						= sanitize_hexcolor(shirt_color, 3, FALSE, initial(shirt_color))
+	socks							= sanitize_inlist(socks, GLOB.socks_list)
+	socks_color						= sanitize_hexcolor(socks_color, 3, FALSE, initial(socks_color))
+	age								= sanitize_integer(age, AGE_MIN, AGE_MAX, initial(age))
+	hair_color						= sanitize_hexcolor(hair_color, 3, 0)
+	facial_hair_color				= sanitize_hexcolor(facial_hair_color, 3, 0)
+	eye_color						= sanitize_hexcolor(eye_color, 3, 0)
+	skin_tone						= sanitize_inlist(skin_tone, GLOB.skin_tones)
+	horn_color						= sanitize_hexcolor(horn_color, 3, FALSE)
+	wing_color						= sanitize_hexcolor(wing_color, 3, FALSE, "#FFFFFF")
+	backbag							= sanitize_inlist(backbag, GLOB.backbaglist, initial(backbag))
+	jumpsuit_style					= sanitize_inlist(jumpsuit_style, GLOB.jumpsuitlist, initial(jumpsuit_style))
+	uplink_spawn_loc				= sanitize_inlist(uplink_spawn_loc, GLOB.uplink_spawn_loc_list, initial(uplink_spawn_loc))
+	features["mcolor"]				= sanitize_hexcolor(features["mcolor"], 3, 0)
+	features["tail_lizard"]			= sanitize_inlist(features["tail_lizard"], GLOB.tails_list_lizard)
+	features["tail_human"]			= sanitize_inlist(features["tail_human"], GLOB.tails_list_human)
+	features["snout"]				= sanitize_inlist(features["snout"], GLOB.snouts_list)
+	features["horns"]				= sanitize_inlist(features["horns"], GLOB.horns_list)
+	features["ears"]				= sanitize_inlist(features["ears"], GLOB.ears_list)
+	features["frills"]				= sanitize_inlist(features["frills"], GLOB.frills_list)
+	features["spines"]				= sanitize_inlist(features["spines"], GLOB.spines_list)
+	features["body_markings"]		= sanitize_inlist(features["body_markings"], GLOB.body_markings_list)
+	features["legs"]				= sanitize_inlist(features["legs"], GLOB.legs_list, "Plantigrade")
+	features["deco_wings"] 			= sanitize_inlist(features["deco_wings"], GLOB.deco_wings_list, "None")
+	features["insect_fluff"]		= sanitize_inlist(features["insect_fluff"], GLOB.insect_fluffs_list)
+	features["insect_markings"] 	= sanitize_inlist(features["insect_markings"], GLOB.insect_markings_list, "None")
+	features["insect_wings"] 		= sanitize_inlist(features["insect_wings"], GLOB.insect_wings_list)
+>>>>>>> c4cb06f8f0... Merge pull request #10112 from Ghommie/Ghommie-cit447
 
 	joblessrole	= sanitize_integer(joblessrole, 1, 3, initial(joblessrole))
 	//Validate job prefs
