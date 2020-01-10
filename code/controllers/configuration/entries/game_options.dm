@@ -378,15 +378,12 @@
 
 /datum/config_entry/flag/disable_stambuffer
 
-<<<<<<< HEAD
-=======
 /datum/config_entry/keyed_list/box_random_engine
 	key_mode = KEY_MODE_TEXT
 	value_mode = VALUE_MODE_NUM
 	lowercase = FALSE
 	splitter = ","
 
->>>>>>> 959e87185a... Merge pull request #10463 from Putnam3145/random-engine
 /datum/config_entry/number/auto_transfer_delay
 	config_entry_value = 72000
 	min_val = 0
