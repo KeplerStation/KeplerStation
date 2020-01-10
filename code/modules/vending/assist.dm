@@ -1,15 +1,9 @@
 /obj/machinery/vending/assist
 	products = list(/obj/item/assembly/prox_sensor = 7,
-<<<<<<< HEAD
 	                /obj/item/assembly/igniter = 6,
+					/obj/item/assembly/playback = 4,
 	                /obj/item/assembly/signaler = 6,
 	                /obj/item/wirecutters = 3,
-=======
-					/obj/item/assembly/igniter = 6,
-					/obj/item/assembly/playback = 4,
-					/obj/item/assembly/signaler = 6,
-					/obj/item/wirecutters = 3,
->>>>>>> 5f03f5e3d8... Merge pull request #10457 from r4d6/Voice-Copy
 					/obj/item/stock_parts/cell/crap = 6,
 	                /obj/item/cartridge/signal = 6)
 	contraband = list(/obj/item/assembly/timer = 4,
