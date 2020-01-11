@@ -165,6 +165,7 @@
 //Discounts (dynamically filled above)
 /datum/uplink_item/discounts
 	category = "Discounted Gear"
+<<<<<<< HEAD
 
 
 /*
@@ -2020,3 +2021,5 @@ datum/uplink_item/stealthy_weapons/taeclowndo_shoes
 	item = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
 	cost = 2
 	illegal_tech = FALSE
+=======
+>>>>>>> 7fa3289013... Merge pull request #10497 from Trilbyspaceclone/uplink_redo
