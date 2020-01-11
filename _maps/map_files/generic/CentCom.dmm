@@ -6448,6 +6448,7 @@
 /obj/effect/turf_decal/tile/brown,
 /turf/open/floor/plasteel,
 /area/centcom/supplypod/loading/two)
+<<<<<<< HEAD
 "oV" = (
 /obj/machinery/vr_sleeper{
 	dir = 4
@@ -6457,6 +6458,8 @@
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
+=======
+>>>>>>> 5dc598e2ea... Merge pull request #10465 from Putnam3145/more-dojo-tweaks
 "oX" = (
 /obj/structure/bookcase/random,
 /obj/machinery/light{
@@ -12469,12 +12472,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/centcom/evac)
+<<<<<<< HEAD
 "CT" = (
 /obj/machinery/vr_sleeper{
 	dir = 4
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
+=======
+>>>>>>> 5dc598e2ea... Merge pull request #10465 from Putnam3145/more-dojo-tweaks
 "CV" = (
 /obj/structure/chair/stool,
 /turf/open/floor/wood,
@@ -12667,12 +12673,15 @@
 "Di" = (
 /turf/closed/indestructible/riveted,
 /area/ai_multicam_room)
+<<<<<<< HEAD
 "Dj" = (
 /obj/machinery/vr_sleeper{
 	dir = 8
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
+=======
+>>>>>>> 5dc598e2ea... Merge pull request #10465 from Putnam3145/more-dojo-tweaks
 "Dk" = (
 /obj/structure/table,
 /turf/open/floor/plasteel/cafeteria,
@@ -13280,9 +13289,13 @@
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "ED" = (
+<<<<<<< HEAD
 /obj/machinery/vending/boozeomat{
 	req_access_txt = "0"
 	},
+=======
+/obj/machinery/vending/boozeomat/all_access,
+>>>>>>> 5dc598e2ea... Merge pull request #10465 from Putnam3145/more-dojo-tweaks
 /turf/closed/indestructible{
 	icon = 'icons/turf/walls/wood_wall.dmi';
 	icon_state = "wood";
@@ -16747,6 +16760,10 @@
 	smooth = 1
 	},
 /area/centcom/holding)
+"Nf" = (
+/obj/machinery/autoylathe,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "Ni" = (
 /obj/structure/table/reinforced,
 /obj/item/clipboard,
@@ -16816,6 +16833,7 @@
 /obj/machinery/recharge_station,
 /turf/open/floor/plasteel/white,
 /area/centcom/holding)
+<<<<<<< HEAD
 "Ny" = (
 /obj/machinery/modular_computer/console/preset/research,
 /obj/machinery/light{
@@ -16823,6 +16841,8 @@
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
+=======
+>>>>>>> 5dc598e2ea... Merge pull request #10465 from Putnam3145/more-dojo-tweaks
 "Nz" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
@@ -17131,12 +17151,15 @@
 "PD" = (
 /turf/open/floor/plasteel/cafeteria,
 /area/syndicate_mothership)
+<<<<<<< HEAD
 "PF" = (
 /obj/machinery/vr_sleeper{
 	dir = 1
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
+=======
+>>>>>>> 5dc598e2ea... Merge pull request #10465 from Putnam3145/more-dojo-tweaks
 "PG" = (
 /obj/structure/table/reinforced,
 /obj/item/camera,
@@ -17711,6 +17734,7 @@
 /obj/item/stack/sheet/glass/fifty,
 /obj/item/stack/sheet/metal/fifty,
 /obj/item/storage/toolbox/mechanical,
+/obj/item/stack/sheet/plastic/fifty,
 /obj/item/multitool,
 /turf/open/floor/wood,
 /area/centcom/holding)
@@ -18083,6 +18107,13 @@
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
+"VL" = (
+/obj/machinery/button/crematorium{
+	id = "crematoriumGhostDojo";
+	pixel_x = -25
+	},
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "VO" = (
 /turf/closed/indestructible/riveted,
 /area/centcom/supplypod)
@@ -18153,6 +18184,23 @@
 "Wr" = (
 /turf/open/floor/plasteel/dark,
 /area/centcom/supplypod)
+<<<<<<< HEAD
+=======
+"Ws" = (
+/obj/machinery/door/airlock/wood{
+	id_tag = "Ninja6";
+	name = "Dorm 6"
+	},
+/turf/open/floor/wood,
+/area/centcom/holding)
+"Ww" = (
+/obj/structure/bodycontainer/crematorium{
+	dir = 4;
+	id = "crematoriumGhostDojo"
+	},
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
+>>>>>>> 5dc598e2ea... Merge pull request #10465 from Putnam3145/more-dojo-tweaks
 "WC" = (
 /obj/structure/table/reinforced,
 /obj/item/pen,
@@ -43003,12 +43051,26 @@ UV
 CV
 Xk
 NT
+<<<<<<< HEAD
 CT
 oV
 CT
 CT
 oV
 CT
+=======
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Nd
+VL
+Ww
+Sd
+>>>>>>> 5dc598e2ea... Merge pull request #10465 from Putnam3145/more-dojo-tweaks
 Nd
 aa
 aa
@@ -43517,12 +43579,26 @@ UV
 CV
 Xk
 NT
+<<<<<<< HEAD
 Xk
 PF
 Xk
 Px
 Xk
 Zt
+=======
+Sd
+MR
+Sd
+Sd
+Sd
+MR
+Sd
+Nd
+Sd
+Sd
+Sd
+>>>>>>> 5dc598e2ea... Merge pull request #10465 from Putnam3145/more-dojo-tweaks
 Nd
 aa
 aa
@@ -45035,8 +45111,13 @@ aa
 aa
 aa
 Nd
+<<<<<<< HEAD
 Xk
 Xk
+=======
+Nf
+Sd
+>>>>>>> 5dc598e2ea... Merge pull request #10465 from Putnam3145/more-dojo-tweaks
 Rh
 Mm
 Nd
@@ -47091,10 +47172,17 @@ aa
 aa
 aa
 Nd
+<<<<<<< HEAD
 Ny
 Xk
 Xk
 Xk
+=======
+Gs
+Sd
+Sd
+Sd
+>>>>>>> 5dc598e2ea... Merge pull request #10465 from Putnam3145/more-dojo-tweaks
 Nd
 Vz
 Fh
