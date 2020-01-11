@@ -28,55 +28,18 @@
 
 	if(iscarbon(L))
 		var/mob/living/carbon/C = L
-<<<<<<< HEAD
-		if(C.get_blood_id() == "blood" && (method == INJECT || (method == INGEST && C.dna && C.dna.species && (DRINKSBLOOD in C.dna.species.species_traits))))
+		if(C.get_blood_id() == /datum/reagent/blood && (method == INJECT || (method == INGEST && C.dna && C.dna.species && (DRINKSBLOOD in C.dna.species.species_traits))))
 			if(!data || !(data["blood_type"] in get_safe_blood(C.dna.blood_type)))
-				C.reagents.add_reagent("toxin", reac_volume * 0.5)
+				C.reagents.add_reagent(/datum/reagent/toxin, reac_volume * 0.5)
 			else
 				C.blood_volume = min(C.blood_volume + round(reac_volume, 0.1), BLOOD_VOLUME_MAXIMUM)
-=======
-		var/blood_id = C.get_blood_id()
-		if((HAS_TRAIT(C, TRAIT_NOMARROW) || blood_id == /datum/reagent/blood || blood_id == /datum/reagent/blood/jellyblood) && (method == INJECT || (method == INGEST && C.dna && C.dna.species && (DRINKSBLOOD in C.dna.species.species_traits))))
-			C.blood_volume = min(C.blood_volume + round(reac_volume, 0.1), BLOOD_VOLUME_MAXIMUM * C.blood_ratio)
-			// we don't care about bloodtype here, we're just refilling the mob
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 
 	if(reac_volume >= 10 && istype(L))
 		L.add_blood_DNA(list(data["blood_DNA"] = data["blood_type"]))
 
-<<<<<<< HEAD
 /datum/reagent/blood/reaction_obj(obj/O, volume)
 	if(volume >= 3 && istype(O))
 		O.add_blood_DNA(list(data["blood_DNA"] = data["blood_type"]))
-=======
-/datum/reagent/blood/on_mob_life(mob/living/carbon/C)	//Because lethals are preferred over stamina. damnifino.
-	if((HAS_TRAIT(C, TRAIT_NOMARROW)))
-		return //We dont want vampires getting toxed from blood
-	var/blood_id = C.get_blood_id()
-	if((blood_id == /datum/reagent/blood || blood_id == /datum/reagent/blood/jellyblood))
-		if(!data || !(data["blood_type"] in get_safe_blood(C.dna.blood_type)))	//we only care about bloodtype here because this is where the poisoning should be
-			C.adjustToxLoss(rand(2,8)*REM, TRUE, TRUE)	//forced to ensure people don't use it to gain beneficial toxin as slime person
-	..()
-
-/datum/reagent/blood/reaction_obj(obj/O, volume)
-	if(volume >= 3 && istype(O))
-		O.add_blood_DNA(data)
-
-/datum/reagent/blood/reaction_turf(turf/T, reac_volume)//splash the blood all over the place
-	if(!istype(T))
-		return
-	if(reac_volume < 3)
-		return
-
-	var/obj/effect/decal/cleanable/blood/B = locate() in T //find some blood here
-	if(!B)
-		B = new(T)
-	if(data["blood_DNA"])
-		B.blood_DNA[data["blood_DNA"]] = data["blood_type"]
-	if(!B.reagents)
-		B.reagents.add_reagent(type, reac_volume)
-	B.update_icon()
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 
 /datum/reagent/blood/on_new(list/data)
 	if(istype(data))
@@ -115,58 +78,11 @@
 			var/datum/disease/D = thing
 			. += D
 
-<<<<<<< HEAD
 /datum/reagent/blood/reaction_turf(turf/T, reac_volume)//splash the blood all over the place
 	if(!istype(T))
 		return
 	if(reac_volume < 3)
 		return
-=======
-/datum/reagent/blood/synthetics
-	data = list("donor"=null,"viruses"=null,"blood_DNA"="REPLICATED", "bloodcolor" = BLOOD_COLOR_SYNTHETIC, "blood_type"="SY","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
-	name = "Synthetic Blood"
-	taste_description = "oily"
-	color = BLOOD_COLOR_SYNTHETIC // rgb: 11, 7, 48
-
-/datum/reagent/blood/lizard
-	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_LIZARD, "blood_type"="L","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
-	name = "Lizard Blood"
-	taste_description = "spicy"
-	color = BLOOD_COLOR_LIZARD // rgb: 11, 7, 48
-	pH = 6.85
-
-/datum/reagent/blood/jellyblood
-	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_SLIME, "blood_type"="GEL","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
-	name = "Slime Jelly Blood"
-	description = "A gooey semi-liquid produced from one of the deadliest lifeforms in existence. SO REAL."
-	color = BLOOD_COLOR_SLIME
-	taste_description = "slime"
-	taste_mult = 1.3
-	pH = 4
-
-/datum/reagent/blood/xenomorph
-	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_XENO, "blood_type"="X*","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
-	name = "Xenomorph Blood"
-	taste_description = "acidic heresy"
-	color = BLOOD_COLOR_XENO // greenish yellow ooze
-	shot_glass_icon_state = "shotglassgreen"
-	pH = 2.5
-
-/datum/reagent/blood/oil
-	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_OIL, "blood_type"="HF","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
-	name = "Hydraulic Blood"
-	taste_description = "burnt oil"
-	color = BLOOD_COLOR_OIL // dark, y'know, expected batman colors.
-	pH = 9.75
-
-/datum/reagent/blood/insect
-	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_BUG, "blood_type"="BUG","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
-	name = "Insectoid Blood"
-	taste_description = "waxy"
-	color = BLOOD_COLOR_BUG // Bug colored, I guess.
-	pH = 7.25
-
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 
 	var/obj/effect/decal/cleanable/blood/B = locate() in T //find some blood here
 	if(!B)
@@ -176,49 +92,12 @@
 
 /datum/reagent/liquidgibs
 	name = "Liquid gibs"
-<<<<<<< HEAD
-	id = "liquidgibs"
 	color = "#FF9966"
-=======
-	color = BLOOD_COLOR_HUMAN
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	description = "You don't even want to think about what's in here."
 	taste_description = "gross iron"
 	shot_glass_icon_state = "shotglassred"
 	pH = 7.45
 
-<<<<<<< HEAD
-=======
-/datum/reagent/liquidgibs/xeno
-	name = "Liquid xeno gibs"
-	color = BLOOD_COLOR_XENO
-	taste_description = "blended heresy"
-	shot_glass_icon_state = "shotglassgreen"
-	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_XENO, "blood_type"="X*","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
-	pH = 2.5
-
-/datum/reagent/liquidgibs/slime
-	name = "Slime sludge"
-	color = BLOOD_COLOR_SLIME
-	taste_description = "slime"
-	shot_glass_icon_state = "shotglassgreen"
-	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_SLIME, "blood_type"="GEL","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
-	pH = 4
-
-/datum/reagent/liquidgibs/synth
-	name = "Synthetic sludge"
-	color = BLOOD_COLOR_SYNTHETIC
-	taste_description = "jellied plastic"
-	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_SYNTHETIC, "blood_type"="SY","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
-
-/datum/reagent/liquidgibs/oil
-	name = "Hydraulic sludge"
-	color = BLOOD_COLOR_OIL
-	taste_description = "chunky burnt oil"
-	data = list("donor"=null,"viruses"=null,"blood_DNA"=null, "bloodcolor" = BLOOD_COLOR_OIL, "blood_type"="HF","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null)
-	pH = 9.75
-
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 /datum/reagent/vaccine
 	//data must contain virus type
 	name = "Vaccine"
@@ -650,14 +529,8 @@
 	race = /datum/species/fly
 	mutationtext = "<span class='danger'>The pain subsides. You feel... buzzy.</span>"
 
-<<<<<<< HEAD
 /datum/reagent/mutationtoxin/moth
 	name = "Moth Mutation Toxin"
-	id = "mothmutationtoxin"
-=======
-/datum/reagent/mutationtoxin/insect
-	name = "Insect Mutation Toxin"
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	description = "A glowing toxin."
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/moth
@@ -698,30 +571,6 @@
 	race = /datum/species/android
 	mutationtext = "<span class='danger'>The pain subsides. You feel... artificial.</span>"
 
-<<<<<<< HEAD
-=======
-//Citadel Races
-/datum/reagent/mutationtoxin/mammal
-	name = "Mammal Mutation Toxin"
-	description = "A glowing toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/mammal
-	mutationtext = "<span class='danger'>The pain subsides. You feel... fluffier.</span>"
-
-/datum/reagent/mutationtoxin/insect
-	name = "Insect Mutation Toxin"
-	description = "A glowing toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/insect
-	mutationtext = "<span class='danger'>The pain subsides. You feel... attracted to dark, moist areas.</span>"
-
-/datum/reagent/mutationtoxin/xenoperson
-	name = "Xeno-Hybrid Mutation Toxin"
-	description = "A glowing toxin."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/xeno
-	mutationtext = "<span class='danger'>The pain subsides. You feel... oddly longing for the Queen.</span>" //sadly, not the British one.
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 
 //BLACKLISTED RACES
 /datum/reagent/mutationtoxin/skeleton
@@ -1071,20 +920,6 @@
 			M.reagents.add_reagent(/datum/reagent/toxin, reac_volume)
 	..()
 
-<<<<<<< HEAD
-=======
-/datum/reagent/iron/overdose_start(mob/living/M)
-	to_chat(M, "<span class='userdanger'>You start feeling your guts twisting painfully!</span>")
-	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "[type]_overdose", /datum/mood_event/overdose, name)
-
-/datum/reagent/iron/overdose_process(mob/living/carbon/C)
-	if(prob(20))
-		var/obj/item/organ/liver/L = C.getorganslot(ORGAN_SLOT_LIVER)
-		if (istype(L))
-			C.applyLiverDamage(2) //mild until the fabled med rework comes out. the organ damage galore
-	..()
-
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 /datum/reagent/gold
 	name = "Gold"
 	description = "Gold is a dense, soft, shiny metal and the most malleable and ductile metal known."
@@ -2123,20 +1958,3 @@
 	description = "A powerd that is mixed with water and enzymes to make mustard."
 	color = "#BCC740" //RGB: 188, 199, 64
 	taste_description = "plant dust"
-<<<<<<< HEAD
-=======
-
-/datum/reagent/pax/catnip
-	name = "catnip"
-	taste_description = "grass"
-	description = "A colorless liquid that makes people more peaceful and felines more happy."
-	metabolization_rate = 1.75 * REAGENTS_METABOLISM
-
-/datum/reagent/pax/catnip/on_mob_life(mob/living/carbon/M)
-	if(prob(20))
-		M.emote("nya")
-	if(prob(20))
-		to_chat(M, "<span class = 'notice'>[pick("Headpats feel nice.", "The feeling of a hairball...", "Backrubs would be nice.", "Whats behind those doors?")]</span>")
-	M.adjustArousalLoss(2)
-	..()
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490

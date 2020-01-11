@@ -231,12 +231,7 @@
 //Goon Chems. Ported mainly from Goonstation. Easily mixable (or not so easily) and provide a variety of effects.
 /datum/reagent/medicine/silver_sulfadiazine
 	name = "Silver Sulfadiazine"
-<<<<<<< HEAD
-	id = "silver_sulfadiazine"
 	description = "If used in touch-based applications, immediately restores burn wounds as well as restoring more over time. If ingested through other means, deals minor toxin damage."
-=======
-	description = "If used in touch-based applications, immediately restores burn wounds as well as restoring more over time. It is mildly poisonous taken orally or by injection. If overdosed, deals brute and minor liver damage."
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	reagent_state = LIQUID
 	pH = 7.2
 	color = "#ffeac9"
@@ -289,12 +284,7 @@
 
 /datum/reagent/medicine/styptic_powder
 	name = "Styptic Powder"
-<<<<<<< HEAD
-	id = "styptic_powder"
 	description = "If used in touch-based applications, immediately restores bruising as well as restoring more over time. If ingested through other means, deals minor toxin damage."
-=======
-	description = "If used in touch-based applications, immediately restores bruising as well as restoring more over time. It is poisonous if taken orally or by injection. If overdosed, deals brute and minor liver damage."
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	reagent_state = LIQUID
 	color = "#FF9696"
 	pH = 6.7
@@ -406,12 +396,7 @@
 
 /datum/reagent/medicine/synthflesh
 	name = "Synthflesh"
-<<<<<<< HEAD
-	id = "synthflesh"
 	description = "Has a 100% chance of instantly healing brute and burn damage. One unit of the chemical will heal one point of damage. Touch application only."
-=======
-	description = "Has a 100% chance of healing large amounts of brute and burn damage very quickly. One unit of the chemical will heal one point of damage. Touch application only."
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	reagent_state = LIQUID
 	color = "#FFEBEB"
 	pH = 11.5

@@ -152,11 +152,7 @@
 	if(iscarbon(AM))
 		var/mob/living/carbon/C = AM
 		if(blood_id == C.get_blood_id())//both mobs have the same blood substance
-<<<<<<< HEAD
-			if(blood_id == "blood") //normal blood
-=======
-			if(blood_id == /datum/reagent/blood || blood_id == /datum/reagent/blood/jellyblood) //normal blood
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
+			if(blood_id == /datum/reagent/blood) //normal blood
 				if(blood_data["viruses"])
 					for(var/thing in blood_data["viruses"])
 						var/datum/disease/D = thing
@@ -176,11 +172,7 @@
 	return
 
 /mob/living/carbon/get_blood_data(blood_id)
-<<<<<<< HEAD
-	if(blood_id == "blood") //actual blood reagent
-=======
-	if(blood_id == /datum/reagent/blood || /datum/reagent/blood/jellyblood) //actual blood reagent
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
+	if(blood_id == /datum/reagent/blood) //actual blood reagent
 		var/blood_data = list()
 		//set the blood data
 		blood_data["donor"] = src
@@ -238,11 +230,6 @@
 		return /datum/reagent/blood
 
 /mob/living/carbon/get_blood_id()
-<<<<<<< HEAD
-=======
-	if(isjellyperson(src))
-		return /datum/reagent/blood/jellyblood
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	if(dna?.species?.exotic_blood)
 		return dna.species.exotic_blood
 	else if((NOBLOOD in dna.species.species_traits) || (HAS_TRAIT(src, TRAIT_NOCLONE)))

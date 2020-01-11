@@ -135,13 +135,8 @@
 /obj/item/reagent_containers/food/snacks/meatball
 	name = "meatball"
 	desc = "A great meal all round. Not a cord of wood."
-<<<<<<< HEAD
 	icon_state = "meatball"
-	list_reagents = list("nutriment" = 4, "vitamin" = 1)
-=======
-	icon_state = "faggot"
 	list_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/consumable/nutriment/vitamin = 1)
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	filling_color = "#800000"
 	tastes = list("meat" = 1)
 	foodtype = MEAT
@@ -348,24 +343,4 @@
 	name = "double rat-kebab"
 	icon_state = "doubleratkebab"
 	tastes = list("rat meat" = 2, "metal" = 1)
-<<<<<<< HEAD
-	bonus_reagents = list("nutriment" = 6, "vitamin" = 2)
-=======
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 6, /datum/reagent/consumable/nutriment/vitamin = 2)
-
-/obj/item/reagent_containers/food/snacks/kebab/fiesta
-	name = "fiesta skewer"
-	icon_state = "fiestaskewer"
-	tastes = list("tex-mex" = 3, "cumin" = 2)
-	bonus_reagents = list(/datum/reagent/consumable/nutriment/vitamin = 5, /datum/reagent/consumable/capsaicin = 3)
-
-/obj/item/reagent_containers/food/snacks/bbqribs
-	name = "bbq ribs"
-	desc = "BBQ ribs, slathered in a healthy coating of BBQ sauce. The least vegan thing to ever exist."
-	icon_state = "ribs"
-	w_class = WEIGHT_CLASS_NORMAL
-	list_reagents = list(/datum/reagent/consumable/nutriment = 8, /datum/reagent/consumable/nutriment/vitamin = 2, /datum/reagent/consumable/bbqsauce = 5)
-	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1)
-	tastes = list("meat" = 3, "smokey sauce" = 1)
-	foodtype = MEAT
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490

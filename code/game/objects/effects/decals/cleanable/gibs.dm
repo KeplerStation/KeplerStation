@@ -147,12 +147,7 @@
 // Slime Gibs
 /obj/effect/decal/cleanable/blood/gibs/slime
 	desc = "They look gooey and gruesome."
-<<<<<<< HEAD
-	gibs_reagent_id = "water"
-=======
-	gibs_reagent_id = /datum/reagent/liquidgibs/slime
-	gibs_bloodtype = "GEL"
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
+	gibs_reagent_id = /datum/reagent/water
 
 /obj/effect/decal/cleanable/blood/gibs/slime/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()
@@ -190,7 +185,7 @@
 
 /obj/effect/decal/cleanable/blood/gibs/synth
 	desc = "They look sludgy and disgusting."
-	gibs_reagent_id = /datum/reagent/liquidgibs/synth
+	gibs_reagent_id = /datum/reagent/oil
 	gibs_bloodtype = "SY"
 
 /obj/effect/decal/cleanable/blood/gibs/synth/Initialize(mapload, list/datum/disease/diseases)
@@ -201,11 +196,7 @@
 /obj/effect/decal/cleanable/blood/gibs/ipc
 	desc = "They look sharp yet oozing."
 	body_colors = "00ff00"
-<<<<<<< HEAD
-	gibs_reagent_id = "oil"
-=======
-	gibs_reagent_id = /datum/reagent/liquidgibs/oil
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
+	gibs_reagent_id = /datum/reagent/oil
 	gibs_bloodtype = "HF"
 
 /obj/effect/decal/cleanable/blood/gibs/ipc/Initialize(mapload, list/datum/disease/diseases)

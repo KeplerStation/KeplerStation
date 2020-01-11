@@ -72,14 +72,6 @@
 	resistance_flags = NONE
 	grind_results = list(/datum/reagent/aluminium = 10)
 
-<<<<<<< HEAD
-=======
-/obj/item/trash/boritos
-	name = "boritos bag"
-	icon_state = "boritos"
-	grind_results = list(/datum/reagent/aluminium = 1) //from the mylar bag
-
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 /obj/item/trash/attack(mob/M, mob/living/user)
 	return
 

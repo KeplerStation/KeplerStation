@@ -427,13 +427,8 @@
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
 	isGlass = FALSE
-<<<<<<< HEAD
-	list_reagents = list("orangejuice" = 100)
-	foodtype = FRUIT
-=======
 	list_reagents = list(/datum/reagent/consumable/orangejuice = 100)
-	foodtype = FRUIT| BREAKFAST
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
+	foodtype = FRUIT
 
 /obj/item/reagent_containers/food/drinks/bottle/cream
 	name = "milk cream"

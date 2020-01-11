@@ -180,8 +180,4 @@
 	name = "Canned Laughter"
 	desc = "Just looking at this makes you want to giggle."
 	icon_state = "laughter"
-<<<<<<< HEAD
-	list_reagents = list("laughter" = 50)
-=======
 	list_reagents = list(/datum/reagent/consumable/laughter = 50)
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490

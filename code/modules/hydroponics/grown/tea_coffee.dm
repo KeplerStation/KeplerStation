@@ -33,13 +33,8 @@
 	species = "teaastra"
 	plantname = "Tea Astra Plant"
 	product = /obj/item/reagent_containers/food/snacks/grown/tea/astra
-<<<<<<< HEAD
 	mutatelist = list()
-	reagents_add = list("synaptizine" = 0.1, "vitamin" = 0.04, "teapowder" = 0.1)
-=======
-	mutatelist = list(/obj/item/seeds/tea/catnip)
 	reagents_add = list(/datum/reagent/medicine/synaptizine = 0.1, /datum/reagent/consumable/nutriment/vitamin = 0.04, /datum/reagent/toxin/teapowder = 0.1)
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	rarity = 20
 
 /obj/item/reagent_containers/food/snacks/grown/tea/astra
@@ -49,26 +44,6 @@
 	filling_color = "#4582B4"
 	grind_results = list(/datum/reagent/toxin/teapowder = 0, /datum/reagent/medicine/salglu_solution = 0)
 
-<<<<<<< HEAD
-=======
-// Kitty drugs
-/obj/item/seeds/tea/catnip
-	name = "pack of catnip seeds"
-	icon_state = "seed-catnip"
-	desc = "Long stocks with flowering tips that has a chemical to make feline attracted to it."
-	species = "catnip"
-	plantname = "Catnip Plant"
-	product = /obj/item/reagent_containers/food/snacks/grown/tea/catnip
-	reagents_add = list(/datum/reagent/pax/catnip = 0.1, /datum/reagent/consumable/nutriment/vitamin = 0.06, /datum/reagent/toxin/teapowder = 0.3)
-	rarity = 50
-
-/obj/item/reagent_containers/food/snacks/grown/tea/catnip
-	seed = /obj/item/seeds/tea/catnip
-	name = "Catnip buds"
-	icon_state = "catnip"
-	filling_color = "#4582B4"
-	grind_results = list(/datum/reagent/pax/catnip = 2, /datum/reagent/water = 1)
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 
 // Coffee
 /obj/item/seeds/coffee

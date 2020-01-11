@@ -9,10 +9,6 @@
 
 /obj/effect/decal/cleanable/blood/gibs/xeno
 	color = BLOOD_COLOR_XENO
-<<<<<<< HEAD
-=======
-	gibs_reagent_id = /datum/reagent/liquidgibs/xeno
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	gibs_bloodtype = "X*"
 
 /obj/effect/decal/cleanable/blood/gibs/xeno/Initialize(mapload, list/datum/disease/diseases)

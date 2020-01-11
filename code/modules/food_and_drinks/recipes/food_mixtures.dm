@@ -76,17 +76,6 @@
 	required_reagents = list(/datum/reagent/consumable/corn_starch = 1, /datum/reagent/toxin/acid = 1)
 	required_temp = 374
 
-<<<<<<< HEAD
-=======
-/datum/chemical_reaction/caramel
-	name = "Caramel"
-	id = /datum/reagent/consumable/caramel
-	results = list(/datum/reagent/consumable/caramel = 1)
-	required_reagents = list(/datum/reagent/consumable/sugar = 1)
-	required_temp = 413
-	mob_react = FALSE
-
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 /datum/chemical_reaction/cheesewheel
 	name = "Cheesewheel"
 	id = "cheesewheel"
@@ -172,12 +161,3 @@
 	new /obj/item/reagent_containers/food/snacks/salad/ricebowl(location)
 	if(holder && holder.my_atom)
 		qdel(holder.my_atom)
-<<<<<<< HEAD
-=======
-
-/datum/chemical_reaction/bbqsauce
-	name = "BBQ Sauce"
-	id = /datum/reagent/consumable/bbqsauce
-	results = list(/datum/reagent/consumable/bbqsauce = 5)
-	required_reagents = list(/datum/reagent/ash = 1, /datum/reagent/consumable/tomatojuice = 1, /datum/reagent/medicine/salglu_solution = 3, /datum/reagent/consumable/blackpepper = 1)
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490

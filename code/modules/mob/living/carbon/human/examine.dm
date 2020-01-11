@@ -269,12 +269,8 @@
 			if(91.01 to INFINITY)
 				msg += "[t_He] [t_is] a shitfaced, slobbering wreck.\n"
 
-<<<<<<< HEAD
-	if(reagents.has_reagent("astral"))
-		msg += "[t_He] has wild, spacey eyes"
-=======
+
 	if(reagents.has_reagent(/datum/reagent/fermi/astral))
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 		if(mind)
 			msg += "[t_He] has wild, spacey eyes and they have a strange, abnormal look to them.\n"
 		else

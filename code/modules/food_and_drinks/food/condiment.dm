@@ -15,21 +15,8 @@
 	volume = 50
 	//Possible_states has the reagent id as key and a list of, in order, the icon_state, the name and the desc as values. Used in the on_reagent_change(changetype) to change names, descs and sprites.
 	var/list/possible_states = list(
-<<<<<<< HEAD
-	 "ketchup" = list("ketchup", "ketchup bottle", "You feel more American already."),
-	 "mustard" = list("mustard", "mustard bottle", "A spice mixed with enzymes and water."),
-	 "capsaicin" = list("hotsauce", "hotsauce bottle", "You can almost TASTE the stomach ulcers now!"),
-	 "enzyme" = list("enzyme", "universal enzyme bottle", "Used in cooking various dishes"),
-	 "soysauce" = list("soysauce", "soy sauce bottle", "A salty soy-based flavoring"),
-	 "frostoil" = list("coldsauce", "coldsauce bottle", "Leaves the tongue numb in its passage"),
-	 "sodiumchloride" = list("saltshakersmall", "salt shaker", "Salt. From space oceans, presumably"),
-	 "blackpepper" = list("peppermillsmall", "pepper mill", "Often used to flavor food or make people sneeze"),
-	 "cornoil" = list("oliveoil", "corn oil bottle", "A delicious oil used in cooking. Made from corn"),
-	 "sugar" = list("emptycondiment", "sugar bottle", "Tasty spacey sugar!"),
-	 "mayonnaise" = list("mayonnaise", "mayonnaise jar", "An oily condiment made from egg yolks."),
-	 "peanut_butter" = list("peanutbutter", "peanut butter jar", "A deliciously and sticky spread made from peanuts."))
-=======
 	 /datum/reagent/consumable/ketchup = list("ketchup", "ketchup bottle", "You feel more American already."),
+	 /datum/reagent/consumable/mustard = list("mustard", "mustard bottle", "A spice mixed with enzymes and water."),
 	 /datum/reagent/consumable/capsaicin = list("hotsauce", "hotsauce bottle", "You can almost TASTE the stomach ulcers now!"),
 	 /datum/reagent/consumable/enzyme = list("enzyme", "universal enzyme bottle", "Used in cooking various dishes"),
 	 /datum/reagent/consumable/soysauce = list("soysauce", "soy sauce bottle", "A salty soy-based flavoring"),
@@ -39,9 +26,7 @@
 	 /datum/reagent/consumable/cornoil = list("oliveoil", "corn oil bottle", "A delicious oil used in cooking. Made from corn"),
 	 /datum/reagent/consumable/sugar = list("emptycondiment", "sugar bottle", "Tasty spacey sugar!"),
 	 /datum/reagent/consumable/mayonnaise = list("mayonnaise", "mayonnaise jar", "An oily condiment made from egg yolks."),
-	 /datum/reagent/consumable/bbqsauce = list("bbqsauce", "BBQ sauce", "Hand wipes not included."),
 	 /datum/reagent/consumable/peanut_butter = list("peanutbutter", "peanut butter jar", "A deliciously and sticky spread made from peanuts."))
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	var/originalname = "condiment" //Can't use initial(name) for this. This stores the name set by condimasters.
 
 /obj/item/reagent_containers/food/condiment/suicide_act(mob/living/carbon/user)
@@ -262,8 +247,7 @@
 						/datum/reagent/consumable/cornoil = list("condi_cornoil", "Corn Oil", "A delicious oil used in cooking. Made from corn"),
 						/datum/reagent/consumable/sugar = list("condi_sugar", "Sugar", "Tasty spacey sugar!"),
 						/datum/reagent/consumable/astrotame = list("condi_astrotame", "Astrotame", "The sweetness of a thousand sugars but none of the calories."),
-						/datum/reagent/consumable/mustard = list("condi_mustard", "Mustard", "A spice mixed with enzymes and water."),
-						/datum/reagent/consumable/bbqsauce = list("condi_bbq", "BBQ sauce", "Hand wipes not included."))
+						/datum/reagent/consumable/mustard = list("condi_mustard", "Mustard", "A spice mixed with enzymes and water."))
 
 /obj/item/reagent_containers/food/condiment/pack/attack(mob/M, mob/user, def_zone) //Can't feed these to people directly.
 	return
@@ -323,13 +307,4 @@
 /obj/item/reagent_containers/food/condiment/pack/astrotame
 	name = "astrotame pack"
 	originalname = "astrotame"
-<<<<<<< HEAD
-	list_reagents = list("astrotame" = 5)
-=======
 	list_reagents = list(/datum/reagent/consumable/astrotame = 5)
-
-/obj/item/reagent_containers/food/condiment/pack/bbqsauce
-	name = "bbq sauce pack"
-	originalname = "bbq sauce"
-	list_reagents = list(/datum/reagent/consumable/bbqsauce = 10)
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490

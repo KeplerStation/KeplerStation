@@ -169,7 +169,7 @@
 	name = "beer keg"
 	desc = "Beer is liquid bread, it's good for you..."
 	icon_state = "beer"
-	reagent_id = "beer"
+	reagent_id = /datum/reagent/consumable/ethanol/beer
 
 /obj/structure/reagent_dispensers/beerkeg/blob_act(obj/structure/blob/B)
 	explosion(src.loc,0,3,5,7,10)
@@ -191,24 +191,6 @@
 	anchored = TRUE
 	reagent_id = /datum/reagent/consumable/cooking_oil
 
-<<<<<<< HEAD
-=======
-////////
-//Kegs//
-////////
-
-/obj/structure/reagent_dispensers/beerkeg
-	name = "beer keg"
-	desc = "Beer is liquid bread, it's good for you..."
-	icon_state = "beer"
-	reagent_id = /datum/reagent/consumable/ethanol/beer
-
-/obj/structure/reagent_dispensers/beerkeg/blob_act(obj/structure/blob/B)
-	explosion(src.loc,0,3,5,7,10)
-	if(!QDELETED(src))
-		qdel(src)
-
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 /obj/structure/reagent_dispensers/keg
 	name = "keg"
 	desc = "A keg."
@@ -219,40 +201,4 @@
 	name = "keg of mead"
 	desc = "A keg of mead."
 	icon_state = "orangekeg"
-<<<<<<< HEAD
-	reagent_id = "mead"
-=======
 	reagent_id = /datum/reagent/consumable/ethanol/mead
-
-/obj/structure/reagent_dispensers/keg/aphro
-	name = "keg of aphrodisiac"
-	desc = "A keg of aphrodisiac."
-	icon_state = "pinkkeg"
-	reagent_id = /datum/reagent/drug/aphrodisiac
-	tank_volume = 150
-
-/obj/structure/reagent_dispensers/keg/aphro/strong
-	name = "keg of strong aphrodisiac"
-	desc = "A keg of strong and addictive aphrodisiac."
-	reagent_id = /datum/reagent/drug/aphrodisiacplus
-	tank_volume = 120
-
-/obj/structure/reagent_dispensers/keg/milk
-	name = "keg of milk"
-	desc = "It's not quite what you were hoping for."
-	icon_state = "whitekeg"
-	reagent_id = /datum/reagent/consumable/milk
-
-/obj/structure/reagent_dispensers/keg/semen
-	name = "keg of semen"
-	desc = "Dear lord, where did this even come from?"
-	icon_state = "whitekeg"
-	reagent_id = /datum/reagent/consumable/semen
-
-/obj/structure/reagent_dispensers/keg/gargle
-	name = "keg of pan galactic gargleblaster"
-	desc = "A keg of... wow that's a long name."
-	icon_state = "bluekeg"
-	reagent_id = /datum/reagent/consumable/ethanol/gargle_blaster
-	tank_volume = 100
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490

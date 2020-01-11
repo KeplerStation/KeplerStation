@@ -137,21 +137,7 @@
 	icon_state = "hypovial"
 	list_reagents = list(/datum/reagent/medicine/tricordrazine = 30)
 
-<<<<<<< HEAD
 /obj/item/reagent_containers/glass/bottle/vial/large/preloaded/CMO
-=======
-/obj/item/reagent_containers/glass/bottle/vial/small/breastreduction
-	name = "pink hypovial (breast treatment)"
-	icon_state = "hypovial-pink"
-	list_reagents = list(/datum/reagent/fermi/BEsmaller_hypo = 30)
-
-/obj/item/reagent_containers/glass/bottle/vial/small/penisreduction
-	name = "pink hypovial (penis treatment)"
-	icon_state = "hypovial-pink"
-	list_reagents = list(/datum/reagent/fermi/PEsmaller_hypo = 30)
-
-/obj/item/reagent_containers/glass/bottle/vial/large/CMO
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	name = "deluxe hypovial"
 	icon_state = "hypoviallarge-cmos"
 	list_reagents = list(/datum/reagent/medicine/omnizine = 20, /datum/reagent/medicine/leporazine = 20, /datum/reagent/medicine/atropine = 20)

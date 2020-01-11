@@ -142,11 +142,7 @@
 /datum/chemical_reaction/fermis_plush
 	name = "Fermis plush"
 	id = "fermis_plush"
-<<<<<<< HEAD
-	required_reagents = list("sugar" = 10, "blood" = 10, "stable_plasma" = 10)
-=======
-	required_reagents = list(/datum/reagent/consumable/caramel = 10, /datum/reagent/blood = 10, /datum/reagent/stable_plasma = 10)
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
+	required_reagents = list(/datum/reagent/consumable/sugar = 10, /datum/reagent/blood = 10, /datum/reagent/stable_plasma = 10)
 	mob_react = FALSE
 	required_temp = 400
 
@@ -621,29 +617,16 @@
 
 /datum/chemical_reaction/cat
 	name = "felined mutation toxic"
-<<<<<<< HEAD
-	id = "cats"
-	results = list("felinidmutationtoxin" = 1)
-	required_reagents  = list("mindbreaker" = 1, "ammonia" = 1, "water" = 1, "stablemutationtoxin" = 1)
+	id = /datum/reagent/mutationtoxin/felinid
+	results = list(/datum/reagent/mutationtoxin/felinid = 1)
+	required_reagents  = list(/datum/reagent/toxin/mindbreaker = 1, /datum/reagent/ammonia = 1, /datum/reagent/water = 1, /datum/reagent/mutationtoxin = 1)
 	required_temp = 450
 
 /datum/chemical_reaction/moff
 	name = "moth mutation toxic"
-	id = "moffs"
-	results = list("mothmutationtoxin" = 1)
-	required_reagents  = list("liquid_dark_matter" = 2, "ammonia" = 5, "lithium" = 1, "stablemutationtoxin" = 1)
-=======
-	id = /datum/reagent/mutationtoxin/felinid
-	results = list(/datum/reagent/mutationtoxin/felinid = 1)
-	required_reagents  = list(/datum/reagent/toxin/mindbreaker = 1, /datum/reagent/ammonia = 1, /datum/reagent/water = 1, /datum/reagent/drug/aphrodisiac = 10, /datum/reagent/mutationtoxin = 1) // Maybe aphro+ if it becomes a shitty meme
-	required_temp = 450
-
-/datum/chemical_reaction/moff
-	name = "insect mutation toxic"
-	id = /datum/reagent/mutationtoxin/insect
-	results = list(/datum/reagent/mutationtoxin/insect = 1)
+	id = /datum/reagent/mutationtoxin/moth
+	results = list(/datum/reagent/mutationtoxin/moth = 1)
 	required_reagents  = list(/datum/reagent/liquid_dark_matter = 2, /datum/reagent/ammonia = 5, /datum/reagent/lithium = 1, /datum/reagent/mutationtoxin = 1)
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	required_temp = 320
 
 /datum/chemical_reaction/notlight //Harder to make do to it being a hard race to play

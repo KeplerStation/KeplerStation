@@ -379,24 +379,3 @@ obj/item/reagent_containers/food/snacks/store/cake/pound_cake
 	filling_color = "#00FFFF"
 	tastes = list("cake" = 1, "sugar" = 1, "peachjuice" = 10)
 	foodtype = GRAIN | SUGAR | DAIRY
-<<<<<<< HEAD
-=======
-
-/obj/item/reagent_containers/food/snacks/store/cake/trumpet
-	name = "spaceman's cake"
-	desc = "A spaceman's trumpet frosted cake."
-	icon_state = "trumpetcake"
-	slice_path = /obj/item/reagent_containers/food/snacks/cakeslice/trumpet
-	bonus_reagents = list(/datum/reagent/medicine/polypyr = 15, /datum/reagent/consumable/cream = 5, /datum/reagent/consumable/nutriment/vitamin = 5, /datum/reagent/consumable/berryjuice = 5)
-	filling_color = "#7A3D80"
-	tastes = list("cake" = 4, "violets" = 2, "jam" = 2)
-	foodtype = GRAIN | DAIRY | FRUIT | SUGAR
-
-/obj/item/reagent_containers/food/snacks/cakeslice/trumpet
-	name = "spaceman's cake"
-	desc = "A spaceman's trumpet frosted cake."
-	icon_state = "trumpetcakeslice"
-	filling_color = "#7A3D80"
-	tastes = list("cake" = 4, "violets" = 2, "jam" = 2)
-	foodtype = GRAIN | DAIRY | FRUIT | SUGAR
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490

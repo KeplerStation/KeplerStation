@@ -227,25 +227,3 @@
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/consumable/nutriment/vitamin = 6)
 	tastes = list("beet" = 1)
 	foodtype = VEGETABLES
-<<<<<<< HEAD
-=======
-
-/obj/item/reagent_containers/food/snacks/soup/electron
-	name = "electron soup"
-	desc = "A gastronomic curiosity of ethereal origin. It is famed for the minature weather system formed over a properly prepared soup."
-	icon_state = "electronsoup"
-	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/liquidelectricity = 5)
-	tastes = list("mushroom" = 1, "electrons" = 4, "shockingly good" = 1)
-	filling_color = "#CC2B52"
-	foodtype = VEGETABLES | TOXIC
-
-/obj/item/reagent_containers/food/snacks/soup/bungocurry
-	name = "bungo curry"
-	desc = "A spicy vegetable curry made with the humble bungo fruit, Exotic!"
-	icon_state = "bungocurry"
-	bonus_reagents = list(/datum/reagent/consumable/nutriment/vitamin = 11)
-	list_reagents = list(/datum/reagent/consumable/nutriment = 6, /datum/reagent/consumable/capsaicin = 5)
-	tastes = list("bungo" = 2, "hot curry" = 4, "tropical sweetness" = 1)
-	filling_color = "#E6A625"
-	foodtype = VEGETABLES | FRUIT | DAIRY
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490

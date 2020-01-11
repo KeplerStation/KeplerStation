@@ -522,15 +522,4 @@
 	name = "canned air"
 	desc = "There is no air shortage. Do not drink."
 	icon_state = "air"
-<<<<<<< HEAD
-	list_reagents = list("nitrogen" = 24, "oxygen" = 6)
-=======
 	list_reagents = list(/datum/reagent/nitrogen = 24, /datum/reagent/oxygen = 6)
-
-/obj/item/reagent_containers/food/drinks/soda_cans/monkey_energy
-	name = "Monkey Energy"
-	desc = "Unleash the ape!"
-	icon_state = "monkey_energy"
-	list_reagents = list(/datum/reagent/consumable/monkey_energy = 50)
-	foodtype = SUGAR | JUNKFOOD
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490

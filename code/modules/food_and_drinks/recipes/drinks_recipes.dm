@@ -720,27 +720,15 @@
 
 /datum/chemical_reaction/pinkmilk
 	name = "Strawberry Milk"
-<<<<<<< HEAD
-	id = "pinkmilk"
-	results = list("pinkmilk" = 5)
-	required_reagents = list("cherryjelly" = 4, "milk" = 1)
-
-/datum/chemical_reaction/pinktea
-	name = "Strawberry Tea"
-	id = "pinktea"
-	results = list("pinktea" = 5)
-	required_reagents = list("cherryjelly" = 3, "arnold_palmer" = 1, "sugar" = 1)
-=======
 	id = /datum/reagent/consumable/pinkmilk
 	results = list(/datum/reagent/consumable/pinkmilk = 5)
-	required_reagents = list(/datum/reagent/drug/aphrodisiacplus = 1, /datum/reagent/consumable/milk = 1)
+	required_reagents = list(/datum/reagent/consumable/cherryjelly = 1, /datum/reagent/consumable/milk = 1)
 
 /datum/chemical_reaction/pinktea
 	name = "Strawberry Tea"
 	id = /datum/reagent/consumable/pinktea
 	results = list(/datum/reagent/consumable/pinktea = 5)
-	required_reagents = list(/datum/reagent/drug/aphrodisiac = 1, /datum/reagent/consumable/tea/arnold_palmer = 1, /datum/reagent/consumable/sugar = 1)
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
+	required_reagents = list(/datum/reagent/consumable/cherryjelly = 1, /datum/reagent/consumable/tea/arnold_palmer = 1, /datum/reagent/consumable/sugar = 1)
 
 /datum/chemical_reaction/blank_paper
 	name = "Blank Paper"
@@ -822,25 +810,7 @@
 
 /datum/chemical_reaction/red_queen
 	name = "Red Queen"
-<<<<<<< HEAD
-	id = "red_queen"
-	results = list("red_queen" = 10)
-	required_reagents = list("tea" = 6, "mercury" = 2, "blackpepper" = 1, "growthserum" = 1)
-=======
 	id = /datum/reagent/consumable/red_queen
 	results = list(/datum/reagent/consumable/red_queen = 10)
 	required_reagents = list(/datum/reagent/consumable/tea = 6, /datum/reagent/mercury = 2, /datum/reagent/consumable/blackpepper = 1, /datum/reagent/growthserum = 1)
 
-/datum/chemical_reaction/catnip_tea
-	name = "Catnip Tea"
-	id = /datum/reagent/consumable/catnip_tea
-	results = list(/datum/reagent/consumable/catnip_tea = 3)
-	required_reagents = list(/datum/reagent/consumable/tea = 5, /datum/reagent/pax/catnip = 2)
-
-/datum/chemical_reaction/commander_and_chief
-	name = "Commander and Chief"
-	id = /datum/reagent/consumable/ethanol/commander_and_chief
-	results = list(/datum/reagent/consumable/ethanol/commander_and_chief = 50)
-	required_reagents = list(/datum/reagent/consumable/ethanol/alliescocktail = 50, /datum/reagent/consumable/ethanol/champagne = 20, /datum/reagent/consumable/doctor_delight = 10, /datum/reagent/consumable/ethanol/quintuple_sec = 10, /datum/reagent/consumable/ethanol/screwdrivercocktail = 10)
-	mix_message = "When your powers combine, I am Captain Pl-..."
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490

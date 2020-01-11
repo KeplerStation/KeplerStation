@@ -137,13 +137,7 @@
 /obj/item/reagent_containers/food/snacks/burger/ghost
 	name = "ghost burger"
 	desc = "Too Spooky!"
-<<<<<<< HEAD
-	alpha = 125
-	bonus_reagents = list("nutriment" = 5, "vitamin" = 12)
-=======
-	icon_state = "ghostburger"
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 12)
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	tastes = list("bun" = 4, "ectoplasm" = 2)
 	foodtype = GRAIN
 
@@ -286,52 +280,3 @@
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 8, /datum/reagent/consumable/nutriment/vitamin = 1)
 	tastes = list("bun" = 4, "bacon" = 2)
 	foodtype = GRAIN | MEAT
-<<<<<<< HEAD
-=======
-
-/obj/item/reagent_containers/food/snacks/burger/soylent
-	name = "soylent burger"
-	desc = "A eco-friendly burger made using upcycled low value biomass."
-	icon_state = "soylentburger"
-	bonus_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 3)
-	tastes = list("bun" = 2, "assistant" = 4)
-	foodtype = GRAIN | MEAT | DAIRY
-
-/obj/item/reagent_containers/food/snacks/burger/rib
-	name = "mcrib"
-	desc = "An elusive rib shaped burger with limited availablity across the galaxy. Not as good as you remember it."
-	icon_state = "mcrib"
-	bonus_reagents = list(/datum/reagent/consumable/bbqsauce = 5, /datum/reagent/consumable/nutriment/vitamin = 3)
-	tastes = list("bun" = 2, "pork patty" = 4)
-	foodtype = GRAIN | MEAT
-
-/obj/item/reagent_containers/food/snacks/burger/mcguffin
-	name = "mcguffin"
-	desc = "A cheap and greasy imitation of an eggs benedict."
-	icon_state = "mcguffin"
-	tastes = list("muffin" = 2, "bacon" = 3)
-	bonus_reagents = list(/datum/reagent/consumable/eggyolk = 3, /datum/reagent/consumable/nutriment = 1)
-	foodtype = GRAIN | MEAT | BREAKFAST
-
-/obj/item/reagent_containers/food/snacks/burger/chicken
-	name = "chicken sandwich" //Apparently the proud people of Americlapstan object to this thing being called a burger. Apparently McDonald's just calls it a burger in Europe as to not scare and confuse us.
-	desc = "A delicious chicken sandwich, it is said the proceeds from this treat helps criminalize homosexuality on the space frontier."
-	icon_state = "chickenburger"
-	tastes = list("bun" = 2, "chicken" = 4, "God's covenant" = 1)
-	bonus_reagents = list(/datum/reagent/consumable/mayonnaise = 3, /datum/reagent/consumable/cooking_oil = 2, /datum/reagent/consumable/nutriment = 2)
-	foodtype = GRAIN | MEAT | FRIED
-
-/obj/item/reagent_containers/food/snacks/burger/cheese
-	name = "cheese burger"
-	desc = "This noble burger stands proudly clad in golden cheese."
-	icon_state = "cheeseburger"
-	tastes = list("bun" = 2, "beef patty" = 4, "cheese" = 3)
-	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1)
-	foodtype = GRAIN | MEAT | DAIRY
-
-/obj/item/reagent_containers/food/snacks/burger/cheese/Initialize()
-	. = ..()
-	if(prob(33))
-		icon_state = "cheeseburgeralt"
-
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490

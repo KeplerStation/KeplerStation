@@ -129,8 +129,6 @@
 		if(!amount)
 			beep_stop_pumping()
 			return
-		var/bonus = bag.blood_type == "SY" ? 0 : 5 * efficiency //no infinite loops using synthetics.
-		reagents.add_reagent(/datum/reagent/blood/synthetics, amount + bonus)
 		bag.reagents.remove_reagent(/datum/reagent/blood, amount)
 		update_icon()
 

@@ -1032,12 +1032,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 
 /datum/reagent/consumable/ethanol/grog
 	name = "Grog"
-<<<<<<< HEAD
-	id = "grog"
 	description = "Watered down rum. I wonder where the rest has gone?"
-=======
-	description = "Watered down rum, Nanotrasen approves!"
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	color = "#664300" // rgb: 102, 67, 0
 	boozepwr = 1 //Basically nothing
 	taste_description = "a poor excuse for alcohol"
@@ -1097,12 +1092,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 
 /datum/reagent/consumable/ethanol/amasec
 	name = "Amasec"
-<<<<<<< HEAD
-	id = "amasec"
 	description = "Official drink of the Horizons Gun-Club!"
-=======
-	description = "Official drink of the Nanotrasen Gun-Club!"
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 	color = "#664300" // rgb: 102, 67, 0
 	boozepwr = 35
 	quality = DRINK_GOOD
@@ -2147,32 +2137,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_desc = "Although historians believe the drink was originally created to commemorate the end of an important conflict in man's past, its origins have largely been forgotten and it is today seen more as a general symbol of human supremacy."
 	value = 1
 
-<<<<<<< HEAD
-=======
-/datum/reagent/consumable/ethanol/commander_and_chief
-	name = "Commander and Chief"
-	description = "A cocktail for the captain on the go."
-	color = "#ffffc9"
-	boozepwr = 50
-	quality = DRINK_FANTASTIC
-	taste_description = "duty and responsibility"
-	glass_icon_state = "commander_and_chief"
-	glass_name = "Commander and Chief"
-	glass_desc = "The gems of this majestic chalice represent the departments and their Heads."
-	value = 10
-
-/datum/reagent/consumable/ethanol/commander_and_chief/on_mob_life(mob/living/carbon/M)
-	if(M.mind && HAS_TRAIT(M.mind, TRAIT_CAPTAIN_METABOLISM))
-		M.heal_bodypart_damage(2,2,2)
-		M.adjustBruteLoss(-3.5,0)
-		M.adjustOxyLoss(-3.5,0)
-		M.adjustFireLoss(-3.5,0)
-		M.adjustToxLoss(-3.5,0)
-		M.radiation = max(M.radiation - 25, 0)
-		. = 1
-	return ..()
-
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 /datum/reagent/consumable/ethanol/fruit_wine
 	name = "Fruit Wine"
 	description = "A wine made from grown plants."

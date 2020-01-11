@@ -15,48 +15,6 @@
 	var/randomProbability = 1
 	var/reagentsAmount = 100
 	var/list/saferChems = list(
-<<<<<<< HEAD
-		"water",
-		"carbon",
-		"flour",
-		"cleaner",
-		"nutriment",
-		"condensedcapsaicin",
-		"mushroomhallucinogen",
-		"lube",
-		"pink_glitter",
-		"cryptobiolin",
-		"plantbgone",
-		"blood",
-		"charcoal",
-		"space_drugs",
-		"morphine",
-		"holywater",
-		"ethanol",
-		"hot_coco",
-		"sacid",
-		"mindbreaker",
-		"rotatium",
-		"bluespace",
-		"pax",
-		"laughter",
-		"concentrated_barbers_aid",
-		"colorful_reagent",
-		"dizzysolution",
-		"tiresolution",
-		"sodiumchloride",
-		"beer",
-		"hair_dye",
-		"sugar",
-		"white_glitter",
-		"growthserum",
-		"cornoil",
-		"uranium",
-		"carpet",
-		"firefighting_foam",
-		"tearjuice",
-		"strange_reagent"
-=======
 		/datum/reagent/water,
 		/datum/reagent/carbon,
 		/datum/reagent/consumable/flour,
@@ -97,7 +55,6 @@
 		/datum/reagent/firefighting_foam,
 		/datum/reagent/consumable/tearjuice,
 		/datum/reagent/medicine/strange_reagent
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 
 	)
 	//needs to be chemid unit checked at some point
@@ -197,39 +154,6 @@
 			foam.start()
 		CHECK_TICK
 
-<<<<<<< HEAD
-=======
-/datum/round_event/vent_clog/male/announce()
-	priority_announce("The scrubbers network is experiencing a backpressure surge. Some ejaculation of contents may occur.", "Atmospherics alert")
-
-/datum/round_event/vent_clog/male/start()
-	for(var/obj/machinery/atmospherics/components/unary/vent in vents)
-		if(vent && vent.loc && !vent.welded)
-			var/datum/reagents/R = new/datum/reagents(1000)
-			R.my_atom = vent
-			R.add_reagent(/datum/reagent/consumable/semen, reagentsAmount)
-
-			var/datum/effect_system/foam_spread/foam = new
-			foam.set_up(200, get_turf(vent), R)
-			foam.start()
-		CHECK_TICK
-
-/datum/round_event/vent_clog/female/announce()
-	priority_announce("The scrubbers network is experiencing a backpressure squirt. Some ejection of contents may occur.", "Atmospherics alert")
-
-/datum/round_event/vent_clog/female/start()
-	for(var/obj/machinery/atmospherics/components/unary/vent in vents)
-		if(vent && vent.loc && !vent.welded)
-			var/datum/reagents/R = new/datum/reagents(1000)
-			R.my_atom = vent
-			R.add_reagent(/datum/reagent/consumable/femcum, reagentsAmount)
-
-			var/datum/effect_system/foam_spread/foam = new
-			foam.set_up(200, get_turf(vent), R)
-			foam.start()
-		CHECK_TICK
-
->>>>>>> e5e2e4f012... Merge pull request #10329 from Ghommie/Ghommie-cit490
 /datum/round_event/vent_clog/plasma_decon/announce()
 	priority_announce("We are deploying an experimental plasma decontamination system. Please stand away from the vents and do not breathe the smoke that comes out.", "Head Office Update")
 
