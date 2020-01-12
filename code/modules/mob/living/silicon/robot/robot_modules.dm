@@ -539,6 +539,51 @@
 	moduleselect_icon = "miner"
 	hat_offset = 0
 
+<<<<<<< HEAD
+=======
+/obj/item/robot_module/miner/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in list("Lavaland", "Heavy", "Sleek", "Marina", "Can", "Spider", "Asteroid", "Droid", "Blade", "Vale")
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Lavaland")
+			cyborg_base_icon = "miner"
+		if("Asteroid")
+			cyborg_base_icon = "minerOLD"
+			special_light_key = "miner"
+		if("Droid")
+			cyborg_base_icon = "miner"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+			hat_offset = 4
+		if("Sleek")
+			cyborg_base_icon = "sleekmin"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Can")
+			cyborg_base_icon = "canmin"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Marina")
+			cyborg_base_icon = "marinamin"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Spider")
+			cyborg_base_icon = "spidermin"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Heavy")
+			cyborg_base_icon = "heavymin"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Blade")
+			cyborg_base_icon = "blade"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "bladesleeper"
+			dogborg = TRUE
+		if("Vale")
+			cyborg_base_icon = "valemine"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "valeminesleeper"
+			dogborg = TRUE
+	return ..()
+
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 /obj/item/robot_module/syndicate
 	name = "Syndicate Assault"
 	basic_modules = list(

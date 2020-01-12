@@ -4600,6 +4600,16 @@
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/starboard/fore)
+<<<<<<< HEAD
+=======
+"anz" = (
+/obj/effect/decal/cleanable/cobweb,
+/obj/machinery/computer/arcade{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 "anA" = (
 /obj/structure/cable/white{
 	icon_state = "0-2"
@@ -7130,6 +7140,15 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
+<<<<<<< HEAD
+=======
+"arX" = (
+/obj/machinery/computer/arcade{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 "arY" = (
 /obj/structure/table/wood,
 /obj/item/toy/talking/codex_gigas,
@@ -7160,6 +7179,16 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/maintenance/starboard/fore)
+<<<<<<< HEAD
+=======
+"asa" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/computer/arcade{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 "asb" = (
 /obj/machinery/airalarm{
 	dir = 1;
@@ -21784,6 +21813,15 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plating,
 /area/security/prison)
+<<<<<<< HEAD
+=======
+"aRi" = (
+/obj/machinery/computer/arcade{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/security/prison)
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 "aRj" = (
 /obj/structure/cable/white{
 	icon_state = "0-2"
@@ -56994,6 +57032,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "bTD" = (
@@ -57010,6 +57049,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "bTF" = (
@@ -58635,6 +58675,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "bVL" = (
@@ -58654,6 +58695,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "bVM" = (
@@ -110436,6 +110478,10 @@
 /turf/open/floor/plating,
 /area/crew_quarters/theatre/abandoned)
 "dFl" = (
+<<<<<<< HEAD
+=======
+/obj/machinery/vending/autodrobe,
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -126062,8 +126108,13 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/keycard_auth{
 	pixel_x = -24
+=======
+/obj/machinery/computer/arcade{
+	dir = 1
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/qm)
@@ -126306,6 +126357,51 @@
 	},
 /turf/open/floor/plating,
 /area/quartermaster/storage)
+<<<<<<< HEAD
+=======
+"kiJ" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/computer/arcade{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/maintenance/starboard/fore)
+"kqa" = (
+/obj/structure/table,
+/obj/effect/decal/cleanable/cobweb,
+/obj/item/storage/crayons,
+/obj/item/storage/crayons,
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel,
+/area/security/prison)
+"krb" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 "kvf" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -126517,7 +126613,28 @@
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/watermelon,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hydroponics/garden/abandoned)
+=======
+/area/maintenance/port/aft)
+"mgh" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/landmark/start/cyborg,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/aisat_interior)
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 "mkm" = (
 /obj/machinery/atmospherics/components/binary/valve,
 /obj/machinery/embedded_controller/radio/airlock_controller/incinerator_toxmix{
@@ -126557,6 +126674,29 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/circuit/green,
 /area/science/research/abandoned)
+<<<<<<< HEAD
+=======
+"mIi" = (
+/obj/item/electropack/shockcollar,
+/obj/item/assembly/signaler,
+/turf/open/floor/plating,
+/area/crew_quarters/abandoned_gambling_den)
+"mPj" = (
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating,
+/area/chapel/office)
+"mPH" = (
+/obj/structure/table,
+/obj/machinery/computer/libraryconsole/bookmanagement,
+/obj/structure/cable/white{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/white{
+	icon_state = "2-8"
+	},
+/turf/open/floor/plating,
+/area/security/prison)
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 "mQE" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -126636,8 +126776,13 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
+=======
+/obj/machinery/computer/arcade{
+	dir = 1
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 	},
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel/dark,
@@ -126907,6 +127052,46 @@
 /obj/machinery/door/poddoor/incinerator_toxmix,
 /turf/open/floor/engine/vacuum,
 /area/science/mixing)
+<<<<<<< HEAD
+=======
+"sww" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/r_wall,
+/area/chapel/office)
+"sCQ" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/structure/bodycontainer/morgue,
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
+"sVX" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/machinery/airalarm{
+	pixel_y = 22
+	},
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 "tmi" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -127216,6 +127401,21 @@
 	},
 /turf/open/floor/plating,
 /area/science/research/abandoned)
+"ylW" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/landmark/start/cyborg,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/aisat_interior)
 
 (1,1,1) = {"
 aaa
@@ -137110,7 +137310,7 @@ bPC
 bRK
 bTC
 bVK
-bXW
+ylW
 cal
 bPC
 aaa
@@ -137367,7 +137567,7 @@ bPC
 bRL
 bTC
 bVx
-bXX
+mgh
 cam
 bPC
 bRO
@@ -137624,7 +137824,7 @@ bPC
 bRM
 bTD
 bVL
-bXX
+mgh
 can
 bPC
 bkE

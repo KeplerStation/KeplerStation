@@ -23326,6 +23326,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai_upload_foyer)
 "aUA" = (
@@ -26649,6 +26650,13 @@
 	dir = 6
 	},
 /obj/effect/turf_decal/tile/neutral,
+<<<<<<< HEAD
+=======
+/obj/structure/sign/departments/custodian{
+	pixel_x = 32;
+	pixel_y = -32
+	},
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "baI" = (
@@ -32507,10 +32515,12 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "blG" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "blH" = (
@@ -32520,6 +32530,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "blI" = (
@@ -33507,6 +33518,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "bnC" = (
@@ -33525,6 +33537,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "bnE" = (
@@ -47003,7 +47016,11 @@
 /obj/machinery/power/apc/highcap/five_k{
 	areastring = "/area/bridge/showroom/corporate";
 	dir = 4;
+<<<<<<< HEAD
 	name = "Corporate Showroom APC";
+=======
+	name = "Nanotrasen Corporate Showroom APC";
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 	pixel_x = 28
 	},
 /obj/structure/cable/yellow{
@@ -48255,7 +48272,12 @@
 	icon_state = "2-4"
 	},
 /obj/item/toy/beach_ball{
+<<<<<<< HEAD
 	desc = "The simple beach ball is a popular consumer product.";
+=======
+	desc = "The simple beach ball is one of Nanotrasen's most popular products. 'Why do we make beach balls? Because we can! (TM)' - Nanotrasen";
+	name = "Nanotrasen-brand beach ball";
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 	pixel_y = 7
 	},
 /obj/structure/table/wood,
@@ -82709,6 +82731,22 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/cryopod)
+<<<<<<< HEAD
+=======
+"ram" = (
+/obj/machinery/computer/arcade{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/security/prison)
+"roa" = (
+/obj/structure/chair/stool,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/security/prison)
+>>>>>>> c69d882943... Merge pull request #10521 from BlackMajor/master
 "rzX" = (
 /obj/structure/chair/office/light{
 	dir = 1;
