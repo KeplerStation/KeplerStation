@@ -331,6 +331,7 @@ GLOBAL_LIST_INIT(plastitanium_recipes, list ( \
 	recipes = GLOB.plastitanium_recipes
 	. = ..()
 
+<<<<<<< HEAD
 
 /*
  * Snow
@@ -355,6 +356,8 @@ GLOBAL_LIST_INIT(snow_recipes, list ( \
 	recipes = GLOB.snow_recipes
 	. = ..()
 
+=======
+>>>>>>> e1ae3f3c07... Merge pull request #10492 from Trilbyspaceclone/plastic__world
 /****************************** Others ****************************/
 
 /*
@@ -387,6 +390,29 @@ GLOBAL_LIST_INIT(adamantine_recipes, list(
 	merge_type = /obj/item/stack/sheet/mineral/mythril
 
 /*
+ * Snow
+ */
+/obj/item/stack/sheet/mineral/snow
+	name = "snow"
+	icon_state = "sheet-snow"
+	item_state = "sheet-snow"
+	singular_name = "snow block"
+	force = 1
+	throwforce = 2
+	grind_results = list(/datum/reagent/consumable/ice = 20)
+	merge_type = /obj/item/stack/sheet/mineral/snow
+
+GLOBAL_LIST_INIT(snow_recipes, list ( \
+	new/datum/stack_recipe("Snow Wall", /turf/closed/wall/mineral/snow, 5, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("Snowman", /obj/structure/statue/snow/snowman, 5, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("Snowball", /obj/item/toy/snowball, 1), \
+	))
+
+/obj/item/stack/sheet/mineral/snow/Initialize(mapload, new_amount, merge = TRUE)
+	recipes = GLOB.snow_recipes
+	. = ..()
+
+/*
  * Alien Alloy
  */
 /obj/item/stack/sheet/mineral/abductor
@@ -410,3 +436,39 @@ GLOBAL_LIST_INIT(abductor_recipes, list ( \
 /obj/item/stack/sheet/mineral/abductor/Initialize(mapload, new_amount, merge = TRUE)
 	recipes = GLOB.abductor_recipes
 	. = ..()
+<<<<<<< HEAD
+=======
+
+/*
+ * Coal
+ */
+
+/obj/item/stack/sheet/mineral/coal
+	name = "coal"
+	desc = "Someone's gotten on the naughty list."
+	icon = 'icons/obj/mining.dmi'
+	icon_state = "slag"
+	singular_name = "coal lump"
+	merge_type = /obj/item/stack/sheet/mineral/coal
+	grind_results = list(/datum/reagent/carbon = 20)
+
+/obj/item/stack/sheet/mineral/coal/attackby(obj/item/W, mob/user, params)
+	if(W.get_temperature() > 300)//If the temperature of the object is over 300, then ignite
+		var/turf/T = get_turf(src)
+		message_admins("Coal ignited by [ADMIN_LOOKUPFLW(user)] in [ADMIN_VERBOSEJMP(T)]")
+		log_game("Coal ignited by [key_name(user)] in [AREACOORD(T)]")
+		fire_act(W.get_temperature())
+		return TRUE
+	else
+		return ..()
+
+/obj/item/stack/sheet/mineral/coal/fire_act(exposed_temperature, exposed_volume)
+	atmos_spawn_air("co2=[amount*10];TEMP=[exposed_temperature]")
+	qdel(src)
+
+/obj/item/stack/sheet/mineral/coal/five
+	amount = 5
+
+/obj/item/stack/sheet/mineral/coal/ten
+	amount = 10
+>>>>>>> e1ae3f3c07... Merge pull request #10492 from Trilbyspaceclone/plastic__world

@@ -3,13 +3,18 @@
  * Metal
  * Plasteel
  * Wood
+ * Bamboo
  * Cloth
- * Plastic
+ * Silk
+ * Durathread
  * Cardboard
- * Paper Frames
  * Runed Metal (cult)
  * Brass (clockwork cult)
  * Bronze (bake brass)
+ * Gems
+ * Bones
+ * Plastic
+ * Paper Frames
  * Cotton/Duracotton
  */
 
@@ -232,7 +237,39 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	resistance_flags = FLAMMABLE
 	merge_type = /obj/item/stack/sheet/mineral/wood
 	novariants = TRUE
+<<<<<<< HEAD
 	grind_results = list("carbon" = 20)
+=======
+	grind_results = list(/datum/reagent/carbon = 20)
+
+/obj/item/stack/sheet/mineral/wood/attackby(obj/item/W, mob/user, params) // NOTE: sheet_types.dm is where the WOOD stack lives. Maybe move this over there.
+	// Taken from /obj/item/stack/rods/attackby in [rods.dm]
+	if(W.get_sharpness())
+		user.visible_message("[user] begins whittling [src] into a pointy object.", \
+				 "<span class='notice'>You begin whittling [src] into a sharp point at one end.</span>", \
+				 "<span class='italics'>You hear wood carving.</span>")
+		// 8 Second Timer
+		if(!do_after(user, 80, TRUE, src))
+			return
+		// Make Stake
+		var/obj/item/stake/basic/new_item = new(user.loc)
+		user.visible_message("[user] finishes carving a stake out of [src].", \
+				 "<span class='notice'>You finish carving a stake out of [src].</span>")
+		// Prepare to Put in Hands (if holding wood)
+		var/obj/item/stack/sheet/mineral/wood/N = src
+		var/replace = (user.get_inactive_held_item() == N)
+		// Use Wood
+		N.use(1)
+		// If stack depleted, put item in that hand (if it had one)
+		if (!N && replace)
+			user.put_in_hands(new_item)
+	if(istype(W, merge_type))
+		var/obj/item/stack/S = W
+		if(merge(S))
+			to_chat(user, "<span class='notice'>Your [S.name] stack now contains [S.get_amount()] [S.singular_name]\s.</span>")
+	else
+		. = ..()
+>>>>>>> e1ae3f3c07... Merge pull request #10492 from Trilbyspaceclone/plastic__world
 
 /obj/item/stack/sheet/mineral/wood/Initialize(mapload, new_amount, merge = TRUE)
 	recipes = GLOB.wood_recipes
@@ -266,7 +303,6 @@ GLOBAL_LIST_INIT(bamboo_recipes, list ( \
 /obj/item/stack/sheet/mineral/bamboo/Initialize(mapload, new_amount, merge = TRUE)
 	recipes = GLOB.bamboo_recipes
 	return ..()
-
 
 /*
  * Cloth
@@ -321,6 +357,9 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 /obj/item/stack/sheet/cloth/thirty
 	amount = 30
 
+/*
+ * Silk
+ */
 /obj/item/stack/sheet/silk
 	name = "silk"
 	desc = "A long soft material. This one is just made out of cotton rather then any spiders or wyrms"
@@ -334,7 +373,9 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 //	recipes = GLOB.silk_recipes
 //	return ..()
 
-//Durathread fuck slash-asterisk comments
+/*
+ * Durathread
+ */
 	GLOBAL_LIST_INIT(durathread_recipes, list ( \
 	new/datum/stack_recipe("durathread jumpsuit", /obj/item/clothing/under/durathread, 4, time = 40),
 	new/datum/stack_recipe("durathread beret", /obj/item/clothing/head/beret/durathread, 2, time = 40), \
@@ -356,8 +397,6 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 /obj/item/stack/sheet/durathread/Initialize(mapload, new_amount, merge = TRUE)
 	recipes = GLOB.durathread_recipes
 	return ..()
-
-
 
 /*
  * Cardboard
@@ -451,7 +490,6 @@ GLOBAL_LIST_INIT(cardboard_recipes, list ( \
 				new/obj/item/storage/box/clown(droploc) //bugfix
 	else
 		. = ..()
-
 
 /*
  * Runed Metal
@@ -677,6 +715,7 @@ GLOBAL_LIST_INIT(plastic_recipes, list(
 	item_state = "sheet-plastic"
 	materials = list(MAT_PLASTIC=MINERAL_MATERIAL_AMOUNT)
 	throwforce = 7
+	grind_results = list(/datum/reagent/glitter/white = 60)
 	merge_type = /obj/item/stack/sheet/plastic
 
 /obj/item/stack/sheet/plastic/fifty
@@ -712,7 +751,6 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 	amount = 20
 /obj/item/stack/sheet/paperframes/fifty
 	amount = 50
-
 
 //durathread and cotton raw
 /obj/item/stack/sheet/cotton
