@@ -6,7 +6,8 @@ SUBSYSTEM_DEF(perfmon)
 
 /datum/controller/subsystem/perfmon/fire()
 	var/sql_cpu = sanitizeSQL(world.cpu)
-	var/datum/DBQuery/perfmon_query = SSdbcore.NewQuery("INSERT INTO [format_table_name("perflog")] (`cpu`) VALUES ([sql_cpu])")
+	var/sql_id = sanitizeSQL(GLOB.round_id)
+	var/datum/DBQuery/perfmon_query = SSdbcore.NewQuery("INSERT INTO [format_table_name("perflog")] (`cpu`, `round_id`) VALUES ([sql_cpu], [sql_id])")
 	if(!perfmon_query.warn_execute())
 		qdel(perfmon_query)
 		return
