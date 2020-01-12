@@ -9,6 +9,7 @@
 	var/blood_overlay_type = "suit"
 	var/togglename = null
 	var/suittoggled = FALSE
+<<<<<<< HEAD
 
 	var/adjusted = NORMAL_STYLE
 	mutantrace_variation = MUTANTRACE_VARIATION
@@ -33,11 +34,22 @@
 
 /obj/item/clothing/suit/worn_overlays(isinhands = FALSE)
 	. = list()
+=======
+	mutantrace_variation = STYLE_DIGITIGRADE
+
+/obj/item/clothing/suit/worn_overlays(isinhands = FALSE, icon_file, style_flags = NONE)
+	. = ..()
+>>>>>>> e90cef5c69... Merge pull request #10544 from AffectedArc07/file-standardisation
 	if(!isinhands)
 		if(damaged_clothes)
 			. += mutable_appearance('icons/effects/item_damage.dmi', "damaged[blood_overlay_type]")
 		if(blood_DNA)
+<<<<<<< HEAD
 			. += mutable_appearance('icons/effects/blood.dmi', "[blood_overlay_type]blood", color = blood_DNA_to_color())
+=======
+			var/file2use = (style_flags & STYLE_ALL_TAURIC) ? 'modular_citadel/icons/mob/64x32_effects.dmi' : 'icons/effects/blood.dmi'
+			. += mutable_appearance(file2use, "[blood_overlay_type]blood", color = blood_DNA_to_color())
+>>>>>>> e90cef5c69... Merge pull request #10544 from AffectedArc07/file-standardisation
 		var/mob/living/carbon/human/M = loc
 		if(ishuman(M) && M.w_uniform)
 			var/obj/item/clothing/under/U = M.w_uniform

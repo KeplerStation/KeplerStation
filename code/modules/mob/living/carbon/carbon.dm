@@ -182,7 +182,11 @@
 			if(HAS_TRAIT(src, TRAIT_PACIFISM))
 				to_chat(src, "<span class='notice'>You gently let go of [throwable_mob].</span>")
 				return
+<<<<<<< HEAD
 			
+=======
+
+>>>>>>> e90cef5c69... Merge pull request #10544 from AffectedArc07/file-standardisation
 			adjustStaminaLossBuffered(25)//CIT CHANGE - throwing an entire person shall be very tiring
 			var/turf/start_T = get_turf(loc) //Get the start and target tile for the descriptors
 			var/turf/end_T = get_turf(target)
@@ -518,7 +522,11 @@
 				add_splatter_floor(T)
 			if(stun)
 				adjustBruteLoss(3)
+<<<<<<< HEAD
 			else if(src.reagents.has_reagent("blazaam"))
+=======
+			else if(src.reagents.has_reagent(/datum/reagent/consumable/ethanol/blazaam))
+>>>>>>> e90cef5c69... Merge pull request #10544 from AffectedArc07/file-standardisation
 				if(T)
 					T.add_vomit_floor(src, VOMIT_PURPLE)
 		else

@@ -26,6 +26,10 @@
 	spacewalk = TRUE
 	sight = SEE_SELF
 	throwforce = 0
+<<<<<<< HEAD
+=======
+	blood_volume = 0
+>>>>>>> e90cef5c69... Merge pull request #10544 from AffectedArc07/file-standardisation
 
 	see_in_dark = 8
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE

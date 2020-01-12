@@ -1,6 +1,10 @@
 #define FABRIC_PER_SHEET 4
 
+<<<<<<< HEAD
 //Loom, turns raw cotton and durathread into their respective fabrics.
+=======
+
+>>>>>>> e90cef5c69... Merge pull request #10544 from AffectedArc07/file-standardisation
 ///This is a loom. It's usually made out of wood and used to weave fabric like durathread or cotton into their respective cloth types.
 /obj/structure/loom
 	name = "loom"
@@ -25,7 +29,11 @@
 	if(!istype(S) || !S.is_fabric)
 		return FALSE
 	if(!anchored)
+<<<<<<< HEAD
 		user.show_message("<span cl ass='notice'>The loom needs to be wrenched down.</span>", MSG_VISUAL)
+=======
+		user.show_message("<span class='notice'>The loom needs to be wrenched down.</span>", MSG_VISUAL)
+>>>>>>> e90cef5c69... Merge pull request #10544 from AffectedArc07/file-standardisation
 		return FALSE
 	if(S.amount < FABRIC_PER_SHEET)
 		user.show_message("<span class='notice'>You need at least [FABRIC_PER_SHEET] units of fabric before using this.</span>", 1)
@@ -41,4 +49,8 @@
 /obj/structure/loom/unanchored
 	anchored = FALSE
 
+<<<<<<< HEAD
 #undef FABRIC_PER_SHEET
+=======
+#undef FABRIC_PER_SHEET
+>>>>>>> e90cef5c69... Merge pull request #10544 from AffectedArc07/file-standardisation

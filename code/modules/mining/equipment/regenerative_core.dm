@@ -74,6 +74,12 @@
 		if(inert)
 			to_chat(user, "<span class='notice'>[src] has decayed and can no longer be used to heal.</span>")
 			return
+<<<<<<< HEAD
+=======
+		if(isvamp(user))
+			to_chat(user, "<span class='notice'>[src] breaks down as it fails to heal your unholy self</span>")
+			return
+>>>>>>> e90cef5c69... Merge pull request #10544 from AffectedArc07/file-standardisation
 		else
 			if(H.stat == DEAD)
 				to_chat(user, "<span class='notice'>[src] are useless on the dead.</span>")

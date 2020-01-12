@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /mob/living/silicon/Login()
 	if(mind && SSticker.mode)
 		SSticker.mode.remove_cultist(mind, 0, 0)
@@ -5,3 +6,15 @@
 		if(rev)
 			rev.remove_revolutionary(TRUE)
 	..()
+=======
+/mob/living/silicon/Login()
+	if(mind && SSticker.mode)
+		SSticker.mode.remove_cultist(mind, 0, 0)
+		var/datum/antagonist/rev/rev = mind.has_antag_datum(/datum/antagonist/rev)
+		if(rev)
+			rev.remove_revolutionary(TRUE)
+		var/datum/antagonist/bloodsucker/V = mind.has_antag_datum(/datum/antagonist/bloodsucker)
+		if(V)
+			mind.remove_antag_datum(V)
+	..()
+>>>>>>> e90cef5c69... Merge pull request #10544 from AffectedArc07/file-standardisation
