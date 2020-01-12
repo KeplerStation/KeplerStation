@@ -182,7 +182,11 @@
 	icon_state = "virus_food"
 	anchored = TRUE
 	density = FALSE
+<<<<<<< HEAD
 	reagent_id = "virusfood"
+=======
+	reagent_id = /datum/reagent/consumable/virus_food
+>>>>>>> 01db064038... Merge pull request #10532 from Ghommie/Ghommie-cit503
 
 /obj/structure/reagent_dispensers/cooking_oil
 	name = "vat of cooking oil"

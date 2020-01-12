@@ -79,7 +79,19 @@
 
 /obj/machinery/chem_dispenser/Initialize()
 	. = ..()
+<<<<<<< HEAD
 	dispensable_reagents = sortList(dispensable_reagents)
+=======
+	if(emagged_reagents)
+		emagged_reagents = sortList(emagged_reagents, /proc/cmp_reagents_asc)
+	if(upgrade_reagents)
+		upgrade_reagents = sortList(upgrade_reagents, /proc/cmp_reagents_asc)
+	if(upgrade_reagents2)
+		upgrade_reagents2 = sortList(upgrade_reagents2, /proc/cmp_reagents_asc)
+	if(upgrade_reagents3)
+		upgrade_reagents3 = sortList(upgrade_reagents3, /proc/cmp_reagents_asc)
+	dispensable_reagents = sortList(dispensable_reagents, /proc/cmp_reagents_asc)
+>>>>>>> 01db064038... Merge pull request #10532 from Ghommie/Ghommie-cit503
 	update_icon()
 
 /obj/machinery/chem_dispenser/Destroy()
