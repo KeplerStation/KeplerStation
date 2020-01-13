@@ -114,6 +114,10 @@
 		else if(istype(S, /obj/item/stack/marker_beacon))
 			S.cost = 1
 			S.source = get_or_create_estorage(/datum/robot_energy_storage/beacon)
+		
+		else if(istype(S, /obj/item/stack/packageWrap))
+			S.cost = 1
+			S.source = get_or_create_estorage(/datum/robot_energy_storage/wrapping_paper)
 
 		if(S && S.source)
 			S.materials = list()
@@ -512,15 +516,20 @@
 		/obj/item/borg/sight/meson,
 		/obj/item/storage/bag/ore/cyborg,
 		/obj/item/pickaxe/drill/cyborg,
-		/obj/item/shovel,
-		/obj/item/crowbar/cyborg,
+		/obj/item/twohanded/kinetic_crusher/cyborg,
 		/obj/item/weldingtool/mini,
 		/obj/item/extinguisher/mini,
 		/obj/item/storage/bag/sheetsnatcher/borg,
 		/obj/item/t_scanner/adv_mining_scanner,
 		/obj/item/gun/energy/kinetic_accelerator/cyborg,
+		/obj/item/gun/energy/plasmacutter/cyborg,
 		/obj/item/gps/cyborg,
-		/obj/item/stack/marker_beacon)
+		/obj/item/weapon/gripper/mining,
+		/obj/item/cyborg_clamp,
+		/obj/item/card/id/miningborg,
+		/obj/item/stack/marker_beacon,
+		/obj/item/destTagger,
+		/obj/item/stack/packageWrap)
 	emag_modules = list(/obj/item/borg/stun)
 	ratvar_modules = list(
 		/obj/item/clockwork/slab/cyborg/miner,
@@ -674,3 +683,8 @@
 	max_energy = 30
 	recharge_rate = 1
 	name = "Marker Beacon Storage"
+
+/datum/robot_energy_storage/wrapping_paper
+	max_energy = 30
+	recharge_rate = 1
+	name = "Wrapping Paper Storage"
