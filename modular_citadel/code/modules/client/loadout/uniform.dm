@@ -310,6 +310,7 @@
 	restricted_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer","Warden","Detective","Security Officer","Head of Security","Cargo Technician", "Shaft Miner", "Quartermaster")
 
 //Christmas
+/*Commenting out Until next Christmas or made automatic
 /datum/gear/christmasmaler
 	name = "Red Masculine Christmas Suit"
 	category = SLOT_W_UNIFORM
@@ -329,3 +330,20 @@
 	name = "Green Feminine Christmas Suit"
 	category = SLOT_W_UNIFORM
 	path = /obj/item/clothing/under/christmas/christmasfemaleg
+<<<<<<< HEAD
+=======
+
+/datum/gear/pinkstripper
+	name = "Pink stripper outfit"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/stripper_pink
+	cost = 3
+*/
+
+/datum/gear/greenstripper
+	name = "Green stripper outfit"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/stripper_green
+	cost = 3
+
+>>>>>>> 12da79513b... Merge pull request #10404 from Xantholne/xantholne-christmas03

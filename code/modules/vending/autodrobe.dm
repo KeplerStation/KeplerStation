@@ -113,6 +113,7 @@
 		              /obj/item/clothing/glasses/sunglasses/blindfold = 1,
 		              /obj/item/clothing/mask/muzzle = 2)
 	premium = list(/obj/item/clothing/suit/pirate/captain = 2,
+<<<<<<< HEAD
 		           /obj/item/clothing/head/pirate/captain = 2,
 		           /obj/item/clothing/head/helmet/roman/fake = 1,
 		           /obj/item/clothing/head/helmet/roman/legionnaire/fake = 1,
@@ -128,6 +129,29 @@
 		           /obj/item/clothing/suit/gothcoat = 2,
 		           /obj/item/clothing/under/draculass = 1,
                    /obj/item/clothing/under/drfreeze = 1)    //End of Cit Changes
+=======
+					/obj/item/clothing/head/pirate/captain = 2,
+					/obj/item/clothing/head/helmet/roman/fake = 1,
+					/obj/item/clothing/head/helmet/roman/legionnaire/fake = 1,
+					/obj/item/clothing/under/roman = 1,
+					/obj/item/clothing/shoes/roman = 1,
+					/obj/item/shield/riot/roman/fake = 1,
+					/obj/item/skub = 1,
+					/obj/item/clothing/under/lobster = 1,	 // CIT CHANGES
+					/obj/item/clothing/head/lobsterhat = 1,
+					/obj/item/clothing/head/drfreezehat = 1,
+					/obj/item/clothing/suit/dracula = 1,
+					/obj/item/clothing/suit/drfreeze_coat = 1,
+					/obj/item/clothing/suit/gothcoat = 2,
+					/obj/item/clothing/under/draculass = 1,
+					/obj/item/clothing/under/christmas/christmasmaler = 3,
+					/obj/item/clothing/under/christmas/christmasmaleg = 3,
+					/obj/item/clothing/under/christmas/christmasfemaler = 3,
+					/obj/item/clothing/under/christmas/christmasfemaleg = 3,
+					/obj/item/clothing/head/christmashat = 3,
+					/obj/item/clothing/head/christmashatg = 3,
+					/obj/item/clothing/under/drfreeze = 1)    //End of Cit Changes
+>>>>>>> 12da79513b... Merge pull request #10404 from Xantholne/xantholne-christmas03
 	refill_canister = /obj/item/vending_refill/autodrobe
 
 /obj/machinery/vending/autodrobe/all_access
