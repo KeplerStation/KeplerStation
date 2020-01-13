@@ -14,7 +14,7 @@
 	circuit = /obj/item/circuitboard/machine/sleeper
 	req_access = list(ACCESS_CMO) //Used for reagent deletion and addition of non medicines
 	var/efficiency = 1
-	var/min_health = -25
+	var/min_health = 30
 	var/list/available_chems
 	var/controls_inside = FALSE
 	var/list/possible_chems = list(
@@ -373,7 +373,7 @@
 /obj/machinery/sleeper/syndie/Initialize()
 	. = ..()
 	component_parts = list()
-	component_parts += new /obj/item/circuitboard/machine/sleeper(null)
+	component_parts += new /obj/item/circuitboard/machine/sleeper/syndie(null)
 	component_parts += new /obj/item/stock_parts/matter_bin/super(null)
 	component_parts += new /obj/item/stock_parts/manipulator/pico(null)
 	component_parts += new /obj/item/stack/sheet/glass(null)
@@ -384,7 +384,7 @@
 /obj/machinery/sleeper/syndie/fullupgrade/Initialize()
 	. = ..()
 	component_parts = list()
-	component_parts += new /obj/item/circuitboard/machine/sleeper(null)
+	component_parts += new /obj/item/circuitboard/machine/sleeper/syndie(null)
 	component_parts += new /obj/item/stock_parts/matter_bin/bluespace(null)
 	component_parts += new /obj/item/stock_parts/manipulator/femto(null)
 	component_parts += new /obj/item/stack/sheet/glass(null)

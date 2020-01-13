@@ -18,10 +18,11 @@
 		var/mob/living/carbon/C = usr
 		C.toggle_combat_mode()
 
-/obj/screen/combattoggle/proc/rebasetointerbay(mob/living/carbon/C)
-	if(!C)
+/obj/screen/combattoggle/update_icon_state()
+	var/mob/living/carbon/user = hud?.mymob
+	if(!istype(user))
 		return
-	if(C.combatmode)
+	if(user.combatmode)
 		icon_state = "combat"
 	else
 		icon_state = "combat_off"

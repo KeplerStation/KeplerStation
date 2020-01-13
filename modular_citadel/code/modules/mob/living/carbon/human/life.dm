@@ -3,6 +3,6 @@
 	if(!client || !hud_used)
 		return
 	if(hud_used.staminas)
-		hud_used.staminas.icon_state = staminahudamount()
+		hud_used.staminas?.update_icon_state()
 	if(hud_used.staminabuffer)
-		hud_used.staminabuffer.icon_state = staminabufferhudamount()
+		hud_used.staminabuffer?.update_icon_state()
