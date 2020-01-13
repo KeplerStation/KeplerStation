@@ -7,6 +7,7 @@
 	spillable = FALSE
 	volume = 10
 	possible_transfer_amounts = list(1,2,5,10)
+	APTFT_altclick = FALSE
 	obj_flags = UNIQUE_RENAME
 	unique_reskin = list("hypovial" = "hypovial",
 						"red hypovial" = "hypovial-b",

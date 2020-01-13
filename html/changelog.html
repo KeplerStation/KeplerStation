@@ -55,6 +55,62 @@
 		
 		-->
 		<div class="commit sansserif">
+			<h2 class="date">12 January 2020</h2>
+			<h3 class="author">KeplerStation-Bot updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Made reagent containers examine text less annoying.</li>
+				<li class="rscadd">Added a message when pulsing the open wire.</li>
+				<li class="admin">Added another SDQL option. Using "UPDATE selectors SET #null=value" will now resolve value and discard the return. This is useful if you only care about the side effect of a proc.</li>
+				<li class="balance">Explosions now cause knockdown instead of KOs, with the amount of time scaling off bomb armor. Heavy explosions still cause a ~2 second KO for follow up attacks.</li>
+				<li class="balance">Devastating explosions now no longer gib players with more than 50 bomb armor. This used to be more or less random depending on the amount of bomb armor.</li>
+				<li class="code_imp">Removed reagent explosion code that would trigger for <1 amount reactions.</li>
+				<li class="rscadd">Botany bee pet, Bumbles</li>
+				<li class="rscadd">New bee models that aren't 1 tile big of 0 opacity pixels</li>
+				<li class="rscadd">Second, temporary flavor text!</li>
+				<li class="rscadd">Syndicate sleepers (read: the ones that're red and have controls in them) can now be recreated with a sufficient basis in nonstandard (read: illegal) technologies!</li>
+				<li class="rscadd">Animations for the RCD</li>
+				<li class="bugfix">Said animations being pulled by the Singulo</li>
+				<li class="balance">Prevent Reinforced Doors from being RCD'ed</li>
+				<li class="bugfix">Deconstructing Floors now cost MUs like everything else</li>
+				<li class="tweak">changed the RCD's upgrades into flags</li>
+				<li class="rscadd">Allow RCDs to print APC, Firelocks and Fire Alarms with the right upgrade</li>
+				<li class="balance">Allow Engineers to print RCDs and RPDs from their protolathe without needing to hack one.</li>
+			</ul>
+
+			<h2 class="date">11 January 2020</h2>
+			<h3 class="author">KeplerStation-Bot updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">tableslamming has 0.4 second cooldown instead of 0.8</li>
+				<li class="tweak">changed where the observe verb is.</li>
+				<li class="tweak">the way chameleon clothes update on change</li>
+				<li class="bugfix">chameleon cloak icon</li>
+				<li class="bugfix">Explorer hoods on standard explorer suits can be reinforced with goliath hide plates again.</li>
+				<li class="rscadd">guests can now looc</li>
+				<li class="tweak">Shockcolar and electropack uses the new signaler ui</li>
+				<li class="tweak">Renaming shockcolar requires a pen</li>
+				<li class="rscadd">added atmos holofirelocks and temperature blocking</li>
+				<li class="tweak">tweaked how atmos holofan looks</li>
+				<li class="code_imp">Makes more folders and files for uplink.</li>
+			</ul>
+
+			<h2 class="date">10 January 2020</h2>
+			<h3 class="author">Bhijn updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">server_hop can no longer be used to remotely lobotomize a spaceman</li>
+			</ul>
+			<h3 class="author">KeplerStation-Bot updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Lattices can be examined yet again.</li>
+				<li class="bugfix">cardboard box speed</li>
+				<li class="bugfix">Fixed singularity pulls duping rods out of engine floors.</li>
+				<li class="bugfix">fixed the missing icons from Dermal Button nanites</li>
+				<li class="tweak">Halfs the nutriments in sugar</li>
+				<li class="bugfix">Limb damage works now</li>
+				<li class="bugfix">fixed SM's piping</li>
+				<li class="rscadd">Added a playback device</li>
+				<li class="bugfix">Made the Voice Analyzer actually care about languages</li>
+			</ul>
+
 			<h2 class="date">08 January 2020</h2>
 			<h3 class="author">KeplerStation-Bot updated:</h3>
 			<ul class="changes bgimages16">
@@ -969,43 +1025,6 @@
 				<li class="balance">The nuclear device on the NukeOp Shuttle is now in an anchored state by default, the Nuke can only be unanchored by inserting the disk and entering the proper code.</li>
 				<li class="balance">Non-Syndicate cyborgs are now unable to access the NukeOp Shuttle Console.</li>
 				<li class="bugfix">You can now unanchor Nukes even when the floor under them has been destroyed</li>
-			</ul>
-
-			<h2 class="date">11 November 2019</h2>
-			<h3 class="author">AffectedArc07 updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="tweak">The gitignore file now ignores compiled DMITool</li>
-				<li class="tweak">PDA painter icon is now modular</li>
-				<li class="bugfix">Turnstiles no longer spam your chat if you go through them the wrong way</li>
-				<li class="bugfix">Cydonian armour has sprites now</li>
-			</ul>
-
-			<h2 class="date">10 November 2019</h2>
-			<h3 class="author">Ghommie (original PRs by ShizCalev, CRTXBacon and Niknakflak) updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="rscadd">Adds the intelliLantern, a big ol' spooky intelliCard skin</li>
-				<li class="rscadd">crafting recipe for the new intelliCard skin (requires 1 pumpkin, 1 intelliCard, 5 cables and a wirecutter as a tool)</li>
-				<li class="tweak">changed the intelliTater crafting recipe to match the intelliLantern recipe (but with a potato for obvious reasons) add:cute pai gameboy face :3</li>
-			</ul>
-			<h3 class="author">KeplerStation-Bot updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">Fixed free real estate paraplegic trait and bolas.</li>
-				<li class="imageadd">Ported slighty better matchbox sprites from CEV-Eris, also resprited cigar boxes myself.</li>
-				<li class="tweak">SDGF now copies memories as well as antag data and factions.</li>
-				<li class="balance">Minor ninja tweaks and stealth nerfs. The stealth penalty for the many combat-related actions, bumping and now teleporting/dashing or firing guns has been increased a by a third. There is now a cooldown of 5 seconds on toggling stealth as well as a slighty slowed stealth in/out animation.</li>
-				<li class="bugfix">fixed the meteor hallucination</li>
-				<li class="bugfix">Certain objects shouldn't be able to become radioactive because of a bitflag that previously was checked nowhere in the code anymore.</li>
-				<li class="bugfix">Fixed abductors/abductees objectives by porting an objective code.</li>
-				<li class="bugfix">fixing a few runtimes on lightgeists, libido trait, rcd, one admin transformation topic, chem dispensers, glowing robotic eyes...</li>
-				<li class="bugfix">Insert snarky remark about clock welders actually displaying the welder flame overlay when turned on now here.</li>
-			</ul>
-			<h3 class="author">actioninja updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">med records no longer can eat id cards for no reason</li>
-			</ul>
-			<h3 class="author">him updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">hos and aeg guns now conform to le epic taser rework standards</li>
 			</ul>
 		</div>
 
