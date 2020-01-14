@@ -428,6 +428,37 @@
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = FALSE
 
+<<<<<<< HEAD
+=======
+/obj/item/clothing/under/sundresswhite
+	name = "white sundress"
+	desc = "Makes you want to frolic in a field of lillies."
+	icon_state = "sundress_white"
+	item_state = "sundress"
+	item_color = "sundress_white"
+	body_parts_covered = CHEST|GROIN
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE
+
+/obj/item/clothing/under/greendress
+	name = "green dress"
+	desc = "A tight green dress"
+	icon_state = "dress_green"
+	item_color = "dress_green"
+	body_parts_covered = CHEST|GROIN
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE
+
+/obj/item/clothing/under/pinkdress
+	name = "pink dress"
+	desc = "A tight pink dress"
+	icon_state = "dress_pink"
+	item_color = "dress_pink"
+	body_parts_covered = CHEST|GROIN
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE
+
+>>>>>>> 3510bf5150... Merge pull request #10560 from Ghommie/Ghommie-cit505
 /obj/item/clothing/under/captainparade
 	name = "captain's parade uniform"
 	desc = "A captain's luxury-wear, for special occasions."
@@ -491,6 +522,46 @@
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = FALSE
 
+<<<<<<< HEAD
+=======
+/obj/item/clothing/under/flowerdress
+	name = "flower dress"
+	desc = "Lovely dress"
+	icon_state = "flower_dress"
+	item_state = "sailordress"
+	item_color = "flower_dress"
+	body_parts_covered = CHEST|GROIN|LEGS
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE
+
+/obj/item/clothing/under/sweptskirt
+	name = "swept skirt"
+	desc = "Formal skirt"
+	icon_state = "skirt_swept"
+	item_color = "skirt_swept"
+	body_parts_covered = GROIN
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE
+
+/obj/item/clothing/under/corset
+	name = "black corset"
+	desc = "Nanotrasen is not resposible for any organ damage"
+	icon_state = "corset"
+	item_color = "corset"
+	body_parts_covered = CHEST|GROIN
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE
+
+/obj/item/clothing/under/croptop
+	name = "crop top"
+	desc = "We've saved money by giving you half a shirt!"
+	icon_state = "croptop"
+	item_color = "croptop"
+	body_parts_covered = CHEST|GROIN|ARMS
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE
+
+>>>>>>> 3510bf5150... Merge pull request #10560 from Ghommie/Ghommie-cit505
 /obj/item/clothing/under/redeveninggown
 	name = "red evening gown"
 	desc = "Fancy dress for space bar singers."
@@ -752,6 +823,7 @@
 	fitted = NO_FEMALE_UNIFORM
 	can_adjust = FALSE
 	resistance_flags = NONE
+<<<<<<< HEAD
 	
 /obj/item/clothing/under/durathread
 	name = "durathread jumpsuit"
@@ -759,6 +831,15 @@
 	icon_state = "durathread"
 	item_state = "durathread"
 	item_color = "durathread"
+=======
+
+/obj/item/clothing/under/gear_harness
+	name = "gear harness"
+	desc = "A simple, inconspicuous harness replacement for a jumpsuit."
+	icon_state = "gear_harness"
+	item_state = "gear_harness"
+	body_parts_covered = CHEST|GROIN
+>>>>>>> 3510bf5150... Merge pull request #10560 from Ghommie/Ghommie-cit505
 	can_adjust = FALSE
 	armor = list("melee" = 10, "laser" = 10, "fire" = 40, "acid" = 10, "bomb" = 5) 
 
@@ -820,3 +901,7 @@
 	item_state = "christmasfemaleg"
 	body_parts_covered = CHEST|GROIN
 	can_adjust = FALSE
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3510bf5150... Merge pull request #10560 from Ghommie/Ghommie-cit505
