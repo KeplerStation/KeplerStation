@@ -40,7 +40,26 @@
 
 /datum/reagent/blood/reaction_obj(obj/O, volume)
 	if(volume >= 3 && istype(O))
+<<<<<<< HEAD
 		O.add_blood_DNA(list(data["blood_DNA"] = data["blood_type"]))
+=======
+		O.add_blood_DNA(data)
+
+/datum/reagent/blood/reaction_turf(turf/T, reac_volume)//splash the blood all over the place
+	if(!istype(T))
+		return
+	if(reac_volume < 3)
+		return
+
+	var/obj/effect/decal/cleanable/blood/B = locate() in T //find some blood here
+	if(!B)
+		B = new(T)
+	if(data["blood_DNA"])
+		B.blood_DNA[data["blood_DNA"]] = data["blood_type"]
+	if(B.reagents)
+		B.reagents.add_reagent(type, reac_volume)
+	B.update_icon()
+>>>>>>> 99a6214d22... Merge pull request #10538 from Putnam3145/chemistry-aaa
 
 /datum/reagent/blood/on_new(list/data)
 	if(istype(data))

@@ -128,8 +128,12 @@
 		target.visible_message("<span class='danger'>[M] has been splashed with something!</span>", \
 						"<span class='userdanger'>[M] has been splashed with something!</span>")
 		for(var/datum/reagent/A in reagents.reagent_list)
+<<<<<<< HEAD
 			R += A.id + " ("
 			R += num2text(A.volume) + "),"
+=======
+			R += "[A.type] ([A.volume]),"
+>>>>>>> 99a6214d22... Merge pull request #10538 from Putnam3145/chemistry-aaa
 
 		if(thrownby)
 			log_combat(thrownby, M, "splashed", R)
