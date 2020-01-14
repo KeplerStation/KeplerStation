@@ -103,7 +103,7 @@
 
 /obj/structure/closet/wardrobe/chaplain_black
 	name = "chapel wardrobe"
-	desc = "It's a storage unit for Nanotrasen-approved religious attire."
+	desc = "It's a storage unit for religious attire."
 	icon_door = "black"
 
 /obj/structure/closet/wardrobe/chaplain_black/PopulateContents()
@@ -370,6 +370,7 @@
 	icon_door = "black"
 
 /obj/structure/closet/wardrobe/curator/PopulateContents()
+	new /obj/item/clothing/accessory/pocketprotector/full(src)
 	new /obj/item/clothing/head/fedora/curator(src)
 	new /obj/item/clothing/suit/curator(src)
 	new /obj/item/clothing/under/rank/curator/treasure_hunter(src)

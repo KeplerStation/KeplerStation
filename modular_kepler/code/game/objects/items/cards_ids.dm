@@ -1,6 +1,3 @@
-/obj/item/card/emag
-	var/uses = INFINITY // So playmin is still available
-
 // Job ID Card Sprite s
 /obj/item/card/id
 	icon = 'modular_kepler/icons/obj/card.dmi'
@@ -41,9 +38,6 @@
 /obj/item/card/id/job/nt
 	icon_state = "nanotrasen"
 
-/obj/item/card/id/job/nt
-	icon_state = "nanotrasen"
-
 // Misc IDs
 /obj/item/card/id/admin
 	name = "admin ID card"
@@ -56,9 +50,9 @@
 	access = get_all_accesses()+get_all_centcom_access()+get_all_syndicate_access() // I know this is hacky
 	..()
 
-// ERT
+// RRT
 /obj/item/card/id/ert
-	name = "ERT ID"
+	name = "RRT ID"
 	icon_state = "ERT_empty"
 
 /obj/item/card/id/ert/Commander

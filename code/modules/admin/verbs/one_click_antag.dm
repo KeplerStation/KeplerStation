@@ -19,7 +19,7 @@
 		<a href='?src=[REF(src)];[HrefToken()];makeAntag=blob'>Make Blob</a><br>
 		<a href='?src=[REF(src)];[HrefToken()];makeAntag=wizard'>Make Wizard (Requires Ghosts)</a><br>
 		<a href='?src=[REF(src)];[HrefToken()];makeAntag=nukeops'>Make Nuke Team (Requires Ghosts)</a><br>
-		<a href='?src=[REF(src)];[HrefToken()];makeAntag=centcom'>Make CentCom Response Team (Requires Ghosts)</a><br>
+		<a href='?src=[REF(src)];[HrefToken()];makeAntag=centcom'>Make Head Office Response Team (Requires Ghosts)</a><br>
 		<a href='?src=[REF(src)];[HrefToken()];makeAntag=abductors'>Make Abductor Team (Requires Ghosts)</a><br>
 		<a href='?src=[REF(src)];[HrefToken()];makeAntag=revenant'>Make Revenant (Requires Ghost)</a><br>
 		"}
@@ -412,7 +412,7 @@
 				//Spawn the body
 				var/mob/living/carbon/human/ERTOperative = new ertemplate.mobtype(spawnloc)
 				chosen_candidate.client.prefs.copy_to(ERTOperative)
-				ERTOperative.key = chosen_candidate.key
+				chosen_candidate.transfer_ckey(ERTOperative)
 
 				if(ertemplate.enforce_human || ERTOperative.dna.species.dangerous_existence) // Don't want any exploding plasmemes
 					ERTOperative.set_species(/datum/species/human)

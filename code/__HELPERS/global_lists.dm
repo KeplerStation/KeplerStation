@@ -31,6 +31,7 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/wings, GLOB.r_wings_list,roundstart = TRUE)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/caps, GLOB.caps_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_wings, GLOB.moth_wings_list)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_markings, GLOB.moth_markings_list) //KEPLER CHANGE
 
 	//Species
 	for(var/spath in subtypesof(/datum/species))
@@ -50,6 +51,16 @@
 	for(var/path in subtypesof(/datum/emote))
 		var/datum/emote/E = new path()
 		E.emote_list[E.key] = E
+
+	//Uplink Items
+	for(var/path in subtypesof(/datum/uplink_item))
+		var/datum/uplink_item/I = path
+		if(!initial(I.item)) //We add categories to a separate list.
+			GLOB.uplink_categories |= initial(I.category)
+			continue
+		GLOB.uplink_items += path
+	//(sub)typesof entries are listed by the order they are loaded in the code, so we'll have to rearrange them here.
+	GLOB.uplink_items = sortList(GLOB.uplink_items, /proc/cmp_uplink_items_dsc)
 
 	init_subtypes(/datum/crafting_recipe, GLOB.crafting_recipes)
 

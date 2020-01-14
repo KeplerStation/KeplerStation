@@ -131,7 +131,8 @@ Auto Patrol: []"},
 /mob/living/simple_animal/bot/secbot/Topic(href, href_list)
 	if(..())
 		return 1
-
+	if(!issilicon(usr) && !IsAdminGhost(usr) && !(bot_core.allowed(usr) || !locked))
+		return TRUE
 	switch(href_list["operation"])
 		if("idcheck")
 			idcheck = !idcheck
@@ -249,7 +250,7 @@ Auto Patrol: []"},
 	var/judgement_criteria = judgement_criteria()
 	playsound(src, 'sound/weapons/egloves.ogg', 50, TRUE, -1)
 	icon_state = "secbot-c"
-	addtimer(CALLBACK(src, .proc/update_icon), 2)
+	addtimer(CALLBACK(src, /atom/.proc/update_icon), 2)
 	var/threat = 5
 	if(ishuman(C))
 		C.stuttering = 5
@@ -410,7 +411,7 @@ Auto Patrol: []"},
 	var/atom/Tsec = drop_location()
 
 	var/obj/item/bot_assembly/secbot/Sa = new (Tsec)
-	Sa.build_step = 1
+	Sa.build_step = ASSEMBLY_SECOND_STEP
 	Sa.add_overlay("hs_hole")
 	Sa.created_name = name
 	new /obj/item/assembly/prox_sensor(Tsec)

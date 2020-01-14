@@ -12,6 +12,8 @@
 	var/recentpump = 0 // to prevent spammage
 	weapon_weight = WEAPON_MEDIUM
 
+	pb_knockback = 2
+
 /obj/item/gun/ballistic/shotgun/attackby(obj/item/A, mob/user, params)
 	. = ..()
 	if(.)
@@ -74,9 +76,9 @@
 	chambered = AC
 
 /obj/item/gun/ballistic/shotgun/examine(mob/user)
-	..()
+	. = ..()
 	if (chambered)
-		to_chat(user, "A [chambered.BB ? "live" : "spent"] one is in the chamber.")
+		. += "A [chambered.BB ? "live" : "spent"] one is in the chamber."
 
 /obj/item/gun/ballistic/shotgun/lethal
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal
@@ -95,7 +97,7 @@
 
 /obj/item/gun/ballistic/shotgun/riot/attackby(obj/item/A, mob/user, params)
 	..()
-	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter))
+	if(A.tool_behaviour == TOOL_SAW || istype(A, /obj/item/gun/energy/plasmacutter))
 		sawoff(user)
 	if(istype(A, /obj/item/melee/transforming/energy))
 		var/obj/item/melee/transforming/energy/W = A
@@ -143,8 +145,8 @@
 	. = ..()
 
 /obj/item/gun/ballistic/shotgun/boltaction/examine(mob/user)
-	..()
-	to_chat(user, "The bolt is [bolt_open ? "open" : "closed"].")
+	. = ..()
+	. += "The bolt is [bolt_open ? "open" : "closed"]."
 
 /obj/item/gun/ballistic/shotgun/boltaction/enchanted
 	name = "enchanted bolt action rifle"
@@ -225,14 +227,15 @@
 	spread = 2
 
 /obj/item/gun/ballistic/shotgun/automatic/combat/compact/AltClick(mob/living/user)
+	. = ..()
 	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return
 	toggle_stock(user)
-	. = ..()
+	return TRUE
 
 /obj/item/gun/ballistic/shotgun/automatic/combat/compact/examine(mob/user)
-	..()
-	to_chat(user, "<span class='notice'>Alt-click to toggle the stock.</span>")
+	. = ..()
+	. += "<span class='notice'>Alt-click to toggle the stock.</span>"
 
 /obj/item/gun/ballistic/shotgun/automatic/combat/compact/proc/toggle_stock(mob/living/user)
 	stock = !stock
@@ -263,9 +266,8 @@
 	var/obj/item/ammo_box/magazine/internal/shot/alternate_magazine
 
 /obj/item/gun/ballistic/shotgun/automatic/dual_tube/examine(mob/user)
-	..()
-	to_chat(user, "<span class='notice'>Alt-click to pump it.</span>")
 	. = ..()
+	. += "<span class='notice'>Alt-click to pump it.</span>"
 
 /obj/item/gun/ballistic/shotgun/automatic/dual_tube/Initialize()
 	. = ..()
@@ -290,8 +292,10 @@
 		to_chat(user, "You switch to tube A.")
 
 /obj/item/gun/ballistic/shotgun/automatic/dual_tube/AltClick(mob/living/user)
+	. = ..()
 	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return
 	pump()
+	return TRUE
 
 // DOUBLE BARRELED SHOTGUN and IMPROVISED SHOTGUN are in revolver.dm

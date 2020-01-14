@@ -5,6 +5,8 @@ $include dbconfig.txt
 $include comms.txt
 $include antag_rep.txt
 
+$include dynamic_config.txt
+
 # You can use the @ character at the beginning of a config option to lock it from being edited in-game
 # Example usage:
 # @SERVERNAME tgstation
@@ -144,6 +146,9 @@ LOG_MANIFEST
 
 ## Enable logging pictures
 # LOG_PICTURES
+
+## log virus and actions
+LOG_VIRUS
 
 ##Log camera pictures - Must have picture logging enabled
 PICTURE_LOGGING_CAMERA

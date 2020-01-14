@@ -1,5 +1,5 @@
 /obj/mecha/combat/phazon
-	desc = "This is a Phazon exosuit. The pinnacle of scientific research and pride of Nanotrasen, it uses cutting edge bluespace technology and expensive materials."
+	desc = "This is a Phazon exosuit. The pinnacle of scientific research, it uses cutting edge bluespace technology and expensive materials."
 	name = "\improper Phazon"
 	icon_state = "phazon"
 	step_in = 2
@@ -27,7 +27,3 @@
 	..()
 	switch_damtype_action.Remove(user)
 	phasing_action.Remove(user)
-
-/obj/mecha/combat/Initialize()
-	. = ..()
-	trackers += new /obj/item/mecha_parts/mecha_tracking(src)

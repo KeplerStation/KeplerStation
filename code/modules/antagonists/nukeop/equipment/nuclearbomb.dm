@@ -55,9 +55,9 @@
 /obj/machinery/nuclearbomb/examine(mob/user)
 	. = ..()
 	if(exploding)
-		to_chat(user, "It is in the process of exploding. Perhaps reviewing your affairs is in order.")
+		. += "It is in the process of exploding. Perhaps reviewing your affairs is in order."
 	if(timing)
-		to_chat(user, "There are [get_time_left()] seconds until detonation.")
+		. += "There are [get_time_left()] seconds until detonation."
 
 /obj/machinery/nuclearbomb/selfdestruct
 	name = "station self-destruct terminal"
@@ -255,7 +255,7 @@
 			first_status = "Set"
 		else
 			first_status = "Auth S1."
-	var/second_status = exploded ? "Warhead triggered, thanks for flying Nanotrasen" : (safety ? "Safe" : "Engaged")
+	var/second_status = exploded ? "Warhead triggered, thanks for flying Delta" : (safety ? "Safe" : "Engaged")
 	data["status1"] = first_status
 	data["status2"] = second_status
 	data["anchored"] = anchored
@@ -343,10 +343,10 @@
 
 
 /obj/machinery/nuclearbomb/proc/set_anchor()
-	if(!isinspace())
-		anchored = !anchored
-	else
+	if(isinspace() && !anchored)
 		to_chat(usr, "<span class='warning'>There is nothing to anchor to!</span>")
+	else
+		anchored = !anchored
 
 /obj/machinery/nuclearbomb/proc/set_safety()
 	safety = !safety
@@ -459,8 +459,8 @@
 		return CINEMATIC_SELFDESTRUCT_MISS
 
 /obj/machinery/nuclearbomb/beer
-	name = "Nanotrasen-brand nuclear fission explosive"
-	desc = "One of the more successful achievements of the Nanotrasen Corporate Warfare Division, their nuclear fission explosives are renowned for being cheap to produce and devastatingly effective. Signs explain that though this particular device has been decommissioned, every Nanotrasen station is equipped with an equivalent one, just in case. All Captains carefully guard the disk needed to detonate them - at least, the sign says they do. There seems to be a tap on the back."
+	name = "nuclear fission explosive"
+	desc = "Cheap to produce and devastatingly effective, nuclear explosives enjoy widespread use as self-destruct devices. All Captains carefully guard the disk needed to detonate them - at least, the sign says they do. There seems to be a tap on the back."
 	proper_bomb = FALSE
 	var/obj/structure/reagent_dispensers/beerkeg/keg
 
@@ -472,9 +472,9 @@
 /obj/machinery/nuclearbomb/beer/examine(mob/user)
 	. = ..()
 	if(keg.reagents.total_volume)
-		to_chat(user, "<span class='notice'>It has [keg.reagents.total_volume] unit\s left.</span>")
+		. += "<span class='notice'>It has [keg.reagents.total_volume] unit\s left.</span>"
 	else
-		to_chat(user, "<span class='danger'>It's empty.</span>")
+		. += "<span class='danger'>It's empty.</span>"
 
 /obj/machinery/nuclearbomb/beer/attackby(obj/item/W, mob/user, params)
 	if(W.is_refillable())
@@ -611,11 +611,8 @@ This is here to make the tiles around the station mininuke change when it's arme
 	if(!fake)
 		return
 
-	var/ghost = isobserver(user)
-	var/captain = user.mind && user.mind.assigned_role == "Captain"
-	var/nukie = user.mind && user.mind.has_antag_datum(/datum/antagonist/nukeop)
-	if(ghost || captain || nukie)
-		to_chat(user, "<span class='warning'>The serial numbers on [src] are incorrect.</span>")
+	if(isobserver(user) || HAS_TRAIT(user, TRAIT_DISK_VERIFIER) || (user.mind && HAS_TRAIT(user.mind, TRAIT_DISK_VERIFIER)))
+		. += "<span class='warning'>The serial numbers on [src] are incorrect.</span>"
 
 /obj/item/disk/nuclear/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/claymore/highlander) && !fake)
@@ -653,3 +650,7 @@ This is here to make the tiles around the station mininuke change when it's arme
 
 /obj/item/disk/nuclear/fake
 	fake = TRUE
+
+/obj/item/disk/nuclear/fake/obvious
+	name = "cheap plastic imitation of the nuclear authentication disk"
+	desc = "How anyone could mistake this for the real thing is beyond you."

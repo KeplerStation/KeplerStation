@@ -15,6 +15,9 @@
 //misc footstep sounds
 #define FOOTSTEP_GENERIC_HEAVY "heavy"
 
+#define FOOTPRINT_SHOE	"shoe"
+#define FOOTPRINT_FOOT	"foot"
+
 /*
 
 id = list(

@@ -5,7 +5,7 @@
 //	You do not need to raise this if you are adding new values that have sane defaults.
 //	Only raise this value when changing the meaning/format/name/layout of an existing value
 //	where you would want the updater procs below to run
-#define SAVEFILE_VERSION_MAX	20
+#define SAVEFILE_VERSION_MAX	22
 
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
@@ -45,7 +45,62 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	return
 
 /datum/preferences/proc/update_character(current_version, savefile/S)
-	return
+	if(current_version < 21)
+		job_preferences = list() //It loaded null from nonexistant savefile field.
+		var/job_civilian_high = 0
+		var/job_civilian_med = 0
+		var/job_civilian_low = 0
+
+		var/job_medsci_high = 0
+		var/job_medsci_med = 0
+		var/job_medsci_low = 0
+
+		var/job_engsec_high = 0
+		var/job_engsec_med = 0
+		var/job_engsec_low = 0
+
+		S["job_civilian_high"]	>> job_civilian_high
+		S["job_civilian_med"]	>> job_civilian_med
+		S["job_civilian_low"]	>> job_civilian_low
+		S["job_medsci_high"]	>> job_medsci_high
+		S["job_medsci_med"]		>> job_medsci_med
+		S["job_medsci_low"]		>> job_medsci_low
+		S["job_engsec_high"]	>> job_engsec_high
+		S["job_engsec_med"]		>> job_engsec_med
+		S["job_engsec_low"]		>> job_engsec_low
+
+		//Can't use SSjob here since this happens right away on login
+		for(var/job in subtypesof(/datum/job))
+			var/datum/job/J = job
+			var/new_value
+			var/fval = initial(J.flag)
+			switch(initial(J.department_flag))
+				if(CIVILIAN)
+					if(job_civilian_high & fval)
+						new_value = JP_HIGH
+					else if(job_civilian_med & fval)
+						new_value = JP_MEDIUM
+					else if(job_civilian_low & fval)
+						new_value = JP_LOW
+				if(MEDSCI)
+					if(job_medsci_high & fval)
+						new_value = JP_HIGH
+					else if(job_medsci_med & fval)
+						new_value = JP_MEDIUM
+					else if(job_medsci_low & fval)
+						new_value = JP_LOW
+				if(ENGSEC)
+					if(job_engsec_high & fval)
+						new_value = JP_HIGH
+					else if(job_engsec_med & fval)
+						new_value = JP_MEDIUM
+					else if(job_engsec_low & fval)
+						new_value = JP_LOW
+			if(new_value)
+				job_preferences["[initial(J.title)]"] = new_value
+	
+	else if(current_version < 23) // we are fixing a gamebreaking bug.
+		job_preferences = list() //It loaded null from nonexistant savefile field.
 
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
 	if(!ckey)
@@ -100,6 +155,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["parallax"]			>> parallax
 	S["ambientocclusion"]	>> ambientocclusion
 	S["auto_fit_viewport"]	>> auto_fit_viewport
+	S["sprint_spacebar"]	>> sprint_spacebar
+	S["sprint_toggle"]		>> sprint_toggle
 	S["menuoptions"]		>> menuoptions
 	S["enable_tips"]		>> enable_tips
 	S["tip_delay"]			>> tip_delay
@@ -111,6 +168,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["damagescreenshake"]	>> damagescreenshake
 	S["widescreenpref"]		>> widescreenpref
 	S["autostand"]			>> autostand
+	S["preferred_chaos"]	>> preferred_chaos
 
 	//try to fix any outdated data if necessary
 	if(needs_update >= 0)
@@ -131,6 +189,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	parallax		= sanitize_integer(parallax, PARALLAX_INSANE, PARALLAX_DISABLE, null)
 	ambientocclusion	= sanitize_integer(ambientocclusion, 0, 1, initial(ambientocclusion))
 	auto_fit_viewport	= sanitize_integer(auto_fit_viewport, 0, 1, initial(auto_fit_viewport))
+	sprint_spacebar	= sanitize_integer(sprint_spacebar, 0, 1, initial(sprint_spacebar))
+	sprint_toggle	= sanitize_integer(sprint_toggle, 0, 1, initial(sprint_toggle))
 	ghost_form		= sanitize_inlist(ghost_form, GLOB.ghost_forms, initial(ghost_form))
 	ghost_orbit 	= sanitize_inlist(ghost_orbit, GLOB.ghost_orbits, initial(ghost_orbit))
 	ghost_accs		= sanitize_inlist(ghost_accs, GLOB.ghost_accs_options, GHOST_ACCS_DEFAULT_OPTION)
@@ -187,6 +247,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["parallax"], parallax)
 	WRITE_FILE(S["ambientocclusion"], ambientocclusion)
 	WRITE_FILE(S["auto_fit_viewport"], auto_fit_viewport)
+	WRITE_FILE(S["sprint_spacebar"], sprint_spacebar)
+	WRITE_FILE(S["sprint_toggle"], sprint_toggle)
 	WRITE_FILE(S["menuoptions"], menuoptions)
 	WRITE_FILE(S["enable_tips"], enable_tips)
 	WRITE_FILE(S["tip_delay"], tip_delay)
@@ -198,6 +260,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["arousable"], arousable)
 	WRITE_FILE(S["widescreenpref"], widescreenpref)
 	WRITE_FILE(S["autostand"], autostand)
+	WRITE_FILE(S["preferred_chaos"], preferred_chaos)
+
 	return 1
 
 /datum/preferences/proc/load_character(slot)
@@ -263,6 +327,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["feature_lizard_body_markings"]	>> features["body_markings"]
 	S["feature_lizard_legs"]			>> features["legs"]
 	S["feature_moth_wings"]				>> features["moth_wings"]
+	S["feature_moth_markings"]			>> features["moth_markings"]
 	S["feature_human_tail"]				>> features["tail_human"]
 	S["feature_human_ears"]				>> features["ears"]
 
@@ -276,21 +341,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	//Jobs
 	S["joblessrole"]		>> joblessrole
-	S["job_civilian_high"]	>> job_civilian_high
-	S["job_civilian_med"]	>> job_civilian_med
-	S["job_civilian_low"]	>> job_civilian_low
-	S["job_medsci_high"]	>> job_medsci_high
-	S["job_medsci_med"]		>> job_medsci_med
-	S["job_medsci_low"]		>> job_medsci_low
-	S["job_engsec_high"]	>> job_engsec_high
-	S["job_engsec_med"]		>> job_engsec_med
-	S["job_engsec_low"]		>> job_engsec_low
+	//Load prefs
+	S["job_preferences"]	>> job_preferences
 
 	//Quirks
 	S["all_quirks"]			>> all_quirks
-	S["positive_quirks"]	>> positive_quirks
-	S["negative_quirks"]	>> negative_quirks
-	S["neutral_quirks"]		>> neutral_quirks
 
 	//flavor text
 	//Let's make our players NOT cry desperately as we wipe their savefiles of their special snowflake texts:
@@ -355,22 +410,15 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["body_markings"] 	= sanitize_inlist(features["body_markings"], GLOB.body_markings_list)
 	features["feature_lizard_legs"]	= sanitize_inlist(features["legs"], GLOB.legs_list)
 	features["moth_wings"] 	= sanitize_inlist(features["moth_wings"], GLOB.moth_wings_list)
+	features["moth_markings"] 	= sanitize_inlist(features["moth_markings"], GLOB.moth_markings_list)
 
 	joblessrole	= sanitize_integer(joblessrole, 1, 3, initial(joblessrole))
-	job_civilian_high = sanitize_integer(job_civilian_high, 0, 65535, initial(job_civilian_high))
-	job_civilian_med = sanitize_integer(job_civilian_med, 0, 65535, initial(job_civilian_med))
-	job_civilian_low = sanitize_integer(job_civilian_low, 0, 65535, initial(job_civilian_low))
-	job_medsci_high = sanitize_integer(job_medsci_high, 0, 65535, initial(job_medsci_high))
-	job_medsci_med = sanitize_integer(job_medsci_med, 0, 65535, initial(job_medsci_med))
-	job_medsci_low = sanitize_integer(job_medsci_low, 0, 65535, initial(job_medsci_low))
-	job_engsec_high = sanitize_integer(job_engsec_high, 0, 65535, initial(job_engsec_high))
-	job_engsec_med = sanitize_integer(job_engsec_med, 0, 65535, initial(job_engsec_med))
-	job_engsec_low = sanitize_integer(job_engsec_low, 0, 65535, initial(job_engsec_low))
+	//Validate job prefs
+	for(var/j in job_preferences)
+		if(job_preferences["[j]"] != JP_LOW && job_preferences["[j]"] != JP_MEDIUM && job_preferences["[j]"] != JP_HIGH)
+			job_preferences -= j
 
 	all_quirks = SANITIZE_LIST(all_quirks)
-	positive_quirks = SANITIZE_LIST(positive_quirks)
-	negative_quirks = SANITIZE_LIST(negative_quirks)
-	neutral_quirks = SANITIZE_LIST(neutral_quirks)
 
 	cit_character_pref_load(S)
 
@@ -431,22 +479,16 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	//Jobs
 	WRITE_FILE(S["joblessrole"]		, joblessrole)
-	WRITE_FILE(S["job_civilian_high"]	, job_civilian_high)
-	WRITE_FILE(S["job_civilian_med"]	, job_civilian_med)
-	WRITE_FILE(S["job_civilian_low"]	, job_civilian_low)
-	WRITE_FILE(S["job_medsci_high"]	, job_medsci_high)
-	WRITE_FILE(S["job_medsci_med"]		, job_medsci_med)
-	WRITE_FILE(S["job_medsci_low"]		, job_medsci_low)
-	WRITE_FILE(S["job_engsec_high"]	, job_engsec_high)
-	WRITE_FILE(S["job_engsec_med"]		, job_engsec_med)
-	WRITE_FILE(S["job_engsec_low"]		, job_engsec_low)
+	//Write prefs
+	WRITE_FILE(S["job_preferences"] , job_preferences)
 
 	//Quirks
 	WRITE_FILE(S["all_quirks"]			, all_quirks)
-	WRITE_FILE(S["positive_quirks"]		, positive_quirks)
-	WRITE_FILE(S["negative_quirks"]		, negative_quirks)
-	WRITE_FILE(S["neutral_quirks"]		, neutral_quirks)
 
+	//KEPLER CHANGE
+	WRITE_FILE(S["feature_moth_markings"]		, features["moth_markings"])
+
+	//Citadel
 	cit_character_pref_save(S)
 
 	return 1

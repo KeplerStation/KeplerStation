@@ -27,7 +27,7 @@
 			the_op.special_role = "Clown Operative"
 
 /datum/game_mode/nuclear/clown_ops/generate_report()
-	return "One of Central Command's trading routes was recently disrupted by a raid carried out by the Gorlex Marauders. They seemed to only be after one ship - a highly-sensitive \
+	return "One of the ICC's trading routes was recently disrupted by a raid carried out by the Gorlex Marauders. They seemed to only be after one ship - a highly-sensitive \
 			transport containing a bananium fission explosive, although it is useless without the proper code and authorization disk. While the code was likely found in minutes, the only disk that \
 			can activate this explosive is on your station. Ensure that it is protected at all times, and remain alert for possible intruders."
 
@@ -53,11 +53,10 @@
 /datum/outfit/syndicate/clownop/no_crystals
 	tc = 0
 
-/datum/outfit/syndicate/clownop/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/syndicate/clownop/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
 	if(visualsOnly)
 		return
-	H.dna.add_mutation(CLOWNMUT)
 	H.dna.add_mutation(SMILE)
 
 /datum/outfit/syndicate/clownop/leader

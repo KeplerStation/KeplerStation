@@ -113,11 +113,13 @@
 					return
 			log_game("[key_name(user)] activated a hidden grenade in [src].")
 			grenade.preprime(user, msg = FALSE, volume = 10)
+			SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT,"plushpet", /datum/mood_event/plushpet)
 	else
 		to_chat(user, "<span class='notice'>You try to pet [src], but it has no stuffing. Aww...</span>")
+		SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT,"plush_nostuffing", /datum/mood_event/plush_nostuffing)
 
 /obj/item/toy/plush/attackby(obj/item/I, mob/living/user, params)
-	if(I.is_sharp())
+	if(I.get_sharpness())
 		if(!grenade)
 			if(!stuffed)
 				to_chat(user, "<span class='warning'>You already murdered it!</span>")
@@ -125,6 +127,7 @@
 			user.visible_message("<span class='notice'>[user] tears out the stuffing from [src]!</span>", "<span class='notice'>You rip a bunch of the stuffing from [src]. Murderer.</span>")
 			I.play_tool_sound(src)
 			stuffed = FALSE
+			SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT,"plushjack", /datum/mood_event/plushjack)
 		else
 			to_chat(user, "<span class='notice'>You remove the grenade from [src].</span>")
 			user.put_in_hands(grenade)
@@ -147,6 +150,7 @@
 		return
 	if(istype(I, /obj/item/toy/plush))
 		love(I, user)
+		SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT,"plushplay", /datum/mood_event/plushplay)
 		return
 	return ..()
 
@@ -158,7 +162,7 @@
 
 	//we are not catholic
 	if(young == TRUE || Kisser.young == TRUE)
-		user.show_message("<span class='notice'>[src] plays tag with [Kisser].</span>", 1,
+		user.show_message("<span class='notice'>[src] plays tag with [Kisser].</span>", MSG_VISUAL,
 			"<span class='notice'>They're happy.</span>", 0)
 		Kisser.cheer_up()
 		cheer_up()
@@ -166,10 +170,10 @@
 	//never again
 	else if(Kisser in scorned)
 		//message, visible, alternate message, neither visible nor audible
-		user.show_message("<span class='notice'>[src] rejects the advances of [Kisser]!</span>", 1,
+		user.show_message("<span class='notice'>[src] rejects the advances of [Kisser]!</span>", MSG_VISUAL,
 			"<span class='notice'>That didn't feel like it worked.</span>", 0)
 	else if(src in Kisser.scorned)
-		user.show_message("<span class='notice'>[Kisser] realises who [src] is and turns away.</span>", 1,
+		user.show_message("<span class='notice'>[Kisser] realises who [src] is and turns away.</span>", MSG_VISUAL,
 			"<span class='notice'>That didn't feel like it worked.</span>", 0)
 
 	//first comes love
@@ -190,7 +194,7 @@
 			new_lover(Kisser)
 			Kisser.new_lover(src)
 		else
-			user.show_message("<span class='notice'>[src] rejects the advances of [Kisser], maybe next time?</span>", 1,
+			user.show_message("<span class='notice'>[src] rejects the advances of [Kisser], maybe next time?</span>", MSG_VISUAL,
 								"<span class='notice'>That didn't feel like it worked, this time.</span>", 0)
 
 	//then comes marriage
@@ -366,10 +370,10 @@
 /obj/item/toy/plush/random
 	name = "Illegal plushie"
 	desc = "Something fucked up"
+	var/blacklisted_plushes = list(/obj/item/toy/plush/carpplushie/dehy_carp, /obj/item/toy/plush/awakenedplushie, /obj/item/toy/plush/random)
 
 /obj/item/toy/plush/random/Initialize()
-	..()
-	var/newtype = pick(subtypesof(/obj/item/toy/plush))
+	var/newtype = pick(subtypesof(/obj/item/toy/plush) - typecacheof(blacklisted_plushes))
 	new newtype(loc)
 	return INITIALIZE_HINT_QDEL
 

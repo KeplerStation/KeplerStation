@@ -14,7 +14,7 @@ Assistant
 	minimal_access = list()	//See /datum/job/assistant/get_access()
 	outfit = /datum/outfit/job/assistant
 	antag_rep = 7
-
+	display_order = JOB_DISPLAY_ORDER_ASSISTANT
 
 /datum/job/assistant/get_access()
 	if(CONFIG_GET(flag/assistants_have_maint_access) || !CONFIG_GET(flag/jobs_have_minimal_access)) //Config has assistant maint access set
@@ -27,7 +27,7 @@ Assistant
 	name = "Assistant"
 	jobtype = /datum/job/assistant
 
-/datum/outfit/job/assistant/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/assistant/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
 	if (CONFIG_GET(flag/grey_assistants))
 		uniform = /obj/item/clothing/under/color/grey

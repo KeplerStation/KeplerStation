@@ -55,6 +55,10 @@
 /mob/proc/update_inv_wear_id()
 	return
 
+// KEPLER CHANGE: PDA Slots
+/mob/proc/update_inv_wear_pda()
+	return
+
 /mob/proc/update_inv_shoes()
 	return
 

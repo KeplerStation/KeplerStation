@@ -7,6 +7,8 @@
 
 #define STATUS_EFFECT_REPLACE 2 //if it allows only one, but new instances replace
 
+#define STATUS_EFFECT_REFRESH 3 // if it only allows one, and new instances just instead refresh the timer
+
 ///////////
 // BUFFS //
 ///////////
@@ -44,6 +46,8 @@
 
 #define STATUS_EFFECT_SLEEPING /datum/status_effect/incapacitating/sleeping //the affected is asleep
 
+#define STATUS_EFFECT_TASED /datum/status_effect/electrode //the affected has been tased, preventing fine muscle control
+
 #define STATUS_EFFECT_PACIFY /datum/status_effect/pacify //the affected is pacified, preventing direct hostile actions
 
 #define STATUS_EFFECT_BELLIGERENT /datum/status_effect/belligerent //forces the affected to walk, doing damage if they try to run
@@ -54,6 +58,8 @@
 #define MAX_MANIA_SEVERITY 100 //how high the mania severity can go
 #define MANIA_DAMAGE_TO_CONVERT 90 //how much damage is required before it'll convert affected targets
 
+#define STATUS_EFFECT_CHOKINGSTRAND /datum/status_effect/strandling //Choking Strand
+
 #define STATUS_EFFECT_HISWRATH /datum/status_effect/his_wrath //His Wrath.
 
 #define STATUS_EFFECT_SUMMONEDGHOST /datum/status_effect/cultghost //is a cult ghost and can't use manifest runes
@@ -61,6 +67,8 @@
 #define STATUS_EFFECT_CRUSHERMARK /datum/status_effect/crusher_mark //if struck with a proto-kinetic crusher, takes a ton of damage
 
 #define STATUS_EFFECT_SAWBLEED /datum/status_effect/saw_bleed //if the bleed builds up enough, takes a ton of damage
+
+#define STATUS_EFFECT_NECKSLICE /datum/status_effect/neck_slice //Creates the flavor messages for the neck-slice
 
 #define STATUS_EFFECT_NECROPOLIS_CURSE /datum/status_effect/necropolis_curse
 #define CURSE_BLINDING	1 //makes the edges of the target's screen obscured
@@ -71,6 +79,8 @@
 #define STATUS_EFFECT_KINDLE /datum/status_effect/kindle //A knockdown reduced by 1 second for every 3 points of damage the target takes.
 
 #define STATUS_EFFECT_ICHORIAL_STAIN /datum/status_effect/ichorial_stain //Prevents a servant from being revived by vitality matrices for one minute.
+
+#define STATUS_EFFECT_SPASMS /datum/status_effect/spasms //causes random muscle spasms
 
 /////////////
 // NEUTRAL //

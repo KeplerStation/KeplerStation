@@ -177,8 +177,8 @@
 /datum/map_template/shuttle/emergency/airless
 	suffix = "airless"
 	name = "Build your own shuttle kit"
-	description = "Save money by building your own shuttle! The chassis will dock upon purchase, but launch will have to be authorized as usual via shuttle call. Interior and atmosphere not included."
-	admin_notes = "No brig, no medical facilities, no air."
+	description = "Save money by building your own shuttle! The chassis will dock upon purchase, but launch will have to be authorized as usual via shuttle call. Interior and lighting not included."
+	admin_notes = "No brig, no medical facilities, just an empty box."
 	credit_cost = -7500
 
 /datum/map_template/shuttle/emergency/airless/prerequisites_met()
@@ -194,7 +194,7 @@
 /datum/map_template/shuttle/emergency/asteroid
 	suffix = "asteroid"
 	name = "Asteroid Station Emergency Shuttle"
-	description = "A respectable mid-sized shuttle that first saw service shuttling Nanotrasen crew to and from their asteroid belt embedded facilities."
+	description = "A respectable mid-sized shuttle that first saw service shuttling crew to and from their asteroid belt embedded facilities."
 	credit_cost = 3000
 
 /datum/map_template/shuttle/emergency/bar
@@ -222,14 +222,14 @@
 /datum/map_template/shuttle/emergency/luxury
 	suffix = "luxury"
 	name = "Luxury Shuttle"
-	description = "A luxurious golden shuttle complete with an indoor swimming pool. Each crewmember wishing to board must bring 500 credits, payable in cash and mineral coin."
-	admin_notes = "Due to the limited space for non paying crew, this shuttle may cause a riot."
-	credit_cost = 10000
+	description = "A luxurious golden shuttle complete with an indoor swimming pool. Entry is free, so long as you can afford the initial cost."
+	admin_notes = "Fancy, and very roomy!"
+	credit_cost = 17500
 
 /datum/map_template/shuttle/emergency/discoinferno
 	suffix = "discoinferno"
 	name = "Disco Inferno"
-	description = "The glorious results of centuries of plasma research done by Nanotrasen employees. This is the reason why you are here. Get on and dance like you're on fire, burn baby burn!"
+	description = "The glorious results of centuries of plasma research. This is the reason why you are here. Get on and dance like you're on fire, burn baby burn!"
 	admin_notes = "Flaming hot. The main area has a dance machine as well as plasma floor tiles that will be ignited by players every single time."
 	credit_cost = 10000
 
@@ -271,7 +271,7 @@
 /datum/map_template/shuttle/emergency/cramped
 	suffix = "cramped"
 	name = "Secure Transport Vessel 5 (STV5)"
-	description = "Well, looks like CentCom only had this ship in the area, they probably weren't expecting you to need evac for a while. \
+	description = "Well, looks like Head Office only had this ship in the area, they probably weren't expecting you to need evac for a while. \
 	Probably best if you don't rifle around in whatever equipment they were transporting. I hope you're friendly with your coworkers, because there is very little space in this thing.\n\
 	\n\
 	Contains contraband armory guns, maintenance loot, and abandoned crates!"
@@ -300,7 +300,7 @@
 	suffix = "syndicate"
 	name = "Syndicate GM Battlecruiser"
 	credit_cost = 20000
-	description = "Manufactured by the Gorlex Marauders, this cruiser has been specially designed with high occupancy in mind, while remaining robust in combat situations. Features a fully stocked EVA storage, armory, medbay, and bar!"
+	description = "(Emag only) Manufactured by the Gorlex Marauders, this cruiser has been specially designed with high occupancy in mind, while remaining robust in combat situations. Features a fully stocked EVA storage, armory, medbay, and bar!"
 	admin_notes = "An emag exclusive, stocked with syndicate equipment and turrets that will target any simplemob."
 
 /datum/map_template/shuttle/emergency/syndicate/prerequisites_met()
@@ -334,14 +334,19 @@
 	suffix = "supermatter"
 	name = "Hyperfractal Gigashuttle"
 	description = "\"I dunno, this seems kinda needlessly complicated.\"\n\
-	\"This shuttle has very a very high safety record, according to CentCom Officer Cadet Yins.\"\n\
+	\"This shuttle has very a very high safety record, according to Officer Cadet Yins.\"\n\
 	\"Are you sure?\"\n\
 	\"Yes, it has a safety record of N-A-N, which is apparently larger than 100%.\""
 	admin_notes = "Supermatter that spawns on shuttle is special anchored 'hugbox' supermatter that cannot take damage and does not take in or emit gas. \
 	Outside of admin intervention, it cannot explode. \
 	It does, however, still dust anything on contact, emits high levels of radiation, and induce hallucinations in anyone looking at it without protective goggles. \
 	Emitters spawn powered on, expect admin notices, they are harmless."
-	credit_cost = 100000
+	credit_cost = 15000
+
+/datum/map_template/shuttle/emergency/supermatter/prerequisites_met()
+	if("emagged" in SSshuttle.shuttle_purchase_requirements_met)
+		return TRUE
+	return FALSE
 
 /datum/map_template/shuttle/emergency/imfedupwiththisworld
 	suffix = "imfedupwiththisworld"
@@ -353,13 +358,13 @@
 
 /datum/map_template/shuttle/emergency/goon
 	suffix = "goon"
-	name = "NES Port"
-	description = "The Nanotrasen Emergency Shuttle Port(NES Port for short) is a shuttle used at other less known Nanotrasen facilities and has a more open inside for larger crowds, but fewer onboard shuttle facilities."
+	name = "HES Port"
+	description = "The Horizons Emergency Shuttle Port (HES Port for short) has a more open inside for larger crowds, but fewer onboard shuttle facilities."
 	credit_cost = 500
 
 /datum/map_template/shuttle/emergency/wabbajack
 	suffix = "wabbajack"
-	name = "NT Lepton Violet"
+	name = "HZ Lepton Violet"
 	description = "The research team based on this vessel went missing one day, and no amount of investigation could discover what happened to them. \
 	The only occupants were a number of dead rodents, who appeared to have clawed each other to death. \
 	Needless to say, no engineering team wanted to go near the thing, and it's only being used as an Emergency Escape Shuttle because there is literally nothing else available."
@@ -372,10 +377,21 @@
 	description = "On the smaller size with a modern design, this shuttle is for the crew who like the cosier things, while still being able to stretch their legs."
 	credit_cost = 1000
 
+/datum/map_template/shuttle/emergency/gorilla
+	suffix = "gorilla"
+	name = "Gorilla Cargo Freighter"
+	description = "(Emag only) A rustic, barely excuseable shuttle transporting important cargo. Not for crew who are about to go ape."
+	credit_cost = 2000
+
+/datum/map_template/shuttle/emergency/gorilla/prerequisites_met()
+	if("emagged" in SSshuttle.shuttle_purchase_requirements_met)
+		return TRUE
+	return FALSE
+
 /datum/map_template/shuttle/ferry/base
 	suffix = "base"
 	name = "transport ferry"
-	description = "Standard issue Box/Metastation CentCom ferry."
+	description = "Standard issue Box/Metastation ferry."
 
 /datum/map_template/shuttle/ferry/meat
 	suffix = "meat"
@@ -390,9 +406,9 @@
 	name = "The Lighthouse(?)"
 	description = "*static*... part of a much larger vessel, possibly military in origin. \
 	The weapon markings aren't anything we've seen ...static... by almost never the same person twice, possible use of unknown storage ...static... \
-	seeing ERT officers onboard, but no missions are on file for ...static...static...annoying jingle... only at The LIGHTHOUSE! \
+	seeing RRT officers onboard, but no missions are on file for ...static...static...annoying jingle... only at The LIGHTHOUSE! \
 	Fulfilling needs you didn't even know you had. We've got EVERYTHING, and something else!"
-	admin_notes = "Currently larger than ferry docking port on Box, will not hit anything, but must be force docked. Trader and ERT bodyguards are not included."
+	admin_notes = "Currently larger than ferry docking port on Box, will not hit anything, but must be force docked. Trader and RRT bodyguards are not included."
 
 /datum/map_template/shuttle/ferry/fancy
 	suffix = "fancy"
@@ -409,15 +425,15 @@
 
 /datum/map_template/shuttle/whiteship/pubby
 	suffix = "pubby"
-	name = "NT White UFO"
+	name = "HZ White UFO"
 
 /datum/map_template/shuttle/whiteship/cere
 	suffix = "cere"
-	name = "NT Construction Vessel"
+	name = "ICC Construction Vessel"
 
 /datum/map_template/shuttle/whiteship/delta
 	suffix = "delta"
-	name = "NT Frigate"
+	name = "ICC Frigate"
 
 /datum/map_template/shuttle/whiteship/pod
 	suffix = "whiteship_pod"
@@ -440,8 +456,8 @@
 
 /datum/map_template/shuttle/emergency/raven
 	suffix = "raven"
-	name = "CentCom Raven Battlecruiser"
-	description = "The CentCom Raven Battlecruiser is currently docked at the CentCom ship bay awaiting a mission, this Battlecruiser has been reassigned as an emergency escape shuttle for currently unknown reasons. The CentCom Raven Battlecruiser should comfortably fit a medium to large crew size crew and is complete with all required facitlities including a top of the range CentCom Medical Bay."
+	name = "Raven Battlecruiser"
+	description = "The Raven Battlecruiser is currently docked at the ship bay awaiting a mission, this Battlecruiser has been reassigned as an emergency escape shuttle for currently unknown reasons. The Raven Battlecruiser should comfortably fit a medium to large crew size crew and is complete with all required facitlities including a top of the range Medical Bay."
 	admin_notes = "Comes with turrets that will target any simplemob."
 	credit_cost = 12500
 

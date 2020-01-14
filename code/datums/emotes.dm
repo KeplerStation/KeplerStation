@@ -1,6 +1,3 @@
-#define EMOTE_VISIBLE 1
-#define EMOTE_AUDIBLE 2
-
 /datum/emote
 	var/key = "" //What calls the emote
 	var/key_third_person = "" //This will also call the emote
@@ -136,6 +133,10 @@
 		var/mob/living/L = user
 		if(HAS_TRAIT(L, TRAIT_EMOTEMUTE))
 			return FALSE
+	
+	if(user.nextemote >= world.time)
+		return FALSE
+	user.nextemote = world.time + 14
 
 /datum/emote/sound
 	var/sound //Sound to play when emote is called

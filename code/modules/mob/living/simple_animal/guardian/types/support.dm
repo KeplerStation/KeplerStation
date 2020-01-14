@@ -33,7 +33,7 @@
 		C.adjustBruteLoss(-5)
 		C.adjustFireLoss(-5)
 		C.adjustOxyLoss(-5)
-		C.adjustToxLoss(-5)
+		C.adjustToxLoss(-5, forced = TRUE)
 		var/obj/effect/temp_visual/heal/H = new /obj/effect/temp_visual/heal(get_turf(C))
 		if(namedatum)
 			H.color = namedatum.colour
@@ -108,8 +108,9 @@
 
 /mob/living/simple_animal/hostile/guardian/healer/AltClickOn(atom/movable/A)
 	if(!istype(A))
+		altclick_listed_turf(A)
 		return
-	if(src.loc == summoner)
+	if(loc == summoner)
 		to_chat(src, "<span class='danger'><B>You must be manifested to warp a target!</span></B>")
 		return
 	if(!beacon)

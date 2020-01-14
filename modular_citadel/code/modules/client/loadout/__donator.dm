@@ -430,7 +430,7 @@ datum/gear/darksabresheath
 	ckeywhitelist = list("maxlynchy")
 
 /datum/gear/csheet
-	name = "NT Bedsheet"
+	name = "Corporate Bedsheet"
 	category = SLOT_NECK
 	path = /obj/item/bedsheet/captain
 	ckeywhitelist = list("tikibomb")

@@ -42,7 +42,7 @@
 	Greetings, visitor, to  XCC-P5831! As you may know, this outpost was once \
 	used as Nanotrasen's CENTRAL COMMAND STATION, organizing and coordinating company \
 	projects across the vastness of space. <br>\
-	Since the completion of the much more efficient CC-A5831 on March 8, 2553, XCC-P5831 no longer \
+	Since the completion of the much more efficient A5831 on March 8, 2553, XCC-P5831 no longer \
 	acts as NT's base of operations but still plays a very important role its corporate affairs; \
 	serving as a supply and repair depot, as well as being host to its most important legal proceedings\
 	and the thrilling pay-per-view broadcasts of <i>PLASTEEL CHEF</i> and <i>THUNDERDOME LIVE</i>.<br> \

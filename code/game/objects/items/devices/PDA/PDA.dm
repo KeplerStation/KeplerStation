@@ -30,7 +30,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	righthand_file = 'icons/mob/inhands/misc/devices_righthand.dmi'
 	item_flags = NOBLUDGEON
 	w_class = WEIGHT_CLASS_TINY
-	slot_flags = ITEM_SLOT_ID | ITEM_SLOT_BELT
+	slot_flags = ITEM_SLOT_ID | ITEM_SLOT_BELT | ITEM_SLOT_PDA // KEPLER CHANGE: PDA Slots
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
@@ -103,13 +103,11 @@ GLOBAL_LIST_EMPTY(PDAs)
 
 /obj/item/pda/examine(mob/user)
 	. = ..()
-	var/dat = id ? "<span class='notice'>Alt-click to remove the id.</span>" : ""
-	
+	. += id ? "<span class='notice'>Alt-click to remove the id.</span>" : ""
 	if(inserted_item && (!isturf(loc)))
-		dat += "\n<span class='notice'>Ctrl-click to remove [inserted_item].</span>"
+		. += "<span class='notice'>Ctrl-click to remove [inserted_item].</span>"
 	if(LAZYLEN(GLOB.pda_reskins))
-		dat += "\n<span class='notice'>Ctrl-shift-click it to reskin it.</span>"
-	to_chat(user, dat)
+		. += "<span class='notice'>Ctrl-shift-click it to reskin it.</span>"
 
 /obj/item/pda/Initialize()
 	. = ..()
@@ -141,7 +139,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 
 	var/choice = input(M, "Choose the a reskin for [src]","Reskin Object") as null|anything in GLOB.pda_reskins
 	var/new_icon = GLOB.pda_reskins[choice]
-	if(QDELETED(src) || isnull(new_icon) || new_icon == icon || M.incapacitated() || !in_range(M,src))
+	if(QDELETED(src) || isnull(new_icon) || new_icon == icon || !M.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
 		return
 	icon = new_icon
 	update_icon(FALSE, TRUE)
@@ -163,7 +161,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 
 /obj/item/pda/equipped(mob/user, slot)
 	. = ..()
-	if(equipped)
+	if(equipped || !user.client)
 		return
 	if(user.client)
 		var/pref_skin = GLOB.pda_reskins[user.client.prefs.pda_skin]
@@ -183,6 +181,18 @@ GLOBAL_LIST_EMPTY(PDAs)
 
 /obj/item/pda/GetID()
 	return id
+
+/obj/item/pda/RemoveID()
+	return do_remove_id()
+
+/obj/item/pda/InsertID(obj/item/inserting_item)
+	var/obj/item/card/inserting_id = inserting_item.RemoveID()
+	if(!inserting_id)
+		return
+	insert_id(inserting_id)
+	if(id == inserting_id)
+		return TRUE
+	return FALSE
 
 /obj/item/pda/update_icon(alert = FALSE, new_overlays = FALSE)
 	if(new_overlays)
@@ -251,7 +261,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 					dat += text(" <a href='?src=[REF(src)];choice=UpdateInfo'>Update PDA Info</A><br>")
 
 				dat += "[STATION_TIME_TIMESTAMP("hh:mm:ss")]<br>" //:[world.time / 100 % 6][world.time / 100 % 10]"
-				dat += "[time2text(world.realtime, "MMM DD")] [GLOB.year_integer+540]"
+				dat += "[time2text(world.realtime, "MMM DD")] [GLOB.year_integer]"
 
 				dat += "<br><br>"
 
@@ -630,16 +640,28 @@ GLOBAL_LIST_EMPTY(PDAs)
 		U << browse(null, "window=pda")
 	return
 
-/obj/item/pda/proc/remove_id()
-
-	if(issilicon(usr) || !usr.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
+/obj/item/pda/proc/remove_id(mob/user)
+	if(issilicon(user) || !user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
 		return
+	do_remove_id(user)
 
-	if (id)
-		usr.put_in_hands(id)
-		to_chat(usr, "<span class='notice'>You remove the ID from the [name].</span>")
-		id = null
-		update_icon()
+/obj/item/pda/proc/do_remove_id(mob/user)
+	if(!id)
+		return
+	if(user)
+		user.put_in_hands(id)
+		to_chat(user, "<span class='notice'>You remove the ID from the [name].</span>")
+	else
+		id.forceMove(get_turf(src))
+
+	. = id
+	id = null
+	update_icon()
+
+	if(ishuman(loc))
+		var/mob/living/carbon/human/H = loc
+		if(H.wear_id == src)
+			H.sec_hud_set_ID()
 
 /obj/item/pda/proc/msg_input(mob/living/U = usr)
 	var/t = stripped_input(U, "Please enter message", name)
@@ -657,6 +679,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 		return
 	if((last_text && world.time < last_text + 10) || (everyone && last_everyone && world.time < last_everyone + PDA_SPAM_DELAY))
 		return
+	var/emoji_message = emoji_parse(message)
 	if(prob(1))
 		message += "\nSent from my PDA"
 	// Send the signal
@@ -677,7 +700,8 @@ GLOBAL_LIST_EMPTY(PDAs)
 		"name" = "[owner]",
 		"job" = "[ownjob]",
 		"message" = message,
-		"targets" = string_targets
+		"targets" = string_targets,
+		"emoji_message" = emoji_message
 	))
 	if (picture)
 		signal.data["photo"] = picture
@@ -694,13 +718,13 @@ GLOBAL_LIST_EMPTY(PDAs)
 	// Log it in our logs
 	tnote += "<i><b>&rarr; To [target_text]:</b></i><br>[signal.format_message()]<br>"
 	// Show it to ghosts
-	var/ghost_message = "<span class='name'>[owner] </span><span class='game say'>PDA Message</span> --> <span class='name'>[target_text]</span>: <span class='message'>[signal.format_message()]</span>"
+	var/ghost_message = "<span class='name'>[owner] </span><span class='game say'>PDA Message</span> --> <span class='name'>[target_text]</span>: <span class='message'>[signal.format_message(TRUE)]</span>"
 	for(var/mob/M in GLOB.player_list)
 		if(isobserver(M) && M.client && (M.client.prefs.chat_toggles & CHAT_GHOSTPDA))
 			to_chat(M, "[FOLLOW_LINK(M, user)] [ghost_message]")
 	// Log in the talk log
 	user.log_talk(message, LOG_PDA, tag="PDA: [initial(name)] to [target_text]")
-	to_chat(user, "<span class='info'>Message sent to [target_text]: \"[message]\"</span>")
+	to_chat(user, "<span class='info'>Message sent to [target_text]: \"[emoji_message]\"</span>")
 	if (!silent)
 		playsound(src, 'sound/machines/terminal_success.ogg', 15, 1)
 	// Reset the photo
@@ -730,7 +754,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 			hrefstart = "<a href='?src=[REF(L)];track=[html_encode(signal.data["name"])]'>"
 			hrefend = "</a>"
 
-		to_chat(L, "[icon2html(src)] <b>Message from [hrefstart][signal.data["name"]] ([signal.data["job"]])[hrefend], </b>[signal.format_message()] (<a href='byond://?src=[REF(src)];choice=Message;skiprefresh=1;target=[REF(signal.source)]'>Reply</a>)")
+		to_chat(L, "[icon2html(src)] <b>Message from [hrefstart][signal.data["name"]] ([signal.data["job"]])[hrefend], </b>[signal.format_message(TRUE)] (<a href='byond://?src=[REF(src)];choice=Message;skiprefresh=1;target=[REF(signal.source)]'>Reply</a>)")
 
 	update_icon(TRUE)
 
@@ -743,23 +767,23 @@ GLOBAL_LIST_EMPTY(PDAs)
 /obj/item/pda/proc/create_message(mob/living/U, obj/item/pda/P)
 	send_message(U,list(P))
 
-/obj/item/pda/AltClick()
-	..()
-
+/obj/item/pda/AltClick(mob/user)
+	. = ..()
 	if(id)
-		remove_id()
+		remove_id(user)
 		playsound(src, 'sound/machines/terminal_eject_disc.ogg', 50, 1)
 	else
-		remove_pen()
+		remove_pen(user)
 		playsound(src, 'sound/machines/button4.ogg', 50, 1)
+	return TRUE
 
-/obj/item/pda/CtrlClick()
+/obj/item/pda/CtrlClick(mob/user)
 	..()
 
 	if(isturf(loc)) //stops the user from dragging the PDA by ctrl-clicking it.
 		return
 
-	remove_pen()
+	remove_pen(user)
 
 /obj/item/pda/verb/verb_toggle_light()
 	set category = "Object"
@@ -773,7 +797,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	set src in usr
 
 	if(id)
-		remove_id()
+		remove_id(usr)
 	else
 		to_chat(usr, "<span class='warning'>This PDA does not have an ID in it!</span>")
 
@@ -812,23 +836,33 @@ GLOBAL_LIST_EMPTY(PDAs)
 /obj/item/pda/proc/id_check(mob/user, obj/item/card/id/I)
 	if(!I)
 		if(id && (src in user.contents))
-			remove_id()
+			remove_id(user)
 			return TRUE
 		else
 			var/obj/item/card/id/C = user.get_active_held_item()
 			if(istype(C))
 				I = C
 
-	if(I && I.registered_name)
+	if(I?.registered_name)
 		if(!user.transferItemToLoc(I, src))
 			return FALSE
-		var/obj/old_id = id
-		id = I
-		if(old_id)
-			user.put_in_hands(old_id)
+		insert_id(I, user)
 		update_icon()
 		playsound(src, 'sound/machines/button.ogg', 50, 1)
 	return TRUE
+
+/obj/item/pda/proc/insert_id(obj/item/card/id/inserting_id, mob/user)
+	var/obj/old_id = id
+	id = inserting_id
+	if(ishuman(loc))
+		var/mob/living/carbon/human/human_wearer = loc
+		if(human_wearer.wear_id == src)
+			human_wearer.sec_hud_set_ID()
+	if(old_id)
+		if(user)
+			user.put_in_hands(old_id)
+		else
+			old_id.forceMove(get_turf(src))
 
 // access to status display signals
 /obj/item/pda/attackby(obj/item/C, mob/user, params)
@@ -950,7 +984,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 
 	if (ismob(loc))
 		var/mob/M = loc
-		M.show_message("<span class='userdanger'>Your [src] explodes!</span>", 1)
+		M.show_message("<span class='userdanger'>Your [src] explodes!</span>", MSG_VISUAL, "<span class='warning'>You hear a loud *pop*!</span>", MSG_AUDIBLE)
 	else
 		visible_message("<span class='danger'>[src] explodes!</span>", "<span class='warning'>You hear a loud *pop*!</span>")
 

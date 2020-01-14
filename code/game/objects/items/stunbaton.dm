@@ -1,4 +1,5 @@
 #define STUNBATON_CHARGE_LENIENCY 0.3
+#define STUNBATON_DEPLETION_RATE 0.006
 
 /obj/item/melee/baton
 	name = "stunbaton"
@@ -35,7 +36,7 @@
 	. = ..()
 	if(preload_cell_type)
 		if(!ispath(preload_cell_type,/obj/item/stock_parts/cell))
-			log_world("### MAP WARNING, [src] at [AREACOORD(src)] had an invalid preload_cell_type: [preload_cell_type].")
+			log_mapping("[src] at [AREACOORD(src)] had an invalid preload_cell_type: [preload_cell_type].")
 		else
 			cell = new preload_cell_type(src)
 	update_icon()
@@ -76,7 +77,7 @@
 	update_icon()
 
 /obj/item/melee/baton/process()
-	deductcharge(hitcost * 0.004, FALSE, FALSE)
+	deductcharge(round(hitcost * STUNBATON_DEPLETION_RATE), FALSE, FALSE)
 
 /obj/item/melee/baton/update_icon()
 	if(status)
@@ -90,9 +91,9 @@
 	. = ..()
 	var/obj/item/stock_parts/cell/copper_top = get_cell()
 	if(copper_top)
-		to_chat(user, "<span class='notice'>\The [src] is [round(copper_top.percent())]% charged.</span>")
+		. += "<span class='notice'>\The [src] is [round(copper_top.percent())]% charged.</span>"
 	else
-		to_chat(user, "<span class='warning'>\The [src] does not have a power source installed.</span>")
+		. += "<span class='warning'>\The [src] does not have a power source installed.</span>"
 
 /obj/item/melee/baton/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/stock_parts/cell))
@@ -167,11 +168,9 @@
 
 
 /obj/item/melee/baton/proc/baton_stun(mob/living/L, mob/user)
-	if(ishuman(L))
-		var/mob/living/carbon/human/H = L
-		if(H.check_shields(src, 0, "[user]'s [name]", MELEE_ATTACK)) //No message; check_shields() handles that
-			playsound(L, 'sound/weapons/genhit.ogg', 50, 1)
-			return FALSE
+	if(L.check_shields(src, 0, "[user]'s [name]", MELEE_ATTACK)) //No message; check_shields() handles that
+		playsound(L, 'sound/weapons/genhit.ogg', 50, 1)
+		return FALSE
 	var/stunpwr = stunforce
 	var/obj/item/stock_parts/cell/our_cell = get_cell()
 	if(!our_cell)
@@ -251,3 +250,4 @@
 	. = ..()
 
 #undef STUNBATON_CHARGE_LENIENCY
+#undef STUNBATON_DEPLETION_RATE

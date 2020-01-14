@@ -23,7 +23,7 @@
 	icon = 'icons/turf/walls.dmi'
 	explosion_block = 50
 
-/turf/closed/indestructible/TerraformTurf(path, defer_change = FALSE, ignore_air = FALSE)
+/turf/closed/indestructible/TerraformTurf(path, new_baseturf, flags, defer_change = FALSE, ignore_air = FALSE)
 	return
 
 /turf/closed/indestructible/acid_act(acidpwr, acid_volume, acid_id)
@@ -110,7 +110,7 @@
 	underlays += mutable_appearance('icons/turf/floors.dmi', "plating") //add the plating underlay, below the grille
 
 /turf/closed/indestructible/fakedoor
-	name = "CentCom Access"
+	name = "Head Office Access"
 	icon = 'icons/obj/doors/airlocks/centcom/centcom.dmi'
 	icon_state = "fake_door"
 

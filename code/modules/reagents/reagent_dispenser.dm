@@ -57,6 +57,40 @@
 	reagent_id = "firefighting_foam"
 	tank_volume = 500
 
+/obj/structure/reagent_dispensers/water_cooler
+	name = "liquid cooler"
+	desc = "A machine that dispenses liquid to drink."
+	icon = 'icons/obj/vending.dmi'
+	icon_state = "water_cooler"
+	anchored = TRUE
+	tank_volume = 500
+	var/paper_cups = 25 //Paper cups left from the cooler
+
+/obj/structure/reagent_dispensers/water_cooler/examine(mob/user)
+	. = ..()
+	if (paper_cups > 1)
+		. += "There are [paper_cups] paper cups left."
+	else if (paper_cups == 1)
+		. += "There is one paper cup left."
+	else
+		. += "There are no paper cups left."
+
+/obj/structure/reagent_dispensers/water_cooler/attack_hand(mob/living/user)
+	. = ..()
+	if(.)
+		return
+	if(!paper_cups)
+		to_chat(user, "<span class='warning'>There aren't any cups left!</span>")
+		return
+	user.visible_message("<span class='notice'>[user] takes a cup from [src].</span>", "<span class='notice'>You take a paper cup from [src].</span>")
+	var/obj/item/reagent_containers/food/drinks/sillycup/S = new(get_turf(src))
+	user.put_in_hands(S)
+	paper_cups--
+
+//////////////
+//Fuel Tanks//
+//////////////
+
 /obj/structure/reagent_dispensers/fueltank
 	name = "fuel tank"
 	desc = "A tank full of industrial welding fuel. Do not consume."
@@ -131,37 +165,6 @@
 	if(prob(1))
 		desc = "IT'S PEPPER TIME, BITCH!"
 
-
-/obj/structure/reagent_dispensers/water_cooler
-	name = "liquid cooler"
-	desc = "A machine that dispenses liquid to drink."
-	icon = 'icons/obj/vending.dmi'
-	icon_state = "water_cooler"
-	anchored = TRUE
-	tank_volume = 500
-	var/paper_cups = 25 //Paper cups left from the cooler
-
-/obj/structure/reagent_dispensers/water_cooler/examine(mob/user)
-	..()
-	if (paper_cups > 1)
-		to_chat(user, "There are [paper_cups] paper cups left.")
-	else if (paper_cups == 1)
-		to_chat(user, "There is one paper cup left.")
-	else
-		to_chat(user, "There are no paper cups left.")
-
-/obj/structure/reagent_dispensers/water_cooler/attack_hand(mob/living/user)
-	. = ..()
-	if(.)
-		return
-	if(!paper_cups)
-		to_chat(user, "<span class='warning'>There aren't any cups left!</span>")
-		return
-	user.visible_message("<span class='notice'>[user] takes a cup from [src].</span>", "<span class='notice'>You take a paper cup from [src].</span>")
-	var/obj/item/reagent_containers/food/drinks/sillycup/S = new(get_turf(src))
-	user.put_in_hands(S)
-	paper_cups--
-
 /obj/structure/reagent_dispensers/beerkeg
 	name = "beer keg"
 	desc = "Beer is liquid bread, it's good for you..."
@@ -173,7 +176,6 @@
 	if(!QDELETED(src))
 		qdel(src)
 
-
 /obj/structure/reagent_dispensers/virusfood
 	name = "virus food dispenser"
 	desc = "A dispenser of low-potency virus mutagenic."
@@ -182,10 +184,22 @@
 	density = FALSE
 	reagent_id = "virusfood"
 
-
 /obj/structure/reagent_dispensers/cooking_oil
 	name = "vat of cooking oil"
 	desc = "A huge metal vat with a tap on the front. Filled with cooking oil for use in frying food."
 	icon_state = "vat"
 	anchored = TRUE
 	reagent_id = "cooking_oil"
+
+/obj/structure/reagent_dispensers/keg
+	name = "keg"
+	desc = "A keg."
+	icon = 'modular_citadel/icons/obj/objects.dmi'
+	icon_state = "keg"
+	reagent_id = "water"
+
+/obj/structure/reagent_dispensers/keg/mead
+	name = "keg of mead"
+	desc = "A keg of mead."
+	icon_state = "orangekeg"
+	reagent_id = "mead"

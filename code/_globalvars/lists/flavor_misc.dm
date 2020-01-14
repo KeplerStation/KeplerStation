@@ -35,6 +35,7 @@ GLOBAL_LIST_EMPTY(wings_list)
 GLOBAL_LIST_EMPTY(wings_open_list)
 GLOBAL_LIST_EMPTY(r_wings_list)
 GLOBAL_LIST_EMPTY(moth_wings_list)
+GLOBAL_LIST_EMPTY(moth_markings_list) //KEPLER CHANGE
 GLOBAL_LIST_EMPTY(caps_list)
 
 GLOBAL_LIST_INIT(ghost_forms_with_directions_list, list("ghost")) //stores the ghost forms that support directional sprites
@@ -44,10 +45,15 @@ GLOBAL_LIST_INIT(ai_core_display_screens, list(
 	":thinking:",
 	"Alien",
 	"Angel",
+	"Angryface",
+	"AtlantisCZE",
 	"Banned",
 	"Bliss",
 	"Blue",
-	"Clown",
+	"Boy",
+	"Boy-Malf",
+	"Girl",
+	"Girl-Malf",
 	"Database",
 	"Dorf",
 	"Firewall",
@@ -59,26 +65,42 @@ GLOBAL_LIST_INIT(ai_core_display_screens, list(
 	"Hades",
 	"Heartline",
 	"Helios",
+	"Horizons",
 	"House",
 	"Inverted",
+	"Jack",
 	"Matrix",
 	"Monochrome",
+	"Mothman",
 	"Murica",
-	"Nanotrasen",
 	"Not Malf",
+	"Patriot",
+	"Pirate",
 	"President",
-	"Random",
 	"Rainbow",
-	"Red",
+	"Clown",
+	"Random",
+	"Ravensdale",
 	"Red October",
+	"Red",
+	"Royal",
+	"Searif",
+	"Serithi",
+	"SilveryFerret",
+	"Smiley",
 	"Static",
 	"Syndicat Meow",
 	"TechDemon",
+	"Terminal",
 	"Text",
 	"Too Deep",
 	"Triumvirate",
 	"Triumvirate-M",
-	"Weird"))
+	"Wasp",
+	"Weird",
+	"Xerxes",
+	"Yes-Man"
+	))
 
 /proc/resolve_ai_icon(input)
 	if(!input || !(input in GLOB.ai_core_display_screens))

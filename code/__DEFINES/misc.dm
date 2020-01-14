@@ -65,6 +65,7 @@ Will print: "/mob/living/carbon/human/death" (you can optionally embed it in a s
 #define SHOES_LAYER				19
 #define GLOVES_LAYER			18
 #define EARS_LAYER				17
+#define SPLINT_LAYER			16
 #define SUIT_LAYER				15
 #define GLASSES_LAYER			13
 #define BELT_LAYER				12		//Possible make this an overlay of somethign required to wear a belt?
@@ -79,7 +80,7 @@ Will print: "/mob/living/carbon/human/death" (you can optionally embed it in a s
 #define HANDS_LAYER				3
 #define BODY_FRONT_LAYER		2
 #define FIRE_LAYER				1		//If you're on fire
-#define TOTAL_LAYERS			30		//KEEP THIS UP-TO-DATE OR SHIT WILL BREAK ;_;
+#define TOTAL_LAYERS			30		//KEEP THIS UP-TO-DATE OR SHIT WILL BREAK ;_;  // Affected note: Why the fuck does this add to 29, and why are some of these the same.
 
 //Human Overlay Index Shortcuts for alternate_worn_layer, layers
 //Because I *KNOW* somebody will think layer+1 means "above"
@@ -168,11 +169,21 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 #define BLOOD_LOSS_IN_SPREAD		20
 
 //Bloody shoe blood states
-#define BLOOD_STATE_HUMAN			"blood"
-#define BLOOD_STATE_XENO			"xeno"
+#define BLOOD_STATE_BLOOD			"blood"
 #define BLOOD_STATE_OIL				"oil"
 #define BLOOD_STATE_NOT_BLOODY		"no blood whatsoever"
 #define BLOOD_AMOUNT_PER_DECAL		20
+
+//Blood Decal Colors
+#define BLOOD_COLOR_HUMAN			"#dc0000"
+#define BLOOD_COLOR_XENO			"#94a83c"
+#define BLOOD_COLOR_OIL				"#301d02"
+#define BLOOD_COLOR_SYNTHETIC		"#3f48aa"
+#define BLOOD_COLOR_SLIME			"#00ff90"
+#define BLOOD_COLOR_LIZARD			"#db004D"
+#define BLOOD_COLOR_UNIVERSAL		"#db3300"
+#define BLOOD_COLOR_BUG				"#a37c0f"
+
 
 //suit sensors: sensor_mode defines
 
@@ -189,11 +200,12 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 #define LOCKED_SENSORS 2
 
 //Wet floor type flags. Stronger ones should be higher in number.
-#define TURF_DRY		0
-#define TURF_WET_WATER	1
-#define TURF_WET_PERMAFROST	2
-#define TURF_WET_ICE 4
-#define TURF_WET_LUBE	8
+#define TURF_DRY		(0)
+#define TURF_WET_WATER	(1<<0)
+#define TURF_WET_PERMAFROST	(1<<1)
+#define TURF_WET_ICE (1<<2)
+#define TURF_WET_LUBE	(1<<3)
+#define TURF_WET_SUPERLUBE	(1<<4)
 
 #define IS_WET_OPEN_TURF(O) O.GetComponent(/datum/component/wet_floor)
 
@@ -259,9 +271,11 @@ GLOBAL_LIST_INIT(ghost_others_options, list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DE
 #define PDA_SKIN_ALT "Holographic"
 #define PDA_SKIN_RUGGED "Rugged"
 #define PDA_SKIN_MODERN "Modern"
+#define PDA_SKIN_MINIMAL "Minimal"
 
 GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi', PDA_SKIN_ALT = 'icons/obj/pda_alt.dmi',
-								PDA_SKIN_RUGGED = 'icons/obj/pda_rugged.dmi', PDA_SKIN_MODERN = 'icons/obj/pda_modern.dmi'))
+								PDA_SKIN_RUGGED = 'icons/obj/pda_rugged.dmi', PDA_SKIN_MODERN = 'icons/obj/pda_modern.dmi',
+								PDA_SKIN_MINIMAL = 'icons/obj/pda_minimal.dmi'))
 
 /////////////////////////////////////
 // atom.appearence_flags shortcuts //
@@ -303,7 +317,7 @@ GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi', PDA_S
 #define MAP_MAXZ 6
 
 // Defib stats
-#define DEFIB_TIME_LIMIT 120
+#define DEFIB_TIME_LIMIT 1500
 #define DEFIB_TIME_LOSS 60
 
 // Diagonal movement
@@ -468,7 +482,7 @@ GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi', PDA_S
 #define PDAIMG(what) {"<span class="pda_icon pda16x16 [#what]"></span>   "}
 
 //Filters
-#define AMBIENT_OCCLUSION list("type"="drop_shadow","x"=0,"y"=-2,"size"=4,"border"=4,"color"="#04080FAA")
+#define AMBIENT_OCCLUSION list("type"="drop_shadow","x"=0,"y"=-2,"size"=4,"color"="#04080FAA")
 #define EYE_BLUR(size) list("type"="blur", "size"=size)
 #define GRAVITY_MOTION_BLUR list("type"="motion_blur","x"=0,"y"=0)
 
@@ -484,9 +498,30 @@ GLOBAL_LIST_INIT(pda_reskins, list(PDA_SKIN_CLASSIC = 'icons/obj/pda.dmi', PDA_S
 #define AREASELECT_CORNERA "corner A"
 #define AREASELECT_CORNERB "corner B"
 
+#define VARSET_FROM_LIST(L, V) if(L && L[#V]) V = L[#V]
+#define VARSET_FROM_LIST_IF(L, V, C...) if(L && L[#V] && (C)) V = L[#V]
+#define VARSET_TO_LIST(L, V) if(L) L[#V] = V
+#define VARSET_TO_LIST_IF(L, V, C...) if(L && (C)) L[#V] = V
+
 #define PREF_SAVELOAD_COOLDOWN 5
 
 #define VOMIT_TOXIC 1
 #define VOMIT_PURPLE 2
 
+// possible bitflag return values of intercept_zImpact(atom/movable/AM, levels = 1) calls
+#define FALL_INTERCEPTED		(1<<0) //Stops the movable from falling further and crashing on the ground
+#define FALL_NO_MESSAGE			(1<<1) //Used to suppress the "[A] falls through [old_turf]" messages where it'd make little sense at all, like going downstairs.
+#define FALL_STOP_INTERCEPTING	(1<<2) //Used in situations where halting the whole "intercept" loop would be better, like supermatter dusting (and thus deleting) the atom.
+
+//Misc text define. Does 4 spaces. Used as a makeshift tabulator.
+#define FOURSPACES "&nbsp;&nbsp;&nbsp;&nbsp;"
+
 #define CRYOMOBS 'icons/obj/cryo_mobs.dmi'
+
+// Bone flags
+#define BONE_FLAG_NO_BONES 0
+#define BONE_FLAG_NORMAL 1
+#define BONE_FLAG_BROKEN 2
+#define BONE_FLAG_SPLINTED 3
+
+#define CANT_REENTER_ROUND -1

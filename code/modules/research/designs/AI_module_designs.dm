@@ -42,7 +42,7 @@
 	desc = "Allows for the construction of a Quarantine AI Module."
 	id = "quarantine_module"
 	materials = list(MAT_GLASS = 1000, MAT_GOLD = 2000)
-	build_path = /obj/item/aiModule/supplied/quarantine
+	build_path = /obj/item/aiModule/core/full/quarantine
 	category = list("AI Modules")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
@@ -100,22 +100,31 @@
 	category = list("AI Modules")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
+/datum/design/board/crewsimov
+	name = "Core Module Design (Crewsimov)"
+	desc = "Allows for the construction of an Crewsimov AI Core Module."
+	id = "crewsimov_module"
+	materials = list(MAT_GLASS = 1000, MAT_DIAMOND = 2000)
+	build_path = /obj/item/aiModule/core/full/crewsimov
+	category = list("AI Modules")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
+
 /datum/design/board/asimov
 	name = "Core Module Design (Asimov)"
 	desc = "Allows for the construction of an Asimov AI Core Module."
 	id = "asimov_module"
 	materials = list(MAT_GLASS = 1000, MAT_DIAMOND = 2000)
-	build_path = /obj/item/aiModule/core/full/asimov
+	build_path = /obj/item/aiModule/core/full/crewsimov/asimov
 	category = list("AI Modules")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
-/datum/design/board/paladin_module
-	name = "Core Module Design (P.A.L.A.D.I.N.)"
-	desc = "Allows for the construction of a P.A.L.A.D.I.N. AI Core Module."
-	id = "paladin_module"
+/datum/design/board/horizons_module
+	name = "Core Module Design (Horizons)"
+	desc = "Allows for the construction of a Horizons AI Core Module."
+	id = "horizons_module"
 	build_type = IMPRINTER
 	materials = list(MAT_GLASS = 1000, MAT_DIAMOND = 2000)
-	build_path = /obj/item/aiModule/core/full/paladin
+	build_path = /obj/item/aiModule/core/full/horizons
 	category = list("AI Modules")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 

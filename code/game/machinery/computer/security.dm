@@ -25,7 +25,7 @@
 
 /obj/machinery/computer/secure_data/laptop
 	name = "security laptop"
-	desc = "A cheap Nanotrasen security laptop, it functions as a security records console. It's bolted to the table."
+	desc = "A cheap security laptop, it functions as a security records console. It's bolted to the table."
 	icon_state = "laptop"
 	icon_screen = "seclaptop"
 	icon_keyboard = "laptop_key"
@@ -35,7 +35,8 @@
 //Someone needs to break down the dat += into chunks instead of long ass lines.
 /obj/machinery/computer/secure_data/ui_interact(mob/user)
 	. = ..()
-	playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
+	if(isliving(user))
+		playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
 	if(src.z > 6)
 		to_chat(user, "<span class='boldannounce'>Unable to establish a connection</span>: \black You're too far away from the station!")
 		return
@@ -309,7 +310,7 @@ What a mess.*/
 					active1 = null
 					active2 = null
 					authenticated = M.client.holder.admin_signature
-					rank = "Central Command"
+					rank = "Head Office"
 					screen = 1
 				else if(I && check_access(I))
 					active1 = null
@@ -405,7 +406,7 @@ What a mess.*/
 				if(!( printing ))
 					var/wanted_name = stripped_input(usr, "Please enter an alias for the criminal:", "Print Wanted Poster", active1.fields["name"])
 					if(wanted_name)
-						var/default_description = "A poster declaring [wanted_name] to be a dangerous individual, wanted by Nanotrasen. Report any sightings to security immediately."
+						var/default_description = "A poster declaring [wanted_name] to be a dangerous individual. Report any sightings to security immediately."
 						var/list/major_crimes = active2.fields["ma_crim"]
 						var/list/minor_crimes = active2.fields["mi_crim"]
 						if(major_crimes.len + minor_crimes.len)
@@ -455,7 +456,7 @@ What a mess.*/
 				var/counter = 1
 				while(active2.fields[text("com_[]", counter)])
 					counter++
-				active2.fields[text("com_[]", counter)] = text("Made by [] ([]) on [] [], []<BR>[]", src.authenticated, src.rank, STATION_TIME_TIMESTAMP("hh:mm:ss"), time2text(world.realtime, "MMM DD"), GLOB.year_integer+540, t1)
+				active2.fields[text("com_[]", counter)] = text("Made by [] ([]) on [] [], []<BR>[]", src.authenticated, src.rank, STATION_TIME_TIMESTAMP("hh:mm:ss"), time2text(world.realtime, "MMM DD"), GLOB.year_integer, t1)
 
 			if("Delete Record (ALL)")
 				if(active1)
@@ -676,7 +677,7 @@ What a mess.*/
 							temp += "<li><a href='?src=[REF(src)];choice=Change Criminal Status;criminal2=released'>Discharged</a></li>"
 							temp += "</ul>"
 					if("rank")
-						var/list/L = list( "Head of Personnel", "Captain", "AI", "Central Command" )
+						var/list/L = list( "Head of Personnel", "Captain", "AI", "Head Office" )
 						//This was so silly before the change. Now it actually works without beating your head against the keyboard. /N
 						if((istype(active1, /datum/data/record) && L.Find(rank)))
 							temp = "<h5>Rank:</h5>"
@@ -801,7 +802,7 @@ What a mess.*/
 /obj/machinery/computer/secure_data/proc/canUseSecurityRecordsConsole(mob/user, message1 = 0, record1, record2)
 	if(user)
 		if(authenticated)
-			if(user.canUseTopic(src, BE_CLOSE))
+			if(user.canUseTopic(src, !issilicon(user)))
 				if(!trim(message1))
 					return 0
 				if(!record1 || record1 == active1)

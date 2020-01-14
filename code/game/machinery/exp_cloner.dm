@@ -1,7 +1,7 @@
 //Experimental cloner; clones a body regardless of the owner's status, letting a ghost control it instead
 /obj/machinery/clonepod/experimental
 	name = "experimental cloning pod"
-	desc = "An ancient cloning pod. It seems to be an early prototype of the experimental cloners used in Nanotrasen Stations."
+	desc = "An ancient cloning pod. It seems to be an early prototype of the experimental cloners used in many space stations."
 	icon = 'icons/obj/machines/cloning.dmi'
 	icon_state = "pod_0"
 	req_access = null
@@ -42,17 +42,18 @@
 	icon_state = "pod_1"
 	//Get the clone body ready
 	maim_clone(H)
-	ADD_TRAIT(H, TRAIT_STABLEHEART, "cloning")
-	ADD_TRAIT(H, TRAIT_EMOTEMUTE, "cloning")
-	ADD_TRAIT(H, TRAIT_MUTE, "cloning")
-	ADD_TRAIT(H, TRAIT_NOBREATH, "cloning")
-	ADD_TRAIT(H, TRAIT_NOCRITDAMAGE, "cloning")
+	ADD_TRAIT(H, TRAIT_STABLEHEART, CLONING_POD_TRAIT)
+	ADD_TRAIT(H, TRAIT_STABLELIVER, CLONING_POD_TRAIT)
+	ADD_TRAIT(H, TRAIT_EMOTEMUTE, CLONING_POD_TRAIT)
+	ADD_TRAIT(H, TRAIT_MUTE, CLONING_POD_TRAIT)
+	ADD_TRAIT(H, TRAIT_NOBREATH, CLONING_POD_TRAIT)
+	ADD_TRAIT(H, TRAIT_NOCRITDAMAGE, CLONING_POD_TRAIT)
 	H.Unconscious(80)
 
-	var/list/candidates = pollCandidatesForMob("Do you want to play as [clonename]'s defective clone?", null, null, null, 100, H)
+	var/list/candidates = pollCandidatesForMob("Do you want and agree to play as a [clonename]'s defective clone and respect their character?", null, null, null, 100, H, POLL_IGNORE_CLONE)
 	if(LAZYLEN(candidates))
 		var/mob/dead/observer/C = pick(candidates)
-		H.key = C.key
+		C.transfer_ckey(H)
 
 	if(grab_ghost_when == CLONER_FRESH_CLONE)
 		H.grab_ghost()

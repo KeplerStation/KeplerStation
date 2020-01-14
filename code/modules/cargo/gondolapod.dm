@@ -29,7 +29,7 @@
 	name = linked_pod.name
 	. = ..()
 
-/mob/living/simple_animal/pet/gondola/gondolapod/proc/update_icon()
+/mob/living/simple_animal/pet/gondola/gondolapod/update_icon_state()
 	if(opened)
 		icon_state = "gondolapod_open"
 	else
@@ -39,7 +39,14 @@
 	set name = "Release Contents"
 	set category = "Gondola"
 	set desc = "Release any contents stored within your vast belly."
-	linked_pod.open(src)
+	linked_pod.open(src, forced = TRUE)
+
+/mob/living/simple_animal/pet/gondola/gondolapod/examine(mob/user)
+	..()
+	if (contents.len)
+		to_chat(user, "<span class='notice'>It looks like it hasn't made its delivery yet.</b><span>")
+	else
+		to_chat(user, "<span class='notice'>It looks like it has already made its delivery.</b><span>")
 
 /mob/living/simple_animal/pet/gondola/gondolapod/verb/check()
 	set name = "Count Contents"

@@ -14,8 +14,8 @@
 	false_report_weight = 10
 	restricted_jobs = list("AI", "Cyborg")
 	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Head of Personnel", "Chief Engineer", "Chief Medical Officer", "Research Director", "Quartermaster")
-	required_players = 30
-	required_enemies = 2
+	required_players = 20
+	required_enemies = 1
 	recommended_enemies = 3
 	enemy_minimum_age = 14
 
@@ -195,7 +195,7 @@
 /datum/game_mode/revolution/generate_report()
 	return "Employee unrest has spiked in recent weeks, with several attempted mutinies on heads of staff. Some crew have been observed using flashbulb devices to blind their colleagues, \
 		who then follow their orders without question and work towards dethroning departmental leaders. Watch for behavior such as this with caution. If the crew attempts a mutiny, you and \
-		your heads of staff are fully authorized to execute them using lethal weaponry - they will be later cloned and interrogated at Central Command."
+		your heads of staff are fully authorized to execute them using lethal weaponry - they will be later cloned and interrogated at Head Office."
 
 /datum/game_mode/revolution/extended
 	name = "extended_revolution"

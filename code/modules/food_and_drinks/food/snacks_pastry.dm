@@ -38,9 +38,7 @@
 			if(M.mind && HAS_TRAIT(M.mind, TRAIT_LAW_ENFORCEMENT_METABOLISM) && !HAS_TRAIT(H, TRAIT_AGEUSIA))
 				to_chat(H,"<span class='notice'>I love this taste!</span>")
 				H.adjust_disgust(-5 + -2.5 * fraction)
-				GET_COMPONENT_FROM(mood, /datum/component/mood, H)
-				if(mood)
-					mood.add_event(null, "fav_food", /datum/mood_event/favorite_food)
+				SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "fav_food", /datum/mood_event/favorite_food)
 				last_check_time = world.time
 				return
 	..()
@@ -377,7 +375,7 @@
 	tastes = list("pastry" = 1, "sweetness" = 1)
 	foodtype = GRAIN
 
-#define PANCAKE_MAX_STACK 10
+#define PANCAKE_MAX_STACK 30
 
 /obj/item/reagent_containers/food/snacks/pancakes
 	name = "pancake"
@@ -438,11 +436,11 @@
 	if (pancakeCount)
 		var/obj/item/reagent_containers/food/snacks/S = contents[pancakeCount]
 		bitecount = S.bitecount
-	..()
+	. = ..()
 	if (pancakeCount)
 		for(var/obj/item/reagent_containers/food/snacks/pancakes/ING in contents)
 			ingredients_listed += "[ING.name], "
-		to_chat(user, "It contains [contents.len?"[ingredients_listed]":"no ingredient, "]on top of a [initial(name)].")
+		. += "It contains [contents.len?"[ingredients_listed]":"no ingredient, "]on top of a [initial(name)]."
 	bitecount = originalBites
 
 /obj/item/reagent_containers/food/snacks/pancakes/attackby(obj/item/I, mob/living/user, params)
@@ -456,13 +454,13 @@
 			to_chat(user, "<span class='notice'>You add the [I] to the [name].</span>")
 			P.name = initial(P.name)
 			contents += P
-			update_overlays(P)
+			update_snack_overlays(P)
 			if (P.contents.len)
 				for(var/V in P.contents)
 					P = V
 					P.name = initial(P.name)
 					contents += P
-					update_overlays(P)
+					update_snack_overlays(P)
 			P = I
 			clearlist(P.contents)
 		return
@@ -471,7 +469,7 @@
 		return O.attackby(I, user, params)
 	..()
 
-/obj/item/reagent_containers/food/snacks/pancakes/update_overlays(obj/item/reagent_containers/food/snacks/P)
+/obj/item/reagent_containers/food/snacks/pancakes/update_snack_overlays(obj/item/reagent_containers/food/snacks/P)
 	var/mutable_appearance/pancake = mutable_appearance(icon, "[P.item_state]_[rand(1,3)]")
 	pancake.pixel_x = rand(-1,1)
 	pancake.pixel_y = 3 * contents.len - 1

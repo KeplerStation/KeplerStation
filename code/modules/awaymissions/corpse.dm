@@ -17,6 +17,7 @@
 	var/faction = null
 	var/permanent = FALSE	//If true, the spawner will not disappear upon running out of uses.
 	var/random = FALSE		//Don't set a name or gender, just go random
+	var/antagonist_type
 	var/objectives = null
 	var/uses = 1			//how many times can we spawn from it. set to -1 for infinite.
 	var/brute_damage = 0
@@ -43,9 +44,8 @@
 		return
 	if(isobserver(user))
 		var/mob/dead/observer/O = user
-		if(!O.can_reenter_round)
-			to_chat(user, "<span class='warning'>You are unable to reenter the round.</span>")
-			return
+		if(!O.can_reenter_round())
+			return FALSE
 	var/ghost_role = alert(latejoinercalling ? "Latejoin as [mob_name]? (This is a ghost role, and as such, it's very likely to be off-station.)" : "Become [mob_name]? (Warning, You can no longer be cloned!)",,"Yes","No")
 	if(ghost_role == "No" || !loc)
 		return
@@ -111,9 +111,16 @@
 		if(show_flavour)
 			to_chat(M, "[flavour_text]")
 		var/datum/mind/MM = M.mind
+		var/datum/antagonist/A
+		if(antagonist_type)
+			A = MM.add_antag_datum(antagonist_type)
 		if(objectives)
+			if(!A)
+				A = MM.add_antag_datum(/datum/antagonist/custom)
 			for(var/objective in objectives)
-				MM.objectives += new/datum/objective(objective)
+				var/datum/objective/O = new/datum/objective(objective)
+				O.owner = MM
+				A.objectives += O
 		if(assignedrole)
 			M.mind.assigned_role = assignedrole
 		special(M, name)
@@ -158,6 +165,7 @@
 	var/neck = -1
 	var/backpack_contents = -1
 	var/suit_store = -1
+	var/pda_slot = -1
 
 	var/hair_style
 	var/facial_hair_style
@@ -195,7 +203,7 @@
 	H.update_hair()
 	H.update_body()
 	if(outfit)
-		var/static/list/slots = list("uniform", "r_hand", "l_hand", "suit", "shoes", "gloves", "ears", "glasses", "mask", "head", "belt", "r_pocket", "l_pocket", "back", "id", "neck", "backpack_contents", "suit_store")
+		var/static/list/slots = list("uniform", "r_hand", "l_hand", "suit", "shoes", "gloves", "ears", "glasses", "mask", "head", "belt", "r_pocket", "l_pocket", "back", "id", "neck", "backpack_contents", "suit_store", "pda_slot") // KEPLER CHANGE: PDA Slots
 		for(var/slot in slots)
 			var/T = vars[slot]
 			if(!isnum(T))
@@ -433,7 +441,7 @@
 	uniform = /obj/item/clothing/under/pants/youngfolksjeans
 	id = /obj/item/card/id
 
-/datum/outfit/beachbum/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/beachbum/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
 	if(visualsOnly)
 		return
@@ -464,7 +472,7 @@
 	outfit = /datum/outfit/nanotrasencommandercorpse
 
 /datum/outfit/nanotrasencommandercorpse
-	name = "Nanotrasen Private Security Commander"
+	name = "ICC Private Security Commander"
 	uniform = /obj/item/clothing/under/rank/centcom_commander
 	suit = /obj/item/clothing/suit/armor/bulletproof
 	ears = /obj/item/radio/headset/heads/captain
@@ -478,13 +486,13 @@
 
 
 /obj/effect/mob_spawn/human/nanotrasensoldier
-	name = "Nanotrasen Private Security Officer"
+	name = "ICC Private Security Officer"
 	id_job = "Private Security Force"
 	id_access_list = list(ACCESS_CENT_CAPTAIN, ACCESS_CENT_GENERAL, ACCESS_CENT_SPECOPS, ACCESS_CENT_MEDICAL, ACCESS_CENT_STORAGE, ACCESS_SECURITY)
 	outfit = /datum/outfit/nanotrasensoldiercorpse
 
 /datum/outfit/nanotrasensoldiercorpse
-	name = "NT Private Security Officer Corpse"
+	name = "ICC Private Security Officer Corpse"
 	uniform = /obj/item/clothing/under/rank/security
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
@@ -498,23 +506,23 @@
 /obj/effect/mob_spawn/human/commander/alive
 	death = FALSE
 	roundstart = FALSE
-	job_description = "Nanotrasen Commander"
-	mob_name = "Nanotrasen Commander"
+	job_description = "ICC Commander"
+	mob_name = "ICC Commander"
 	name = "sleeper"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	flavour_text = "<span class='big bold'>You are a Nanotrasen Commander!</span>"
+	flavour_text = "<span class='big bold'>You are an ICC Commander!</span>"
 
 /obj/effect/mob_spawn/human/nanotrasensoldier/alive
 	death = FALSE
 	roundstart = FALSE
 	mob_name = "Private Security Officer"
-	job_description = "Nanotrasen Security"
+	job_description = "ICC Security"
 	name = "sleeper"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	faction = "nanotrasenprivate"
-	flavour_text = "<span class='big bold'>You are a Nanotrasen Private Security Officer!</span>"
+	flavour_text = "<span class='big bold'>You are an ICC Private Security Officer!</span>"
 
 
 /////////////////Spooky Undead//////////////////////
@@ -587,3 +595,57 @@
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	suit = /obj/item/clothing/suit/armor/vest
 	glasses = /obj/item/clothing/glasses/sunglasses/reagent
+
+/obj/effect/mob_spawn/human/lavaknight
+	name = "odd cryogenics pod"
+	desc = "A humming cryo pod. You can barely recognise a faint glow underneath the built up ice. The machine is attempting to wake up its occupant."
+	mob_name = "a displaced knight from another dimension"
+	icon = 'icons/obj/machines/sleeper.dmi'
+	icon_state = "sleeper"
+	roundstart = FALSE
+	id_job = "Knight"
+	job_description = "Cydonian Knight"
+	death = FALSE
+	random = TRUE
+	outfit = /datum/outfit/lavaknight
+	mob_species = /datum/species/human
+	flavour_text = "<font size=3><b>Y</b></font><b>ou are a knight who conveniently has some form of retrograde amnesia. \
+	You cannot remember where you came from. However, a few things remain burnt into your mind, most prominently a vow to never harm another sapient being under any circumstances unless it is hellbent on ending your life. \
+	Remember: hostile creatures and such are fair game for attacking, but <span class='danger'>under no circumstances are you to attack anything capable of thought and/or speech</span> unless it has made it its life's calling to chase you to the ends of the earth."
+	assignedrole = "Cydonian Knight"
+
+/obj/effect/mob_spawn/human/lavaknight/special(mob/living/new_spawn)
+	if(ishuman(new_spawn))
+		var/mob/living/carbon/human/H = new_spawn
+		H.dna.features["mam_ears"] = "Cat, Big"	//cat people
+		H.dna.features["mcolor"] = H.hair_color
+		H.update_body()
+
+/obj/effect/mob_spawn/human/lavaknight/Destroy()
+	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
+	return ..()
+
+/datum/outfit/lavaknight
+	name = "Cydonian Knight"
+	uniform = /obj/item/clothing/under/assistantformal
+	mask = /obj/item/clothing/mask/breath
+	shoes = /obj/item/clothing/shoes/sneakers/black
+	r_pocket = /obj/item/melee/transforming/energy/sword/cx
+	suit = /obj/item/clothing/suit/space/hardsuit/lavaknight
+	suit_store = /obj/item/tank/internals/oxygen
+	id = /obj/item/card/id/knight/blue
+
+/obj/effect/mob_spawn/human/lavaknight/captain
+	name = "odd gilded cryogenics pod"
+	desc = "A humming cryo pod that appears to be gilded. You can barely recognise a faint glow underneath the built up ice. The machine is attempting to wake up its occupant."
+	flavour_text = "<font size=3><b>Y</b></font><b>ou are a knight who conveniently has some form of retrograde amnesia. \
+	You cannot remember where you came from. However, a few things remain burnt into your mind, most prominently a vow to never harm another sapient being under any circumstances unless it is hellbent on ending your life. \
+	Remember: hostile creatures and such are fair game for attacking, but <span class='danger'>under no circumstances are you to attack anything capable of thought and/or speech</span> unless it has made it its life's calling to chase you to the ends of the earth. \
+	You feel a natural instict to lead, and as such, you should strive to lead your comrades to safety, and hopefully home. You also feel a burning determination to uphold your vow, as well as your fellow comrade's."
+	outfit = /datum/outfit/lavaknight/captain
+	id_job = "Knight Captain"
+
+/datum/outfit/lavaknight/captain
+	name ="Cydonian Knight Captain"
+	l_pocket = /obj/item/twohanded/dualsaber/hypereutactic
+	id = /obj/item/card/id/knight/captain

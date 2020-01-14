@@ -32,7 +32,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	return TOXLOSS
 
 /obj/item/radio/headset/examine(mob/user)
-	..()
+	. = ..()
 
 	if(item_flags & IN_INVENTORY && loc == user)
 		// construction of frequency description
@@ -45,12 +45,12 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 					avail_chans += "use [MODE_TOKEN_DEPARTMENT] or [GLOB.channel_tokens[channels[i]]] for [lowertext(channels[i])]"
 				else
 					avail_chans += "use [GLOB.channel_tokens[channels[i]]] for [lowertext(channels[i])]"
-		to_chat(user, "<span class='notice'>A small screen on the headset displays the following available frequencies:\n[english_list(avail_chans)].")
+		. += "<span class='notice'>A small screen on the headset displays the following available frequencies:\n[english_list(avail_chans)]."
 
 		if(command)
-			to_chat(user, "<span class='info'>Alt-click to toggle the high-volume mode.</span>")
+			. += "<span class='info'>Alt-click to toggle the high-volume mode.</span>"
 	else
-		to_chat(user, "<span class='notice'>A small screen on the headset flashes, it's too small to read without holding or wearing the headset.</span>")
+		. += "<span class='notice'>A small screen on the headset flashes, it's too small to read without holding or wearing the headset.</span>"
 
 /obj/item/radio/headset/Initialize()
 	. = ..()
@@ -122,12 +122,6 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	desc = "When the engineers wish to chat like girls."
 	icon_state = "eng_headset"
 	keyslot = new /obj/item/encryptionkey/headset_eng
-
-/obj/item/radio/headset/headset_rob
-	name = "robotics radio headset"
-	desc = "Made specifically for the roboticists, who cannot decide between departments."
-	icon_state = "rob_headset"
-	keyslot = new /obj/item/encryptionkey/headset_rob
 
 /obj/item/radio/headset/headset_med
 	name = "medical radio headset"
@@ -232,8 +226,8 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	keyslot = new /obj/item/encryptionkey/headset_service
 
 /obj/item/radio/headset/headset_cent
-	name = "\improper CentCom headset"
-	desc = "A headset used by the upper echelons of Nanotrasen."
+	name = "\improper corporate headset"
+	desc = "A headset used by the upper echelons of corporations."
 	icon_state = "cent_headset"
 	keyslot = new /obj/item/encryptionkey/headset_com
 	keyslot2 = new /obj/item/encryptionkey/headset_cent
@@ -246,8 +240,8 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	keyslot = new /obj/item/encryptionkey/heads/captain
 
 /obj/item/radio/headset/headset_cent/alt
-	name = "\improper CentCom bowman headset"
-	desc = "A headset especially for emergency response personnel. Protects ears from flashbangs."
+	name = "\improper corporate bowman headset"
+	desc = "A headset especially for Rescue & Response personnel. Protects ears from flashbangs."
 	icon_state = "cent_headset_alt"
 	item_state = "cent_headset_alt"
 	keyslot = null
@@ -327,8 +321,10 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 		secure_radio_connections[ch_name] = add_radio(src, GLOB.radiochannels[ch_name])
 
 /obj/item/radio/headset/AltClick(mob/living/user)
+	. = ..()
 	if(!istype(user) || !Adjacent(user) || user.incapacitated())
 		return
 	if (command)
 		use_command = !use_command
 		to_chat(user, "<span class='notice'>You toggle high-volume mode [use_command ? "on" : "off"].</span>")
+		return TRUE

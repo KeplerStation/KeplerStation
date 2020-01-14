@@ -13,7 +13,7 @@
 #define ui_boxlang "EAST-5:22,SOUTH+1:6"
 
 //Filters
-#define CIT_FILTER_STAMINACRIT filter(type="drop_shadow", x=0, y=0, size=-3, border=0, color="#04080F")
+#define CIT_FILTER_STAMINACRIT filter(type="drop_shadow", x=0, y=0, size=-3, color="#04080F")
 
 //Individual logging define
 #define INDIVIDUAL_LOOC_LOG "LOOC log"
@@ -30,12 +30,6 @@
 
 //Citadel istypes
 #define isborer(A) (istype(A, /mob/living/simple_animal/borer))
-#define isipcperson(A) (is_species(A, /datum/species/ipc))
-#define ismammal(A) (is_species(A, /datum/species/mammal))
-#define isavian(A) (is_species(A, /datum/species/avian))
-#define isaquatic(A) (is_species(A, /datum/species/aquatic))
-#define isinsect(A) (is_species(A, /datum/species/insect))
-#define isxenoperson(A) (is_species(A, /datum/species/xeno))
 
 #define CITADEL_MENTOR_OOC_COLOUR "#224724"
 

@@ -9,6 +9,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	var/amount_per_transfer_from_this = 5
 	var/list/possible_transfer_amounts = list(5,10,15,20,25,30)
+	var/APTFT_altclick = TRUE //will the set amount_per_transfer_from_this proc be called on AltClick() ?
 	var/volume = 30
 	var/reagent_flags
 	var/list/list_reagents = null
@@ -17,18 +18,42 @@
 	var/spillable = FALSE
 	var/beaker_weakness_bitflag = NONE//Bitflag!
 	var/container_HP = 2
+	var/cached_icon
 
 /obj/item/reagent_containers/Initialize(mapload, vol)
 	. = ..()
 	if(isnum(vol) && vol > 0)
 		volume = vol
+	if(length(possible_transfer_amounts))
+		verbs += /obj/item/reagent_containers/proc/set_APTFT
 	create_reagents(volume, reagent_flags)
 	if(spawned_disease)
 		var/datum/disease/F = new spawned_disease()
-		var/list/data = list("viruses"= list(F))
+		var/list/data = list("blood_DNA" = "UNKNOWN DNA", "blood_type" = "SY","viruses"= list(F))
 		reagents.add_reagent("blood", disease_amount, data)
-
 	add_initial_reagents()
+
+/obj/item/reagent_containers/examine(mob/user)
+	. = ..()
+	if(length(possible_transfer_amounts) > 1)
+		. += "Currently transferring [amount_per_transfer_from_this] units per use."
+		if(APTFT_altclick && user.Adjacent(src))
+			. += "<span class='notice'>Alt-click it to set its transfer amount.</span>"
+
+/obj/item/reagent_containers/AltClick(mob/user)
+	. = ..()
+	if(APTFT_altclick && length(possible_transfer_amounts) > 1 && user.canUseTopic(src, BE_CLOSE, NO_DEXTERY))
+		set_APTFT()
+		return TRUE
+
+/obj/item/reagent_containers/proc/set_APTFT(mob/user) //set amount_per_transfer_from_this
+	set name = "Set Transfer Amount"
+	set category = "Object"
+	set waitfor = FALSE
+	var/N = input("Amount per transfer from this:","[src]") as null|anything in possible_transfer_amounts
+	if(N)
+		amount_per_transfer_from_this = N
+		to_chat(user, "<span class='notice'>[src]'s transfer amount is now [amount_per_transfer_from_this] units.</span>")
 
 /obj/item/reagent_containers/proc/add_initial_reagents()
 	if(list_reagents)
@@ -148,30 +173,75 @@
 /obj/item/reagent_containers/proc/temp_check()
 	if(beaker_weakness_bitflag & TEMP_WEAK)
 		if(reagents.chem_temp >= 444)//assuming polypropylene
-			var/list/seen = viewers(5, get_turf(src))
-			var/iconhtml = icon2html(src, seen)
-			for(var/mob/M in seen)
-				to_chat(M, "<span class='notice'>[iconhtml] \The [src]'s melts from the temperature!</span>")
-				playsound(get_turf(src), 'sound/FermiChem/heatmelt.ogg', 80, 1)
-				to_chat(M, "<span class='warning'><i>[iconhtml] Have you tried using glass or meta beakers for high temperature reactions? These are immune to temperature effects.</i></span>")
-			SSblackbox.record_feedback("tally", "fermi_chem", 1, "Times beakers have melted from temperature")
-			qdel(src)
+			START_PROCESSING(SSobj, src)
 
 //melts glass beakers
 /obj/item/reagent_containers/proc/pH_check()
 	if(beaker_weakness_bitflag & PH_WEAK)
-		if((reagents.pH < 0.5) || (reagents.pH > 13.5))
-			var/list/seen = viewers(5, get_turf(src))
-			var/iconhtml = icon2html(src, seen)
-			container_HP--
-			if(container_HP <= 0)
-				for(var/mob/M in seen)
-					to_chat(M, "<span class='notice'>[iconhtml] \The [src]'s melts from the extreme pH!</span>")
-					playsound(get_turf(src), 'sound/FermiChem/acidmelt.ogg', 80, 1)
-				SSblackbox.record_feedback("tally", "fermi_chem", 1, "Times beakers have melted from pH")
-				qdel(src)
+		if((reagents.pH < 1.5) || (reagents.pH > 12.5))
+			START_PROCESSING(SSobj, src)
+	else if((reagents.pH < -3) || (reagents.pH > 17))
+		visible_message("<span class='notice'>[icon2html(src, viewers(src))] \The [src] is damaged by the super pH and begins to deform!</span>")
+		reagents.pH = CLAMP(reagents.pH, -3, 17)
+		container_HP -= 1
+
+
+/obj/item/reagent_containers/process()
+	if(!cached_icon)
+		cached_icon = icon_state
+	var/damage
+	var/cause
+	if(beaker_weakness_bitflag & PH_WEAK)
+		if(reagents.pH < 2)
+			damage = (2 - reagents.pH)/20
+			cause = "from the extreme pH"
+			playsound(get_turf(src), 'sound/FermiChem/bufferadd.ogg', 50, 1)
+
+		if(reagents.pH > 12)
+			damage = (reagents.pH - 12)/20
+			cause = "from the extreme pH"
+			playsound(get_turf(src), 'sound/FermiChem/bufferadd.ogg', 50, 1)
+
+	if(beaker_weakness_bitflag & TEMP_WEAK)
+		if(reagents.chem_temp >= 444)
+			if(damage)
+				damage += (reagents.chem_temp/444)/5
 			else
-				for(var/mob/M in seen)
-					to_chat(M, "<span class='notice'>[iconhtml] \The [src]'s is damaged by the extreme pH and begins to deform!</span>")
-					playsound(get_turf(src), 'sound/FermiChem/bufferadd.ogg', 50, 1)
-					to_chat(M, "<span class='warning'><i>[iconhtml] Have you tried using plastic beakers (XL) or metabeakers for high pH reactions? These beakers are immune to pH effects.</i></span>")
+				damage = (reagents.chem_temp/444)/5
+			if(cause)
+				cause += " and "
+			cause += "from the high temperature"
+			playsound(get_turf(src), 'sound/FermiChem/heatdam.ogg', 50, 1)
+
+	if(!damage || damage <= 0)
+		STOP_PROCESSING(SSobj, src)
+
+	container_HP -= damage
+
+	var/list/seen = viewers(5, get_turf(src))
+	var/iconhtml = icon2html(src, seen)
+
+	var/damage_percent = ((container_HP / initial(container_HP)*100))
+	switch(damage_percent)
+		if(-INFINITY to 0)
+			for(var/mob/M in seen)
+				to_chat(M, "<span class='notice'>[iconhtml] \The [src]'s melts [cause]!</span>")
+				playsound(get_turf(src), 'sound/FermiChem/acidmelt.ogg', 80, 1)
+			SSblackbox.record_feedback("tally", "fermi_chem", 1, "Times beakers have melted")
+			STOP_PROCESSING(SSobj, src)
+			qdel(src)
+			return
+		if(0 to 35)
+			icon_state = "[cached_icon]_m3"
+			desc = "[initial(desc)] It is severely deformed."
+		if(35 to 70)
+			icon_state = "[cached_icon]_m2"
+			desc = "[initial(desc)] It is deformed."
+		if(70 to 85)
+			desc = "[initial(desc)] It is mildly deformed."
+			icon_state = "[cached_icon]_m1"
+
+	update_icon()
+	if(prob(25))
+		for(var/mob/M in seen)
+			to_chat(M, "<span class='notice'>[iconhtml] \The [src]'s is damaged by [cause] and begins to deform!</span>")

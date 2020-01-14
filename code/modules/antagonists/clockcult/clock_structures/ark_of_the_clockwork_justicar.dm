@@ -84,7 +84,7 @@
 	priority_announce("Massive [Gibberish("bluespace", 100)] anomaly detected on all frequencies. All crew are directed to \
 	@!$, [text2ratvar("PURGE ALL UNTRUTHS")] <&. the anomalies and destroy their source to prevent further damage to corporate property. This is \
 	not a drill.[grace_period ? " Estimated time of appearance: [grace_period] seconds. Use this time to prepare for an attack on [station_name()]." : ""]", \
-	"Central Command Higher Dimensional Affairs", 'sound/magic/clockwork/ark_activation.ogg')
+	"Head Office", 'sound/magic/clockwork/ark_activation.ogg')
 	set_security_level("delta")
 	for(var/V in SSticker.mode.servants_of_ratvar)
 		var/datum/mind/M = V
@@ -223,34 +223,34 @@
 
 /obj/structure/destructible/clockwork/massive/celestial_gateway/examine(mob/user)
 	icon_state = "spatial_gateway" //cheat wildly by pretending to have an icon
-	..()
+	. = ..()
 	icon_state = initial(icon_state)
 	if(is_servant_of_ratvar(user) || isobserver(user))
 		if(!active)
-			to_chat(user, "<span class='big'><b>Time until the Ark's activation:</b> [DisplayTimeText(get_arrival_time())]</span>")
+			. += "<span class='big'><b>Time until the Ark's activation:</b> [DisplayTimeText(get_arrival_time())]</span>"
 		else
 			if(grace_period)
-				to_chat(user, "<span class='big'><b>Crew grace period time remaining:</b> [DisplayTimeText(get_arrival_time())]</span>")
+				. += "<span class='big'><b>Crew grace period time remaining:</b> [DisplayTimeText(get_arrival_time())]</span>"
 			else
-				to_chat(user, "<span class='big'><b>Time until Ratvar's arrival:</b> [DisplayTimeText(get_arrival_time())]</span>")
+				. += "<span class='big'><b>Time until Ratvar's arrival:</b> [DisplayTimeText(get_arrival_time())]</span>"
 				switch(progress_in_seconds)
 					if(-INFINITY to GATEWAY_REEBE_FOUND)
-						to_chat(user, "<span class='heavy_brass'>The Ark is feeding power into the bluespace field.</span>")
+						. += "<span class='heavy_brass'>The Ark is feeding power into the bluespace field.</span>"
 					if(GATEWAY_REEBE_FOUND to GATEWAY_RATVAR_COMING)
-						to_chat(user, "<span class='heavy_brass'>The field is ripping open a copy of itself in Ratvar's prison.</span>")
+						. += "<span class='heavy_brass'>The field is ripping open a copy of itself in Ratvar's prison.</span>"
 					if(GATEWAY_RATVAR_COMING to INFINITY)
-						to_chat(user, "<span class='heavy_brass'>With the bluespace field established, Ratvar is preparing to come through!</span>")
+						. += "<span class='heavy_brass'>With the bluespace field established, Ratvar is preparing to come through!</span>"
 	else
 		if(!active)
-			to_chat(user, "<span class='warning'>Whatever it is, it doesn't seem to be active.</span>")
+			. += "<span class='warning'>Whatever it is, it doesn't seem to be active.</span>"
 		else
 			switch(progress_in_seconds)
 				if(-INFINITY to GATEWAY_REEBE_FOUND)
-					to_chat(user, "<span class='warning'>You see a swirling bluespace anomaly steadily growing in intensity.</span>")
+					. += "<span class='warning'>You see a swirling bluespace anomaly steadily growing in intensity.</span>"
 				if(GATEWAY_REEBE_FOUND to GATEWAY_RATVAR_COMING)
-					to_chat(user, "<span class='warning'>The anomaly is stable, and you can see flashes of something from it.</span>")
+					. += "<span class='warning'>The anomaly is stable, and you can see flashes of something from it.</span>"
 				if(GATEWAY_RATVAR_COMING to INFINITY)
-					to_chat(user, "<span class='boldwarning'>The anomaly is stable! Something is coming through!</span>")
+					. += "<span class='boldwarning'>The anomaly is stable! Something is coming through!</span>"
 
 /obj/structure/destructible/clockwork/massive/celestial_gateway/process()
 	if(seconds_until_activation == -1) //we never do anything

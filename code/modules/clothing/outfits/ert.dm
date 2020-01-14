@@ -1,16 +1,16 @@
 /datum/outfit/ert
-	name = "ERT Common"
+	name = "RRT Common"
 
 	uniform = /obj/item/clothing/under/rank/centcom_officer
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset/headset_cent/alt
 
-/datum/outfit/ert/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/ert/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	if(visualsOnly)
 		return
 
-	var/obj/item/implant/mindshield/L = new/obj/item/implant/mindshield(H)
+	var/obj/item/implant/mindshield/L = new
 	L.implant(H, null, 1)
 
 	var/obj/item/radio/R = H.ears
@@ -22,7 +22,7 @@
 	W.update_label(W.registered_name, W.assignment)
 
 /datum/outfit/ert/commander
-	name = "ERT Commander"
+	name = "RRT Commander"
 
 	id = /obj/item/card/id/ert/Commander
 	suit = /obj/item/clothing/suit/space/hardsuit/ert
@@ -35,7 +35,7 @@
 		/obj/item/gun/energy/e_gun=1)
 	l_pocket = /obj/item/switchblade
 
-/datum/outfit/ert/commander/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/ert/commander/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
 
 	if(visualsOnly)
@@ -45,8 +45,8 @@
 	R.recalculateChannels()
 
 /datum/outfit/ert/commander/alert
-	name = "ERT Commander - Amber Alert"
-	
+	name = "RRT Commander - Amber Alert"
+
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/alert
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	backpack_contents = list(/obj/item/storage/box/engineer=1,\
@@ -56,14 +56,14 @@
 	l_pocket = /obj/item/melee/transforming/energy/sword/saber
 
 /datum/outfit/ert/commander/alert/red
-	name = "ERT Commander - Red Alert"
+	name = "RRT Commander - Red Alert"
 	backpack_contents = list(/obj/item/storage/box/engineer=1,\
 		/obj/item/melee/baton/loaded=1,\
 		/obj/item/clothing/mask/gas/sechailer/swat=1,\
 		/obj/item/gun/energy/pulse/pistol/loyalpin=1)
 
 /datum/outfit/ert/security
-	name = "ERT Security"
+	name = "RRT Officer"
 
 	id = /obj/item/card/id/ert/Security
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/sec
@@ -76,7 +76,7 @@
 		/obj/item/gun/energy/e_gun/stun=1,\
 		/obj/item/melee/baton/loaded=1)
 
-/datum/outfit/ert/security/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/ert/security/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
 
 	if(visualsOnly)
@@ -87,8 +87,8 @@
 	R.recalculateChannels()
 
 /datum/outfit/ert/security/alert
-	name = "ERT Security - Amber Alert"
-	
+	name = "RRT Officer - Amber Alert"
+
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/alert/sec
 	backpack_contents = list(/obj/item/storage/box/engineer=1,\
 		/obj/item/storage/box/handcuffs=1,\
@@ -97,7 +97,7 @@
 		/obj/item/gun/energy/e_gun/stun=1)
 
 /datum/outfit/ert/security/alert/red
-	name = "ERT Security - Red Alert"
+	name = "RRT Officer - Red Alert"
 	backpack_contents = list(/obj/item/storage/box/engineer=1,\
 		/obj/item/storage/box/handcuffs=1,\
 		/obj/item/clothing/mask/gas/sechailer/swat=1,\
@@ -105,7 +105,7 @@
 		/obj/item/gun/energy/pulse/carbine/loyalpin=1)
 
 /datum/outfit/ert/medic
-	name = "ERT Medic"
+	name = "RRT Trauma Specialist"
 
 	id = /obj/item/card/id/ert/Medical
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/med
@@ -120,7 +120,7 @@
 		/obj/item/reagent_containers/hypospray/combat=1,\
 		/obj/item/gun/medbeam=1)
 
-/datum/outfit/ert/medic/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/ert/medic/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
 
 	if(visualsOnly)
@@ -131,7 +131,7 @@
 	R.recalculateChannels()
 
 /datum/outfit/ert/medic/alert
-	name = "ERT Medic - Amber Alert"
+	name = "RRT Trauma Specialist - Amber Alert"
 
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/alert/med
 	backpack_contents = list(/obj/item/storage/box/engineer=1,\
@@ -142,7 +142,7 @@
 		/obj/item/gun/medbeam=1)
 
 /datum/outfit/ert/medic/alert/red
-	name = "ERT Medic - Red Alert"
+	name = "RRT Trauma Specialist - Red Alert"
 	backpack_contents = list(/obj/item/storage/box/engineer=1,\
 		/obj/item/melee/baton/loaded=1,\
 		/obj/item/clothing/mask/gas/sechailer/swat=1,\
@@ -151,7 +151,7 @@
 		/obj/item/gun/medbeam=1)
 
 /datum/outfit/ert/engineer
-	name = "ERT Engineer"
+	name = "RRT Technician"
 
 	id = /obj/item/card/id/ert/Engineer
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/engi
@@ -166,7 +166,7 @@
 		/obj/item/gun/energy/e_gun=1,\
 		/obj/item/construction/rcd/loaded=1)
 
-/datum/outfit/ert/engineer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/ert/engineer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
 
 	if(visualsOnly)
@@ -177,7 +177,7 @@
 	R.recalculateChannels()
 
 /datum/outfit/ert/engineer/alert
-	name = "ERT Engineer - Amber Alert"
+	name = "RRT Technician - Amber Alert"
 
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/alert/engi
 	backpack_contents = list(/obj/item/storage/box/engineer=1,\
@@ -187,7 +187,7 @@
 		/obj/item/construction/rcd/combat=1)
 
 /datum/outfit/ert/engineer/alert/red
-	name = "ERT Engineer - Red Alert"
+	name = "RRT Technician - Red Alert"
 	backpack_contents = list(/obj/item/storage/box/engineer=1,\
 		/obj/item/melee/baton/loaded=1,\
 		/obj/item/clothing/mask/gas/sechailer/swat=1,\
@@ -214,7 +214,7 @@
 	l_hand = /obj/item/storage/toolbox/plastitanium
 	gloves = /obj/item/clothing/gloves/color/yellow
 
-/datum/outfit/ert/greybois/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/ert/greybois/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	if(visualsOnly)
 		return
 	var/obj/item/card/id/W = H.wear_id
@@ -224,7 +224,7 @@
 	W.update_label(W.registered_name, W.assignment)
 
 /datum/outfit/centcom_official
-	name = "CentCom Official"
+	name = "Head Office Official"
 
 	uniform = /obj/item/clothing/under/rank/centcom_officer
 	shoes = /obj/item/clothing/shoes/sneakers/black
@@ -238,20 +238,20 @@
 	l_hand = /obj/item/clipboard
 	id = /obj/item/card/id
 
-/datum/outfit/centcom_official/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/centcom_official/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	if(visualsOnly)
 		return
 
 	var/obj/item/pda/heads/pda = H.r_store
 	pda.owner = H.real_name
-	pda.ownjob = "CentCom Official"
+	pda.ownjob = "Head Office Official"
 	pda.update_label()
 
 	var/obj/item/card/id/W = H.wear_id
 	W.icon_state = "centcom"
-	W.access = get_centcom_access("CentCom Official")
+	W.access = get_centcom_access("Head Office Official")
 	W.access += ACCESS_WEAPONS
-	W.assignment = "CentCom Official"
+	W.assignment = "Head Office Official"
 	W.registered_name = H.real_name
 	W.update_label()
 
@@ -288,7 +288,7 @@
 		/obj/item/reagent_containers/hypospray/combat/heresypurge=1,
 		/obj/item/gun/medbeam=1)
 
-/datum/outfit/ert/chaplain/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/ert/chaplain/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()
 
 	if(visualsOnly)
@@ -299,7 +299,7 @@
 	R.recalculateChannels()
 
 /datum/outfit/ert/chaplain
-	name = "ERT Chaplain"
+	name = "RRT Chaplain"
 
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/paranormal/inquisitor // Chap role always gets this suit
 	id = /obj/item/card/id/ert/chaplain

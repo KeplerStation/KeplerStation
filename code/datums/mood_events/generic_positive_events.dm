@@ -23,10 +23,13 @@
 	mood_change = 3
 	timeout = 3000
 
-/datum/mood_event/pet_corgi
-	description = "<span class='nicegreen'>Corgis are adorable! I can't stop petting them!</span>\n"
-	mood_change = 3
-	timeout = 3000
+/datum/mood_event/pet_animal
+	description = "<span class='nicegreen'>Animals are adorable! I can't stop petting them!</span>\n"
+	mood_change = 2
+	timeout = 5 MINUTES
+
+/datum/mood_event/pet_animal/add_effects(mob/animal)
+	description = "<span class='nicegreen'>\The [animal.name] is adorable! I can't stop petting [animal.p_them()]!</span>\n"
 
 /datum/mood_event/honk
 	description = "<span class='nicegreen'>Maybe clowns aren't so bad after all. Honk!</span>\n"
@@ -113,3 +116,28 @@
 
 /datum/mood_event/happy_empath/add_effects(var/mob/happytarget)
 	description = "<span class='nicegreen'>[happytarget.name]'s happiness is infectious!</span>\n"
+
+/datum/mood_event/headpat
+	description = "<span class='nicegreen'>Headpats are nice.</span>\n"
+	mood_change = 2
+	timeout = 2 MINUTES
+
+/datum/mood_event/hugbox
+	description = "<span class='nicegreen'>I hugged a box of hugs recently.</span>\n"
+	mood_change = 1
+	timeout = 2 MINUTES
+
+/datum/mood_event/plushpet
+	description = "<span class='nicegreen'>I pet a plush recently.</span>\n"
+	mood_change = 1
+	timeout = 3000
+
+/datum/mood_event/plushplay
+	description = "<span class='nicegreen'>I've played with plushes recently.</span>\n"
+	mood_change = 3
+	timeout = 3000
+
+/datum/mood_event/hope_lavaland
+	description = "<span class='nicegreen'>What a peculiar emblem.  It makes me feel hopeful for my future.</span>\n"
+	mood_change = 5
+

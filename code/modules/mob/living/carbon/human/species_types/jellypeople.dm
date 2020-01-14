@@ -4,11 +4,11 @@
 	id = "jelly"
 	default_color = "00FF90"
 	say_mod = "chirps"
-	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR,NOBLOOD)
+	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR,NO_BONES,NOBLOOD)
 	mutantlungs = /obj/item/organ/lungs/slime
+	mutant_heart = /obj/item/organ/heart/slime
 	inherent_traits = list(TRAIT_TOXINLOVER)
 	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/slime
-	exotic_blood = "slimejelly"
 	damage_overlay_type = ""
 	var/datum/action/innate/regenerate_limbs/regenerate_limbs
 	var/datum/action/innate/slime_change/slime_change	//CIT CHANGE
@@ -386,7 +386,6 @@
 		around.</span>",
 		"<span class='notice'>...and move this one instead.</span>")
 
-
 ///////////////////////////////////LUMINESCENTS//////////////////////////////////////////
 
 //Luminescents are able to consume and use slime extracts, without them decaying.
@@ -589,17 +588,16 @@
 	link_minds = new(src)
 	link_minds.Grant(C)
 	slimelink_owner = C
-	link_mob(C)
+	link_mob(C, TRUE)
 
-/datum/species/jelly/stargazer/proc/link_mob(mob/living/M)
-	if(QDELETED(M) || M.stat == DEAD)
+/datum/species/jelly/stargazer/proc/link_mob(mob/living/M, selflink = FALSE)
+	if(QDELETED(M) || (M in linked_mobs))
 		return FALSE
-	if(HAS_TRAIT(M, TRAIT_MINDSHIELD)) //mindshield implant, no dice
-		return FALSE
-	if(M in linked_mobs)
+	if(!selflink && (M.stat == DEAD || HAS_TRAIT(M, TRAIT_MINDSHIELD) || M.anti_magic_check(FALSE, FALSE, TRUE, 0)))
 		return FALSE
 	linked_mobs.Add(M)
-	to_chat(M, "<span class='notice'>You are now connected to [slimelink_owner.real_name]'s Slime Link.</span>")
+	if(!selflink)
+		to_chat(M, "<span class='notice'>You are now connected to [slimelink_owner.real_name]'s Slime Link.</span>")
 	var/datum/action/innate/linked_speech/action = new(src)
 	linked_actions.Add(action)
 	action.Grant(M)
@@ -681,9 +679,14 @@
 	var/mob/living/M = input("Select who to send your message to:","Send thought to?",null) as null|mob in options
 	if(!M)
 		return
-
+	if(M.anti_magic_check(FALSE, FALSE, TRUE, 0))
+		to_chat(H, "<span class='notice'>As you try to communicate with [M], you're suddenly stopped by a vision of a massive tinfoil wall that streches beyond visible range. It seems you've been foiled.</span>")
+		return
 	var/msg = sanitize(input("Message:", "Telepathy") as text|null)
 	if(msg)
+		if(M.anti_magic_check(FALSE, FALSE, TRUE, 0))
+			to_chat(H, "<span class='notice'>As you try to communicate with [M], you're suddenly stopped by a vision of a massive tinfoil wall that streches beyond visible range. It seems you've been foiled.</span>")
+			return
 		log_directed_talk(H, M, msg, LOG_SAY, "slime telepathy")
 		to_chat(M, "<span class='notice'>You hear an alien voice in your head... </span><font color=#008CA2>[msg]</font>")
 		to_chat(H, "<span class='notice'>You telepathically said: \"[msg]\" to [M]</span>")

@@ -27,6 +27,7 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/suit/hooded/explorer/standard
+	hoodtype = /obj/item/clothing/head/hooded/explorer/standard
 
 /obj/item/clothing/head/hooded/explorer/standard
 
@@ -127,7 +128,7 @@
 
 /obj/item/clothing/suit/hooded/explorer/seva
 	name = "SEVA Suit"
-	desc = "A fire-proof suit for exploring hot environments."
+	desc = "A fire-proof suit for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
 	icon_state = "seva"
 	item_state = "seva"
 	w_class = WEIGHT_CLASS_BULKY
@@ -139,7 +140,7 @@
 
 /obj/item/clothing/head/hooded/explorer/seva
 	name = "SEVA Hood"
-	desc = "A fire-proof hood for exploring hot environments."
+	desc = "A fire-proof hood for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
 	icon_state = "seva"
 	item_state = "seva"
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
@@ -157,7 +158,7 @@
 
 /obj/item/clothing/suit/hooded/explorer/exo
 	name = "Exo-suit"
-	desc = "A robust suit for exploring dangerous environments."
+	desc = "A robust suit for fighting dangerous animals. Its design and material make it harder for a Goliath to keep their grip on the wearer."
 	icon_state = "exo"
 	item_state = "exo"
 	w_class = WEIGHT_CLASS_BULKY
@@ -168,7 +169,7 @@
 
 /obj/item/clothing/head/hooded/explorer/exo
 	name = "Exo-hood"
-	desc = "A robust helmet for exploring dangerous environments."
+	desc = "A robust helmet for fighting dangerous animals. Its design and material make it harder for a Goliath to keep their grip on the wearer."
 	icon_state = "exo"
 	item_state = "exo"
 	armor = list("melee" = 65, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 60, "bio" = 25, "rad" = 10, "fire" = 0, "acid" = 0)

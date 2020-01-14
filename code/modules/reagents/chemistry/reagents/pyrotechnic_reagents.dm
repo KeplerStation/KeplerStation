@@ -19,6 +19,7 @@
 /datum/reagent/nitroglycerin
 	name = "Nitroglycerin"
 	id = "nitroglycerin"
+	value = 5
 	description = "Nitroglycerin is a heavy, colorless, oily, explosive liquid obtained by nitrating glycerol."
 	color = "#808080" // rgb: 128, 128, 128
 	taste_description = "oil"
@@ -29,6 +30,7 @@
 	description = "Keeps unstable chemicals stable. This does not work on everything."
 	reagent_state = LIQUID
 	color = "#FFFF00"
+	value = 3
 	taste_description = "metal"
 
 /datum/reagent/clf3
@@ -51,7 +53,7 @@
 	if(isplatingturf(T))
 		var/turf/open/floor/plating/F = T
 		if(prob(10 + F.burnt + 5*F.broken)) //broken or burnt plating is more susceptible to being destroyed
-			F.ScrapeAway()
+			F.ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 	if(isfloorturf(T))
 		var/turf/open/floor/F = T
 		if(prob(reac_volume))
@@ -89,6 +91,7 @@
 	description = "Sucks everything into the detonation point."
 	reagent_state = LIQUID
 	color = "#210021"
+	value = 10
 	taste_description = "compressed bitterness"
 
 /datum/reagent/blackpowder
@@ -97,6 +100,7 @@
 	description = "Explodes. Violently."
 	reagent_state = LIQUID
 	color = "#000000"
+	value = 5
 	metabolization_rate = 0.05
 	taste_description = "salt"
 
@@ -164,6 +168,7 @@
 	description = "Very flammable."
 	reagent_state = LIQUID
 	color = "#FA00AF"
+	value = 1
 	taste_description = "burning"
 
 /datum/reagent/napalm/on_mob_life(mob/living/carbon/M)
@@ -251,7 +256,7 @@
 /datum/reagent/firefighting_foam
 	name = "Firefighting Foam"
 	id = "firefighting_foam"
-	description = "A historical fire suppressant. Originally believed to simply displace oxygen to starve fires, it actually interferes with the combustion reaction itself. Vastly superior to the cheap water-based extinguishers found on NT vessels."
+	description = "A historical fire suppressant. Originally believed to simply displace oxygen to starve fires, it actually interferes with the combustion reaction itself. Vastly superior to the cheap water-based extinguishers found on vessels."
 	reagent_state = LIQUID
 	color = "#A6FAFF55"
 	taste_description = "the inside of a fire extinguisher"

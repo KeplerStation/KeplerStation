@@ -16,7 +16,7 @@
 	else if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		//if they are holding or wearing a card that has access, that works
-		if(check_access(H.get_active_held_item()) || src.check_access(H.wear_id))
+		if(check_access(H.get_active_held_item()) || src.check_access(H.wear_id) || check_access(H.wear_pda))
 			return TRUE
 	else if(ismonkey(M) || isalienadult(M))
 		var/mob/living/carbon/george = M
@@ -35,6 +35,12 @@
 /obj/item/proc/GetID()
 	return null
 
+/obj/item/proc/RemoveID()
+	return null
+
+/obj/item/proc/InsertID()
+	return FALSE
+	
 /obj/proc/text2access(access_text)
 	. = list()
 	if(!access_text)
@@ -95,7 +101,7 @@
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_LIVING, ACCESS_CENT_STORAGE)
 		if("Thunderdome Overseer")
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_THUNDER)
-		if("CentCom Official")
+		if("Head Office Official")
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_LIVING)
 		if("Medical Officer")
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_LIVING, ACCESS_CENT_MEDICAL)
@@ -105,23 +111,23 @@
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_SPECOPS, ACCESS_CENT_MEDICAL, ACCESS_CENT_TELEPORTER, ACCESS_CENT_STORAGE)
 		if("Special Ops Officer")
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_THUNDER, ACCESS_CENT_SPECOPS, ACCESS_CENT_LIVING, ACCESS_CENT_STORAGE)
-		if("Admiral")
+		if("Director")
 			return get_all_centcom_access()
-		if("CentCom Commander")
+		if("Head Officer Administrator")
 			return get_all_centcom_access()
-		if("Emergency Response Team Commander")
+		if("Rescue & Response Commander")
 			return get_ert_access("commander")
-		if("Security Response Officer")
+		if("Rescue & Response Officer")
 			return get_ert_access("sec")
-		if("Engineer Response Officer")
+		if("Rescue & Response Technician")
 			return get_ert_access("eng")
-		if("Medical Response Officer")
+		if("Rescue & Response Trauma Specialist")
 			return get_ert_access("med")
-		if("CentCom Bartender")
+		if("Head Office Bartender")
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_LIVING, ACCESS_CENT_BAR)
 
 /proc/get_all_accesses()
-	return list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_FORENSICS_LOCKERS, ACCESS_COURT,
+	return list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_FORENSICS_LOCKERS, ACCESS_COURT, ACCESS_ENTER_GENPOP, ACCESS_LEAVE_GENPOP,
 	            ACCESS_MEDICAL, ACCESS_GENETICS, ACCESS_MORGUE, ACCESS_RD,
 	            ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_CHEMISTRY, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_MAINT_TUNNELS,
 	            ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CHANGE_IDS, ACCESS_AI_UPLOAD,
@@ -157,7 +163,7 @@
 		if(1) //station general
 			return list(ACCESS_KITCHEN,ACCESS_BAR, ACCESS_HYDROPONICS, ACCESS_JANITOR, ACCESS_CHAPEL_OFFICE, ACCESS_CREMATORIUM, ACCESS_LIBRARY, ACCESS_THEATRE, ACCESS_LAWYER)
 		if(2) //security
-			return list(ACCESS_SEC_DOORS, ACCESS_WEAPONS, ACCESS_SECURITY, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_FORENSICS_LOCKERS, ACCESS_COURT, ACCESS_HOS)
+			return list(ACCESS_SEC_DOORS, ACCESS_WEAPONS, ACCESS_SECURITY, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_FORENSICS_LOCKERS, ACCESS_COURT, ACCESS_HOS, ACCESS_ENTER_GENPOP, ACCESS_LEAVE_GENPOP,)
 		if(3) //medbay
 			return list(ACCESS_MEDICAL, ACCESS_GENETICS, ACCESS_CLONING, ACCESS_MORGUE, ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_SURGERY, ACCESS_CMO)
 		if(4) //research
@@ -195,13 +201,13 @@
 		if(ACCESS_CARGO_BOT)
 			return "Delivery Chutes"
 		if(ACCESS_SECURITY)
-			return "Security"
+			return "Security Equipment"
 		if(ACCESS_BRIG)
-			return "Holding Cells"
+			return "Holding Cells and Prisoner Management"
 		if(ACCESS_COURT)
 			return "Courtroom"
 		if(ACCESS_FORENSICS_LOCKERS)
-			return "Forensics"
+			return "Forensics Lockers"
 		if(ACCESS_MEDICAL)
 			return "Medical"
 		if(ACCESS_GENETICS)
@@ -239,7 +245,7 @@
 		if(ACCESS_EVA)
 			return "EVA"
 		if(ACCESS_HEADS)
-			return "Bridge"
+			return "Bridge and Command Equipment"
 		if(ACCESS_CAPTAIN)
 			return "Captain"
 		if(ACCESS_ALL_PERSONAL_LOCKERS)
@@ -311,7 +317,11 @@
 		if(ACCESS_GATEWAY)
 			return "Gateway"
 		if(ACCESS_SEC_DOORS)
-			return "Brig"
+			return "Security SubDepartment Doors"
+		if(ACCESS_ENTER_GENPOP)
+			return "Prison Turnstile Entrance"
+		if(ACCESS_LEAVE_GENPOP)
+			return "Prison Turnstile Exit"
 		if(ACCESS_MINERAL_STOREROOM)
 			return "Mineral Storage"
 		if(ACCESS_MINISAT)
@@ -354,7 +364,7 @@
 	return get_all_jobs() + list("Prisoner")
 
 /proc/get_all_centcom_jobs()
-	return list("VIP Guest","Custodian","Thunderdome Overseer","CentCom Official","Medical Officer","Death Commando","Research Officer","Special Ops Officer","Admiral","CentCom Commander","Emergency Response Team Commander","Security Response Officer","Engineer Response Officer", "Medical Response Officer","CentCom Bartender")
+	return list("VIP Guest","Custodian","Thunderdome Overseer","Head Office Official","Medical Officer","Death Commando","Research Officer","Special Ops Officer","Director","Head Office Administrator","Rescue & Response Commander","Rescue & Response Officer","Rescue & Response Technician", "Rescue & Response Trauma Specialist","Head Office Bartender")
 
 /obj/item/proc/GetJobName() //Used in secHUD icon generation
 	var/obj/item/card/id/I = GetID()

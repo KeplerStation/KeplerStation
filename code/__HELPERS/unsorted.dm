@@ -451,10 +451,6 @@ Turf and target are separate in case you want to teleport some distance from a t
 	var/y = min(world.maxy, max(1, A.y + dy))
 	return locate(x,y,A.z)
 
-/proc/arctan(x)
-	var/y=arcsin(x/sqrt(1+x*x))
-	return y
-
 /*
 	Gets all contents of contents and returns them all in a list.
 */
@@ -756,22 +752,11 @@ Turf and target are separate in case you want to teleport some distance from a t
 		loc = loc.loc
 	return null
 
-
 //For objects that should embed, but make no sense being is_sharp or is_pointed()
 //e.g: rods
 GLOBAL_LIST_INIT(can_embed_types, typecacheof(list(
 	/obj/item/stack/rods,
 	/obj/item/pipe)))
-
-/proc/can_embed(obj/item/W)
-	if(W.is_sharp())
-		return 1
-	if(is_pointed(W))
-		return 1
-
-	if(is_type_in_typecache(W, GLOB.can_embed_types))
-		return 1
-
 
 /*
 Checks if that loc and dir has an item on the wall
@@ -1550,3 +1535,15 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	for(var/i in L)
 		if(condition.Invoke(i))
 			. |= i
+
+/proc/CallAsync(datum/source, proctype, list/arguments)
+	set waitfor = FALSE
+	return call(source, proctype)(arglist(arguments))
+
+/proc/num2sign(numeric)
+	if(numeric > 0)
+		return 1
+	else if(numeric < 0)
+		return -1
+	else
+		return 0

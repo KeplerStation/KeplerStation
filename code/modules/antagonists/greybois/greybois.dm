@@ -10,7 +10,7 @@
 
 /datum/antagonist/greybois/greet()
 	to_chat(owner, "<B><font size=3 color=red>You are an Emergency Assistant.</font></B>")
-	to_chat(owner, "Central Command is sending you to [station_name()] with the task: [mission]")
+	to_chat(owner, "Head Office is sending you to [station_name()] with the task: [mission]")
 
 /datum/antagonist/greybois/on_gain()
 	equipERT()

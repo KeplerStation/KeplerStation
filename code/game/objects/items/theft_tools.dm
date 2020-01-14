@@ -93,7 +93,7 @@
 	random_color = FALSE
 
 /obj/item/paper/guides/antag/nuke_instructions
-	info = "How to break into a Nanotrasen self-destruct terminal and remove its plutonium core:<br>\
+	info = "How to break into a self-destruct terminal and remove its plutonium core:<br>\
 	<ul>\
 	<li>Use a screwdriver with a very thin tip (provided) to unscrew the terminal's front panel</li>\
 	<li>Dislodge and remove the front panel with a crowbar</li>\
@@ -232,7 +232,7 @@
 	. = ..()
 	if(!sliver)
 		return
-	if(ismovableatom(O) && O != sliver)
+	if(proximity && ismovableatom(O) && O != sliver)
 		Consume(O, user)
 
 /obj/item/hemostat/supermatter/throw_impact(atom/hit_atom) // no instakill supermatter javelins

@@ -59,9 +59,7 @@
 		return
 	var/area/AS = get_area(src)
 	if(istype(AS, /area/holodeck))
-		log_world("### MAPPING ERROR")
-		log_world("Holodeck computer cannot be in a holodeck.")
-		log_world("This would cause circular power dependency.")
+		log_mapping("Holodeck computer cannot be in a holodeck, This would cause circular power dependency.")
 		qdel(src)
 		return
 	else
@@ -111,6 +109,11 @@
 			if(A)
 				load_program(A)
 		if("safety")
+			if(!issilicon(usr) && !IsAdminGhost(usr))
+				var/msg = "[key_name(usr)] attempted to emag the holodeck using a href they shouldn't have!"
+				message_admins(msg)
+				log_admin(msg)
+				return
 			obj_flags ^= EMAGGED
 			if((obj_flags & EMAGGED) && program && emag_programs[program.name])
 				emergency_shutdown()
@@ -158,7 +161,7 @@
 	playsound(src, "sparks", 75, 1)
 	obj_flags |= EMAGGED
 	to_chat(user, "<span class='warning'>You vastly increase projector power and override the safety and security protocols.</span>")
-	to_chat(user, "Warning.  Automatic shutoff and derezing protocols have been corrupted.  Please call Nanotrasen maintenance and do not use the simulator.")
+	to_chat(user, "Warning. Automatic shutoff and derezing protocols have been corrupted. Please call maintenance and do not use the simulator.")
 	log_game("[key_name(user)] emagged the Holodeck Control Console")
 	nerf(!(obj_flags & EMAGGED))
 	return TRUE

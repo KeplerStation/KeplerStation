@@ -1,7 +1,7 @@
 #define WELDER_FUEL_BURN_INTERVAL 13
 /obj/item/weldingtool
 	name = "welding tool"
-	desc = "A standard edition welder provided by Nanotrasen."
+	desc = "A standard edition welder."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "welder"
 	item_state = "welder"
@@ -220,10 +220,10 @@
 
 
 /obj/item/weldingtool/examine(mob/user)
-	..()
-	to_chat(user, "It contains [get_fuel()] unit\s of fuel out of [max_fuel].")
+	. = ..()
+	. += "It contains [get_fuel()] unit\s of fuel out of [max_fuel]."
 
-/obj/item/weldingtool/is_hot()
+/obj/item/weldingtool/get_temperature()
 	return welding * heat
 
 //Returns whether or not the welding tool is currently on.
@@ -302,6 +302,8 @@
 /obj/item/weldingtool/largetank/cyborg
 	name = "integrated welding tool"
 	desc = "An advanced welder designed to be used in robotic systems."
+	icon = 'icons/obj/items_cyborg.dmi'
+	icon_state = "indwelder_cyborg"
 	toolspeed = 0.5
 
 /obj/item/weldingtool/largetank/flamethrower_screwdriver()
@@ -360,7 +362,7 @@
 	name = "brass welding tool"
 	desc = "A brass welder that seems to constantly refuel itself. It is faintly warm to the touch."
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	icon_state = "brasswelder"
+	icon_state = "clockwelder"
 	item_state = "brasswelder"
 
 /obj/item/weldingtool/bronze

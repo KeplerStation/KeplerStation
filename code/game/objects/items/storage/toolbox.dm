@@ -19,6 +19,7 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 	var/latches = "single_latch"
 	var/has_latches = TRUE
 	var/can_rubberify = TRUE
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE //very protecc too
 
 /obj/item/storage/toolbox/Initialize(mapload)
 	. = ..()
@@ -34,6 +35,8 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 /obj/item/storage/toolbox/update_icon()
 	..()
 	cut_overlays()
+	if(blood_DNA && blood_DNA.len)
+		add_blood_overlay()
 	if(has_latches)
 		var/icon/I = icon('icons/obj/storage.dmi', latches)
 		add_overlay(I)
@@ -93,6 +96,39 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 /obj/item/storage/toolbox/mechanical/old/heirloom/PopulateContents()
 	return
 
+/obj/item/storage/toolbox/mechanical/old/clean //kepler
+	name = "toolbox"
+	desc = "An old, blue toolbox, it looks robust."
+	icon = 'modular_kepler/icons/obj/storage/oldtoolboxclean.dmi'
+	icon_state = "oldtoolboxclean"
+	item_state = "toolbox_blue"
+	has_latches = FALSE
+	force = 19
+	throwforce = 22
+
+/obj/item/storage/toolbox/mechanical/old/clean/proc/calc_damage() //kepler
+	var/power = 0
+	for (var/obj/item/stack/telecrystal/TC in GetAllContents())
+		power += TC.amount
+	force = 19 + power
+	throwforce = 22 + power
+
+/obj/item/storage/toolbox/mechanical/old/clean/attack(mob/target, mob/living/user) //kepler
+	calc_damage()
+	..()
+
+/obj/item/storage/toolbox/mechanical/old/clean/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum) //kepler
+	calc_damage()
+	..()
+
+/obj/item/storage/toolbox/mechanical/old/clean/PopulateContents() //kepler
+	new /obj/item/screwdriver(src)
+	new /obj/item/wrench(src)
+	new /obj/item/weldingtool(src)
+	new /obj/item/crowbar(src)
+	new /obj/item/wirecutters(src)
+	new /obj/item/multitool(src)
+
 /obj/item/storage/toolbox/electrical
 	name = "electrical toolbox"
 	icon_state = "yellow"
@@ -121,7 +157,7 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 
 /obj/item/storage/toolbox/syndicate/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.silent = TRUE
 
 /obj/item/storage/toolbox/syndicate/PopulateContents()
@@ -162,7 +198,7 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 
 /obj/item/storage/toolbox/brass/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.max_combined_w_class = 28
 	STR.max_items = 28
@@ -217,7 +253,7 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 
 /obj/item/storage/toolbox/artistic/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_combined_w_class = 20
 	STR.max_items = 10
 
@@ -236,8 +272,8 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 /obj/item/storage/toolbox/gold_real
 	name = "golden toolbox"
 	desc = "A larger then normal toolbox made of gold plated plastitanium."
-	item_state = "gold"
 	icon_state = "gold"
+	item_state = "toolbox_gold"
 	has_latches = FALSE
 	force = 16 // Less then a spear
 	throwforce = 14
@@ -255,7 +291,7 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 
 /obj/item/storage/toolbox/gold_real/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_combined_w_class = 40
 	STR.max_items = 12
 
@@ -263,7 +299,7 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 	name = "golden toolbox"
 	desc = "A gold plated toolbox, fancy and harmless due to the gold plating being on cardboard!"
 	icon_state = "gold"
-	item_state = "gold"
+	item_state = "toolbox_gold"
 	has_latches = FALSE
 	force = 0
 	throwforce = 0

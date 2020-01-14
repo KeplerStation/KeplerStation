@@ -77,7 +77,7 @@
 
 	log_directed_talk(src, H, input, LOG_ADMIN, "reply")
 	message_admins("[key_name_admin(src)] replied to [key_name_admin(H)]'s [sender] message with: \"[input]\"")
-	to_chat(H, "You hear something crackle in your ears for a moment before a voice speaks.  \"Please stand by for a message from [sender == "Syndicate" ? "your benefactor" : "Central Command"].  Message as follows[sender == "Syndicate" ? ", agent." : ":"] <span class='bold'>[input].</span> Message ends.\"")
+	to_chat(H, "You hear something crackle in your ears for a moment before a voice speaks.  \"Please stand by for a message from [sender == "Syndicate" ? "your benefactor" : "Head Office"].  Message as follows[sender == "Syndicate" ? ", agent." : ":"] <span class='bold'>[input].</span> Message ends.\"")
 
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Headset Message") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -384,7 +384,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 				//Now to give them their mind back.
 				G_found.mind.transfer_to(new_xeno)	//be careful when doing stuff like this! I've already checked the mind isn't in use
-				new_xeno.key = G_found.key
+				G_found.transfer_ckey(new_xeno, FALSE)
 				to_chat(new_xeno, "You have been fully respawned. Enjoy the game.")
 				var/msg = "<span class='adminnotice'>[key_name_admin(usr)] has respawned [new_xeno.key] as a filthy xeno.</span>"
 				message_admins(msg)
@@ -397,7 +397,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 				var/mob/living/carbon/monkey/new_monkey = new
 				SSjob.SendToLateJoin(new_monkey)
 				G_found.mind.transfer_to(new_monkey)	//be careful when doing stuff like this! I've already checked the mind isn't in use
-				new_monkey.key = G_found.key
+				G_found.transfer_ckey(new_monkey, FALSE)
 				to_chat(new_monkey, "You have been fully respawned. Enjoy the game.")
 				var/msg = "<span class='adminnotice'>[key_name_admin(usr)] has respawned [new_monkey.key] as a filthy xeno.</span>"
 				message_admins(msg)
@@ -437,7 +437,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(!new_character.mind.assigned_role)
 		new_character.mind.assigned_role = "Assistant"//If they somehow got a null assigned role.
 
-	new_character.key = G_found.key
+	G_found.transfer_ckey(new_character, FALSE)
 
 	/*
 	The code below functions with the assumption that the mob is already a traitor if they have a special role.
@@ -586,7 +586,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	var/announce_command_report = TRUE
 	switch(confirm)
 		if("Yes")
-			priority_announce(input, null, 'sound/ai/commandreport.ogg')
+			priority_announce(input, null, "commandreport")
 			announce_command_report = FALSE
 		if("Cancel")
 			return
@@ -604,12 +604,12 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(!check_rights(R_ADMIN))
 		return
 
-	var/input = input(usr, "Please input a new name for Central Command.", "What?", "") as text|null
+	var/input = input(usr, "Please input a new name for Head Office.", "What?", "") as text|null
 	if(!input)
 		return
 	change_command_name(input)
-	message_admins("[key_name_admin(src)] has changed Central Command's name to [input]")
-	log_admin("[key_name(src)] has changed the Central Command name to: [input]")
+	message_admins("[key_name_admin(src)] has changed Head Office's name to [input]")
+	log_admin("[key_name(src)] has changed the Head Office name to: [input]")
 
 /client/proc/cmd_admin_delete(atom/A as obj|mob|turf in world)
 	set category = "Admin"
@@ -1275,7 +1275,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 	if(!check_rights(R_ADMIN) || !check_rights(R_FUN))
 		return
 
-	var/list/punishment_list = list(ADMIN_PUNISHMENT_PIE, ADMIN_PUNISHMENT_FIREBALL, ADMIN_PUNISHMENT_LIGHTNING, ADMIN_PUNISHMENT_BRAINDAMAGE, ADMIN_PUNISHMENT_BSA, ADMIN_PUNISHMENT_GIB, ADMIN_PUNISHMENT_SUPPLYPOD, ADMIN_PUNISHMENT_MAZING, ADMIN_PUNISHMENT_ROD)
+	var/list/punishment_list = list(ADMIN_PUNISHMENT_PIE, ADMIN_PUNISHMENT_FIREBALL, ADMIN_PUNISHMENT_LIGHTNING, ADMIN_PUNISHMENT_BRAINDAMAGE, ADMIN_PUNISHMENT_BSA, ADMIN_PUNISHMENT_GIB, ADMIN_PUNISHMENT_SUPPLYPOD_QUICK, ADMIN_PUNISHMENT_SUPPLYPOD, ADMIN_PUNISHMENT_MAZING, ADMIN_PUNISHMENT_ROD)
 
 	var/punishment = input("Choose a punishment", "DIVINE SMITING") as null|anything in punishment_list
 
@@ -1290,7 +1290,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 			target.electrocution_animation(40)
 			to_chat(target, "<span class='userdanger'>The gods have punished you for your sins!</span>")
 		if(ADMIN_PUNISHMENT_BRAINDAMAGE)
-			target.adjustBrainLoss(199, 199)
+			target.adjustOrganLoss(ORGAN_SLOT_BRAIN, 199, 199)
 		if(ADMIN_PUNISHMENT_GIB)
 			target.gib(FALSE)
 		if(ADMIN_PUNISHMENT_BSA)
@@ -1303,6 +1303,22 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 			var/turf/startT = spaceDebrisStartLoc(startside, T.z)
 			var/turf/endT = spaceDebrisFinishLoc(startside, T.z)
 			new /obj/effect/immovablerod(startT, endT,target)
+		if(ADMIN_PUNISHMENT_SUPPLYPOD_QUICK)
+			var/target_path = input(usr,"Enter typepath of an atom you'd like to send with the pod (type \"empty\" to send an empty pod):" ,"Typepath","/obj/item/reagent_containers/food/snacks/grown/harebell") as null|text
+			var/obj/structure/closet/supplypod/centcompod/pod = new()
+			pod.damage = 40
+			pod.explosionSize = list(0,0,0,2)
+			pod.effectStun = TRUE
+			if (isnull(target_path)) //The user pressed "Cancel"
+				return
+			if (target_path != "empty")//if you didn't type empty, we want to load the pod with a delivery
+				var/delivery = text2path(target_path)
+				if(!ispath(delivery))
+					delivery = pick_closest_path(target_path)
+					if(!delivery)
+						alert("ERROR: Incorrect / improper path given.")
+				new delivery(pod)
+			new /obj/effect/abstract/DPtarget(get_turf(target), pod)
 		if(ADMIN_PUNISHMENT_SUPPLYPOD)
 			var/datum/centcom_podlauncher/plaunch  = new(usr)
 			if(!holder)
@@ -1315,6 +1331,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 			plaunch.temp_pod.explosionSize = list(0,0,0,2)
 			plaunch.temp_pod.effectStun = TRUE
 			plaunch.ui_interact(usr)
+			return //We return here because punish_log() is handled by the centcom_podlauncher datum
 
 		if(ADMIN_PUNISHMENT_MAZING)
 			if(!puzzle_imprison(target))
@@ -1324,23 +1341,25 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 			var/obj/item/reagent_containers/food/snacks/pie/cream/nostun/creamy = new(get_turf(target))
 			creamy.splat(target)
 
-	var/msg = "[key_name_admin(usr)] punished [key_name_admin(target)] with [punishment]."
-	message_admins(msg)
-	admin_ticket_log(target, msg)
-	log_admin("[key_name(usr)] punished [key_name(target)] with [punishment].")
+	punish_log(target, punishment)
 
+/client/proc/punish_log(var/whom, var/punishment)
+	var/msg = "[key_name_admin(usr)] punished [key_name_admin(whom)] with [punishment]."
+	message_admins(msg)
+	admin_ticket_log(whom, msg)
+	log_admin("[key_name(usr)] punished [key_name(whom)] with [punishment].")
 
 /client/proc/trigger_centcom_recall()
 	if(!check_rights(R_ADMIN))
 		return
 	var/message = pick(GLOB.admiral_messages)
-	message = input("Enter message from the on-call admiral to be put in the recall report.", "Admiral Message", message) as text|null
+	message = input("Enter message from the on-call director to be put in the recall report.", "Director Message", message) as text|null
 
 	if(!message)
 		return
 
-	message_admins("[key_name_admin(usr)] triggered a CentCom recall, with the admiral message of: [message]")
-	log_game("[key_name(usr)] triggered a CentCom recall, with the message of: [message]")
+	message_admins("[key_name_admin(usr)] triggered a Head Office recall, with the message of: [message]")
+	log_game("[key_name(usr)] triggered a Head Office recall, with the message of: [message]")
 	SSshuttle.centcom_recall(SSshuttle.emergency.timer, message)
 
 /client/proc/cmd_admin_check_player_exp()	//Allows admins to determine who the newer players are.

@@ -1,4 +1,4 @@
-/obj/item/clothing/accessory //Ties moved to neck slot items, but as there are still things like medals, pokadots, and armbands, this accessory system is being kept as-is
+/obj/item/clothing/accessory //Ties moved to neck slot items, but as there are still things like medals and armbands, this accessory system is being kept as-is
 	name = "Accessory"
 	desc = "Something has gone wrong!"
 	icon = 'icons/obj/clothing/accessories.dmi'
@@ -12,7 +12,7 @@
 	var/datum/component/storage/detached_pockets
 
 /obj/item/clothing/accessory/proc/attach(obj/item/clothing/under/U, user)
-	GET_COMPONENT(storage, /datum/component/storage)
+	var/datum/component/storage/storage = GetComponent(/datum/component/storage)
 	if(storage)
 		if(SEND_SIGNAL(U, COMSIG_CONTAINS_STORAGE))
 			return FALSE
@@ -67,16 +67,18 @@
 	return
 
 /obj/item/clothing/accessory/AltClick(mob/user)
+	. = ..()
 	if(istype(user) && user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		if(initial(above_suit))
 			above_suit = !above_suit
 			to_chat(user, "[src] will be worn [above_suit ? "above" : "below"] your suit.")
+			return TRUE
 
 /obj/item/clothing/accessory/examine(mob/user)
-	..()
-	to_chat(user, "<span class='notice'>\The [src] can be attached to a uniform. Alt-click to remove it once attached.</span>")
+	. = ..()
+	. += "<span class='notice'>\The [src] can be attached to a uniform. Alt-click to remove it once attached.</span>"
 	if(initial(above_suit))
-		to_chat(user, "<span class='notice'>\The [src] can be worn above or below your suit. Alt-click to toggle.</span>")
+		. += "<span class='notice'>\The [src] can be worn above or below your suit. Alt-click to toggle.</span>"
 
 /obj/item/clothing/accessory/waistcoat
 	name = "waistcoat"
@@ -127,7 +129,7 @@
 									 "<span class='notice'>You try to pin [src] on [M]'s chest.</span>")
 			var/input
 			if(!commended && user != M)
-				input = stripped_input(user,"Please input a reason for this commendation, it will be recorded by Nanotrasen.", ,"", 140)
+				input = stripped_input(user,"Please input a reason for this commendation, it will be recorded by Head Office.", ,"", 140)
 			if(do_after(user, delay, target = M))
 				if(U.attach_accessory(src, user, 0)) //Attach it, do not notify the user of the attachment
 					if(user == M)
@@ -150,7 +152,7 @@
 
 /obj/item/clothing/accessory/medal/conduct
 	name = "distinguished conduct medal"
-	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is the most basic award given by Nanotrasen. It is often awarded by a captain to a member of his crew."
+	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is the most basic award. It is often awarded by a captain to a member of his crew."
 
 /obj/item/clothing/accessory/medal/bronze_heart
 	name = "bronze heart medal"
@@ -196,7 +198,7 @@
 
 /obj/item/clothing/accessory/medal/silver/security
 	name = "robust security award"
-	desc = "An award for distinguished combat and sacrifice in defence of Nanotrasen's commercial interests. Often awarded to security staff."
+	desc = "An award for distinguished combat and sacrifice in defence of Horizons' commercial interests. Often awarded to security staff."
 
 /obj/item/clothing/accessory/medal/gold
 	name = "gold medal"
@@ -208,7 +210,7 @@
 
 /obj/item/clothing/accessory/medal/gold/captain
 	name = "medal of captaincy"
-	desc = "A golden medal awarded exclusively to those promoted to the rank of captain. It signifies the codified responsibilities of a captain to Nanotrasen, and their undisputable authority over their crew."
+	desc = "A golden medal awarded exclusively to those promoted to the rank of captain. It signifies the codified responsibilities of a captain to Horizons, and their undisputable authority over their crew."
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
 /obj/item/clothing/accessory/medal/gold/captain/family
@@ -219,7 +221,7 @@
 
 /obj/item/clothing/accessory/medal/gold/heroism
 	name = "medal of exceptional heroism"
-	desc = "An extremely rare golden medal awarded only by CentCom. To receive such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but commanders."
+	desc = "An extremely rare golden medal awarded only by Head Office. To receive such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but commanders."
 
 /obj/item/clothing/accessory/medal/plasma
 	name = "plasma medal"
@@ -356,7 +358,7 @@
 	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 20, "rad" = 5, "fire" = 0, "acid" = 25)
 
 /////////////////////
-//Synda Accessories//
+//Syndie Accessories//
 /////////////////////
 
 /obj/item/clothing/accessory/padding
@@ -379,35 +381,3 @@
 	icon_state = "plastics"
 	item_color = "nothing"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 20, "energy" = 10, "bomb" = 0, "bio" = 30, "rad" = 0, "fire" = 0, "acid" = -40)
-
-/////////////////////
-//Pokadots On Pants//
-/////////////////////
-
-/obj/item/clothing/accessory/attrocious_pokadots
-	name = "atrocious pokadots"
-	desc = "They look like something out of a thrift store. Attaches to clothing not to be worn by itself."
-	icon_state = "attrocious_pokadots"
-	item_color = "attrocious_pokadots"
-	attack_verb = list("horrifed", "eye bleeded")
-
-/obj/item/clothing/accessory/black_white_pokadots
-	name = "checkered pokadots"
-	desc = "You can play a game of chess on these! Attaches to clothing not to be worn by itself."
-	icon_state = "black_white_pokadots"
-	item_color = "black_white_pokadots"
-	attack_verb = list("check", "mate")
-
-/obj/item/clothing/accessory/nt_pokadots
-	name = "blue and white pokadots"
-	desc = "To show your pride in your workplace, in the most annoying possable way. Attaches to clothing not to be worn by itself."
-	icon_state = "nt_pokadots"
-	item_color = "nt_pokadots"
-	attack_verb = list("eye bleeded", "annoyed")
-
-/obj/item/clothing/accessory/syndi_pokadots
-	name = "black and red pokadots"
-	desc = "King me. Attaches to clothing not to be worn by itself." //checkers!
-	icon_state = "syndi_pokadots"
-	item_color = "syndi_pokadots"
-	attack_verb = list("jumped", "taken")

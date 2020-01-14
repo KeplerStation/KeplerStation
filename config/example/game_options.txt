@@ -254,7 +254,6 @@ EVENTS_MIN_TIME_MUL 1
 ## Set to 0 to make dangerous events avaliable for all populations.
 EVENTS_MIN_PLAYERS_MUL 1
 
-
 ## AI ###
 
 ## Allow the AI job to be picked.
@@ -263,9 +262,20 @@ ALLOW_AI
 ## Allow the AI Multicamera feature to be used by AI players
 ALLOW_AI_MULTICAM
 
+## CYBORG ##
+## Uncomment to disable the ability for cyborg flashes to knock down carbon targets
+#DISABLE_BORG_FLASH_KNOCKDOWN
+
 ## Secborg ###
+## Uncomment to bring secborgs and K-9s back in line with the rest of the modules available. This is strongly recommended if you have secborgs configured to be available at all times.
+#WEAKEN_SECBORG
+
 ## Uncomment to prevent the security cyborg module from being chosen
 #DISABLE_SECBORG
+
+## Determines the minimum alert level for the security cyborg model to be chosen
+## 0: Green, 1:Blue, 2:Amber, 3:Red, 4:Delta
+MINIMUM_SECBORG_ALERT 3
 
 ## Peacekeeper Borg ###
 ## Uncomment to prevent the peacekeeper cyborg module from being chosen
@@ -323,12 +333,12 @@ SEC_START_BRIG
 ## Only functions in sandbox game mode.
 #SANDBOX_AUTOCLOSE
 
-## ROUNDSTART SILICON LAWS ###
-## This controls what the AI's laws are at the start of the round.
-## Set to 0/commented out for "off", silicons will just start with Asimov.
-## Set to 1 for "custom", silicons will start with the custom laws defined in silicon_laws.txt. (If silicon_laws.txt is empty, the AI will spawn with asimov and Custom boards will auto-delete.)
-## Set to 2 for "random", silicons will start with a random lawset picked from random laws specified below.
-## Set to 3 for "weighted random", using values in "silicon_weights.txt", a law will be selected, with weights specifed in that file.
+## ROUNDSTART SILICON LAWS ###	
+## This controls what the AI's laws are at the start of the round.	
+## Set to 0/commented out for "off", silicons will just start with Asimov.	
+## Set to 1 for "custom", silicons will start with the custom laws defined in silicon_laws.txt. (If silicon_laws.txt is empty, the AI will spawn with asimov and Custom boards will auto-delete.)	
+## Set to 2 for "random", silicons will start with a random lawset picked from random laws specified below.	
+## Set to 3 for "weighted random", using values in "silicon_weights.txt", a law will be selected, with weights specifed in that file.	
 DEFAULT_LAWS 0
 
 ## RANDOM LAWS ##
@@ -337,18 +347,15 @@ DEFAULT_LAWS 0
 ## See datums\ai_laws.dm for the full law lists
 
 ## standard-ish laws. These are fairly ok to run
+RANDOM_LAWS crewsimov
 RANDOM_LAWS asimov
-RANDOM_LAWS asimovpp
-RANDOM_LAWS paladin
+RANDOM_LAWS horizons
 RANDOM_LAWS robocop
 RANDOM_LAWS corporate
 
 ## Quirky laws. Shouldn't cause too much harm
-#RANDOM_LAWS hippocratic
 #RANDOM_LAWS maintain
 #RANDOM_LAWS drone
-#RANDOM_LAWS liveandletlive
-#RANDOM_LAWS peacekeeper
 #RANDOM_LAWS reporter
 #RANDOM_LAWS hulkamania
 
@@ -356,11 +363,7 @@ RANDOM_LAWS corporate
 #RANDOM_LAWS syndie
 #RANDOM_LAWS ninja
 #RANDOM_LAWS antimov
-#RANDOM_LAWS thermodynamic
-#RANDOM_LAWS ratvar
-
-## meme laws. Honk
-#RANDOM_LAWS buildawall
+#RANDOM_LAWS quarantine
 
 ## If weighted laws are selected (DEFAULT_LAWS = 3),
 ## then an AI's starting laws will be determined by the weights of these values
@@ -370,28 +373,23 @@ RANDOM_LAWS corporate
 LAW_WEIGHT custom,0
 
 ## standard-ish laws. These are fairly ok to run
-LAW_WEIGHT asimov,32
-LAW_WEIGHT asimovpp,12
-LAW_WEIGHT paladin,12
+LAW_WEIGHT horizons,36
+LAW_WEIGHT crewsimov,16
+LAW_WEIGHT asimov,12
 LAW_WEIGHT robocop,12
 LAW_WEIGHT corporate,12
 
 ## Quirky laws. Shouldn't cause too much harm
-LAW_WEIGHT hippocratic,3
 LAW_WEIGHT maintain,4
 LAW_WEIGHT drone,3
-LAW_WEIGHT liveandletlive,3
-LAW_WEIGHT peacekeeper,3
 LAW_WEIGHT reporter,4
-LAW_WEIGHT hulkamania,4
+LAW_WEIGHT hulkamania,2
 
 ## Bad idea laws. Probably shouldn't enable these
 LAW_WEIGHT syndie,0
 LAW_WEIGHT ninja,0
 LAW_WEIGHT antimov,0
-LAW_WEIGHT thermodynamic,0
-LAW_WEIGHT ratvar,0
-LAW_WEIGHT buildawall,0
+LAW_WEIGHT quarantine,0
 
 ##------------------------------------------------
 
@@ -470,6 +468,18 @@ MIDROUND_ANTAG_TIME_CHECK 60
 
 ## A ratio of living to total crew members, the lower this is, the more people will have to die in order for midround antag to be skipped
 MIDROUND_ANTAG_LIFE_CHECK 0.7
+
+## A "timeout", in real-time minutes, applied upon suicide, cryosleep or ghosting whilst alive,
+## during which the player shouldn't be able to come back into the round through
+## midround playable roles or mob spawners.
+## Set to 0 to completely disable it.
+SUICIDE_REENTER_ROUND_TIMER 30
+
+## A world time threshold, in minutes, under which the player receives
+## an extra timeout, purposely similar to the above one (and also stacks with),
+## equal to the difference between the current world.time and this threshold.
+## Both configs are indipendent from each other, disabling one won't affect the other.
+ROUNDSTART_SUICIDE_TIME_LIMIT 30
 
 ##Limit Spell Choices##
 ## Uncomment to disallow wizards from using certain spells that may be too chaotic/fun for your playerbase
@@ -550,3 +560,6 @@ MONKEYCAP 64
 
 ## Comment to disable roundstart voting
 #ROUNDSTART_VOTE
+
+#Replaces standard extended/secret dichotomy with extended and calm/chaotic votes for dynamic.
+DYNAMIC_VOTING

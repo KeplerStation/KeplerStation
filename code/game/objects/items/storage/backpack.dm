@@ -23,7 +23,7 @@
 
 /obj/item/storage/backpack/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_combined_w_class = 21
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.max_items = 21
@@ -34,7 +34,7 @@
 
 /obj/item/storage/backpack/old/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_combined_w_class = 12
 
 /obj/item/storage/backpack/holding
@@ -46,6 +46,7 @@
 	item_flags = NO_MAT_REDEMPTION
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 50)
 	component_type = /datum/component/storage/concrete/bluespace/bag_of_holding
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 /obj/item/storage/backpack/holding/satchel
 	name = "satchel of holding"
@@ -53,12 +54,13 @@
 	icon_state = "holdingsat"
 	item_state = "holdingsat"
 	species_exception = list(/datum/species/angel)
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 /obj/item/storage/backpack/holding/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.allow_big_nesting = TRUE
-	STR.max_w_class = WEIGHT_CLASS_GIGANTIC
+	STR.max_w_class = WEIGHT_CLASS_BULKY
 	STR.max_combined_w_class = 35
 
 /obj/item/storage/backpack/holding/suicide_act(mob/living/user)
@@ -81,10 +83,11 @@
 	icon_state = "giftbag0"
 	item_state = "giftbag"
 	w_class = WEIGHT_CLASS_BULKY
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 /obj/item/storage/backpack/santabag/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.max_combined_w_class = 60
 
@@ -130,9 +133,11 @@
 
 /obj/item/storage/backpack/captain
 	name = "captain's backpack"
-	desc = "It's a special backpack made exclusively for Nanotrasen officers."
+	desc = "It's a special backpack made exclusively for corporate officers."
 	icon_state = "captainpack"
 	item_state = "captainpack"
+	resistance_flags = FIRE_PROOF
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 /obj/item/storage/backpack/industrial
 	name = "industrial backpack"
@@ -140,6 +145,7 @@
 	icon_state = "engiepack"
 	item_state = "engiepack"
 	resistance_flags = FIRE_PROOF
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 /obj/item/storage/backpack/botany
 	name = "botany backpack"
@@ -194,6 +200,8 @@
 	desc = "A tough satchel with extra pockets."
 	icon_state = "satchel-eng"
 	item_state = "engiepack"
+	resistance_flags = FIRE_PROOF
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 /obj/item/storage/backpack/satchel/med
 	name = "medical satchel"
@@ -245,22 +253,24 @@
 
 /obj/item/storage/backpack/satchel/bone
 	name = "bone satchel"
-	desc = "A bone satchel fashend with watcher wings and large bones from goliath. Can be worn on the belt."
+	desc = "A grotesque satchel made of sinews and bones."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "goliath_saddle"
 	slot_flags = ITEM_SLOT_BACK
 
 /obj/item/storage/backpack/satchel/bone/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_combined_w_class = 20
 	STR.max_items = 15
 
 /obj/item/storage/backpack/satchel/cap
 	name = "captain's satchel"
-	desc = "An exclusive satchel for Nanotrasen officers."
+	desc = "An exclusive satchel for officers."
 	icon_state = "satchel-cap"
 	item_state = "captainpack"
+	resistance_flags = FIRE_PROOF
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 /obj/item/storage/backpack/satchel/flat
 	name = "smuggler's satchel"
@@ -276,7 +286,7 @@
 
 /obj/item/storage/backpack/satchel/flat/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_combined_w_class = 6
 	STR.cant_hold = typecacheof(list(/obj/item/storage/backpack/satchel/flat)) //muh recursive backpacks
 
@@ -328,7 +338,7 @@
 
 /obj/item/storage/backpack/duffelbag/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_combined_w_class = 30
 
 /obj/item/storage/backpack/duffelbag/captain
@@ -385,6 +395,8 @@
 	desc = "A large duffel bag for holding extra tools and supplies."
 	icon_state = "duffel-eng"
 	item_state = "duffel-eng"
+	resistance_flags = FIRE_PROOF
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 /obj/item/storage/backpack/duffelbag/durathread
 	name = "durathread duffel bag"
@@ -400,6 +412,7 @@
 	icon_state = "duffel-drone"
 	item_state = "duffel-drone"
 	resistance_flags = FIRE_PROOF
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 /obj/item/storage/backpack/duffelbag/drone/PopulateContents()
 	new /obj/item/screwdriver(src)
@@ -427,14 +440,15 @@
 	icon_state = "duffel-syndie"
 	item_state = "duffel-syndieammo"
 	slowdown = 0
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 /obj/item/storage/backpack/duffelbag/syndie/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.silent = TRUE
 
 /obj/item/storage/backpack/duffelbag/syndie/hitman
-	desc = "A large duffel bag for holding extra things. There is a Nanotrasen logo on the back."
+	desc = "A large duffel bag for holding extra things. There is a Horizons logo on the back."
 	icon_state = "duffel-syndieammo"
 	item_state = "duffel-syndieammo"
 
@@ -479,12 +493,9 @@
 	desc = "A large duffel bag for holding surgical tools. Bears the logo of an advanced med-tech firm."
 
 /obj/item/storage/backpack/duffelbag/syndie/surgery_adv/PopulateContents()
-	new /obj/item/hemostat/adv(src)
-	new /obj/item/circular_saw/adv(src)
-	new /obj/item/scalpel/adv(src)
-	new /obj/item/retractor/adv(src)
-	new /obj/item/cautery/adv(src)
-	new /obj/item/surgicaldrill/adv(src)
+	new /obj/item/scalpel/advanced(src)
+	new /obj/item/retractor/advanced(src)
+	new /obj/item/surgicaldrill/advanced(src)
 	new /obj/item/surgical_drapes(src)
 	new /obj/item/storage/firstaid/tactical(src)
 	new /obj/item/clothing/suit/straight_jacket(src)
@@ -540,7 +551,7 @@
 
 /obj/item/storage/backpack/duffelbag/syndie/med/medicalbundle/PopulateContents()
 	new /obj/item/clothing/shoes/magboots/syndie(src)
-	new /obj/item/storage/firstaid/tactical(src)
+	new /obj/item/storage/firstaid/tactical/nukeop(src)
 	new /obj/item/gun/ballistic/automatic/l6_saw/toy(src)
 	new /obj/item/ammo_box/foambox/riot(src)
 
@@ -583,7 +594,7 @@
 // For ClownOps.
 /obj/item/storage/backpack/duffelbag/clown/syndie/ComponentInitialize()
 	. = ..()
-	GET_COMPONENT(STR, /datum/component/storage)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	slowdown = 0
 	STR.silent = TRUE
 

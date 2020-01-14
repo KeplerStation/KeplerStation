@@ -98,14 +98,14 @@
 
 //the define for visible message range in combat
 #define COMBAT_MESSAGE_RANGE 3
+#define DEFAULT_MESSAGE_RANGE 7
 
 //Shove knockdown lengths (deciseconds)
 #define SHOVE_KNOCKDOWN_SOLID 30
 #define SHOVE_KNOCKDOWN_HUMAN 30
 #define SHOVE_KNOCKDOWN_TABLE 30
 #define SHOVE_KNOCKDOWN_COLLATERAL 10
-//Shove slowdown
-#define SHOVE_SLOWDOWN_ID "shove_slowdown"
+//for the shove slowdown, see __DEFINES/movespeed_modification.dm
 #define SHOVE_SLOWDOWN_LENGTH 30
 #define SHOVE_SLOWDOWN_STRENGTH 0.85 //multiplier
 //Shove disarming item list
@@ -159,6 +159,7 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 #define EXPLODE_DEVASTATE 1
 #define EXPLODE_HEAVY 2
 #define EXPLODE_LIGHT 3
+#define EXPLODE_GIB_THRESHOLD 50
 
 #define EMP_HEAVY 1
 #define EMP_LIGHT 2

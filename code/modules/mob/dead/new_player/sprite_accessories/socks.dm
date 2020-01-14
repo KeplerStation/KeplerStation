@@ -47,6 +47,18 @@
 	name = "Knee-high (White)"
 	icon_state = "white_knee"
 
+/datum/sprite_accessory/underwear/socks/christmas_knee
+	name = "Knee-High - Christmas"
+	icon_state = "christmas_knee"
+
+/datum/sprite_accessory/underwear/socks/candycaner_knee
+	name = "Knee-High - Red Candy Cane"
+	icon_state = "candycaner_knee"
+
+/datum/sprite_accessory/underwear/socks/candycaneg_knee
+	name = "Knee-High - Green Candy Cane"
+	icon_state = "candycaneg_knee"
+
 /datum/sprite_accessory/socks/black_norm
 	name = "Normal (Black)"
 	icon_state = "black_norm"
@@ -54,6 +66,18 @@
 /datum/sprite_accessory/socks/white_norm
 	name = "Normal (White)"
 	icon_state = "white_norm"
+
+/datum/sprite_accessory/underwear/socks/christmas_norm
+	name = "Normal - Christmas"
+	icon_state = "christmas_norm"
+
+/datum/sprite_accessory/underwear/socks/candycaner_norm
+	name = "Normal - Red Candy Cane"
+	icon_state = "candycaner_norm"
+
+/datum/sprite_accessory/underwear/socks/candycaneg_norm
+	name = "Normal - Green Candy Cane"
+	icon_state = "candycaneg_norm"
 
 /datum/sprite_accessory/socks/pantyhose
 	name = "Pantyhose"
@@ -134,3 +158,15 @@
 /datum/sprite_accessory/socks/white_thigh
 	name = "Thigh-high (White)"
 	icon_state = "white_thigh"
+
+/datum/sprite_accessory/underwear/socks/christmas_thigh
+	name = "Thigh-high - Christmas"
+	icon_state = "christmas_thigh"
+
+/datum/sprite_accessory/underwear/socks/candycaner_thigh
+	name = "Thigh-high - Red Candy Cane"
+	icon_state = "candycaner_thigh"
+
+/datum/sprite_accessory/underwear/socks/candycaneg_thigh
+	name = "Thigh-high - Green Candy Cane"
+	icon_state = "candycaneg_thigh"

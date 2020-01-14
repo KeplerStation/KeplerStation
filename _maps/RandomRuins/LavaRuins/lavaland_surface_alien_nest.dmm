@@ -167,7 +167,7 @@
 /area/ruin/unpowered/xenonest)
 "aM" = (
 /obj/structure/alien/weeds,
-/obj/effect/decal/cleanable/xenoblood,
+/obj/effect/decal/cleanable/blood/xeno,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "aQ" = (
@@ -260,7 +260,7 @@
 /obj/structure/stone_tile/cracked{
 	dir = 1
 	},
-/obj/effect/decal/cleanable/xenoblood,
+/obj/effect/decal/cleanable/blood/xeno,
 /turf/open/indestructible/boss/air,
 /area/ruin/unpowered/xenonest)
 "be" = (
@@ -381,7 +381,7 @@
 /obj/structure/stone_tile{
 	dir = 1
 	},
-/obj/effect/decal/cleanable/xenoblood,
+/obj/effect/decal/cleanable/blood/xeno,
 /turf/open/indestructible/boss/air,
 /area/ruin/unpowered/xenonest)
 "bs" = (
@@ -439,7 +439,7 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/xenoblood,
+/obj/effect/decal/cleanable/blood/xeno,
 /turf/open/indestructible/boss/air,
 /area/ruin/unpowered/xenonest)
 "by" = (
@@ -523,16 +523,13 @@
 /area/ruin/unpowered/xenonest)
 "kp" = (
 /obj/structure/alien/weeds,
-/obj/item/reagent_containers/syringe/alien,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "lG" = (
 /obj/structure/alien/weeds,
-/obj/effect/mob_spawn/alien/corpse/humanoid/drone,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "pE" = (
-/obj/effect/mob_spawn/alien/corpse/humanoid/queen,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "yf" = (
@@ -548,7 +545,6 @@
 /area/ruin/unpowered/xenonest)
 "JM" = (
 /obj/structure/alien/weeds/node,
-/obj/effect/mob_spawn/alien/corpse/humanoid/drone,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "Uh" = (

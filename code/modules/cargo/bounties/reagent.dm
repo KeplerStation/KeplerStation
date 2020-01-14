@@ -84,7 +84,7 @@ datum/bounty/reagent/simple_drink/New()
 	var/reagent_type = pick(possible_reagents)
 	wanted_reagent = new reagent_type
 	name = wanted_reagent.name
-	description = "CentCom is thirsty! Send a shipment of [name] to CentCom to quench the company's thirst."
+	description = "Head Office is thirsty! Send a shipment of [name] to Head Office to quench the company's thirst."
 	reward += rand(0, 2) * 500
 
 /datum/bounty/reagent/complex_drink
@@ -109,19 +109,18 @@ datum/bounty/reagent/complex_drink/New()
 		/datum/reagent/consumable/ethanol/patron,\
 		/datum/reagent/consumable/ethanol/quadruple_sec,\
 		/datum/reagent/consumable/ethanol/quintuple_sec,\
-		/datum/reagent/consumable/bluecherryshake,\
 		/datum/reagent/consumable/doctor_delight,\
 		/datum/reagent/consumable/ethanol/silencer)
-		
+
 	var/reagent_type = pick(possible_reagents)
 	wanted_reagent = new reagent_type
 	name = wanted_reagent.name
-	description = "CentCom is offering a reward for talented mixologists. Ship a container of [name] to claim the prize."
-	reward += rand(0, 4) * 500
+	description = "Head Office is offering a reward for talented mixologists. Ship a container of [name] to claim the prize."
+	reward += rand(0, 4) * 300
 
 /datum/bounty/reagent/chemical
 	name = "Chemical"
-	reward = 4000
+	reward = 2750
 	required_volume = 30
 
 datum/bounty/reagent/chemical/New()
@@ -167,6 +166,6 @@ datum/bounty/reagent/chemical/New()
 	var/reagent_type = pick(possible_reagents)
 	wanted_reagent = new reagent_type
 	name = wanted_reagent.name
-	description = "CentCom is in desperate need of the chemical [name]. Ship a container of it to be rewarded."
+	description = "Head Office is in desperate need of the chemical [name]. Ship a container of it to be rewarded."
 	reward += rand(0, 4) * 500
 

@@ -8,6 +8,8 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("tmp/iconCache.sav")) //Cache of ico
 //On client, created on login
 /datum/chatOutput
 	var/client/owner	 //client ref
+	var/total_checks = 0
+	var/last_check = 0
 	var/loaded       = FALSE // Has the client loaded the browser output area?
 	var/list/messageQueue //If they haven't loaded chat, this is where messages will go until they do
 	var/cookieSent   = FALSE // Has the client sent a cookie for analysis
@@ -82,11 +84,13 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("tmp/iconCache.sav")) //Cache of ico
 		if("setMusicVolume")
 			data = setMusicVolume(arglist(params))
 
-		if("swaptodarkmode")
-			swaptodarkmode()
+		if("colorPresetPost") //User just swapped color presets in their goonchat preferences. Do we do anything else?
+			switch(href_list["preset"])
+				if("light")
+					owner.force_white_theme()
+				if("dark" || "normal")
+					owner.force_dark_theme()
 
-		if("swaptolightmode")
-			swaptolightmode()
 
 	if(data)
 		ehjax_send(data = data)
@@ -169,6 +173,18 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("tmp/iconCache.sav")) //Cache of ico
 
 //Called by client, sent data to investigate (cookie history so far)
 /datum/chatOutput/proc/analyzeClientData(cookie = "")
+	//Spam check
+	if(world.time  >  last_check + (3 SECONDS))
+		last_check = world.time
+		total_checks = 0
+
+	total_checks += 1
+
+	if(total_checks > SPAM_TRIGGER_AUTOMUTE)
+		message_admins("[key_name(owner)] kicked for goonchat topic spam")
+		qdel(owner)
+		return
+
 	if(!cookie)
 		return
 
@@ -177,13 +193,22 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("tmp/iconCache.sav")) //Cache of ico
 		if (connData && islist(connData) && connData.len > 0 && connData["connData"])
 			connectionHistory = connData["connData"] //lol fuck
 			var/list/found = new()
-			for(var/i in connectionHistory.len to 1 step -1)
+			if(connectionHistory.len > 5)
+				message_admins("[key_name(src.owner)] was kicked for an invalid ban cookie)")
+				qdel(owner)
+				return
+
+			for(var/i in min(connectionHistory.len, 5) to 1 step -1)
+				if(QDELETED(owner))
+					//he got cleaned up before we were done
+					return
 				var/list/row = src.connectionHistory[i]
 				if (!row || row.len < 3 || (!row["ckey"] || !row["compid"] || !row["ip"])) //Passed malformed history object
 					return
-				if (world.IsBanned(row["ckey"], row["compid"], row["ip"], real_bans_only=TRUE))
+				if (world.IsBanned(row["ckey"], row["ip"], row["compid"], real_bans_only=TRUE))
 					found = row
 					break
+				CHECK_TICK
 
 			//Uh oh this fucker has a history of playing on a banned account!!
 			if (found.len > 0)
@@ -202,8 +227,8 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("tmp/iconCache.sav")) //Cache of ico
 	log_world("\[[time2text(world.realtime, "YYYY-MM-DD hh:mm:ss")]\] Client: [(src.owner.key ? src.owner.key : src.owner)] triggered JS error: [error]")
 
 //Global chat procs
-/proc/to_chat(target, message, handle_whitespace=TRUE)
-	if(!target)
+/proc/to_chat_immediate(target, message, handle_whitespace=TRUE)
+	if(!target || !message)
 		return
 
 	//Ok so I did my best but I accept that some calls to this will be for shit like sound and images
@@ -225,7 +250,7 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("tmp/iconCache.sav")) //Cache of ico
 	message = replacetext(message, "\proper", "")
 	if(handle_whitespace)
 		message = replacetext(message, "\n", "<br>")
-		message = replacetext(message, "\t", "[GLOB.TAB][GLOB.TAB]")
+		message = replacetext(message, "\t", "[FOURSPACES][FOURSPACES]")
 
 	if(islist(target))
 		// Do the double-encoding outside the loop to save nanoseconds
@@ -268,6 +293,11 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("tmp/iconCache.sav")) //Cache of ico
 		// url_encode it TWICE, this way any UTF-8 characters are able to be decoded by the Javascript.
 		C << output(url_encode(url_encode(message)), "browseroutput:output")
 
+/proc/to_chat(target, message, handle_whitespace = TRUE)
+	if(Master.current_runlevel == RUNLEVEL_INIT || !SSchat?.initialized)
+		to_chat_immediate(target, message, handle_whitespace)
+		return
+	SSchat.queue(target, message, handle_whitespace)
 
 /datum/chatOutput/proc/swaptolightmode() //Dark mode light mode stuff. Yell at KMC if this breaks! (See darkmode.dm for documentation)
 	owner.force_white_theme()

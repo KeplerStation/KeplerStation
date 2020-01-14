@@ -80,6 +80,7 @@
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 	item_flags = NO_MAT_REDEMPTION | NOBLUDGEON
 	var/prox_check = TRUE //If the emag requires you to be in range
+	var/uses = INFINITY // KEPLER CHANGE: Infinite emag
 
 /obj/item/card/emag/bluespace
 	name = "bluespace cryptographic sequencer"
@@ -110,6 +111,33 @@
 		user.visible_message("<span class='warning'>[src] fizzles and sparks. It seems like it's out of charges.</span>")
 		playsound(src, 'sound/effects/light_flicker.ogg', 100, 1)
 
+/obj/item/card/emag/attackby(obj/item/W, mob/user, params)
+	if(istype(W, /obj/item/emagrecharge))
+		var/obj/item/emagrecharge/ER = W
+		if(ER.uses)
+			uses += ER.uses
+			to_chat(user, "<span class='notice'>You have added [ER.uses] charges to [src]. It now has [uses] charges.</span>")
+			playsound(src, "sparks", 100, 1)
+			ER.uses = 0
+		else
+			to_chat(user, "<span class='warning'>[ER] has no charges left.</span>")
+		return
+	. = ..()
+
+/obj/item/emagrecharge
+	name = "electromagnet charging device"
+	desc = "A small cell with two prongs lazily jabbed into it. It looks like it's made for charging the small batteries found in electromagnetic devices, sadly this can't be recharged like a normal cell."
+	icon = 'icons/obj/module.dmi'
+	icon_state = "cell_mini"
+	item_flags = NOBLUDGEON
+	var/uses = 5	//Dictates how many charges the device adds to compatible items
+
+/obj/item/emagrecharge/examine(mob/user)
+	. = ..()
+	if(uses)
+		. += "<span class='notice'>It can add up to [uses] charges to compatible devices</span>"
+	else
+		. += "<span class='warning'>It has a small, red, blinking light coming from inside of it. It's spent.</span>"
 
 /obj/item/card/emagfake
 	desc = "It's a card with a magnetic strip attached to some circuitry. Closer inspection shows that this card is a poorly made replica, with a \"DonkCo\" logo stamped on the back."
@@ -161,14 +189,17 @@
 		return
 
 /obj/item/card/id/examine(mob/user)
-	..()
+	. = ..()
 	if(mining_points)
-		to_chat(user, "There's [mining_points] mining equipment redemption point\s loaded onto this card.")
+		. += "There's [mining_points] mining equipment redemption point\s loaded onto this card."
 
 /obj/item/card/id/GetAccess()
 	return access
 
 /obj/item/card/id/GetID()
+	return src
+
+/obj/item/card/id/RemoveID()
 	return src
 
 /*
@@ -281,10 +312,10 @@ update_label("John Doe", "Clowny")
 	. = ..()
 
 /obj/item/card/id/centcom
-	name = "\improper CentCom ID"
-	desc = "An ID straight from Central Command."
+	name = "\improper Head Office ID"
+	desc = "An ID straight from Head Office."
 	icon_state = "centcom"
-	registered_name = "Central Command"
+	registered_name = "Head Office"
 	assignment = "General"
 
 /obj/item/card/id/centcom/Initialize()
@@ -292,35 +323,35 @@ update_label("John Doe", "Clowny")
 	. = ..()
 
 /obj/item/card/id/ert
-	name = "\improper CentCom ID"
-	desc = "An ERT ID card."
+	name = "\improper Rescue & Response Commander ID"
+	desc = "A RRT ID card."
 	icon_state = "centcom"
-	registered_name = "Emergency Response Team Commander"
-	assignment = "Emergency Response Team Commander"
+	registered_name = "Rescue & Response Commander"
+	assignment = "Rescue & Response Commander"
 
 /obj/item/card/id/ert/Initialize()
 	access = get_all_accesses()+get_ert_access("commander")-ACCESS_CHANGE_IDS
 	. = ..()
 
 /obj/item/card/id/ert/Security
-	registered_name = "Security Response Officer"
-	assignment = "Security Response Officer"
+	registered_name = "Rescue & Response Officer"
+	assignment = "Rescue & Response Officer"
 
 /obj/item/card/id/ert/Security/Initialize()
 	access = get_all_accesses()+get_ert_access("sec")-ACCESS_CHANGE_IDS
 	. = ..()
 
 /obj/item/card/id/ert/Engineer
-	registered_name = "Engineer Response Officer"
-	assignment = "Engineer Response Officer"
+	registered_name = "Rescue & Response Technician"
+	assignment = "Rescue & Response Technician"
 
 /obj/item/card/id/ert/Engineer/Initialize()
 	access = get_all_accesses()+get_ert_access("eng")-ACCESS_CHANGE_IDS
 	. = ..()
 
 /obj/item/card/id/ert/Medical
-	registered_name = "Medical Response Officer"
-	assignment = "Medical Response Officer"
+	registered_name = "Rescue & Response Trauma Specialist"
+	assignment = "Rescue & Response Trauma Specialist"
 
 /obj/item/card/id/ert/Medical/Initialize()
 	access = get_all_accesses()+get_ert_access("med")-ACCESS_CHANGE_IDS
@@ -342,12 +373,41 @@ update_label("John Doe", "Clowny")
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 	assignment = "Prisoner"
-	registered_name = "Scum"
+	access = list(ACCESS_ENTER_GENPOP)
+
+	//Lavaland labor camp
 	var/goal = 0 //How far from freedom?
 	var/points = 0
+	//Genpop
+	var/sentence = 0	//When world.time is greater than this number, the card will have its ACCESS_ENTER_GENPOP access replaced with ACCESS_LEAVE_GENPOP the next time it's checked, unless this value is 0/null
+	var/crime= "\[REDACTED\]"
 
-/obj/item/card/id/prisoner/attack_self(mob/user)
-	to_chat(usr, "<span class='notice'>You have accumulated [points] out of the [goal] points you need for freedom.</span>")
+/obj/item/card/id/prisoner/GetAccess()
+	if((sentence && world.time >= sentence) || (goal && points >= goal))
+		access = list(ACCESS_LEAVE_GENPOP)
+	return ..()
+
+/obj/item/card/id/prisoner/process()
+	if(!sentence)
+		STOP_PROCESSING(SSobj, src)
+		return
+	if(world.time >= sentence)
+		playsound(loc, 'sound/machines/ping.ogg', 50, 1)
+		if(isliving(loc))
+			to_chat(loc, "<span class='boldnotice'>[src]</span><span class='notice'> buzzes: You have served your sentence! You may now exit prison through the turnstiles and collect your belongings.</span>")
+		STOP_PROCESSING(SSobj, src)
+	return
+
+/obj/item/card/id/prisoner/examine(mob/user)
+	. = ..()
+	if(sentence && world.time < sentence)
+		. += "<span class='notice'>You're currently serving a sentence for [crime]. <b>[DisplayTimeText(sentence - world.time)]</b> left.</span>"
+	else if(goal)
+		. += "<span class='notice'>You have accumulated [points] out of the [goal] points you need for freedom.</span>"
+	else if(!sentence)
+		. += "<span class='warning'>You are currently serving a permanent sentence for [crime].</span>"
+	else
+		. += "<span class='notice'>Your sentence is up! You're free!</span>"
 
 /obj/item/card/id/prisoner/one
 	name = "Prisoner #13-001"
@@ -422,3 +482,59 @@ update_label("John Doe", "Clowny")
 	name = "APC Access ID"
 	desc = "A special ID card that allows access to APC terminals."
 	access = list(ACCESS_ENGINE_EQUIP)
+
+//Polychromatic Knight Badge
+
+/obj/item/card/id/knight
+	var/id_color = "#00FF00" //defaults to green
+	name = "knight badge"
+	icon_state = "knight"
+	desc = "A badge denoting the owner as a knight! It has a strip for swiping like an ID"
+
+/obj/item/card/id/knight/update_label(newname, newjob)
+	if(newname || newjob)
+		name = "[(!newname)	? "knight badge"	: "[newname]'s Knight Badge"][(!newjob) ? "" : " ([newjob])"]"
+		return
+
+	name = "[(!registered_name)	? "knight badge"	: "[registered_name]'s Knight Badge"][(!assignment) ? "" : " ([assignment])"]"
+
+/obj/item/card/id/knight/update_icon()
+	var/mutable_appearance/id_overlay = mutable_appearance(icon, "knight_overlay")
+
+	if(id_color)
+		id_overlay.color = id_color
+	cut_overlays()
+
+	add_overlay(id_overlay)
+
+/obj/item/card/id/knight/AltClick(mob/living/user)
+	. = ..()
+	if(!in_range(src, user))	//Basic checks to prevent abuse
+		return
+	if(user.incapacitated() || !istype(user))
+		to_chat(user, "<span class='warning'>You can't do that right now!</span>")
+		return TRUE
+	if(alert("Are you sure you want to recolor your id?", "Confirm Repaint", "Yes", "No") == "Yes")
+		var/energy_color_input = input(usr,"","Choose Energy Color",id_color) as color|null
+		if(!in_range(src, user) || !energy_color_input)
+			return TRUE
+		if(user.incapacitated() || !istype(user))
+			to_chat(user, "<span class='warning'>You can't do that right now!</span>")
+			return TRUE
+		id_color = sanitize_hexcolor(energy_color_input, desired_format=6, include_crunch=1)
+		update_icon()
+		return TRUE
+
+/obj/item/card/id/knight/Initialize()
+	. = ..()
+	update_icon()
+
+/obj/item/card/id/knight/examine(mob/user)
+	. = ..()
+	. += "<span class='notice'>Alt-click to recolor it.</span>"
+
+/obj/item/card/id/knight/blue
+	id_color = "#0000FF"
+
+/obj/item/card/id/knight/captain
+	id_color = "#FFD700"

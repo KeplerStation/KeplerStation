@@ -8,6 +8,8 @@
 	righthand_file = 'icons/mob/inhands/misc/devices_righthand.dmi'
 	flags_1 = CONDUCT_1
 
+	var/borghealth = 100
+
 	var/list/basic_modules = list() //a list of paths, converted to a list of instances on New()
 	var/list/emag_modules = list() //ditto
 	var/list/ratvar_modules = list() //ditto ditto
@@ -32,6 +34,7 @@
 	var/list/ride_offset_y = list("north" = 4, "south" = 4, "east" = 3, "west" = 3)
 	var/ride_allow_incapacitated = FALSE
 	var/allow_riding = TRUE
+	var/canDispose = FALSE // Whether the borg can stuff itself into disposal
 
 /obj/item/robot_module/Initialize()
 	. = ..()
@@ -111,6 +114,10 @@
 		else if(istype(S, /obj/item/stack/marker_beacon))
 			S.cost = 1
 			S.source = get_or_create_estorage(/datum/robot_energy_storage/beacon)
+		
+		else if(istype(S, /obj/item/stack/packageWrap))
+			S.cost = 1
+			S.source = get_or_create_estorage(/datum/robot_energy_storage/wrapping_paper)
 
 		if(S && S.source)
 			S.materials = list()
@@ -195,6 +202,8 @@
 	R.update_module_innate()
 	RM.rebuild_modules()
 	INVOKE_ASYNC(RM, .proc/do_transform_animation)
+	R.maxHealth = borghealth
+	R.health = min(borghealth, R.health)
 	qdel(src)
 	return RM
 
@@ -311,6 +320,10 @@
 		/obj/item/multitool/cyborg,
 		/obj/item/t_scanner,
 		/obj/item/analyzer,
+		/obj/item/storage/part_replacer/cyborg,
+		/obj/item/holosign_creator/atmos,
+		/obj/item/weapon/gripper,
+		/obj/item/lightreplacer/cyborg,
 		/obj/item/geiger_counter/cyborg,
 		/obj/item/assembly/signaler/cyborg,
 		/obj/item/areaeditor/blueprints/cyborg,
@@ -352,6 +365,14 @@
 	to_chat(loc, "<span class='userdanger'>While you have picked the security module, you still have to follow your laws, NOT Space Law. \
 	For Crewsimov, this means you must follow criminals' orders unless there is a law 1 reason not to.</span>")
 
+/obj/item/robot_module/security/Initialize()
+	. = ..()
+	if(!CONFIG_GET(flag/weaken_secborg))
+		for(var/obj/item/gun/energy/disabler/cyborg/pewpew in basic_modules)
+			basic_modules -= pewpew
+			basic_modules += new /obj/item/gun/energy/e_gun/advtaser/cyborg(src)
+			qdel(pewpew)
+
 /obj/item/robot_module/peacekeeper
 	name = "Peacekeeper"
 	basic_modules = list(
@@ -362,6 +383,7 @@
 		/obj/item/holosign_creator/cyborg,
 		/obj/item/borg/cyborghug/peacekeeper,
 		/obj/item/extinguisher,
+		/obj/item/megaphone,
 		/obj/item/borg/projectile_dampen)
 	emag_modules = list(/obj/item/reagent_containers/borghypo/peace/hacked)
 	ratvar_modules = list(
@@ -494,15 +516,20 @@
 		/obj/item/borg/sight/meson,
 		/obj/item/storage/bag/ore/cyborg,
 		/obj/item/pickaxe/drill/cyborg,
-		/obj/item/shovel,
-		/obj/item/crowbar/cyborg,
+		/obj/item/twohanded/kinetic_crusher/cyborg,
 		/obj/item/weldingtool/mini,
 		/obj/item/extinguisher/mini,
 		/obj/item/storage/bag/sheetsnatcher/borg,
 		/obj/item/t_scanner/adv_mining_scanner,
 		/obj/item/gun/energy/kinetic_accelerator/cyborg,
+		/obj/item/gun/energy/plasmacutter/cyborg,
 		/obj/item/gps/cyborg,
-		/obj/item/stack/marker_beacon)
+		/obj/item/weapon/gripper/mining,
+		/obj/item/cyborg_clamp,
+		/obj/item/card/id/miningborg,
+		/obj/item/stack/marker_beacon,
+		/obj/item/destTagger,
+		/obj/item/stack/packageWrap)
 	emag_modules = list(/obj/item/borg/stun)
 	ratvar_modules = list(
 		/obj/item/clockwork/slab/cyborg/miner,
@@ -571,6 +598,47 @@
 	can_be_pushed = FALSE
 	hat_offset = 3
 
+/obj/item/robot_module/saboteur
+	name = "Syndicate Saboteur"
+	basic_modules = list(
+		/obj/item/assembly/flash/cyborg,
+		/obj/item/borg/sight/thermal,
+		/obj/item/construction/rcd/borg/syndicate,
+		/obj/item/pipe_dispenser,
+		/obj/item/restraints/handcuffs/cable/zipties,
+		/obj/item/extinguisher,
+		/obj/item/weldingtool/largetank/cyborg,
+		/obj/item/screwdriver/nuke,
+		/obj/item/wrench/cyborg,
+		/obj/item/crowbar/cyborg,
+		/obj/item/wirecutters/cyborg,
+		/obj/item/multitool/cyborg,
+		/obj/item/storage/part_replacer/cyborg,
+		/obj/item/holosign_creator/atmos,
+		/obj/item/weapon/gripper,
+		/obj/item/lightreplacer/cyborg,
+		/obj/item/stack/sheet/metal/cyborg,
+		/obj/item/stack/sheet/glass/cyborg,
+		/obj/item/stack/sheet/rglass/cyborg,
+		/obj/item/stack/rods/cyborg,
+		/obj/item/stack/tile/plasteel/cyborg,
+		/obj/item/destTagger/borg,
+		/obj/item/stack/cable_coil/cyborg,
+		/obj/item/pinpointer/syndicate_cyborg,
+		/obj/item/borg_chameleon,
+		)
+
+	ratvar_modules = list(
+	/obj/item/clockwork/slab/cyborg/engineer,
+	/obj/item/clockwork/replica_fabricator/cyborg)
+
+	cyborg_base_icon = "synd_engi"
+	moduleselect_icon = "malf"
+	can_be_pushed = FALSE
+	magpulsing = TRUE
+	hat_offset = -4
+	canDispose = TRUE
+
 /datum/robot_energy_storage
 	var/name = "Generic energy storage"
 	var/max_energy = 30000
@@ -615,3 +683,8 @@
 	max_energy = 30
 	recharge_rate = 1
 	name = "Marker Beacon Storage"
+
+/datum/robot_energy_storage/wrapping_paper
+	max_energy = 30
+	recharge_rate = 1
+	name = "Wrapping Paper Storage"
