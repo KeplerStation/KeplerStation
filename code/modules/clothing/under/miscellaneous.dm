@@ -829,8 +829,4 @@
 	icon_state = "christmasfemaleg"
 	item_state = "christmasfemaleg"
 	body_parts_covered = CHEST|GROIN
-<<<<<<< HEAD
 	can_adjust = FALSE
-=======
-	can_adjust = FALSE
->>>>>>> b896a233d4... Merge pull request #10535 from Hatterhat/greytide-standard-uniform
