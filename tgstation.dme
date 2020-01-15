@@ -3007,17 +3007,9 @@
 #include "modular_citadel\code\game\machinery\wishgranter.dm"
 #include "modular_citadel\code\game\objects\cit_screenshake.dm"
 #include "modular_citadel\code\game\objects\effects\temporary_visuals\souldeath.dm"
-<<<<<<< HEAD
-#include "modular_citadel\code\game\objects\items\balls.dm"
-#include "modular_citadel\code\game\objects\items\boombox.dm"
 #include "modular_citadel\code\game\objects\items\meat.dm"
-#include "modular_citadel\code\game\objects\items\stunsword.dm"
 #include "modular_citadel\code\game\objects\items\circuitboards\machine_circuitboards.dm"
-#include "modular_citadel\code\game\objects\items\devices\radio\encryptionkey.dm"
-#include "modular_citadel\code\game\objects\items\devices\radio\headset.dm"
 #include "modular_citadel\code\game\objects\structures\crates_lockers\closets\secure\citadel_lockers.dm"
-=======
->>>>>>> 5dee355381... Merge pull request #10530 from kappa-sama/modularer
 #include "modular_citadel\code\modules\admin\admin.dm"
 #include "modular_citadel\code\modules\admin\chat_commands.dm"
 #include "modular_citadel\code\modules\admin\holder2.dm"
