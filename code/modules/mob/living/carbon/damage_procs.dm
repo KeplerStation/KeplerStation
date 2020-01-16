@@ -41,9 +41,12 @@
 					update_damage_overlays()
 			else
 				adjustStaminaLoss(damage_amount, forced = forced)
+<<<<<<< HEAD
 		if(BRAIN)
 			adjustOrganLoss(ORGAN_SLOT_BRAIN, damage_amount)
 
+=======
+>>>>>>> ca13be3c92... Merge pull request #10456 from Putnam3145/arousal-bad
 	return TRUE
 
 

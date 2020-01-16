@@ -41,3 +41,13 @@
 		else
 			if(L[slot_to_string(slot)] < DEFAULT_SLOT_AMT)
 				return TRUE
+<<<<<<< HEAD
+=======
+
+/datum/preferences/copy_to(mob/living/carbon/human/character, icon_updates = 1)
+	..()
+	character.give_genitals(TRUE)
+	character.flavor_text = features["flavor_text"] //Let's update their flavor_text at least initially
+	if(icon_updates)
+		character.update_genitals()
+>>>>>>> ca13be3c92... Merge pull request #10456 from Putnam3145/arousal-bad

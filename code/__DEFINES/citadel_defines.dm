@@ -15,6 +15,64 @@
 //Filters
 #define CIT_FILTER_STAMINACRIT filter(type="drop_shadow", x=0, y=0, size=-3, color="#04080F")
 
+<<<<<<< HEAD
+=======
+//organ defines
+#define VAGINA_LAYER_INDEX		1
+#define TESTICLES_LAYER_INDEX	2
+#define GENITAL_LAYER_INDEX		3
+#define PENIS_LAYER_INDEX		4
+
+#define GENITAL_LAYER_INDEX_LENGTH 4 //keep it updated with each new index added, thanks.
+
+//genital flags
+#define GENITAL_BLACKLISTED		(1<<0) //for genitals that shouldn't be added to GLOB.genitals_list.
+#define GENITAL_INTERNAL		(1<<1)
+#define GENITAL_HIDDEN			(1<<2)
+#define GENITAL_THROUGH_CLOTHES	(1<<3)
+#define GENITAL_FUID_PRODUCTION	(1<<4)
+#define CAN_MASTURBATE_WITH		(1<<5)
+#define MASTURBATE_LINKED_ORGAN	(1<<6) //used to pass our mission to the linked organ
+#define CAN_CLIMAX_WITH			(1<<7)
+
+#define COCK_SIZE_MIN		1
+#define COCK_SIZE_MAX		20
+
+#define COCK_GIRTH_RATIO_MAX		1.25
+#define COCK_GIRTH_RATIO_DEF		0.75
+#define COCK_GIRTH_RATIO_MIN		0.5
+
+#define KNOT_GIRTH_RATIO_MAX		3
+#define KNOT_GIRTH_RATIO_DEF		2.1
+#define KNOT_GIRTH_RATIO_MIN		1.25
+
+#define BALLS_VOLUME_BASE	25
+#define BALLS_VOLUME_MULT	1
+
+#define BALLS_SIZE_MIN		1
+#define BALLS_SIZE_DEF		2
+#define BALLS_SIZE_MAX		3
+
+#define BALLS_SACK_SIZE_MIN 1
+#define BALLS_SACK_SIZE_DEF	8
+#define BALLS_SACK_SIZE_MAX 40
+
+#define CUM_RATE			2 // holy shit what a really shitty define name - relates to units per arbitrary measure of time?
+#define CUM_RATE_MULT		1
+#define CUM_EFFICIENCY		1 //amount of nutrition required per life()
+
+#define EGG_GIRTH_MIN		1//inches
+#define EGG_GIRTH_DEF		6
+#define EGG_GIRTH_MAX		16
+
+#define BREASTS_VOLUME_BASE	50	//base volume for the reagents in the breasts, multiplied by the size then multiplier. 50u for A cups, 850u for HH cups.
+#define BREASTS_VOLUME_MULT	1	//global multiplier for breast volume.
+
+#define MILK_RATE			5
+#define MILK_RATE_MULT		1
+#define MILK_EFFICIENCY		1
+
+>>>>>>> ca13be3c92... Merge pull request #10456 from Putnam3145/arousal-bad
 //Individual logging define
 #define INDIVIDUAL_LOOC_LOG "LOOC log"
 
@@ -22,12 +80,15 @@
 #define ADMIN_IC(client) "(<a href='?_src_=holder;icissue=\ref[client]'>IC</a>)"//marks and adminhelp as an IC issue
 #define ADMIN_REJECT(client) "(<a href='?_src_=holder;rejectadminhelp=\ref[client]'>REJT</a>)"//Rejects an adminhelp for being unclear or otherwise unhelpful. resets their adminhelp timer
 
+<<<<<<< HEAD
 //Species stuffs. Remember to change this if upstream updates species flags
 #define MUTCOLORS2		35
 #define MUTCOLORS3		36
 #define MATRIXED		39	//if icon is color matrix'd
 #define SKINTONE		40	//uses skin tones
 
+=======
+>>>>>>> ca13be3c92... Merge pull request #10456 from Putnam3145/arousal-bad
 //Citadel istypes
 #define isborer(A) (istype(A, /mob/living/simple_animal/borer))
 
@@ -47,5 +108,24 @@
 
 #define CRAWLUNDER_DELAY							30 //Delay for crawling under a standing mob
 
+<<<<<<< HEAD
+=======
+//Citadel toggles because bitflag memes
+#define MEDIHOUND_SLEEPER	(1<<0)
+#define EATING_NOISES		(1<<1)
+#define DIGESTION_NOISES	(1<<2)
+#define BREAST_ENLARGEMENT	(1<<3)
+#define PENIS_ENLARGEMENT	(1<<4)
+#define FORCED_FEM			(1<<5)
+#define FORCED_MASC			(1<<6)
+#define HYPNO				(1<<7)
+#define NEVER_HYPNO			(1<<8)
+#define NO_APHRO			(1<<9)
+#define NO_ASS_SLAP			(1<<10)
+#define BIMBOFICATION		(1<<11)
+
+#define TOGGLES_CITADEL (EATING_NOISES|DIGESTION_NOISES|BREAST_ENLARGEMENT|PENIS_ENLARGEMENT)
+
+>>>>>>> ca13be3c92... Merge pull request #10456 from Putnam3145/arousal-bad
 //component stuff
 #define COMSIG_COMBAT_TOGGLED "combatmode_toggled" //called by combat mode toggle on all equipped items. args: (mob/user, combatmode)

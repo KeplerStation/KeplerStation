@@ -39,11 +39,14 @@
 		//Stuff jammed in your limbs hurts
 		handle_embedded_objects()
 
+<<<<<<< HEAD
 	if(stat != DEAD)
 		// Kepler change, handle our bones being broken. Also why the fuck are all these seperate IF statements. smh.
 		handle_fractures()
 
 
+=======
+>>>>>>> ca13be3c92... Merge pull request #10456 from Putnam3145/arousal-bad
 	//Update our name based on whether our face is obscured/disfigured
 	name = get_visible_name()
 

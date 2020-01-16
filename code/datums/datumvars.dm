@@ -96,7 +96,10 @@
 					CLONE:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=clone' id='clone'>[M.getCloneLoss()]</a>
 					BRAIN:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=brain' id='brain'>[M.getOrganLoss(ORGAN_SLOT_BRAIN)]</a>
 					STAMINA:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=stamina' id='stamina'>[M.getStaminaLoss()]</a>
+<<<<<<< HEAD
 				</font>
+=======
+>>>>>>> ca13be3c92... Merge pull request #10456 from Putnam3145/arousal-bad
 					"}
 			if(GLOB.Debug2)
 				atomsnowflake += {"

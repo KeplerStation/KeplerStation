@@ -150,11 +150,20 @@
 #define TRAIT_SKITTISH			"skittish"
 #define TRAIT_POOR_AIM			"poor_aim"
 #define TRAIT_PROSOPAGNOSIA		"prosopagnosia"
+<<<<<<< HEAD
 #define	TRAIT_DRUNK_HEALING		"drunk_healing"
 #define	TRAIT_TAGGER			"tagger"
 #define	TRAIT_PHOTOGRAPHER		"photographer"
 #define	TRAIT_MUSICIAN			"musician"
 #define	TRAIT_CROCRIN_IMMUNE    "crocin_immune"
+=======
+#define TRAIT_DRUNK_HEALING		"drunk_healing"
+#define TRAIT_TAGGER			"tagger"
+#define TRAIT_PHOTOGRAPHER		"photographer"
+#define TRAIT_MUSICIAN			"musician"
+#define TRAIT_PERMABONER		"permanent_arousal"
+#define TRAIT_NEVERBONER		"never_aroused"
+>>>>>>> ca13be3c92... Merge pull request #10456 from Putnam3145/arousal-bad
 #define TRAIT_NYMPHO			"nymphomania"
 #define TRAIT_MASO              "masochism"
 #define	TRAIT_HIGH_BLOOD        "high_blood"
@@ -187,6 +196,11 @@
 #define ABSTRACT_ITEM_TRAIT "abstract-item"
 #define STATUS_EFFECT_TRAIT "status-effect"
 #define ROUNDSTART_TRAIT "roundstart" //cannot be removed without admin intervention
+<<<<<<< HEAD
+=======
+#define GHOSTROLE_TRAIT "ghostrole"
+#define APHRO_TRAIT "aphro"
+>>>>>>> ca13be3c92... Merge pull request #10456 from Putnam3145/arousal-bad
 
 // unique trait sources, still defines
 #define STATUE_MUTE "statue"
