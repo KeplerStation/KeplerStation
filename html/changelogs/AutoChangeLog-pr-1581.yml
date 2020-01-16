@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - balance: "The stamina buffer no longer uses stamina while recharging."
