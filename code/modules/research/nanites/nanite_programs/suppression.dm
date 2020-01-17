@@ -134,21 +134,12 @@
 	trigger_cooldown = 20
 	rogue_types = list(/datum/nanite_program/brain_misfire, /datum/nanite_program/brain_decay)
 
-<<<<<<< HEAD
-	extra_settings = list(NES_SENTENCE)
-	var/sentence = ""
-
-/datum/nanite_program/triggered/speech/set_extra_setting(user, setting)
-	if(setting == NES_SENTENCE)
-		var/new_sentence = stripped_input(user, "Choose the sentence that the host will be forced to say.", NES_SENTENCE, sentence, MAX_MESSAGE_LEN)
-=======
 	extra_settings = list("Sentence","Comm Code")
 	var/sentence = ""
 
 /datum/nanite_program/triggered/comm/speech/set_extra_setting(user, setting)
 	if(setting == "Sentence")
 		var/new_sentence = stripped_input(user, "Choose the sentence that the host will be forced to say.", "Sentence", sentence, MAX_MESSAGE_LEN)
->>>>>>> 05e2b6a441... Merge pull request #10569 from keronshb/RemoteMoodResearch
 		if(!new_sentence)
 			return
 		if(copytext(new_sentence, 1, 2) == "*") //emotes are abusable, like surrender
@@ -160,13 +151,8 @@
 			return
 		comm_code = CLAMP(round(new_code, 1), 0, 9999)
 
-<<<<<<< HEAD
-/datum/nanite_program/triggered/speech/get_extra_setting(setting)
-	if(setting == NES_SENTENCE)
-=======
 /datum/nanite_program/triggered/comm/speech/get_extra_setting(setting)
 	if(setting == "Sentence")
->>>>>>> 05e2b6a441... Merge pull request #10569 from keronshb/RemoteMoodResearch
 		return sentence
 	if(setting == "Comm Code")
 		return comm_code
@@ -194,21 +180,12 @@
 	trigger_cooldown = 20
 	rogue_types = list(/datum/nanite_program/brain_misfire, /datum/nanite_program/brain_decay)
 
-<<<<<<< HEAD
-	extra_settings = list(NES_MESSAGE)
-	var/message = ""
-
-/datum/nanite_program/triggered/voice/set_extra_setting(user, setting)
-	if(setting == NES_MESSAGE)
-		var/new_message = stripped_input(user, "Choose the message sent to the host.", NES_MESSAGE, message, MAX_MESSAGE_LEN)
-=======
 	extra_settings = list("Message","Comm Code")
 	var/message = ""
 
 /datum/nanite_program/triggered/comm/voice/set_extra_setting(user, setting)
 	if(setting == "Message")
 		var/new_message = stripped_input(user, "Choose the message sent to the host.", "Message", message, MAX_MESSAGE_LEN)
->>>>>>> 05e2b6a441... Merge pull request #10569 from keronshb/RemoteMoodResearch
 		if(!new_message)
 			return
 		message = new_message
@@ -218,13 +195,8 @@
 			return
 		comm_code = CLAMP(round(new_code, 1), 0, 9999)
 
-<<<<<<< HEAD
-/datum/nanite_program/triggered/voice/get_extra_setting(setting)
-	if(setting == NES_MESSAGE)
-=======
 /datum/nanite_program/triggered/comm/voice/get_extra_setting(setting)
 	if(setting == "Message")
->>>>>>> 05e2b6a441... Merge pull request #10569 from keronshb/RemoteMoodResearch
 		return message
 	if(setting == "Comm Code")
 		return comm_code
@@ -250,11 +222,7 @@
 	trigger_cooldown = 80
 	unique = FALSE
 	rogue_types = list(/datum/nanite_program/brain_misfire)
-<<<<<<< HEAD
-	extra_settings = list(NES_HALLUCINATION_TYPE)
-=======
 	extra_settings = list("Hallucination Type", "Comm Code")
->>>>>>> 05e2b6a441... Merge pull request #10569 from keronshb/RemoteMoodResearch
 	var/hal_type
 	var/hal_details
 
@@ -275,13 +243,8 @@
 		C.hallucination += 15
 	else
 		switch(hal_type)
-<<<<<<< HEAD
-			if(NES_MESSAGE)
-				new /datum/hallucination/chat(C, TRUE, null, hal_details)
-=======
 			if("Message")
 				new /datum/hallucination/chat(C, TRUE, null, sent_message)
->>>>>>> 05e2b6a441... Merge pull request #10569 from keronshb/RemoteMoodResearch
 			if("Battle")
 				new /datum/hallucination/battle(C, TRUE, hal_details)
 			if("Sound")
@@ -301,11 +264,6 @@
 			if("Plasma Flood")
 				new /datum/hallucination/fake_flood(C, TRUE)
 
-<<<<<<< HEAD
-/datum/nanite_program/triggered/hallucination/set_extra_setting(user, setting)
-	if(setting == NES_HALLUCINATION_TYPE)
-		var/list/possible_hallucinations = list("Random",NES_MESSAGE,"Battle","Sound","Weird Sound","Station Message","Health","Alert","Fire","Shock","Plasma Flood")
-=======
 /datum/nanite_program/triggered/comm/hallucination/set_extra_setting(user, setting)
 	if(setting == "Comm Code")
 		var/new_code = input(user, "(Only for Message) Set the communication code (1-9999) or set to 0 to disable external signals.", name, null) as null|num
@@ -315,7 +273,6 @@
 
 	if(setting == "Hallucination Type")
 		var/list/possible_hallucinations = list("Random","Message","Battle","Sound","Weird Sound","Station Message","Health","Alert","Fire","Shock","Plasma Flood")
->>>>>>> 05e2b6a441... Merge pull request #10569 from keronshb/RemoteMoodResearch
 		var/hal_type_choice = input("Choose the hallucination type", name) as null|anything in possible_hallucinations
 		if(!hal_type_choice)
 			return
@@ -389,13 +346,8 @@
 			if("Plasma Flood")
 				hal_type = "Plasma Flood"
 
-<<<<<<< HEAD
-/datum/nanite_program/triggered/hallucination/get_extra_setting(setting)
-	if(setting == NES_HALLUCINATION_TYPE)
-=======
 /datum/nanite_program/triggered/comm/hallucination/get_extra_setting(setting)
 	if(setting == "Hallucination Type")
->>>>>>> 05e2b6a441... Merge pull request #10569 from keronshb/RemoteMoodResearch
 		if(!hal_type)
 			return "Random"
 		else

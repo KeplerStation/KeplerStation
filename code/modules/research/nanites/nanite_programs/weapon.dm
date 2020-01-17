@@ -167,22 +167,12 @@
 	trigger_cooldown = 1800
 	rogue_types = list(/datum/nanite_program/brain_decay, /datum/nanite_program/brain_misfire)
 
-<<<<<<< HEAD
-	extra_settings = list(NES_DIRECTIVE)
-	var/cooldown = 0 //avoids spam when nanites are running low
-	var/directive = "..."
-
-/datum/nanite_program/mind_control/set_extra_setting(user, setting)
-	if(setting == NES_DIRECTIVE)
-		var/new_directive = stripped_input(user, "Choose the directive to imprint with mind control.", NES_DIRECTIVE, directive, MAX_MESSAGE_LEN)
-=======
 	extra_settings = list("Directive","Comm Code")
 	var/directive = "..."
 
 /datum/nanite_program/triggered/comm/mind_control/set_extra_setting(user, setting)
 	if(setting == "Directive")
 		var/new_directive = stripped_input(user, "Choose the directive to imprint with mind control.", "Directive", directive, MAX_MESSAGE_LEN)
->>>>>>> 05e2b6a441... Merge pull request #10569 from keronshb/RemoteMoodResearch
 		if(!new_directive)
 			return
 		directive = new_directive
@@ -192,13 +182,8 @@
 			return
 		comm_code = CLAMP(round(new_code, 1), 0, 9999)
 
-<<<<<<< HEAD
-/datum/nanite_program/mind_control/get_extra_setting(setting)
-	if(setting == NES_DIRECTIVE)
-=======
 /datum/nanite_program/triggered/comm/mind_control/get_extra_setting(setting)
 	if(setting == "Directive")
->>>>>>> 05e2b6a441... Merge pull request #10569 from keronshb/RemoteMoodResearch
 		return directive
 	if(setting == "Comm Code")
 		return comm_code
