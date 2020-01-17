@@ -188,7 +188,7 @@ SLIME SCANNER
 		msg += "\t<span class='info'>Subject is hallucinating.</span>\n"
 
 	//Astrogen shenanigans
-	if(advanced && M.reagents.has_reagent("astral"))
+	if(advanced && M.reagents.has_reagent(/datum/reagent/fermi/astral))
 		if(M.mind)
 			msg += "\t<span class='danger'>Warning: subject may be possesed.</span>\n"
 		else
@@ -317,9 +317,9 @@ SLIME SCANNER
 			else
 				msg += "<span class='notice'>Subject is not addicted to any reagents.</span>\n"
 
-			if(M.reagents.has_reagent("fermiTox"))
-				var/datum/reagent/fermiTox = M.reagents.has_reagent("fermiTox")
-				switch(fermiTox.volume)
+			var/datum/reagent/impure/fermiTox/F = M.reagents.has_reagent(/datum/reagent/impure/fermiTox)
+			if(istype(F,/datum/reagent/impure/fermiTox))
+				switch(F?.volume)
 					if(5 to 10)
 						msg += "<span class='notice'>Subject contains a low amount of toxic isomers.</span>\n"
 					if(10 to 25)
@@ -371,7 +371,7 @@ SLIME SCANNER
 	throw_range = 7
 	tool_behaviour = TOOL_ANALYZER
 	materials = list(MAT_METAL=30, MAT_GLASS=20)
-	grind_results = list("mercury" = 5, "iron" = 5, "silicon" = 5)
+	grind_results = list(/datum/reagent/mercury = 5, /datum/reagent/iron = 5, /datum/reagent/silicon = 5)
 	var/cooldown = FALSE
 	var/cooldown_time = 250
 	var/accuracy // 0 is the best accuracy.
