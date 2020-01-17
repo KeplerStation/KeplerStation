@@ -1716,7 +1716,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 /datum/species/proc/bullet_act(obj/item/projectile/P, mob/living/carbon/human/H)
 	// called before a projectile hit
-	return 0
+	return
 
 /////////////
 //BREATHING//
