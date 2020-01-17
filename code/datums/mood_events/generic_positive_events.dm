@@ -137,6 +137,50 @@
 	mood_change = 3
 	timeout = 3000
 
+<<<<<<< HEAD
+=======
+/datum/mood_event/breakfast
+	description = "<span class='nicegreen'>Nothing like a hearty breakfast to start the shift.</span>\n"
+	mood_change = 2
+	timeout = 15 MINUTES
+
+/datum/mood_event/nanite_happiness
+	description = "<span class='nicegreen robot'>+++++++HAPPINESS ENHANCEMENT+++++++</span>\n"
+	mood_change = 7
+
+/datum/mood_event/nanite_happiness/add_effects(message)
+	description = "<span class='nicegreen robot'>+++++++[message]+++++++</span>\n"
+
+/datum/mood_event/area
+	description = "" //Fill this out in the area
+	mood_change = 0
+//Power gamer stuff below
+/datum/mood_event/drankblood
+	description = "<span class='nicegreen'>I have fed greedly from that which nourishes me.</span>\n"
+	mood_change = 10
+	timeout = 900
+
+/datum/mood_event/coffinsleep
+	description = "<span class='nicegreen'>I slept in a coffin during the day. I feel whole again.</span>\n"
+	mood_change = 8
+	timeout = 1200
+
+//Cursed stuff below.
+
+/datum/mood_event/orgasm
+	description = "<span class='userlove'>I came!</span>\n" //funny meme haha
+	mood_change = 3
+	timeout = 100 SECONDS
+
+/datum/mood_event/fedpred
+	description = "<span class='nicegreen'>I've devoured someone!</span>\n"
+	mood_change = 3
+
+/datum/mood_event/fedprey
+	description = "<span class='nicegreen'>It feels quite cozy in here.</span>\n"
+	mood_change = 3
+
+>>>>>>> 05e2b6a441... Merge pull request #10569 from keronshb/RemoteMoodResearch
 /datum/mood_event/hope_lavaland
 	description = "<span class='nicegreen'>What a peculiar emblem.  It makes me feel hopeful for my future.</span>\n"
 	mood_change = 5
