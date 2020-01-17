@@ -41,7 +41,7 @@
 
 /datum/status_effect/chem/astral_insurance/tick(mob/living/carbon/M)
 	. = ..()
-	if(owner.reagents.has_reagent("astral"))
+	if(owner.reagents.has_reagent(/datum/reagent/fermi/astral))
 		return
 	if(owner.mind == originalmind) //If they're home, let the chem deal with deletion.
 		return
