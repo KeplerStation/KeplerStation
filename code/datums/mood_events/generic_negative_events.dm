@@ -186,3 +186,7 @@
 	description = "<span class='warning'>A plush I tried to pet had no stuffing...</span>\n"
 	mood_change = -1
 	timeout = 2 MINUTES
+
+/datum/mood_event/nanite_sadness/add_effects(message)
+	description = "<span class='warning robot'>+++++++[message]+++++++</span>\n"
+
