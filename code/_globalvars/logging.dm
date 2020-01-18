@@ -30,6 +30,13 @@ GLOBAL_VAR(world_virus_log)
 GLOBAL_PROTECT(world_virus_log)
 GLOBAL_VAR(world_map_error_log)
 GLOBAL_PROTECT(world_map_error_log)
+<<<<<<< HEAD
+=======
+GLOBAL_VAR(subsystem_log)
+GLOBAL_PROTECT(subsystem_log)
+GLOBAL_VAR(world_crafting_log)
+GLOBAL_PROTECT(world_crafting_log)
+>>>>>>> 07b3bac674... Merge pull request #10580 from Putnam3145/craft-log
 
 GLOBAL_LIST_EMPTY(bombers)
 GLOBAL_PROTECT(bombers)
