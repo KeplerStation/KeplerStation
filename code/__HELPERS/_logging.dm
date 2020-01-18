@@ -121,12 +121,9 @@
 	if (CONFIG_GET(flag/log_vote))
 		WRITE_LOG(GLOB.world_game_log, "VOTE: [text]")
 
-<<<<<<< HEAD
-=======
 /proc/log_craft(text)
 	if (CONFIG_GET(flag/log_craft))
 		WRITE_LOG(GLOB.world_crafting_log, "CRAFT: [text]")
->>>>>>> 07b3bac674... Merge pull request #10580 from Putnam3145/craft-log
 
 /proc/log_topic(text)
 	WRITE_LOG(GLOB.world_game_log, "TOPIC: [text]")
