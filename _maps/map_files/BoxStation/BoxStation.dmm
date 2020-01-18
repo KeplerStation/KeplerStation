@@ -26711,6 +26711,13 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/sign/poster/official/state_laws{
+	pixel_y = -32
+	},
+/obj/effect/landmark/start/cyborg,
+>>>>>>> f848b58f2c... Merge pull request #10579 from r4d6/map-fix
 /turf/open/floor/plasteel,
 /area/science/robotics/mechbay)
 "blu" = (
@@ -26867,7 +26874,7 @@
 /area/science/lab)
 "blM" = (
 /obj/effect/turf_decal/bot,
-/obj/effect/landmark/start/roboticist,
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "blO" = (
@@ -27394,6 +27401,7 @@
 /area/maintenance/aft)
 "bnb" = (
 /obj/machinery/recharge_station,
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel,
 /area/science/robotics/mechbay)
 "bnc" = (
@@ -51068,6 +51076,7 @@
 /area/ai_monitored/turret_protected/aisat_interior)
 "cum" = (
 /obj/machinery/recharge_station,
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/aisat/service)
 "cun" = (
@@ -53785,6 +53794,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
+/obj/effect/landmark/start/roboticist,
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "cHT" = (
@@ -53861,7 +53871,7 @@
 "cIc" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/bot,
-/obj/effect/landmark/start/roboticist,
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "cId" = (
@@ -55038,6 +55048,35 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/medical/morgue)
+<<<<<<< HEAD
+=======
+"kQZ" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "holoprivacy";
+	name = "Holodeck Shutters"
+	},
+/turf/open/floor/plating,
+/area/crew_quarters/fitness)
+"kRk" = (
+/obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden,
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#e8eaff"
+	},
+/obj/structure/chair/sofa/right{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness)
+"kRw" = (
+/obj/effect/landmark/start/roboticist,
+/turf/open/floor/plasteel/white,
+/area/science/robotics/lab)
+>>>>>>> f848b58f2c... Merge pull request #10579 from r4d6/map-fix
 "kSb" = (
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
@@ -100111,7 +100150,7 @@ aYV
 bfV
 bhw
 cHM
-biL
+kRw
 blB
 blF
 cHS

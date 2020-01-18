@@ -66922,6 +66922,7 @@
 "cBg" = (
 /obj/machinery/recharge_station,
 /obj/effect/turf_decal/delivery,
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel,
 /area/science/robotics/mechbay)
 "cBh" = (
@@ -68908,8 +68909,8 @@
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "cFf" = (
-/obj/effect/landmark/start/roboticist,
 /obj/effect/turf_decal/bot,
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "cFg" = (
@@ -69977,9 +69978,9 @@
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "cGW" = (
-/obj/effect/landmark/start/roboticist,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/bot,
+/obj/effect/landmark/start/cyborg,
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "cGX" = (
@@ -82302,6 +82303,29 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
+<<<<<<< HEAD
+=======
+"lOi" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/landmark/start/roboticist,
+/turf/open/floor/plasteel,
+/area/science/robotics/lab)
+"lWL" = (
+/obj/machinery/smartfridge/organ/preloaded,
+/turf/closed/wall,
+/area/medical/surgery)
+>>>>>>> f848b58f2c... Merge pull request #10579 from r4d6/map-fix
 "lWY" = (
 /obj/machinery/door/airlock/hatch{
 	name = "Telecomms Server Room"
@@ -112121,10 +112145,10 @@ cAo
 cBi
 cCn
 cDd
-cEm
+lOi
 cFf
 cFg
-cFh
+cFf
 cHR
 cIL
 cJK
@@ -112635,8 +112659,8 @@ cAp
 cBj
 cCq
 cDf
-cEm
-cFh
+lOi
+cFf
 cGd
 cGW
 cHS
