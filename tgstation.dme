@@ -17,6 +17,7 @@
 #include "code\_compile_options.dm"
 #include "code\world.dm"
 #include "code\__DEFINES\__513_compatibility.dm"
+#include "code\__DEFINES\_extools_api.dm"
 #include "code\__DEFINES\_globals.dm"
 #include "code\__DEFINES\_protect.dm"
 #include "code\__DEFINES\_tick.dm"

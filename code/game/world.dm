@@ -10,6 +10,11 @@ GLOBAL_LIST(topic_status_cache)
 /world/New()
 
 	log_world("World loaded at [TIME_STAMP("hh:mm:ss", FALSE)]!")
+	
+	// KEPLER CHANGE: Loads in the extools library, as well as its features
+	extools_initialize()
+	maptick_initialize()
+	debugger_initialize()
 
 	SetupExternalRSC()
 
