@@ -38576,9 +38576,8 @@
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
 "bMq" = (
-/obj/structure/closet/l3closet/scientist,
-/obj/item/extinguisher,
 /obj/effect/turf_decal/stripes/line,
+/obj/machinery/chem_dispenser,
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
 "bMr" = (
