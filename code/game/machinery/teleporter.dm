@@ -73,25 +73,17 @@
 	if (ismovableatom(M))
 		if(do_teleport(M, com.target, channel = TELEPORT_CHANNEL_BLUESPACE))
 			use_power(5000)
-<<<<<<< HEAD
-			
+
 			/*KEPLER CHANGE: Removes flyperson chance
 			if(!calibrated && iscarbon(M) && prob(30 - ((accurate) * 10))) //oh dear a problem
-=======
 
-			if(!calibrated && iscarbon(M) && prob(30 - ((accuracy) * 10))) //oh dear a problem
->>>>>>> 536900a7ac... Merge pull request #10520 from Hatterhat/tg-40920
 				var/mob/living/carbon/C = M
 				if(C.dna?.species && C.dna.species.id != "fly" && !HAS_TRAIT(C, TRAIT_RADIMMUNE))
 					to_chat(C, "<span class='italics'>You hear a buzzing in your ears.</span>")
 					C.set_species(/datum/species/fly)
 					log_game("[C] ([key_name(C)]) was turned into a fly person")
-<<<<<<< HEAD
 					C.apply_effect((rand(120 - accurate * 40, 180 - accurate * 60)), EFFECT_IRRADIATE, 0)
 			*/
-=======
-					C.apply_effect((rand(120 - accuracy * 40, 180 - accuracy * 60)), EFFECT_IRRADIATE, 0)
->>>>>>> 536900a7ac... Merge pull request #10520 from Hatterhat/tg-40920
 
 			calibrated = FALSE
 	return
