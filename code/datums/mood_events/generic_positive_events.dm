@@ -137,6 +137,7 @@
 	mood_change = 3
 	timeout = 3000
 
+
 /datum/mood_event/drankblood
 	description = "<span class='nicegreen'>I have fed greedly from that which nourishes me.</span>\n"
 	mood_change = 10
@@ -146,6 +147,17 @@
 	description = "<span class='nicegreen'>I slept in a coffin during the day. I feel whole again.</span>\n"
 	mood_change = 8
 	timeout = 1200
+
+/datum/mood_event/nanite_happiness
+	description = "<span class='nicegreen robot'>+++++++HAPPINESS ENHANCEMENT+++++++</span>\n"
+	mood_change = 7
+
+/datum/mood_event/nanite_happiness/add_effects(message)
+	description = "<span class='nicegreen robot'>+++++++[message]+++++++</span>\n"
+
+/datum/mood_event/area
+	description = "" //Fill this out in the area
+	mood_change = 0
 
 /datum/mood_event/hope_lavaland
 	description = "<span class='nicegreen'>What a peculiar emblem.  It makes me feel hopeful for my future.</span>\n"
