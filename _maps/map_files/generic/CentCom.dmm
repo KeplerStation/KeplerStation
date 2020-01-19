@@ -7936,6 +7936,10 @@
 	},
 /turf/open/floor/engine/cult,
 /area/wizard_station)
+"sa" = (
+/obj/item/hilbertshotel/ghostdojo,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "sc" = (
 /obj/docking_port/stationary{
 	area_type = /area/syndicate_mothership/control;
@@ -47606,8 +47610,13 @@ aa
 aa
 Nd
 SU
+<<<<<<< HEAD
 Xk
 Xx
+=======
+Sd
+MR
+>>>>>>> 0a5e2cf8ff... Merge pull request #10601 from Putnam3145/dojo-hilbert
 Nm
 Nd
 SN
@@ -47621,6 +47630,7 @@ Fi
 Tn
 UT
 Hm
+<<<<<<< HEAD
 Xk
 Xk
 GY
@@ -47628,6 +47638,15 @@ NT
 Xk
 Xk
 Xk
+=======
+Sd
+Sd
+GY
+NT
+Sd
+Ms
+Sd
+>>>>>>> 0a5e2cf8ff... Merge pull request #10601 from Putnam3145/dojo-hilbert
 NT
 vt
 Mx
@@ -47636,6 +47655,7 @@ Tb
 Uh
 tW
 Nd
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -47647,6 +47667,19 @@ aa
 aa
 aa
 aa
+=======
+Ru
+Of
+QF
+Nd
+Sd
+sa
+Nd
+WN
+Ur
+wj
+Nd
+>>>>>>> 0a5e2cf8ff... Merge pull request #10601 from Putnam3145/dojo-hilbert
 aa
 aa
 aa
@@ -47739,6 +47772,7 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -47798,6 +47832,8 @@ aa
 aa
 aa
 aa
+=======
+>>>>>>> 0a5e2cf8ff... Merge pull request #10601 from Putnam3145/dojo-hilbert
 aa
 aa
 aa
