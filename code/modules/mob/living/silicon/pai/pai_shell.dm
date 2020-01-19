@@ -99,7 +99,13 @@
 	if(loc != card)
 		visible_message("<span class='notice'>[src] [rest? "lays down for a moment..." : "perks up from the ground"]</span>")
 
+<<<<<<< HEAD
 /mob/living/silicon/pai/start_pulling(atom/movable/AM)
+=======
+/mob/living/silicon/pai/start_pulling(atom/movable/AM, state, force = move_force, supress_message = FALSE)
+	if(ispAI(AM))
+		return ..()
+>>>>>>> 088e586b47... Merge pull request #9601 from Ghommie/Ghommie-cit265
 	return FALSE
 
 /mob/living/silicon/pai/proc/toggle_integrated_light()

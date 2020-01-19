@@ -29,7 +29,12 @@
 	projectilesound = 'sound/weapons/pierce.ogg'
 	robust_searching = TRUE
 	stat_attack = UNCONSCIOUS
+<<<<<<< HEAD
 	anchored = TRUE
+=======
+	move_resist = MOVE_FORCE_EXTREMELY_STRONG
+	blood_volume = 0
+>>>>>>> 088e586b47... Merge pull request #9601 from Ghommie/Ghommie-cit265
 	var/combatant_state = SEEDLING_STATE_NEUTRAL
 	var/obj/seedling_weakpoint/weak_point
 	var/mob/living/beam_debuff_target
