@@ -49,7 +49,7 @@
 
 /obj/item/reagent_containers/blood/random/Initialize()
 	icon_state = "bloodpack"
-	blood_type = pick("A+", "A-", "B+", "B-", "O+", "O-", "L", "SY", "HF", "BUG")
+	blood_type = pick("A+", "A-", "B+", "B-", "O+", "O-", "L", "SY", "HF", "GEL", "BUG")
 	return ..()
 
 /obj/item/reagent_containers/blood/APlus
@@ -81,6 +81,9 @@
 
 /obj/item/reagent_containers/blood/oilblood
 	blood_type = "HF"
+
+/obj/item/reagent_containers/blood/jellyblood
+	blood_type = "GEL"
 
 /obj/item/reagent_containers/blood/insect
 	blood_type = "BUG"

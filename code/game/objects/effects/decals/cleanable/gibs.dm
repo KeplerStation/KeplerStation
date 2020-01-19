@@ -147,7 +147,8 @@
 // Slime Gibs
 /obj/effect/decal/cleanable/blood/gibs/slime
 	desc = "They look gooey and gruesome."
-	gibs_reagent_id = /datum/reagent/water
+	gibs_reagent_id = /datum/reagent/liquidgibs/slime
+	gibs_bloodtype = "GEL"
 
 /obj/effect/decal/cleanable/blood/gibs/slime/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()

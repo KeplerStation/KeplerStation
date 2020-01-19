@@ -87,13 +87,16 @@ GLOBAL_LIST_INIT(all_types_bloods,list(
 		"HF",
 		"L",
 		"U",
+		"GEL",
 		"BUG"
 		))
 
 GLOBAL_LIST_INIT(blood_types, list(
-		"blood"
+		"blood",
+		"jellyblood"
 		))
 
 GLOBAL_LIST_INIT(blood_id_types, list(
-		"blood" = /datum/reagent/blood
+		"blood" = /datum/reagent/blood,
+		"jellyblood" = /datum/reagent/blood/jellyblood
 		))
