@@ -403,3 +403,13 @@
 
 /datum/config_entry/flag/allow_clockwork_marauder_on_station
 	config_entry_value = TRUE
+<<<<<<< HEAD
+=======
+
+/datum/config_entry/flag/modetier_voting
+
+/datum/config_entry/number/dropped_modes
+	config_entry_value = 3
+
+/datum/config_entry/flag/suicide_allowed
+>>>>>>> 8a091c5140... Merge pull request #10614 from Putnam3145/suicide_option

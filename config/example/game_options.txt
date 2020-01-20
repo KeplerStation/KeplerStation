@@ -580,3 +580,15 @@ BOX_RANDOM_ENGINE Box Singulo,3
 BOX_RANDOM_ENGINE Box SM 1x3,1
 BOX_RANDOM_ENGINE Box SM 5x5,1
 BOX_RANDOM_ENGINE Box SM 3x,0
+<<<<<<< HEAD:config/example/game_options.txt
+=======
+
+## Whether or not there's a mode tier list vote after the secret/extended vote.
+MODETIER_VOTING
+
+## Number of modes dropped by the modetier vote during mode selection, after vote.
+DROPPED_MODES 3
+
+## Whether the suicide verb is allowed.
+# SUICIDE_ALLOWED
+>>>>>>> 8a091c5140... Merge pull request #10614 from Putnam3145/suicide_option:config/game_options.txt
