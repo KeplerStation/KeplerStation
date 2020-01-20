@@ -53,9 +53,6 @@
 /proc/tffi_initialize()
 	return call(EXTOOLS, "tffi_initialize")() == EXTOOLS_SUCCESS
 
-var/fallback_alerted = FALSE
-var/next_promise_id = 0
-
 /datum/promise
 	var/completed = FALSE
 	var/result = ""
@@ -64,15 +61,15 @@ var/next_promise_id = 0
 	var/__id = 0
 
 /datum/promise/New()
-	__id = next_promise_id++ //please don't create more than 10^38 promises in a single tick
+	__id = GLOB.next_promise_id++ //please don't create more than 10^38 promises in a single tick
 
 //This proc's bytecode is overwritten to allow suspending and resuming on demand.
 //None of the code here should run.
 /datum/promise/proc/__internal_resolve(ref, id)
-	if(!fallback_alerted && world.system_type != UNIX) // the rewriting is currently broken on Linux.
+	if(!GLOB.fallback_alerted && world.system_type != UNIX) // the rewriting is currently broken on Linux.
 		world << "<b>TFFI: __internal_resolve has not been rewritten, the TFFI DLL was not loaded correctly.</b>"
 		world.log << "<b>TFFI: __internal_resolve has not been rewritten, the TFFI DLL was not loaded correctly.</b>"
-		fallback_alerted = TRUE
+		GLOB.fallback_alerted = TRUE
 	while(!completed)
 		sleep(1)
 		//It might be better to just fail and notify the user that something went wrong.
