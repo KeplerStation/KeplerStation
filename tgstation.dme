@@ -2229,12 +2229,6 @@
 #include "code\modules\mob\living\simple_animal\parrot.dm"
 #include "code\modules\mob\living\simple_animal\shade.dm"
 #include "code\modules\mob\living\simple_animal\simple_animal.dm"
-<<<<<<< HEAD
-#include "code\modules\mob\living\simple_animal\spawner.dm"
-=======
-#include "code\modules\mob\living\simple_animal\simple_animal_vr.dm"
-#include "code\modules\mob\living\simple_animal\simplemob_vore_values.dm"
->>>>>>> 088e586b47... Merge pull request #9601 from Ghommie/Ghommie-cit265
 #include "code\modules\mob\living\simple_animal\status_procs.dm"
 #include "code\modules\mob\living\simple_animal\bot\bot.dm"
 #include "code\modules\mob\living\simple_animal\bot\cleanbot.dm"
