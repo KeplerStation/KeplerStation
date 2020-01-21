@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - rscadd: "Ghosting no longer stops abductors from using you."
