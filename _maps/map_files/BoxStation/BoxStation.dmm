@@ -54621,6 +54621,31 @@
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
+<<<<<<< HEAD
+=======
+"eXm" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/engine/gravity_generator)
+"fbm" = (
+/obj/structure/chair/comfy/brown{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/bar)
+"fby" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plasteel,
+/area/engine/gravity_generator)
+>>>>>>> 0985d1f1d0... Merge pull request #10640 from r4d6/mapfix
 "fcG" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
@@ -64633,10 +64658,16 @@ aaa
 aaa
 aaa
 aaf
+<<<<<<< HEAD
 aaa
 aaf
 aaa
 aAC
+=======
+awW
+auP
+awW
+>>>>>>> 0985d1f1d0... Merge pull request #10640 from r4d6/mapfix
 aaf
 aaa
 aaa
