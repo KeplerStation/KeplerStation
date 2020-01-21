@@ -121,5 +121,9 @@
 
 	var/mob/audiovisual_redirect //Mob to redirect messages, speech, and sounds to
 
+<<<<<<< HEAD
 	var/adminfrozen = 0 //handle for someone's sleeping time from before they got frozen
 	var/obj/effect/overlay/adminfrozen/adminfreezeoverlay = null
+=======
+	var/voluntary_ghosted = FALSE		//whether or not they voluntarily ghosted.
+>>>>>>> 7a3f0d140c... Merge pull request #10468 from Citadel-Station-13/stop-ghosting
