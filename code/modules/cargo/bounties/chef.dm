@@ -3,15 +3,16 @@
 /datum/bounty/item/chef/soup
 	name = "Soup"
 	description = "To quell the homeless uprising, the ICC will be serving soup to all underpaid workers. Ship any type of soup."
-	reward = 700
-	required_count = 3
+	reward = 1200
+	required_count = 4
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/soup)
+	exclude_types = list(/obj/item/reagent_containers/food/snacks/soup/wish)
 
 /datum/bounty/item/chef/icecreamsandwich
 	name = "Ice Cream Sandwiches"
 	description = "Upper management has been screaming non-stop for ice cream. Please send some."
-	reward = 800
-	required_count = 3
+	reward = 1200
+	required_count = 5
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/icecreamsandwich)
 
 /datum/bounty/item/chef/bread
@@ -26,24 +27,19 @@
 	reward = 3142
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/pie)
 
+/datum/bounty/item/gardencook/khinkali
+	name = "Khinkali"
+	description = "Requesting -some khinki stuff- for a private staff party at Centcom."
+	reward = 2400
+	required_count = 6
+	wanted_types = list(/obj/item/reagent_containers/food/snacks/khinkali)
+
 /datum/bounty/item/chef/salad
 	name = "Salad or Rice Bowls"
 	description = "Head Office is going on a health binge. Your order is to ship salad or rice bowls."
 	reward = 1200
 	required_count = 3
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/salad)
-
-/datum/bounty/item/chef/superbite
-	name = "Super Bite Burger"
-	description = "Commander Tubbs thinks he can set a competitive eating world record. All he needs is a super bite burger shipped to him."
-	reward = 1800
-	wanted_types = list(/obj/item/reagent_containers/food/snacks/burger/superbite)
-
-/datum/bounty/item/chef/poppypretzel
-	name = "Poppy Pretzel"
-	description = "Head Office needs a reason to fire their HR head. Send over a poppy pretzel to force a failed drug test."
-	reward = 3000
-	wanted_types = list(/obj/item/reagent_containers/food/snacks/poppypretzel)
 
 // /datum/bounty/item/chef/cubancarp
 // 	name = "Cuban Carp"
