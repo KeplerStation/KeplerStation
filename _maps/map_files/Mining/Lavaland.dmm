@@ -76,6 +76,7 @@
 "an" = (
 /turf/closed/mineral/random/labormineral/volcanic,
 /area/lavaland/surface/outdoors)
+<<<<<<< HEAD
 "ap" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -135,33 +136,15 @@
 "az" = (
 /turf/open/floor/plasteel,
 /area/mine/laborcamp)
+=======
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "aA" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/mine/laborcamp)
-"aB" = (
-/obj/machinery/door/airlock/medical/glass{
-	name = "Infirmary"
-	},
-/turf/open/floor/plasteel/white,
-/area/mine/laborcamp)
-"aC" = (
-/obj/structure/closet/crate/internals,
-/obj/item/tank/internals/emergency_oxygen,
-/obj/item/tank/internals/emergency_oxygen,
-/obj/item/tank/internals/emergency_oxygen,
-/obj/item/tank/internals/emergency_oxygen,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/turf/open/floor/plasteel,
-/area/mine/laborcamp)
-"aD" = (
+/turf/template_noop,
+/area/template_noop)
+"cu" = (
+/obj/item/pickaxe,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+<<<<<<< HEAD
 /area/lavaland/surface/outdoors/explored)
 "aE" = (
 /obj/item/radio/intercom{
@@ -187,56 +170,51 @@
 /area/mine/laborcamp)
 "aH" = (
 /obj/structure/chair{
+=======
+/area/lavaland/surface/outdoors)
+"cv" = (
+/obj/structure/ore_box,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"fQ" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors/unexplored/danger)
+"fR" = (
+/turf/closed/mineral/random/high_chance/volcanic,
+/area/lavaland/surface/outdoors/unexplored)
+"fS" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors/unexplored)
+"fT" = (
+/obj/structure/stone_tile/block{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 	dir = 8
 	},
-/turf/open/floor/plasteel,
-/area/mine/laborcamp)
-"aI" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+/obj/structure/stone_tile/block{
 	dir = 4
-	},
-/obj/machinery/door/airlock{
-	name = "Labor Camp External Access"
-	},
-/turf/open/floor/plasteel,
-/area/mine/laborcamp)
-"aJ" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/plasteel,
-/area/mine/laborcamp)
-"aK" = (
-/obj/structure/chair{
-	dir = 1
-	},
-/turf/open/floor/plasteel,
-/area/mine/laborcamp)
-"aL" = (
-/obj/machinery/door/airlock{
-	name = "Vending"
-	},
-/turf/open/floor/plasteel,
-/area/mine/laborcamp)
-"aM" = (
-/obj/machinery/light/small,
-/obj/effect/turf_decal/loading_area{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/mine/laborcamp)
-"aN" = (
-/obj/effect/turf_decal/delivery,
-/turf/open/floor/plasteel,
-/area/mine/laborcamp)
-"aO" = (
-/obj/machinery/camera{
-	c_tag = "Labor Camp External";
-	dir = 4;
-	network = list("labor")
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
+"fV" = (
+/turf/closed/indestructible/riveted/boss/see_through,
+/area/lavaland/surface/outdoors)
+"fW" = (
+/obj/structure/necropolis_gate/locked,
+/obj/structure/stone_tile/slab,
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"gj" = (
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile/surrounding_tile/cracked{
+	dir = 4
+	},
+/obj/structure/stone_tile/surrounding_tile,
+/obj/structure/stone_tile/center,
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+<<<<<<< HEAD
 "aP" = (
 /obj/machinery/vending/sustenance,
 /turf/open/floor/plasteel,
@@ -286,18 +264,16 @@
 /area/lavaland/surface/outdoors/explored)
 "aY" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
+=======
+"gk" = (
+/obj/structure/stone_tile/surrounding_tile{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 	dir = 4
 	},
-/obj/machinery/door/airlock/security/glass{
-	name = "Labor Camp Shuttle Security Airlock";
-	req_access_txt = "2"
-	},
-/turf/open/floor/plasteel,
-/area/mine/laborcamp)
-"aZ" = (
-/obj/machinery/light/small{
+/obj/structure/stone_tile/surrounding_tile{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/button/door{
 	id = "labor";
 	name = "Labor Camp Lockdown";
@@ -363,114 +339,69 @@
 /area/mine/laborcamp)
 "bk" = (
 /obj/effect/turf_decal/loading_area{
+=======
+/obj/structure/stone_tile/surrounding_tile{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
-/area/mine/laborcamp)
-"bl" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "gulag"
-	},
-/turf/open/floor/plating,
-/area/mine/laborcamp)
-"bm" = (
-/obj/machinery/conveyor{
-	dir = 10;
-	id = "gulag"
-	},
-/turf/open/floor/plating,
-/area/mine/laborcamp)
-"bn" = (
-/obj/structure/table,
-/obj/item/pickaxe,
-/obj/item/gps/mining,
-/obj/item/gps/mining,
-/obj/item/gps/mining,
-/obj/item/gps/mining,
-/obj/effect/turf_decal/tile/purple{
+/obj/structure/stone_tile/center,
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"go" = (
+/obj/structure/stone_tile/block,
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"gr" = (
+/obj/structure/stone_tile{
 	dir = 1
 	},
-/obj/effect/turf_decal/tile/purple{
+/obj/structure/stone_tile{
 	dir = 4
 	},
-/obj/effect/turf_decal/tile/purple{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/mine/eva)
-"bo" = (
-/obj/machinery/suit_storage_unit/mining,
-/obj/effect/turf_decal/tile/brown{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/brown{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/mine/eva)
-"bp" = (
-/obj/machinery/suit_storage_unit/mining,
-/obj/effect/turf_decal/tile/purple{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/purple,
-/obj/effect/turf_decal/tile/purple{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/mine/eva)
-"bq" = (
-/turf/closed/wall,
-/area/mine/production)
-"br" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/mine/production)
-"bs" = (
-/obj/machinery/camera{
-	c_tag = "EVA";
-	dir = 4;
-	network = list("mine")
-	},
-/obj/machinery/airalarm{
-	dir = 4;
-	pixel_x = -23
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/structure/table,
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/effect/turf_decal/tile/brown{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/brown{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/mine/eva)
-"bt" = (
-/turf/open/floor/plasteel,
-/area/mine/eva)
-"bu" = (
-/obj/machinery/light_switch{
-	pixel_x = 27
-	},
-/obj/effect/turf_decal/tile/brown,
-/obj/effect/turf_decal/tile/brown{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/mine/eva)
-"bv" = (
-/obj/machinery/light/small{
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 	dir = 8
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"gs" = (
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"gy" = (
+/obj/structure/stone_tile/cracked,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"gB" = (
+/obj/structure/stone_tile/block{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+<<<<<<< HEAD
 /area/mine/eva)
 "bx" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -525,70 +456,79 @@
 	req_access = null
 	},
 /obj/effect/turf_decal/tile/purple{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/purple{
+=======
+/area/lavaland/surface/outdoors)
+"gC" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
-/area/mine/production)
-"bD" = (
-/obj/structure/closet/crate,
-/obj/item/dice/d4,
-/obj/effect/turf_decal/tile/brown{
+/obj/structure/stone_tile{
 	dir = 1
 	},
-/obj/effect/turf_decal/tile/brown{
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"gG" = (
+/obj/structure/stone_tile{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	dir = 1
+	},
+/obj/structure/stone_tile{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
-/area/mine/production)
-"bE" = (
-/obj/structure/reagent_dispensers/watertank,
-/obj/effect/turf_decal/tile/purple,
-/turf/open/floor/plasteel,
-/area/mine/production)
-"bF" = (
-/obj/effect/spawner/structure/window,
-/turf/open/floor/plating,
-/area/mine/eva)
-"bG" = (
-/obj/structure/table,
-/obj/item/stack/packageWrap,
-/obj/item/stack/packageWrap,
-/obj/item/stack/packageWrap,
-/obj/item/hand_labeler,
-/obj/effect/turf_decal/tile/purple{
+/obj/structure/stone_tile{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
-/area/mine/eva)
-"bH" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on,
-/turf/open/floor/plasteel,
-/area/mine/eva)
-"bI" = (
-/obj/structure/tank_dispenser/oxygen,
-/obj/effect/turf_decal/tile/purple,
-/turf/open/floor/plasteel,
-/area/mine/eva)
-"bJ" = (
-/obj/machinery/light/small{
+/obj/structure/stone_tile/cracked,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"gM" = (
+/obj/structure/stone_tile/block{
+	dir = 4
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"gO" = (
+/obj/structure/stone_tile/block{
+	dir = 8
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"gP" = (
+/obj/structure/stone_tile/slab,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"gR" = (
+/obj/structure/stone_tile/block,
+/obj/structure/stone_tile/block{
 	dir = 1
 	},
-/obj/effect/turf_decal/tile/purple{
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"hg" = (
+/obj/structure/stone_tile/surrounding,
+/obj/structure/stone_tile/center/cracked,
+/mob/living/simple_animal/hostile/megafauna/legion,
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"hs" = (
+/obj/structure/stone_tile/block{
+	dir = 1
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"hH" = (
+/obj/structure/stone_tile/block{
+	dir = 1
+	},
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
-/area/mine/eva)
-"bK" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -5;
-	pixel_y = 30
-	},
-/obj/machinery/shower{
-	dir = 8
-	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel,
 /area/mine/eva)
@@ -656,10 +596,41 @@
 /obj/machinery/door/airlock/mining/glass{
 	name = "Mining Station EVA";
 	req_access_txt = "54"
+=======
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"hJ" = (
+/obj/structure/stone_tile/block{
+	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"id" = (
+/obj/structure/stone_tile{
 	dir = 4
 	},
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"ir" = (
+/obj/structure/stone_tile/slab/cracked{
+	dir = 5
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	},
+/obj/structure/stone_tile/slab/cracked{
+	dir = 10
+	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/eva)
 "bT" = (
@@ -716,11 +687,67 @@
 /area/mine/eva)
 "bY" = (
 /obj/effect/turf_decal/tile/brown{
-	dir = 1
+=======
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"it" = (
+/obj/structure/stone_tile/block,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"iu" = (
+/obj/structure/stone_tile/block{
+	dir = 4
 	},
-/obj/effect/turf_decal/tile/brown{
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"iw" = (
+/obj/structure/stone_tile/slab/cracked{
+	dir = 4
+	},
+/obj/structure/stone_tile/slab/cracked{
 	dir = 8
 	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"ix" = (
+/obj/structure/stone_tile/block/cracked,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"iy" = (
+/obj/structure/stone_tile/cracked,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"iC" = (
+/obj/structure/stone_tile/block{
+	dir = 1
+	},
+/obj/structure/stone_tile/block/cracked,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"iK" = (
+/obj/structure/stone_tile/block,
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"iX" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"iY" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 8
+	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/eva)
 "bZ" = (
@@ -796,22 +823,57 @@
 /area/mine/laborcamp)
 "cj" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 4
-	},
-/obj/machinery/door/airlock/external{
-	glass = 1;
-	name = "Mining Shuttle Airlock";
-	opacity = 0
-	},
-/turf/open/floor/plasteel,
-/area/mine/production)
-"ck" = (
-/obj/effect/turf_decal/tile/brown{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/brown{
+=======
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"ja" = (
+/obj/structure/stone_tile{
 	dir = 8
 	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"jb" = (
+/obj/structure/stone_tile/block{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"jg" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"jk" = (
+/obj/structure/stone_tile/center,
+/obj/structure/stone_tile/surrounding_tile,
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile/surrounding_tile/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"jl" = (
+/obj/structure/stone_tile/surrounding_tile{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	dir = 4
+	},
+/obj/structure/stone_tile/surrounding_tile/cracked{
+	dir = 1
+	},
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 8
+	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/production)
 "cl" = (
@@ -875,17 +937,29 @@
 /obj/structure/ore_box,
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
+=======
+/obj/structure/stone_tile/center/cracked,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"jm" = (
+/obj/structure/stone_tile/cracked,
+/obj/structure/stone_tile{
+	dir = 1
 	},
-/turf/open/floor/plasteel,
-/area/mine/eva)
-"cu" = (
-/obj/item/pickaxe,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"cv" = (
-/obj/structure/ore_box,
+"jq" = (
+/obj/structure/stone_tile,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
+<<<<<<< HEAD
 "cw" = (
 /obj/machinery/computer/secure_data,
 /turf/open/floor/plasteel,
@@ -954,27 +1028,69 @@
 /area/mine/laborcamp/security)
 "cH" = (
 /obj/effect/turf_decal/tile/purple{
+=======
+"js" = (
+/obj/structure/stone_tile/block/cracked{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
-/area/mine/production)
-"cI" = (
-/obj/effect/turf_decal/tile/purple,
-/obj/effect/turf_decal/tile/purple{
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"jx" = (
+/obj/structure/stone_tile{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
-/area/mine/production)
-"cJ" = (
-/obj/machinery/door/airlock{
-	name = "Closet"
-	},
-/turf/open/floor/plating,
-/area/mine/production)
-"cK" = (
-/obj/machinery/light/small{
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"jF" = (
+/obj/structure/stone_tile/surrounding_tile,
+/obj/structure/stone_tile/surrounding_tile{
 	dir = 1
 	},
+/obj/structure/stone_tile/center/cracked,
+/obj/structure/stone_tile/surrounding_tile/cracked{
+	dir = 8
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"jH" = (
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/surrounding_tile,
+/obj/structure/stone_tile/center/cracked,
+/obj/structure/stone_tile/surrounding_tile/cracked{
+	dir = 4
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"jL" = (
+/obj/structure/stone_tile/surrounding_tile,
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile/center,
+/obj/structure/stone_tile/surrounding_tile/cracked{
+	dir = 8
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"jN" = (
+/obj/structure/stone_tile/surrounding_tile{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	dir = 8
+	},
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile/surrounding_tile,
+/obj/structure/stone_tile/center/cracked,
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"jQ" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+<<<<<<< HEAD
 /turf/open/floor/plating,
 /area/mine/production)
 "cL" = (
@@ -996,20 +1112,34 @@
 	},
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
+=======
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"jR" = (
+/obj/structure/stone_tile/cracked{
+	dir = 4
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 	},
-/obj/effect/turf_decal/tile/brown{
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"jS" = (
+/obj/structure/stone_tile/cracked{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
-/area/mine/production)
-"cP" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 30
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"kg" = (
+/obj/structure/fluff/drake_statue,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"kj" = (
+/obj/structure/stone_tile/block{
+	dir = 8
 	},
-/obj/effect/turf_decal/tile/brown,
-/obj/effect/turf_decal/tile/brown{
+/obj/structure/stone_tile/block/cracked{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/production)
 "cQ" = (
@@ -1086,12 +1216,49 @@
 "cZ" = (
 /obj/machinery/mineral/equipment_vendor,
 /obj/effect/turf_decal/tile/brown{
+=======
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"kl" = (
+/obj/structure/fluff/drake_statue/falling,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"ko" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile{
 	dir = 1
 	},
-/obj/effect/turf_decal/tile/brown,
-/obj/effect/turf_decal/tile/brown{
+/obj/structure/stone_tile,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"ky" = (
+/obj/structure/stone_tile/cracked{
 	dir = 4
 	},
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"kB" = (
+/obj/structure/stone_tile/surrounding_tile,
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile/center/cracked,
+/obj/structure/stone_tile/surrounding_tile/cracked{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	dir = 1
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"kD" = (
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 4
+	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/production)
 "da" = (
@@ -1102,11 +1269,15 @@
 /area/mine/production)
 "db" = (
 /obj/machinery/light/small{
+=======
+/obj/structure/stone_tile/surrounding_tile{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 	dir = 1
 	},
-/obj/effect/turf_decal/loading_area{
+/obj/structure/stone_tile/surrounding_tile{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/production)
 "dc" = (
@@ -1156,65 +1327,66 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral{
+=======
+/obj/structure/stone_tile/center,
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"kH" = (
+/obj/structure/stone_tile/surrounding_tile{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 	dir = 1
 	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
+/obj/structure/stone_tile/surrounding_tile,
+/obj/structure/stone_tile/surrounding_tile{
 	dir = 4
 	},
-/obj/effect/turf_decal/tile/neutral{
+/obj/structure/stone_tile/center/cracked,
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"kJ" = (
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile/surrounding_tile{
 	dir = 8
 	},
-/turf/open/floor/plasteel/dark,
-/area/mine/maintenance)
-"dj" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on,
-/turf/open/floor/plasteel/dark,
-/area/mine/maintenance)
-"dk" = (
-/obj/machinery/airalarm{
-	pixel_y = 24
+/obj/structure/stone_tile/surrounding_tile/cracked{
+	dir = 1
 	},
-/turf/open/floor/circuit,
-/area/mine/maintenance)
-"dl" = (
-/obj/machinery/light/small{
+/obj/structure/stone_tile/center,
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"kM" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"kN" = (
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"kR" = (
+/obj/structure/stone_tile/slab/cracked,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"le" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/machinery/airalarm{
-	pixel_y = 23
-	},
-/obj/machinery/iv_drip,
-/obj/effect/turf_decal/tile/blue{
+/obj/structure/stone_tile/block/cracked{
 	dir = 1
 	},
-/obj/effect/turf_decal/tile/blue{
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lg" = (
+/obj/structure/stone_tile/block{
 	dir = 4
 	},
-/turf/open/floor/plasteel/white,
-/area/mine/living_quarters)
-"dm" = (
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/turf/open/floor/plasteel/white,
-/area/mine/living_quarters)
-"dn" = (
-/obj/structure/table,
-/obj/item/storage/firstaid/toxin{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue,
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "do" = (
@@ -1238,14 +1410,31 @@
 "dq" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/mine/living_quarters)
-"dr" = (
-/obj/machinery/atmospherics/components/unary/tank/air{
+=======
+/obj/structure/stone_tile/block/cracked{
 	dir = 8
 	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lj" = (
+/obj/structure/stone_tile/block{
+	dir = 1
+	},
+/obj/structure/stone_tile,
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"ll" = (
+/obj/structure/stone_tile/cracked{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	dir = 4
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+<<<<<<< HEAD
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "ds" = (
@@ -1383,63 +1572,103 @@
 "dI" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
+=======
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lp" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 4
 	},
-/turf/open/floor/plating,
-/area/mine/living_quarters)
-"dJ" = (
-/obj/effect/turf_decal/tile/purple{
-	dir = 1
+/obj/structure/stone_tile/cracked{
+	dir = 4
 	},
-/obj/effect/turf_decal/tile/purple{
+/obj/structure/stone_tile/cracked{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
-/area/mine/production)
-"dK" = (
-/obj/machinery/light{
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lq" = (
+/obj/structure/stone_tile/block/cracked,
+/obj/structure/stone_tile/block/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lr" = (
+/obj/structure/stone_tile/cracked,
+/obj/structure/stone_tile/block{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"ls" = (
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lu" = (
+/obj/structure/stone_tile/block/cracked{
 	dir = 4
 	},
-/obj/machinery/camera{
-	c_tag = "Shuttle Docking Foyer";
-	dir = 8;
-	network = list("mine")
+/obj/structure/stone_tile/block/cracked{
+	dir = 8
 	},
-/obj/machinery/newscaster{
-	pixel_x = 30;
-	pixel_y = 1
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lv" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 8
 	},
-/obj/effect/turf_decal/tile/brown,
-/obj/effect/turf_decal/tile/brown{
+/obj/structure/stone_tile/cracked,
+/obj/structure/stone_tile/cracked{
+	dir = 1
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lw" = (
+/obj/structure/stone_tile/cracked,
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"ly" = (
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lz" = (
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile/block{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
-/area/mine/production)
-"dL" = (
-/obj/structure/closet/crate{
-	icon_state = "crateopen"
-	},
-/obj/effect/turf_decal/bot,
-/turf/open/floor/plasteel,
-/area/mine/production)
-"dM" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on,
-/turf/open/floor/plasteel,
-/area/mine/production)
-"dN" = (
-/obj/machinery/camera{
-	c_tag = "Processing Area Room";
-	dir = 8;
-	network = list("mine")
-	},
-/obj/item/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = 28
-	},
-/obj/effect/turf_decal/tile/brown,
-/obj/effect/turf_decal/tile/brown{
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lD" = (
+/obj/structure/stone_tile/block/cracked{
 	dir = 4
 	},
+/obj/structure/stone_tile/block/cracked{
+	dir = 8
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lE" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lF" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 4
+	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/production)
 "dO" = (
@@ -1512,11 +1741,28 @@
 /obj/machinery/conveyor_switch/oneway{
 	id = "mining_internal";
 	name = "mining conveyor"
-	},
-/obj/effect/turf_decal/tile/purple,
-/obj/effect/turf_decal/tile/purple{
+=======
+/obj/structure/stone_tile/cracked{
 	dir = 4
 	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lG" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 1
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	},
+/obj/structure/stone_tile/block,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lI" = (
+/obj/structure/stone_tile/cracked{
+	dir = 4
+	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/production)
 "dY" = (
@@ -1526,16 +1772,18 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
+=======
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lP" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 4
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 	},
-/turf/open/floor/plating,
-/area/mine/production)
-"dZ" = (
-/turf/open/floor/plasteel,
-/area/mine/living_quarters)
-"ea" = (
-/obj/effect/turf_decal/tile/purple{
+/obj/structure/stone_tile/cracked{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "eb" = (
@@ -1567,17 +1815,50 @@
 "ee" = (
 /obj/machinery/airalarm{
 	pixel_y = 23
+=======
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lQ" = (
+/obj/structure/stone_tile/surrounding/cracked{
+	dir = 6
 	},
-/turf/open/floor/plasteel,
-/area/mine/living_quarters)
-"ef" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/turf_decal/tile/brown{
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lR" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile/cracked,
+/obj/structure/stone_tile/cracked{
 	dir = 1
 	},
-/obj/effect/turf_decal/tile/brown{
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lS" = (
+/obj/structure/stone_tile/block/cracked{
 	dir = 4
 	},
+/obj/structure/stone_tile/cracked{
+	dir = 4
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 8
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lW" = (
+/obj/structure/stone_tile/block/cracked,
+/obj/structure/stone_tile/block/cracked{
+	dir = 1
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lZ" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 4
+	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "eg" = (
@@ -1608,18 +1889,54 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/brown{
+=======
+/obj/structure/stone_tile/cracked{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
-/area/mine/living_quarters)
-"ej" = (
-/obj/machinery/camera{
-	c_tag = "Crew Area Hallway East";
-	network = list("mine")
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"ma" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 4
 	},
-/obj/effect/turf_decal/tile/purple{
+/obj/structure/stone_tile/block{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mb" = (
+/obj/structure/stone_tile/cracked,
+/obj/structure/stone_tile/cracked{
 	dir = 1
 	},
+/obj/structure/stone_tile/block{
+	dir = 8
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mk" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile/block{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"ml" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile/cracked,
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mn" = (
+/obj/structure/stone_tile/block/cracked,
+/obj/structure/stone_tile/block{
+	dir = 1
+	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "ek" = (
@@ -1635,12 +1952,27 @@
 /area/mine/living_quarters)
 "em" = (
 /obj/machinery/light{
+=======
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mq" = (
+/obj/structure/stone_tile/block/cracked{
 	dir = 4
 	},
-/obj/effect/turf_decal/tile/brown,
-/obj/effect/turf_decal/tile/brown{
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 	dir = 4
 	},
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"mr" = (
+/obj/structure/stone_tile{
+	dir = 4
+	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/production)
 "en" = (
@@ -1651,10 +1983,22 @@
 /obj/machinery/mineral/processing_unit{
 	dir = 1;
 	output_dir = 2
+=======
+/obj/structure/stone_tile{
+	dir = 8
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 9
+/obj/structure/stone_tile/cracked{
+	dir = 1
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 	},
+/obj/structure/stone_tile,
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"ms" = (
+/obj/structure/stone_tile/block{
+	dir = 8
+	},
+<<<<<<< HEAD
 /turf/open/floor/plating,
 /area/mine/production)
 "ep" = (
@@ -1783,10 +2127,140 @@
 "eB" = (
 /obj/structure/cable{
 	icon_state = "4-8"
+=======
+/obj/structure/stone_tile,
+/obj/structure/stone_tile/cracked{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"mt" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile/cracked,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mu" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mv" = (
+/obj/structure/stone_tile{
 	dir = 4
 	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mw" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mx" = (
+/obj/structure/stone_tile,
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"my" = (
+/obj/structure/stone_tile/cracked{
+	dir = 4
+	},
+/obj/structure/stone_tile/cracked,
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mA" = (
+/obj/structure/stone_tile/cracked{
+	dir = 4
+	},
+/obj/structure/stone_tile,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mB" = (
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/obj/structure/stone_tile,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mC" = (
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mD" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mE" = (
+/obj/structure/stone_tile/block,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mF" = (
+/obj/structure/stone_tile/block/cracked,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mG" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mH" = (
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/obj/structure/stone_tile,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mI" = (
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mJ" = (
+/obj/structure/stone_tile{
+	dir = 8
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
@@ -1822,10 +2296,66 @@
 /obj/machinery/door/airlock/mining/glass{
 	name = "Processing Area";
 	req_access_txt = "48"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+=======
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mK" = (
+/obj/structure/stone_tile{
 	dir = 4
 	},
+/obj/structure/stone_tile,
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mL" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mM" = (
+/obj/structure/stone_tile/cracked,
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mN" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mO" = (
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mP" = (
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 4
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mQ" = (
+/obj/structure/stone_tile/block{
+	dir = 8
+	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/production)
 "eG" = (
@@ -1836,14 +2366,31 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/brown{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/mine/production)
-"eH" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+=======
+/obj/structure/stone_tile/block{
 	dir = 4
 	},
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"mS" = (
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	dir = 8
+	},
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"mV" = (
+/obj/structure/stone_tile/block{
+	dir = 4
+	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel,
 /area/mine/production)
@@ -1938,16 +2485,37 @@
 /obj/machinery/light,
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
+=======
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
-/area/mine/production)
-"eU" = (
-/obj/structure/closet/crate,
-/obj/effect/turf_decal/tile/purple,
-/obj/effect/turf_decal/tile/purple{
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"mW" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 4
+	},
+/obj/structure/stone_tile/block{
 	dir = 8
 	},
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"mX" = (
+/obj/structure/stone_tile/cracked,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	dir = 8
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 4
+	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/production)
 "eV" = (
@@ -1965,29 +2533,18 @@
 /area/mine/production)
 "eW" = (
 /obj/effect/turf_decal/loading_area{
+=======
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"mY" = (
+/obj/structure/stone_tile/block/cracked{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 	dir = 8
 	},
-/turf/open/floor/plasteel,
-/area/mine/production)
-"eX" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "mining_internal"
-	},
-/obj/structure/plasticflaps,
-/obj/effect/turf_decal/stripes/line{
-	dir = 9
-	},
-/turf/open/floor/plating,
-/area/mine/production)
-"eY" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "mining_internal"
-	},
-/obj/effect/turf_decal/stripes/line{
+/obj/structure/stone_tile{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/open/floor/plating,
 /area/mine/production)
 "eZ" = (
@@ -2080,14 +2637,49 @@
 /area/mine/living_quarters)
 "fh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/brown{
+=======
+/obj/structure/stone_tile,
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"mZ" = (
+/obj/structure/stone_tile{
 	dir = 1
 	},
-/obj/effect/turf_decal/tile/brown{
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
 	dir = 8
 	},
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"nb" = (
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile,
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"nc" = (
+/obj/structure/stone_tile/cracked{
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 8
+	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "fi" = (
@@ -3536,17 +4128,47 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
+=======
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"ne" = (
+/obj/structure/stone_tile/block{
+	dir = 1
+	},
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"nf" = (
+/obj/structure/stone_tile/slab/cracked,
+/turf/open/indestructible/boss,
+/area/lavaland/surface/outdoors)
+"ng" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 8
+	},
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 /obj/structure/stone_tile/block/cracked{
 	dir = 1
 	},
 /turf/open/indestructible/boss,
 /area/lavaland/surface/outdoors)
+<<<<<<< HEAD
 "Po" = (
 /obj/machinery/cryopod{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/mine/laborcamp)
+=======
+"ol" = (
+/obj/effect/landmark/stationroom/lavaland/station,
+/turf/template_noop,
+/area/template_noop)
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "Uq" = (
 /obj/docking_port/stationary{
 	area_type = /area/lavaland/surface/outdoors;
@@ -3559,6 +4181,7 @@
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
+<<<<<<< HEAD
 "Wp" = (
 /obj/docking_port/stationary{
 	area_type = /area/lavaland/surface/outdoors;
@@ -3622,6 +4245,8 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/production)
+=======
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 
 (1,1,1) = {"
 aa
@@ -3824,61 +4449,61 @@ aj
 aj
 aj
 aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+ol
 "}
 (2,1,1) = {"
 aa
@@ -4081,61 +4706,61 @@ aj
 aj
 aj
 aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (3,1,1) = {"
 aa
@@ -4338,61 +4963,61 @@ aj
 aj
 aj
 aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (4,1,1) = {"
 aa
@@ -4595,61 +5220,61 @@ aj
 aj
 aj
 aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-ai
-ai
-aj
-aj
-aj
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (5,1,1) = {"
 aa
@@ -4852,61 +5477,61 @@ aj
 aj
 aj
 aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-ai
-ai
-ai
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (6,1,1) = {"
 aa
@@ -5109,61 +5734,61 @@ aj
 aj
 aj
 aj
-aj
-aj
-aj
-ab
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-ai
-aD
-ab
-aj
-aj
-aj
-aj
-aj
-ab
-ab
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (7,1,1) = {"
 aa
@@ -5366,61 +5991,61 @@ aj
 aj
 aj
 aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-aj
-aj
-aw
-aw
-ab
-aD
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (8,1,1) = {"
 aa
@@ -5623,61 +6248,61 @@ aj
 aj
 aj
 aj
-aj
-ab
-aj
-aj
-aj
-ab
-aj
-aj
-aj
-aw
-aw
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-aj
-aj
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (9,1,1) = {"
 aa
@@ -5880,61 +6505,61 @@ aj
 aj
 aj
 aj
-ab
-ab
-aj
-ab
-ab
-aj
-aj
-aj
-aj
-aw
-aw
-aj
-aj
-aw
-aw
-aj
-aj
-aw
-aj
-ab
-aj
-aj
-aj
-aj
-aj
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-ab
-aj
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (10,1,1) = {"
 aa
@@ -6137,61 +6762,61 @@ aj
 aj
 aj
 aj
-aj
-aj
-aj
-ab
-ab
-aj
-aj
-aj
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aj
-aj
-aj
-aj
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-aj
-aj
-aj
-aj
-aj
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (11,1,1) = {"
 aa
@@ -6394,61 +7019,61 @@ aj
 aj
 aj
 aj
-aj
-aj
-aj
-aj
-aj
-aj
-aw
-aw
-aD
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-aj
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (12,1,1) = {"
 aa
@@ -6651,61 +7276,61 @@ aj
 aj
 aj
 aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aw
-aw
-aw
-aD
-aw
-aw
-aw
-aw
-aw
-aD
-aw
-aw
-aD
-aw
-aw
-aw
-aj
-aw
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (13,1,1) = {"
 aa
@@ -6908,61 +7533,61 @@ aj
 aj
 aj
 ab
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-aj
-aw
-aw
-aw
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aw
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (14,1,1) = {"
 aa
@@ -7165,61 +7790,61 @@ aj
 aj
 ab
 ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aw
-aw
-aw
-aw
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aw
-aw
-ab
-aj
-aj
-aj
-aj
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-ab
-ab
-aj
-ab
-aj
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (15,1,1) = {"
 aa
@@ -7422,61 +8047,61 @@ aj
 aj
 aj
 aj
-aj
-aj
-ab
-aj
-aj
-aj
-aj
-aw
-aw
-aw
-aw
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aw
-aw
-aw
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ab
-ab
-ab
-aj
-aj
-aj
-aj
-aj
-aj
-aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (16,1,1) = {"
 aa
@@ -7670,6 +8295,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 aj
 aj
 aj
@@ -7723,17 +8349,72 @@ aj
 aj
 aj
 aj
-aj
-aj
-ab
-ab
-aj
+=======
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 aj
 aj
 aj
 aj
 aj
 aj
+aj
+aj
+aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (17,1,1) = {"
 aa
@@ -7936,6 +8617,7 @@ aj
 aj
 aj
 aj
+<<<<<<< HEAD
 aj
 aj
 aj
@@ -7991,6 +8673,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (18,1,1) = {"
 aa
@@ -8193,6 +8932,7 @@ aj
 aj
 ab
 aj
+<<<<<<< HEAD
 aj
 aj
 aj
@@ -8248,6 +8988,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (19,1,1) = {"
 aa
@@ -8450,6 +9247,7 @@ an
 an
 ab
 ab
+<<<<<<< HEAD
 an
 ab
 aj
@@ -8505,6 +9303,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (20,1,1) = {"
 aa
@@ -8707,6 +9562,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 ab
@@ -8762,6 +9618,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (21,1,1) = {"
 aa
@@ -8964,6 +9877,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -9019,6 +9933,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (22,1,1) = {"
 aa
@@ -9221,6 +10192,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -9276,6 +10248,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (23,1,1) = {"
 aa
@@ -9478,6 +10507,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -9533,6 +10563,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (24,1,1) = {"
 aa
@@ -9735,6 +10822,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -9790,6 +10878,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (25,1,1) = {"
 aa
@@ -9992,6 +11137,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -10047,6 +11193,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (26,1,1) = {"
 aa
@@ -10249,6 +11452,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -10304,6 +11508,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (27,1,1) = {"
 aa
@@ -10506,6 +11767,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -10561,6 +11823,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (28,1,1) = {"
 aa
@@ -10763,13 +12082,8 @@ an
 an
 an
 an
-an
-an
-an
-an
-aq
-aq
 aA
+<<<<<<< HEAD
 aC
 aq
 aI
@@ -10818,6 +12132,62 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (29,1,1) = {"
 aa
@@ -11020,6 +12390,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -11075,6 +12446,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (30,1,1) = {"
 aa
@@ -11277,6 +12705,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -11332,6 +12761,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (31,1,1) = {"
 aa
@@ -11534,6 +13020,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -11589,6 +13076,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (32,1,1) = {"
 aa
@@ -11791,6 +13335,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -11846,6 +13391,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (33,1,1) = {"
 aa
@@ -12048,6 +13650,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -12103,6 +13706,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (34,1,1) = {"
 aa
@@ -12305,6 +13965,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -12360,6 +14021,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (35,1,1) = {"
 aa
@@ -12562,6 +14280,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -12617,6 +14336,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (36,1,1) = {"
 aa
@@ -12819,6 +14595,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -12874,6 +14651,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (37,1,1) = {"
 aa
@@ -13076,6 +14910,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -13131,6 +14966,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (38,1,1) = {"
 aa
@@ -13333,6 +15225,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -13388,6 +15281,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (39,1,1) = {"
 aa
@@ -13590,6 +15540,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -13645,6 +15596,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (40,1,1) = {"
 aa
@@ -13847,6 +15855,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -13902,6 +15911,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (41,1,1) = {"
 aa
@@ -14104,6 +16170,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -14159,6 +16226,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (42,1,1) = {"
 aa
@@ -14361,20 +16485,7 @@ an
 an
 an
 an
-an
-an
-an
-an
-an
-an
-an
-an
-an
-an
-an
-an
-an
-an
+<<<<<<< HEAD
 an
 an
 an
@@ -14416,6 +16527,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (43,1,1) = {"
 aa
@@ -14618,6 +16786,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -14673,6 +16842,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (44,1,1) = {"
 aa
@@ -14875,6 +17101,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -14930,6 +17157,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (45,1,1) = {"
 aa
@@ -15132,6 +17416,7 @@ an
 an
 an
 an
+<<<<<<< HEAD
 an
 an
 an
@@ -15187,6 +17472,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (46,1,1) = {"
 aa
@@ -15389,6 +17731,7 @@ aj
 aj
 aj
 aj
+<<<<<<< HEAD
 an
 an
 an
@@ -15444,6 +17787,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (47,1,1) = {"
 aa
@@ -15635,32 +18035,7 @@ aj
 aj
 aj
 aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
+<<<<<<< HEAD
 aj
 aj
 aj
@@ -15685,22 +18060,74 @@ cM
 ai
 ai
 ai
+=======
 aj
-ab
-aj
-aj
-ab
-ab
-aj
-ab
-ab
-ab
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 aj
 aj
 aj
 aj
 aj
 aj
+aj
+aj
+aj
+aj
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (48,1,1) = {"
 aa
@@ -15903,6 +18330,7 @@ aj
 aj
 aj
 aj
+<<<<<<< HEAD
 aj
 aj
 aj
@@ -15958,6 +18386,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (49,1,1) = {"
 aa
@@ -16149,6 +18634,7 @@ ai
 ai
 ai
 ab
+<<<<<<< HEAD
 ab
 ai
 ai
@@ -16204,17 +18690,74 @@ aj
 aj
 aj
 aj
+=======
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 ab
-ad
-ad
-ad
-ad
-ad
+ai
+ai
 ai
 ai
 aj
 aj
 aj
+aj
+ai
+ai
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
 "}
 (50,1,1) = {"
 aa
@@ -16417,6 +18960,7 @@ ab
 ab
 ai
 am
+<<<<<<< HEAD
 ai
 ai
 ai
@@ -16472,6 +19016,63 @@ ad
 ab
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (51,1,1) = {"
 aa
@@ -16674,6 +19275,7 @@ ai
 ai
 am
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -16729,6 +19331,63 @@ ad
 ab
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (52,1,1) = {"
 aa
@@ -16931,6 +19590,7 @@ am
 am
 am
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -16986,6 +19646,63 @@ ad
 ab
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (53,1,1) = {"
 aa
@@ -17188,6 +19905,7 @@ am
 am
 am
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -17243,6 +19961,63 @@ ab
 ab
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (54,1,1) = {"
 aa
@@ -17445,6 +20220,7 @@ am
 am
 am
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -17500,6 +20276,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (55,1,1) = {"
 aa
@@ -17702,6 +20535,7 @@ am
 am
 am
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -17757,6 +20591,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (56,1,1) = {"
 aa
@@ -17959,6 +20850,7 @@ ak
 am
 am
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -18014,6 +20906,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (57,1,1) = {"
 aa
@@ -18216,6 +21165,7 @@ ak
 ak
 am
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -18271,6 +21221,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (58,1,1) = {"
 aa
@@ -18473,6 +21480,7 @@ ak
 ak
 ak
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -18528,6 +21536,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (59,1,1) = {"
 aa
@@ -18730,6 +21795,7 @@ ak
 ak
 ak
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -18785,6 +21851,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (60,1,1) = {"
 aa
@@ -18987,6 +22110,7 @@ ak
 ak
 ak
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -19042,6 +22166,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (61,1,1) = {"
 aa
@@ -19244,6 +22425,7 @@ ak
 ak
 ak
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -19299,6 +22481,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (62,1,1) = {"
 aa
@@ -19501,6 +22740,7 @@ ak
 ak
 ak
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -19556,6 +22796,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (63,1,1) = {"
 aa
@@ -19758,6 +23055,7 @@ ak
 ak
 ak
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -19813,6 +23111,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (64,1,1) = {"
 aa
@@ -20015,6 +23370,7 @@ ak
 ak
 ak
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -20070,6 +23426,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (65,1,1) = {"
 aa
@@ -20272,6 +23685,7 @@ ak
 ak
 am
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -20327,6 +23741,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (66,1,1) = {"
 aa
@@ -20529,6 +24000,7 @@ am
 am
 am
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -20584,6 +24056,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (67,1,1) = {"
 aa
@@ -20786,6 +24315,7 @@ am
 am
 am
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -20841,6 +24371,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (68,1,1) = {"
 aa
@@ -21043,6 +24630,7 @@ am
 am
 am
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -21098,6 +24686,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (69,1,1) = {"
 aa
@@ -21300,6 +24945,7 @@ am
 am
 am
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -21355,6 +25001,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (70,1,1) = {"
 aa
@@ -21557,6 +25260,7 @@ am
 am
 am
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -21612,6 +25316,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (71,1,1) = {"
 aa
@@ -21814,6 +25575,7 @@ am
 am
 am
 am
+<<<<<<< HEAD
 am
 am
 am
@@ -21869,6 +25631,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (72,1,1) = {"
 aa
@@ -22071,6 +25890,7 @@ am
 am
 am
 am
+<<<<<<< HEAD
 am
 am
 ai
@@ -22126,6 +25946,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (73,1,1) = {"
 aa
@@ -22328,6 +26205,7 @@ am
 am
 am
 am
+<<<<<<< HEAD
 am
 ai
 ab
@@ -22383,6 +26261,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (74,1,1) = {"
 aa
@@ -22585,6 +26520,7 @@ am
 am
 am
 am
+<<<<<<< HEAD
 ai
 ab
 ab
@@ -22640,6 +26576,63 @@ aj
 aj
 aj
 aj
+=======
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+aA
+>>>>>>> 047059617c... Merge pull request #10645 from r4d6/Modular-Lavaland
 "}
 (75,1,1) = {"
 aa
