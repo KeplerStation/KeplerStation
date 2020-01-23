@@ -51,8 +51,6 @@
 	description = "Head Office has taken an interest in strange objects. Find one and ship it to us immediately."
 	reward = 1000
 	wanted_types = list(/obj/item/relic)
-<<<<<<< HEAD
-=======
 
 /datum/bounty/item/silly/coconut_bong
 	name = "Coconut Bong"
@@ -62,8 +60,7 @@
 
 /datum/bounty/item/silly/toy_swords
 	name = "Toy Swords"
-	description = "Nanotrasen has secured a contract in a reenactment of a famous movie, but we only have lethal energy based swords. Send us some convincing replicas so we save on medical costs."
+	description = "Head Office has secured a contract in a reenactment of a famous movie, but we only have lethal energy based swords. Send us some convincing replicas so we save on medical costs."
 	reward = 1200
 	required_count = 3
 	wanted_types = list(/obj/item/toy/sword, /obj/item/toy/sword/cx)
->>>>>>> 86a3a5dd4d... Merge pull request #10610 from Owai-Seek/bountytweaks

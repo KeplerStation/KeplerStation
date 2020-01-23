@@ -9,24 +9,14 @@
 
 /datum/bounty/item/assistant/skateboard
 	name = "Skateboard"
-<<<<<<< HEAD
 	description = "Horizons has determined walking to be wasteful. Ship a skateboard to Head Office to speed operations up."
-	reward = 700 // the tony hawk
-=======
-	description = "Nanotrasen has determined walking to be wasteful. Ship a skateboard to CentCom to speed operations up."
 	reward = 800 // the tony hawk
->>>>>>> 86a3a5dd4d... Merge pull request #10610 from Owai-Seek/bountytweaks
 	wanted_types = list(/obj/vehicle/ridden/scooter/skateboard)
 
 /datum/bounty/item/assistant/stunprod
 	name = "Stunprod"
-<<<<<<< HEAD
 	description = "Head Office demands a stunprod to use against dissidents. Craft one, then ship it."
-	reward = 800
-=======
-	description = "CentCom demands a stunprod to use against dissidents. Craft one, then ship it."
 	reward = 950
->>>>>>> 86a3a5dd4d... Merge pull request #10610 from Owai-Seek/bountytweaks
 	wanted_types = list(/obj/item/melee/baton/cattleprod)
 
 /datum/bounty/item/assistant/soap
@@ -135,13 +125,8 @@
 
 /datum/bounty/item/assistant/shadyjims
 	name = "Shady Jim's"
-<<<<<<< HEAD
 	description = "There's an irate officer at Head Office demanding that he receive a box of Shady Jim's cigarettes. Please ship one. He's starting to make threats."
-	reward = 750
-=======
-	description = "There's an irate officer at CentCom demanding that he receive a box of Shady Jim's cigarettes. Please ship one. He's starting to make threats."
 	reward = 1150
->>>>>>> 86a3a5dd4d... Merge pull request #10610 from Owai-Seek/bountytweaks
 	wanted_types = list(/obj/item/storage/fancy/cigarettes/cigpack_shadyjims)
 
 /datum/bounty/item/assistant/potted_plants
@@ -231,13 +216,8 @@
 
 /datum/bounty/item/assistant/gasmasks
 	name = "Gas Masks" 
-<<<<<<< HEAD
 	description = "It's Taco Tuesday. Send some Gas Masks and don't ask any further questions, please."
-	reward = 1100
-=======
-	description = "The good news is that we have more miasma than we'll ever need. The bad news is, somone opened the release valve on the canisters. Ship us some gas masks!"
 	reward = 1250
->>>>>>> 86a3a5dd4d... Merge pull request #10610 from Owai-Seek/bountytweaks
 	required_count = 4
 	wanted_types = list(/obj/item/clothing/mask/gas)
 

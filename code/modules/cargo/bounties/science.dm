@@ -24,13 +24,8 @@
 
 /datum/bounty/item/science/nightvision_goggles
 	name = "Night Vision Goggles"
-<<<<<<< HEAD
 	description = "An electrical storm has busted all the lights at Head Office. While management is waiting for replacements, perhaps some night vision goggles can be shipped?"
-	reward = 1000
-=======
-	description = "An electrical storm has busted all the lights at CentCom. While management is waiting for replacements, perhaps some night vision goggles can be shipped?"
 	reward = 1250
->>>>>>> 86a3a5dd4d... Merge pull request #10610 from Owai-Seek/bountytweaks
 	wanted_types = list(/obj/item/clothing/glasses/night, /obj/item/clothing/glasses/meson/night, /obj/item/clothing/glasses/hud/health/night, /obj/item/clothing/glasses/hud/security/night, /obj/item/clothing/glasses/hud/diagnostic/night)
 
 /datum/bounty/item/science/experimental_welding_tool

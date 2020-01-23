@@ -27,13 +27,8 @@
 
 /datum/bounty/item/gardencook/onionrings
 	name = "Onion Rings"
-<<<<<<< HEAD
 	description = "Head Office is remembering Saturn day. Ship onion rings to show the station's support."
-	reward = 800
-=======
-	description = "Nanotrasen is remembering Saturn day. Ship onion rings to show the station's support."
 	reward = 1200
->>>>>>> 86a3a5dd4d... Merge pull request #10610 from Owai-Seek/bountytweaks
 	required_count = 3
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/onionrings)
 
@@ -62,9 +57,3 @@
 	reward = 1800
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/poppypretzel)
 
-/datum/bounty/item/chef/fiestaskewer
-	name = "Fiesta Skewer"
-	description = "Apparently people are putting vegetables on kebabs now. Central Command has taken an interest in this turn of events and would like to know more."
-	reward = 2600
-	required_count = 3
-	wanted_types = list(/obj/item/reagent_containers/food/snacks/kebab/fiesta)

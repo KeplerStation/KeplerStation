@@ -2,15 +2,9 @@
 
 /datum/bounty/item/chef/soup
 	name = "Soup"
-<<<<<<< HEAD
 	description = "To quell the homeless uprising, the ICC will be serving soup to all underpaid workers. Ship any type of soup."
-	reward = 700
-	required_count = 3
-=======
-	description = "To quell the homeless uprising, Nanotrasen will be serving soup to all underpaid workers. Ship any type of soup. Do NOT ship bowls of water."
 	reward = 1200
 	required_count = 4
->>>>>>> 86a3a5dd4d... Merge pull request #10610 from Owai-Seek/bountytweaks
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/soup)
 	exclude_types = list(/obj/item/reagent_containers/food/snacks/soup/wish)
 
@@ -47,21 +41,6 @@
 	required_count = 3
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/salad)
 
-<<<<<<< HEAD
-/datum/bounty/item/chef/superbite
-	name = "Super Bite Burger"
-	description = "Commander Tubbs thinks he can set a competitive eating world record. All he needs is a super bite burger shipped to him."
-	reward = 1800
-	wanted_types = list(/obj/item/reagent_containers/food/snacks/burger/superbite)
-
-/datum/bounty/item/chef/poppypretzel
-	name = "Poppy Pretzel"
-	description = "Head Office needs a reason to fire their HR head. Send over a poppy pretzel to force a failed drug test."
-	reward = 3000
-	wanted_types = list(/obj/item/reagent_containers/food/snacks/poppypretzel)
-
-=======
->>>>>>> 86a3a5dd4d... Merge pull request #10610 from Owai-Seek/bountytweaks
 // /datum/bounty/item/chef/cubancarp
 // 	name = "Cuban Carp"
 // 	description = "To celebrate the birth of Castro XXVII, ship one cuban carp to Head Office."
@@ -152,9 +131,3 @@
 	reward = 1200
 	required_count = 6
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/sugarcookie)
-
-/datum/bounty/item/chef/bbqribs
-	description = "There's a debate around command as to weather or not ribs should be considered finger food, and we need a few delicious racks to process."
-	reward = 2250
-	required_count = 3
-	wanted_types = list(/obj/item/reagent_containers/food/snacks/bbqribs)
