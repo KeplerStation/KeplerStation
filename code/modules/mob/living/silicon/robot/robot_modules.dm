@@ -114,7 +114,7 @@
 		else if(istype(S, /obj/item/stack/marker_beacon))
 			S.cost = 1
 			S.source = get_or_create_estorage(/datum/robot_energy_storage/beacon)
-		
+
 		else if(istype(S, /obj/item/stack/packageWrap))
 			S.cost = 1
 			S.source = get_or_create_estorage(/datum/robot_energy_storage/wrapping_paper)
@@ -304,6 +304,67 @@
 	can_be_pushed = FALSE
 	hat_offset = 3
 
+<<<<<<< HEAD
+=======
+/obj/item/robot_module/medical/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/medmodels = list("Default", "Heavy", "Sleek", "Marina", "Droid", "Eyebot", "Medihound", "Medihound Dark", "Vale")
+	if(R.client && R.client.ckey in list("nezuli"))
+		medmodels += "Alina"
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in medmodels
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Default")
+			cyborg_base_icon = "medical"
+		if("Droid")
+			cyborg_base_icon = "medical"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+			hat_offset = 4
+		if("Sleek")
+			cyborg_base_icon = "sleekmed"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Marina")
+			cyborg_base_icon = "marinamed"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Eyebot")
+			cyborg_base_icon = "eyebotmed"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Heavy")
+			cyborg_base_icon = "heavymed"
+			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
+		if("Medihound")
+			cyborg_base_icon = "medihound"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "msleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE
+		if("Medihound Dark")
+			cyborg_base_icon = "medihounddark"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "mdsleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE
+		if("Vale")
+			cyborg_base_icon = "valemed"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			sleeper_overlay = "valemedsleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE
+		if("Alina")
+			cyborg_base_icon = "alina-med"
+			cyborg_icon_override = 'modular_citadel/icons/mob/widerobot.dmi'
+			special_light_key = "alina"
+			sleeper_overlay = "alinasleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE
+	return ..()
+
+>>>>>>> f3b9b20e57... Merge pull request #10672 from BlackMajor/master
 /obj/item/robot_module/engineering
 	name = "Engineering"
 	basic_modules = list(
