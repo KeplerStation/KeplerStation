@@ -2934,6 +2934,13 @@
 /obj/machinery/capture_the_flag/red,
 /turf/open/floor/circuit/green/anim,
 /area/ctf)
+"hH" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/computer/slot_machine,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "hI" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -6799,6 +6806,14 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/centcom/control)
+"px" = (
+/obj/structure/table,
+/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel/white,
+/area/centcom/holding)
 "py" = (
 /obj/machinery/smartfridge,
 /turf/closed/indestructible{
@@ -6814,6 +6829,7 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/centcom/supplypod)
+<<<<<<< HEAD
 "pE" = (
 /obj/machinery/plantgenes/seedvault,
 /obj/effect/turf_decal/tile/green{
@@ -6828,6 +6844,8 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/centcom/holding)
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "pH" = (
 /obj/structure/table/wood,
 /obj/machinery/recharger,
@@ -6960,11 +6978,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/centcom/ferry)
-"pS" = (
-/obj/structure/table,
-/obj/item/stack/packageWrap,
-/turf/open/floor/plasteel/cafeteria,
-/area/centcom/holding)
 "pU" = (
 /obj/structure/sign/map/right{
 	pixel_y = -32
@@ -7948,6 +7961,14 @@
 	},
 /turf/open/floor/plating,
 /area/syndicate_mothership)
+"sf" = (
+/obj/machinery/vending/wallmed{
+	name = "Emergency NanoMed";
+	pixel_y = 28;
+	use_power = 0
+	},
+/turf/open/floor/plasteel/white,
+/area/centcom/holding)
 "si" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/beer{
@@ -8750,6 +8771,16 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plasteel,
 /area/centcom/supplypod)
+<<<<<<< HEAD
+=======
+"tZ" = (
+/obj/structure/chair/wood/normal,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "uc" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 1
@@ -9377,6 +9408,17 @@
 	},
 /turf/open/floor/plasteel,
 /area/syndicate_mothership)
+"vv" = (
+/obj/structure/closet,
+/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/machinery/iv_drip,
+/obj/item/roller,
+/obj/item/storage/firstaid/regular,
+/obj/item/reagent_containers/medspray/synthflesh,
+/obj/item/reagent_containers/medspray/synthflesh,
+/obj/item/reagent_containers/medspray/synthflesh,
+/turf/open/floor/plasteel/white,
+/area/centcom/holding)
 "vw" = (
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
@@ -10634,12 +10676,15 @@
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/grass,
 /area/wizard_station)
+<<<<<<< HEAD
 "yM" = (
 /obj/structure/table/wood/bar,
 /obj/structure/safe/floor,
 /obj/item/seeds/cherry/bomb,
 /turf/open/floor/wood,
 /area/centcom/holding)
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "yN" = (
 /obj/structure/table/reinforced,
 /obj/item/paper/pamphlet/centcom/visitor_info,
@@ -10670,6 +10715,15 @@
 /obj/item/kitchen/rollingpin,
 /turf/open/floor/plasteel/cafeteria,
 /area/syndicate_mothership)
+"yW" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/grass,
+/area/centcom/holding)
 "yY" = (
 /obj/structure/table/wood,
 /obj/item/storage/fancy/donut_box,
@@ -11082,6 +11136,18 @@
 	},
 /turf/open/floor/plating,
 /area/syndicate_mothership)
+<<<<<<< HEAD
+=======
+"zS" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel/freezer,
+/area/centcom/holding)
+"zT" = (
+/turf/open/indestructible/boss/air,
+/area/centcom/holding)
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "zU" = (
 /obj/structure/closet/crate/freezer,
 /turf/open/floor/plasteel/cafeteria,
@@ -11350,6 +11416,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/syndicate_mothership)
+"AE" = (
+/obj/machinery/vending/coffee,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "AG" = (
 /obj/structure/ladder/unbreakable/binary/space,
 /turf/open/indestructible/airblock,
@@ -11568,18 +11638,8 @@
 /obj/machinery/mech_bay_recharge_port,
 /turf/open/floor/plating,
 /area/syndicate_mothership)
-"Bo" = (
-/obj/structure/table,
-/obj/machinery/reagentgrinder,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/effect/turf_decal/tile/green{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/green,
-/obj/effect/turf_decal/tile/green{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/green{
+"Bq" = (
+/obj/machinery/sleeper{
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
@@ -13496,6 +13556,7 @@
 /obj/item/instrument/guitar,
 /turf/open/floor/carpet/black,
 /area/centcom/holding)
+<<<<<<< HEAD
 "Fb" = (
 /obj/structure/piano,
 /obj/machinery/light{
@@ -13510,6 +13571,8 @@
 /obj/structure/chair/stool,
 /turf/open/floor/carpet/black,
 /area/centcom/holding)
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "Fg" = (
 /obj/structure/flora/grass/brown,
 /obj/effect/light_emitter,
@@ -13518,6 +13581,7 @@
 "Fh" = (
 /turf/open/floor/plasteel/cafeteria,
 /area/centcom/holding)
+<<<<<<< HEAD
 "Fi" = (
 /obj/structure/chair/wood/wings{
 	dir = 3
@@ -13530,6 +13594,11 @@
 "Fj" = (
 /obj/machinery/vending/cigarette,
 /turf/open/floor/wood,
+=======
+"Fl" = (
+/obj/structure/bedsheetbin/towel,
+/turf/open/floor/plasteel/white,
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 /area/centcom/holding)
 "Fm" = (
 /obj/machinery/shower{
@@ -13819,7 +13888,12 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/wood,
+=======
+/obj/structure/table/wood,
+/turf/open/indestructible/hotelwood,
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 /area/centcom/holding)
 "FX" = (
 /turf/open/floor/plasteel/stairs,
@@ -14449,6 +14523,24 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/tdome/tdomeobserve)
+"Hj" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/piano,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
+"Hk" = (
+/obj/structure/table/wood,
+/obj/item/camera/detective{
+	desc = "A polaroid camera with extra capacity for social media marketing.";
+	name = "Professional camera"
+	},
+/obj/item/camera_film,
+/obj/item/paper_bin,
+/obj/item/pen/fountain,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "Hm" = (
 /obj/structure/flora/ausbushes/fernybush,
 /obj/structure/flora/ausbushes/ppflowers,
@@ -14787,6 +14879,7 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/tdome/tdomeobserve)
+<<<<<<< HEAD
 "HQ" = (
 /obj/structure/sink/kitchen{
 	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
@@ -14805,6 +14898,8 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/centcom/holding)
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "HR" = (
 /obj/structure/sink{
 	dir = 4;
@@ -15821,6 +15916,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/tdome/tdomeadmin)
+"JV" = (
+/obj/structure/table,
+/obj/item/stack/packageWrap,
+/obj/item/reagent_containers/glass/beaker,
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/holding)
 "JX" = (
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/stripes/line{
@@ -15876,6 +15977,16 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/tdome/tdomeadmin)
+<<<<<<< HEAD
+=======
+"Kf" = (
+/obj/structure/closet/secure_closet/personal/cabinet,
+/obj/item/reagent_containers/rag/towel,
+/obj/item/reagent_containers/rag/towel,
+/obj/item/reagent_containers/rag/towel,
+/turf/open/floor/carpet/red,
+/area/centcom/holding)
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "Kg" = (
 /turf/closed/indestructible/fakedoor{
 	name = "Thunderdome Admin"
@@ -15893,6 +16004,16 @@
 	},
 /turf/open/floor/plasteel,
 /area/tdome/tdomeadmin)
+"Ki" = (
+/obj/structure/closet/secure_closet/personal/cabinet{
+	desc = "Swipe your ID on the closet to claim it. First come first serve, this one is wooden and fancy. Store your stuff here.";
+	name = "Personal ID-Locked Closet"
+	},
+/obj/item/reagent_containers/rag/towel,
+/obj/item/reagent_containers/rag/towel,
+/obj/item/reagent_containers/rag/towel,
+/turf/open/floor/carpet/royalblue,
+/area/centcom/holding)
 "Kj" = (
 /obj/machinery/door/airlock/external{
 	name = "Backup Emergency Escape Shuttle"
@@ -16249,7 +16370,12 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/open/floor/wood,
+=======
+/obj/structure/table/wood,
+/turf/open/indestructible/hotelwood,
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 /area/centcom/holding)
 "KU" = (
 /obj/structure/closet/emcloset,
@@ -16320,12 +16446,40 @@
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/centcom/evac)
+<<<<<<< HEAD
+=======
+"Lk" = (
+/obj/structure/table,
+/obj/item/storage/box/bodybags,
+/obj/item/storage/box/bodybags,
+/obj/item/storage/box/bodybags,
+/obj/item/storage/box/bodybags,
+/turf/open/floor/plasteel/white,
+/area/centcom/holding)
+"Lm" = (
+/obj/machinery/shower{
+	dir = 4
+	},
+/turf/open/floor/plasteel/freezer,
+/area/centcom/holding)
+"Ln" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/open/floor/mineral/titanium/blue,
+/area/centcom/holding)
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "Lp" = (
 /obj/structure/chair{
 	dir = 4
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/centcom/evac)
+"Lr" = (
+/obj/structure/mopbucket,
+/obj/item/mop,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "Ls" = (
 /obj/docking_port/stationary{
 	dir = 4;
@@ -16605,6 +16759,7 @@
 	},
 /turf/open/floor/carpet/black,
 /area/centcom/holding)
+<<<<<<< HEAD
 "Mu" = (
 /obj/machinery/light{
 	dir = 1
@@ -16621,6 +16776,8 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/centcom/holding)
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "Mv" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/fancy/donut_box,
@@ -16651,6 +16808,16 @@
 	},
 /turf/open/floor/plating/asteroid/snow/airless,
 /area/syndicate_mothership)
+"Mz" = (
+/obj/structure/closet/crate,
+/obj/item/stack/sheet/paperframes/fifty,
+/obj/item/stack/sheet/paperframes/fifty,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/box/lights/mixed,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "MB" = (
 /turf/open/indestructible/binary,
 /area/fabric_of_reality)
@@ -16720,10 +16887,6 @@
 /obj/item/reagent_containers/food/condiment/enzyme,
 /turf/open/floor/plasteel/cafeteria,
 /area/syndicate_mothership)
-"MT" = (
-/obj/machinery/processor,
-/turf/open/floor/plasteel/cafeteria,
-/area/centcom/holding)
 "MU" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
@@ -16776,6 +16939,7 @@
 	},
 /turf/open/floor/plasteel,
 /area/tdome/tdomeobserve)
+<<<<<<< HEAD
 "Nm" = (
 /obj/structure/closet/crate,
 /obj/item/vending_refill/autodrobe,
@@ -16802,26 +16966,43 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
+=======
+"Nt" = (
+/obj/structure/bedsheetbin/color,
+/turf/open/indestructible/hotelwood,
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 /area/centcom/holding)
 "Nu" = (
 /turf/open/floor/wood,
 /area/syndicate_mothership)
+<<<<<<< HEAD
 "Nv" = (
 /obj/structure/table,
 /turf/open/floor/plasteel/cafeteria{
 	dir = 2
 	},
 /area/centcom/holding)
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "Nw" = (
 /obj/machinery/recharge_station,
 /turf/open/floor/plasteel/white,
 /area/centcom/holding)
+<<<<<<< HEAD
 "Ny" = (
 /obj/machinery/modular_computer/console/preset/research,
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/open/floor/wood,
+=======
+"Nx" = (
+/obj/machinery/processor,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel/cafeteria,
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 /area/centcom/holding)
 "Nz" = (
 /obj/effect/turf_decal/tile/brown{
@@ -16832,6 +17013,7 @@
 	},
 /turf/open/floor/plasteel,
 /area/centcom/supplypod/loading/two)
+<<<<<<< HEAD
 "ND" = (
 /obj/structure/closet,
 /obj/item/storage/backpack/duffelbag/med/surgery,
@@ -16842,6 +17024,13 @@
 /obj/item/reagent_containers/medspray/synthflesh,
 /obj/item/reagent_containers/medspray/synthflesh,
 /turf/open/floor/wood,
+=======
+"NE" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 /area/centcom/holding)
 "NF" = (
 /obj/structure/ladder/unbreakable/binary,
@@ -16861,6 +17050,7 @@
 	},
 /turf/open/floor/plasteel,
 /area/centcom/control)
+<<<<<<< HEAD
 "NJ" = (
 /obj/structure/table,
 /obj/item/book/manual/hydroponics_pod_people,
@@ -16877,6 +17067,12 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
+=======
+"NN" = (
+/obj/item/storage/box/bodybags,
+/obj/item/storage/box/bodybags,
+/turf/open/indestructible/hotelwood,
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 /area/centcom/holding)
 "NT" = (
 /obj/structure/window/paperframe{
@@ -16905,6 +17101,13 @@
 /obj/machinery/vending/cola/sodie,
 /turf/open/floor/plasteel,
 /area/syndicate_mothership)
+"NZ" = (
+/obj/structure/table/wood/bar,
+/obj/structure/safe/floor,
+/obj/item/seeds/cherry/bomb,
+/obj/item/key/janitor,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "Oa" = (
 /obj/structure/table/wood,
 /turf/open/floor/wood,
@@ -16969,12 +17172,26 @@
 	name = "Lock Control";
 	pixel_y = -28
 	},
+/mob/living/simple_animal/bot/cleanbot,
 /turf/open/floor/plasteel/white,
 /area/centcom/holding)
 "Or" = (
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
 /area/centcom/supplypod/loading/two)
+"Os" = (
+/obj/structure/chair/wood/normal{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
+"Ot" = (
+/obj/machinery/washing_machine,
+/turf/open/floor/mineral/titanium/blue,
+/area/centcom/holding)
 "Ou" = (
 /turf/closed/indestructible/fakedoor{
 	name = "Cold Storage"
@@ -17039,6 +17256,10 @@
 /obj/structure/mecha_wreckage/mauler,
 /turf/open/floor/plasteel/dark,
 /area/syndicate_mothership)
+"OT" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/white,
+/area/centcom/holding)
 "OU" = (
 /obj/item/clothing/under/jabroni,
 /obj/item/clothing/under/geisha,
@@ -17053,13 +17274,36 @@
 	},
 /turf/open/floor/wood,
 /area/syndicate_mothership)
+"OW" = (
+/obj/structure/bedsheetbin/towel,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/mineral/titanium/blue,
+/area/centcom/holding)
 "OZ" = (
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plating,
 /area/syndicate_mothership)
-"Pa" = (
-/obj/machinery/washing_machine,
-/turf/open/floor/plasteel/white,
+"Pc" = (
+/obj/structure/sink/kitchen{
+	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
+	name = "sink";
+	pixel_y = 28
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/obj/item/paper/guides/jobs/hydroponics,
+/obj/item/book/manual/hydroponics_pod_people,
+/turf/open/indestructible/hotelwood,
 /area/centcom/holding)
 "Pg" = (
 /obj/machinery/light{
@@ -17089,12 +17333,6 @@
 	},
 /turf/open/floor/carpet/black,
 /area/centcom/holding)
-"Pq" = (
-/obj/structure/urinal{
-	pixel_y = 28
-	},
-/turf/open/floor/plasteel/white,
-/area/centcom/holding)
 "Pr" = (
 /obj/structure/table,
 /obj/item/book/manual/chef_recipes,
@@ -17118,10 +17356,13 @@
 /obj/machinery/light/small,
 /turf/open/floor/wood,
 /area/syndicate_mothership)
+<<<<<<< HEAD
 "Px" = (
 /obj/machinery/vr_sleeper,
 /turf/open/floor/wood,
 /area/centcom/holding)
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "PA" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -17186,6 +17427,11 @@
 	},
 /turf/open/floor/plating,
 /area/syndicate_mothership)
+"PQ" = (
+/obj/structure/closet/secure_closet,
+/obj/item/coin/silver,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "PS" = (
 /obj/machinery/computer/shuttle/syndicate/recall,
 /obj/effect/turf_decal/tile/bar,
@@ -17258,6 +17504,10 @@
 "Qo" = (
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/evac)
+"Qp" = (
+/obj/structure/bedsheetbin,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "Qq" = (
 /turf/open/floor/plasteel/freezer,
 /area/syndicate_mothership)
@@ -17279,6 +17529,32 @@
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
+"Qw" = (
+/turf/open/floor/plasteel/freezer,
+/area/centcom/holding)
+"Qy" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plasteel/white,
+/area/centcom/holding)
+"Qz" = (
+/obj/item/coin/silver,
+/obj/item/coin/silver,
+/obj/item/coin/silver,
+/obj/item/coin/silver,
+/obj/item/coin/silver,
+/obj/item/coin/silver,
+/obj/item/coin/silver,
+/obj/item/coin/silver,
+/obj/item/coin/silver,
+/obj/item/coin/silver,
+/obj/item/coin/silver,
+/obj/item/coin/silver,
+/obj/item/coin/silver,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "QA" = (
 /obj/machinery/deepfryer,
 /turf/open/floor/plasteel/cafeteria,
@@ -17293,6 +17569,7 @@
 "QE" = (
 /turf/open/floor/plasteel,
 /area/centcom/supplypod)
+<<<<<<< HEAD
 "QH" = (
 /obj/machinery/chem_master/condimaster{
 	desc = "Used to separate out liquids - useful for purifying botanical extracts. Also dispenses condiments.";
@@ -17308,12 +17585,21 @@
 	},
 /obj/effect/turf_decal/tile/green{
 	dir = 8
+=======
+"QF" = (
+/obj/machinery/button/door{
+	id = "Ninja3";
+	name = "Dorm Bolt Control";
+	normaldoorcontrol = 1;
+	pixel_y = -25;
+	specialfunctions = 4
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/indestructible/hotelwood,
 /area/centcom/holding)
-"QI" = (
-/obj/structure/toilet{
-	dir = 4
+"QJ" = (
+/obj/structure/sign/barsign{
+	pixel_y = 32
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 	},
 /turf/open/floor/plasteel/white,
 /area/centcom/holding)
@@ -17383,6 +17669,7 @@
 	},
 /turf/open/floor/plating,
 /area/syndicate_mothership)
+<<<<<<< HEAD
 "Rd" = (
 /obj/machinery/light,
 /obj/effect/turf_decal/tile/green{
@@ -17397,6 +17684,8 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/centcom/holding)
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "Re" = (
 /obj/structure/mineral_door/paperframe,
 /turf/open/floor/wood,
@@ -17478,9 +17767,51 @@
 	},
 /turf/open/floor/holofloor,
 /area/holodeck/rec_center/basketball)
+<<<<<<< HEAD
 "RL" = (
 /obj/structure/mineral_door/paperframe{
 	name = "Arcade"
+=======
+"RK" = (
+/obj/structure/closet/crate/freezer/blood,
+/turf/open/floor/plasteel/white,
+/area/centcom/holding)
+"RL" = (
+/obj/machinery/vending/cola,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
+"RN" = (
+/obj/structure/table,
+/obj/machinery/reagentgrinder,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/effect/turf_decal/tile/green{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/obj/machinery/light,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
+"RO" = (
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/window{
+	dir = 8
+	},
+/obj/structure/curtain,
+/turf/open/floor/mineral/titanium/blue,
+/area/centcom/holding)
+"RP" = (
+/obj/machinery/door/airlock/wood{
+	id_tag = "Ninja4";
+	name = "Dorm 4"
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
@@ -17551,6 +17882,13 @@
 /obj/item/toy/nuke,
 /turf/open/floor/wood,
 /area/syndicate_mothership)
+"Sj" = (
+/obj/machinery/vending/autodrobe/all_access{
+	extended_inventory = 1
+	},
+/obj/machinery/light,
+/turf/open/floor/wood,
+/area/centcom/holding)
 "So" = (
 /obj/structure/chair/wood/wings{
 	dir = 4
@@ -17646,6 +17984,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/space/basic,
 /area/centcom/supplypod)
+<<<<<<< HEAD
 "SU" = (
 /obj/structure/table/wood,
 /obj/item/camera/detective{
@@ -17657,6 +17996,17 @@
 /obj/item/paper_bin,
 /obj/item/pen/fountain,
 /turf/open/floor/wood,
+=======
+"SR" = (
+/obj/machinery/door/airlock/wood{
+	id_tag = "Ninja7";
+	name = "Dorm 7"
+	},
+/turf/open/indestructible/hotelwood,
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
+/area/centcom/holding)
+"ST" = (
+/turf/open/floor/mineral/titanium/blue,
 /area/centcom/holding)
 "SV" = (
 /obj/effect/turf_decal/tile/bar,
@@ -17684,9 +18034,27 @@
 /obj/structure/table/wood,
 /turf/open/floor/wood,
 /area/centcom/holding)
+<<<<<<< HEAD
 "Tb" = (
 /obj/structure/closet/crate/freezer/blood,
 /turf/open/floor/wood,
+=======
+"Tc" = (
+/obj/machinery/button/door{
+	id = "Ninja2";
+	name = "Dorm Bolt Control";
+	normaldoorcontrol = 1;
+	pixel_y = -25;
+	specialfunctions = 4
+	},
+/turf/open/indestructible/hotelwood,
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
+/area/centcom/holding)
+"Tf" = (
+/obj/machinery/shower{
+	dir = 8
+	},
+/turf/open/floor/plasteel/freezer,
 /area/centcom/holding)
 "Tj" = (
 /obj/effect/turf_decal/tile/bar,
@@ -17718,6 +18086,16 @@
 /obj/structure/closet/chefcloset,
 /turf/open/floor/plasteel/cafeteria,
 /area/centcom/holding)
+"Tt" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/structure/window/reinforced/tinted{
+	icon_state = "twindow";
+	dir = 1
+	},
+/turf/open/floor/plasteel/white,
+/area/centcom/holding)
 "Tu" = (
 /obj/structure/flora/ausbushes/fernybush,
 /obj/structure/flora/ausbushes/fullgrass,
@@ -17743,6 +18121,21 @@
 /obj/item/clothing/head/helmet/space/plasmaman,
 /turf/open/floor/wood,
 /area/centcom/holding)
+"Tx" = (
+/obj/machinery/plantgenes/seedvault,
+/obj/effect/turf_decal/tile/green{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/obj/structure/table,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "Tz" = (
 /obj/effect/light_emitter,
 /turf/open/floor/plating/asteroid/snow/airless,
@@ -17757,6 +18150,10 @@
 /obj/structure/reagent_dispensers/cooking_oil,
 /turf/open/floor/plasteel/cafeteria,
 /area/centcom/holding)
+"TC" = (
+/obj/machinery/light,
+/turf/open/floor/plasteel/freezer,
+/area/centcom/holding)
 "TF" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 8
@@ -17766,12 +18163,20 @@
 	},
 /turf/open/floor/holofloor,
 /area/holodeck/rec_center/basketball)
-"TK" = (
-/obj/structure/table/wood/bar,
-/obj/structure/mirror{
-	pixel_y = 28
+"TG" = (
+/obj/machinery/light{
+	dir = 8
 	},
+<<<<<<< HEAD
 /turf/open/floor/wood,
+=======
+/obj/structure/window/reinforced/tinted{
+	icon_state = "twindow";
+	dir = 1
+	},
+/obj/machinery/washing_machine,
+/turf/open/floor/plasteel/white,
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 /area/centcom/holding)
 "TM" = (
 /mob/living/simple_animal/bot/medbot{
@@ -17798,9 +18203,26 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/syndicate_mothership)
+<<<<<<< HEAD
 "Ud" = (
 /obj/effect/landmark/holding_facility,
 /turf/open/floor/wood,
+=======
+"TY" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/soap,
+/obj/item/soap,
+/obj/item/soap,
+/obj/item/janiupgrade,
+/obj/vehicle/ridden/janicart,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
+"Ud" = (
+/obj/effect/landmark/holding_facility,
+/turf/open/indestructible/hotelwood,
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 /area/centcom/holding)
 "Ug" = (
 /obj/machinery/door/poddoor/shuttledock{
@@ -17828,6 +18250,25 @@
 	},
 /turf/open/floor/plasteel,
 /area/syndicate_mothership)
+"Uk" = (
+/obj/structure/closet/crate,
+/obj/item/vending_refill/autodrobe,
+/obj/item/vending_refill/autodrobe,
+/obj/item/vending_refill/boozeomat,
+/obj/item/vending_refill/boozeomat,
+/obj/item/vending_refill/cigarette,
+/obj/item/vending_refill/cigarette,
+/obj/item/vending_refill/clothing,
+/obj/item/vending_refill/coffee,
+/obj/item/vending_refill/coffee,
+/obj/item/vending_refill/cola,
+/obj/item/vending_refill/cola,
+/obj/item/vending_refill/wallmed,
+/obj/item/vending_refill/wallmed,
+/obj/item/vending_refill/snack,
+/obj/item/vending_refill/snack,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "Ul" = (
 /obj/structure/table,
 /obj/machinery/microwave{
@@ -17868,6 +18309,23 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plasteel,
 /area/tdome/tdomeobserve)
+<<<<<<< HEAD
+=======
+"Uq" = (
+/obj/structure/table/wood,
+/obj/item/soap,
+/obj/item/soap,
+/obj/item/soap,
+/obj/item/lightreplacer,
+/obj/item/lightreplacer,
+/obj/item/storage/bag/trash,
+/obj/item/storage/bag/trash,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
+"Ur" = (
+/turf/open/floor/carpet/royalblue,
+/area/centcom/holding)
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "Uu" = (
 /obj/machinery/light{
 	dir = 8
@@ -17889,10 +18347,28 @@
 /obj/effect/light_emitter,
 /turf/open/floor/plating/asteroid/snow/airless,
 /area/syndicate_mothership)
+"Uz" = (
+/obj/structure/table,
+/obj/machinery/dish_drive,
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/holding)
 "UC" = (
 /obj/machinery/vending/cola,
 /turf/open/floor/plasteel,
 /area/centcom/supplypod)
+<<<<<<< HEAD
+=======
+"UD" = (
+/obj/structure/closet/secure_closet/personal/cabinet{
+	desc = "Swipe your ID on the closet to claim it. First come first serve, this one is wooden and fancy. Store your stuff here.";
+	name = "Personal ID-Locked Closet"
+	},
+/obj/item/coin/silver,
+/obj/item/coin/silver,
+/obj/item/coin/silver,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "UE" = (
 /obj/structure/chair/stool/bar,
 /turf/open/floor/wood,
@@ -17913,6 +18389,17 @@
 	},
 /turf/open/floor/plasteel,
 /area/centcom/supplypod)
+"UN" = (
+/obj/structure/mirror{
+	pixel_y = 28
+	},
+/obj/structure/sink{
+	dir = 1;
+	pixel_y = 25
+	},
+/mob/living/simple_animal/bot/cleanbot,
+/turf/open/floor/mineral/titanium/blue,
+/area/centcom/holding)
 "UO" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
@@ -17937,6 +18424,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/centcom/supplypod/loading/one)
+"US" = (
+/obj/machinery/gibber,
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/holding)
 "UT" = (
 /obj/structure/chair/wood/wings{
 	dir = 1
@@ -18006,13 +18497,6 @@
 	dir = 2
 	},
 /area/syndicate_mothership)
-"Vm" = (
-/obj/machinery/gibber,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/plasteel/cafeteria,
-/area/centcom/holding)
 "Vt" = (
 /obj/item/paper/fluff/stations/centcom/disk_memo,
 /obj/structure/noticeboard{
@@ -18153,11 +18637,52 @@
 "Wr" = (
 /turf/open/floor/plasteel/dark,
 /area/centcom/supplypod)
+<<<<<<< HEAD
+=======
+"Ws" = (
+/obj/machinery/door/airlock/wood{
+	id_tag = "Ninja6";
+	name = "Dorm 6"
+	},
+/turf/open/floor/wood,
+/area/centcom/holding)
+"Ww" = (
+/obj/structure/bodycontainer/crematorium{
+	dir = 4;
+	id = "crematoriumGhostDojo"
+	},
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
+"Wz" = (
+/obj/structure/table,
+/obj/item/storage/backpack/duffelbag/med/surgery,
+/turf/open/floor/plasteel/white,
+/area/centcom/holding)
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "WC" = (
 /obj/structure/table/reinforced,
 /obj/item/pen,
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/evac)
+<<<<<<< HEAD
+=======
+"WD" = (
+/obj/structure/mopbucket,
+/obj/item/mop,
+/obj/structure/sink/kitchen{
+	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
+	name = "sink";
+	pixel_y = 28
+	},
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
+"WE" = (
+/obj/machinery/vending/kink{
+	extended_inventory = 1
+	},
+/turf/open/floor/wood,
+/area/centcom/holding)
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "WH" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/food/drinks/bottle/whiskey{
@@ -18222,6 +18747,13 @@
 /obj/machinery/processor,
 /turf/open/floor/plasteel/cafeteria,
 /area/syndicate_mothership)
+"WY" = (
+/obj/machinery/vending/cigarette,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "Xd" = (
 /obj/structure/flora/ausbushes/fernybush,
 /obj/structure/flora/ausbushes/fullgrass,
@@ -18234,6 +18766,19 @@
 	req_access_txt = "0"
 	},
 /turf/open/floor/wood,
+/area/centcom/holding)
+"Xf" = (
+/obj/structure/table/wood/bar,
+/obj/structure/mirror{
+	pixel_y = 28
+	},
+/obj/item/lightreplacer,
+/obj/item/lightreplacer,
+/obj/item/lightreplacer,
+/obj/item/storage/bag/trash,
+/obj/item/storage/bag/trash,
+/obj/item/storage/bag/trash,
+/turf/open/indestructible/hotelwood,
 /area/centcom/holding)
 "Xg" = (
 /obj/effect/turf_decal/tile/red{
@@ -18347,6 +18892,26 @@
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
+"XS" = (
+/obj/structure/closet/secure_closet/hydroponics{
+	locked = 0
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/obj/item/seeds/ambrosia/gaia,
+/obj/item/seeds/ambrosia/gaia,
+/obj/item/seeds/pumpkin/blumpkin,
+/obj/item/seeds/pumpkin/blumpkin,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "XT" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/snacks/sashimi,
@@ -18409,6 +18974,10 @@
 /obj/structure/dresser,
 /turf/open/floor/plasteel/dark,
 /area/syndicate_mothership)
+"Yj" = (
+/obj/structure/table/optable,
+/turf/open/floor/plasteel/white,
+/area/centcom/holding)
 "Ym" = (
 /obj/machinery/computer/arcade/orion_trail,
 /turf/open/floor/wood,
@@ -18471,10 +19040,18 @@
 /mob/living/simple_animal/chicken,
 /turf/open/floor/grass,
 /area/centcom/holding)
+<<<<<<< HEAD
 "YQ" = (
 /obj/structure/table,
 /obj/item/reagent_containers/glass/beaker,
 /turf/open/floor/plasteel/cafeteria,
+=======
+"YO" = (
+/obj/structure/chair/comfy/brown{
+	dir = 1
+	},
+/turf/open/indestructible/hotelwood,
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 /area/centcom/holding)
 "YU" = (
 /obj/structure/window/reinforced{
@@ -18527,6 +19104,7 @@
 /obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/syndicate_mothership)
+<<<<<<< HEAD
 "Zt" = (
 /obj/machinery/vr_sleeper{
 	dir = 1
@@ -18534,6 +19112,8 @@
 /obj/machinery/light,
 /turf/open/floor/wood,
 /area/centcom/holding)
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 "Zw" = (
 /obj/structure/bed,
 /obj/item/bedsheet/syndie,
@@ -18588,6 +19168,30 @@
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/syndicate_mothership)
+"ZL" = (
+/obj/structure/closet,
+/obj/item/stack/sheet/mineral/wood/fifty,
+/obj/item/stack/tile/wood{
+	amount = 24
+	},
+/obj/item/stack/tile/carpet/black/fifty,
+/obj/item/stack/tile/carpet/blackred/fifty,
+/obj/item/stack/tile/carpet/blue/fifty,
+/obj/item/stack/tile/carpet/cyan/fifty,
+/obj/item/stack/tile/carpet/fifty,
+/obj/item/stack/tile/carpet/green/fifty,
+/obj/item/stack/tile/carpet/monochrome/fifty,
+/obj/item/stack/tile/carpet/orange/fifty,
+/obj/item/stack/tile/carpet/purple/fifty,
+/obj/item/stack/tile/carpet/red/fifty,
+/obj/item/stack/tile/carpet/royalblack/fifty,
+/obj/item/stack/tile/carpet/royalblue/fifty,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
+"ZN" = (
+/obj/machinery/vending/snack,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "ZP" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -18600,6 +19204,10 @@
 "ZQ" = (
 /turf/open/floor/plasteel,
 /area/centcom/supplypod/loading/two)
+"ZR" = (
+/obj/structure/bed/dogbed,
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 "ZT" = (
 /mob/living/simple_animal/cow,
 /turf/open/floor/grass,
@@ -18638,6 +19246,27 @@
 	},
 /turf/open/floor/plasteel,
 /area/centcom/supply)
+"ZZ" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/obj/machinery/chem_master/condimaster{
+	desc = "Used to separate out liquids - useful for purifying botanical extracts. Also dispenses condiments.";
+	name = "BrewMaster 2199";
+	pixel_x = -4
+	},
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
 
 (1,1,1) = {"
 aa
@@ -42719,8 +43348,6 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
 Nd
 Nd
@@ -42753,8 +43380,7 @@ Nd
 Nd
 Nd
 Nd
-aa
-aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -42765,6 +43391,24 @@ aa
 aa
 aa
 aa
+aa
+aa
+=======
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -42976,19 +43620,19 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
-PO
+SW
 PO
 PO
 Sw
 PO
 PO
 PO
+PO
 Nd
-QI
-VA
+Tt
+Tt
+TG
 Op
 Nd
 Rm
@@ -43001,6 +43645,7 @@ XM
 NT
 UV
 CV
+<<<<<<< HEAD
 Xk
 NT
 CT
@@ -43022,6 +43667,29 @@ aa
 aa
 aa
 aa
+=======
+Sd
+Nd
+OW
+Ln
+Nd
+Lm
+Lm
+Lm
+Nd
+PQ
+Sd
+ZR
+Nd
+RL
+Yo
+Uq
+Nd
+VL
+Ww
+NN
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -43233,10 +43901,9 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
-HQ
+Pc
+PY
 PY
 PY
 PY
@@ -43244,7 +43911,8 @@ PY
 PY
 PY
 Nd
-Pq
+ZW
+ZW
 ZW
 ZW
 Za
@@ -43257,6 +43925,7 @@ Xk
 Tn
 NT
 RQ
+<<<<<<< HEAD
 Xk
 Xk
 NT
@@ -43280,6 +43949,31 @@ aa
 aa
 aa
 aa
+=======
+Sd
+Sd
+Nd
+UN
+ST
+Nd
+zS
+Qw
+TC
+Nd
+MJ
+Sd
+Sd
+Nd
+AE
+Sd
+Ph
+Nd
+Gs
+Sd
+HH
+Nd
+aa
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -43490,18 +44184,18 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
-Mu
-QH
-Bo
-vs
-Rj
-PI
-Rd
+ZZ
+PY
+PY
+PY
+PY
+PY
+PY
+RN
 Nd
-Pa
+SB
+ZW
 ZW
 ZW
 Nd
@@ -43515,6 +44209,7 @@ GY
 NT
 UV
 CV
+<<<<<<< HEAD
 Xk
 NT
 Xk
@@ -43535,7 +44230,29 @@ aa
 aa
 aa
 aa
-aa
+=======
+Sd
+Nd
+Ot
+ST
+Nd
+Tf
+Qw
+Tf
+Nd
+ma
+Sd
+Sd
+Nd
+ZN
+Sd
+Sd
+Nd
+ZL
+Sd
+Lr
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -43747,19 +44464,19 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
+PI
 PY
 PY
 PY
 PY
 PY
 PY
-PY
+Rj
 Nd
 SB
-ZW
+NE
+Fl
 Nw
 Nd
 Xk
@@ -43770,6 +44487,7 @@ Xk
 Tu
 Vu
 Nd
+<<<<<<< HEAD
 Gs
 Xk
 Xk
@@ -43780,13 +44498,46 @@ Xk
 Px
 Xk
 PF
+=======
+hH
+Sd
+Sd
+Nd
+Nd
+Wl
+Nd
+Nd
+Wl
+Nd
+Nd
+Nd
+yS
+Nd
+Nd
+WD
+Sd
+HH
+Nd
+Nd
+Ox
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 aa
 aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
+=======
+KJ
+KN
+KR
+KQ
+KQ
+KH
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -44004,16 +44755,16 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
-pE
-NJ
-SW
+Tx
+PY
+PY
 PY
 Um
-Nn
+XS
 PY
+vs
+Nd
 Nd
 Nd
 Nd
@@ -44031,18 +44782,40 @@ PX
 CV
 Xk
 NT
+<<<<<<< HEAD
 Xk
 PF
 Xk
 Px
 Xk
 Zt
+=======
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Nd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+WE
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 aa
 aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -44055,6 +44828,8 @@ aa
 aa
 aa
 aa
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 KK
 KN
 KS
@@ -44261,8 +45036,6 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
 Nd
 Nd
@@ -44272,7 +45045,13 @@ Nd
 Nd
 py
 Nd
+<<<<<<< HEAD
 Xk
+=======
+Nd
+Yh
+Sd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Yo
 Xk
 Xn
@@ -44285,6 +45064,7 @@ Xk
 Tn
 NT
 Zh
+<<<<<<< HEAD
 Xk
 Xk
 NT
@@ -44294,12 +45074,36 @@ Xk
 Xk
 Xk
 Xk
+=======
+Sd
+Sd
+Dl
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Qu
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sj
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 aa
 aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -44312,6 +45116,8 @@ aa
 aa
 aa
 aa
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 KH
 KH
 KS
@@ -44518,9 +45324,8 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
+<<<<<<< HEAD
 PL
 Xk
 Yo
@@ -44530,6 +45335,19 @@ Xk
 Xk
 Yh
 Xk
+=======
+Lr
+Sd
+Yo
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 Nd
 Nd
@@ -44545,12 +45363,33 @@ Ym
 CV
 Xk
 NT
+<<<<<<< HEAD
 Dj
 Qu
 Dj
 Dj
 Qu
 Dj
+=======
+Sd
+MR
+Sd
+Sd
+MR
+Sd
+Nd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+PM
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 aa
 aa
@@ -44558,6 +45397,7 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -44570,6 +45410,8 @@ aa
 aa
 aa
 aa
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 KH
 KU
 Lb
@@ -44775,19 +45617,19 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
 Tq
 Xk
 MG
 YN
 Nd
-Vm
+US
+Fh
 Fh
 zV
 Nd
 Nd
+Hj
 Fa
 KT
 Xk
@@ -44809,6 +45651,7 @@ Nd
 Nd
 Nd
 Nd
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -44820,7 +45663,17 @@ aa
 aa
 aa
 aa
-aa
+=======
+Nd
+Rq
+Sd
+HH
+Nd
+Nd
+Nd
+Nd
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -45032,19 +45885,24 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
+<<<<<<< HEAD
 Xk
 Xk
+=======
+ZL
+Sd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Rh
 Mm
 Nd
-MT
+Nx
+Fh
 Fh
 Yu
 Nd
-Fb
+AE
+CV
 Sd
 KT
 Xk
@@ -45066,6 +45924,7 @@ OU
 RS
 VF
 Nd
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -45077,7 +45936,20 @@ aa
 aa
 aa
 aa
-aa
+=======
+UD
+tZ
+SY
+Nd
+Sd
+Sd
+Sd
+Nd
+SY
+Os
+UD
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -45289,16 +46161,24 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 Nd
 Xk
 Xk
 Rh
+=======
+Nd
+ZN
+Sd
+yW
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 ZT
 Nd
 Pr
 Fh
+<<<<<<< HEAD
 QW
 Nd
 Fc
@@ -45306,6 +46186,17 @@ Sd
 KT
 Xk
 Xk
+=======
+Fh
+QW
+Nd
+QJ
+Sd
+Sd
+KT
+Sd
+Sd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Sd
 Sd
 Sd
@@ -45314,6 +46205,7 @@ Sd
 Nd
 Gs
 Zx
+<<<<<<< HEAD
 Xk
 OL
 Xk
@@ -45335,6 +46227,29 @@ aa
 aa
 aa
 aa
+=======
+Sd
+OL
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Nd
+Sd
+Sd
+Sd
+lS
+Sd
+Sd
+Sd
+RP
+Sd
+Sd
+Sd
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -45387,8 +46302,11 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -45556,9 +46474,11 @@ Nd
 Nd
 JE
 Fh
-YQ
+Fh
+Vv
 Nd
-MR
+Sd
+Sd
 Sd
 FW
 Xk
@@ -45578,7 +46498,23 @@ XM
 Xk
 XM
 XM
+<<<<<<< HEAD
 Xk
+=======
+Sd
+Nd
+Xn
+Sd
+Ya
+Nd
+Sd
+Sd
+Sd
+Nd
+XD
+Sd
+Xn
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 aa
 aa
@@ -45586,6 +46522,7 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -45598,6 +46535,8 @@ aa
 aa
 aa
 aa
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 KH
 KY
 Lb
@@ -45803,19 +46742,26 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
+<<<<<<< HEAD
 yM
 Xk
 Yo
 Xk
+=======
+NZ
+Sd
+Yo
+PL
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 SG
 Fh
-Vv
-Nd
-Nd
+Fh
+Fh
+Wl
+Sd
+MR
 Sd
 FX
 Xk
@@ -45835,13 +46781,30 @@ Po
 Wb
 Po
 ZU
+<<<<<<< HEAD
 Xk
+=======
+Sd
+Nd
+Nd
+Nd
+Nd
+Nd
+Sd
+Sd
+Sd
+Nd
+Nd
+Nd
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 aa
 aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -45854,6 +46817,8 @@ aa
 aa
 aa
 aa
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 KM
 KO
 KV
@@ -46060,18 +47025,24 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
 OG
+<<<<<<< HEAD
 Xk
 Xk
 Xk
+=======
+Sd
+Sd
+Tq
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 zX
 Fh
-pS
+Fh
+JV
 Nd
+Dl
 Nd
 Nd
 Nd
@@ -46091,6 +47062,7 @@ YU
 Sd
 Sd
 Sd
+<<<<<<< HEAD
 MM
 Xk
 Nd
@@ -46105,7 +47077,14 @@ aa
 aa
 aa
 aa
-aa
+=======
+Sd
+Nd
+SY
+Os
+UD
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -46317,18 +47296,25 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
+<<<<<<< HEAD
 TK
 Xk
 Xk
 Xk
+=======
+Xf
+Sd
+Sd
+Nf
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 QA
 Fh
-Nv
+Fh
+Uz
 ED
+Sd
 Yo
 Yf
 UE
@@ -46340,22 +47326,42 @@ Xk
 Xk
 Tn
 NT
-Ro
+Sd
 Ud
 Ud
 NT
 YU
-Sd
-Sd
-Sd
+<<<<<<< HEAD
+=======
+zT
+zT
+zT
 MM
 TM
+Nd
+Sd
+Sd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
+Sd
+Sd
+Sd
+<<<<<<< HEAD
+MM
+TM
+=======
+Sd
+zW
+Sd
+Sd
+Sd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 aa
 aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -46368,6 +47374,8 @@ aa
 aa
 aa
 aa
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 KH
 KH
 KS
@@ -46574,19 +47582,29 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
 YL
+<<<<<<< HEAD
 Xk
 Xk
 Xk
+=======
+Sd
+Sd
+Uk
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 Xo
 Fh
 Fh
+Fh
 py
+<<<<<<< HEAD
 Xk
+=======
+Sd
+Sd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 SY
 UE
 Xk
@@ -46597,7 +47615,7 @@ Xk
 Xk
 GY
 NT
-Tw
+Sd
 Ud
 Ud
 NT
@@ -46605,10 +47623,13 @@ YU
 Sd
 Sd
 Sd
+<<<<<<< HEAD
 MM
 Xk
+=======
+Sd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
-aa
 aa
 aa
 aa
@@ -46831,19 +47852,29 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
 Xe
+<<<<<<< HEAD
 Xk
 Xk
 Xk
+=======
+Sd
+Sd
+ZL
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 TB
 Fh
 Fh
+Fh
 BV
+<<<<<<< HEAD
 Xk
+=======
+Sd
+Sd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 XT
 UE
 Xk
@@ -46863,13 +47894,30 @@ PA
 Ra
 PA
 Pl
+<<<<<<< HEAD
 Xk
+=======
+Sd
+Nd
+Nd
+Nd
+Nd
+Nd
+Rq
+Sd
+HH
+Nd
+Nd
+Nd
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 aa
 aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -46882,6 +47930,8 @@ aa
 aa
 aa
 aa
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 KJ
 KN
 KZ
@@ -47088,19 +48138,30 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
+<<<<<<< HEAD
 Ny
 Xk
 Xk
 Xk
+=======
+TY
+Sd
+Sd
+Sd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 Vz
 Fh
+Fh
 YJ
 QT
+<<<<<<< HEAD
 Xk
+=======
+Sd
+Sd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 SY
 UE
 Xk
@@ -47120,13 +48181,30 @@ GY
 Xk
 GY
 GY
+<<<<<<< HEAD
 Xk
+=======
+Sd
+Nd
+Xs
+Ol
+YO
+Nd
+Sd
+Sd
+Sd
+Nd
+RX
+Xw
+qP
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 aa
 aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -47139,6 +48217,8 @@ aa
 aa
 aa
 aa
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 KK
 KN
 KQ
@@ -47345,8 +48425,6 @@ aa
 aa
 aa
 aa
-aa
-aa
 Nd
 Bs
 Ri
@@ -47356,8 +48434,14 @@ XL
 Fh
 Fh
 Fh
+Fh
 XL
+<<<<<<< HEAD
 Xk
+=======
+Sd
+Sd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 XX
 UE
 Xk
@@ -47372,18 +48456,40 @@ Xk
 Xk
 Xk
 OL
+<<<<<<< HEAD
 Xk
 Xk
 Xk
 Xk
 Xk
 Xk
+=======
+Sd
+Sd
+Sd
+Sd
+Sd
+Sd
+Nd
+Gs
+Sd
+Sd
+SZ
+Sd
+Sd
+Sd
+Ws
+Sd
+Sd
+HH
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 Nd
 aa
 aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -47396,6 +48502,8 @@ aa
 aa
 aa
 aa
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 KH
 KH
 KH
@@ -47602,6 +48710,7 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 Nd
@@ -47648,6 +48757,54 @@ aa
 aa
 aa
 aa
+=======
+Nd
+Hk
+Sd
+MR
+Mz
+Nd
+SN
+pV
+pV
+Tr
+Nd
+WY
+Ph
+Nd
+Nd
+Rm
+Tn
+UT
+Hm
+Sd
+Sd
+GY
+NT
+Tw
+Ms
+Ro
+NT
+vt
+Mx
+Sd
+Sd
+Uh
+tW
+Nd
+Ru
+Of
+QF
+Nd
+Sd
+Sd
+Sd
+Nd
+WN
+Ur
+Ki
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -47740,6 +48897,7 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -47799,6 +48957,8 @@ aa
 aa
 aa
 aa
+=======
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -47952,12 +49112,61 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
+=======
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Sd
+Sd
+Nd
+Nd
+Nd
+Kf
+WV
+Sd
+Nd
+sa
+Sd
+Sd
+Nd
+Sd
+zY
+Rv
+Nd
 aa
 aa
 aa
 aa
 aa
 aa
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -47983,7 +49192,12 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
+=======
+"}
+(115,1,1) = {"
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -48188,9 +49402,38 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+=======
+Nd
+vv
+VA
+ZW
+ZW
+px
+Lk
+Nd
+Nd
+Nd
+QC
+Nd
+Nd
+SR
+Nd
+Nd
+QC
+Nd
+Nd
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 "}
@@ -48224,7 +49467,12 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
+=======
+"}
+(116,1,1) = {"
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -48429,6 +49677,7 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -48438,6 +49687,28 @@ aa
 aa
 aa
 aa
+=======
+Nd
+sf
+ZW
+ZW
+ZW
+ZW
+OT
+Nd
+Ln
+ST
+ST
+Nd
+Qp
+Sd
+Nt
+Nd
+ST
+ST
+Ln
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -48471,7 +49742,12 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
+=======
+"}
+(117,1,1) = {"
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -48676,6 +49952,7 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -48685,6 +49962,28 @@ aa
 aa
 aa
 aa
+=======
+Nd
+Bq
+RK
+Qy
+Yj
+ZW
+Wz
+Nd
+xO
+QN
+ZE
+Nd
+Qp
+Qz
+Nt
+Nd
+ZE
+QN
+RO
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -48718,7 +50017,12 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
+=======
+"}
+(118,1,1) = {"
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
@@ -48923,6 +50227,7 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -48933,6 +50238,28 @@ aa
 aa
 aa
 aa
+=======
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+Nd
+>>>>>>> 4435bd4d56... Merge pull request #10622 from Owai-Seek/mojodojo
 aa
 aa
 aa
