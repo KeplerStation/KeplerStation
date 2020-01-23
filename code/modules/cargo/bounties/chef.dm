@@ -2,16 +2,23 @@
 
 /datum/bounty/item/chef/soup
 	name = "Soup"
+<<<<<<< HEAD
 	description = "To quell the homeless uprising, the ICC will be serving soup to all underpaid workers. Ship any type of soup."
 	reward = 700
 	required_count = 3
+=======
+	description = "To quell the homeless uprising, Nanotrasen will be serving soup to all underpaid workers. Ship any type of soup. Do NOT ship bowls of water."
+	reward = 1200
+	required_count = 4
+>>>>>>> 86a3a5dd4d... Merge pull request #10610 from Owai-Seek/bountytweaks
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/soup)
+	exclude_types = list(/obj/item/reagent_containers/food/snacks/soup/wish)
 
 /datum/bounty/item/chef/icecreamsandwich
 	name = "Ice Cream Sandwiches"
 	description = "Upper management has been screaming non-stop for ice cream. Please send some."
-	reward = 800
-	required_count = 3
+	reward = 1200
+	required_count = 5
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/icecreamsandwich)
 
 /datum/bounty/item/chef/bread
@@ -26,6 +33,13 @@
 	reward = 3142
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/pie)
 
+/datum/bounty/item/gardencook/khinkali
+	name = "Khinkali"
+	description = "Requesting -some khinki stuff- for a private staff party at Centcom."
+	reward = 2400
+	required_count = 6
+	wanted_types = list(/obj/item/reagent_containers/food/snacks/khinkali)
+
 /datum/bounty/item/chef/salad
 	name = "Salad or Rice Bowls"
 	description = "Head Office is going on a health binge. Your order is to ship salad or rice bowls."
@@ -33,6 +47,7 @@
 	required_count = 3
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/salad)
 
+<<<<<<< HEAD
 /datum/bounty/item/chef/superbite
 	name = "Super Bite Burger"
 	description = "Commander Tubbs thinks he can set a competitive eating world record. All he needs is a super bite burger shipped to him."
@@ -45,6 +60,8 @@
 	reward = 3000
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/poppypretzel)
 
+=======
+>>>>>>> 86a3a5dd4d... Merge pull request #10610 from Owai-Seek/bountytweaks
 // /datum/bounty/item/chef/cubancarp
 // 	name = "Cuban Carp"
 // 	description = "To celebrate the birth of Castro XXVII, ship one cuban carp to Head Office."
@@ -135,3 +152,9 @@
 	reward = 1200
 	required_count = 6
 	wanted_types = list(/obj/item/reagent_containers/food/snacks/sugarcookie)
+
+/datum/bounty/item/chef/bbqribs
+	description = "There's a debate around command as to weather or not ribs should be considered finger food, and we need a few delicious racks to process."
+	reward = 2250
+	required_count = 3
+	wanted_types = list(/obj/item/reagent_containers/food/snacks/bbqribs)

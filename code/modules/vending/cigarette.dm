@@ -13,7 +13,12 @@
 					/obj/item/lighter/greyscale = 4,
 					/obj/item/storage/fancy/rollingpapers = 5)
 	contraband = list(/obj/item/lighter = 3,
+<<<<<<< HEAD
 		              /obj/item/clothing/mask/vape = 5)
+=======
+					/obj/item/clothing/mask/vape = 5,
+					/obj/item/storage/fancy/cigarettes/cigpack_shadyjims = 1)
+>>>>>>> 86a3a5dd4d... Merge pull request #10610 from Owai-Seek/bountytweaks
 	premium = list(/obj/item/storage/fancy/cigarettes/cigpack_robustgold = 3,
 		           /obj/item/storage/fancy/cigarettes/cigars = 1,
 		           /obj/item/storage/fancy/cigarettes/cigars/havana = 1,
