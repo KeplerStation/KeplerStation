@@ -55,11 +55,74 @@
 		
 		-->
 		<div class="commit sansserif">
+			<h2 class="date">23 January 2020</h2>
+			<h3 class="author">KeplerStation-Bot updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="balance">emitters are now hitscan</li>
+				<li class="rscadd">tip of the round: Cleanbot can withstand lava and burning hot ash. Its a god</li>
+				<li class="rscadd">The assorted .357 revolvers (except russian revolver) can now also load .38, like real life.</li>
+				<li class="refactor">better code for passive vents</li>
+				<li class="balance">Dropped Exo-suit armor to put it more in line with being an explorer suit sidegrade and not a straight upgrade for Lavaland usage.</li>
+				<li class="bugfix">Fixed a little exploit with ventcrawlers being capable of escaping closed turfs by printing scrubbers/vents into them.</li>
+			</ul>
+			<h3 class="author">Trilbyspaceclone, Ghommie updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">More types of glass can now be used to make a solar panel, with different sturdiness and efficiency depending the type.</li>
+			</ul>
+
+			<h2 class="date">21 January 2020</h2>
+			<h3 class="author">Ghommie (original PRs by Kevinz000, ShivCalez, 4dplanner, Barhandar, 81Denton, zxaber, Fox-McCloud) updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">All atom movables now have move force and move resist, and pull force An atom can only pull another atom if its pull force is stronger than that atom's move resist</li>
+				<li class="rscadd">Mobs with a higher move force than an atom's move resist will automatically try to force the atom out of its way. This might not always work, depending on how snowflakey code is. experimental: As of right now, everything has a move force and resist of 100, and a pull force of 101. Things take (resist - force) damage when bumped into experimental: Failing to move onto a tile will now still bump up your last move timer. However, successfully pushing something out of your way will result in you automatically moving into where it was.</li>
+				<li class="bugfix">Bolted AIs can no longer be teleported by launchpads.</li>
+				<li class="balance">Megafauna cannot teleport</li>
+			</ul>
+			<h3 class="author">KeplerStation-Bot updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscdel">Forensic scanner removed from Advanced Biotechnology node.</li>
+				<li class="rscadd">you can now block people on your PDA</li>
+				<li class="tweak">Reduces the range of the forcefield projector from 7 tiles to 2 tiles.</li>
+				<li class="tweak">conveyor belt now are stacks instead of single item</li>
+				<li class="tweak">conveyor crate has 30 belts</li>
+				<li class="tweak">printing a conveyor costs 3000 metal</li>
+				<li class="rscadd">you can press the conveyor switch in hand to link any not deployed belts to it</li>
+				<li class="rscadd">Ghosting no longer stops abductors from using you.</li>
+			</ul>
+
+			<h2 class="date">20 January 2020</h2>
+			<h3 class="author">Bhijn updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Limbs now regenerate their stamina faster while disabled</li>
+				<li class="rscadd">Limbs now have the same incoming stamina damage multiplier mechanics as spacemen, where the more staminaloss they take while disabled, the less staminaloss they'll take.</li>
+				<li class="balance">Limbs have had their base stamina regen rate doubled to match the doubled stamina regen rate of standard spacemen.</li>
+			</ul>
+			<h3 class="author">KeplerStation-Bot updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Attached kevlar/soft/plastic padding accessories are now stealthier and will no longer be displayed on mob examine.</li>
+				<li class="config">Added suicide to the config.</li>
+				<li class="bugfix">fixed my messup</li>
+				<li class="rscadd">You can now print .357 AP speedloaders from Security techfabs after you pick up the Advanced Non-Standard Ballistics node.</li>
+				<li class="bugfix">Grenades can now have their timers adjusted.</li>
+			</ul>
+
 			<h2 class="date">19 January 2020</h2>
 			<h3 class="author">AffectedArc07 updated:</h3>
 			<ul class="changes bgimages16">
 				<li class="bugfix">Slimes have blood again</li>
 				<li class="tweak">Xenobio has a chem dispenser now</li>
+				<li class="imageadd">Skirts have sprites again</li>
+			</ul>
+			<h3 class="author">Denton, ported by Hatterhat updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Most upgradeable machines now show their upgrade status when examined while standing right next to them.</li>
+				<li class="tweak">Added examine messages to teleporter stations that hint at their multitool/wirecutter interactions.</li>
+				<li class="tweak">Renamed teleporter stations from station to teleporter station.</li>
+				<li class="code_imp">Changed the teleporter hub accurate var to accuracy; the old name misled people into thinking that it was a boolean.</li>
+			</ul>
+			<h3 class="author">KeplerStation-Bot updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">stunglasses</li>
 			</ul>
 
 			<h2 class="date">18 January 2020</h2>
@@ -929,72 +992,6 @@
 				<li class="rscadd">Added the Distributed Computing nanite program, which slowly adds research points over time.</li>
 				<li class="rscadd">Added the Neural Network nanite program, which adds research points over time as well, but scales in efficiency for each mob that is currently running the program, breaking even with Distributed Computing at 3 hosts.</li>
 				<li class="rscadd">All of these programs only work on complex mobs (humans, monkeys, xenomorphs) and only have 25% efficiency on non-sentient mobs.</li>
-			</ul>
-
-			<h2 class="date">21 November 2019</h2>
-			<h3 class="author">KeplerStation-Bot updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">Seven old and otherwordly pAI holochassis icons have crawled their way out of the modular citadel catacombs.</li>
-				<li class="bugfix">Fixed closing the aux base construction RCD's door access settings window throwing you out of camera mode when closed.</li>
-				<li class="rscdel">Removed not functional aux base RCD's door type menu. Use airlock painters, maybe.</li>
-				<li class="balance">disablers buffed 0.7 --> 0.6 speed 24 --> 28 damage</li>
-				<li class="tweak">Meteor wave is no longer repeatable in dynamic.</li>
-				<li class="balance">Emagged medibots now charcoal toxinlovers.</li>
-				<li class="balance">bluespace wizard apprentice now has blink instead of targeted area teleportation</li>
-				<li class="tweak">tweaked nuke ops</li>
-				<li class="rscadd">you can now choose never for this round for magical antags</li>
-				<li class="bugfix">fixed superlube waterflower, my bad.</li>
-				<li class="rscadd">strange seeds as a buyable traitor botanist item</li>
-				<li class="bugfix">numbered storages now are sorted in a consistent way, instead of depending on ordering of their contents var</li>
-				<li class="imageadd">local code scavenger finds forgotten slighty improved apc sprites left buried in old dusty folders.</li>
-				<li class="rscadd">The seedvault/alien plant DNA manipulator can now be printed off with Alien Biotechnology.</li>
-			</ul>
-			<h3 class="author">Putnam updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">From-ghosts dynamic rulesets now actually listen to "required candidates"</li>
-				<li class="bugfix">Every dynamic-triggered event is now blacklisted from being triggered by the random events system when dynamic can trigger them.</li>
-			</ul>
-
-			<h2 class="date">20 November 2019</h2>
-			<h3 class="author">Fox McCloud updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">Fixes a very longstanding LINDA bug where turfs adjacent to a hotspot would be less prone to igniting</li>
-			</ul>
-			<h3 class="author">KeplerStation-Bot updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="balance">kinetic crushers no longer drop if you try to use it with one hand</li>
-				<li class="bugfix">Rosary beads prayer now works on non-carbon mobs too, and won't break when performed on a monkey or other humanoids.</li>
-				<li class="tweak">You can flagellate people with rosary beads on harm intent. It's even mediocrer than the sord though.</li>
-				<li class="bugfix">Fixed aliens gasping randomly once in a while.</li>
-				<li class="rscadd">New clockwork cultist, gondola, monkey and securitron cardboard cutouts.</li>
-				<li class="rscadd">Added saboteur syndicate engiborg</li>
-				<li class="tweak">changed cyborg tool icons and the secborg taser/laser icons.</li>
-				<li class="bugfix">Wizards can use the teleport spell from their den once again.</li>
-				<li class="tweak">Wizards will now receive feedback messages when attempting to cast teleport or use the warp whistle while in a no-teleport area.</li>
-				<li class="bugfix">fixed a few minor issues with console frames building.</li>
-				<li class="bugfix">Summon events now properly costs threat.</li>
-				<li class="bugfix">Refunded spells refund threat, too.</li>
-				<li class="refactor">Made wizard spells inherently have a requirement and cost.</li>
-			</ul>
-			<h3 class="author">Putnam updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">summon events now ends when the wizard dies in dynamic</li>
-				<li class="tweak">cursed items, changes races, change faces, change places, change minds, summon guns (random), summon magic (random) are all limited to roundstart wizards only</li>
-			</ul>
-			<h3 class="author">Swindly updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">Fixed MMIs not being able to use mecha equipment</li>
-				<li class="bugfix">Fixed MMIs not getting mecha mouse pointers</li>
-				<li class="bugfix">Fixed MMIs not getting medical HUDs in Odysseuses</li>
-				<li class="tweak">Brains can now switch to harm intent</li>
-			</ul>
-			<h3 class="author">Ty-the-Smonk updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">You can now interact with self sustaining crossbreeds</li>
-			</ul>
-			<h3 class="author">actioninja updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">Chat is properly sent to legacy window if goonchat fails to load again.</li>
 			</ul>
 		</div>
 

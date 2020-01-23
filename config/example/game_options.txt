@@ -582,3 +582,6 @@ BOX_RANDOM_ENGINE Box Singulo,3
 BOX_RANDOM_ENGINE Box SM 1x3,1
 BOX_RANDOM_ENGINE Box SM 5x5,1
 BOX_RANDOM_ENGINE Box SM 3x,0
+
+## Whether the suicide verb is allowed.
+# SUICIDE_ALLOWED
