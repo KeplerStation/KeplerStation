@@ -123,8 +123,24 @@
 #define ORGAN_SLOT_BRAIN_ANTIDROP "brain_antidrop"
 #define ORGAN_SLOT_BRAIN_ANTISTUN "brain_antistun"
 #define ORGAN_SLOT_TAIL "tail"
+<<<<<<< HEAD
+=======
+#define ORGAN_SLOT_PENIS "penis"
+#define ORGAN_SLOT_WOMB "womb"
+#define ORGAN_SLOT_VAGINA "vagina"
+#define ORGAN_SLOT_TESTICLES "testicles"
+#define ORGAN_SLOT_BREASTS "breasts"
+>>>>>>> ac6695bd68... Merge pull request #10679 from Ghommie/Ghommie-cit517
 
 ////organ defines
 #define STANDARD_ORGAN_THRESHOLD 	100
 #define STANDARD_ORGAN_HEALING 		0.001
 #define STANDARD_ORGAN_DECAY		0.00222		//designed to fail organs when left to decay for ~15 minutes
+<<<<<<< HEAD
+=======
+
+#define G_MALE 1
+#define G_FEMALE 2
+#define G_PLURAL 3
+#define G_NEUTER 4
+>>>>>>> ac6695bd68... Merge pull request #10679 from Ghommie/Ghommie-cit517
