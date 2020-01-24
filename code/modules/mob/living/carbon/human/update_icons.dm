@@ -401,20 +401,49 @@ There are several things that need to be remembered:
 
 	if(wear_suit)
 		var/obj/item/clothing/suit/S = wear_suit
-		var/item_level_support = FALSE // LISTEN! If you must degrade the code with further snowflake checks, at least keep it compatible with worn non-clothing items!
-		if(!istype(S))
-			item_level_support = TRUE
 		wear_suit.screen_loc = ui_oclothing
 		if(client && hud_used && hud_used.hud_shown)
 			if(hud_used.inventory_shown)
 				client.screen += wear_suit
 		update_observer_view(wear_suit,1)
 
+<<<<<<< HEAD
 		if(DIGITIGRADE in dna.species.species_traits)
 			if(!S.force_alternate_icon)
 				S.alternate_worn_icon = 'icons/mob/suit_digi.dmi'
 
 		overlays_standing[SUIT_LAYER] = S.build_worn_icon(state = wear_suit.icon_state, default_layer = SUIT_LAYER, default_icon_file = ((wear_suit.alternate_worn_icon) ? S.alternate_worn_icon : 'icons/mob/suit.dmi'))
+=======
+		var/worn_icon = wear_suit.alternate_worn_icon || 'icons/mob/suit.dmi'
+		var/center = FALSE
+		var/dimension_x = 32
+		var/dimension_y = 32
+		var/variation_flag = NONE
+		var/datum/sprite_accessory/taur/T
+		if("taur" in dna.species.mutant_bodyparts)
+			T = GLOB.taur_list[dna.features["taur"]]
+
+		if(S.mutantrace_variation)
+			if(T?.taur_mode)
+				var/init_worn_icon = worn_icon
+				variation_flag |= S.mutantrace_variation & T.taur_mode || S.mutantrace_variation & T.alt_taur_mode
+				switch(variation_flag)
+					if(STYLE_HOOF_TAURIC)
+						worn_icon = 'icons/mob/taur_hooved.dmi'
+					if(STYLE_SNEK_TAURIC)
+						worn_icon = 'icons/mob/taur_naga.dmi'
+					if(STYLE_PAW_TAURIC)
+						worn_icon = 'icons/mob/taur_canine.dmi'
+				if(worn_icon != init_worn_icon) //worn icon sprite was changed, taur offsets will have to be applied.
+					center = T.center
+					dimension_x = T.dimension_x
+					dimension_y = T.dimension_y
+			else if((DIGITIGRADE in dna.species.species_traits) && S.mutantrace_variation & STYLE_DIGITIGRADE) //not a taur, but digitigrade legs.
+				worn_icon = 'icons/mob/suit_digi.dmi'
+				variation_flag |= STYLE_DIGITIGRADE
+
+		overlays_standing[SUIT_LAYER] = S.build_worn_icon(wear_suit.icon_state, SUIT_LAYER, worn_icon, FALSE, NO_FEMALE_UNIFORM, variation_flag, FALSE)
+>>>>>>> 147c0d8852... Merge pull request #10680 from Ghommie/Ghommie-cit518
 		var/mutable_appearance/suit_overlay = overlays_standing[SUIT_LAYER]
 		if(OFFSET_SUIT in dna.species.offset_features)
 			suit_overlay.pixel_x += dna.species.offset_features[OFFSET_SUIT][1]
