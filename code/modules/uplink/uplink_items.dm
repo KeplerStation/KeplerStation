@@ -164,5 +164,9 @@
 
 //Discounts (dynamically filled above)
 /datum/uplink_item/discounts
+<<<<<<< HEAD
 	category = "Discounted Gear"
 
+=======
+	category = "Discounted Gear"
+>>>>>>> 7cd6490e86... Merge pull request #10526 from Seris02/bowmanupgrade
