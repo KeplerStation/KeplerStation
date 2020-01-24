@@ -306,6 +306,7 @@
 	trap_damage = 0
 	item_flags = DROPDEL
 	flags_1 = NONE
+	breakouttime = 50
 
 /obj/item/restraints/legcuffs/beartrap/energy/New()
 	..()
