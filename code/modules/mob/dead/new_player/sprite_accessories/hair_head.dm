@@ -465,19 +465,10 @@
 	name = "Over Eye"
 	icon_state = "hair_shortovereye"
 
-<<<<<<< HEAD
-=======
 /datum/sprite_accessory/hair/oxton
 	name = "Oxton"
 	icon_state = "hair_oxton"
 
-//Donator item - fractious
-/datum/sprite_accessory/hair/over_eye_fr
-	name = "Over Eye (fract)"
-	icon_state = "hair_shortovereye_1f"
-	ckeys_allowed = list("fractious")
-
->>>>>>> f5d8e447eb... Merge pull request #10676 from Kraseo/virgohairs
 /datum/sprite_accessory/hair/parted
 	name = "Parted"
 	icon_state = "hair_parted"
@@ -757,8 +748,6 @@
 /datum/sprite_accessory/hair/longestalt
 	name = "Very Long with Fringe"
 	icon_state = "hair_vlongfringe"
-<<<<<<< HEAD
-=======
 
 /datum/sprite_accessory/hair/short_oe
 	name = "Very Short Over Eye"
@@ -779,4 +768,4 @@
 /datum/sprite_accessory/hair/ziegler
 	name = "Ziegler"
 	icon_state = "hair_ziegler"
->>>>>>> f5d8e447eb... Merge pull request #10676 from Kraseo/virgohairs
+
