@@ -746,7 +746,3 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 	pull_effort = 70
 	loom_result = /obj/item/stack/sheet/durathread
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d5daae98c7... Merge pull request #9905 from Trilbyspaceclone/glassware

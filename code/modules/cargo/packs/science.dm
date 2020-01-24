@@ -10,25 +10,15 @@
 	group = "Science"
 	crate_type = /obj/structure/closet/crate/science
 
-<<<<<<< HEAD
-=======
 /* For later
 /datum/supply_pack/science/monkey
 	name = "Ape Cube Crate"
-	desc = "Pss what a new test subject with supper strangth, speed, and love for bananas all at the same time? Say no more... Contains a single ape cube. Dont add water!"
+	desc = "Pss what a new test subject with supper strangth, speed, and love for ba#as all at the same time? Say no more... Contains a single ape cube. Dont add water!"
 	contraband = TRUE
 	cost = 2500
 	contains = list (/obj/item/reagent_containers/food/snacks/monkeycube/ape)
 	crate_name = "ape cube crate"
 */
-
-/datum/supply_pack/science/aliens
-	name = "Advanced Alien Alloy Crate Crate"
-	desc = "Hello brothers from the stars!!! Our fellow brethren have made contact at long last and gave us gifts man! They really did build the prymi- Connection Error- Bro we’ll send you a sheet of advanced alien alloy."
-	cost = 15000
-	DropPodOnly = TRUE
-	contains = list(/obj/item/stack/sheet/mineral/abductor)
-	crate_name = "alien bro alloy crate"
 
 /datum/supply_pack/science/beakers
 	name = "Chemistry Beackers Crate"
@@ -52,7 +42,6 @@
 					/obj/item/clothing/gloves/color/latex)
 	crate_name = "chemistry beaker crate"
 
->>>>>>> d5daae98c7... Merge pull request #9905 from Trilbyspaceclone/glassware
 /datum/supply_pack/science/robotics/mecha_odysseus
 	name = "Circuit Crate (Odysseus)"
 	desc = "Ever wanted to build your own giant medical robot? Well, now you can! Contains the Odysseus main control board and Odysseus peripherals board. Requires Robotics access to open."

@@ -100,8 +100,6 @@
 	cost = 1200 //Takes a lot to make and is really good
 	unit_name = "hyper slime power cell"
 	export_types = list(/obj/item/stock_parts/cell/high/slime/hypercharged)
-<<<<<<< HEAD
-=======
 
 //Glass working stuff
 
@@ -133,4 +131,3 @@
 	unit_name = "large flask"
 	export_types = list(/obj/item/reagent_containers/glass/beaker/flask/large)
 	include_subtypes = FALSE
->>>>>>> d5daae98c7... Merge pull request #9905 from Trilbyspaceclone/glassware
