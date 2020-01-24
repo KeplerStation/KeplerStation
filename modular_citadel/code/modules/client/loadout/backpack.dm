@@ -121,9 +121,7 @@
 	category = SLOT_IN_BACKPACK
 	path = /obj/item/pen/fountain
 	cost = 2
-<<<<<<< HEAD
-=======
-
+	
 /datum/gear/modular_tablet
 	name = "A modular tablet"
 	category = SLOT_IN_BACKPACK
@@ -136,4 +134,3 @@
 	path = /obj/item/modular_computer/laptop/preset/civilian
 	cost = 7
 	
->>>>>>> f626322fbd... Merge pull request #10650 from Arturlang/patch-5
