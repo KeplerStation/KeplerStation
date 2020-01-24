@@ -329,3 +329,55 @@
 	name = "Green Feminine Christmas Suit"
 	category = SLOT_W_UNIFORM
 	path = /obj/item/clothing/under/christmas/christmasfemaleg
+<<<<<<< HEAD
+=======
+
+/datum/gear/pinkstripper
+	name = "Pink stripper outfit"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/stripper_pink
+	cost = 3
+*/
+
+/datum/gear/greenstripper
+	name = "Green stripper outfit"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/stripper_green
+	cost = 3
+
+/datum/gear/qipao
+	name = "Qipao, Black"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/lunar/qipao
+	cost = 3
+
+/datum/gear/qipao/white
+	name = "Qipao, White"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/lunar/qipao/white
+	cost = 3
+
+/datum/gear/qipao/red
+	name = "Qipao, Red"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/lunar/qipao/red
+	cost = 3
+
+/datum/gear/cheongsam
+	name = "Cheongsam, Black"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/lunar/cheongsam
+	cost = 3
+
+/datum/gear/cheongsam/white
+	name = "Cheongsam, White"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/lunar/cheongsam/white
+	cost = 3
+
+/datum/gear/cheongsam/red
+	name = "Cheongsam, Red"
+	category = SLOT_W_UNIFORM
+	path = /obj/item/clothing/under/lunar/cheongsam/red
+	cost = 3
+>>>>>>> ea9513864d... Merge pull request #10674 from Xantholne/lunar01
