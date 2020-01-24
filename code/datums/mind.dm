@@ -128,17 +128,7 @@
 	transfer_martial_arts(new_character)
 	if(active || force_key_move)
 		new_character.key = key		//now transfer the key to link the client to our new body
-<<<<<<< HEAD
-		
-=======
 
-//CIT CHANGE - makes arousal update when transfering bodies
-	if(isliving(new_character)) //New humans and such are by default enabled arousal. Let's always use the new mind's prefs.
-		var/mob/living/L = new_character
-		if(L.client?.prefs && L.client.prefs.auto_ooc && L.client.prefs.chat_toggles & CHAT_OOC)
-			DISABLE_BITFIELD(L.client.prefs.chat_toggles,CHAT_OOC)
-
->>>>>>> 4888e1522a... Merge pull request #10685 from Ghommie/Ghommie-cit522
 	SEND_SIGNAL(src, COMSIG_MIND_TRANSFER, new_character, old_character)
 	SEND_SIGNAL(new_character, COMSIG_MOB_ON_NEW_MIND)
 
