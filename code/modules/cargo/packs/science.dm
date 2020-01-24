@@ -10,6 +10,49 @@
 	group = "Science"
 	crate_type = /obj/structure/closet/crate/science
 
+<<<<<<< HEAD
+=======
+/* For later
+/datum/supply_pack/science/monkey
+	name = "Ape Cube Crate"
+	desc = "Pss what a new test subject with supper strangth, speed, and love for bananas all at the same time? Say no more... Contains a single ape cube. Dont add water!"
+	contraband = TRUE
+	cost = 2500
+	contains = list (/obj/item/reagent_containers/food/snacks/monkeycube/ape)
+	crate_name = "ape cube crate"
+*/
+
+/datum/supply_pack/science/aliens
+	name = "Advanced Alien Alloy Crate Crate"
+	desc = "Hello brothers from the stars!!! Our fellow brethren have made contact at long last and gave us gifts man! They really did build the prymi- Connection Error- Bro we’ll send you a sheet of advanced alien alloy."
+	cost = 15000
+	DropPodOnly = TRUE
+	contains = list(/obj/item/stack/sheet/mineral/abductor)
+	crate_name = "alien bro alloy crate"
+
+/datum/supply_pack/science/beakers
+	name = "Chemistry Beackers Crate"
+	desc = "Glassware for any chemistry lab! Contains four small beakers, three large, two plastic, and one metamaterial. As well as three droppers and two pairs of latex gloves."
+	cost = 1500
+	contains = list(/obj/item/reagent_containers/glass/beaker,
+					/obj/item/reagent_containers/glass/beaker,
+					/obj/item/reagent_containers/glass/beaker,
+					/obj/item/reagent_containers/glass/beaker,
+					/obj/item/reagent_containers/glass/beaker/large,
+					/obj/item/reagent_containers/glass/beaker/large,
+					/obj/item/reagent_containers/glass/beaker/large,
+					/obj/item/reagent_containers/glass/beaker/plastic,
+					/obj/item/reagent_containers/glass/beaker/plastic,
+					/obj/item/reagent_containers/glass/beaker/meta,
+					/obj/item/reagent_containers/glass/beaker/noreact,
+					/obj/item/reagent_containers/dropper,
+					/obj/item/reagent_containers/dropper,
+					/obj/item/reagent_containers/dropper,
+					/obj/item/clothing/gloves/color/latex,
+					/obj/item/clothing/gloves/color/latex)
+	crate_name = "chemistry beaker crate"
+
+>>>>>>> d5daae98c7... Merge pull request #9905 from Trilbyspaceclone/glassware
 /datum/supply_pack/science/robotics/mecha_odysseus
 	name = "Circuit Crate (Odysseus)"
 	desc = "Ever wanted to build your own giant medical robot? Well, now you can! Contains the Odysseus main control board and Odysseus peripherals board. Requires Robotics access to open."
@@ -40,6 +83,27 @@
 					/obj/item/integrated_electronics/debugger,
 					/obj/item/integrated_electronics/wirer)
 	crate_name = "circuitry starter pack crate"
+
+/datum/supply_pack/science/glasswork
+	name = "Glass blower kit Crate"
+	desc = "Learn and make glassworks of usefull things for a profit! Contains glassworking tools and blowing rods. Glass not included."
+	cost = 1000
+	contains = list(/obj/item/glasswork/glasskit,
+					/obj/item/glasswork/glasskit,
+					/obj/item/glasswork/blowing_rod,
+					/obj/item/glasswork/blowing_rod)
+	crate_name = "glassblower gear crate"
+
+/datum/supply_pack/science/adv_surgery_tools
+	name = "Med-Co Advanced surgery tools"
+	desc = "A full set of Med-Co advanced surgery tools, this crate also comes with a spay of synth flesh as well as a can of . Requires Surgery access to open."
+	cost = 5500
+	access = ACCESS_SURGERY
+	contains = list(/obj/item/storage/belt/medical/surgery_belt_adv,
+					/obj/item/reagent_containers/medspray/synthflesh,
+					/obj/item/reagent_containers/medspray/sterilizine)
+	crate_name = "medco newest surgery tools"
+	crate_type = /obj/structure/closet/crate/medical
 
 /datum/supply_pack/science/monkey
 	name = "Monkey Cube Crate"

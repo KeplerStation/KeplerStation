@@ -117,7 +117,7 @@
 	name = "Captain Pen"
 	desc = "A spare Captain fountain pen."
 	access = ACCESS_CAPTAIN
-	cost = 10000
+	cost = 5000
 	contains = list(/obj/item/pen/fountain/captain)
 	crate_name = "captain pen"
 	crate_type = /obj/structure/closet/crate/secure/weapon //It is a combat pen
@@ -187,7 +187,7 @@
 					/obj/item/bedsheet/purple,
 					/obj/item/bedsheet/red,
 					/obj/item/bedsheet/yellow,
-					/obj/item/bedsheet/brown, 
+					/obj/item/bedsheet/brown,
 					/obj/item/bedsheet/black,
 					/obj/item/bedsheet/rainbow)
 	crate_name = "colored bedsheet crate"
@@ -238,8 +238,8 @@
 	name = "Coin Crate"
 	desc = "Psssst, hey, you. Yes, you. I've heard that coins can do some special things on your station, give you access to some pretty cool stuff. Here's the deal, you give me some credits, and I give so some coins. Sound like a deal? I'll give you 10 for 10000 creds."
 	contraband = TRUE
-	cost = 10000
-	contains = list(/obj/item/coin/silver)
+	cost = 3000
+	contains = list(/obj/item/coin/silver) // 400 x 10 = 2 sheets of silver for 2300cr
 	crate_name = "coin crate"
 	crate_type = /obj/structure/closet/crate/large
 
@@ -259,6 +259,25 @@
 	contains = list(/obj/item/stack/wrapping_paper)
 	crate_type = /obj/structure/closet/crate/wooden
 	crate_name = "festive wrapping paper crate"
+
+/datum/supply_pack/misc/funeral
+	name = "Funeral Supplies"
+	desc = "Mourn your dead properly buy sending them off with love filled notes, clean clothes, and a proper ceremony. Contains two candle packs, funeral garb, flowers, a paperbin , and crayons to help aid in religious rituals. Coffin included."
+	cost = 1200
+	contains = list(/obj/item/clothing/under/burial,
+					/obj/item/storage/fancy/candle_box,
+					/obj/item/storage/fancy/candle_box,
+					/obj/item/reagent_containers/food/snacks/grown/harebell,
+					/obj/item/reagent_containers/food/snacks/grown/harebell,
+					/obj/item/reagent_containers/food/snacks/grown/poppy/geranium,
+					/obj/item/reagent_containers/food/snacks/grown/poppy/geranium,
+					/obj/item/reagent_containers/food/snacks/grown/poppy/lily,
+					/obj/item/reagent_containers/food/snacks/grown/poppy/lily,
+					/obj/item/storage/crayons,
+					/obj/item/paper_bin
+					)
+	crate_name = "coffin"
+	crate_type = /obj/structure/closet/crate/coffin
 
 /datum/supply_pack/misc/jukebox
 	name = "Jukebox"
@@ -290,25 +309,6 @@
 					/obj/item/clothing/suit/hooded/chaplain_hoodie
 					)
 	crate_name = "religious supplies crate"
-
-/datum/supply_pack/misc/funeral
-	name = "Funeral Supplies"
-	desc = "Mourn your dead properly buy sending them off with love filled notes, clean clothes, and a proper ceremony. Contains two candle packs, funeral garb, flowers, a paperbin , and crayons to help aid in religious rituals. Coffin included."
-	cost = 1200
-	contains = list(/obj/item/clothing/under/burial,
-					/obj/item/storage/fancy/candle_box,
-					/obj/item/storage/fancy/candle_box,
-					/obj/item/reagent_containers/food/snacks/grown/harebell,
-					/obj/item/reagent_containers/food/snacks/grown/harebell,
-					/obj/item/reagent_containers/food/snacks/grown/poppy/geranium,
-					/obj/item/reagent_containers/food/snacks/grown/poppy/geranium,
-					/obj/item/reagent_containers/food/snacks/grown/poppy/lily,
-					/obj/item/reagent_containers/food/snacks/grown/poppy/lily,
-					/obj/item/storage/crayons,
-					/obj/item/paper_bin
-					)
-	crate_name = "coffin"
-	crate_type = /obj/structure/closet/crate/coffin
 
 /datum/supply_pack/misc/shower
 	name = "Shower Supplies"
@@ -368,29 +368,6 @@
 					/obj/item/stack/tile/carpet/monochrome/fifty,
 					/obj/item/stack/tile/carpet/monochrome/fifty)
 	crate_name = "premium carpet crate"
-
-/datum/supply_pack/misc/party
-	name = "Party Equipment"
-	desc = "Celebrate both life and death on the station with Nanotrasen's Party Essentials(tm)! Contains seven colored glowsticks, four beers, two ales, a drinking shaker, and a bottle of patron & goldschlager!"
-	cost = 2000
-	contains = list(/obj/item/storage/box/drinkingglasses,
-					/obj/item/reagent_containers/food/drinks/shaker,
-					/obj/item/reagent_containers/food/drinks/bottle/patron,
-					/obj/item/reagent_containers/food/drinks/bottle/goldschlager,
-					/obj/item/reagent_containers/food/drinks/ale,
-					/obj/item/reagent_containers/food/drinks/ale,
-					/obj/item/reagent_containers/food/drinks/beer,
-					/obj/item/reagent_containers/food/drinks/beer,
-					/obj/item/reagent_containers/food/drinks/beer,
-					/obj/item/reagent_containers/food/drinks/beer,
-					/obj/item/flashlight/glowstick,
-					/obj/item/flashlight/glowstick/red,
-					/obj/item/flashlight/glowstick/blue,
-					/obj/item/flashlight/glowstick/cyan,
-					/obj/item/flashlight/glowstick/orange,
-					/obj/item/flashlight/glowstick/yellow,
-					/obj/item/flashlight/glowstick/pink)
-	crate_name = "party equipment crate"
 
 /datum/supply_pack/misc/noslipfloor
 	name = "High-traction Floor Tiles"

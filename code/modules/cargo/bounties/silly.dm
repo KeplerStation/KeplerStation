@@ -63,4 +63,7 @@
 	description = "Head Office has secured a contract in a reenactment of a famous movie, but we only have lethal energy based swords. Send us some convincing replicas so we save on medical costs."
 	reward = 1200
 	required_count = 3
+<<<<<<< HEAD
 	wanted_types = list(/obj/item/toy/sword, /obj/item/toy/sword/cx)
+=======
+>>>>>>> d5daae98c7... Merge pull request #9905 from Trilbyspaceclone/glassware
