@@ -1,4 +1,0 @@
-author: "AffectedArc07"
-delete-after: True
-changes: 
-  - rscadd: "Added extools, an external library which allows for BYOND debugging as well as server extensions"
