@@ -42,7 +42,7 @@
 	if (!..())
 		return FALSE
 	if(user.stat == !CONSCIOUS) // Must be CONSCIOUS
-		to_chat(owner, "<span class='warning'>Your cloak failed due to you falling unconcious! </span>")
+		to_chat(owner, "<span class='warning'>Your cloak failed due to you falling unconscious! </span>")
 		return FALSE
 	var/turf/T = owner.loc // Must be DARK
 	if(istype(T) && T.get_lumcount() > light_min)
