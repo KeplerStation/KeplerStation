@@ -119,23 +119,13 @@
 					/obj/item/clothing/head/christmashatg = 3,
 					/obj/item/clothing/shoes/winterboots/christmasbootsr = 3,
 					/obj/item/clothing/shoes/winterboots/christmasbootsg = 3,
-<<<<<<< HEAD
-					/obj/item/clothing/shoes/winterboots/santaboots = 3)
-=======
 					/obj/item/clothing/shoes/winterboots/santaboots = 3,
-					/obj/item/clothing/head/cowboyhat = 3,
-					/obj/item/clothing/head/cowboyhat/black = 3,
-					/obj/item/clothing/head/cowboyhat/white = 3,
-					/obj/item/clothing/head/cowboyhat/pink = 3,
-					/obj/item/clothing/shoes/cowboyboots = 3,
-					/obj/item/clothing/shoes/cowboyboots/black = 3,
 					/obj/item/clothing/under/lunar/qipao = 3,
 					/obj/item/clothing/under/lunar/qipao/white = 3,
 					/obj/item/clothing/under/lunar/qipao/red = 3,
 					/obj/item/clothing/under/lunar/cheongsam = 3,
 					/obj/item/clothing/under/lunar/cheongsam/white = 3,
 					/obj/item/clothing/under/lunar/cheongsam/red = 3)
->>>>>>> ea9513864d... Merge pull request #10674 from Xantholne/lunar01
 	contraband = list(/obj/item/clothing/under/syndicate/tacticool = 3,
 					/obj/item/clothing/mask/balaclava = 3,
 					/obj/item/clothing/head/ushanka = 3,

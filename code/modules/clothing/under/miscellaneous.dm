@@ -830,8 +830,6 @@
 	item_state = "christmasfemaleg"
 	body_parts_covered = CHEST|GROIN
 	can_adjust = FALSE
-<<<<<<< HEAD
-=======
 
 // Lunar Clothes
 /obj/item/clothing/under/lunar/qipao
@@ -887,4 +885,3 @@
 	body_parts_covered = CHEST|GROIN
 	can_adjust = FALSE
 	mutantrace_variation = NONE
->>>>>>> ea9513864d... Merge pull request #10674 from Xantholne/lunar01
