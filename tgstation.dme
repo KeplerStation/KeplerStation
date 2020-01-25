@@ -464,6 +464,11 @@
 #include "code\datums\diseases\advance\symptoms\youth.dm"
 #include "code\datums\elements\_element.dm"
 #include "code\datums\elements\cleaning.dm"
+<<<<<<< HEAD
+=======
+#include "code\datums\elements\dusts_on_catatonia.dm"
+#include "code\datums\elements\dusts_on_leaving_area.dm"
+>>>>>>> 00667eeecd... Merge pull request #10698 from Putnam3145/ghost-dojo-ban
 #include "code\datums\elements\earhealing.dm"
 #include "code\datums\elements\wuv.dm"
 #include "code\datums\helper_datums\events.dm"

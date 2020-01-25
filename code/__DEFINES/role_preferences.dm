@@ -35,7 +35,13 @@
 #define ROLE_LAVALAND               "lavaland"
 #define ROLE_INTERNAL_AFFAIRS		"internal affairs agent"
 #define ROLE_GANG					"gangster"
+<<<<<<< HEAD
 
+=======
+#define ROLE_BLOODSUCKER			"bloodsucker"
+//#define ROLE_MONSTERHUNTER			"monster hunter" Disabled for now
+#define ROLE_GHOSTCAFE				"ghostcafe"
+>>>>>>> 00667eeecd... Merge pull request #10698 from Putnam3145/ghost-dojo-ban
 //Missing assignment means it's not a gamemode specific role, IT'S NOT A BUG OR ERROR.
 //The gamemode specific ones are just so the gamemodes can query whether a player is old enough
 //(in game days played) to play that role
