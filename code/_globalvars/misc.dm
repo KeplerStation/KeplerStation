@@ -31,3 +31,14 @@ GLOBAL_VAR(bible_icon_state)
 GLOBAL_VAR(bible_item_state)
 GLOBAL_VAR(holy_weapon_type)
 GLOBAL_VAR(holy_armor_type)
+
+// KEPLER VARS
+// Extools stuff
+GLOBAL_VAR_INIT(internal_tick_usage, 0.2 * world.tick_lag) //This var is updated every tick by a DLL if present, used to reduce lag 
+GLOBAL_PROTECT(internal_tick_usage) // NO TOUCHY
+
+GLOBAL_VAR_INIT(fallback_alerted, FALSE)
+GLOBAL_PROTECT(fallback_alerted) // NO TOUCHY
+
+GLOBAL_VAR_INIT(next_promise_id, 0)
+GLOBAL_PROTECT(next_promise_id) // NO TOUCHY
