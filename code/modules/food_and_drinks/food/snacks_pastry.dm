@@ -88,7 +88,6 @@
 
 /obj/item/reagent_containers/food/snacks/donut/meat
 	bonus_reagents = list("ketchup" = 1)
-	list_reagents = list("nutriment" = 3, "ketchup" = 2)
 	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/ketchup = 2)
 	tastes = list("meat" = 1)
 	foodtype = JUNKFOOD | MEAT | GROSS | FRIED
