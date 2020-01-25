@@ -267,6 +267,9 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	recipes = GLOB.wood_recipes
 	return ..()
 
+/obj/item/stack/sheet/mineral/wood/twenty
+	amount = 20
+
 /obj/item/stack/sheet/mineral/wood/fifty
 	amount = 50
 

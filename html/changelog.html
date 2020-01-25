@@ -55,6 +55,74 @@
 		
 		-->
 		<div class="commit sansserif">
+			<h2 class="date">25 January 2020</h2>
+			<h3 class="author">AffectedArc07 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Fixed some bad reagent typepaths</li>
+			</ul>
+			<h3 class="author">Arkatos, Zxaber, Ghommie updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Certain AI abilities now dynamically show their remaining uses on the mouse hover over their respective action buttons.</li>
+				<li class="bugfix">Malfunctioning AIs can no longer abuse the confirmation popup to create extra (unstoppable) doomsdays.</li>
+				<li class="bugfix">Fixed AIs being able to use some of their abilities such as the doomsday whilst dead, and the doomsday loading phase not halting upon AI death.</li>
+			</ul>
+			<h3 class="author">KeplerStation-Bot updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">sniffing sneezing etc doing anything if they don't breathe</li>
+				<li class="rscadd">Cheongsam and Qipao clothing added to loadout and clothesmates</li>
+				<li class="tweak">the sprites for the conveyor belts to look more directional</li>
+				<li class="bugfix">The Barefoot drink and mousetraps will now work even if wearing certain "feet-less shoes".</li>
+				<li class="bugfix">hilbert hotel is now less of an exploity mess</li>
+			</ul>
+			<h3 class="author">Skoglol updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Falsewalls now properly hide pipes and wires.</li>
+			</ul>
+
+			<h2 class="date">24 January 2020</h2>
+			<h3 class="author">4dplanner, CRITAWAKETS, XDTM, ninjanomnom updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">sepia slime extract has a delay before activating</li>
+				<li class="balance">the user of a sepia slime extract is no longer immune to the time field</li>
+				<li class="balance">chilling sepia is now the support extract - it always freezes the user, but not other marked people. give one to your golem!</li>
+				<li class="rscadd">burning sepia spawns the rewind camera. Take a selfie with someone and give it to them to make sure they remember the moment forever! You don't actually need to give them the photo, they'll remember anyway. Keep it as a reminder.</li>
+				<li class="rscadd">rewinding (deja vu) effect resets your location to the turf you were on after 10 seconds as well as resetting limbs/mobs/objects damage to the point it was added.</li>
+				<li class="rscadd">The deja vu effect cannot resurrect the dead, but will heal their corpse. New limbs fall off, old ones re-attach</li>
+				<li class="rscadd">Regenerative sepia cores add a deja vu effect before healing instead of a timestop remove: timefreeze camera is admin spawn only.</li>
+				<li class="rscadd">recurring sepia recalls to the hand of the last person to touch it after activating. Reusable timestop grenades!</li>
+				<li class="tweak">some special cameras don't prompt for customisation</li>
+				<li class="bugfix">timefreeze camera actually makes a photo</li>
+				<li class="bugfix">timestop stops pathing and mechs.</li>
+				<li class="bugfix">adds a check to make sure simple_animals don't get their AI toggled while sentient</li>
+				<li class="bugfix">Adds the timestop overlay to frozen projectiles</li>
+				<li class="bugfix">Timestopped things have INFINITY move_resist as opposed to being anchored</li>
+				<li class="bugfix">Timestop will now unfreeze things that somehow leave it</li>
+				<li class="bugfix">mobs in the middle of a walk_to will have their walk stopped by timestop</li>
+				<li class="bugfix">mobs that are stunned will be stopped mid walk as well</li>
+				<li class="bugfix">pulling respects changes in move_force</li>
+				<li class="bugfix">swapping places respects move_force if the participant is not willing</li>
+				<li class="bugfix">timestop is properly defeated by antimagic.</li>
+				<li class="bugfix">timestop only checks antimagic once</li>
+				<li class="tweak">Time stop now applies its visual effect on floors, walls and static structures (with no change otherwise)</li>
+				<li class="tweak">Movable structures are now anchored while time stopped.</li>
+				<li class="tweak">Timestop effects now prevent speech.</li>
+			</ul>
+			<h3 class="author">KeplerStation-Bot updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="balance">dragnet snares can now be removed in 5 seconds</li>
+				<li class="balance">lightning bolt,tesla,forcewall,emp spells have lower cooldown</li>
+				<li class="balance">fireball has a 10 second starting cooldown</li>
+				<li class="rscadd">traitor tool for bowmanizing headsets + bowmanizing headsets</li>
+				<li class="bugfix">deconstructing a rubber toolbox with the destructive analyzer won't "lock" the machine anymore.</li>
+				<li class="rscadd">Added modular computers to the loadout</li>
+				<li class="bugfix">Virgo hairstyles no longer have those annoying quotation marks. Rejoice for you will no longer have to use the scrollbar.</li>
+				<li class="imagedel">Got rid of some strange-looking hairstyles. (Tbob, fingerweave, etc.)</li>
+				<li class="rscadd">more glassware</li>
+				<li class="rscadd">Few new packs and glassmaker kit!</li>
+				<li class="tweak">prices/chems of crates/autobottler</li>
+				<li class="bugfix">some crates ungettable as well as some broken crates</li>
+			</ul>
+
 			<h2 class="date">23 January 2020</h2>
 			<h3 class="author">KeplerStation-Bot updated:</h3>
 			<ul class="changes bgimages16">
@@ -64,6 +132,12 @@
 				<li class="refactor">better code for passive vents</li>
 				<li class="balance">Dropped Exo-suit armor to put it more in line with being an explorer suit sidegrade and not a straight upgrade for Lavaland usage.</li>
 				<li class="bugfix">Fixed a little exploit with ventcrawlers being capable of escaping closed turfs by printing scrubbers/vents into them.</li>
+				<li class="rscadd">Four New Bounties</li>
+				<li class="tweak">tweaked several bounties</li>
+				<li class="tweak">reorganised several bounties</li>
+				<li class="balance">balanced several bounties</li>
+				<li class="bugfix">added shady jims to vendor</li>
+				<li class="balance">Metabolic synthesis disables if user isn't well-fed rather than if user is starving</li>
 			</ul>
 			<h3 class="author">Trilbyspaceclone, Ghommie updated:</h3>
 			<ul class="changes bgimages16">
@@ -934,64 +1008,6 @@
 			<h3 class="author">Putnam updated:</h3>
 			<ul class="changes bgimages16">
 				<li class="bugfix">VR mobs can no longer be dynamic midround antags.</li>
-			</ul>
-
-			<h2 class="date">23 November 2019</h2>
-			<h3 class="author">KeplerStation-Bot updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">fixed rogue pixels on the energy gu- ahem blaster carbine... and a few apc lights states being neigh-indistinguishable.</li>
-				<li class="bugfix">chem dispenser beakers end up in your hand yet again.</li>
-				<li class="bugfix">Bikehorns squeak yet again, the world is safe.</li>
-				<li class="bugfix">Cyborgs can now actually use cameras from a distance.</li>
-				<li class="bugfix">Suicides are yet again painful and instant and won't throw people in deep crit from full health.</li>
-				<li class="rscadd">attack_self proc for the legion core which triggers a self-heal al la the previous 'afterattack' proc, as if clicking on the character's own sprite to self-heal</li>
-				<li class="rscadd">admin logging for all three use cases of legion core healing - afterattack, attack_self, and implanted ui_action_click</li>
-				<li class="balance">Boh cant hold WEIGHT_CLASS_GIGANTIC, just Bulky. Makes katana, chainsaw and base ball bat into bulky items so they may fit</li>
-				<li class="rscadd">Honkbot oil spills are of the slippery kind now. Honk.</li>
-			</ul>
-			<h3 class="author">Putnam updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="tweak">Roundstart rulesets now scale on population ready rather than total population.</li>
-				<li class="rscadd">Dynamic voting now features extended, if recent rounds have been chaotic.</li>
-			</ul>
-
-			<h2 class="date">22 November 2019</h2>
-			<h3 class="author">AffectedArc07 updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="tweak">Very minor tweaks to blood cleaning</li>
-			</ul>
-			<h3 class="author">Fox McCloud, Ghommie updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">Fixes being able to mech-punch other mobs, as a pacifist</li>
-				<li class="bugfix">Fixes being able to hurt people, as a pacifist, by throwing them into a wall or other mob, or by using most martial arts (save for the unpredictable psychotic brawl, and the stamina-damage-only boxing).</li>
-				<li class="balance">Buffs boxing to outdamage natural stamina regeneration. Made the chance of outright missing your opponent actually possible.</li>
-				<li class="tweak">Pacifists can now engage in the (laughably not harmful) sweet sweet art of boxing now.</li>
-			</ul>
-			<h3 class="author">Ghommie updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">Strawberry milk and tea have sprites now.</li>
-				<li class="bugfix">Fixed missing delivery packages sprites</li>
-			</ul>
-			<h3 class="author">Ghommie (original PR by nicbn and Menshin) updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">You can click on things that are under flaps or holo barriers.</li>
-			</ul>
-			<h3 class="author">KeplerStation-Bot updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="bugfix">Fixes golden toolbox missing inhand sprite</li>
-				<li class="soundadd">added a new gun sounds</li>
-				<li class="sounddel">removed an old gun sounds</li>
-				<li class="rscadd">Added nine winter coats</li>
-				<li class="imageadd">added images for the winter coats</li>
-				<li class="tweak">adds the mining winter coat to mining wardrobes and mining lockers</li>
-				<li class="bugfix">Fixed the little issue of PDA skins not updating on job equip.</li>
-				<li class="tweak">Anomaly Crystals of the clowning type will now rename the victim to their clown name preference when triggered, instead of giving them a random clown name.</li>
-			</ul>
-			<h3 class="author">XDTM updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="rscadd">Added the Distributed Computing nanite program, which slowly adds research points over time.</li>
-				<li class="rscadd">Added the Neural Network nanite program, which adds research points over time as well, but scales in efficiency for each mob that is currently running the program, breaking even with Distributed Computing at 3 hosts.</li>
-				<li class="rscadd">All of these programs only work on complex mobs (humans, monkeys, xenomorphs) and only have 25% efficiency on non-sentient mobs.</li>
 			</ul>
 		</div>
 
