@@ -2846,8 +2846,6 @@
 	dat += {"<A href='?src=[REF(src)];[HrefToken()];f_secret2=secret'>Random (default)</A><br>"}
 	dat += {"Now: [GLOB.secret_force_mode]"}
 	usr << browse(dat, "window=f_secret")
-<<<<<<< HEAD
-=======
 
 /datum/admins/proc/makeMentor(ckey)
 	if(!usr.client)
@@ -2904,4 +2902,3 @@
 	else
 		to_chat(usr, "<span class='danger'>Failed to establish database connection. The changes will last only for the current round.</span>")
 	to_chat(usr, "<span class='adminnotice'>Mentor removed.</span>")
->>>>>>> c0b7541e62... Merge pull request #10691 from Seris02/mentorfix
