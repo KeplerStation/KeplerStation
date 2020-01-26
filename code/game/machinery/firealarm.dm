@@ -139,6 +139,13 @@
 
 	if(is_station_level(z))
 		data["seclevel"] = get_security_level()
+	else	
+		data["seclevel"] = "green"	
+
+	var/area/A = get_area(src)	
+	data["alarm"] = A.fire	
+
+	return data
 
 /obj/machinery/firealarm/ui_act(action, params)
 	if(..() || buildstage != 2)
