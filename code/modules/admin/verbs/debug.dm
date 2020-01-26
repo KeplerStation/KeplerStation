@@ -1048,7 +1048,12 @@ GLOBAL_PROTECT(AdminProcCallSpamPrevention)
 	set name = "Start Line Profiling"
 	set desc = "Starts tracking line by line profiling for code lines that support it"
 
+#if DM_BUILD < 1506
 	PROFILE_START
+#else
+#warn Time to update this to use world.Profile() 
+#warn http:\/\/www.byond.com/docs/ref/#/world/proc/Profile
+#endif
 
 	message_admins("<span class='adminnotice'>[key_name_admin(src)] started line by line profiling.</span>")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Start Line Profiling")
@@ -1059,7 +1064,12 @@ GLOBAL_PROTECT(AdminProcCallSpamPrevention)
 	set name = "Stops Line Profiling"
 	set desc = "Stops tracking line by line profiling for code lines that support it"
 
+#if DM_BUILD < 1506
 	PROFILE_STOP
+#else
+#warn Time to update this to use world.Profile() 
+#warn http:\/\/www.byond.com/docs/ref/#/world/proc/Profile
+#endif
 
 	message_admins("<span class='adminnotice'>[key_name_admin(src)] stopped line by line profiling.</span>")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Stop Line Profiling")
