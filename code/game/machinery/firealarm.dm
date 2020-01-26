@@ -142,7 +142,7 @@
 	else	
 		data["seclevel"] = "green"	
 
-	var/area/A = get_area(src)	
+	var/area/A = get_base_area(src)
 	data["alarm"] = A.fire	
 
 	return data
