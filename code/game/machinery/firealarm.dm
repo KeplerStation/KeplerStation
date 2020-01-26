@@ -44,7 +44,7 @@
 		pixel_x = (dir & 3)? 0 : (dir == 4 ? -24 : 24)
 		pixel_y = (dir & 3)? (dir ==1 ? -24 : 24) : 0
 	update_icon()
-	myarea = get_area(src)
+	myarea = get_base_area(src)
 	LAZYADD(myarea.firealarms, src)
 
 /obj/machinery/firealarm/Destroy()
@@ -116,16 +116,17 @@
 	if(!is_operational() && (last_alarm+FIREALARM_COOLDOWN < world.time))
 		return
 	last_alarm = world.time
-	var/area/A = get_area(src)
+	var/area/A = get_base_area(src)
 	A.firealert(src)
 	playsound(src.loc, 'goon/sound/machinery/FireAlarm.ogg', 75)
 
 /obj/machinery/firealarm/proc/reset()
 	if(!is_operational())
 		return
-	var/area/A = get_area(src)
+	var/area/A = get_base_area(src)
 	A.firereset(src)
 
+<<<<<<< HEAD
 /obj/machinery/firealarm/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
 									datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
@@ -139,6 +140,15 @@
 
 	if(is_station_level(z))
 		data["seclevel"] = get_security_level()
+=======
+/obj/machinery/firealarm/attack_hand(mob/user)
+	if(buildstage != 2)
+		return ..()
+	add_fingerprint(user)
+	var/area/A = get_base_area(src)
+	if(A.fire)
+		reset(user)
+>>>>>>> 603ab65ed1... Merge pull request #10151 from Ghommie/Ghommie-cit450
 	else
 		data["seclevel"] = "green"
 
@@ -320,7 +330,7 @@
 /obj/machinery/firealarm/partyalarm/reset()
 	if (stat & (NOPOWER|BROKEN))
 		return
-	var/area/A = get_area(src)
+	var/area/A = get_base_area(src)
 	if (!A || !A.party)
 		return
 	A.party = FALSE
@@ -329,7 +339,7 @@
 /obj/machinery/firealarm/partyalarm/alarm()
 	if (stat & (NOPOWER|BROKEN))
 		return
-	var/area/A = get_area(src)
+	var/area/A = get_base_area(src)
 	if (!A || A.party || A.name == "Space")
 		return
 	A.party = TRUE
