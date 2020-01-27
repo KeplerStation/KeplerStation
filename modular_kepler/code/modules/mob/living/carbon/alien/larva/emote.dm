@@ -99,7 +99,7 @@
 			message = "<B>The [src.name]</B> hisses softly."
 			m_type = EMOTE_VISUAL
 		if("help")
-			to_chat(src, "burp, choke, collapse, dance, drool, gasp, shiver, gnarl, jump, moan, nod, roll, scratch,\nscretch, shake, sign-#, sulk, sway, tail, twitch, whimper")
+			to_chat(src, "burp, choke, dance, drool, gasp, shiver, gnarl, jump, moan, nod, roll, scratch,\nscretch, shake, sign-#, sulk, sway, tail, twitch, whimper")
 		else
 			to_chat(src, text("Invalid Emote: []", act))
 	if((message && src.stat == 0))

@@ -60,15 +60,6 @@
 			if(!src.restrained())
 				message = "<B>[src]</B> claps."
 				m_type = EMOTE_SOUND
-		if("flap","flaps")
-			if(!src.restrained())
-				message = "<B>[src]</B> flaps its wings."
-				m_type = EMOTE_SOUND
-
-		if("aflap","aflaps")
-			if(!src.restrained())
-				message = "<B>[src]</B> flaps its wings ANGRILY!"
-				m_type = EMOTE_SOUND
 
 		if("twitch")
 			message = "<B>[src]</B> twitches violently."
@@ -139,7 +130,7 @@
 			src.SpinAnimation(5,1)
 
 		if("help")
-			to_chat(src, "salute, bow-(none)/mob, clap, flap, aflap, twitch, twitches, nod, deathgasp, glare-(none)/mob, stare-(none)/mob, look")
+			to_chat(src, "salute, bow-(none)/mob, clap, twitch, twitches, nod, deathgasp, glare-(none)/mob, stare-(none)/mob, look")
 
 	..()
 
