@@ -246,13 +246,8 @@
 		var/atom/A = processing[++i]
 		if(A.flags_1 & HEAR_1)
 			. += A
-<<<<<<< HEAD
-		processing_list.Cut(1, 2)
-		processing_list += A.contents
-=======
-			SEND_SIGNAL(A, COMSIG_ATOM_HEARER_IN_VIEW, processing, .)
+		SEND_SIGNAL(A, COMSIG_ATOM_HEARER_IN_VIEW, processing, .)
 		processing += A.contents
->>>>>>> 0ed72c7722... Merge pull request #10692 from Citadel-Station-13/TESTING
 
 /proc/get_mobs_in_radio_ranges(list/obj/item/radio/radios)
 	. = list()
