@@ -246,7 +246,7 @@
 		var/atom/A = processing[++i]
 		if(A.flags_1 & HEAR_1)
 			. += A
-		SEND_SIGNAL(A, COMSIG_ATOM_HEARER_IN_VIEW, processing, .)
+			SEND_SIGNAL(A, COMSIG_ATOM_HEARER_IN_VIEW, processing, .)
 		processing += A.contents
 
 /proc/get_mobs_in_radio_ranges(list/obj/item/radio/radios)
