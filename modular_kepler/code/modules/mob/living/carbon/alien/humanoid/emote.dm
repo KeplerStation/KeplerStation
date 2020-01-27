@@ -5,10 +5,6 @@
 		param = copytext(act, t1 + 1, length(act) + 1)
 		act = copytext(act, 1, t1)
 
-//	if(findtext(act,"s",-1) && !findtext(act,"_",-2))//Removes ending s's unless they are prefixed with a '_'
-//		act = copytext(act,1,length(act))	//seriously who the fuck wrote this
-	var/muzzled = is_muzzled()
-
 	var/on_CD = 0
 	act = lowertext(act)
 
@@ -41,9 +37,8 @@
 					message = "<B>\The [src]</B> signs [num]."
 					m_type = EMOTE_VISUAL
 		if("burp")
-			if(!muzzled)
-				message = "<B>\The [src]</B> burps."
-				m_type = EMOTE_SOUND
+			message = "<B>\The [src]</B> burps."
+			m_type = EMOTE_SOUND
 		if("deathgasp")
 			message = "<B>\The [src]</B> lets out a waning guttural screech, green blood bubbling from its maw..."
 			m_type = EMOTE_SOUND
@@ -52,17 +47,14 @@
 				message = "<B>\The [src]</B> scratches."
 				m_type = EMOTE_VISUAL
 		if("whimper")
-			if(!muzzled)
-				message = "<B>\The [src]</B> whimpers."
-				m_type = EMOTE_SOUND
+			message = "<B>\The [src]</B> whimpers."
+			m_type = EMOTE_SOUND
 		if("roar")
-			if(!muzzled)
-				message = "<B>\The [src]</B> roars."
-				m_type = EMOTE_SOUND
+			message = "<B>\The [src]</B> roars."
+			m_type = EMOTE_SOUND
 		if("hiss")
-			if(!muzzled)
-				message = "<B>\The [src]</B> hisses."
-				m_type = EMOTE_SOUND
+			message = "<B>\The [src]</B> hisses."
+			m_type = EMOTE_SOUND
 		if("tail")
 			message = "<B>\The [src]</B> waves its tail."
 			m_type = EMOTE_VISUAL
@@ -76,9 +68,8 @@
 			message = "<B>\The [src]</B> drools."
 			m_type = EMOTE_VISUAL
 		if("scretch")
-			if(!muzzled)
-				message = "<B>\The [src]</B> scretches."
-				m_type = EMOTE_SOUND
+			message = "<B>\The [src]</B> scretches."
+			m_type = EMOTE_SOUND
 		if("choke")
 			message = "<B>\The [src]</B> chokes."
 			m_type = EMOTE_SOUND
@@ -112,16 +103,11 @@
 			message = "<B>\The [src]</B> shakes its head."
 			m_type = EMOTE_VISUAL
 		if("gnarl")
-			if(!muzzled)
-				message = "<B>\The [src]</B> gnarls and shows its teeth.."
-				m_type = EMOTE_SOUND
+			message = "<B>\The [src]</B> gnarls and shows its teeth.."
+			m_type = EMOTE_SOUND
 		if("jump")
 			message = "<B>\The [src]</B> jumps!"
 			m_type = EMOTE_VISUAL
-		if("collapse")
-			Paralyse(2)
-			message = "<B>\The [src]</B> collapses!"
-			m_type = EMOTE_SOUND
 		if("flip")
 			m_type = EMOTE_VISUAL
 			message = "<B>\The [src]</B> does a flip!"

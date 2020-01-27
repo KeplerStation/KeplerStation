@@ -1,5 +1,9 @@
 #define EMOTE_COOLDOWN 20		//Time in deciseconds that the cooldown lasts
 
+/mob/proc/emote(act, type, message, force)
+	if(act == "me")
+		return custom_emote(type, message)
+
 //Emote Cooldown System (it's so simple!)
 /mob/proc/handle_emote_CD(cooldown = EMOTE_COOLDOWN)
 	if(emote_cd == 3) //Spam those emotes
@@ -60,7 +64,7 @@
 				continue
 			if(findtext(message," snores.")) //Because we have so many sleeping people.
 				break
-			if(M.stat == DEAD && M.get_preference(CHAT_GHOSTSIGHT) && !(M in viewers(src,null)))
+			if(M.stat == DEAD && (M.client.prefs.chat_toggles & CHAT_GHOSTSIGHT) && !(M in viewers(src,null)))
 				M.show_message(message)
 
 
@@ -77,40 +81,46 @@
 			for(var/mob/O in get_hearers_in_view(7, src))
 				O.show_message(message, m_type)
 
-/mob/proc/emote_dead(message)
-	if(client.prefs.muted & MUTE_DEADCHAT)
-		to_chat(src, "<span class='warning'>You cannot send deadchat emotes (muted).</span>")
-		return
-
-	if(!(client.prefs.toggles & CHAT_DEAD))
-		to_chat(src, "<span class='warning'>You have deadchat muted.</span>")
-		return
-
-	if(!src.client.holder)
-		if(!config.dsay_allowed)
-			to_chat(src, "<span class='warning'>Deadchat is globally muted</span>")
+/mob/living/emote(act, type, message, force) //emote code is terrible, this is so that anything that isn't already snowflaked to shit can call the parent and handle emoting sanely
+	if(client)
+		if(client.prefs.muted & MUTE_IC)
+			to_chat(src, "<span class='danger'>You cannot speak in IC (Muted).</span>")
 			return
 
+	if(stat)
+		return 0
 
-	var/input
-	if(!message)
-		input = sanitize(copytext(input(src, "Choose an emote to display.") as text|null, 1, MAX_MESSAGE_LEN))
-	else
-		input = message
+	if(..())
+		return 1
 
-	if(input)
-		message = "<span class='game deadsay'><span class='prefix'>DEAD:</span> <b>[src]</b> [message]</span>"
-	else
-		return
+	if(act && type && message) //parent call
+		log_emote(message, src)
 
+		for(var/mob/M in GLOB.dead_mob_list)
+			if(!M.client)
+				continue //skip monkeys and leavers
 
-	if(message)
-		for(var/mob/M in GLOB.player_list)
-			if(istype(M, /mob/dead/new_player))
+			if(isnewplayer(M))
 				continue
 
-			if(check_rights(R_ADMIN, 0) && (M.client.prefs.chat_toggles & CHAT_DEAD)) // Show the emote to admins
-				to_chat(M, message)
+			if(isobserver(M) && (M.client.prefs.chat_toggles & CHAT_GHOSTSIGHT) && !(M in viewers(src, null)) && client) // The client check makes sure people with ghost sight don't get spammed by simple mobs emoting.
+				M.show_message(message)
 
-			else if(M.stat == DEAD && (M.client.prefs.chat_toggles & CHAT_DEAD)) // Show the emote to regular ghosts with deadchat toggled on
-				M.show_message(message, 2)
+		switch(type)
+			if(1) //Visible
+				visible_message(message)
+				return 1
+			if(2) //Audible
+				audible_message(message)
+				return 1
+
+	else //everything else failed, emote is probably invalid
+		if(act == "help")
+			return //except help, because help is handled individually
+		to_chat(src, "<span class='notice'>Unusable emote '[act]'. Say *help for a list.</span>")
+
+/mob/dead/observer/emote(act, type, message, force)
+	return
+
+/mob/camera/blob/emote(act, m_type = 1, message = null, force)
+	return

@@ -9,10 +9,6 @@
 		param = copytext(act, t1 + 1, length(act) + 1)
 		act = copytext(act, 1, t1)
 
-	for(var/obj/item/implant/I in src)
-		if(I.implanted)
-			I.trigger(act, src, force)
-
 	var/miming = FALSE
 	if(mind)
 		miming = mind.miming
@@ -41,8 +37,6 @@
 //				return								//Everyone else fails, skip the emote attempt
 
 		if("squish", "squishes")
-			var/found_slime_bodypart = FALSE
-
 			if(isjellyperson(src))	//Only Jelly People can squish
 				on_CD = handle_emote_CD()			//proc located in code\modules\mob\emote.dm'
 
@@ -492,17 +486,6 @@
 				else
 					message = "<B>[src]</B> hugs [p_them()]self."
 
-		if("handshake")
-			m_type = EMOTE_VISUAL
-			if(!restrained() && get_bodypart(BODY_ZONE_R_ARM))
-				var/mob/M = handle_emote_param(param, 1, 1, 1) //Check to see if the param is valid (mob with the param name is in view) but exclude ourselves, only check mobs in our immediate vicinity (1 tile distance) and return the whole mob instead of just its name.
-
-				if(M)
-					if(M.canmove && !M.r_hand && !M.restrained())
-						message = "<B>[src]</B> shakes hands with [M]."
-					else
-						message = "<B>[src]</B> holds out [p_their()] hand to [M]."
-
 		if("dap", "daps")
 			m_type = EMOTE_VISUAL
 			if(!restrained())
@@ -566,7 +549,7 @@
 		if("help")
 			var/emotelist = "aflap(s), airguitar, blink(s), blink(s)_r, blush(es), bow(s)-(none)/mob, burp(s), choke(s), chuckle(s), clap(s), collapse(s), cough(s),cry, cries, custom, dance, dap(s)(none)/mob," \
 			+ " deathgasp(s), drool(s), eyebrow, fart(s), faint(s), flap(s), flip(s), frown(s), gasp(s), giggle(s), glare(s)-(none)/mob, grin(s), groan(s), grumble(s)," \
-			+ " handshake-mob, hug(s)-(none)/mob, hem, jump, laugh(s), look(s)-(none)/mob, moan(s), mumble(s), nod(s), pale(s), quiver(s), raise(s), salute(s)-(none)/mob, scream(s), shake(s)," \
+			+ " hug(s)-(none)/mob, hem, jump, laugh(s), look(s)-(none)/mob, moan(s), mumble(s), nod(s), pale(s), quiver(s), raise(s), salute(s)-(none)/mob, scream(s), shake(s)," \
 			+ " shiver(s), shrug(s), sigh(s), slap(s)-(none)/mob, smile(s),snap(s), sneeze(s), sniff(s), snore(s), stare(s)-(none)/mob, tremble(s), twitch(es), twitch(es)_s," \
 			+ " wave(s),  whimper(s), wink(s), yawn(s)"
 
@@ -616,3 +599,22 @@
 				visible_message(message)
 			if(2)
 				audible_message(message)
+
+/mob/living/carbon/human/proc/OpenWings()
+	if(!dna || !dna.species)
+		return
+	if("wings" in dna.species.mutant_bodyparts)
+		dna.species.mutant_bodyparts -= "wings"
+		dna.species.mutant_bodyparts |= "wingsopen"
+	update_body()
+
+/mob/living/carbon/human/proc/CloseWings()
+	if(!dna || !dna.species)
+		return
+	if("wingsopen" in dna.species.mutant_bodyparts)
+		dna.species.mutant_bodyparts -= "wingsopen"
+		dna.species.mutant_bodyparts |= "wings"
+	update_body()
+	if(isturf(loc))
+		var/turf/T = loc
+		T.Entered(src)

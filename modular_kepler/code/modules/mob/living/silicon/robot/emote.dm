@@ -11,7 +11,7 @@
 	act = lowertext(act)
 	switch(act)
 		//Cooldown-inducing emotes
-		if("law","flip","flips","halt")		//halt is exempt because it's used to stop criminal scum //WHOEVER THOUGHT THAT WAS A GOOD IDEA IS GOING TO GET SHOT.
+		if("flip","flips")
 			on_CD = handle_emote_CD()			//proc located in code\modules\mob\emote.dm
 		//Everything else, including typos of the above emotes
 		else
@@ -133,32 +133,13 @@
 				message = "<B>[src]</B> looks."
 			m_type = EMOTE_VISUAL
 
-
-		if("law")
-			if(istype(module,/obj/item/robot_module/security))
-				message = "<B>[src]</B> shows its legal authorization barcode."
-
-				playsound(src.loc, 'sound/voice/biamthelaw.ogg', 50, 0)
-				m_type = EMOTE_SOUND
-			else
-				to_chat(src, "You are not THE LAW, pal.")
-
-		if("halt")
-			if(istype(module,/obj/item/robot_module/security))
-				message = "<B>[src]</B>'s speakers skreech, \"Halt! Security!\"."
-
-				playsound(src.loc, 'sound/voice/halt.ogg', 50, 0)
-				m_type = EMOTE_SOUND
-			else
-				to_chat(src, "You are not security.")
-
 		if("flip","flips")
 			m_type = EMOTE_VISUAL
 			message = "<B>[src]</B> does a flip!"
 			src.SpinAnimation(5,1)
 
 		if("help")
-			to_chat(src, "salute, bow-(none)/mob, clap, flap, aflap, twitch, twitches, nod, deathgasp, glare-(none)/mob, stare-(none)/mob, look,\n law, halt")
+			to_chat(src, "salute, bow-(none)/mob, clap, flap, aflap, twitch, twitches, nod, deathgasp, glare-(none)/mob, stare-(none)/mob, look")
 
 	..()
 
@@ -166,12 +147,10 @@
 	set category = "Robot Commands"
 	set name = "Power Warning"
 
-	if(handle_emote_CD(50))
-		return
-
-	if(!is_component_functioning("power cell") || !cell || !cell.charge)
-		visible_message("The power warning light on <span class='name'>[src]</span> flashes urgently.",\
-						 "You announce you are operating in low power mode.")
-		playsound(loc, 'sound/machines/buzz-two.ogg', 50, 0)
-	else
-		to_chat(src, "<span class='warning'>You can only use this emote when you're out of charge.</span>")
+	if(stat == CONSCIOUS)
+		if(!cell || !cell.charge)
+			visible_message("The power warning light on <span class='name'>[src]</span> flashes urgently.",\
+							"You announce you are operating in low power mode.")
+			playsound(loc, 'sound/machines/buzz-two.ogg', 50, 0)
+		else
+			to_chat(src, "<span class='warning'>You can only use this emote when you're out of charge.</span>")

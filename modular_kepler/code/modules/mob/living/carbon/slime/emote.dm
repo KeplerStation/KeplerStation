@@ -1,11 +1,8 @@
-/mob/living/carbon/slime/emote(act, m_type = EMOTE_VISUAL, message = null, force)
+/mob/living/simple_animal/slime/emote(act, m_type = EMOTE_VISUAL, message = null, force)
 	if(findtext(act, "-", 1, null))
 		var/t1 = findtext(act, "-", 1, null)
 		//param = copytext(act, t1 + 1, length(act) + 1)
 		act = copytext(act, 1, t1)
-
-	if(findtext(act,"s",-1) && !findtext(act,"_",-2))//Removes ending s's unless they are prefixed with a '_'
-		act = copytext(act,1,length(act))
 
 	act = lowertext(act)
 
@@ -13,8 +10,6 @@
 
 	switch(act) //Alphabetical please
 		if("me")
-			if(silent)
-				return
 			if(src.client)
 				if(client.prefs.muted & MUTE_IC)
 					to_chat(src, "<span class='warning'>You cannot send IC messages (muted).</span>")

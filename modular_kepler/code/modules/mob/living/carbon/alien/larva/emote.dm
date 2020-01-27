@@ -5,9 +5,6 @@
 		param = copytext(act, t1 + 1, length(act) + 1)
 		act = copytext(act, 1, t1)
 
-	if(findtext(act,"s",-1) && !findtext(act,"_",-2))//Removes ending s's unless they are prefixed with a '_'
-		act = copytext(act,1,length(act))
-	var/muzzled = is_muzzled()
 	act = lowertext(act)
 	switch(act)
 		if("me")
@@ -32,17 +29,15 @@
 				message = text("<B>The alien</B> signs[].", (text2num(param) ? text(" the number []", text2num(param)) : null))
 				m_type = EMOTE_VISUAL
 		if("burp")
-			if(!muzzled)
-				message = "<B>[src]</B> burps."
-				m_type = EMOTE_SOUND
+			message = "<B>[src]</B> burps."
+			m_type = EMOTE_SOUND
 		if("scratch")
 			if(!src.restrained())
 				message = "<B>The [src.name]</B> scratches."
 				m_type = EMOTE_VISUAL
 		if("whimper")
-			if(!muzzled)
-				message = "<B>The [src.name]</B> whimpers."
-				m_type = EMOTE_SOUND
+			message = "<B>The [src.name]</B> whimpers."
+			m_type = EMOTE_SOUND
 //		if("roar")
 //			if(!muzzled)
 //				message = "<B>The [src.name]</B> roars." Commenting out since larva shouldn't roar /N
@@ -60,9 +55,8 @@
 			message = "<B>The [src.name]</B> drools."
 			m_type = EMOTE_VISUAL
 		if("scretch")
-			if(!muzzled)
-				message = "<B>The [src.name]</B> scretches."
-				m_type = EMOTE_SOUND
+			message = "<B>The [src.name]</B> scretches."
+			m_type = EMOTE_SOUND
 		if("choke")
 			message = "<B>The [src.name]</B> chokes."
 			m_type = EMOTE_SOUND
@@ -96,19 +90,14 @@
 			message = "<B>The [src.name]</B> shakes its head."
 			m_type = EMOTE_VISUAL
 		if("gnarl")
-			if(!muzzled)
-				message = "<B>The [src.name]</B> gnarls and shows its teeth.."
-				m_type = EMOTE_SOUND
+			message = "<B>The [src.name]</B> gnarls and shows its teeth.."
+			m_type = EMOTE_SOUND
 		if("jump")
 			message = "<B>The [src.name]</B> jumps!"
 			m_type = EMOTE_VISUAL
 		if("hiss_")
 			message = "<B>The [src.name]</B> hisses softly."
 			m_type = EMOTE_VISUAL
-		if("collapse")
-			Paralyse(2)
-			message = text("<B>[]</B> collapses!", src)
-			m_type = EMOTE_SOUND
 		if("help")
 			to_chat(src, "burp, choke, collapse, dance, drool, gasp, shiver, gnarl, jump, moan, nod, roll, scratch,\nscretch, shake, sign-#, sulk, sway, tail, twitch, whimper")
 		else

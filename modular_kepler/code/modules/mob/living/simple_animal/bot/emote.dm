@@ -5,9 +5,6 @@
 		param = copytext(act, t1 + 1, length(act) + 1)
 		act = copytext(act, 1, t1)
 
-	if(findtext(act,"s",-1) && !findtext(act,"_",-2))//Removes ending s's unless they are prefixed with a '_'
-		act = copytext(act,1,length(act))
-
 	//Emote Cooldown System (it's so simple!)
 	//handle_emote_CD() located in [code\modules\mob\emote.dm]
 	var/on_CD = 0
@@ -62,13 +59,6 @@
 			playsound(src.loc, 'sound/machines/synth_no.ogg', 50, 0)
 			m_type = EMOTE_SOUND
 
-		if("scream", "screams")
-			var/M = handle_emote_param(param)
-
-			message = "<B>[src]</B> screams[M ? " at [M]" : ""]!"
-			playsound(src.loc, 'sound/goonstation/voice/robot_scream.ogg', 80, 0)
-			m_type = EMOTE_SOUND
-
 		if("help")
-			to_chat(src, "scream(s), yes, no, beep, buzz, ping")
+			to_chat(src, "yes, no, beep, buzz, ping")
 	..()
