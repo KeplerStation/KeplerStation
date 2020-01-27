@@ -107,10 +107,10 @@
 				M.show_message(message)
 
 		switch(type)
-			if(1) //Visible
+			if(EMOTE_VISUAL) //Visible
 				visible_message(message)
 				return 1
-			if(2) //Audible
+			if(EMOTE_AUDIBLE) //Audible
 				audible_message(message)
 				return 1
 

@@ -58,30 +58,34 @@
 
 		if("noface") //mfw I have no face
 			mood = null
-			regenerate_icons = 1
+			regenerate_icons()
 
 		if("smile")
-			mood = "mischevous"
-			regenerate_icons = 1
+			mood = ":3"
+			regenerate_icons()
+		
+		if("sneaky")
+			mood = "mischievous"
+			regenerate_icons()
 
-		if(":3")
+		if("cat")
 			mood = ":33"
-			regenerate_icons = 1
+			regenerate_icons()
 
 		if("pout")
 			mood = "pout"
-			regenerate_icons = 1
+			regenerate_icons()
 
 		if("frown")
 			mood = "sad"
-			regenerate_icons = 1
+			regenerate_icons()
 
 		if("scowl")
 			mood = "angry"
-			regenerate_icons = 1
+			regenerate_icons()
 
 		if("help") //This is an exception
-			to_chat(src, "Help for slime emotes. You can use these emotes with say \"*emote\":\n\nbounce, custom, jiggle, light, moan, shiver, sway, twitch, vibrate.")
+			to_chat(src, "Help for slime emotes. You can use these emotes with say \"*emote\":\n\nbounce, custom, jiggle, light, moan, shiver, sway, twitch, vibrate. \n\nYou may also change your face with: \n\nsmile, sneaky, pout, frown, scowl, noface")
 
 		else
 			to_chat(src, "<span class='notice'>Unusable emote '[act]'. Say *help for a list.</span>")

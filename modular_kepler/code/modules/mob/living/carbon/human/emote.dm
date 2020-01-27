@@ -36,9 +36,17 @@
 //			if(!found_machine_head)								//Everyone else fails, skip the emote attempt
 //				return								//Everyone else fails, skip the emote attempt
 
+		if("msqueak")
+			if(ismoth(src))
+				on_CD = handle_emote_CD()
+			else
+				return ..()
+		
 		if("squish", "squishes")
 			if(isjellyperson(src))	//Only Jelly People can squish
 				on_CD = handle_emote_CD()			//proc located in code\modules\mob\emote.dm'
+			else
+				return ..()
 
 		if("scream", "screams")
 			on_CD = handle_emote_CD(50) //longer cooldown
@@ -62,32 +70,39 @@
 			return custom_emote(m_type, message)	//DO YOU KNOW WHY SHIT BREAKS? BECAUSE SO MUCH OLDCODE CALLS mob.emote("me",1,"whatever_the_fuck_it_wants_to_emote")
 													//WHO THE FUCK THOUGHT THAT WAS A GOOD FUCKING IDEA!?!?
 
-		if("ping", "pings")
+//		if("ping", "pings")
+//			var/M = handle_emote_param(param)
+//
+//			message = "<B>[src]</B> pings[M ? " at [M]" : ""]."
+//			playsound(loc, 'sound/machines/ping.ogg', 50, 0)
+//			m_type = EMOTE_SOUND
+//
+//		if("buzz2")
+//			var/M = handle_emote_param(param)
+//
+//			message = "<B>[src]</B> emits an irritated buzzing sound[M ? " at [M]" : ""]."
+//			playsound(loc, 'sound/machines/buzz-two.ogg', 50, 0)
+//			m_type = EMOTE_SOUND
+//
+//		if("buzz", "buzzes")
+//			var/M = handle_emote_param(param)
+//
+//			message = "<B>[src]</B> buzzes[M ? " at [M]" : ""]."
+//			playsound(loc, 'sound/machines/buzz-sigh.ogg', 50, 0)
+//			m_type = EMOTE_SOUND
+//
+//		if("beep", "beeps")
+//			var/M = handle_emote_param(param)
+//
+//			message = "<B>[src]</B> beeps[M ? " at [M]" : ""]."
+//			playsound(loc, 'sound/machines/twobeep.ogg', 50, 0)
+//			m_type = EMOTE_SOUND
+
+		if("msqueak")
 			var/M = handle_emote_param(param)
 
-			message = "<B>[src]</B> pings[M ? " at [M]" : ""]."
-			playsound(loc, 'sound/machines/ping.ogg', 50, 0)
-			m_type = EMOTE_SOUND
-
-		if("buzz2")
-			var/M = handle_emote_param(param)
-
-			message = "<B>[src]</B> emits an irritated buzzing sound[M ? " at [M]" : ""]."
-			playsound(loc, 'sound/machines/buzz-two.ogg', 50, 0)
-			m_type = EMOTE_SOUND
-
-		if("buzz", "buzzes")
-			var/M = handle_emote_param(param)
-
-			message = "<B>[src]</B> buzzes[M ? " at [M]" : ""]."
-			playsound(loc, 'sound/machines/buzz-sigh.ogg', 50, 0)
-			m_type = EMOTE_SOUND
-
-		if("beep", "beeps")
-			var/M = handle_emote_param(param)
-
-			message = "<B>[src]</B> beeps[M ? " at [M]" : ""]."
-			playsound(loc, 'sound/machines/twobeep.ogg', 50, 0)
+			message = "<B>[src]</B> lets out a tiny squeak[M ? " at [M]" : ""]!"
+			playsound(loc, 'modular_citadel/sound/voice/mothsqueak.ogg', 50, 1, -1)
 			m_type = EMOTE_SOUND
 
 		if("squish", "squishes")
@@ -97,19 +112,19 @@
 			playsound(loc, 'sound/effects/slime_squish.ogg', 50, 0) //Credit to DrMinky (freesound.org) for the sound.
 			m_type = EMOTE_SOUND
 
-		if("yes")
-			var/M = handle_emote_param(param)
+//		if("yes")
+//			var/M = handle_emote_param(param)
+//
+//			message = "<B>[src]</B> emits an affirmative blip[M ? " at [M]" : ""]."
+//			playsound(loc, 'sound/machines/synth_yes.ogg', 50, 0)
+//			m_type = EMOTE_SOUND
 
-			message = "<B>[src]</B> emits an affirmative blip[M ? " at [M]" : ""]."
-			playsound(loc, 'sound/machines/synth_yes.ogg', 50, 0)
-			m_type = EMOTE_SOUND
-
-		if("no")
-			var/M = handle_emote_param(param)
-
-			message = "<B>[src]</B> emits a negative blip[M ? " at [M]" : ""]."
-			playsound(loc, 'sound/machines/synth_no.ogg', 50, 0)
-			m_type = EMOTE_SOUND
+//		if("no")
+//			var/M = handle_emote_param(param)
+//
+//			message = "<B>[src]</B> emits a negative blip[M ? " at [M]" : ""]."
+//			playsound(loc, 'sound/machines/synth_no.ogg', 50, 0)
+//			m_type = EMOTE_SOUND
 
 		if("airguitar")
 			if(!restrained())
@@ -186,6 +201,7 @@
 				m_type = EMOTE_SOUND
 				if(miming)
 					m_type = EMOTE_VISUAL
+			wingflap(20)
 
 		if("flip", "flips")
 			m_type = EMOTE_VISUAL
@@ -202,6 +218,7 @@
 				m_type = EMOTE_SOUND
 				if(miming)
 					m_type = EMOTE_VISUAL
+			wingflap(10)
 
 		if("drool", "drools")
 			message = "<B>[src]</B> drools."
@@ -275,7 +292,7 @@
 				m_type = EMOTE_SOUND
 
 		if("deathgasp", "deathgasps")
-			message =  "stops moving..."
+			message =  "<B>[src]</B> seizes up and falls limp, their eyes dead and lifeless..."
 			if(dna.species.deathmessage)
 				message = dna.species.deathmessage
 			m_type = EMOTE_VISUAL
@@ -573,7 +590,8 @@
 //				var/obj/item/organ/external/head/H = get_organ("head") // If you have a robotic head, you can make beep-boop noises
 //				if(H && H.is_robotic())
 //					emotelist += "\nRobotic head specific emotes :- beep(s)-(none)/mob, buzz(es)-none/mob, no-(none)/mob, ping(s)-(none)/mob, yes-(none)/mob, buzz2-(none)/mob"
-
+			if(ismoth(src))
+				emotelist += "\nMoth people specific emotes :- msqueak-(none)/mob"
 			if(isslimeperson(src))
 				emotelist += "\nSlime people specific emotes :- squish(es)-(none)/mob"
 
@@ -595,10 +613,20 @@
 				M.show_message(message)
 
 		switch(m_type)
-			if(1)
+			if(EMOTE_VISUAL)
 				visible_message(message)
-			if(2)
+			if(EMOTE_SOUND)
 				audible_message(message)
+
+/mob/living/carbon/human/proc/wingflap(wing_time)
+	var/open = FALSE
+	if(dna.features["wings"] != "None")
+		if("wingsopen" in dna.species.mutant_bodyparts)
+			open = TRUE
+			CloseWings()
+		else
+			OpenWings()
+		addtimer(CALLBACK(src, open ? /mob/living/carbon/human.proc/OpenWings : /mob/living/carbon/human.proc/CloseWings), wing_time)
 
 /mob/living/carbon/human/proc/OpenWings()
 	if(!dna || !dna.species)
