@@ -20,9 +20,9 @@
 	false_report_weight = 1
 	restricted_jobs = list("AI","Cyborg")
 	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Head of Personnel", "Chief Engineer", "Chief Medical Officer", "Research Director", "Quartermaster")
-	required_players = 20
-	required_enemies = 2
-	recommended_enemies = 4
+	required_players = 3
+	required_enemies = 1
+	recommended_enemies = 2
 	reroll_friendly = FALSE
 	enemy_minimum_age = 7
 	round_ends_with_antag_death = FALSE
