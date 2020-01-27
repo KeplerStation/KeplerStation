@@ -166,7 +166,7 @@
 	name = "mixed berry flavored snowcone"
 	desc = "A mix of different flavors dizzled on a snowball in a paper cup."
 	icon_state = "berry_sc"
-	list_reagents = list("nutriment" = 1, "berryjuice" = 10)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/berryjuice = 10)
 	tastes = list("ice" = 1, "water" = 1, "berries" = 5)
 	foodtype = FRUIT
 

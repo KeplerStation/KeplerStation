@@ -282,9 +282,9 @@
 
 
 /datum/chemical_reaction/fermi/acidic_buffer/FermiFinish(datum/reagents/holder, var/atom/my_atom) //might need this
-	if(!locate(/datum/reagent/fermi/acidic_buffer) in my_atom.reagents.reagent_list)
-		return
 	var/datum/reagent/fermi/acidic_buffer/Fa = locate(/datum/reagent/fermi/acidic_buffer) in my_atom.reagents.reagent_list
+	if(!Fa)
+		return
 	Fa.data = 0.1//setting it to 0 means byond thinks it's not there.
 
 /datum/chemical_reaction/fermi/basic_buffer//done test
@@ -309,10 +309,10 @@
 	FermiChem 		= TRUE
 
 
-/datum/chemical_reaction/fermi/basic_buffer/FermiFinish(datum/reagents/holder, var/atom/my_atom) //might need this
-	if(!locate(/datum/reagent/fermi/basic_buffer) in my_atom.reagents.reagent_list)
-		return
+/datum/chemical_reaction/fermi/basic_buffer/FermiFinish(datum/reagents/holder, atom/my_atom) //might need this
 	var/datum/reagent/fermi/basic_buffer/Fb = locate(/datum/reagent/fermi/basic_buffer) in my_atom.reagents.reagent_list
+	if(!Fb)
+		return
 	Fb.data = 14
 
 //secretcatchemcode, shh!! Of couse I hide it amongst cats. Though, I moved it with your requests.

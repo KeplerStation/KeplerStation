@@ -9,3 +9,6 @@ chmod +x ~/.byond/bin/librust_g.so
 
 wget -O ~/.byond/bin/libBSQL.so "https://github.com/tgstation/BSQL/releases/download/$BSQL_VERSION/libBSQL.so"
 chmod +x ~/.byond/bin/libBSQL.so
+
+cp /home/travis/build/KeplerStation/KeplerStation/libbyond-extools.so ~/.byond/bin/
+chmod +x ~/.byond/bin/libbyond-extools.so
