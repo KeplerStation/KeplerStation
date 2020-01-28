@@ -254,10 +254,10 @@
 		return FALSE
 	// Taken from /steal in objective.dm
 	var/list/all_items = owner.current.GetAllContents() // Includes items inside other items.
-	var/itemcount = FALSE
+	var/itemcount = 0
 	for(var/obj/I in all_items) //Check for items
-		if(I == /obj/item/organ/heart)
-			itemcount ++
+		if(istype(I, /obj/item/organ/heart))
+			itemcount += 1
 			if (itemcount >= target_amount) // Got the right amount?
 				return TRUE
 
