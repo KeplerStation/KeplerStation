@@ -172,6 +172,35 @@
 					/obj/item/storage/box/beanbag)
 	crate_name = "riot shotgun crate"
 
+<<<<<<< HEAD
+=======
+/datum/supply_pack/security/armory/russian
+	name = "Russian Surplus Crate"
+	desc = "Hello Comrade, we have the most modern russian military equipment the black market can offer, for the right price of course. Sadly we couldnt remove the lock so it requires Armory access to open."
+	cost = 5000
+	contraband = TRUE
+	contains = list(/obj/item/reagent_containers/food/snacks/rationpack,
+					/obj/item/ammo_box/a762,
+					/obj/item/storage/toolbox/ammo,
+					/obj/item/clothing/suit/armor/vest/russian,
+					/obj/item/clothing/head/helmet/rus_helmet,
+					/obj/item/clothing/shoes/russian,
+					/obj/item/clothing/gloves/combat,
+					/obj/item/clothing/under/syndicate/rus_army,
+					/obj/item/clothing/under/soviet,
+					/obj/item/clothing/mask/russian_balaclava,
+					/obj/item/clothing/head/helmet/rus_ushanka,
+					/obj/item/clothing/suit/armor/vest/russian_coat,
+					/obj/item/gun/ballistic/shotgun/boltaction,
+					/obj/item/gun/ballistic/shotgun/boltaction)
+	crate_name = "surplus military crate"
+
+/datum/supply_pack/security/armory/russian/fill(obj/structure/closet/crate/C)
+	for(var/i in 1 to 10)
+		var/item = pick(contains)
+		new item(C)
+
+>>>>>>> f1197c8618... Merge pull request #10743 from necromanceranne/SHAZBOT
 /datum/supply_pack/security/armory/swat
 	name = "SWAT Crate"
 	desc = "Contains two fullbody sets of tough, fireproof, pressurized suits designed in a joint effort by IS-ERI and the ICC. Each set contains a suit, helmet, mask, combat belt, and combat gloves. Requires Armory access to open."
