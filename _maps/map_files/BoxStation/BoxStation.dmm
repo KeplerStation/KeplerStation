@@ -204,9 +204,24 @@
 /turf/open/floor/plating,
 /area/security/prison)
 "aaz" = (
+<<<<<<< HEAD
 /obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/plating,
 /area/security/prison)
+=======
+/obj/structure/lattice/catwalk,
+/obj/item/stack/marker_beacon{
+	anchored = 1;
+	icon_state = "markerburgundy-on";
+	light_color = "#FA644B";
+	light_power = 3;
+	light_range = 3;
+	name = "Docking Beacon";
+	picked_color = "Burgundy"
+	},
+/turf/open/space/basic,
+/area/space/nearstation)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "aaA" = (
 /obj/machinery/seed_extractor,
 /turf/open/floor/plasteel,
@@ -282,6 +297,7 @@
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aaK" = (
+<<<<<<< HEAD
 /obj/machinery/washing_machine,
 /obj/structure/window/reinforced{
 	dir = 1
@@ -317,6 +333,39 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
+=======
+/obj/structure/lattice/catwalk,
+/obj/item/stack/marker_beacon{
+	anchored = 1;
+	icon_state = "markerburgundy-on";
+	light_color = "#FA644B";
+	light_power = 3;
+	light_range = 3;
+	name = "Docking Beacon";
+	picked_color = "Burgundy"
+	},
+/turf/open/floor/plating,
+/area/space/nearstation)
+"aaL" = (
+/obj/machinery/photocopier,
+/turf/open/floor/wood,
+/area/library)
+"aaM" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/tile/brown{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/quartermaster/office)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "aaN" = (
 /obj/structure/table,
 /obj/item/pen,
@@ -327,6 +376,10 @@
 /obj/item/storage/pill_bottle/dice,
 /turf/open/floor/plasteel,
 /area/security/prison)
+"aaO" = (
+/obj/effect/spawner/lootdrop/keg,
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
 "aaP" = (
 /obj/structure/table,
 /obj/structure/bedsheetbin,
@@ -354,6 +407,12 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/security/prison)
+"aaQ" = (
+/obj/structure/sign/poster/contraband/random{
+	pixel_y = 32
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
 "aaR" = (
 /obj/structure/lattice,
 /obj/structure/sign/warning/securearea{
@@ -415,6 +474,15 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/security/prison)
+"aaY" = (
+/obj/structure/closet,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 4;
+	name = "4maintenance loot spawner"
+	},
+/obj/item/poster/random_official,
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
 "aaZ" = (
 /turf/closed/wall/r_wall,
 /area/ai_monitored/security/armory)
@@ -651,6 +719,7 @@
 /turf/open/floor/plasteel/freezer,
 /area/security/prison)
 "abG" = (
+<<<<<<< HEAD
 /obj/machinery/door/window/westleft{
 	base_state = "right";
 	icon_state = "right";
@@ -658,6 +727,12 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/security/prison)
+=======
+/obj/structure/door_assembly/door_assembly_mai,
+/obj/item/electronics/airlock,
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "abH" = (
 /obj/structure/table,
 /obj/item/storage/box/chemimp{
@@ -1681,10 +1756,16 @@
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/hos)
 "adO" = (
+<<<<<<< HEAD
 /obj/structure/chair/stool,
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel,
 /area/security/prison)
+=======
+/obj/effect/spawner/structure/window/shuttle,
+/turf/open/floor/plating/airless,
+/area/space/nearstation)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "adP" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -2095,6 +2176,7 @@
 /turf/open/floor/plating,
 /area/maintenance/fore/secondary)
 "aeD" = (
+<<<<<<< HEAD
 /obj/machinery/door/airlock/security{
 	name = "Firing Range";
 	req_access_txt = "2"
@@ -2119,6 +2201,35 @@
 	},
 /turf/open/floor/plating,
 /area/security/prison)
+=======
+/obj/structure/grille/broken,
+/turf/open/floor/plating/airless,
+/area/space/nearstation)
+"aeE" = (
+/obj/structure/girder,
+/turf/open/floor/plating/airless,
+/area/space/nearstation)
+"aeF" = (
+/obj/machinery/airalarm{
+	dir = 4;
+	pixel_x = -23
+	},
+/obj/machinery/computer/station_alert{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/aisat_interior)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "aeG" = (
 /obj/structure/cable,
 /obj/machinery/power/solar{
@@ -2490,9 +2601,17 @@
 /turf/open/floor/plasteel,
 /area/security/main)
 "afn" = (
+<<<<<<< HEAD
 /obj/structure/table,
 /turf/open/floor/plasteel/showroomfloor,
 /area/security/warden)
+=======
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/open/floor/plasteel/grimy,
+/area/ai_monitored/turret_protected/aisat_interior)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "afo" = (
 /obj/machinery/door/airlock/external{
 	name = "Escape Pod Three"
@@ -2514,6 +2633,7 @@
 /turf/open/space/basic,
 /area/space)
 "afq" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /turf/open/floor/plasteel,
 /area/security/prison)
@@ -2527,6 +2647,40 @@
 	},
 /turf/open/floor/plating,
 /area/security/prison)
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/grimy,
+/area/ai_monitored/turret_protected/aisat_interior)
+"afr" = (
+/obj/machinery/atmospherics/pipe/manifold4w/scrubbers,
+/turf/open/floor/plasteel/grimy,
+/area/ai_monitored/turret_protected/aisat_interior)
+"afs" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -31
+	},
+/obj/machinery/computer/monitor{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/aisat_interior)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "aft" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 5
@@ -2822,6 +2976,7 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "age" = (
+<<<<<<< HEAD
 /obj/machinery/door/window/southleft{
 	name = "Target Storage"
 	},
@@ -2831,6 +2986,16 @@
 /obj/item/target,
 /turf/open/floor/plating,
 /area/security/prison)
+=======
+/obj/structure/chair/office/dark{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/grimy,
+/area/ai_monitored/turret_protected/aisat_interior)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "agf" = (
 /obj/structure/table,
 /obj/item/stack/sheet/metal,
@@ -2981,6 +3146,7 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/security/warden)
 "agv" = (
+<<<<<<< HEAD
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
@@ -2990,6 +3156,11 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel,
 /area/security/prison)
+=======
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/grimy,
+/area/ai_monitored/turret_protected/aisat_interior)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "agw" = (
 /obj/structure/table,
 /obj/machinery/syndicatebomb/training,
@@ -3114,6 +3285,7 @@
 /turf/open/floor/plasteel,
 /area/security/main)
 "agH" = (
+<<<<<<< HEAD
 /obj/machinery/door/window/southright{
 	name = "Target Storage"
 	},
@@ -3122,6 +3294,15 @@
 /obj/item/target/syndicate,
 /turf/open/floor/plating,
 /area/security/prison)
+=======
+/obj/machinery/bluespace_beacon,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/landmark/start/cyborg,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/aisat_interior)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "agI" = (
 /obj/machinery/airalarm{
 	pixel_y = 23
@@ -3252,10 +3433,18 @@
 /turf/open/floor/plating,
 /area/security/warden)
 "agX" = (
+<<<<<<< HEAD
 /obj/structure/table,
 /obj/machinery/recharger,
 /turf/open/floor/plasteel/showroomfloor,
 /area/security/warden)
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/open/floor/plasteel/grimy,
+/area/ai_monitored/turret_protected/aisat_interior)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "agY" = (
 /obj/structure/table,
 /obj/item/storage/fancy/donut_box,
@@ -3490,6 +3679,7 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/security/warden)
 "ahw" = (
+<<<<<<< HEAD
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
@@ -3498,6 +3688,17 @@
 	},
 /turf/open/floor/plating,
 /area/security/prison)
+=======
+/obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel/grimy,
+/area/ai_monitored/turret_protected/aisat_interior)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "ahx" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -4622,12 +4823,24 @@
 /turf/open/floor/plasteel,
 /area/security/brig)
 "ajC" = (
+<<<<<<< HEAD
 /obj/item/storage/toolbox/drone,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/grimy,
+/area/ai_monitored/turret_protected/aisat_interior)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "ajD" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -4837,6 +5050,7 @@
 /turf/open/floor/plating,
 /area/maintenance/solars/port/fore)
 "ajX" = (
+<<<<<<< HEAD
 /obj/structure/table,
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -4859,6 +5073,19 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel,
 /area/security/prison)
+=======
+/obj/machinery/computer/teleporter{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/ai_monitored/turret_protected/aisat_interior)
+"ajY" = (
+/obj/machinery/holopad,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/landmark/start/cyborg,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/aisat/atmos)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "ajZ" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/sign/warning/vacuum/external{
@@ -5136,9 +5363,23 @@
 /turf/open/floor/plasteel,
 /area/security/courtroom)
 "akz" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel,
 /area/security/brig)
+=======
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/holopad,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/effect/landmark/start/cyborg,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/aisat_interior)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "akA" = (
 /obj/structure/chair{
 	dir = 8;
@@ -31393,17 +31634,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
-"bwc" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel,
-/area/quartermaster/office)
 "bwd" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -50703,6 +50933,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
+<<<<<<< HEAD
 "ctu" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 4
@@ -50741,6 +50972,11 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/ai_monitored/turret_protected/aisat_interior)
+=======
+"ctv" = (
+/turf/closed/wall/r_wall,
+/area/space/nearstation)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "ctz" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "teledoor";
@@ -50785,6 +51021,7 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
+<<<<<<< HEAD
 "ctG" = (
 /obj/structure/chair/office/dark{
 	dir = 8
@@ -50818,6 +51055,8 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel/grimy,
 /area/ai_monitored/turret_protected/aisat_interior)
+=======
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "ctJ" = (
 /obj/machinery/holopad,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -50841,13 +51080,6 @@
 	},
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/aisat_interior)
-"ctM" = (
-/obj/machinery/bluespace_beacon,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/ai_monitored/turret_protected/aisat_interior)
 "ctN" = (
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 10
@@ -50855,12 +51087,15 @@
 /obj/structure/lattice,
 /turf/open/space,
 /area/space/nearstation)
+<<<<<<< HEAD
 "ctP" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/open/floor/plasteel/grimy,
 /area/ai_monitored/turret_protected/aisat_interior)
+=======
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "ctQ" = (
 /obj/structure/table,
 /obj/machinery/microwave{
@@ -50886,6 +51121,7 @@
 /obj/structure/sign/warning/radiation/rad_area,
 /turf/closed/wall,
 /area/engine/engineering)
+<<<<<<< HEAD
 "ctS" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -50906,6 +51142,8 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/ai_monitored/turret_protected/aisat_interior)
+=======
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "ctU" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -50927,10 +51165,6 @@
 	},
 /obj/structure/chair,
 /turf/open/floor/plasteel/dark,
-/area/ai_monitored/turret_protected/aisat_interior)
-"ctW" = (
-/obj/machinery/computer/teleporter,
-/turf/open/floor/plating,
 /area/ai_monitored/turret_protected/aisat_interior)
 "ctX" = (
 /obj/machinery/camera{
@@ -51211,11 +51445,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat/atmos)
-"cuC" = (
-/obj/machinery/holopad,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel/dark,
-/area/ai_monitored/turret_protected/aisat/atmos)
 "cuD" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -51260,17 +51489,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers,
 /obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/ai_monitored/turret_protected/aisat_interior)
-"cuG" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/holopad,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
@@ -54543,6 +54761,37 @@
 "dgz" = (
 /turf/closed/wall,
 /area/crew_quarters/cryopod)
+<<<<<<< HEAD
+=======
+"dhx" = (
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/obj/structure/sink{
+	dir = 1;
+	pixel_y = 25
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/mineral/titanium/blue,
+/area/crew_quarters/dorms)
+"dok" = (
+/obj/item/twohanded/required/kirbyplants{
+	icon_state = "plant-22"
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
+"doP" = (
+/obj/structure/chair/stool{
+	pixel_y = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
+/turf/open/floor/carpet{
+	icon_state = "carpetsymbol"
+	},
+/area/crew_quarters/theatre)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "dqu" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/closed/wall/r_wall,
@@ -54645,6 +54894,58 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/service)
+<<<<<<< HEAD
+=======
+"fnJ" = (
+/obj/structure/sign/mining{
+	pixel_y = 7
+	},
+/turf/closed/wall,
+/area/quartermaster/miningdock)
+"frE" = (
+/obj/machinery/vr_sleeper{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white/corner{
+	dir = 1
+	},
+/area/crew_quarters/fitness)
+"ftv" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 4;
+	name = "4maintenance loot spawner"
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
+"fuo" = (
+/obj/item/reagent_containers/glass/bucket,
+/turf/open/floor/grass,
+/area/security/prison)
+"fvk" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating,
+/area/maintenance/fore/secondary)
+"fvW" = (
+/obj/structure/chair/comfy/brown{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/bar)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "fvY" = (
 /obj/machinery/computer/cryopod{
 	pixel_y = 26
@@ -54774,7 +55075,46 @@
 /area/medical/sleeper)
 "hcE" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment,
+=======
+/turf/open/floor/wood,
+/area/crew_quarters/bar)
+"hdp" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 3;
+	name = "3maintenance loot spawner"
+	},
+/obj/structure/light_construct{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
+"hfe" = (
+/obj/structure/sign/poster/contraband/smoke{
+	desc = "This poster reminds us all that the Detective is a parasite. Year after year, they must get replacement lungs because of their addiction. ";
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel/grimy,
+/area/security/detectives_office)
+"hgX" = (
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/machinery/light/small,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel/white/side{
+	dir = 1
+	},
+/area/crew_quarters/fitness)
+"hik" = (
+/obj/structure/lattice/catwalk,
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -54813,6 +55153,53 @@
 "iiW" = (
 /turf/open/floor/wood,
 /area/maintenance/bar)
+<<<<<<< HEAD
+=======
+"ilJ" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/light{
+	light_color = "#c9d3e8"
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/fore)
+"imH" = (
+/obj/structure/falsewall,
+/turf/open/floor/plating,
+/area/maintenance/bar)
+"ioB" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/effect/landmark/start/mime,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/white/side{
+	dir = 4
+	},
+/area/crew_quarters/theatre)
+"ioG" = (
+/obj/machinery/vending/cola/red,
+/turf/open/floor/plasteel/dark,
+/area/hallway/primary/central)
+"ioX" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/theatre)
+"ipc" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Gravity Generator";
+	req_access_txt = "11"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel,
+/area/engine/engine_smes)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "ipA" = (
 /turf/open/floor/plating,
 /area/maintenance/department/medical/morgue)
@@ -55077,8 +55464,51 @@
 /obj/effect/spawner/lootdrop/keg,
 /turf/open/floor/wood,
 /area/maintenance/bar)
+<<<<<<< HEAD
 "mGw" = (
 /obj/machinery/vending/autodrobe/all_access,
+=======
+"mte" = (
+/obj/structure/extinguisher_cabinet,
+/turf/closed/wall/r_wall,
+/area/hallway/primary/central)
+"mwO" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plasteel,
+/area/engine/gravity_generator)
+"myt" = (
+/obj/structure/closet/secure_closet/personal/cabinet{
+	desc = "Swipe your ID on the closet to claim it. First come first serve, this one is wooden and fancy. Store your stuff here.";
+	name = "Personal ID-Locked Closet";
+	pixel_y = 15
+	},
+/turf/open/floor/carpet,
+/area/crew_quarters/dorms)
+"mCq" = (
+/turf/open/floor/plating,
+/area/crew_quarters/abandoned_gambling_den)
+"mEN" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/freezer,
+/area/crew_quarters/toilet)
+"mHC" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/crew_quarters/abandoned_gambling_den)
+"mIS" = (
+/obj/structure/table,
+/obj/item/clothing/gloves/boxing/yellow,
+/obj/item/clothing/gloves/boxing/green,
+/obj/item/clothing/gloves/boxing/blue,
+/obj/item/clothing/gloves/boxing/blue,
+/obj/item/clothing/gloves/boxing,
+/obj/item/clothing/gloves/boxing,
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 /turf/open/floor/plasteel,
 /area/crew_quarters/locker)
 "mNi" = (
@@ -55288,6 +55718,65 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
+<<<<<<< HEAD
+=======
+"rvZ" = (
+/obj/structure/target_stake,
+/obj/item/target/syndicate,
+/turf/open/floor/plating,
+/area/security/prison)
+"rzg" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/dark,
+/area/crew_quarters/heads/captain)
+"rBq" = (
+/obj/item/clothing/head/kitty,
+/obj/item/clothing/under/maid,
+/obj/item/clothing/mask/muzzle,
+/turf/open/floor/plating,
+/area/maintenance/bar)
+"rEV" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "holoprivacy";
+	name = "Holodeck Shutters"
+	},
+/turf/open/floor/plating,
+/area/crew_quarters/fitness)
+"rFc" = (
+/obj/machinery/door/airlock{
+	desc = "To keep the station within regulations, space IKEA requires one storage cupboard for their Nanotrasen partnership to continue.";
+	id_tag = "MaintDorm1";
+	name = "Furniture Storage"
+	},
+/turf/open/floor/plasteel/dark,
+/area/maintenance/port)
+"rHa" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 3;
+	height = 5;
+	id = "commonmining_home";
+	name = "SS13: Common Mining Dock";
+	roundstart_template = /datum/map_template/shuttle/mining_common/meta;
+	width = 7
+	},
+/turf/open/space/basic,
+/area/space)
+"rKc" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/space,
+/area/solar/port/fore)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "rKP" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
@@ -55407,6 +55896,20 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
 /area/hallway/secondary/service)
+<<<<<<< HEAD
+=======
+"tdF" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/maintenance/port/aft)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "tkU" = (
 /turf/open/floor/wood{
 	icon_state = "wood-broken5"
@@ -55756,6 +56259,45 @@
 /obj/effect/spawner/lootdrop/grille_or_trash,
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
+<<<<<<< HEAD
+=======
+"xIn" = (
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/locker)
+"xLZ" = (
+/obj/structure/closet/radiation,
+/turf/open/floor/plasteel,
+/area/engine/gravity_generator)
+"xMl" = (
+/obj/structure/chair/sofa{
+	dir = 1
+	},
+/obj/structure/window,
+/turf/open/floor/wood,
+/area/crew_quarters/bar)
+"xNY" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 1
+	},
+/turf/open/space/basic,
+/area/space/nearstation)
+"xXY" = (
+/obj/structure/closet/lasertag/red,
+/obj/item/clothing/under/pj/red,
+/obj/item/clothing/under/pj/red,
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness)
+"xYO" = (
+/obj/structure/sign/poster/contraband/red_rum{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/starboard)
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 "ycu" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -61832,9 +62374,17 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
 aaa
 aaa
 aaa
+=======
+aaK
+aaa
+aaa
+aaa
+aaK
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 aaa
 aaa
 aaa
@@ -62080,6 +62630,13 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
+aaa
+=======
+aaK
+aaa
+aaK
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 aaa
 aaa
 aaa
@@ -62089,8 +62646,13 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
 aaa
+=======
+aaK
 aaa
+aaK
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 aaa
 aaa
 aaa
@@ -78268,7 +78830,7 @@ bpB
 bpB
 brR
 bsV
-bwc
+aaM
 bxA
 bvI
 bwX
@@ -92853,9 +93415,15 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
 aaa
 aaa
 aaa
+=======
+aaz
+aaa
+aaz
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 aaa
 aaa
 aaa
@@ -93237,7 +93805,7 @@ aaf
 ctZ
 cui
 cuq
-cuC
+ajY
 cuO
 cuz
 cvm
@@ -93745,8 +94313,8 @@ czk
 cti
 cua
 cua
-ctw
-ctH
+aeF
+afs
 ctQ
 cuc
 cuj
@@ -94002,9 +94570,9 @@ ctb
 cth
 cua
 ctr
-ctu
-ctG
-ctP
+afn
+age
+agX
 cub
 cuj
 cur
@@ -94259,13 +94827,13 @@ ctc
 ctc
 cto
 ctt
-cty
+afq
 ctJ
-ctT
+ahw
 cue
 cul
 cuu
-cuG
+akz
 cuS
 cve
 cvo
@@ -94516,9 +95084,9 @@ ctb
 ctj
 ctk
 cts
-ctx
-ctI
-ctS
+afr
+agv
+ajC
 cud
 cuk
 cus
@@ -95288,7 +95856,7 @@ aaa
 aaf
 cua
 ctF
-ctM
+agH
 ctX
 cuf
 cum
@@ -95546,7 +96114,7 @@ aaf
 cua
 ctE
 ctL
-ctW
+ajX
 cuf
 cum
 cuw
@@ -98544,9 +99112,15 @@ bbE
 aIr
 bav
 aLf
+<<<<<<< HEAD
 aIt
 aNS
 aPb
+=======
+aaL
+kLR
+aRO
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 aQp
 aRN
 aIt
@@ -99126,10 +99700,17 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
 aaa
 aaa
 aaa
 aaa
+=======
+aaH
+adO
+aeD
+aeE
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 aaa
 aaa
 aaa
@@ -99381,6 +99962,7 @@ cAa
 cOT
 aaa
 aaa
+<<<<<<< HEAD
 aaa
 aaa
 aaa
@@ -99388,6 +99970,12 @@ aaa
 aaa
 aaa
 aaa
+=======
+aaH
+aaH
+aaH
+aeE
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 aaa
 aaa
 aaa
@@ -99637,6 +100225,7 @@ czU
 czZ
 cOT
 aaa
+<<<<<<< HEAD
 aaa
 aaa
 aaa
@@ -99645,6 +100234,16 @@ aaa
 aaa
 aaa
 aaa
+=======
+jmC
+aaH
+aaH
+aaH
+aaH
+aaH
+aaH
+adO
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 aaa
 aaa
 aaa
@@ -99893,6 +100492,15 @@ cOT
 cgm
 czY
 cOT
+<<<<<<< HEAD
+=======
+gXs
+xNY
+kvb
+gJg
+aaH
+aaH
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 aaa
 aaa
 aaa
@@ -100153,11 +100761,19 @@ cNW
 aaa
 aaa
 aaa
+<<<<<<< HEAD
 aaa
 aaa
 aaa
 aaa
 aaa
+=======
+gJg
+gJg
+adO
+aaH
+gXs
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 aaa
 aaa
 aaa
@@ -103234,8 +103850,15 @@ chx
 cNW
 aaa
 cNW
+<<<<<<< HEAD
 cgr
 cms
+=======
+clt
+cQw
+cNW
+abG
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 cNW
 cOe
 bNA
@@ -103492,7 +104115,12 @@ cOT
 aaa
 cOT
 clt
+<<<<<<< HEAD
 bnt
+=======
+cQw
+aaO
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 cOe
 cOe
 cNW
@@ -103750,6 +104378,7 @@ aaa
 cOT
 clt
 cQw
+<<<<<<< HEAD
 cNW
 cNW
 cNW
@@ -103762,6 +104391,20 @@ aaS
 aaS
 aaS
 aaS
+=======
+aaQ
+cOe
+cOe
+cNW
+aaa
+jzi
+jzi
+jzi
+jzi
+jzi
+jzi
+jzi
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 aaS
 aaS
 aba
@@ -104007,11 +104650,19 @@ aaa
 cNW
 clt
 cQw
+<<<<<<< HEAD
 aaf
 aaf
 aaf
 aaf
 aaf
+=======
+bNB
+cOe
+cOe
+cNW
+lCL
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 aaS
 aaa
 aaf
@@ -104264,10 +104915,17 @@ cNW
 cNW
 clt
 cQw
+<<<<<<< HEAD
 aaa
 aaa
 aaa
 aaa
+=======
+aaY
+cOe
+cOe
+cNW
+>>>>>>> 7ff01ac152... Merge pull request #10590 from KathrinBailey/Kat'sBoxRework
 aaa
 aaS
 aaa
