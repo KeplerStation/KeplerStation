@@ -270,6 +270,17 @@ GLOBAL_LIST_INIT(bamboo_recipes, list ( \
 	recipes = GLOB.bamboo_recipes
 	return ..()
 
+<<<<<<< HEAD
+=======
+/obj/item/stack/sheet/mineral/bamboo/ten
+	amount = 10
+
+/obj/item/stack/sheet/mineral/bamboo/twenty
+	amount = 20
+
+/obj/item/stack/sheet/mineral/bamboo/fifty
+	amount = 50
+>>>>>>> fbe79edc24... Merge pull request #10752 from Owai-Seek/cargocratetglass
 
 /*
  * Cloth

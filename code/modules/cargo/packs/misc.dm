@@ -13,6 +13,7 @@
 //////////////////// Paperwork and Writing Supplies //////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
+<<<<<<< HEAD
 /* I did it Kevin
 /datum/supply_pack/misc/abandonedcrate
 	name = "Abandoned Crate"
@@ -24,6 +25,8 @@
 	crate_type = /obj/structure/closet/crate/large
 	dangerous = TRUE
 */
+=======
+>>>>>>> fbe79edc24... Merge pull request #10752 from Owai-Seek/cargocratetglass
 /datum/supply_pack/misc/artsupply
 	name = "Art Supplies"
 	desc = "Make some happy little accidents with six canvasses, two easels, two boxes of crayons, and a rainbow crayon!"
@@ -248,10 +251,33 @@
 	for(var/i in 1 to 9)
 		new /obj/item/coin/silver(.)
 
+/datum/supply_pack/misc/dirtymags
+	name = "Dirty Magazines"
+	desc = "Get your mind out of the gutter operative, you have work to do. Three items per order. Possible Results: .357 Speedloaders, Kitchen Gun Mags, Stetchkin Mags."
+	hidden = TRUE
+	cost = 12000
+	var/num_contained = 3 
+	contains = list(/obj/item/ammo_box/a357,
+					/obj/item/ammo_box/a357,
+					/obj/item/ammo_box/a357,
+					/obj/item/ammo_box/magazine/pistolm9mm,
+					/obj/item/ammo_box/magazine/pistolm9mm,
+					/obj/item/ammo_box/magazine/pistolm9mm,
+					/obj/item/ammo_box/magazine/m45/kitchengun,
+					/obj/item/ammo_box/magazine/m45/kitchengun)
+	crate_name = "crate"
+
+/datum/supply_pack/misc/dirtymags/fill(obj/structure/closet/crate/C)
+	var/list/L = contains.Copy()
+	for(var/i in 1 to num_contained)
+		var/item = pick_n_take(L)
+		new item(C)
+
 //////////////////////////////////////////////////////////////////////////////
-//////////////////////////////// Misc Supplies ///////////////////////////////
+///////////////////////////////// Misc Supplies //////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
+<<<<<<< HEAD
 /datum/supply_pack/misc/wrapping_paper
 	name = "Festive Wrapping Paper Crate"
 	desc = "Want to mail your loved ones gift-wrapped chocolates, stuffed animals, or the Clown's severed head? You can do all that, with this crate full of wrapping paper."
@@ -259,6 +285,32 @@
 	contains = list(/obj/item/stack/wrapping_paper)
 	crate_type = /obj/structure/closet/crate/wooden
 	crate_name = "festive wrapping paper crate"
+=======
+/datum/supply_pack/misc/candles
+	name = "Candle Crate"
+	desc = "Set up a romantic dinner or host a séance with these extra candles and crayons."
+	cost = 850
+	contains = list(/obj/item/storage/fancy/candle_box,
+					/obj/item/storage/fancy/candle_box,
+					/obj/item/storage/box/matches)
+	crate_name = "candle crate"
+
+/datum/supply_pack/misc/exoticfootwear
+	name = "Exotic Footwear Crate"
+	desc = "Popularised by lizards and exotic dancers, the footwear included in this shipment is sure to give your feet the breathing room they deserve. Sweet Kicks Inc. is not responsible for any damage, distress, or @r0u$a1 caused by this shipment."
+	cost = 4337
+	contains = list(/obj/item/clothing/shoes/wraps,
+					/obj/item/clothing/shoes/wraps,
+					/obj/item/clothing/shoes/wraps/silver,
+					/obj/item/clothing/shoes/wraps/silver,
+					/obj/item/clothing/shoes/wraps/red,
+					/obj/item/clothing/shoes/wraps/red,
+					/obj/item/clothing/shoes/wraps/blue,
+					/obj/item/clothing/shoes/wraps/blue,
+					/obj/item/clothing/shoes/clown_shoes,
+					/obj/item/clothing/shoes/kindleKicks)
+	crate_name = "footie crate"
+>>>>>>> fbe79edc24... Merge pull request #10752 from Owai-Seek/cargocratetglass
 
 /datum/supply_pack/misc/funeral
 	name = "Funeral Supplies"
@@ -284,6 +336,16 @@
 	cost = 10000
 	contains = list(/obj/machinery/jukebox)
 	crate_name = "Jukebox"
+
+/datum/supply_pack/misc/abandonedcrate
+	name = "Loot Box"
+	desc = "Try your luck with these highly secure loot boxes! Solve the lock, win great prizes! WARNING: EXPLOSIVE FAILURE."
+	contraband = TRUE
+	cost = 15000
+	contains = list(/obj/structure/closet/crate/secure/loot)
+	crate_name = "abandoned crate"
+	crate_type = /obj/structure/closet/crate/large
+	dangerous = TRUE
 
 /datum/supply_pack/misc/potted_plants
 	name = "Potted Plants Crate"
