@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 
 ## KeplerStation<BR>
 Based and maintained from Citadel-Station-13.<BR>
+=======
+## Citadel Station 13
+Based and maintained from /tg/station.
+>>>>>>> 3ed288dd14... Merge pull request #10750 from LetterN/patch-1
 
 [![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/pretty-risque.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com)
 
@@ -10,6 +15,7 @@ Based and maintained from Citadel-Station-13.<BR>
 
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/Citadel-Station-13/Citadel-Station-13.svg)](http://isitmaintained.com/project/KeplerStation/KeplerStation "Percentage of issues still open") [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/Citadel-Station-13/Citadel-Station-13.svg)](http://isitmaintained.com/project/KeplerStation/KeplerStation "Average time to resolve an issue")
 
+<<<<<<< HEAD
 **Upstream (Citadel) Information** <BR>
 **Website:** http://citadel-station.net/ <BR>
 **Code:** https://github.com/Citadel-Station-13/Citadel-Station-13  <BR>
@@ -20,6 +26,21 @@ Based and maintained from Citadel-Station-13.<BR>
 **Code:** https://github.com/KeplerStation/KeplerStation <BR>
 **Discord:**  [Here](https://discord.gg/R3xFtE5). <BR>
 
+=======
+**Upstream Information**  
+**Website:** https://tgstation13.org  
+**Code:** https://github.com/tgstation/tgstation  
+**Wiki** https://tgstation13.org/wiki/Main_Page  
+**IRC:** irc://irc.rizon.net/coderbus or if you dont have an IRC client, you can click  [here](https://kiwiirc.com/client/irc.rizon.net:6667/?&theme=cli#coderbus).  
+  
+**Citadel Station Information**  
+**Website:** http://citadel-station.net  
+**Forums:** http://citadel-station.net/forum  
+**Ban Appeals:** http://citadel-station.net/forum/forumdisplay.php?fid=8  
+**Code:** https://github.com/Citadel-Station-13/Citadel-Station-13  
+**Discord:**  [Here](https://discord.gg/E6SQuhz)  
+  
+>>>>>>> 3ed288dd14... Merge pull request #10750 from LetterN/patch-1
 ## DOWNLOADING
 
 There are a number of ways to download the source code. Some are described here, an alternative all-inclusive guide is also located at http://www.tgstation13.org/wiki/Downloading_the_source_code
