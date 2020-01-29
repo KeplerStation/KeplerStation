@@ -231,8 +231,7 @@
 	if (!vr_area)
 		qdel(src)
 		return
-	var/area/vr_base_area = get_base_area(src)
-	var/list/contents = get_sub_areas_contents(vr_base_area)
+	var/list/contents = get_sub_areas_contents(vr_area)
 	for (var/obj/item/ammo_casing/casing in contents)
 		qdel(casing)
 	for(var/obj/effect/decal/cleanable/C in contents)

@@ -200,6 +200,7 @@
 					to_chat(user, "<span class='notice'>You cut the wires from \the [src].</span>")
 					update_icon()
 					return
+
 			if(1)
 				if(istype(W, /obj/item/stack/cable_coil))
 					var/obj/item/stack/cable_coil/coil = W
