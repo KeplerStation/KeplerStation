@@ -55588,8 +55588,229 @@
 /turf/open/floor/wood,
 /area/maintenance/bar)
 "vpY" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
+=======
+/obj/structure/closet/lasertag/blue,
+/obj/item/clothing/under/pj/blue,
+/obj/item/clothing/under/pj/blue,
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness)
+"vrM" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/obj/item/twohanded/required/kirbyplants{
+	icon_state = "plant-18"
+	},
+/turf/open/floor/plasteel,
+/area/hallway/secondary/entry)
+"vsM" = (
+/obj/machinery/power/apc/auto_name/south,
+/obj/structure/cable,
+/turf/open/floor/carpet,
+/area/crew_quarters/cryopod)
+"vxh" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 8;
+	name = "8maintenance loot spawner"
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
+"vys" = (
+/obj/machinery/vr_sleeper{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel/white/side{
+	dir = 4
+	},
+/area/crew_quarters/fitness)
+"vzp" = (
+/obj/structure/table/reinforced,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = -24
+	},
+/obj/item/stock_parts/cell/high,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/white,
+/area/science/circuit)
+"vzO" = (
+/obj/structure/chair/wood/normal{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/maintenance/bar)
+"vzS" = (
+/obj/structure/table,
+/obj/item/book/manual/hydroponics_pod_people{
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/item/paper/guides/jobs/hydroponics{
+	pixel_x = -5;
+	pixel_y = 3
+	},
+/turf/open/floor/plasteel,
+/area/hydroponics)
+"vCb" = (
+/obj/machinery/rnd/production/techfab/department/service,
+/turf/open/floor/plasteel,
+/area/hallway/secondary/service)
+"vCt" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on,
+/turf/open/floor/plasteel/white,
+/area/science/circuit)
+"vDq" = (
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating,
+/area/space/nearstation)
+"vFt" = (
+/obj/machinery/portable_atmospherics/pump,
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
+"vGX" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on,
+/obj/structure/closet/secure_closet/personal/cabinet{
+	desc = "Swipe your ID on the closet to claim it. First come first serve, this one is wooden and fancy. Store your stuff here.";
+	name = "Personal ID-Locked Closet";
+	pixel_y = 15
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/dorms)
+"vHj" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Cryogenics "
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel,
+/area/crew_quarters/cryopod)
+"vHv" = (
+/obj/structure/closet{
+	name = "Costume Closet"
+	},
+/obj/item/clothing/head/russobluecamohat,
+/obj/item/clothing/head/russobluecamohat,
+/obj/item/clothing/head/helmet/rus_ushanka,
+/obj/item/clothing/head/helmet/rus_ushanka,
+/obj/item/clothing/head/helmet/rus_ushanka,
+/obj/item/clothing/head/helmet/rus_ushanka,
+/obj/item/clothing/under/mw2_russian_para,
+/obj/item/clothing/under/mw2_russian_para,
+/obj/item/clothing/under/mw2_russian_para,
+/obj/item/clothing/under/mw2_russian_para,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/shoes/jackboots,
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
+"vHM" = (
+/obj/machinery/vr_sleeper{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white/corner{
+	dir = 1
+	},
+/area/crew_quarters/fitness)
+"vHY" = (
+/turf/open/floor/plating,
+/area/science/mixing)
+"vLD" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 10
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/light,
+/obj/machinery/camera/motion{
+	c_tag = "Vault";
+	dir = 1;
+	network = list("vault")
+	},
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/nuke_storage)
+"vNh" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/open/floor/carpet,
+/area/crew_quarters/theatre)
+"vOq" = (
+/obj/structure/closet,
+/obj/effect/spawner/lootdrop/maintenance,
+/obj/item/coin/gold,
+/obj/item/coin/gold,
+/obj/item/coin/gold,
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
+"vPE" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
+/area/science/circuit)
+"vRr" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/machinery/door/window/westleft{
+	base_state = "right";
+	dir = 4;
+	icon_state = "right";
+	name = "Shooting Range"
+	},
+/turf/open/floor/plating,
+/area/security/prison)
+"vRX" = (
+/obj/machinery/power/apc{
+	areastring = "/area/security/detectives_office";
+	dir = 4;
+	name = "Detective's Office APC";
+	pixel_x = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plasteel/grimy,
+/area/security/detectives_office)
+"vUR" = (
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating,
+/area/security/prison)
+"vVP" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	areastring = "/area/engine/gravity_generator";
+	dir = 8;
+	name = "Gravity Generator APC";
+	pixel_x = -25;
+	pixel_y = 1
+>>>>>>> cde6601c60... Merge pull request #10759 from Ghommie/Ghommie-cit534
 	},
 /obj/machinery/meter,
 /turf/open/floor/plating,
