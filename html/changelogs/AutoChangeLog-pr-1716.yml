@@ -1,4 +1,0 @@
-author: "KeplerStation-Bot"
-delete-after: True
-changes: 
-  - balance: "meteor waves are now directional and announces the direction on the command report."
