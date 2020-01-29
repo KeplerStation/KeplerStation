@@ -12,8 +12,7 @@
 	if(!has_active_hand())
 		to_chat(src, "<span class='notice'>You ponder your life choices and sigh.</span>")
 		return TRUE
-<<<<<<< HEAD
-=======
+
 	var/list/src_viewers = viewers(DEFAULT_MESSAGE_RANGE, src) - src // src has a different message.
 	var/the_action = "waves to [A]"
 	var/what_action = "waves to something you can't see"
@@ -33,19 +32,6 @@
 			the_action = "shakes [pronoun] fist at [A]"
 			what_action = "shakes [pronoun] fist at something you can't see"
 			self_action = "shake your fist at [A]"
->>>>>>> c5fdc24e73... Merge pull request #10696 from Citadel-Station-13/Ghommie-patch-1
-
-	if(!incapacitated())
-		switch(a_intent)
-			if(INTENT_HELP)
-				visible_message("<span class='notice'>[src] waves to [A].</span>", "<span class='notice'>You wave to [A].</span>")
-			if(INTENT_DISARM)
-				visible_message("<span class='notice'>[src] shoos away [A].</span>", "<span class='notice'>You shoo away [A].</span>")
-			if(INTENT_GRAB)
-				visible_message("<span class='notice'>[src] beckons [A] to come.</span>", "<span class='notice'>You beckon [A] to come closer.</span>") //This sounds lewder than it actually is. Fuck.
-			if(INTENT_HARM)
-				visible_message("<span class='notice'>[src] shakes [p_their()] fist at [A].</span>", "<span class='notice'>You shake your fist at [A].</span>")
-		return TRUE
 
 /atom/proc/alt_attack_hand(mob/user)
 	return FALSE
