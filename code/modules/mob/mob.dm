@@ -573,7 +573,6 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 	//This is only called from client/Stat(), let's assume client exists.
 
 	if(statpanel("Status"))
-<<<<<<< HEAD
 		if (client)
 			stat(null, "Ping: [round(client.lastping, 1)]ms (Average: [round(client.avgping, 1)]ms)")
 		stat(null, "Map: [SSmapping.config?.map_name || "Loading..."]")
@@ -592,17 +591,6 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 				stat(null, "[ETA] [SSshuttle.emergency.getTimerStr()]")
 
 	if(client && client.holder)
-=======
-		var/list/L = list()
-		L += "Ping: [round(client.lastping,1)]ms (Avg: [round(client.avgping,1)]ms)"
-		L += SSmapping.stat_map_name
-		L += "Round ID: [GLOB.round_id || "NULL"]"
-		L += SStime_track.stat_time_text
-		L += SSshuttle.emergency_shuttle_stat_text
-		stat(null, "[L.Join("\n\n")]")
-
-	if(client.holder)
->>>>>>> 293e6576c8... Merge pull request #10564 from kevinz000/optimization_1
 		if(statpanel("MC"))
 			var/turf/T = get_turf(client.eye)
 			stat("Location:", COORD(T))
