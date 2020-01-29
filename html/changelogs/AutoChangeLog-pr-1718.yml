@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - balance: "Abductor mindsnapping (aka abductee objectives) can now be \"cured\" with brain surgery."
