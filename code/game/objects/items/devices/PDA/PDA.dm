@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-
 //The advanced pea-green monochrome lcd of tomorro- yesterday. Fuck that old design with anything that I can throw at it. -aa
-=======
-//The advanced pea-green monochrome lcd of tomorrow.
->>>>>>> 7839724013... Merge pull request #10295 from Citadel-Station-13/kevinz000-patch-2
+
 
 GLOBAL_LIST_EMPTY(PDAs)
 
