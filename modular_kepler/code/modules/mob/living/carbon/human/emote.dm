@@ -201,7 +201,7 @@
 				m_type = EMOTE_SOUND
 				if(miming)
 					m_type = EMOTE_VISUAL
-			wingflap(20)
+				wingflap(20)
 
 		if("flip", "flips")
 			m_type = EMOTE_VISUAL
@@ -218,7 +218,7 @@
 				m_type = EMOTE_SOUND
 				if(miming)
 					m_type = EMOTE_VISUAL
-			wingflap(10)
+				wingflap(10)
 
 		if("drool", "drools")
 			message = "<B>[src]</B> drools."
@@ -250,6 +250,8 @@
 			m_type = EMOTE_VISUAL
 
 		if("cough", "coughs")
+			if(reagents.get_reagent("menthol") || reagents.get_reagent("peppermint_patty"))
+				return
 			if(miming)
 				message = "<B>[src]</B> appears to cough!"
 				m_type = EMOTE_VISUAL
@@ -551,7 +553,39 @@
 				var/M = handle_emote_param(param)
 
 				message = "<b>[src]</b> snaps [p_their()] fingers[M ? " at [M]" : ""]."
-				playsound(loc, 'modular_citadel/sound/voice/snap.ogg', 50, 1, -3)
+				playsound(loc, 'modular_citadel/sound/voice/snap.ogg', 50, 1, -1)
+			else
+				message = "<span class='danger'><b>[src]</b> snaps [p_their()] fingers right off!</span>"
+				playsound(loc, 'sound/effects/snap.ogg', 50, 1)
+
+		if("snap2")
+			if(prob(95))
+				m_type = EMOTE_SOUND
+
+				if(!(get_bodypart(BODY_ZONE_PRECISE_R_HAND) || get_bodypart(BODY_ZONE_PRECISE_L_HAND)))
+					to_chat(usr, "You need at least one hand in good working order to snap your fingers.")
+					return
+
+				var/M = handle_emote_param(param)
+
+				message = "<b>[src]</b> snaps [p_their()] fingers[M ? " at [M]" : ""]."
+				playsound(loc, 'modular_citadel/sound/voice/snap2.ogg', 50, 1, -1)
+			else
+				message = "<span class='danger'><b>[src]</b> snaps [p_their()] fingers right off!</span>"
+				playsound(loc, 'sound/effects/snap.ogg', 50, 1)
+		
+		if("snap3")
+			if(prob(95))
+				m_type = EMOTE_SOUND
+
+				if(!(get_bodypart(BODY_ZONE_PRECISE_R_HAND) || get_bodypart(BODY_ZONE_PRECISE_L_HAND)))
+					to_chat(usr, "You need at least one hand in good working order to snap your fingers.")
+					return
+
+				var/M = handle_emote_param(param)
+
+				message = "<b>[src]</b> snaps [p_their()] fingers[M ? " at [M]" : ""]."
+				playsound(loc, 'modular_citadel/sound/voice/snap3.ogg', 50, 1, -1)
 			else
 				message = "<span class='danger'><b>[src]</b> snaps [p_their()] fingers right off!</span>"
 				playsound(loc, 'sound/effects/snap.ogg', 50, 1)
@@ -567,7 +601,7 @@
 			var/emotelist = "aflap(s), airguitar, blink(s), blink(s)_r, blush(es), bow(s)-(none)/mob, burp(s), choke(s), chuckle(s), clap(s), collapse(s), cough(s),cry, cries, custom, dance, dap(s)(none)/mob," \
 			+ " deathgasp(s), drool(s), eyebrow, fart(s), faint(s), flap(s), flip(s), frown(s), gasp(s), giggle(s), glare(s)-(none)/mob, grin(s), groan(s), grumble(s)," \
 			+ " hug(s)-(none)/mob, hem, jump, laugh(s), look(s)-(none)/mob, moan(s), mumble(s), nod(s), pale(s), quiver(s), raise(s), salute(s)-(none)/mob, scream(s), shake(s)," \
-			+ " shiver(s), shrug(s), sigh(s), slap(s)-(none)/mob, smile(s),snap(s), sneeze(s), sniff(s), snore(s), stare(s)-(none)/mob, tremble(s), twitch(es), twitch(es)_s," \
+			+ " shiver(s), shrug(s), sigh(s), slap(s)-(none)/mob, smile(s), snap(s), snap2, snap3, sneeze(s), sniff(s), snore(s), stare(s)-(none)/mob, tremble(s), twitch(es), twitch(es)_s," \
 			+ " wave(s),  whimper(s), wink(s), yawn(s)"
 
 //			switch(dna.species.name)
