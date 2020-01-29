@@ -18,6 +18,7 @@
 	announceWhen	= 1
 	var/list/wave_type
 	var/wave_name = "normal"
+	var/direction
 
 /datum/round_event/meteor_wave/setup()
 	announceWhen = 1
@@ -38,6 +39,8 @@
 			"normal" = 50,
 			"threatening" = 40,
 			"catastrophic" = 10))
+	if(!direction)
+		direction = pick(GLOB.cardinals)
 	switch(wave_name)
 		if("normal")
 			wave_type = GLOB.meteors_normal
@@ -59,11 +62,25 @@
 			kill()
 
 /datum/round_event/meteor_wave/announce(fake)
+<<<<<<< HEAD
 	priority_announce("Meteors have been detected on collision course with the station. Estimated time until impact: [round(startWhen/60)] minutes.[GLOB.singularity_counter ? " Warning: Anomalous gravity pulse detected, Syndicate technology interference likely." : ""]", "Meteor Alert", "meteors")
+=======
+	var/directionstring
+	switch(direction)
+		if(NORTH)
+			directionstring = " towards the fore"
+		if(SOUTH)
+			directionstring = " towards the aft"
+		if(EAST)
+			directionstring = " towards starboard"
+		if(WEST)
+			directionstring = " towards port"
+	priority_announce("Meteors have been detected on collision course with the station[directionstring]. Estimated time until impact: [round((startWhen * SSevents.wait) / 10, 0.1)] seconds.[GLOB.singularity_counter ? " Warning: Anomalous gravity pulse detected, Syndicate technology interference likely." : ""]", "Meteor Alert", "meteors")
+>>>>>>> bf97c2da3e... Merge pull request #10728 from kevinz000/hugbox_meteor_time
 
 /datum/round_event/meteor_wave/tick()
 	if(ISMULTIPLE(activeFor, 3))
-		spawn_meteors(5, wave_type) //meteor list types defined in gamemode/meteor/meteors.dm
+		spawn_meteors(5, wave_type, direction) //meteor list types defined in gamemode/meteor/meteors.dm
 
 /datum/round_event_control/meteor_wave/threatening
 	name = "Meteor Wave: Threatening"
