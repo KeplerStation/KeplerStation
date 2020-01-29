@@ -30,6 +30,13 @@ GLOBAL_VAR(world_virus_log)
 GLOBAL_PROTECT(world_virus_log)
 GLOBAL_VAR(world_map_error_log)
 GLOBAL_PROTECT(world_map_error_log)
+<<<<<<< HEAD
+=======
+GLOBAL_VAR(subsystem_log)
+GLOBAL_PROTECT(subsystem_log)
+GLOBAL_VAR(reagent_log)
+GLOBAL_PROTECT(reagent_log)
+>>>>>>> cf3466252e... Merge pull request #10694 from Citadel-Station-13/kevinz000-patch-4
 GLOBAL_VAR(world_crafting_log)
 GLOBAL_PROTECT(world_crafting_log)
 
