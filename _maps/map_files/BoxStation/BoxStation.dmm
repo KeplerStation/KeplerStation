@@ -55207,8 +55207,343 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/disposal)
+<<<<<<< HEAD
 "qeQ" = (
 /obj/effect/turf_decal/stripes/line{
+=======
+"pLt" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	areastring = "/area/security/main";
+	dir = 4;
+	name = "Firing Range APC";
+	pixel_x = 24
+	},
+/turf/open/floor/plasteel,
+/area/security/prison)
+"pNH" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/door/window,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/theatre)
+"pNI" = (
+/obj/effect/turf_decal/bot,
+/obj/structure/sign/poster/official/pda_ad{
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
+"pPE" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue,
+/obj/machinery/door/window/eastleft{
+	name = "Blue Corner"
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/locker)
+"pQr" = (
+/obj/structure/table,
+/obj/machinery/atmospherics/components/unary/vent_pump/on,
+/obj/item/clothing/glasses/sunglasses{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/clothing/glasses/sunglasses{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/clothing/ears/earmuffs{
+	pixel_x = -3;
+	pixel_y = -2
+	},
+/obj/item/clothing/ears/earmuffs{
+	pixel_x = -3;
+	pixel_y = -2
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = 24
+	},
+/turf/open/floor/plasteel,
+/area/security/prison)
+"pQD" = (
+/obj/structure/sign/poster/official/ion_rifle,
+/turf/closed/wall/r_wall,
+/area/ai_monitored/security/armory)
+"pSf" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness)
+"pTn" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 5
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/terminal,
+/turf/closed/wall/r_wall,
+/area/engine/gravity_generator)
+"pTR" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/radio/intercom{
+	pixel_y = 25
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
+"pUl" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/command{
+	name = "Command Access To Vault";
+	req_access = "19"
+	},
+/turf/open/floor/plasteel/dark,
+/area/bridge/meeting_room)
+"pZv" = (
+/obj/machinery/shower{
+	dir = 8
+	},
+/turf/open/floor/mineral/titanium/blue,
+/area/crew_quarters/dorms)
+"qbx" = (
+/obj/structure/table/wood/fancy,
+/obj/item/reagent_containers/food/drinks/soda_cans/starkist{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness)
+"qeQ" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/science/circuit)
+"qje" = (
+/obj/effect/turf_decal/tile/green{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/starboard)
+"qkC" = (
+/obj/machinery/power/apc{
+	areastring = "/area/maintenance/starboard/fore";
+	dir = 1;
+	name = "Starboard Bow Maintenance APC";
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
+"qlr" = (
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/structure/window{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/locker)
+"qlF" = (
+/obj/structure/lattice,
+/turf/closed/wall,
+/area/security/prison)
+"qmM" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plasteel,
+/area/engine/gravity_generator)
+"qoP" = (
+/obj/machinery/airalarm{
+	pixel_y = 23
+	},
+/obj/structure/chair/sofa/left,
+/turf/open/floor/carpet,
+/area/crew_quarters/dorms)
+"qpA" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/sign/poster/official/cohiba_robusto_ad{
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel/grimy,
+/area/security/detectives_office)
+"qux" = (
+/obj/structure/chair/sofa/left{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness)
+"quT" = (
+/obj/structure/lattice,
+/obj/structure/grille/broken,
+/turf/open/space/basic,
+/area/space/nearstation)
+"qvM" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/open/floor/circuit,
+/area/ai_monitored/nuke_storage)
+"qwe" = (
+/turf/open/floor/plasteel/white/side{
+	dir = 4
+	},
+/area/crew_quarters/theatre)
+"qwB" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/engineering/glass{
+	name = "Gravity Generator";
+	req_access_txt = "11"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/open/floor/plasteel/dark,
+/area/engine/gravity_generator)
+"qxc" = (
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/machinery/computer/slot_machine,
+/obj/item/coin/iron,
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
+"qAQ" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/table,
+/obj/item/storage/firstaid/regular{
+	pixel_y = 5
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness)
+"qBc" = (
+/turf/open/floor/carpet,
+/area/crew_quarters/theatre)
+"qBe" = (
+/obj/structure/chair/comfy/black{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 8
+	},
+/turf/open/floor/carpet,
+/area/bridge/meeting_room)
+"qEv" = (
+/obj/structure/table/wood/fancy,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/item/reagent_containers/food/drinks/britcup{
+	desc = "Kingston's personal cup.";
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness)
+"qHB" = (
+/obj/structure/chair/stool{
+	pixel_y = 8
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/open/floor/carpet{
+	icon_state = "carpetsymbol"
+	},
+/area/crew_quarters/theatre)
+"qIf" = (
+/obj/machinery/door/airlock{
+	name = "Unisex Restrooms"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/dark,
+/area/crew_quarters/bar)
+"qIw" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/carpet,
+/area/crew_quarters/cryopod)
+"qJZ" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/carpet,
+/area/crew_quarters/theatre)
+"qMu" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/security/prison)
+"qNs" = (
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp/green{
+	on = 0;
+	pixel_x = -7;
+	pixel_y = 12
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on,
+/turf/open/floor/carpet,
+/area/crew_quarters/dorms)
+"qOf" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+>>>>>>> 2643fd053b... Merge pull request #10748 from Trilbyspaceclone/door-
 	dir = 8
 	},
 /turf/open/floor/plasteel,
