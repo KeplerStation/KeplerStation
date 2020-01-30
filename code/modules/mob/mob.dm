@@ -565,10 +565,12 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 		M.show_inv(user)
 
 /mob/proc/is_muzzled()
-	return 0
+	return FALSE
 
 /mob/Stat()
 	..()
+
+	//This is only called from client/Stat(), let's assume client exists.
 
 	if(statpanel("Status"))
 		if (client)
@@ -638,8 +640,6 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 				if(A.IsObscured())
 					continue
 				statpanel(listed_turf.name, null, A)
-
-
 	if(mind)
 		add_spells_to_statpanel(mind.spell_list)
 		var/datum/antagonist/changeling/changeling = mind.has_antag_datum(/datum/antagonist/changeling)
