@@ -304,15 +304,9 @@ GLOBAL_LIST_EMPTY(PDAs)
 				dat += "<ul>"
 				if (cartridge)
 					if(cartridge.bot_access_flags)
-<<<<<<< HEAD
 						dat += "<li>[PDAIMG(medbot)]<a href='byond://?src=[REF(src)];choice=54'>Bots Access</a></li>"
-=======
-						dat += "<li><a href='byond://?src=[REF(src)];choice=54'>[PDAIMG(medbot)]Bots Access</a></li>"
-					if (cartridge.access & CART_JANITOR)
-						dat += "<li><a href='byond://?src=[REF(src)];choice=49'>[PDAIMG(bucket)]Custodial Locator</a></li>"
 					if(cartridge.access & CART_MIME)
 						dat += "<li><a href='byond://?src=[REF(src)];choice=55'>[PDAIMG(emoji)]Emoji Guidebook</a></li>"
->>>>>>> e6e545b1f2... Merge pull request #9860 from Ghommie/Ghommie-cit374
 					if (istype(cartridge.radio))
 						dat += "<li>[PDAIMG(signaler)]<a href='byond://?src=[REF(src)];choice=40'>Signaler System</a></li>"
 					if (cartridge.access & CART_REAGENT_SCANNER)
