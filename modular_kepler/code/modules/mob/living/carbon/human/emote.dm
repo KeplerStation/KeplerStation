@@ -35,13 +35,20 @@
 //
 //			if(!found_machine_head)								//Everyone else fails, skip the emote attempt
 //				return								//Everyone else fails, skip the emote attempt
-
+		//Moths
 		if("msqueak")
 			if(ismoth(src))
 				on_CD = handle_emote_CD()
 			else
 				return ..()
 		
+		if("chitter", "chitters")
+			if(ismoth(src))
+				on_CD = handle_emote_CD()
+			else
+				return ..()
+
+		//Slimes
 		if("squish", "squishes")
 			if(isjellyperson(src))	//Only Jelly People can squish
 				on_CD = handle_emote_CD()			//proc located in code\modules\mob\emote.dm'
@@ -97,7 +104,7 @@
 //			message = "<B>[src]</B> beeps[M ? " at [M]" : ""]."
 //			playsound(loc, 'sound/machines/twobeep.ogg', 50, 0)
 //			m_type = EMOTE_SOUND
-
+		//Moths
 		if("msqueak")
 			var/M = handle_emote_param(param)
 
@@ -105,6 +112,14 @@
 			playsound(loc, 'modular_citadel/sound/voice/mothsqueak.ogg', 50, 1, -1)
 			m_type = EMOTE_SOUND
 
+		if("chitter", "chitters")
+			var/M = handle_emote_param(param)
+
+			message = "<B>[src]</B> chitters[M ? " at [M]" : ""]."
+			playsound(loc, 'sound/voice/moth/mothchitter.ogg', 50, 1)
+			m_type = EMOTE_SOUND
+
+		//Slimes
 		if("squish", "squishes")
 			var/M = handle_emote_param(param)
 
@@ -183,10 +198,10 @@
 				message = "<B>[src]</B> claps silently."
 				m_type = EMOTE_VISUAL
 			else
-				m_type = EMOTE_SOUND
-				if (!get_bodypart(BODY_ZONE_L_ARM) || !get_bodypart(BODY_ZONE_R_ARM))
+				if(!(has_left_hand() && has_right_hand()))
 					to_chat(usr, "You need hands in order to clap.")
 					return
+				m_type = EMOTE_SOUND
 				var/clap = pick('sound/misc/clap1.ogg',
 				            'sound/misc/clap2.ogg',
 				            'sound/misc/clap3.ogg',
@@ -543,13 +558,12 @@
 				m_type = EMOTE_AUDIBLE
 
 		if("snap", "snaps")
+			if(!(has_left_hand() || has_right_hand()))
+				to_chat(usr, "You need at least one hand in good working order to snap your fingers.")
+				return
+			
 			if(prob(95))
 				m_type = EMOTE_SOUND
-
-				if(!(get_bodypart(BODY_ZONE_PRECISE_R_HAND) || get_bodypart(BODY_ZONE_PRECISE_L_HAND)))
-					to_chat(usr, "You need at least one hand in good working order to snap your fingers.")
-					return
-
 				var/M = handle_emote_param(param)
 
 				message = "<b>[src]</b> snaps [p_their()] fingers[M ? " at [M]" : ""]."
@@ -559,13 +573,12 @@
 				playsound(loc, 'sound/effects/snap.ogg', 50, 1)
 
 		if("snap2")
+			if(!(has_left_hand() || has_right_hand()))
+				to_chat(usr, "You need at least one hand in good working order to snap your fingers.")
+				return
+			
 			if(prob(95))
 				m_type = EMOTE_SOUND
-
-				if(!(get_bodypart(BODY_ZONE_PRECISE_R_HAND) || get_bodypart(BODY_ZONE_PRECISE_L_HAND)))
-					to_chat(usr, "You need at least one hand in good working order to snap your fingers.")
-					return
-
 				var/M = handle_emote_param(param)
 
 				message = "<b>[src]</b> snaps [p_their()] fingers[M ? " at [M]" : ""]."
@@ -575,13 +588,12 @@
 				playsound(loc, 'sound/effects/snap.ogg', 50, 1)
 		
 		if("snap3")
+			if(!(has_left_hand() || has_right_hand()))
+				to_chat(usr, "You need at least one hand in good working order to snap your fingers.")
+				return
+			
 			if(prob(95))
 				m_type = EMOTE_SOUND
-
-				if(!(get_bodypart(BODY_ZONE_PRECISE_R_HAND) || get_bodypart(BODY_ZONE_PRECISE_L_HAND)))
-					to_chat(usr, "You need at least one hand in good working order to snap your fingers.")
-					return
-
 				var/M = handle_emote_param(param)
 
 				message = "<b>[src]</b> snaps [p_their()] fingers[M ? " at [M]" : ""]."
@@ -625,9 +637,9 @@
 //				if(H && H.is_robotic())
 //					emotelist += "\nRobotic head specific emotes :- beep(s)-(none)/mob, buzz(es)-none/mob, no-(none)/mob, ping(s)-(none)/mob, yes-(none)/mob, buzz2-(none)/mob"
 			if(ismoth(src))
-				emotelist += "\nMoth people specific emotes :- msqueak-(none)/mob"
+				emotelist += "\nMoth people specific emotes :- msqueak-(none)/mob, chitter(s)."
 			if(isslimeperson(src))
-				emotelist += "\nSlime people specific emotes :- squish(es)-(none)/mob"
+				emotelist += "\nSlime people specific emotes :- squish(es)-(none)/mob."
 
 			to_chat(src, emotelist)
 		else
