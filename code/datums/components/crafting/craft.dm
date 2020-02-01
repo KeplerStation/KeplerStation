@@ -454,9 +454,4 @@
 /datum/mind/proc/teach_crafting_recipe(R)
 	if(!learned_recipes)
 		learned_recipes = list()
-<<<<<<< HEAD:code/modules/crafting/craft.dm
 	learned_recipes |= R
-=======
-	learned_recipes |= R
-	
->>>>>>> 051811ed46... Merge pull request #10811 from Arturlang/crafting_componitization:code/datums/components/crafting/craft.dm
