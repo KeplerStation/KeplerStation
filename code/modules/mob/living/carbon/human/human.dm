@@ -24,8 +24,7 @@
 	create_internal_organs() //most of it is done in set_species now, this is only for parent call
 	physiology = new()
 
-	handcrafting = new()
-
+	AddComponent(/datum/component/personal_crafting)
 	. = ..()
 
 	if(CONFIG_GET(flag/disable_stambuffer))
@@ -42,10 +41,6 @@
 /mob/living/carbon/human/Destroy()
 	QDEL_NULL(physiology)
 	return ..()
-
-
-/mob/living/carbon/human/OpenCraftingMenu()
-	handcrafting.ui_interact(src)
 
 /mob/living/carbon/human/prepare_data_huds()
 	//Update med hud images...
