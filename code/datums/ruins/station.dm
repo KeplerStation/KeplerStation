@@ -34,8 +34,6 @@
 	id = "engine_tesla"
 	suffix = "Box/Engine/engine_tesla.dmm"
 	name = "Box Tesla"
-<<<<<<< HEAD
-=======
 
 /datum/map_template/ruin/station/box/engine/teg
 	id = "engine_teg"
@@ -57,10 +55,3 @@
 	suffix = "Box/Engine/engine_tesla.dmm"
 	name = "Box P.A.C.M.A.N"
 
-// Lavaland
-	// Mining Base
-/datum/map_template/ruin/station/lavaland/mining_base
-	id = "mining_public_01"
-	suffix = "Lavaland/Mining_Station/Mining_Station_Public_01.dmm"
-	name = "Public Mining Base"
->>>>>>> d19b7a7695... Merge pull request #10744 from r4d6/Moar-Engines
