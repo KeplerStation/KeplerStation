@@ -467,6 +467,7 @@ There are several things that need to be remembered:
 	if(wear_mask)
 		var/obj/item/clothing/mask/M = wear_mask
 		remove_overlay(FACEMASK_LAYER)
+<<<<<<< HEAD
 		if(M.mutantrace_variation)
 			if(M.muzzle_var == ALT_STYLE)
 				M.alternate_worn_icon = 'icons/mob/mask_muzzled.dmi'
@@ -474,6 +475,22 @@ There are several things that need to be remembered:
 				M.alternate_worn_icon = null
 
 		overlays_standing[FACEMASK_LAYER] = M.build_worn_icon(state = wear_mask.icon_state, default_layer = FACEMASK_LAYER, default_icon_file = ((wear_mask.alternate_worn_icon) ? M.alternate_worn_icon : 'icons/mob/mask.dmi'))
+=======
+		var/alt_icon = M.alternate_worn_icon || 'icons/mob/mask.dmi'
+		var/muzzled = FALSE
+		var/variation_flag = NONE
+		if(head && (head.flags_inv & HIDEMASK))
+			return
+		if(("mam_snouts" in dna.species.default_features) && dna.features["mam_snouts"] != "None")
+			muzzled = TRUE
+		if(!muzzled && ("snout" in dna.species.default_features) && dna.features["snout"] != "None")
+			muzzled = TRUE
+		if(muzzled && M.mutantrace_variation & STYLE_MUZZLE)
+			alt_icon = 'icons/mob/mask_muzzled.dmi'
+			variation_flag |= STYLE_MUZZLE
+
+		overlays_standing[FACEMASK_LAYER] = M.build_worn_icon(wear_mask.icon_state, FACEMASK_LAYER, alt_icon, FALSE, NO_FEMALE_UNIFORM, variation_flag, FALSE)
+>>>>>>> 1c5fe85545... Merge pull request #10793 from Tupinambis/MaskBugFix
 		var/mutable_appearance/mask_overlay = overlays_standing[FACEMASK_LAYER]
 
 		if(OFFSET_FACEMASK in dna.species.offset_features)
