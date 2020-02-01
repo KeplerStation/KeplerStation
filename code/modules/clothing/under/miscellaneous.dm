@@ -111,6 +111,9 @@
 	item_color = "officer"
 	alt_covers_chest = TRUE
 
+/obj/item/clothing/under/rank/centcom_officer/syndicate
+	has_sensor = NO_SENSORS
+
 /obj/item/clothing/under/rank/centcom_commander
 	desc = "It's a jumpsuit worn by corporate's highest-tier Commanders."
 	name = "corporate officer's jumpsuit"
