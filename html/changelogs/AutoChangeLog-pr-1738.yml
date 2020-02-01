@@ -1,0 +1,4 @@
+author: "KeplerStation-Bot"
+delete-after: True
+changes: 
+  - tweak: "uplink centcomm suit doesn't have sensors"
