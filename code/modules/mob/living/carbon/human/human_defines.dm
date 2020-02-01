@@ -49,7 +49,6 @@
 
 	var/name_override //For temporary visible name changes
 
-	var/datum/personal_crafting/handcrafting
 	var/datum/physiology/physiology
 
 	var/list/datum/bioware = list()
