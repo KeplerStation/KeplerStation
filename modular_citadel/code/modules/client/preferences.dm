@@ -16,9 +16,6 @@
 	var/widescreenpref = TRUE
 	var/autostand = TRUE
 
-	// stuff that was in base
-	max_save_slots = 10
-
 
 /datum/preferences/New(client/C)
 	..()
