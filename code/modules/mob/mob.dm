@@ -455,8 +455,10 @@ mob/visible_message(message, self_message, blind_message, vision_distance = DEFA
 	return
 
 /mob/proc/transfer_ckey(mob/new_mob, send_signal = TRUE)
-	if(!ckey || !new_mob)
-		CRASH("transfer_ckey() called [ckey ? "" : "on a ckey-less mob[new_mob ? "" : " and "]"][new_mob ? "" : "without a valid mob target"]!")
+	if(!new_mob || (!ckey && new_mob.ckey))
+		CRASH("transfer_ckey() called [new_mob ? "on ckey-less mob with a player mob as target" : "without a valid mob target"]!")
+	if(!ckey)
+		return
 	SEND_SIGNAL(new_mob, COMSIG_MOB_PRE_PLAYER_CHANGE, new_mob, src)
 	new_mob.ckey = ckey
 	if(send_signal)
@@ -563,10 +565,12 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 		M.show_inv(user)
 
 /mob/proc/is_muzzled()
-	return 0
+	return FALSE
 
 /mob/Stat()
 	..()
+
+	//This is only called from client/Stat(), let's assume client exists.
 
 	if(statpanel("Status"))
 		if (client)
@@ -636,8 +640,6 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 				if(A.IsObscured())
 					continue
 				statpanel(listed_turf.name, null, A)
-
-
 	if(mind)
 		add_spells_to_statpanel(mind.spell_list)
 		var/datum/antagonist/changeling/changeling = mind.has_antag_datum(/datum/antagonist/changeling)

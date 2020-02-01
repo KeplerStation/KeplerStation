@@ -303,7 +303,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 			//These three are weird. For best performance, they are only a number when they're not being changed by the SDQL searching/execution code. They only become numbers when they finish changing.
 	var/list/obj_count_all
 	var/list/obj_count_eligible
-	var/list/obj_count_finished
+	var/obj_count_finished
 
 	//Statclick
 	var/obj/effect/statclick/SDQL2_delete/delete_click
@@ -400,7 +400,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 	stat("[id]		", delete_click.update("DELETE QUERY | STATE : [text_state()] | ALL/ELIG/FIN \
 	[islist(obj_count_all)? length(obj_count_all) : (isnull(obj_count_all)? "0" : obj_count_all)]/\
 	[islist(obj_count_eligible)? length(obj_count_eligible) : (isnull(obj_count_eligible)? "0" : obj_count_eligible)]/\
-	[islist(obj_count_finished)? length(obj_count_finished) : (isnull(obj_count_finished)? "0" : obj_count_finished)] - [get_query_text()]"))
+	[obj_count_finished] - [get_query_text()]"))
 	stat("			", action_click.update("[SDQL2_IS_RUNNING? "HALT" : "RUN"]"))
 
 /datum/SDQL2_query/proc/delete_click()
@@ -663,7 +663,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 		if("select")
 			var/list/text_list = list()
 			var/print_nulls = !(options & SDQL2_OPTION_SELECT_OUTPUT_SKIP_NULLS)
-			obj_count_finished = select_refs
+			obj_count_finished = length(select_refs)
 			for(var/i in found)
 				SDQL_print(i, text_list, print_nulls)
 				select_refs[REF(i)] = TRUE
@@ -681,8 +681,6 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 					obj_count_finished++
 					SDQL2_TICK_CHECK
 					SDQL2_HALT_CHECK
-	if(islist(obj_count_finished))
-		obj_count_finished = obj_count_finished.len
 	state = SDQL2_STATE_SWITCHING
 
 /datum/SDQL2_query/proc/SDQL_print(object, list/text_list, print_nulls = TRUE)

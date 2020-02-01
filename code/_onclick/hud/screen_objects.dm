@@ -66,12 +66,6 @@
 	icon_state = "craft"
 	screen_loc = ui_crafting
 
-/obj/screen/craft/Click()
-	var/mob/living/M = usr
-	if(isobserver(usr))
-		return
-	M.OpenCraftingMenu()
-
 /obj/screen/area_creator
 	name = "create new area"
 	icon = 'modular_kepler/icons/mob/screen_midnight.dmi'

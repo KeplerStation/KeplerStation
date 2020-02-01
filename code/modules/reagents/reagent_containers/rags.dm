@@ -8,7 +8,7 @@
 	reagent_flags = REFILLABLE | DRAINABLE
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = list()
-	APTFT_altclick = FALSE
+	container_flags = APTFT_VERB
 	volume = 5
 	spillable = FALSE
 	var/wipe_sound
@@ -46,7 +46,7 @@
 			C.visible_message("<span class='notice'>[user] has touched \the [C] with \the [src].</span>")
 			log_combat(user, C, "touched", log_object)
 
-	else if(istype(A) && src in user)
+	else if(istype(A) && (src in user))
 		user.visible_message("[user] starts to wipe down [A] with [src]!", "<span class='notice'>You start to wipe down [A] with [src]...</span>")
 		if(do_after(user, action_speed, target = A))
 			user.visible_message("[user] finishes wiping off [A]!", "<span class='notice'>You finish wiping off [A].</span>")

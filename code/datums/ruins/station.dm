@@ -34,3 +34,24 @@
 	id = "engine_tesla"
 	suffix = "Box/Engine/engine_tesla.dmm"
 	name = "Box Tesla"
+
+/datum/map_template/ruin/station/box/engine/teg
+	id = "engine_teg"
+	suffix = "Box/Engine/engine_tesla.dmm"
+	name = "Box TEG"
+
+/datum/map_template/ruin/station/box/engine/empty
+	id = "engine_empty"
+	suffix = "Box/Engine/engine_tesla.dmm"
+	name = "Box Empty"
+
+/datum/map_template/ruin/station/box/engine/am
+	id = "engine_am"
+	suffix = "Box/Engine/engine_tesla.dmm"
+	name = "Box Antimatter"
+
+/datum/map_template/ruin/station/box/engine/budget
+	id = "engine_budget"
+	suffix = "Box/Engine/engine_tesla.dmm"
+	name = "Box P.A.C.M.A.N"
+

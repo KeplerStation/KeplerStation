@@ -128,7 +128,7 @@
 /obj/item/robot_module/engineering/be_transformed_to(obj/item/robot_module/old_module)
 	var/mob/living/silicon/robot/R = loc
 	var/list/engymodels = list("Default", "Default - Treads", "Heavy", "Sleek", "Marina", "Can", "Spider", "Loader","Handy", "Pup Dozer")
-	if(R.client && R.client.ckey in list("nezuli"))
+	if(R.client && (R.client.ckey in list("nezuli")))
 		engymodels += "Alina"
 	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in engymodels
 	if(!borg_icon)

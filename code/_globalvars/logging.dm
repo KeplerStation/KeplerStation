@@ -30,6 +30,8 @@ GLOBAL_VAR(world_virus_log)
 GLOBAL_PROTECT(world_virus_log)
 GLOBAL_VAR(world_map_error_log)
 GLOBAL_PROTECT(world_map_error_log)
+GLOBAL_VAR(reagent_log)
+GLOBAL_PROTECT(reagent_log)
 GLOBAL_VAR(world_crafting_log)
 GLOBAL_PROTECT(world_crafting_log)
 
