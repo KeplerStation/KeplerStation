@@ -12,6 +12,8 @@
 	var/miming = FALSE
 	if(mind)
 		miming = mind.miming
+		if(has_quirk(/datum/quirk/mute) || has_trauma_type(/datum/brain_trauma/severe/mute)) //Double insured
+			miming = TRUE
 
 	//Emote Cooldown System (it's so simple!)
 	//handle_emote_CD() located in [code\modules\mob\emote.dm]
