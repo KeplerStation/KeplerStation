@@ -281,13 +281,21 @@
 //////////////////////////////// Misc Supplies ///////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
-/datum/supply_pack/misc/wrapping_paper
-	name = "Festive Wrapping Paper Crate"
-	desc = "Want to mail your loved ones gift-wrapped chocolates, stuffed animals, or the Clown's severed head? You can do all that, with this crate full of wrapping paper."
-	cost = 1000
-	contains = list(/obj/item/stack/wrapping_paper)
-	crate_type = /obj/structure/closet/crate/wooden
-	crate_name = "festive wrapping paper crate"
+/datum/supply_pack/misc/candles
+	name = "Candle Crate"
+	desc = "Set up a romantic dinner or host a séance with these extra candles and crayons."
+	cost = 850
+	contains = list(/obj/item/storage/fancy/candle_box,
+					/obj/item/storage/fancy/candle_box,
+					/obj/item/storage/box/matches)
+	crate_name = "candle crate"
+
+/datum/supply_pack/misc/diamondring
+	name = "Diamond Ring"
+	desc = "Show them your love is like a diamond: unbreakable and forever lasting. Shipped straight from child slave cartels in the space african mines."
+	cost = 10000
+	contains = list(/obj/item/storage/fancy/ringbox/diamond)
+	crate_name = "diamond ring crate"
 
 /datum/supply_pack/misc/funeral
 	name = "Funeral Supplies"
@@ -307,6 +315,16 @@
 					)
 	crate_name = "coffin"
 	crate_type = /obj/structure/closet/crate/coffin
+
+/datum/supply_pack/misc/jewelry
+	name = "Jewelry Crate"
+	desc = "Bling out with this crate of jewelry. Includes gold necklace and a set of two rings."
+	cost = 5000
+	contains = list(/obj/item/clothing/neck/necklace/dope,
+					/obj/item/storage/fancy/ringbox,
+					/obj/item/storage/fancy/ringbox/silver
+					)
+	crate_name = "jewelry crate"
 
 /datum/supply_pack/misc/jukebox
 	name = "Jukebox"
