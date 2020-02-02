@@ -322,6 +322,26 @@
 	for(var/i in 1 to 5)
 		new /obj/item/grenade/empgrenade(src)
 
+/obj/item/storage/box/minibombs
+	name = "box of syndicate minibombs"
+	desc = "A box containing 2 highly explosive syndicate minibombs."
+	icon_state = "syndiebox"
+	illustration = "frag"
+
+/obj/item/storage/box/minibombs/PopulateContents()
+	new /obj/item/grenade/syndieminibomb(src)
+	new /obj/item/grenade/syndieminibomb(src)
+
+/obj/item/storage/box/bombananas
+	name = "box of bombananas"
+	desc = "A box containing 2 highly explosive bombananas. Discard peel at enemy after consumption."
+	icon_state = "syndiebox"
+	illustration = "frag"
+
+/obj/item/storage/box/bombananas/PopulateContents()
+	new /obj/item/reagent_containers/food/snacks/grown/banana/bombanana(src)
+	new /obj/item/reagent_containers/food/snacks/grown/banana/bombanana(src)
+
 /obj/item/storage/box/trackimp
 	name = "boxed tracking implant kit"
 	desc = "Box full of scum-bag tracking utensils."
@@ -1242,3 +1262,32 @@
 	new /obj/item/reagent_containers/food/snacks/salad/fruit(src)
 	new /obj/item/reagent_containers/food/snacks/cracker(src)
 	new /obj/item/tank/internals/emergency_oxygen(src)
+<<<<<<< HEAD
+=======
+
+//Where do I put this?
+/obj/item/secbat
+	name = "Secbat box"
+	desc = "Contained inside is a secbat for use with law enforcement."
+	icon = 'icons/obj/storage.dmi'
+	icon_state = "box"
+	item_state = "syringe_kit"
+	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+
+/obj/item/secbat/attack_self(mob/user)
+	new /mob/living/simple_animal/hostile/retaliate/bat/secbat(user.loc)
+	to_chat(user, "<span class='notice'>You open the box, releasing the secbat!</span>")
+	var/obj/item/stack/sheet/cardboard/I = new(user.drop_location())
+	qdel(src)
+	user.put_in_hands(I)
+
+/obj/item/storage/box/marshmallow
+	name = "box of marshmallows"
+	desc = "A box of marshmallows."
+	illustration = "marshmallow"
+
+/obj/item/storage/box/marshmallow/PopulateContents()
+	for (var/i in 1 to 5)
+		new /obj/item/reagent_containers/food/snacks/marshmallow(src)
+>>>>>>> 3fc832fbe7... Merge pull request #10819 from Ghommie/Ghommie-cit541
