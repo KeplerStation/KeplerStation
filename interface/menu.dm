@@ -68,9 +68,15 @@ GLOBAL_LIST_EMPTY(menulist)
 	var/procpath/verbpath = Get_checked(C)
 	if (!verbpath || !(verbpath in typesof("[type]/verb")))
 		return
+<<<<<<< HEAD
 	
 	if (copytext(verbpath.name,1,2) == "@")
 		winset(C, null, list2params(list("command" = copytext(verbpath.name,2))))
+=======
+
+	if (verbpath.name[1] == "@")
+		winset(C, null, list2params(list("command" = copytext(verbpath.name, length(verbpath.name[1]) + 1))))
+>>>>>>> 33577e0d82... Merge pull request #10813 from Ghommie/Ghommie-cit540
 	else
 		winset(C, null, list2params(list("command" = replacetext(verbpath.name, " ", "-"))))
 
