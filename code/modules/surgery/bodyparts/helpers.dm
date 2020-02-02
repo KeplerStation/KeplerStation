@@ -17,9 +17,12 @@
 			return L
 	return FALSE
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 6f66d76680... Merge pull request #10705 from kevinz000/revert_poojawa_blood_1
 /mob/proc/has_left_hand(check_disabled = TRUE)
 	return TRUE
 
@@ -31,7 +34,7 @@
 	return FALSE
 
 /mob/living/carbon/alien/larva/has_left_hand()
-	return 1
+	return TRUE
 
 
 /mob/proc/has_right_hand(check_disabled = TRUE)
@@ -45,9 +48,7 @@
 	return FALSE
 
 /mob/living/carbon/alien/larva/has_right_hand()
-	return 1
-
-
+	return TRUE
 
 /mob/proc/has_left_leg()
 	return TRUE
@@ -68,7 +69,6 @@
 		return TRUE
 	else
 		return FALSE
-
 
 //Limb numbers
 /mob/proc/get_num_arms(check_disabled = TRUE)

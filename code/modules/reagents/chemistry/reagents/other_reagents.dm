@@ -939,7 +939,11 @@
 
 /datum/reagent/iron/on_mob_life(mob/living/carbon/C)
 	if(C.blood_volume < (BLOOD_VOLUME_NORMAL*C.blood_ratio))
+<<<<<<< HEAD
 		C.blood_volume += 0.5
+=======
+		C.blood_volume += 0.25
+>>>>>>> 6f66d76680... Merge pull request #10705 from kevinz000/revert_poojawa_blood_1
 	..()
 
 /datum/reagent/iron/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
