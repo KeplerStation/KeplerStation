@@ -3189,7 +3189,7 @@
 /area/security/main)
 "ajo" = (
 /obj/machinery/vending/coffee,
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_y = 32
 	},
 /obj/effect/turf_decal/tile/red{
@@ -3530,7 +3530,7 @@
 "akc" = (
 /obj/structure/table/wood,
 /obj/machinery/recharger,
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_y = 32
 	},
 /obj/machinery/light{
@@ -7002,7 +7002,7 @@
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "arK" = (
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_y = 32
 	},
 /obj/item/folder/yellow{
@@ -9356,7 +9356,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_y = 32
 	},
 /obj/effect/turf_decal/tile/blue{
@@ -11498,7 +11498,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hop)
 "aBF" = (
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_y = 32
 	},
 /obj/structure/bed/dogbed/ian,
@@ -14265,7 +14265,7 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
 	},
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_y = 32
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -17624,7 +17624,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
 "aQt" = (
-/obj/machinery/status_display,
+/obj/machinery/status_display/evac,
 /turf/closed/wall,
 /area/hallway/secondary/exit/departure_lounge)
 "aQu" = (
@@ -24467,7 +24467,7 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_y = 30
 	},
 /turf/open/floor/plasteel/dark,
@@ -37168,7 +37168,7 @@
 /area/medical/surgery)
 "bHc" = (
 /obj/machinery/computer/med_data,
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_y = 32
 	},
 /turf/open/floor/plasteel/freezer,
@@ -48980,7 +48980,7 @@
 /turf/open/space,
 /area/space/nearstation)
 "cmu" = (
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_x = -32
 	},
 /obj/structure/table,
