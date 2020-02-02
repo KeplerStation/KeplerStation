@@ -18,11 +18,8 @@
 	var/list/mob_type_ignore_stat_typecache
 	var/stat_allowed = CONSCIOUS
 	var/static/list/emote_list = list()
-<<<<<<< HEAD
 	var/list/restricted_species = list()
-=======
 	var/static/regex/stop_bad_mime = regex(@"says|exclaims|yells|asks")
->>>>>>> 33577e0d82... Merge pull request #10813 from Ghommie/Ghommie-cit540
 
 /datum/emote/New()
 	if(key_third_person)

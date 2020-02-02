@@ -631,17 +631,6 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 					punctbuffer = "!"
 			else if(question)
 				punctbuffer = "?"
-<<<<<<< HEAD
-			else if(periods)
-				if(periods > 1)
-					punctbuffer = "..."
-				else
-					punctbuffer = "" //Grammer nazis be damned
-			buffer = copytext(buffer, 1, cutoff) + punctbuffer
-		if(!findtext(buffer,GLOB.is_alphanumeric))
-			continue
-		if(!buffer || length(buffer) > 280 || length(buffer) <= cullshort || (buffer in accepted))
-=======
 			else if(periods > 1)
 				punctbuffer = "..."
 			else
@@ -649,7 +638,6 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 			buffer = copytext(buffer, 1, -cutoff) + punctbuffer
 		lentext = length_char(buffer)
 		if(!buffer || lentext > 280 || lentext <= cullshort || (buffer in accepted))
->>>>>>> 33577e0d82... Merge pull request #10813 from Ghommie/Ghommie-cit540
 			continue
 
 		accepted += buffer
@@ -778,18 +766,8 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 		prefix = ""
 
 	var/list/rearranged = list()
-<<<<<<< HEAD
-	for(var/i=1;i<=words.len;i++)
-		var/cword = pick(words)
-		words.Remove(cword)
-		var/suffix = copytext(cword,length(cword)-1,length(cword))
-		while(length(cword)>0 && (suffix in list(".",",",";","!",":","?")))
-			cword  = copytext(cword,1              ,length(cword)-1)
-			suffix = copytext(cword,length(cword)-1,length(cword)  )
-=======
 	while(word_boundaries.Find(message))
 		var/cword = word_boundaries.match
->>>>>>> 33577e0d82... Merge pull request #10813 from Ghommie/Ghommie-cit540
 		if(length(cword))
 			rearranged += cword
 	shuffle_inplace(rearranged)

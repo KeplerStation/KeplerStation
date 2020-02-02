@@ -8,17 +8,6 @@
 	if(message)
 		say(message)
 
-<<<<<<< HEAD
-=======
-/mob/say_mod(input, message_mode)
-	var/customsayverb = findtext(input, "*")
-	if(customsayverb && message_mode != MODE_WHISPER_CRIT)
-		message_mode = MODE_CUSTOM_SAY
-		return lowertext(copytext_char(input, 1, customsayverb))
-	else
-		return ..()
->>>>>>> 33577e0d82... Merge pull request #10813 from Ghommie/Ghommie-cit540
-
 /mob/verb/whisper_verb(message as text)
 	set name = "Whisper"
 	set category = "IC"

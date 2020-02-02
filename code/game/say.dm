@@ -126,20 +126,6 @@ GLOBAL_LIST_INIT(freqtospan, list(
 		return returntext
 	return "[copytext_char("[freq]", 1, 4)].[copytext_char("[freq]", 4, 5)]"
 
-<<<<<<< HEAD
-/proc/attach_spans(input, list/spans)
-	return "[message_spans_start(spans)][input]</span>"
-=======
-/atom/movable/proc/attach_spans(input, list/spans)
-	var/customsayverb = findtext(input, "*")
-	if(customsayverb)
-		input = capitalize(copytext(input, length(input[customsayverb]) + 1))
-	if(input)
-		return "[message_spans_start(spans)][input]</span>"
-	else
-		return
->>>>>>> 33577e0d82... Merge pull request #10813 from Ghommie/Ghommie-cit540
-
 /proc/message_spans_start(list/spans)
 	var/output = "<span class='"
 	for(var/S in spans)

@@ -72,42 +72,6 @@
 	strength = min(50, strength)
 	phrase = html_decode(phrase)
 	var/leng = length(phrase)
-<<<<<<< HEAD
-	var/counter=length(phrase)
-	var/newphrase=""
-	var/newletter=""
-	while(counter>=1)
-		newletter=copytext(phrase,(leng-counter)+1,(leng-counter)+2)
-		if(rand(1,100)<=strength*0.5)
-			if(lowertext(newletter)=="o")
-				newletter="u"
-			if(lowertext(newletter)=="s")
-				newletter="ch"
-			if(lowertext(newletter)=="a")
-				newletter="ah"
-			if(lowertext(newletter)=="u")
-				newletter="oo"
-			if(lowertext(newletter)=="c")
-				newletter="k"
-		if(rand(1,100) <= strength*0.25)
-			if(newletter==" ")
-				newletter="...huuuhhh..."
-			if(newletter==".")
-				newletter=" *BURP*."
-		if(rand(1,100) <= strength*0.5)
-			if(rand(1,5) == 1)
-				newletter+="'"
-			if(rand(1,5) == 1)
-				newletter+="[newletter]"
-			if(rand(1,5) == 1)
-				newletter+="[newletter][newletter]"
-		newphrase+="[newletter]";counter-=1
-	return newphrase
-
-
-/proc/cultslur(n) // Inflicted on victims of a stun talisman
-	var/phrase = html_decode(n)
-=======
 	. = ""
 	var/newletter = ""
 	var/rawchar = ""
@@ -143,7 +107,6 @@
 /// Makes you talk like you got cult stunned, which is slurring but with some dark messages
 /proc/cultslur(phrase) // Inflicted on victims of a stun talisman
 	phrase = html_decode(phrase)
->>>>>>> 33577e0d82... Merge pull request #10813 from Ghommie/Ghommie-cit540
 	var/leng = length(phrase)
 	. = ""
 	var/newletter = ""
