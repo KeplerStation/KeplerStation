@@ -59,10 +59,17 @@
 	category = SLOT_HEAD
 	path = /obj/item/clothing/head/rabbitears
 
+<<<<<<< HEAD
 /datum/gear/kittyears
 	name = "Kitty Ears"
 	category = SLOT_HEAD
 	path = /obj/item/clothing/head/kitty
+=======
+/datum/gear/mailmanhat
+	name = "Mailman's Hat"
+	category = SLOT_HEAD
+	path = /obj/item/clothing/head/mailman
+>>>>>>> fb32b018ef... Merge pull request #10838 from Owai-Seek/loadout
 
 //trek fancy Hats!
 /datum/gear/trekcap
@@ -107,3 +114,35 @@
 	name = "Green Santa Hat"
 	category = SLOT_HEAD
 	path = /obj/item/clothing/head/christmashatg
+<<<<<<< HEAD
+=======
+*/
+
+//Cowboy Stuff
+/datum/gear/cowboyhat
+	name = "Cowboy Hat, Brown"
+	category = SLOT_HEAD
+	path = /obj/item/clothing/head/cowboyhat
+
+/datum/gear/cowboyhat/black
+	name = "Cowboy Hat, Black"
+	category = SLOT_HEAD
+	path = /obj/item/clothing/head/cowboyhat/black
+
+/datum/gear/cowboyhat/white
+	name = "Cowboy Hat, White"
+	category = SLOT_HEAD
+	path = /obj/item/clothing/head/cowboyhat/white
+
+/datum/gear/cowboyhat/pink
+	name = "Cowboy Hat, Pink"
+	category = SLOT_HEAD
+	path = /obj/item/clothing/head/cowboyhat/pink
+
+/datum/gear/cowboyhat/sec
+	name = "Cowboy Hat, Security"
+	category = SLOT_HEAD
+	path = /obj/item/clothing/head/cowboyhat/sec
+	restricted_desc = "Security"
+	restricted_roles = list("Warden","Detective","Security Officer","Head of Security")
+>>>>>>> fb32b018ef... Merge pull request #10838 from Owai-Seek/loadout
