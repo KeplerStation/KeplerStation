@@ -286,6 +286,8 @@
 		/obj/item/reagent_containers/food/snacks/grown/oat = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/oatmealcookie
+	subcategory = CAT_PASTRY
+
 
 /datum/crafting_recipe/food/raisincookie
 	name = "Raisin cookie"
