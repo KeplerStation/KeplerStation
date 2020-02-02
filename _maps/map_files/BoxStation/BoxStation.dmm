@@ -8138,7 +8138,7 @@
 /turf/open/floor/wood,
 /area/lawoffice)
 "asa" = (
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_x = 32
 	},
 /obj/effect/turf_decal/tile/red{
@@ -14583,7 +14583,7 @@
 /turf/open/floor/plating,
 /area/chapel/main)
 "aHu" = (
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_x = 32
 	},
 /turf/open/floor/plasteel/white/corner{
@@ -17820,7 +17820,7 @@
 /turf/open/floor/plasteel,
 /area/crew_quarters/locker)
 "aPE" = (
-/obj/machinery/status_display,
+/obj/machinery/status_display/evac,
 /turf/closed/wall,
 /area/crew_quarters/locker)
 "aPF" = (
@@ -17911,7 +17911,7 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/machinery/status_display,
+/obj/machinery/status_display/evac,
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
@@ -17943,7 +17943,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/status_display,
+/obj/machinery/status_display/evac,
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge blast";
@@ -19217,7 +19217,7 @@
 /area/hallway/secondary/exit)
 "aTl" = (
 /obj/machinery/vending/cola/random,
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	layer = 4;
 	pixel_y = 32
 	},
@@ -19258,7 +19258,7 @@
 /area/hallway/secondary/exit)
 "aTr" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_x = 32
 	},
 /turf/open/floor/plasteel,
@@ -22456,7 +22456,7 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/warehouse)
 "baZ" = (
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	layer = 4;
 	pixel_y = 32
 	},
@@ -22622,7 +22622,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
 "bbv" = (
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_y = 32
 	},
 /obj/structure/cable{
@@ -23276,7 +23276,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_x = -32
 	},
 /obj/effect/turf_decal/tile/blue{
@@ -24196,7 +24196,7 @@
 /turf/closed/wall/r_wall,
 /area/ai_monitored/turret_protected/ai_upload)
 "bfw" = (
-/obj/machinery/status_display,
+/obj/machinery/status_display/evac,
 /turf/closed/wall/r_wall,
 /area/ai_monitored/turret_protected/ai_upload)
 "bfx" = (
@@ -26166,7 +26166,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_x = 32
 	},
 /obj/machinery/aug_manipulator,
@@ -28473,7 +28473,7 @@
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "bpw" = (
-/obj/machinery/status_display,
+/obj/machinery/status_display/evac,
 /turf/closed/wall,
 /area/medical/medbay/central)
 "bpx" = (
@@ -29815,7 +29815,7 @@
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "bsz" = (
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_x = -32
 	},
 /turf/open/floor/plasteel/white/side{
@@ -33819,7 +33819,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_y = -32
 	},
 /turf/open/floor/plasteel,
@@ -36692,7 +36692,7 @@
 /area/medical/sleeper)
 "bIe" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_x = -32
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -43794,7 +43794,7 @@
 /turf/open/floor/plating,
 /area/tcommsat/computer)
 "bZr" = (
-/obj/machinery/status_display,
+/obj/machinery/status_display/evac,
 /turf/closed/wall,
 /area/tcommsat/computer)
 "bZs" = (
@@ -50968,7 +50968,7 @@
 /area/ai_monitored/turret_protected/aisat_interior)
 "cuc" = (
 /obj/structure/rack,
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_y = -32
 	},
 /obj/item/storage/box/donkpockets,
@@ -51563,7 +51563,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "cvf" = (
-/obj/machinery/status_display,
+/obj/machinery/status_display/evac,
 /turf/closed/wall/r_wall,
 /area/ai_monitored/turret_protected/ai)
 "cvg" = (
@@ -52088,7 +52088,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/status_display{
+/obj/machinery/status_display/evac{
 	pixel_x = -32
 	},
 /turf/open/floor/circuit,
