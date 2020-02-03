@@ -347,11 +347,8 @@
 		icon_state = "dualsaber[item_color][wielded]"
 	else
 		icon_state = "dualsaber0"
-<<<<<<< HEAD
 
 	SEND_SIGNAL(src, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
-=======
->>>>>>> 6f66d76680... Merge pull request #10705 from kevinz000/revert_poojawa_blood_1
 	clean_blood()
 
 /obj/item/twohanded/dualsaber/attack(mob/target, mob/living/carbon/human/user)

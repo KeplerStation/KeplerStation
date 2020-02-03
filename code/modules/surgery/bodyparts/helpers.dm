@@ -17,12 +17,6 @@
 			return L
 	return FALSE
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 6f66d76680... Merge pull request #10705 from kevinz000/revert_poojawa_blood_1
 /mob/proc/has_left_hand(check_disabled = TRUE)
 	return TRUE
 

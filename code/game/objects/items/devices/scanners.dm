@@ -270,19 +270,10 @@ SLIME SCANNER
 				var/datum/reagent/R = GLOB.chemical_reagents_list[blood_typepath]
 				if(R)
 					blood_type = R.name
-<<<<<<< HEAD
-				else
-					blood_type = blood_id
-			if(C.blood_volume <= (BLOOD_VOLUME_SAFE*C.blood_ratio) && C.blood_volume > (BLOOD_VOLUME_OKAY*C.blood_ratio))
-				msg += "<span class='danger'>LOW blood level [blood_percent] %, [C.blood_volume] cl,</span> <span class='info'>type: [blood_type]</span>\n"
-			else if(C.blood_volume <= (BLOOD_VOLUME_OKAY*C.blood_ratio))
-				msg += "<span class='danger'>CRITICAL blood level [blood_percent] %, [C.blood_volume] cl,</span> <span class='info'>type: [blood_type]</span>\n"
-=======
 			if(C.scan_blood_volume() <= (BLOOD_VOLUME_SAFE*C.blood_ratio) && C.scan_blood_volume() > (BLOOD_VOLUME_OKAY*C.blood_ratio))
 				msg += "<span class='danger'>LOW blood level [blood_percent] %, [C.scan_blood_volume()] cl,</span> <span class='info'>type: [blood_type]</span>\n"
 			else if(C.scan_blood_volume() <= (BLOOD_VOLUME_OKAY*C.blood_ratio))
 				msg += "<span class='danger'>CRITICAL blood level [blood_percent] %, [C.scan_blood_volume()] cl,</span> <span class='info'>type: [blood_type]</span>\n"
->>>>>>> 6f66d76680... Merge pull request #10705 from kevinz000/revert_poojawa_blood_1
 			else
 				msg += "<span class='info'>Blood level [blood_percent] %, [C.blood_volume] cl, type: [blood_type]</span>\n"
 
