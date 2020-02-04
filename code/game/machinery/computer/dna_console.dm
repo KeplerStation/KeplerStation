@@ -288,10 +288,22 @@
 			temp_html += "<br><div class='line'><div class='statusLabel'>Structural Enzymes:</div><div class='statusValue'><div class='clearBoth'>"
 			if(viable_occupant)
 				temp_html += "<div class='dnaBlockNumber'>1</div>"
+<<<<<<< HEAD
 				var/len = length(viable_occupant.dna.struc_enzymes)
 				for(var/i=1, i<=len, i++)
 					temp_html += "<a class='dnaBlock' href='?src=[REF(src)];task=pulsese;num=[i];'>[copytext(viable_occupant.dna.struc_enzymes,i,i+1)]</a>"
 					if ((i % max_line_len) == 0)
+=======
+				var/char = ""
+				var/se_text = viable_occupant.dna.struc_enzymes
+				var/len_byte = length(se_text)
+				var/char_it = 0
+				for(var/byte_it = 1, byte_it <= len_byte, byte_it += length(char))
+					char_it++
+					char = se_text[byte_it]
+					temp_html += "<a class='dnaBlock' href='?src=[REF(src)];task=pulsese;num=[char_it];'>[char]</a>"
+					if((char_it % max_line_len) == 0)
+>>>>>>> 3245424356... Merge pull request #10884 from Citadel-Station-13/Ghommie-patch-7
 						temp_html += "</div><div class='clearBoth'>"
 					if((i % DNA_BLOCK_SIZE) == 0 && i < len)
 						temp_html += "<div class='dnaBlockNumber'>[(i / DNA_BLOCK_SIZE) + 1]</div>"
