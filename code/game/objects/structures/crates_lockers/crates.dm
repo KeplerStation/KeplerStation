@@ -81,6 +81,18 @@
 	material_drop = /obj/item/stack/sheet/mineral/wood
 	material_drop_amount = 5
 
+<<<<<<< HEAD
+=======
+/obj/structure/closet/crate/coffin/examine(mob/user)
+	. = ..()
+	if(user.mind?.has_antag_datum(ANTAG_DATUM_BLOODSUCKER))
+		. += {"<span class='cult'>This is a coffin which you can use to regenerate your burns and other wounds faster.</span>"}
+		. += {"<span class='cult'>You can also thicken your blood if you survive the day, and hide from the sun safely while inside.</span>"}
+	/*	if(user.mind.has_antag_datum(ANTAG_DATUM_VASSAL)
+			. += {"<span class='cult'>This is a coffin which your master can use to shield himself from the unforgiving sun.\n
+			You yourself are still human and dont need it. Yet.</span>"} */
+
+>>>>>>> 97583bd98f... Merge pull request #10853 from Ghommie/Ghommie-cit549
 /obj/structure/closet/crate/internals
 	desc = "An internals crate."
 	name = "internals crate"
