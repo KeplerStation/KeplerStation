@@ -28,14 +28,32 @@
 
 	if(iscarbon(L))
 		var/mob/living/carbon/C = L
+
+/* CURRENT CHANGE
 		if(C.get_blood_id() == (/datum/reagent/blood || /datum/reagent/blood/jellyblood) && (method == INJECT || (method == INGEST && C.dna && C.dna.species && (DRINKSBLOOD in C.dna.species.species_traits))))
 			if(!data || !(data["blood_type"] in get_safe_blood(C.dna.blood_type)))
 				C.reagents.add_reagent(/datum/reagent/toxin, reac_volume * 0.5)
 			else
 				C.blood_volume = min(C.blood_volume + round(reac_volume, 0.1), BLOOD_VOLUME_MAXIMUM)
+*/
+		var/blood_id = C.get_blood_id()
+		if((HAS_TRAIT(C, TRAIT_NOMARROW) || blood_id == "blood" || blood_id == "jellyblood") && (method == INJECT || (method == INGEST && C.dna && C.dna.species && (DRINKSBLOOD in C.dna.species.species_traits))))
+			C.blood_volume = min(C.blood_volume + round(reac_volume, 0.1), BLOOD_VOLUME_MAXIMUM * C.blood_ratio)
+			// we don't care about bloodtype here, we're just refilling the mob
+// >>>>>>> c39a5d0462... Merge pull request #10011 from Arturlang/Bloodsuckers
 
 	if(reac_volume >= 10 && istype(L))
 		L.add_blood_DNA(list(data["blood_DNA"] = data["blood_type"]))
+
+/datum/reagent/blood/on_mob_life(mob/living/carbon/C)	//Because lethals are preferred over stamina. damnifino.
+	if((HAS_TRAIT(C, TRAIT_NOMARROW)))
+		return //We dont want vampires getting toxed from blood
+	var/blood_id = C.get_blood_id()
+	if((blood_id == "blood" || blood_id == "jellyblood"))
+		if(!data || !(data["blood_type"] in get_safe_blood(C.dna.blood_type)))	//we only care about bloodtype here because this is where the poisoning should be
+			C.adjustToxLoss(rand(2,8)*REM, TRUE, TRUE)	//forced to ensure people don't use it to gain beneficial toxin as slime person
+	..()
+
 
 /datum/reagent/blood/reaction_obj(obj/O, volume)
 	if(volume >= 3 && istype(O))
@@ -938,6 +956,8 @@
 	color = "#c2391d"
 
 /datum/reagent/iron/on_mob_life(mob/living/carbon/C)
+	if((HAS_TRAIT(C, TRAIT_NOMARROW)))
+		return
 	if(C.blood_volume < (BLOOD_VOLUME_NORMAL*C.blood_ratio))
 		C.blood_volume += 0.5
 	..()

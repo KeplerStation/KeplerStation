@@ -366,6 +366,18 @@
 	devilsouldisplay.hud = src
 	infodisplay += devilsouldisplay
 
+	blood_display = new /obj/screen/bloodsucker/blood_counter    // Blood Volume
+	blood_display.hud = src
+	infodisplay += blood_display
+
+	vamprank_display = new /obj/screen/bloodsucker/rank_counter    // Vampire Rank
+	vamprank_display.hud = src
+	infodisplay += vamprank_display
+
+	sunlight_display = new /obj/screen/bloodsucker/sunlight_counter    // Sunlight
+	sunlight_display.hud = src
+	infodisplay += sunlight_display
+
 	zone_select =  new /obj/screen/zone_sel()
 	zone_select.icon = ui_style
 	zone_select.hud = src

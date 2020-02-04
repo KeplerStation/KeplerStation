@@ -326,6 +326,8 @@
 	value = 1
 
 /datum/reagent/medicine/salglu_solution/on_mob_life(mob/living/carbon/M)
+	if((HAS_TRAIT(M, TRAIT_NOMARROW)))
+		return
 	if(last_added)
 		M.blood_volume -= last_added
 		last_added = 0
