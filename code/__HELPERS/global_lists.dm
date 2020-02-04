@@ -47,11 +47,6 @@
 		var/datum/material/D = new path()
 		GLOB.materials_list[D.id] = D
 
-	//Emotes
-	for(var/path in subtypesof(/datum/emote))
-		var/datum/emote/E = new path()
-		E.emote_list[E.key] = E
-
 	//Uplink Items
 	for(var/path in subtypesof(/datum/uplink_item))
 		var/datum/uplink_item/I = path
