@@ -45,6 +45,7 @@
 
 	var/start = 1 + (text2ascii(color,1)==35)
 	var/len = length(color)
+<<<<<<< HEAD
 	var/step_size = 1 + ((len+1)-start != desired_format)
 
 	. = ""
@@ -57,8 +58,28 @@
 				. += ascii2text(ascii)		//letters a to f
 			if(65 to 70)
 				. += ascii2text(ascii+32)	//letters A to F - translates to lowercase
+=======
+	var/char = ""
+	// RRGGBB -> RGB but awful
+	var/convert_to_shorthand = desired_format == 3 && length_char(color) > 3
+
+	. = ""
+	var/i = start
+	while(i <= len)
+		char = color[i]
+		switch(text2ascii(char))
+			if(48 to 57)		//numbers 0 to 9
+				. += char
+			if(97 to 102)		//letters a to f
+				. += char
+			if(65 to 70)		//letters A to F
+				. += lowertext(char)
+>>>>>>> 1dfd149ab6... Merge pull request #10887 from Citadel-Station-13/Ghommie-patch-7
 			else
 				break
+		i += length(char)
+		if(convert_to_shorthand && i <= len) //skip next one
+			i += length(color[i])
 
 	if(length(.) != desired_format)
 		if(default)
