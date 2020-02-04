@@ -20,9 +20,16 @@
 		M.AddAbility(P)
 
 
+<<<<<<< HEAD
 /obj/item/organ/alien/Remove(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
 	for(var/obj/effect/proc_holder/alien/P in alien_powers)
 		M.RemoveAbility(P)
+=======
+/obj/item/organ/alien/Remove(special = FALSE)
+	if(owner)
+		for(var/obj/effect/proc_holder/alien/P in alien_powers)
+			owner.RemoveAbility(P)
+>>>>>>> 275b1f73e0... Merge pull request #10849 from Ghommie/Ghommie-cit547
 	..()
 
 /obj/item/organ/alien/prepare_eat()
@@ -100,11 +107,18 @@
 		var/mob/living/carbon/alien/A = M
 		A.updatePlasmaDisplay()
 
+<<<<<<< HEAD
 /obj/item/organ/alien/plasmavessel/Remove(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
 	..()
 	if(isalien(M))
 		var/mob/living/carbon/alien/A = M
+=======
+/obj/item/organ/alien/plasmavessel/Remove(special = FALSE)
+	if(owner && isalien(owner))
+		var/mob/living/carbon/alien/A = owner
+>>>>>>> 275b1f73e0... Merge pull request #10849 from Ghommie/Ghommie-cit547
 		A.updatePlasmaDisplay()
+	return ..()
 
 #define QUEEN_DEATH_DEBUFF_DURATION 2400
 
@@ -121,9 +135,16 @@
 	..()
 	M.faction |= ROLE_ALIEN
 
+<<<<<<< HEAD
 /obj/item/organ/alien/hivenode/Remove(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
 	M.faction -= ROLE_ALIEN
 	..()
+=======
+/obj/item/organ/alien/hivenode/Remove(special = FALSE)
+	if(owner)
+		owner.faction -= ROLE_ALIEN
+	return ..()
+>>>>>>> 275b1f73e0... Merge pull request #10849 from Ghommie/Ghommie-cit547
 
 //When the alien queen dies, all aliens suffer a penalty as punishment for failing to protect her.
 /obj/item/organ/alien/hivenode/proc/queen_death()
