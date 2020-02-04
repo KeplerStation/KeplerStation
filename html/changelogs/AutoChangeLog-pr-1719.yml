@@ -1,6 +1,0 @@
-author: "Alonefromhell"
-delete-after: True
-changes: 
-  - rscadd: "Para emotes"
-  - rscdel: "TG/Cit emotes"
-  - bugfix: "Emotes"
