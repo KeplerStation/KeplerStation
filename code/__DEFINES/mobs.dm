@@ -277,3 +277,6 @@
 
 #define PULL_PRONE_SLOWDOWN 0.6
 #define HUMAN_CARRY_SLOWDOWN 0
+
+#define EMOTE_VISUAL 1  //A mob emote is visual
+#define EMOTE_SOUND 2  //A mob emote is sound
