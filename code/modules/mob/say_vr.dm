@@ -100,7 +100,11 @@ proc/get_top_level_mob(var/mob/S)
 		to_chat(user, "You cannot send IC messages (muted).")
 		return FALSE
 	else if(!params)
+<<<<<<< HEAD
 		var/subtle_emote = copytext(sanitize(input("Choose an emote to display.") as message|null), 1, MAX_MESSAGE_LEN)
+=======
+		var/subtle_emote = stripped_multiline_input(user, "Choose an emote to display.", "Subtle", null, MAX_MESSAGE_LEN)
+>>>>>>> be09322f8e... Merge pull request #10882 from Citadel-Station-13/Ghommie-patch-8
 		if(subtle_emote && !check_invalid(user, subtle_emote))
 			var/type = input("Is this a visible or hearable emote?") as null|anything in list("Visible", "Hearable")
 			switch(type)
