@@ -1,3 +1,5 @@
+## Notice
+As of 2020-02-06, KeplerStation has closed and is no longer maintained. The GitHub has been archived incase anything wishes to be ported away from the codebase.
 
 ## KeplerStation<BR>
 Based and maintained from Citadel-Station-13.<BR>
